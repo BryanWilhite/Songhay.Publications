@@ -38,6 +38,43 @@
                 "cwd": "${workspaceRoot}/Songhay.Publications"
             },
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build [Songhay.Publications.Tests]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish [Songhay.Publications.Tests]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch [Songhay.Publications.Tests]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
