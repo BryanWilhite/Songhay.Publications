@@ -4,12 +4,12 @@ using Songhay.Extensions;
 using System;
 using System.Diagnostics;
 
-namespace Songhay.Publications.Models
+namespace Songhay.Publications
 {
     /// <summary>
     /// Defines shared routines for GenericWeb programs
     /// </summary>
-    public static class GenericWebProgramUtilities
+    public static class GenericWebProgramUtility
     {
         /// <summary>
         /// Initializes the trace source.

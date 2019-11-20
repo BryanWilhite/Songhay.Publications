@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json.Serialization;
+using Songhay.Publications.Models;
 
-namespace Songhay.Publications.Models
+namespace Songhay.Publications
 {
     /// <summary>
-    /// static memebers for JSON serialization
+    /// static members for JSON serialization
     /// </summary>
     public static class JsonSerializationUtility
     {
