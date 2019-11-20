@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Songhay.Publications.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build [Release]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Songhay.Publications.sln",
+                "--configuration",
+                "Release"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "command": "nuget",
+            "label": "NuGet pack Songhay.Publications",
+            "isBackground": false,
+            "type": "shell",
+            "args": [
+                "pack",
+                "Songhay.Publications.nuspec",
+                "-Verbosity",
+                "detailed"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/Songhay.Publications"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
