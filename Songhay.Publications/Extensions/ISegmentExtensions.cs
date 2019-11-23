@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Songhay.Publications.Models;
+using Songhay.Extensions;
 using Songhay.Models;
 using System;
 using System.Text;
