@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Markdig;
 using Newtonsoft.Json.Linq;
 using Songhay.Extensions;
@@ -76,6 +77,7 @@ namespace Songhay.Publications.Extensions
             var paragraphs = entry.ToParagraphs();
             var skip = paragraphs.Count() > 1 ? 1 : 0;
             var content = paragraphs.Skip(1).Aggregate(string.Empty, (a, i) => $"{a} {i}");
+            content = Regex.Replace(content, @"<[^>]+>", string.Empty);
             content = Markdown.ToPlainText(content);
 
             return (content.Length > length) ?

@@ -30,6 +30,20 @@ namespace Songhay.Publications.Tests.Extensions
 
         [Theory]
         [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
+            new object[] { 255 },
+            "../../../markdown/to-extract-test.md")]
+        public void ToExtract_Test(int expectedLength, FileInfo entryInfo)
+        {
+            var entry = entryInfo.ToMarkdownEntry();
+
+            var extract = entry.ToExtract(expectedLength);
+
+            Assert.False(string.IsNullOrWhiteSpace(extract));
+            Assert.Equal(expectedLength + 1, extract.Length);
+        }
+
+        [Theory]
+        [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
             "../../../markdown/to-markdown-entry-test.md")]
         public void ToFinalEdit_Test(FileInfo entryInfo)
         {
