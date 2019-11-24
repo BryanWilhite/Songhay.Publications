@@ -114,7 +114,19 @@ namespace Songhay.Publications.Extensions
         /// into <see cref="MarkdownEntry" />
         /// </summary>
         /// <param name="entry">the <see cref="FileInfo" /> entry</param>
-        /// <param name="editAction">the edit <see cref="Action{FileInfo, MarkdownEntry}" /></param>
+        /// <returns></returns>
+        /// <exception cref="NullReferenceException">
+        /// The expected {nameof(FileInfo)} is not here.
+        /// or
+        /// The expected {nameof(FileInfo)} path is not here.
+        /// </exception>
+        /// <exception cref="FormatException">
+        /// File {entry.Name} is empty.
+        /// or
+        /// The expected entry format is not here [front matter top].
+        /// or
+        /// The expected entry format is not here [front matter bottom].
+        /// </exception>
         public static MarkdownEntry ToMarkdownEntry(this FileInfo entry)
         {
             if (entry == null) throw new NullReferenceException($"The expected {nameof(FileInfo)} is not here.");

@@ -21,9 +21,9 @@ namespace Songhay.Publications.Models
     public class OebpsTextCopyright
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OebpsTextCopyright"/> class.
+        /// Initializes a new instance of the <see cref="OebpsTextCopyright" /> class.
         /// </summary>
-        /// <param name="templateRoot">the root directory of the EPUB template files</param>
+        /// <param name="publicationMeta">The publication meta.</param>
         /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
         public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
         {

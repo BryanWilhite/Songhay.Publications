@@ -1,5 +1,10 @@
 ﻿namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Centralizes dictionary keys
+    /// for the display of GenericWeb
+    /// Summary data.
+    /// </summary>
     public static class SummaryDisplayKeys
     {
         /// <summary>

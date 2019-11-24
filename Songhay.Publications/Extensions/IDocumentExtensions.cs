@@ -207,10 +207,12 @@ INSERT INTO [Document]
         }
 
         /// <summary>
-        /// Returns <see cref="IDocument"/>
-        /// after the specified edit <see cref="Action{IDocument}"/>.
+        /// Returns <see cref="IDocument" />
+        /// after the specified edit <see cref="Action{IDocument}" />.
         /// </summary>
         /// <param name="data">The data.</param>
+        /// <param name="editAction">The edit action.</param>
+        /// <returns></returns>
         public static IDocument WithEdit(this IDocument data, Action<IDocument> editAction)
         {
             editAction?.Invoke(data);

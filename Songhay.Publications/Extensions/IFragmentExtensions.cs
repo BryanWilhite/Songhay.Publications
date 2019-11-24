@@ -104,9 +104,11 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Converts the <see cref="IFragment"/> into a menu display item model.
+        /// Converts the <see cref="IFragment" /> into a menu display item model.
         /// </summary>
-        /// <param name="copyFragmentContent">if set to <c>true</c> include <see cref="IFragment"/> content.</param>
+        /// <param name="data">The data.</param>
+        /// <param name="copyFragmentContent">if set to <c>true</c> include <see cref="IFragment" /> content.</param>
+        /// <returns></returns>
         public static MenuDisplayItemModel ToMenuDisplayItemModel(this IFragment data, bool copyFragmentContent)
         {
             return data.ToMenuDisplayItemModel(group: null, copyFragmentContent: copyFragmentContent);
@@ -228,10 +230,12 @@ INSERT INTO [Fragment]
         }
 
         /// <summary>
-        /// Returns <see cref="IFragment"/>
-        /// after the specified edit <see cref="Action{IFragment}"/>.
+        /// Returns <see cref="IFragment" />
+        /// after the specified edit <see cref="Action{IFragment}" />.
         /// </summary>
         /// <param name="data">The data.</param>
+        /// <param name="editAction">The edit action.</param>
+        /// <returns></returns>
         public static IFragment WithEdit(this IFragment data, Action<IFragment> editAction)
         {
             editAction?.Invoke(data);

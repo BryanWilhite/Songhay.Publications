@@ -188,7 +188,7 @@ namespace Songhay.Publications.Models
         public virtual ICollection<SegmentDocument> SegmentDocuments { get; set; }
 
         /// <summary>
-        /// Converts the <see cref="Error"/> into a string.
+        /// Converts the <see cref="Document"/> into a string.
         /// </summary>
         public override string ToString()
         {

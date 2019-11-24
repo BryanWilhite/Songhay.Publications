@@ -7,8 +7,19 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines the contents needed to write
+    /// the <see cref="PublicationFiles.DaisyConsortiumNcxToc"/> file.
+    /// </summary>
     public class DaisyConsortiumNcx
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DaisyConsortiumNcx"/> class.
+        /// </summary>
+        /// <param name="publicationMeta">The publication meta.</param>
+        /// <param name="isbn13">The isbn13.</param>
+        /// <param name="chapterSet">The chapter set.</param>
+        /// <param name="epubOebpsDirectory">The epub oebps directory.</param>
         public DaisyConsortiumNcx(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
         {
             _publicationMeta = publicationMeta;
@@ -18,6 +29,9 @@ namespace Songhay.Publications.Models
             _ncxDocument = XDocument.Load(_ncxDocumentPath);
         }
 
+        /// <summary>
+        /// Writes the <see cref="PublicationFiles.DaisyConsortiumNcxToc"/> file.
+        /// </summary>
         public void SetPublicationMeta()
         {
             Console.WriteLine("setting publication meta...");

@@ -1,0 +1,2217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Songhay.Publications</name>
+    </assembly>
+    <members>
+        <member name="T:Songhay.Publications.EpubUtility">
+            <summary>
+            Shared routines for EPUB pipeline automation.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding">
+            <summary>
+            Gets <see cref="T:System.Text.UTF8Encoding"/>
+            instanitated with <c>encoderShouldEmitUTF8Identifier: true</c>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Saves the specified <see cref="T:System.Xml.Linq.XDocument"/>
+            with <see cref="T:System.IO.Stream"/> encoding
+            from <see cref="M:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding"/>.
+            </summary>
+            <param name="document"></param>
+            <param name="path"></param>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.IDocumentExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.IDocument"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Clones the instance of <see cref="T:Songhay.Publications.Models.IDocument"/>.
+            </summary>
+            <param name="data">The document.</param>
+            <returns><see cref="T:Songhay.Publications.Models.Document"/></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Determines whether the specified document is template-able.
+            </summary>
+            <param name="data">The document.</param>
+            <returns>
+              <c>true</c> if the specified document is template-able; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Sets the defaults.
+            </summary>
+            <param name="data">The document.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Models.IDocument,System.String)">
+            <summary>
+            Converts <see cref="T:Songhay.Publications.Models.Document"/> to the conventional publication item.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="templateFileName">Name of the template file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a display text.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToJObject(Songhay.Publications.Models.IDocument,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a menu display item model.
+            </summary>
+            <param name="data">The document.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IDocument,Songhay.Models.IGroupable)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a menu display item model.
+            </summary>
+            <param name="data">The document.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a SQLite insert statement.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.IDocument"/> with default values.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Models.IDocument,System.Action{Songhay.Publications.Models.IDocument})">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.IDocument" />
+            after the specified edit <see cref="T:System.Action`1" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="editAction">The edit action.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.IFragmentExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.IFragment"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.Clone(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Clones the instance of <see cref="T:Songhay.Publications.Models.IFragment"/>.
+            </summary>
+            <param name="data">The document.</param>
+            <returns><see cref="T:Songhay.Publications.Models.Fragment"/></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.GetFragmentContent(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Gets the content of the fragment.
+            </summary>
+            <param name="data">The fragment.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.SetDefaults(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Sets the defaults.
+            </summary>
+            <param name="data">The fragment.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToDisplayText(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a display text.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToJObject(Songhay.Publications.Models.IFragment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a menu display item model.
+            </summary>
+            <param name="data">The fragment.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment" /> into a menu display item model.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="copyFragmentContent">if set to <c>true</c> include <see cref="T:Songhay.Publications.Models.IFragment" /> content.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Models.IGroupable)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a menu display item model.
+            </summary>
+            <param name="data">The fragment.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Models.IGroupable,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a menu display item model.
+            </summary>
+            <param name="data">The document.</param>
+            <param name="group">The group.</param>
+            <param name="copyFragmentContent">if set to <c>true</c> include <see cref="T:Songhay.Publications.Models.IFragment"/> content.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a SQLite insert statement.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.WithDefaults(Songhay.Publications.Models.IFragment)">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.IFragment"/> with default values.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.WithEdit(Songhay.Publications.Models.IFragment,System.Action{Songhay.Publications.Models.IFragment})">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.IFragment" />
+            after the specified edit <see cref="T:System.Action`1" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="editAction">The edit action.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.IGroupableExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Models.IGroupable"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IGroupableExtensions.IsGroup(Songhay.Models.IGroupable,System.String)">
+            <summary>
+            Returns <c>true</c> when the group has the specified name.
+            </summary>
+            <param name="group"></param>
+            <param name="name"></param>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.ISegmentExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.ISegment"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.Clone(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Clones the instance of <see cref="T:Songhay.Publications.Models.ISegment"/>.
+            </summary>
+            <param name="data">The document.</param>
+            <returns><see cref="T:Songhay.Publications.Models.Segment"/></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.SetDefaults(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Sets the defaults.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToDisplayText(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a display text.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a menu display item model.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment,Songhay.Models.IGroupable)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a menu display item model.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a SQLite insert statement.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.WithDefaults(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.ISegment"/> with default values.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.WithEdit(Songhay.Publications.Models.ISegment,System.Action{Songhay.Publications.Models.ISegment})">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Models.ISegment" />
+            after the specified edit <see cref="T:System.Action`1" />.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="editAction">The edit action.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.JObjectExtensions">
+            <summary>
+            Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.ToPresentation(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Converts the <see cref="T:Newtonsoft.Json.Linq.JObject"/> to presentation <see cref="T:Songhay.Publications.Models.Segment"/>.
+            </summary>
+            <param name="jObject">The j object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.MarkdownEntryExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Effectively validates <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" />
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForFrontMatter(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter" />
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            to an extract of the specified length
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
+            <param name="length">the string-length of the extract</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            into the final edit <see cref="T:System.String" />
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToMarkdownEntry(System.IO.FileInfo)">
+            <summary>
+            Converts the specified <see cref="T:System.IO.FileInfo" />
+            into <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo" /> entry</param>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException">
+            The expected {nameof(FileInfo)} is not here.
+            or
+            The expected {nameof(FileInfo)} path is not here.
+            </exception>
+            <exception cref="T:System.FormatException">
+            File {entry.Name} is empty.
+            or
+            The expected entry format is not here [front matter top].
+            or
+            The expected entry format is not here [front matter bottom].
+            </exception>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Converts <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" /> to paragraphs
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)">
+            <summary>
+            Sets the modification date of the <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="date">the touch <see cref="T:System.DateTime" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11tyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
+            <summary>
+            Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            with the conventional eleventy extract
+            of the specified length.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
+            <param name="length">the string-length of the extract</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)">
+            <summary>
+            Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            based on <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter"/>
+            with a <c>title</c> property.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
+            <summary>
+            Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            based on <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter"/>
+            with a <c>title</c> property.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="headerLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})">
+            <summary>
+            Edits the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with the specified edit action.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
+            <param name="editAction">the edit <see cref="T:System.Action`1" /></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with conventional 11ty frontmatter.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="title">the title of th entry</param>
+            <param name="inceptDate">the incept date of the entry</param>
+            <param name="path">the path to the entry</param>
+            <param name="tag">the tag of the entry</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with conventional frontmatter.
+            </summary>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="title">the title of th entry</param>
+            <param name="inceptDate">the incept date of the entry</param>
+            <param name="documentId">the DBMS ID of the entry</param>
+            <param name="fileName">the file name (with extension) of the entry</param>
+            <param name="path">the path to the entry</param>
+            <param name="segmentId">the DBMS ID of the GenericWeb Segment</param>
+            <param name="tag">the tag of the entry</param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.PublicationContextExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.PublicationContext"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)">
+            <summary>
+            Generates an EPUB publication
+            in the specified <see cref="T:Songhay.Publications.PublicationContext"/>.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Songhay.Publications.MarkdownEntryUtility">
+            <summary>
+            Shares routines for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownEntryUtility.GenerateEntryFor11ty(System.String,System.String)">
+            <summary>
+            Generates or overwrites a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file
+            at the specified entry root.
+            </summary>
+            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
+            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownEntryUtility.GenerateEntryFor11ty(System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            Generates or overwrites a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file
+            at the specified entry root.
+            </summary>
+            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
+            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+            <param name="inceptDate">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+            <param name="path">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+            <param name="tag">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11tyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownEntryUtility.PublishEntryFor11ty(System.String,System.String,System.String)">
+            <summary>
+            Publishes a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            from the specified entry root
+            to the specified presentation root
+            for the eleventy pipeline.
+            </summary>
+            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
+            <param name="presentationRoot">the presentation target directory for publication</param>
+            <param name="fileName">the name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory</param>
+            <returns>
+            Returns the path of the published file.
+            </returns>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownEntryUtility.PublishEntryFor11ty(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            Publishes a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            from the specified entry root
+            to the specified presentation root
+            for the eleventy pipeline.
+            </summary>
+            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
+            <param name="presentationRoot">the presentation target directory for publication</param>
+            <param name="fileName">the name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory</param>
+            <param name="publicationDate">the <see cref="T:System.DateTime"/> of publication</param>
+            <returns>
+            Returns the path of the published file.
+            </returns>
+            <remarks>
+            When the publication date is one day later or more than the entry incept date
+            new eleventy <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter"/> will be generated
+            and the presentation file will be renamed accordingly.
+            </remarks>
+        </member>
+        <member name="T:Songhay.Publications.MarkdownUtility">
+            <summary>
+            Shared routines for Markdown
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.ConvertPreBlockToHtml(System.Xml.Linq.XElement)">
+            <summary>
+            Converts a <c>pre</c> element
+            into EPUB-friendly HTML.
+            </summary>
+            <param name="preElement"></param>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.GetFourSpaces">
+            <summary>
+            Returns a conventional number of space characters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.GetFourSpacesToken">
+            <summary>
+            Returns a conventional token representing four space characters.
+            </summary>
+            <remarks>
+            This is a trick used for automating find-change operations.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.GetPElementWithNewLine">
+            <summary>
+            Returns a <c>p</c> element
+            delimited by <see cref="P:System.Environment.NewLine"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.GetPreLines(System.Xml.Linq.XElement)">
+            <summary>
+            Decomposes the <see cref="P:System.Xml.Linq.XElement.Value"/>
+            of the specified <c>pre</c> element.
+            </summary>
+            <param name="preElement"><c>pre</c> element</param>
+            <remarks>
+            Note: the first and last elements of preList
+            *should* be empty(when no leading spaces before<pre />)
+            or *should* contain `pre` open and closing, respectively
+            (when there are leading spaces before <pre />).
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.MarkdownUtility.IsMarkdownParagraph(System.String)">
+            <summary>
+            Returns <c>true</c> when a block of text
+            starts with a <c>p</c> element.
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Models.CloneInitializers">
+            <summary>
+            Centralizes initializers for <see cref="N:CloneExtensions"/>
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.CloneInitializers.GenericWeb">
+            <summary>
+            Gets initializers for GenericWeb initializers
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.DaisyConsortiumNcx">
+            <summary>
+            Defines the contents needed to write
+            the <see cref="F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc"/> file.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(Newtonsoft.Json.Linq.JObject,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.DaisyConsortiumNcx"/> class.
+            </summary>
+            <param name="publicationMeta">The publication meta.</param>
+            <param name="isbn13">The isbn13.</param>
+            <param name="chapterSet">The chapter set.</param>
+            <param name="epubOebpsDirectory">The epub oebps directory.</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta">
+            <summary>
+            Writes the <see cref="F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.Document">
+            <summary>
+            GenericWeb Document
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.Document.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.Document"/> class.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.DocumentShortName">
+            <summary>
+            Gets or sets the short name of the document.
+            </summary>
+            <value>
+            The short name of the document.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>
+            The name of the file.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.IsRoot">
+            <summary>
+            Gets or sets the is root.
+            </summary>
+            <value>
+            The is root.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>
+            The tag.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.TemplateId">
+            <summary>
+            Gets or sets the template identifier.
+            </summary>
+            <value>
+            The template identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.Segment">
+            <summary>
+            Gets or sets the segment.
+            </summary>
+            <value>
+            The segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.Fragments">
+            <summary>
+            Gets or sets the fragments.
+            </summary>
+            <value>
+            The fragments.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.WebKeywords">
+            <summary>
+            Gets or sets the web keywords.
+            </summary>
+            <value>
+            The web keywords.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Document.SegmentDocuments">
+            <summary>
+            Gets or sets the <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
+            </summary>
+            <value>
+            The <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
+            </value>
+        </member>
+        <member name="M:Songhay.Publications.Models.Document.ToString">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.Document"/> into a string.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.DocumentMetadata">
+            <summary>
+            Defines metadata for <see cref="T:Songhay.Publications.Models.Document"/>
+            for validation and display.
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.IDocument" />
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.DocumentShortName">
+            <summary>
+            Gets or sets the short name of the document.
+            </summary>
+            <value>
+            The short name of the document.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>
+            The name of the file.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.IsRoot">
+            <summary>
+            Gets or sets the is root.
+            </summary>
+            <value>
+            The is root.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>
+            The tag.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.TemplateId">
+            <summary>
+            Gets or sets the template identifier.
+            </summary>
+            <value>
+            The template identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.DocumentWithContent">
+            <summary>
+            Associates <see cref="T:Songhay.Publications.Models.IDocument"/> metadata
+            with <see cref="T:Songhay.Publications.Models.IFragment"/> content.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentWithContent.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentWithContent.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.Fragment">
+            <summary>
+            GenericWeb Fragment
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.Fragment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.Fragment"/> class.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.FragmentDisplayName">
+            <summary>
+            Gets or sets the display name of the fragment.
+            </summary>
+            <value>
+            The display name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.FragmentId">
+            <summary>
+            Gets or sets the fragment identifier.
+            </summary>
+            <value>
+            The fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.FragmentName">
+            <summary>
+            Gets or sets the name of the fragment.
+            </summary>
+            <value>
+            The name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.IsNext">
+            <summary>
+            Gets or sets the is next.
+            </summary>
+            <value>
+            The is next.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.IsPrevious">
+            <summary>
+            Gets or sets the is previous.
+            </summary>
+            <value>
+            The is previous.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.IsWrapper">
+            <summary>
+            Gets or sets the is wrapper.
+            </summary>
+            <value>
+            The is wrapper.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.ItemChar">
+            <summary>
+            Gets or sets the item character.
+            </summary>
+            <value>
+            The item character.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.ItemText">
+            <summary>
+            Gets or sets the item text.
+            </summary>
+            <value>
+            The item text.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.NextFragmentId">
+            <summary>
+            Gets or sets the next fragment identifier.
+            </summary>
+            <value>
+            The next fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.PrevFragmentId">
+            <summary>
+            Gets or sets the previous fragment identifier.
+            </summary>
+            <value>
+            The previous fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.NextFragments">
+            <summary>
+            Gets or sets the next fragments.
+            </summary>
+            <value>
+            The next fragments.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.NextFragment">
+            <summary>
+            Gets or sets the next fragment.
+            </summary>
+            <value>
+            The next fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.PrevFragments">
+            <summary>
+            Gets or sets the previous fragments.
+            </summary>
+            <value>
+            The previous fragments.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Fragment.PrevFragment">
+            <summary>
+            Gets or sets the previous fragment.
+            </summary>
+            <value>
+            The previous fragment.
+            </value>
+        </member>
+        <member name="M:Songhay.Publications.Models.Fragment.ToString">
+            <summary>
+            Converts to string.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Songhay.Publications.Models.FragmentMetadata">
+            <summary>
+            Defines metadata of <see cref="T:Songhay.Publications.Models.Fragment"/>
+            for validation and display.
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.IFragment" />
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.FragmentDisplayName">
+            <summary>
+            Gets or sets the display name of the fragment.
+            </summary>
+            <value>
+            The display name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.FragmentId">
+            <summary>
+            Gets or sets the fragment identifier.
+            </summary>
+            <value>
+            The fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.FragmentName">
+            <summary>
+            Gets or sets the name of the fragment.
+            </summary>
+            <value>
+            The name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.IsNext">
+            <summary>
+            Gets or sets the is next.
+            </summary>
+            <value>
+            The is next.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.IsPrevious">
+            <summary>
+            Gets or sets the is previous.
+            </summary>
+            <value>
+            The is previous.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.IsWrapper">
+            <summary>
+            Gets or sets the is wrapper.
+            </summary>
+            <value>
+            The is wrapper.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.ItemChar">
+            <summary>
+            Gets or sets the item character.
+            </summary>
+            <value>
+            The item character.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.ItemText">
+            <summary>
+            Gets or sets the item text.
+            </summary>
+            <value>
+            The item text.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.NextFragmentId">
+            <summary>
+            Gets or sets the next fragment identifier.
+            </summary>
+            <value>
+            The next fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.PrevFragmentId">
+            <summary>
+            Gets or sets the previous fragment identifier.
+            </summary>
+            <value>
+            The previous fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IDocument">
+            <summary>
+            GenericWeb Document interface
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.DocumentShortName">
+            <summary>
+            Gets or sets the short name of the document.
+            </summary>
+            <value>
+            The short name of the document.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>
+            The name of the file.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.TemplateId">
+            <summary>
+            Gets or sets the template identifier.
+            </summary>
+            <value>
+            The template identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.IsRoot">
+            <summary>
+            Gets or sets the is root.
+            </summary>
+            <value>
+            The is root.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IDocument.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>
+            The tag.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IdpfPackage">
+            <summary>
+            Defines the content to write the
+            International Digital Publishing Forum
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest"/> file.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.IdpfPackage.#ctor(Newtonsoft.Json.Linq.JObject,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.IdpfPackage"/> class.
+            </summary>
+            <param name="publicationMeta">deserialized <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubMetadata"/></param>
+            <param name="isbn13">International Standard Book Number (ISBN)</param>
+            <param name="chapterSet">chapter data</param>
+            <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.IdpfPackage.SetPublicationMeta">
+            <summary>
+            Writes the
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.IFragment">
+            <summary>
+            GenericWeb Fragment interface
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.FragmentId">
+            <summary>
+            Gets or sets the fragment identifier.
+            </summary>
+            <value>
+            The fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.FragmentName">
+            <summary>
+            Gets or sets the name of the fragment.
+            </summary>
+            <value>
+            The name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.FragmentDisplayName">
+            <summary>
+            Gets or sets the display name of the fragment.
+            </summary>
+            <value>
+            The display name of the fragment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.ItemChar">
+            <summary>
+            Gets or sets the item character.
+            </summary>
+            <value>
+            The item character.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.ItemText">
+            <summary>
+            Gets or sets the item text.
+            </summary>
+            <value>
+            The item text.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.PrevFragmentId">
+            <summary>
+            Gets or sets the previous fragment identifier.
+            </summary>
+            <value>
+            The previous fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.NextFragmentId">
+            <summary>
+            Gets or sets the next fragment identifier.
+            </summary>
+            <value>
+            The next fragment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.IsPrevious">
+            <summary>
+            Gets or sets the is previous.
+            </summary>
+            <value>
+            The is previous.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.IsNext">
+            <summary>
+            Gets or sets the is next.
+            </summary>
+            <value>
+            The is next.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.IsWrapper">
+            <summary>
+            Gets or sets the is wrapper.
+            </summary>
+            <value>
+            The is wrapper.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IFragment.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.ISegment">
+            <summary>
+            GenericWeb Segment interface
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.SegmentName">
+            <summary>
+            Gets or sets the name of the segment.
+            </summary>
+            <value>
+            The name of the segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.ParentSegmentId">
+            <summary>
+            Gets or sets the parent segment identifier.
+            </summary>
+            <value>
+            The parent segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ISegment.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IWebKeyword">
+            <summary>
+            Generic Web Web Keyword interface
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IWebKeyword.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IWebKeyword.KeywordValue">
+            <summary>
+            Gets or sets the keyword value.
+            </summary>
+            <value>
+            The keyword value.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.MarkdownEntry">
+            <summary>
+            Defines a conventional, Publication entry
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownEntry.NewLine">
+            <summary>
+            Defines the new-line convention for entries.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.MarkdownEntry.EntryFileInfo">
+            <summary>
+            Markdown <see cref="T:System.IO.FileInfo" />
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter">
+            <summary>
+            JSON front matter
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.MarkdownEntry.Content">
+            <summary>
+            Text content
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Songhay.Publications.Models.OebpsTextBiography">
+             <summary>
+             Defines the content to write the
+             <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileBiography"/> file.
+             </summary>
+             <remarks>
+              Open eBook Publication Structure (OEBPS),
+              is a legacy e-book format which
+              has been superseded by the EPUB format.
+            
+             https://en.wikipedia.org/wiki/Open_eBook
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextBiography.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextBiography"/> class.
+            </summary>
+            <param name="templateRoot">the root directory of the EPUB template files</param>
+            <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+            <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextBiography.Write">
+            <summary>
+            Writes the
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileBiography"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.OebpsTextCopyright">
+             <summary>
+             Defines the content to write the
+             <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileCopyright"/> file.
+             </summary>
+             <remarks>
+              Open eBook Publication Structure (OEBPS),
+              is a legacy e-book format which
+              has been superseded by the EPUB format.
+            
+             https://en.wikipedia.org/wiki/Open_eBook
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextCopyright.#ctor(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextCopyright" /> class.
+            </summary>
+            <param name="publicationMeta">The publication meta.</param>
+            <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextCopyright.Write">
+            <summary>
+            Writes the
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileCopyright"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.OebpsTextDedication">
+             <summary>
+             Defines the content to write the
+             <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileDedication"/> file.
+             </summary>
+             <remarks>
+              Open eBook Publication Structure (OEBPS),
+              is a legacy e-book format which
+              has been superseded by the EPUB format.
+            
+             https://en.wikipedia.org/wiki/Open_eBook
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextDedication.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextDedication"/> class.
+            </summary>
+            <param name="templateRoot">the root directory of the EPUB template files</param>
+            <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+            <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextDedication.Write">
+            <summary>
+            Writes the
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileDedication"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.OebpsTextToc">
+             <summary>
+             Defines the content to write the
+             <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileToc"/> file.
+             </summary>
+             <remarks>
+              Open eBook Publication Structure (OEBPS),
+              is a legacy e-book format which
+              has been superseded by the EPUB format.
+            
+             https://en.wikipedia.org/wiki/Open_eBook
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextToc.#ctor(Newtonsoft.Json.Linq.JObject,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextToc"/> class.
+            </summary>
+            <param name="publicationMeta">deserialized <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubMetadata"/></param>
+            <param name="chapterSet">chapter data</param>
+            <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.OebpsTextToc.Write">
+            <summary>
+            Writes the
+            <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileToc"/> file.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.PublicationChapter">
+            <summary>
+            Defines content for the chapter
+            of an EPUB publication.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.PublicationChapter"/> class.
+            </summary>
+            <param name="chapterPair">The chapter pair.</param>
+            <param name="chapterTemplate">The chapter template.</param>
+            <param name="chapterDirectory">The chapter directory.</param>
+        </member>
+        <member name="M:Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement">
+            <summary>
+            Gets the chapter body element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Models.PublicationChapter.GetH1Element">
+            <summary>
+            Gets the h1 element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Models.PublicationChapter.GetTitleElement">
+            <summary>
+            Gets the title element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Models.PublicationChapter.GenerateXhtml">
+            <summary>
+            Generates the XHTML.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Models.PublicationFiles">
+            <summary>
+            Centralizes the EPUB files.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc">
+            <summary>
+            EPUB DAISY Consortium Navigation Control file.
+            </summary>
+            <remarks>
+            “The NCX file (Navigation Control file for XML),
+            traditionally named toc.ncx, contains the hierarchical table
+            of contents for the EPUB file.”
+            
+            https://en.wikipedia.org/wiki/EPUB
+            https://web.archive.org/web/20090831133730/http://www.niso.org/workrooms/daisy/Z39-86-2005.html#NCX
+            </remarks>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubFileBiography">
+            <summary>
+            EPUB XHTML template output file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubFileCopyright">
+            <summary>
+            EPUB XHTML template output file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubFileDedication">
+            <summary>
+            EPUB XHTML template output file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubFileTitle">
+            <summary>
+            EPUB XHTML template output file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubFileToc">
+            <summary>
+            EPUB XHTML template output file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubMarkdownBiography">
+            <summary>
+            EPUB XHTML template input file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubMarkdownDedication">
+            <summary>
+            EPUB XHTML template input file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubMetadata">
+            <summary>
+            Conventional Songhay System metadata for EPUB publications.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubTemplateBiography">
+            <summary>
+            EPUB XHTML template file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubTemplateChapter">
+            <summary>
+            EPUB XHTML template file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.EpubTemplateDedication">
+            <summary>
+            EPUB XHTML template file.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest">
+            <summary>
+            International Digital Publishing Forum
+            Open Packaging Format manifest.
+            </summary>
+            <remarks>
+            “Open Packaging Format (OPF) 2.0.1, describes the structure
+            of the .epub file in XML…
+            The OPF file, traditionally named content.opf,
+            houses the EPUB book’s metadata, file manifest,
+            and linear reading order.”
+            
+            https://en.wikipedia.org/wiki/EPUB
+            </remarks>
+        </member>
+        <member name="T:Songhay.Publications.Models.PublicationNamespaces">
+            <summary>
+            Centralizes XML namespaces
+            primarily for EPUB pipelines.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.DaisyNcx">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.DublinCore">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingFormat">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingStructure">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.Xhtml">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.PublicationNamespaces.Xml">
+            <summary>
+            Conventional namespace for EPUB
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.Segment">
+            <summary>
+            GenericWeb Segment
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.Segment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.Segment"/> class.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.ParentSegmentId">
+            <summary>
+            Gets or sets the parent segment identifier.
+            </summary>
+            <value>
+            The parent segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.SegmentName">
+            <summary>
+            Gets or sets the name of the segment.
+            </summary>
+            <value>
+            The name of the segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.Documents">
+            <summary>
+            Gets or sets the documents.
+            </summary>
+            <value>
+            The documents.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.ChildSegments">
+            <summary>
+            Gets or sets the segments of parent.
+            </summary>
+            <value>
+            The segments of parent.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.ParentSegment">
+            <summary>
+            Gets or sets the parent segment.
+            </summary>
+            <value>
+            The parent segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.SegmentDocuments">
+            <summary>
+            Gets or sets the <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
+            </summary>
+            <value>
+            The <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
+            </value>
+        </member>
+        <member name="M:Songhay.Publications.Models.Segment.ToString">
+            <summary>
+            Converts to string.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Songhay.Publications.Models.SegmentDocument">
+            <summary>
+            Defines many-to-many lookup
+            between <see cref="P:Songhay.Publications.Models.SegmentDocument.Document"/>
+            and <see cref="T:Songhay.Publications.Models.Fragment"/>.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentDocument.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentDocument.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentDocument.Segment">
+            <summary>
+            Gets or sets the segment.
+            </summary>
+            <value>
+            The segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentDocument.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.SegmentMetadata">
+            <summary>
+            Defines <see cref="T:Songhay.Publications.Models.Segment"/>
+            attributes for validation and display.
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.ISegment" />
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.CreateDate">
+            <summary>
+            Gets or sets the create date.
+            </summary>
+            <value>
+            The create date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.ParentSegmentId">
+            <summary>
+            Gets or sets the parent segment identifier.
+            </summary>
+            <value>
+            The parent segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.SegmentName">
+            <summary>
+            Gets or sets the name of the segment.
+            </summary>
+            <value>
+            The name of the segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.SummaryDisplayKeys">
+            <summary>
+            Centralizes dictionary keys
+            for the display of GenericWeb
+            Summary data.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.AssociationItems">
+            <summary>
+            Top segments
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.ClientMetadata">
+            <summary>
+            GenericWeb metadata
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.DocumentTemplates">
+            <summary>
+            The document templates (XSLT)
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.FragmentsForAssociations">
+            <summary>
+            The fragments for associations (Previous/Next/Wrapper)
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.FrequentlyUsedAssociationItems">
+            <summary>
+            The frequently used association items
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedDocuments">
+            <summary>
+            The recently used documents
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedFragments">
+            <summary>
+            The recently used fragments
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedSegments">
+            <summary>
+            The recently used segments
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.WebKeyword">
+            <summary>
+            GenericWeb keyword
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.IWebKeyword" />
+        </member>
+        <member name="P:Songhay.Publications.Models.WebKeyword.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.WebKeyword.KeywordValue">
+            <summary>
+            Gets or sets the keyword value.
+            </summary>
+            <value>
+            The keyword value.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.WebKeyword.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.PublicationContext">
+            <summary>
+            Defines the EPUB Publication Context
+            </summary>
+            <remarks>
+            EPUB is a technical standard published
+            by the International Digital Publishing Forum (IDPF).
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.PublicationContext"/> class.
+            </summary>
+            <param name="templateRoot">the root directory of the EPUB template files</param>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.GenerateChapters">
+            <summary>
+            Generates EPUB chapters
+            from <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubMetadata"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.GenerateMeta">
+            <summary>
+            Calls <see cref="M:Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta"/>
+            and <see cref="M:Songhay.Publications.Models.IdpfPackage.SetPublicationMeta"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.WriteBiography">
+            <summary>
+            Calls <see cref="M:Songhay.Publications.Models.OebpsTextBiography.Write"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.WriteCopyright">
+            <summary>
+            Calls <see cref="M:Songhay.Publications.Models.OebpsTextCopyright.Write"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.WriteDedication">
+            <summary>
+            Calls <see cref="M:Songhay.Publications.Models.OebpsTextDedication.Write"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.WriteTitle">
+            <summary>
+            Writes the <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubFileTitle"/> file.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationContext.WriteToc">
+            <summary>
+            Calls <see cref="M:Songhay.Publications.Models.OebpsTextToc.Write"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

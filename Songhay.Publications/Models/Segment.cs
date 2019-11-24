@@ -122,6 +122,12 @@ namespace Songhay.Publications.Models
         [Display(AutoGenerateField = false)]
         public virtual ICollection<SegmentDocument> SegmentDocuments { get; set; }
 
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
             return this.ToDisplayText();

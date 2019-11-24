@@ -150,10 +150,12 @@ INSERT INTO [Segment]
         }
 
         /// <summary>
-        /// Returns <see cref="ISegment"/>
-        /// after the specified edit <see cref="Action{ISegment}"/>.
+        /// Returns <see cref="ISegment" />
+        /// after the specified edit <see cref="Action{ISegment}" />.
         /// </summary>
         /// <param name="data">The data.</param>
+        /// <param name="editAction">The edit action.</param>
+        /// <returns></returns>
         public static ISegment WithEdit(this ISegment data, Action<ISegment> editAction)
         {
             editAction?.Invoke(data);

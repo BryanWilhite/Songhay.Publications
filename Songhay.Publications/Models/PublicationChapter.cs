@@ -9,8 +9,18 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines content for the chapter
+    /// of an EPUB publication.
+    /// </summary>
     public class PublicationChapter
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicationChapter"/> class.
+        /// </summary>
+        /// <param name="chapterPair">The chapter pair.</param>
+        /// <param name="chapterTemplate">The chapter template.</param>
+        /// <param name="chapterDirectory">The chapter directory.</param>
         public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory)
         {
             _chapterPair = chapterPair;
@@ -18,6 +28,10 @@ namespace Songhay.Publications.Models
             _chapterDirectoryInfo = new DirectoryInfo(chapterDirectory);
         }
 
+        /// <summary>
+        /// Gets the chapter body element.
+        /// </summary>
+        /// <returns></returns>
         public XElement GetChapterBodyElement()
         {
             var xhtml = PublicationNamespaces.Xhtml;
@@ -30,6 +44,10 @@ namespace Songhay.Publications.Models
             return e;
         }
 
+        /// <summary>
+        /// Gets the h1 element.
+        /// </summary>
+        /// <returns></returns>
         public XElement GetH1Element()
         {
             var xhtml = PublicationNamespaces.Xhtml;
@@ -42,6 +60,10 @@ namespace Songhay.Publications.Models
             return e;
         }
 
+        /// <summary>
+        /// Gets the title element.
+        /// </summary>
+        /// <returns></returns>
         public XElement GetTitleElement()
         {
             var xhtml = PublicationNamespaces.Xhtml;
@@ -53,6 +75,10 @@ namespace Songhay.Publications.Models
             return e;
         }
 
+        /// <summary>
+        /// Generates the XHTML.
+        /// </summary>
+        /// <returns></returns>
         public string GenerateXhtml()
         {
             var titleElement = GetTitleElement();
