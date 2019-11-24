@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "author": "Bryan D. Wilhite",
+        "title": "the bookening",
+        "edition": "1",
+        "epubPublicationDate": "February 2017",
+        "publicationDate": "2015-10-19",
+        "publisher": "Songhay System",
+        "identifiers": {
+            "ISBN-10": "XXXXXXXXXX",
+            "ISBN-13": "XXX-XXXXXXXXXX"
+        },
+        "inquiries": "SonghaySystem.com",
+        "language": "en",
+        "chapterCount": 1,
+        "chapterSet": {
+            "chap01": "chapter, the first"
+        },
+        "coverArtCredits": "Cover designed and originally rendered by Bryan D. Wilhite. Original photography by Laverne Jones Wilhite and Saundra Quarterman."
+    }
+}

@@ -1,0 +1,1 @@
+The vital roots under this work are dedicated to my mother, Laverne Jones Wilhite.
