@@ -10,12 +10,12 @@ namespace Songhay.Publications.Models
 {
     public class IdpfPackage
     {
-        public IdpfPackage(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsFolder)
+        public IdpfPackage(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
         {
             _publicationMeta = publicationMeta;
             _isbn13 = isbn13;
             _chapterSet = chapterSet;
-            _idpfDocumentPath = Path.Combine(epubOebpsFolder, "content.opf");
+            _idpfDocumentPath = PublicationContext.GetCombinedPath(epubOebpsDirectory, PublicationFiles.IdpfcOpfManifest, shouldBeFile: true);
             _idpfDocument = XDocument.Load(_idpfDocumentPath);
         }
 
@@ -61,11 +61,13 @@ namespace Songhay.Publications.Models
             var publisherElement = metadataElement.Element(dc + "publisher");
             var dateElement = metadataElement.Element(dc + "date");
 
-            titleElement.Value = _publicationMeta["publication"]["title"].Value<string>();
+            var jPublication = _publicationMeta.GetJObject("publication");
+
+            titleElement.Value = jPublication.GetValue<string>("title");
             identifierElement.Value = _isbn13;
-            creatorElement.Value = _publicationMeta["publication"]["author"].Value<string>();
-            publisherElement.Value = _publicationMeta["publication"]["publisher"].Value<string>();
-            dateElement.Value = _publicationMeta["publication"]["publicationDate"].Value<string>();
+            creatorElement.Value = jPublication.GetValue<string>("author");
+            publisherElement.Value = jPublication.GetValue<string>("publisher");
+            dateElement.Value = jPublication.GetValue<string>("publicationDate");
         }
 
         void SetManifestItem(XElement item, string id)
@@ -189,10 +191,10 @@ namespace Songhay.Publications.Models
             templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
         }
 
-        Dictionary<string, string> _chapterSet;
-        JObject _publicationMeta;
-        string _isbn13;
-        string _idpfDocumentPath;
-        XDocument _idpfDocument;
+        readonly Dictionary<string, string> _chapterSet;
+        readonly JObject _publicationMeta;
+        readonly string _isbn13;
+        readonly string _idpfDocumentPath;
+        readonly XDocument _idpfDocument;
     }
 }

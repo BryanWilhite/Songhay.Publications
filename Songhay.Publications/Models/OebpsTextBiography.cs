@@ -7,10 +7,10 @@ namespace Songhay.Publications.Models
 {
     public class OebpsTextBiography
     {
-        public OebpsTextBiography(string csxRoot, string epubTextFolder, string markdownFolder)
+        public OebpsTextBiography(string csxRoot, string epubTextDirectory, string markdownDirectory)
         {
-            _epubTextFolder = epubTextFolder;
-            _markdownFolder = markdownFolder;
+            _epubTextDirectory = epubTextDirectory;
+            _markdownDirectory = markdownDirectory;
             this.SetBiographyTemplate(csxRoot);
         }
 
@@ -18,13 +18,8 @@ namespace Songhay.Publications.Models
         {
             var xhtml = PublicationNamespaces.Xhtml;
 
-            var xhtmlFile = Path.Combine(_epubTextFolder, "biography.xhtml");
-            if (!File.Exists(xhtmlFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", xhtmlFile));
-
-            var markdownFile = Path.Combine(_markdownFolder, "author-biography.md");
-            if (!File.Exists(markdownFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", markdownFile));
+            var xhtmlFile = PublicationContext.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileBiography, shouldBeFile: true);
+            var markdownFile = PublicationContext.GetCombinedPath(_markdownDirectory, PublicationFiles.EpubMarkdownBiography, shouldBeFile: true);
 
             Console.WriteLine("    markdown file {0}...", markdownFile);
             var markdown = File.ReadAllText(markdownFile);
@@ -43,17 +38,12 @@ namespace Songhay.Publications.Models
 
         void SetBiographyTemplate(string csxRoot)
         {
-            var biographyTemplateFile = Path.Combine(csxRoot, "biography-template.xhtml");
-            if (!File.Exists(biographyTemplateFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", biographyTemplateFile));
-
+            var biographyTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateBiography, shouldBeFile: true);
             _biographyTemplate = XDocument.Load(biographyTemplateFile);
         }
 
-        string _epubTextFolder;
-        string _markdownFolder;
-        string _documentPath;
-        XDocument _document;
+        readonly string _epubTextDirectory;
+        readonly string _markdownDirectory;
         XDocument _biographyTemplate;
     }
 }

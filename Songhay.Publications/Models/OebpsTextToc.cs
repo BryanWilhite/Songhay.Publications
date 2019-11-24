@@ -2,7 +2,6 @@
 using Songhay.Extensions;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -10,19 +9,19 @@ namespace Songhay.Publications.Models
 {
     public class OebpsTextToc
     {
-        public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextFolder)
+        public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
         {
             _publicationMeta = publicationMeta;
             _chapterSet = chapterSet;
-            _documentPath = Path.Combine(epubTextFolder, "toc.xhtml");
+            _documentPath = PublicationContext.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, shouldBeFile: true);
             _document = XDocument.Load(_documentPath);
         }
 
         public void Write()
         {
-
-            var title = _publicationMeta["publication"]["title"].Value<string>();
-            var author = _publicationMeta["publication"]["author"].Value<string>();
+            var jPublication = _publicationMeta.GetJObject("publication");
+            var title = jPublication.GetValue<string>("title");
+            var author = jPublication.GetValue<string>("author");
 
             var xhtml = PublicationNamespaces.Xhtml;
 
@@ -67,7 +66,6 @@ namespace Songhay.Publications.Models
 
         void SetTocAnchor(XElement a, string chapterId)
         {
-            var xhtml = PublicationNamespaces.Xhtml;
             var hrefTemplate = GetTOCHrefTemplate();
 
             a.Value = GetTOCChapterValue(chapterId);
@@ -132,9 +130,9 @@ namespace Songhay.Publications.Models
             templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
         }
 
-        Dictionary<string, string> _chapterSet;
-        JObject _publicationMeta;
-        string _documentPath;
-        XDocument _document;
+        readonly Dictionary<string, string> _chapterSet;
+        readonly JObject _publicationMeta;
+        readonly string _documentPath;
+        readonly XDocument _document;
     }
 }

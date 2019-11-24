@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Songhay.Diagnostics;
 using Songhay.Publications.Models;
 using Songhay.Extensions;
@@ -34,16 +33,17 @@ namespace Songhay.Publications.Extensions
 
             traceSource?.TraceVerbose($"Converting {rootProperty} JSON to {nameof(Segment)} with descendants...");
 
-            var isPostedToServer = jObject[rootProperty]["is-posted-to-server"].Value<bool>();
+            var jPresentation = jObject.GetJObject(rootProperty);
+            var isPostedToServer = jPresentation.GetValue<bool>("is-posted-to-server");
             if (isPostedToServer)
             {
-                var postedDate = jObject[rootProperty]["posted-date"].Value<DateTime>();
+                var postedDate = jPresentation.GetValue<DateTime>("posted-date");
                 traceSource?.TraceVerbose($"This {rootProperty} was already posted on {postedDate}.");
                 return null;
             }
 
-            var jO_segment = jObject[rootProperty][nameof(Segment)].ToObject<JObject>();
-            var segment = jO_segment.FromJObject<ISegment, Segment>();
+            var jSegment = jPresentation.GetValue<JObject>(nameof(Segment));
+            var segment = jSegment.FromJObject<ISegment, Segment>();
             if (segment == null)
             {
                 traceSource?.TraceError($"The expected {nameof(Segment)} is not here.");
@@ -66,14 +66,14 @@ namespace Songhay.Publications.Extensions
                 return null;
             }
 
-            var jA_documents = jO_segment.GetJArray(nameof(segment.Documents), throwException: true);
-            if (!jA_documents.OfType<JObject>().Any())
+            var jDocuments = jSegment.GetJArray(nameof(segment.Documents), throwException: true);
+            if (!jDocuments.OfType<JObject>().Any())
             {
                 traceSource?.TraceError($"The expected JObject {nameof(Document)} enumeration is not here.");
                 return null;
             }
 
-            jA_documents.OfType<JObject>().ForEachInEnumerable(i =>
+            jDocuments.OfType<JObject>().ForEachInEnumerable(i =>
             {
                 var document = i.FromJObject<IDocument, Document>();
                 if (document == null)
@@ -97,15 +97,15 @@ namespace Songhay.Publications.Extensions
                     return;
                 }
 
-                var jA_fragments = i.GetJArray(nameof(document.Fragments), throwException: false);
-                if ((jA_fragments == null) || !jA_fragments.OfType<JObject>().Any())
+                var jFragments = i.GetJArray(nameof(document.Fragments), throwException: false);
+                if ((jFragments == null) || !jFragments.OfType<JObject>().Any())
                 {
                     traceSource?.TraceWarning($"The JObject {nameof(Fragment)} enumeration is not here.");
                     segment.Documents.Add(document);
                     return;
                 }
 
-                jA_fragments.OfType<JObject>().ForEachInEnumerable(j =>
+                jFragments.OfType<JObject>().ForEachInEnumerable(j =>
                 {
                     var fragment = j.FromJObject<IFragment, Fragment>();
                     if (fragment == null)

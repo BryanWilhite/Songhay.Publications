@@ -2,7 +2,6 @@
 using Songhay.Extensions;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -10,12 +9,12 @@ namespace Songhay.Publications.Models
 {
     public class DaisyConsortiumNcx
     {
-        public DaisyConsortiumNcx(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsFolder)
+        public DaisyConsortiumNcx(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
         {
             _publicationMeta = publicationMeta;
             _isbn13 = isbn13;
             _chapterSet = chapterSet;
-            _ncxDocumentPath = Path.Combine(epubOebpsFolder, "toc.ncx");
+            _ncxDocumentPath = PublicationContext.GetCombinedPath(epubOebpsDirectory, PublicationFiles.DaisyConsortiumNcxToc, shouldBeFile: true);
             _ncxDocument = XDocument.Load(_ncxDocumentPath);
         }
 
@@ -115,7 +114,9 @@ namespace Songhay.Publications.Models
             Console.WriteLine("setting ncx docTitle title...");
 
             var ncx = PublicationNamespaces.DaisyNcx;
-            var title = _publicationMeta["publication"]["title"].Value<string>();
+            var title = _publicationMeta
+                .GetJObject("publication")
+                .GetValue<string>("title");
 
             var textElement = _ncxDocument.Root
                 .Element(ncx + "docTitle")
@@ -149,10 +150,10 @@ namespace Songhay.Publications.Models
                 });
         }
 
-        Dictionary<string, string> _chapterSet;
-        JObject _publicationMeta;
-        XDocument _ncxDocument;
-        string _isbn13;
-        string _ncxDocumentPath;
+        readonly Dictionary<string, string> _chapterSet;
+        readonly JObject _publicationMeta;
+        readonly XDocument _ncxDocument;
+        readonly string _isbn13;
+        readonly string _ncxDocumentPath;
     }
 }

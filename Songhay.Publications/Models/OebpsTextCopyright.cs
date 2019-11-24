@@ -2,7 +2,6 @@
 using Songhay.Extensions;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -10,23 +9,27 @@ namespace Songhay.Publications.Models
 {
     public class OebpsTextCopyright
     {
-        public OebpsTextCopyright(JObject publicationMeta, string epubTextFolder)
+        public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
         {
             _publicationMeta = publicationMeta;
-            _documentPath = Path.Combine(epubTextFolder, "copyright.xhtml");
+            _documentPath = PublicationContext.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileCopyright, shouldBeFile: true);
             _document = XDocument.Load(_documentPath);
             this.SetSpans();
         }
 
         public void Write()
         {
-            var pubYear = _publicationMeta["publication"]["publicationDate"].Value<string>();
+            var pubYear = _publicationMeta
+                .GetJObject("publication")
+                .GetValue<string>("publicationDate");
             pubYear = DateTime.Parse(pubYear).Year.ToString();
 
-            var pubAuthor = _publicationMeta["publication"]["author"].Value<string>();
-            var pubInquiries = _publicationMeta["publication"]["inquiries"].Value<string>();
-            var pubCoverArtCredits = _publicationMeta["publication"]["coverArtCredits"].Value<string>();
-            var pubEpubPublicationDate = _publicationMeta["publication"]["epubPublicationDate"].Value<string>();
+            var jPub = _publicationMeta.GetJObject("publication");
+
+            var pubAuthor = jPub.GetValue<string>("author");
+            var pubInquiries = jPub.GetValue<string>("inquiries");
+            var pubCoverArtCredits = jPub.GetValue<string>("coverArtCredits");
+            var pubEpubPublicationDate = jPub.GetValue<string>("epubPublicationDate");
 
             var span = GetSpan("pub-year");
             span.Value = pubYear + " ";
@@ -77,9 +80,9 @@ namespace Songhay.Publications.Models
                 .Descendants(xhtml + "span");
         }
 
+        readonly JObject _publicationMeta;
+        readonly string _documentPath;
+        readonly XDocument _document;
         IEnumerable<XElement> _spans;
-        JObject _publicationMeta;
-        string _documentPath;
-        XDocument _document;
     }
 }

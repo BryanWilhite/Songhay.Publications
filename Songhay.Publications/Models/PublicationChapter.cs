@@ -11,11 +11,11 @@ namespace Songhay.Publications.Models
 {
     public class PublicationChapter
     {
-        public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterFolder)
+        public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory)
         {
             _chapterPair = chapterPair;
             _chapter = new XDocument(chapterTemplate);
-            _chapterDirectoryInfo = new DirectoryInfo(chapterFolder);
+            _chapterDirectoryInfo = new DirectoryInfo(chapterDirectory);
         }
 
         public XElement GetChapterBodyElement()
@@ -127,8 +127,8 @@ namespace Songhay.Publications.Models
             return _chapter.ToString();
         }
 
+        readonly DirectoryInfo _chapterDirectoryInfo;
+        readonly XDocument _chapter;
         KeyValuePair<string, string> _chapterPair;
-        DirectoryInfo _chapterDirectoryInfo;
-        XDocument _chapter;
     }
 }

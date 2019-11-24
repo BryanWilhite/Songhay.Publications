@@ -7,10 +7,10 @@ namespace Songhay.Publications.Models
 {
     public class OebpsTextDedication
     {
-        public OebpsTextDedication(string csxRoot, string epubTextFolder, string markdownFolder)
+        public OebpsTextDedication(string csxRoot, string epubTextDirectory, string markdownDirectory)
         {
-            _epubTextFolder = epubTextFolder;
-            _markdownFolder = markdownFolder;
+            _epubTextDirectory = epubTextDirectory;
+            _markdownDirectory = markdownDirectory;
             this.SetTemplate(csxRoot);
         }
 
@@ -18,13 +18,8 @@ namespace Songhay.Publications.Models
         {
             var xhtml = PublicationNamespaces.Xhtml;
 
-            var xhtmlFile = Path.Combine(_epubTextFolder, "dedication.xhtml");
-            if (!File.Exists(xhtmlFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", xhtmlFile));
-
-            var markdownFile = Path.Combine(_markdownFolder, "author-dedication.md");
-            if (!File.Exists(markdownFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", markdownFile));
+            var xhtmlFile = PublicationContext.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileDedication, shouldBeFile: true);
+            var markdownFile = PublicationContext.GetCombinedPath(_markdownDirectory, PublicationFiles.EpubMarkdownDedication, shouldBeFile: true);
 
             Console.WriteLine("    markdown file {0}...", markdownFile);
             var markdown = File.ReadAllText(markdownFile);
@@ -43,17 +38,12 @@ namespace Songhay.Publications.Models
 
         void SetTemplate(string csxRoot)
         {
-            var dedicationTemplateFile = Path.Combine(csxRoot, "dedication-template.xhtml");
-            if (!File.Exists(dedicationTemplateFile))
-                PublicationContext.Throw(string.Format("ERROR: cannot find {0}", dedicationTemplateFile));
-
+            var dedicationTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateDedication, shouldBeFile: true);
             _dedicationTemplate = XDocument.Load(dedicationTemplateFile);
         }
 
-        string _epubTextFolder;
-        string _markdownFolder;
-        string _documentPath;
-        XDocument _document;
+        readonly string _epubTextDirectory;
+        readonly string _markdownDirectory;
         XDocument _dedicationTemplate;
     }
 }

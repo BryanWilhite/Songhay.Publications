@@ -22,8 +22,8 @@
 
 
   <ItemGroup>
-    <Folder Include="markdown\presentation-drafts\" />
-    <Folder Include="markdown\presentation\entry\" />
+    <Directory Include="markdown\presentation-drafts\" />
+    <Directory Include="markdown\presentation\entry\" />
   </ItemGroup>
 
 </Project>
