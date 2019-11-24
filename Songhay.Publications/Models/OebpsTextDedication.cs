@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(dedicationDocument, xhtmlFile);
         }
 
-        void SetTemplate(string csxRoot)
+        internal void SetTemplate(string csxRoot)
         {
             var dedicationTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateDedication, shouldBeFile: true);
             _dedicationTemplate = XDocument.Load(dedicationTemplateFile);

@@ -43,7 +43,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
         }
 
-        XElement GetTOCAnchor(string chapterId)
+        internal XElement GetTOCAnchor(string chapterId)
         {
             var xhtml = PublicationNamespaces.Xhtml;
             var hrefTemplate = GetTOCHrefTemplate();
@@ -54,17 +54,17 @@ namespace Songhay.Publications.Models
                 );
         }
 
-        string GetTOCChapterValue(string chapterId)
+        internal string GetTOCChapterValue(string chapterId)
         {
             return _chapterSet[chapterId];
         }
 
-        string GetTOCHrefTemplate()
+        internal string GetTOCHrefTemplate()
         {
             return "../Text/{0}.xhtml";
         }
 
-        void SetTocAnchor(XElement a, string chapterId)
+        internal void SetTocAnchor(XElement a, string chapterId)
         {
             var hrefTemplate = GetTOCHrefTemplate();
 
@@ -74,7 +74,7 @@ namespace Songhay.Publications.Models
             hrefAttribute.Value = string.Format(hrefTemplate, chapterId);
         }
 
-        void SetTocAnchors(XDocument tocDocument)
+        internal void SetTocAnchors(XDocument tocDocument)
         {
             Console.WriteLine("setting TOC chapter anchors...");
 

@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(biographyDocument, xhtmlFile);
         }
 
-        void SetBiographyTemplate(string csxRoot)
+        internal void SetBiographyTemplate(string csxRoot)
         {
             var biographyTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateBiography, shouldBeFile: true);
             _biographyTemplate = XDocument.Load(biographyTemplateFile);

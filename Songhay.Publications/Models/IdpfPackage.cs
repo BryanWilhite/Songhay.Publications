@@ -28,7 +28,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(_idpfDocument, _idpfDocumentPath);
         }
 
-        XElement GetItemRef(string chapterId)
+        internal XElement GetItemRef(string chapterId)
         {
             var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
                 new XAttribute("idref", chapterId));
         }
 
-        XElement GetManifestItem(string chapterId)
+        internal XElement GetManifestItem(string chapterId)
         {
             var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
@@ -47,7 +47,7 @@ namespace Songhay.Publications.Models
                 );
         }
 
-        void SetDublinCoreMeta()
+        internal void SetDublinCoreMeta()
         {
             var dc = PublicationNamespaces.DublinCore;
             var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
@@ -70,7 +70,7 @@ namespace Songhay.Publications.Models
             dateElement.Value = jPublication.GetValue<string>("publicationDate");
         }
 
-        void SetManifestItem(XElement item, string id)
+        internal void SetManifestItem(XElement item, string id)
         {
             var href = string.Format("Text/{0}.xhtml", id);
             var hrefAttribute = item.Attribute("href");
@@ -80,7 +80,7 @@ namespace Songhay.Publications.Models
             idAttribute.Value = id;
         }
 
-        void SetManifestItemElementsForChapters()
+        internal void SetManifestItemElementsForChapters()
         {
             Console.WriteLine("setting manifest item elements for chapters...");
 
@@ -133,13 +133,13 @@ namespace Songhay.Publications.Models
             templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
         }
 
-        void SetSpineItemref(XElement itemref, string idref)
+        internal void SetSpineItemref(XElement itemref, string idref)
         {
             var idrefAttribute = itemref.Attribute("idref");
             idrefAttribute.Value = idref;
         }
 
-        void SetSpineItemRefElementsForChapters()
+        internal void SetSpineItemRefElementsForChapters()
         {
             Console.WriteLine("setting spine itemref elements for chapters...");
 

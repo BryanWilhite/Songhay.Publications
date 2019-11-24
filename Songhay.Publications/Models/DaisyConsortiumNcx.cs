@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(_ncxDocument, _ncxDocumentPath);
         }
 
-        XElement GetNavPoint(string chapterId)
+        internal XElement GetNavPoint(string chapterId)
         {
             var ncx = PublicationNamespaces.DaisyNcx;
 
@@ -50,7 +50,7 @@ namespace Songhay.Publications.Models
                 );
         }
 
-        void SetChapterNavPoints(IEnumerable<XElement> navPoints)
+        internal void SetChapterNavPoints(IEnumerable<XElement> navPoints)
         {
             Console.WriteLine("setting navPoint elements for chapters...");
 
@@ -97,7 +97,7 @@ namespace Songhay.Publications.Models
             templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
         }
 
-        void SetChapterNavPointText(XElement navPoint, string text)
+        internal void SetChapterNavPointText(XElement navPoint, string text)
         {
             Console.WriteLine("setting navPoint navLabel text...");
 
@@ -109,7 +109,7 @@ namespace Songhay.Publications.Models
             textElement.Value = text;
         }
 
-        void SetNcxDocTitle()
+        internal void SetNcxDocTitle()
         {
             Console.WriteLine("setting ncx docTitle title...");
 
@@ -124,7 +124,7 @@ namespace Songhay.Publications.Models
             textElement.Value = title;
         }
 
-        void SetNcxMeta()
+        internal void SetNcxMeta()
         {
             Console.WriteLine("setting ncx docTitle meta...");
 
@@ -137,7 +137,7 @@ namespace Songhay.Publications.Models
             content.Value = _isbn13;
         }
 
-        void UpdateNavPointPlayOrder(IEnumerable<XElement> navPoints)
+        internal void UpdateNavPointPlayOrder(IEnumerable<XElement> navPoints)
         {
             Console.WriteLine("updating navPoint playOrder...");
 

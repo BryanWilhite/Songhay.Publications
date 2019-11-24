@@ -49,7 +49,7 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
         }
 
-        XElement GetSpan(string @class)
+        internal XElement GetSpan(string @class)
         {
             return _spans
                 .Single(i =>
@@ -59,7 +59,7 @@ namespace Songhay.Publications.Models
                 });
         }
 
-        IEnumerable<XElement> GetSpans(string @class)
+        internal IEnumerable<XElement> GetSpans(string @class)
         {
             return _spans.Where(i =>
             {
@@ -68,7 +68,7 @@ namespace Songhay.Publications.Models
             });
         }
 
-        void SetSpans()
+        internal void SetSpans()
         {
             var xhtml = PublicationNamespaces.Xhtml;
 
