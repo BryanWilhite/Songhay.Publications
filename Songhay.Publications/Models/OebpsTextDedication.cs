@@ -5,15 +5,36 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines the content to write the
+    /// <see cref="PublicationFiles.EpubFileDedication"/> file.
+    /// </summary>
+    /// <remarks>
+    ///  Open eBook Publication Structure (OEBPS),
+    ///  is a legacy e-book format which
+    ///  has been superseded by the EPUB format.
+    ///
+    /// https://en.wikipedia.org/wiki/Open_eBook
+    /// </remarks>
     public class OebpsTextDedication
     {
-        public OebpsTextDedication(string csxRoot, string epubTextDirectory, string markdownDirectory)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OebpsTextDedication"/> class.
+        /// </summary>
+        /// <param name="templateRoot">the root directory of the EPUB template files</param>
+        /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+        /// <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
+        public OebpsTextDedication(string templateRoot, string epubTextDirectory, string markdownDirectory)
         {
             _epubTextDirectory = epubTextDirectory;
             _markdownDirectory = markdownDirectory;
-            this.SetTemplate(csxRoot);
+            this.SetTemplate(templateRoot);
         }
 
+        /// <summary>
+        /// Writes the
+        /// <see cref="PublicationFiles.EpubFileDedication"/> file.
+        /// </summary>
         public void Write()
         {
             var xhtml = PublicationNamespaces.Xhtml;

@@ -8,8 +8,20 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines the content to write the
+    /// International Digital Publishing Forum
+    /// <see cref="PublicationFiles.IdpfcOpfManifest"/> file.
+    /// </summary>
     public class IdpfPackage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IdpfPackage"/> class.
+        /// </summary>
+        /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
+        /// <param name="isbn13">International Standard Book Number (ISBN)</param>
+        /// <param name="chapterSet">chapter data</param>
+        /// <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
         public IdpfPackage(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
         {
             _publicationMeta = publicationMeta;
@@ -19,6 +31,10 @@ namespace Songhay.Publications.Models
             _idpfDocument = XDocument.Load(_idpfDocumentPath);
         }
 
+        /// <summary>
+        /// Writes the
+        /// <see cref="PublicationFiles.IdpfcOpfManifest"/> file.
+        /// </summary>
         public void SetPublicationMeta()
         {
             this.SetDublinCoreMeta();

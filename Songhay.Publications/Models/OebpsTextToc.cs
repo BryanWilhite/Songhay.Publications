@@ -7,8 +7,25 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines the content to write the
+    /// <see cref="PublicationFiles.EpubFileToc"/> file.
+    /// </summary>
+    /// <remarks>
+    ///  Open eBook Publication Structure (OEBPS),
+    ///  is a legacy e-book format which
+    ///  has been superseded by the EPUB format.
+    ///
+    /// https://en.wikipedia.org/wiki/Open_eBook
+    /// </remarks>
     public class OebpsTextToc
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OebpsTextToc"/> class.
+        /// </summary>
+        /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
+        /// <param name="chapterSet">chapter data</param>
+        /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
         public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
         {
             _publicationMeta = publicationMeta;
@@ -17,6 +34,10 @@ namespace Songhay.Publications.Models
             _document = XDocument.Load(_documentPath);
         }
 
+        /// <summary>
+        /// Writes the
+        /// <see cref="PublicationFiles.EpubFileToc"/> file.
+        /// </summary>
         public void Write()
         {
             var jPublication = _publicationMeta.GetJObject("publication");

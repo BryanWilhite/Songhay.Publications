@@ -7,8 +7,24 @@ using System.Xml.Linq;
 
 namespace Songhay.Publications.Models
 {
+    /// <summary>
+    /// Defines the content to write the
+    /// <see cref="PublicationFiles.EpubFileCopyright"/> file.
+    /// </summary>
+    /// <remarks>
+    ///  Open eBook Publication Structure (OEBPS),
+    ///  is a legacy e-book format which
+    ///  has been superseded by the EPUB format.
+    ///
+    /// https://en.wikipedia.org/wiki/Open_eBook
+    /// </remarks>
     public class OebpsTextCopyright
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OebpsTextCopyright"/> class.
+        /// </summary>
+        /// <param name="templateRoot">the root directory of the EPUB template files</param>
+        /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
         public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
         {
             _publicationMeta = publicationMeta;
@@ -17,6 +33,10 @@ namespace Songhay.Publications.Models
             this.SetSpans();
         }
 
+        /// <summary>
+        /// Writes the
+        /// <see cref="PublicationFiles.EpubFileCopyright"/> file.
+        /// </summary>
         public void Write()
         {
             var pubYear = _publicationMeta
