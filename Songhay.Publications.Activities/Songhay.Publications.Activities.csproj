@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <RootNamespace>Songhay.Publications.Activities</RootNamespace>
+
+    <Title>Songhay Publications Activities</Title>
+    <Description>The Studio Publications Activities for commandline automation and cloud orchestraction.</Description>
+    <Authors>Bryan D. Wilhite</Authors>
+    <Copyright>(c) 2019 Bryan D. Wilhite</Copyright>
+    <Company>Songhay System</Company>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloneExtensions" Version="1.4.2" />
+    <PackageReference Include="Markdig" Version="0.18.0" />
+    <PackageReference Include="SonghayCore" Version="3.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -35,13 +35,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Extensions\IContractResolverExtensions.cs" />
-    <Compile Remove="JsonSerializationUtility.cs" />
-    <Compile Remove="Models\InterfaceContractResolver.cs" />
-    <Compile Remove="Models\InterfaceContractResolverWithCamelCasing.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CloneExtensions" Version="1.4.2" />
     <PackageReference Include="Markdig" Version="0.18.0" />
     <PackageReference Include="SonghayCore" Version="3.2.9" />
