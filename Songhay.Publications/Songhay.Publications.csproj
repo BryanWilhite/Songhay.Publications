@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
     <RootNamespace>Songhay.Publications</RootNamespace>
 
     <Title>Songhay Publications</Title>
@@ -10,15 +10,15 @@
     <Copyright>(c) 2019 Bryan D. Wilhite</Copyright>
     <Company>Songhay System</Company>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/BryanWilhite/SonghayCore</RepositoryUrl>
+    <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
 
     <IncludeSource>false</IncludeSource>
     <IncludeSymbols>false</IncludeSymbols>
     <IsPackable>true</IsPackable>
     <PackageIconUrl>https://songhaystorage.blob.core.windows.net/studio-public/songhay_icon.png</PackageIconUrl>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/BryanWilhite/SonghayCore/projects</PackageProjectUrl>
-    <PackageReleaseNotes>see https://github.com/BryanWilhite/SonghayCore/projects/12</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
+    <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/projects/1</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
