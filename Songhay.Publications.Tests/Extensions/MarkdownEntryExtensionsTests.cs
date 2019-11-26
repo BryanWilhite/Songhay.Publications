@@ -113,7 +113,10 @@ namespace Songhay.Publications.Tests.Extensions
         }
 
         [Theory]
+        [InlineData("Hello World!", null, "./path", null, 8)]
         [InlineData("Hello World!", "It was the best of times.", "./path", null, 8)]
+        [InlineData("Hello World!", "It was the best of times.", "./path", "thing", 8)]
+        [InlineData("Hello World!", "It was the best of times.", "./path", "{\"thing\": true}", 8)]
         public void With11tyExtract_Test(string title, string content, string path, string tag, int length)
         {
             var entry = (new MarkdownEntry())
@@ -125,7 +128,14 @@ namespace Songhay.Publications.Tests.Extensions
             Assert.NotNull(jO);
 
             var extract = jO.GetValue<string>("extract");
-            Assert.False(string.IsNullOrWhiteSpace(extract));
+
+            this._testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
+            this._testOutputHelper.WriteLine(entry.FrontMatter.ToString());
+
+            if (content == null)
+                Assert.True(string.IsNullOrWhiteSpace(extract));
+            else
+                Assert.False(string.IsNullOrWhiteSpace(extract));
         }
 
         [Fact]

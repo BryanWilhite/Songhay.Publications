@@ -218,13 +218,13 @@ namespace Songhay.Publications.Extensions
         {
             entry.WithEdit(i =>
             {
-                string UpdateExtractAndReturnTag(string s, string e)
+                string UpdateExtractAndReturnTag(string tag, string e)
                 {
                     var extractPropertyName = "extract";
 
-                    var jO = s.TrimStart().StartsWith("{") ?
-                        JObject.Parse(s) :
-                        JObject.FromObject(new { legacy = s });
+                    var jO = tag.TrimStart().StartsWith("{") ?
+                        JObject.Parse(tag) :
+                        JObject.FromObject(new { legacy = tag });
 
                     if (!jO.HasProperty(extractPropertyName))
                     {
@@ -236,13 +236,16 @@ namespace Songhay.Publications.Extensions
                 }
 
                 var tagPropertyName = "tag";
-                var tagToken = i.FrontMatter.GetValue<JToken>(tagPropertyName);
+                var tagString = i.FrontMatter
+                    .GetValue<string>(tagPropertyName, throwException: false);
 
                 var extract = i.ToExtract(length);
 
-                i.FrontMatter[tagPropertyName] = tagToken.HasValues ?
-                    UpdateExtractAndReturnTag(tagToken.GetValue<string>(), extract) :
-                    JObject.FromObject(new { extract }).ToString();
+                i.FrontMatter[tagPropertyName] = string.IsNullOrWhiteSpace(tagString) ?
+                    JObject.FromObject(new { extract }).ToString()
+                    :
+                    UpdateExtractAndReturnTag(tagString, extract)
+                    ;
             });
 
             return entry;
