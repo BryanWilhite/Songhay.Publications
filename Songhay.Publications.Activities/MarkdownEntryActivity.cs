@@ -1,5 +1,6 @@
 ﻿using Songhay.Models;
 using System;
+using System.Threading.Tasks;
 
 namespace Songhay.Publications.Activities
 {
@@ -11,6 +12,11 @@ namespace Songhay.Publications.Activities
         }
 
         public void Start(ProgramArgs args)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<TResult> StartAsync<TResult>(ProgramArgs args)
         {
             throw new NotImplementedException();
         }
