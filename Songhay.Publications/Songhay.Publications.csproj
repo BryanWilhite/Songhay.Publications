@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.6</AssemblyVersion>
+    <AssemblyVersion>1.0.8</AssemblyVersion>
     <RootNamespace>Songhay.Publications</RootNamespace>
 
     <Title>Songhay Publications</Title>
@@ -18,7 +18,7 @@
     <PackageIcon>..\songhay_icon.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-    <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/7</PackageReleaseNotes>
+    <PackageReleaseNotes>📦🔼 updated core dependencies</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
@@ -37,7 +37,7 @@
   <ItemGroup>
     <PackageReference Include="CloneExtensions" Version="1.4.2" />
     <PackageReference Include="Markdig" Version="0.18.0" />
-    <PackageReference Include="SonghayCore" Version="3.2.10" />
+    <PackageReference Include="SonghayCore" Version="3.2.12" />
   </ItemGroup>
 
   <ItemGroup>
