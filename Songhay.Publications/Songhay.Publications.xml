@@ -30,6 +30,24 @@
             Extensions of <see cref="T:System.IO.DirectoryInfo"/>
             </summary>
         </member>
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.FindDirectory(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Finds the specified sub <see cref="T:System.IO.DirectoryInfo"/>
+            under the specified <see cref="T:System.IO.DirectoryInfo"/>.
+            </summary>
+            <param name="directoryInfo">the specified <see cref="T:System.IO.DirectoryInfo"/></param>
+            <param name="expectedDirectoryName">the specified sub <see cref="P:System.IO.DirectoryInfo.Name"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.FindFile(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Finds the specified <see cref="T:System.IO.FileInfo"/>
+            under the specified <see cref="T:System.IO.DirectoryInfo"/>.
+            </summary>
+            <param name="directoryInfo">the specified <see cref="T:System.IO.DirectoryInfo"/></param>
+            <param name="expectedFileName">the specified <see cref="P:System.IO.FileInfo.Name"/></param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.HasAllConventionalMarkdownPresentationDirectories(System.IO.DirectoryInfo)">
             <summary>
             Returns true when all of the conventional markdown presentation
@@ -38,13 +56,13 @@
             <param name="directoryInfo">the expected top-level presentation directory</param>
             <returns></returns>
         </member>
-        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.IsConventionalMarkdownPresentationDirectory(System.IO.DirectoryInfo,System.String)">
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.VerifyDirectory(System.IO.DirectoryInfo,System.String)">
             <summary>
-            Returns true when all of the specified conventional markdown presentation
-            directory is present.
+            Verifies the specified <see cref="T:System.IO.DirectoryInfo"/>
+            with conventional error handling.
             </summary>
-            <param name="directoryInfo">the expected top-level presentation directory</param>
-            <param name="directoryName"><see cref="!:MarkdownPresentationDirectories.All"/></param>
+            <param name="directoryInfo">the specified <see cref="T:System.IO.DirectoryInfo"/></param>
+            <param name="expectedDirectoryName">the expected directory name</param>
             <returns></returns>
         </member>
         <member name="T:Songhay.Publications.Extensions.IDocumentExtensions">
@@ -1628,6 +1646,31 @@
             Text content
             </summary>
             <value></value>
+        </member>
+        <member name="T:Songhay.Publications.Models.MarkdownPresentationCommands">
+            <summary>
+            Conventional command names for markdown presentations
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationCommands.CommandNameAddEntryExtract">
+            <summary>
+            Conventional command name
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationCommands.CommandNameExpandUris">
+            <summary>
+            Conventional command name
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationCommands.CommandNameGenerateEntry">
+            <summary>
+            Conventional command name
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationCommands.CommandNamePublishEntry">
+            <summary>
+            Conventional command name
+            </summary>
         </member>
         <member name="T:Songhay.Publications.Models.MarkdownPresentationDirectories">
             <summary>

@@ -14,6 +14,14 @@ namespace Songhay.Publications.Shell
 {
     class Program
     {
+        internal static void DisplayCredits()
+        {
+            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(Assembly.GetExecutingAssembly(), true));
+            Console.WriteLine(string.Empty);
+            Console.WriteLine("Activities Assembly:");
+            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
+        }
+
         internal static void Main(string[] args)
         {
             DisplayCredits();
@@ -34,14 +42,6 @@ namespace Songhay.Publications.Shell
 
                 listener.Flush();
             }
-        }
-
-        internal static void DisplayCredits()
-        {
-            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(Assembly.GetExecutingAssembly(), true));
-            Console.WriteLine(string.Empty);
-            Console.WriteLine("Activities Assembly:");
-            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
         }
     }
 }
