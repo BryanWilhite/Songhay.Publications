@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ProgramTests.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\Songhay.Publications.Shell\appsettings.json" Link="appsettings.json" />
-    <None Include="ProgramTests.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <PackageReference Include="SonghayCore.xUnit" Version="3.0.12" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -40,6 +29,12 @@
     <ProjectReference Include="..\Songhay.Publications.Activities\Songhay.Publications.Activities.csproj" />
     <ProjectReference Include="..\Songhay.Publications.Shell\Songhay.Publications.Shell.csproj" />
     <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
