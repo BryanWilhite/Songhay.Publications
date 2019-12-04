@@ -6,12 +6,15 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Songhay.Publications.Shell.Tests")]
 
 namespace Songhay.Publications.Shell
 {
     class Program
     {
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
             DisplayCredits();
 

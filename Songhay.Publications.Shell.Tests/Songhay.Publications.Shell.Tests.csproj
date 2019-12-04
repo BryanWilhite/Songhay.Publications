@@ -7,7 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ProgramTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Songhay.Publications.Shell\appsettings.json" Link="appsettings.json" />
+    <None Include="ProgramTests.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="SonghayCore.xUnit" Version="3.0.12" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
@@ -22,6 +34,12 @@
   <ItemGroup>
     <Folder Include="md-presentation-layout\presentation-drafts\" />
     <Folder Include="md-presentation-layout\presentation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Songhay.Publications.Activities\Songhay.Publications.Activities.csproj" />
+    <ProjectReference Include="..\Songhay.Publications.Shell\Songhay.Publications.Shell.csproj" />
+    <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
   </ItemGroup>
 
 </Project>
