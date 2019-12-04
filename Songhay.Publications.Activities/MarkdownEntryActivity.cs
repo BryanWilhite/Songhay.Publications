@@ -1,5 +1,6 @@
 ﻿using Songhay.Extensions;
 using Songhay.Models;
+using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 using System;
 using System.IO;
@@ -15,16 +16,13 @@ namespace Songhay.Publications.Activities
 
         public void Start(ProgramArgs args)
         {
-            this._presentationShellInfo = new DirectoryInfo(args.GetArgValue(ProgramArgs.BasePath));
-            this.CheckPresentationShellInfo();
+            var presentationShellInfo = new DirectoryInfo(args.GetArgValue(ProgramArgs.BasePath));
+            presentationShellInfo.IsConventionalMarkdownPresentationDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationShell);
+
+            this._presentationInfo = presentationShellInfo.Parent;
+            this._presentationInfo.HasAllConventionalMarkdownPresentationDirectories();
         }
 
-        internal void CheckPresentationShellInfo()
-        {
-            if (!this._presentationShellInfo.Name.EqualsInvariant(MarkdownPresentationDirectories.DirectoryNamePresentationShell))
-                throw new DirectoryNotFoundException($"The expected Presentation Shell directory is not here. [actual: { this._presentationShellInfo?.Name ?? "[name]" }");
-        }
-
-        DirectoryInfo _presentationShellInfo;
+        DirectoryInfo _presentationInfo;
     }
 }

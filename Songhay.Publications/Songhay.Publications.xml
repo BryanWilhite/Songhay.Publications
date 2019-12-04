@@ -25,6 +25,28 @@
             <param name="document"></param>
             <param name="path"></param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.DirectoryInfoExtensions">
+            <summary>
+            Extensions of <see cref="T:System.IO.DirectoryInfo"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.HasAllConventionalMarkdownPresentationDirectories(System.IO.DirectoryInfo)">
+            <summary>
+            Returns true when all of the conventional markdown presentation
+            directories are present.
+            </summary>
+            <param name="directoryInfo">the expected top-level presentation directory</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.IsConventionalMarkdownPresentationDirectory(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Returns true when all of the specified conventional markdown presentation
+            directory is present.
+            </summary>
+            <param name="directoryInfo">the expected top-level presentation directory</param>
+            <param name="directoryName"><see cref="!:MarkdownPresentationDirectories.All"/></param>
+            <returns></returns>
+        </member>
         <member name="T:Songhay.Publications.Extensions.IDocumentExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.Models.IDocument"/>
@@ -1606,6 +1628,27 @@
             Text content
             </summary>
             <value></value>
+        </member>
+        <member name="T:Songhay.Publications.Models.MarkdownPresentationDirectories">
+            <summary>
+            Defines the conventional directory names
+            of the markdown presentation.
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationDirectories.DirectoryNamePresentation">
+            <summary>
+            Conventional directory name
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationDirectories.DirectoryNamePresentationDrafts">
+            <summary>
+            Conventional directory name
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.MarkdownPresentationDirectories.DirectoryNamePresentationShell">
+            <summary>
+            Conventional directory name
+            </summary>
         </member>
         <member name="T:Songhay.Publications.Models.OebpsTextBiography">
              <summary>
