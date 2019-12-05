@@ -1,6 +1,4 @@
 {
     "command": "PublishEntry",
-    "entryRoot": "../../../../../presentation-drafts/",
-    "presentationRoot": "../../../../../presentation/entry",
-    "entry": "2019-11-21-why-i-stopped-using-ngrx-and-other-tweeted-links.md"
+    "entryFileName": "2019-12-04-flippant-remarks-about-responsive-images.md"
 }

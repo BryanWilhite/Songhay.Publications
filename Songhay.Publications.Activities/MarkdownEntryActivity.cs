@@ -34,6 +34,7 @@ namespace Songhay.Publications.Activities
             traceSource?.TraceVerbose($"{nameof(command)}: {command}");
 
             if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameGenerateEntry)) GenerateEntry();
+            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
         }
 
         internal void GenerateEntry()
@@ -51,6 +52,21 @@ namespace Songhay.Publications.Activities
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
 
             traceSource?.TraceInformation($"Generated entry: {clientId}");
+        }
+
+        internal void PublishEntry()
+        {
+            var entryDraftsRootInfo = this._presentationInfo
+                .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts);
+            var entryRootInfo = this._presentationInfo
+                .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentation)
+                .FindDirectory("entry")
+                .FindDirectory(DateTime.Now.Year.ToString());
+            var entryFileName = this._jSettings.GetValue<string>("entryFileName");
+
+            var path = MarkdownEntryUtility.PublishEntryFor11ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
+
+            traceSource?.TraceInformation($"Published entry: {path}");
         }
 
         internal void SetContext(ProgramArgs args)
