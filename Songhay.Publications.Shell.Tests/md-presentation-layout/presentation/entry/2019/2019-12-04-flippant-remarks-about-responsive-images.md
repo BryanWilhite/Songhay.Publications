@@ -18,3 +18,10 @@
 ---
 
 # Flippant Remarks about Responsive Images
+
+<div class="tweet" data-status-id="1124093785754021900">
+
+[<img alt="🚀🚀🚀📚 SF Signal [sfsignal]" src="https://songhay.blob.core.windows.net:443/shared-social-twitter/sfsignal.png" />](http://www.sfsignal.com/)
+Watch Six New Short Alien Films - [http://www.openculture.com/2019/05/watch-six-new-short-alien-films.html](http://www.openculture.com/2019/05/watch-six-new-short-alien-films.html) [https://twitter.com/sfsignal/status/1124093785754021890/photo/1](https://twitter.com/sfsignal/status/1124093785754021890/photo/1)
+
+</div>

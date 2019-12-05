@@ -43,27 +43,27 @@ namespace Songhay.Publications.Activities
 
         internal void ExpandUris()
         {
-            //var collapsedHost = this._jSettings.GetValue<string>("collapsedHost");
-            //var entryPath = this._jSettings.GetValue<string>("entryPath");
-            //entryPath = this._presentationInfo.ToCombinedPath(entryPath);
+            var collapsedHost = this._jSettings.GetValue<string>("collapsedHost");
+            var entryPath = this._jSettings.GetValue<string>("entryPath");
+            entryPath = this._presentationInfo.ToCombinedPath(entryPath);
 
-            //if (!File.Exists(entryPath))
-            //    throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
+            if (!File.Exists(entryPath))
+                throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
 
-            //var entryInfo = new FileInfo(entryPath);
-            //var entry = entryInfo.ToMarkdownEntry();
-            //var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
-            //var uris = matches.OfType<Match>().Select(i => new Uri(i.Value)).Distinct().ToArray();
-            //var tasks = uris.Select(i => i.ToExpandedUriPairAsync()).ToArray();
+            var entryInfo = new FileInfo(entryPath);
+            var entry = entryInfo.ToMarkdownEntry();
+            var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
+            var uris = matches.OfType<Match>().Select(i => new Uri(i.Value)).Distinct().ToArray();
+            var tasks = uris.Select(i => i.ToExpandedUriPairAsync()).ToArray();
 
-            //Task.WaitAll(tasks);
+            Task.WaitAll(tasks);
 
-            //var findChangeSet = tasks.Select(i => i.Result).ToDictionary(k => k.Key, v => v.Value);
+            var findChangeSet = tasks.Select(i => i.Result).ToDictionary(k => k.Key, v => v.Value);
 
-            //foreach (var pair in findChangeSet)
-            //    entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
+            foreach (var pair in findChangeSet)
+                entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
 
-            //File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
+            File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
         }
 
         internal void GenerateEntry()
