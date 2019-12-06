@@ -40,23 +40,47 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "publish [Songhay.Publications.Shell, linux-x64]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Songhay.Publications.Shell/Songhay.Publications.Shell.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "--configuration",
+                "Release",
+                "--self-contained",
+                "false",
+                "--runtime",
+                "linux-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish [Songhay.Publications.Shell, win-x64]",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Songhay.Publications.Shell/Songhay.Publications.Shell.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "--configuration",
+                "Release",
+                "--self-contained",
+                "false",
+                "--runtime",
+                "win-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build [Songhay.Publications.Tests]",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish [Songhay.Publications.Tests]",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
                 "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
