@@ -3,7 +3,6 @@ using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -22,26 +21,29 @@ namespace Songhay.Publications.Shell
             Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
         }
 
-        internal static void Main(string[] args)
+        internal static string Run(string[] args)
         {
-            DisplayCredits();
-
             var configuration = ProgramUtility.LoadConfiguration(Directory.GetCurrentDirectory());
             TraceSources.ConfiguredTraceSourceName = configuration[DeploymentEnvironment.DefaultTraceSourceNameConfigurationKey];
-            using (var listener = new TextWriterTraceListener(Console.Out))
-            {
-                ProgramUtility.InitializeTraceSource(listener);
 
-                var getter = new PublicationsActivitiesGetter(args);
-                var activity = getter.GetActivity();
+            var traceSource = TraceSources
+                .Instance
+                .GetTraceSourceFromConfiguredName()
+                .WithSourceLevels();
 
-                if (getter.Args.IsHelpRequest())
-                    Console.WriteLine(activity.DisplayHelp(getter.Args));
-                else
-                    activity.Start(getter.Args);
+            var getter = new PublicationsActivitiesGetter(args);
+            var activity = getter.GetActivity();
 
-                listener.Flush();
-            }
+            return getter.Args.IsHelpRequest() ?
+                activity.DisplayHelp(getter.Args)
+                :
+                activity.StartActivity(getter.Args, traceSource);
+        }
+
+        static void Main(string[] args)
+        {
+            DisplayCredits();
+            Run(args);
         }
     }
 }

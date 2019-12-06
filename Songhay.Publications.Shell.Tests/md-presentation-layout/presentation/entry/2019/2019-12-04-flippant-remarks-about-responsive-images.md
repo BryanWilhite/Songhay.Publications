@@ -13,7 +13,7 @@
   "isActive": true,
   "sortOrdinal": 0,
   "clientId": "2019-12-04-flippant-remarks-about-responsive-images",
-  "tag": "{\r\n  \"extract\": \"\"\r\n}"
+  "tag": "{\r\n  \"extract\": \"Watch Six New Short Alien Films - http://www.openculture.com/2019/05/watch-six-new-short-alien-films.html https://twitter.com/sfsignal/status/1124093785754021890/photo/1\\n\"\r\n}"
 }
 ---
 

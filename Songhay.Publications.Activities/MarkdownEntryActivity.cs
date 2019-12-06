@@ -34,11 +34,36 @@ namespace Songhay.Publications.Activities
             this.SetContext(args);
 
             var command = this._jSettings.GetValue<string>("command");
-            traceSource?.TraceVerbose($"{nameof(command)}: {command}");
+            traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
-            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
-            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameGenerateEntry)) GenerateEntry();
-            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
+            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameGenerateEntry)) GenerateEntry();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
+            else
+            {
+                traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+            }
+        }
+
+        internal void AddEntryExtract()
+        {
+            var entryPath = this._jSettings.GetValue<string>("entryPath");
+            entryPath = this._presentationInfo.ToCombinedPath(entryPath);
+
+            if (!File.Exists(entryPath))
+                throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
+
+            var entryInfo = new FileInfo(entryPath);
+            var entry = entryInfo.ToMarkdownEntry();
+            var finalEdit = entry
+                .With11tyExtract(255)
+                .ToFinalEdit();
+
+            File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
+
+            var clientId = entry.FrontMatter.GetValue<string>("clientId");
+            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
         }
 
         internal void ExpandUris()
@@ -64,6 +89,9 @@ namespace Songhay.Publications.Activities
                 entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
 
             File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
+
+            var clientId = entry.FrontMatter.GetValue<string>("clientId");
+            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Expanded URIs: {clientId}");
         }
 
         internal void GenerateEntry()
@@ -79,8 +107,7 @@ namespace Songhay.Publications.Activities
             }
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-
-            traceSource?.TraceInformation($"Generated entry: {clientId}");
+            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
         }
 
         internal void PublishEntry()
@@ -95,7 +122,7 @@ namespace Songhay.Publications.Activities
 
             var path = MarkdownEntryUtility.PublishEntryFor11ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
 
-            traceSource?.TraceInformation($"Published entry: {path}");
+            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
         }
 
         internal void SetContext(ProgramArgs args)
