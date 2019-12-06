@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -20,7 +20,7 @@
       <group targetFramework=".NETStandard2.0">
         <dependency id="CloneExtensions" version="1.4.2" />
         <dependency id="Markdig" version="0.18.0" />
-        <dependency id="SonghayCore" version="3.2.12" />
+        <dependency id="SonghayCore" version="3.2.15" />
       </group>
     </dependencies>
   </metadata>
