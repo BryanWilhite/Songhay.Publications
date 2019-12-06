@@ -43,7 +43,7 @@ namespace Songhay.Publications.Shell
         static void Main(string[] args)
         {
             DisplayCredits();
-            Run(args);
+            Console.WriteLine(Run(args));
         }
     }
 }
