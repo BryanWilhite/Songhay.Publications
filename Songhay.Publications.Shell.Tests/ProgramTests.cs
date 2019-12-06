@@ -1,10 +1,16 @@
 using Songhay.Models;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Songhay.Publications.Shell.Tests
 {
     public class ProgramTests
     {
+        public ProgramTests(ITestOutputHelper helper)
+        {
+            this._testOutputHelper = helper;
+        }
+
         [Theory]
         [InlineData(
             "MarkdownEntryActivity",
@@ -15,7 +21,7 @@ namespace Songhay.Publications.Shell.Tests
         {
             var basePath = GetBasePath(args[2]);
             args[2] = basePath;
-            Program.Main(args);
+            this._testOutputHelper.WriteLine(Program.Run(args));
         }
 
         [Theory]
@@ -28,7 +34,7 @@ namespace Songhay.Publications.Shell.Tests
         {
             var basePath = GetBasePath(args[2]);
             args[2] = basePath;
-            Program.Main(args);
+            this._testOutputHelper.WriteLine(Program.Run(args));
         }
 
         [Theory]
@@ -41,7 +47,7 @@ namespace Songhay.Publications.Shell.Tests
         {
             var basePath = GetBasePath(args[2]);
             args[2] = basePath;
-            Program.Main(args);
+            this._testOutputHelper.WriteLine(Program.Run(args));
         }
 
         [Theory]
@@ -54,9 +60,11 @@ namespace Songhay.Publications.Shell.Tests
         {
             var basePath = GetBasePath(args[2]);
             args[2] = basePath;
-            Program.Main(args);
+            this._testOutputHelper.WriteLine(Program.Run(args));
         }
 
         string GetBasePath(string relativePath) => FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, relativePath);
+
+        readonly ITestOutputHelper _testOutputHelper;
     }
 }
