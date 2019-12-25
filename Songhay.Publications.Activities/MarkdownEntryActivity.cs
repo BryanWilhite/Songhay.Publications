@@ -83,27 +83,27 @@ namespace Songhay.Publications.Activities
             var entry = entryInfo.ToMarkdownEntry();
             var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
             var uris = matches.OfType<Match>().Select(i => new Uri(i.Value)).Distinct().ToArray();
-            async Task<KeyValuePair<Uri, Uri>> ExpandUriPairAsync(Uri expandableUri)
+            async Task<KeyValuePair<Uri, Uri>?> ExpandUriPairAsync(Uri expandableUri)
             {
-                KeyValuePair<Uri, Uri> pair;
+                KeyValuePair<Uri, Uri>? nullable = null;
                 try
                 {
-                    pair = await expandableUri.ToExpandedUriPairAsync();
-                    traceSource?.TraceVerbose($"Expanded `{pair.Key.OriginalString}` to `{pair.Value.OriginalString}`");
+                    nullable = await expandableUri.ToExpandedUriPairAsync();
+                    traceSource?.TraceVerbose($"Expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`");
                 }
                 catch (Exception ex)
                 {
                     traceSource?.TraceError(ex);
                 }
 
-                return pair;
+                return nullable.Value;
             }
 
-            var tasks = uris.Select(ExpandUriPairAsync).ToArray();
+            var tasks = uris.Select(ExpandUriPairAsync).Where(i => i.Result.HasValue).ToArray();
 
             Task.WaitAll(tasks);
 
-            var findChangeSet = tasks.Select(i => i.Result).ToDictionary(k => k.Key, v => v.Value);
+            var findChangeSet = tasks.Select(i => i.Result.Value).ToDictionary(k => k.Key, v => v.Value);
 
             foreach (var pair in findChangeSet)
                 entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
