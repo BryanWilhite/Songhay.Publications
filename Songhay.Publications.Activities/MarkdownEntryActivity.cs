@@ -78,7 +78,7 @@ namespace Songhay.Publications.Activities
 
             var entryInfo = new FileInfo(entryPath);
 
-            traceSource?.WriteLine($"Expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
 
             var entry = entryInfo.ToMarkdownEntry();
             var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
@@ -88,8 +88,9 @@ namespace Songhay.Publications.Activities
                 KeyValuePair<Uri, Uri>? nullable = null;
                 try
                 {
-                    traceSource?.TraceVerbose( $"Expanding `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`...");
+                    traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...");
                     nullable = await expandableUri.ToExpandedUriPairAsync();
+                    traceSource?.TraceVerbose( $"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.");
                 }
                 catch (Exception ex)
                 {
@@ -108,11 +109,10 @@ namespace Songhay.Publications.Activities
             foreach (var pair in findChangeSet)
                 entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
 
-            traceSource?.WriteLine($"Saving `{entryInfo.Name}`...");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
             File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Expanded URIs: {clientId}");
         }
 
         internal void GenerateEntry()
