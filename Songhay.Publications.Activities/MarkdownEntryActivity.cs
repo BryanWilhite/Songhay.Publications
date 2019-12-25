@@ -5,6 +5,7 @@ using Songhay.Models;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace Songhay.Publications.Activities
 
         public void Start(ProgramArgs args)
         {
-            traceSource?.TraceInformation($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
+            traceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
 
             this.SetContext(args);
 
@@ -63,7 +64,7 @@ namespace Songhay.Publications.Activities
             File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
         }
 
         internal void ExpandUris()
@@ -76,10 +77,29 @@ namespace Songhay.Publications.Activities
                 throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
 
             var entryInfo = new FileInfo(entryPath);
+
+            traceSource?.WriteLine($"Expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
+
             var entry = entryInfo.ToMarkdownEntry();
             var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
             var uris = matches.OfType<Match>().Select(i => new Uri(i.Value)).Distinct().ToArray();
-            var tasks = uris.Select(i => i.ToExpandedUriPairAsync()).ToArray();
+            async Task<KeyValuePair<Uri, Uri>> ExpandUriPairAsync(Uri expandableUri)
+            {
+                KeyValuePair<Uri, Uri> pair;
+                try
+                {
+                    pair = await expandableUri.ToExpandedUriPairAsync();
+                    traceSource?.TraceVerbose($"Expanded `{pair.Key.OriginalString}` to `{pair.Value.OriginalString}`");
+                }
+                catch (Exception ex)
+                {
+                    traceSource?.TraceError(ex);
+                }
+
+                return pair;
+            }
+
+            var tasks = uris.Select(ExpandUriPairAsync).ToArray();
 
             Task.WaitAll(tasks);
 
@@ -88,10 +108,11 @@ namespace Songhay.Publications.Activities
             foreach (var pair in findChangeSet)
                 entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
 
+            traceSource?.WriteLine($"Saving `{entryInfo.Name}`...");
             File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Expanded URIs: {clientId}");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Expanded URIs: {clientId}");
         }
 
         internal void GenerateEntry()
@@ -101,13 +122,13 @@ namespace Songhay.Publications.Activities
 
             var entry = MarkdownEntryUtility.GenerateEntryFor11ty(entryDraftsRootInfo.FullName, title);
 
-            if(entry == null)
+            if (entry == null)
             {
                 throw new NullReferenceException($"The expected {nameof(entry)} is not here.");
             }
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
         }
 
         internal void PublishEntry()
@@ -122,7 +143,7 @@ namespace Songhay.Publications.Activities
 
             var path = MarkdownEntryUtility.PublishEntryFor11ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
 
-            traceSource?.TraceInformation($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
+            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
         }
 
         internal void SetContext(ProgramArgs args)
