@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Songhay.Publications.Activities\Songhay.Publications.Activities.csproj" />
     <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
   </ItemGroup>
 
