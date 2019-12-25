@@ -88,15 +88,15 @@ namespace Songhay.Publications.Activities
                 KeyValuePair<Uri, Uri>? nullable = null;
                 try
                 {
+                    traceSource?.TraceVerbose( $"Expanding `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`...");
                     nullable = await expandableUri.ToExpandedUriPairAsync();
-                    traceSource?.TraceVerbose($"Expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`");
                 }
                 catch (Exception ex)
                 {
                     traceSource?.TraceError(ex);
                 }
 
-                return nullable.Value;
+                return nullable;
             }
 
             var tasks = uris.Select(ExpandUriPairAsync).Where(i => i.Result.HasValue).ToArray();
