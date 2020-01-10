@@ -4,6 +4,65 @@
         <name>Songhay.Publications</name>
     </assembly>
     <members>
+        <member name="T:Songhay.Publications.Activities.MarkdownEntryActivity">
+            <summary>
+            <see cref="T:Songhay.Models.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
+            </summary>
+            <seealso cref="T:Songhay.Models.IActivity" />
+        </member>
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.AddEntryExtract(System.String)">
+            <summary>
+            Wrapper for <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11tyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)"/>.
+            </summary>
+            <param name="entryPath">The entry path.</param>
+            <exception cref="T:System.IO.FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.ExpandUris(System.String,System.String)">
+            <summary>
+            Expands the URIs of the specified host
+            with <see cref="M:Songhay.Extensions.UriExtensions.ToExpandedUriPairAsync(System.Uri)"/>.
+            </summary>
+            <param name="entryPath">The entry path.</param>
+            <param name="collapsedHost">The collapsed host.</param>
+            <exception cref="T:System.IO.FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.GenerateEntry(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Generates the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
+            at the conventional drafts root.
+            </summary>
+            <param name="entryDraftsRootInfo">The entry drafts root information.</param>
+            <param name="title">The title.</param>
+            <exception cref="T:System.NullReferenceException">The expected {nameof(entry)} is not here.</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Songhay.Publications.Activities.MarkdownEntryActivity.PublishEntry(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)" -->
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
+            <summary>
+            Displays the help.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.Start(Songhay.Models.ProgramArgs)">
+            <summary>
+            Starts the <see cref="T:Songhay.Models.IActivity"/>.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:Songhay.Publications.Activities.PublicationsActivitiesGetter">
+            <summary>
+            Implementation of <see cref="T:Songhay.Models.ActivitiesGetter"/>
+            for Songhay Publications.
+            </summary>
+            <seealso cref="T:Songhay.Models.ActivitiesGetter" />
+        </member>
+        <member name="M:Songhay.Publications.Activities.PublicationsActivitiesGetter.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.PublicationsActivitiesGetter"/> class.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
         <member name="T:Songhay.Publications.EpubUtility">
             <summary>
             Shared routines for EPUB pipeline automation.
