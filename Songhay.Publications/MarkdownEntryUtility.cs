@@ -98,10 +98,15 @@ namespace Songhay.Publications
                 throw new FormatException("The expected file name format, `*.md`, is not here.");
 
             var rootInfo = new DirectoryInfo(entryRoot);
-            var draftInfo = rootInfo.GetFiles().First(i => i.Name.EqualsInvariant(fileName));
+
+            var draftInfo = rootInfo.GetFiles().FirstOrDefault(i => i.Name.EqualsInvariant(fileName));
+            if (draftInfo == null)
+                throw new FileNotFoundException($"The expected file, `{fileName ?? "[no file name]"}`, under `{rootInfo.FullName}` is not here.");
+
             var draftEntry = draftInfo.ToMarkdownEntry();
             var inceptDate = draftEntry.FrontMatter.GetValue<DateTime>("date");
-            var path = draftEntry.FrontMatter.GetValue<string>("path");
+            var clientId = draftEntry.FrontMatter.GetValue<string>("clientId");
+            var path = draftEntry.FrontMatter.GetValue<string>("path").Replace(clientId, string.Empty);
 
             if ((publicationDate - inceptDate).Days >= 1)
             {
