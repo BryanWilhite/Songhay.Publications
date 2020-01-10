@@ -101,12 +101,13 @@ namespace Songhay.Publications
             var draftInfo = rootInfo.GetFiles().First(i => i.Name.EqualsInvariant(fileName));
             var draftEntry = draftInfo.ToMarkdownEntry();
             var inceptDate = draftEntry.FrontMatter.GetValue<DateTime>("date");
+            var path = draftEntry.FrontMatter.GetValue<string>("path");
 
             if ((publicationDate - inceptDate).Days >= 1)
             {
                 var title = draftEntry.FrontMatter.GetValue<string>("title");
                 var tag = draftEntry.FrontMatter.GetValue<string>("tag", throwException: false);
-                draftEntry.WithNew11tyFrontMatter(title, publicationDate, presentationRoot, tag);
+                draftEntry.WithNew11tyFrontMatter(title, publicationDate, path, tag);
             }
 
             var combinedPath = FrameworkFileUtility.GetCombinedPath(presentationRoot, $"{draftEntry.FrontMatter.GetValue<string>("clientId")}.md");
