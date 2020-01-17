@@ -119,7 +119,8 @@ namespace Songhay.Publications.Activities
         }
 
         /// <summary>
-        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11ty"/>.
+        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11ty(string, string, string)"/>.
+        /// </summary>
         /// <param name="entryDraftsRootInfo">The entry drafts root information.</param>
         /// <param name="entryRootInfo">The entry root information.</param>
         /// <param name="entryFileName">Name of the entry file.</param>

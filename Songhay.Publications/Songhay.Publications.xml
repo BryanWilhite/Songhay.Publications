@@ -35,7 +35,14 @@
             <param name="title">The title.</param>
             <exception cref="T:System.NullReferenceException">The expected {nameof(entry)} is not here.</exception>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Songhay.Publications.Activities.MarkdownEntryActivity.PublishEntry(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)" -->
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.PublishEntry(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Wrapper for <see cref="M:Songhay.Publications.MarkdownEntryUtility.PublishEntryFor11ty(System.String,System.String,System.String)"/>.
+            </summary>
+            <param name="entryDraftsRootInfo">The entry drafts root information.</param>
+            <param name="entryRootInfo">The entry root information.</param>
+            <param name="entryFileName">Name of the entry file.</param>
+        </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
             <summary>
             Displays the help.
