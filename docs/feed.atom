@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://bryanwilhite.github.io/Songhay.Publications</id>
+	<title>Songhay.Publications Documentation</title>
+	<link rel="self" href="https://bryanwilhite.github.io/Songhay.Publications" />
+	<rights>2020</rights>
+	<updated>2020-02-14T01:30:19Z</updated>
+</feed>
