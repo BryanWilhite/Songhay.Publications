@@ -99,6 +99,43 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "command": "wyam",
+            "label": "wyam",
+            "isBackground": false,
+            "type": "shell",
+            "args": [
+                "build",
+                "--output",
+                "./docs"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "wyam: add .nojekyll file for GitHub",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/docs"
+            },
+            "linux": {
+                "command": "touch",
+                "args": [
+                    ".nojekyll"
+                ]
+            },
+            "windows": {
+                "command": "New-Item",
+                "args": [
+                    "-ItemType",
+                    "file",
+                    ".nojekyll"
+                ]
+            },
+            "problemMatcher": []
         }
     ]
 }
