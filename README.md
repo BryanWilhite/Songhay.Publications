@@ -1,5 +1,9 @@
 # Songhay.Publications
 
+**NuGet package 📦:** [`Songhay.Publications`](https://www.nuget.org/packages/Songhay.Publications/)
+
+**Documentation 📚:** [`Songhay.Publications` API](https://bryanwilhite.github.io/Songhay.Publications/api/)
+
 ## core reusable definitions for Songhay Studio Publications
 
 Selected Songhay Studio Publications are based on automation ‘pipelines’ for static HTML and EPUB. The fundamental document format of these pipelines is markdown. It follows that the `MarkdownEntry` [class](./Songhay.Publications/Models/MarkdownEntry.cs) is a core definition of this studio.
