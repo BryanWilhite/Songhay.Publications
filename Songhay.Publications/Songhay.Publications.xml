@@ -629,6 +629,16 @@
             <param name="p"></param>
             <returns></returns>
         </member>
+        <member name="T:Songhay.Publications.Models.AppScalars">
+            <summary>
+            centralizes magic strings
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.AppScalars.ConventionalSettingsFile">
+            <summary>
+            The conventional settings file
+            </summary>
+        </member>
         <member name="T:Songhay.Publications.Models.CloneInitializers">
             <summary>
             Centralizes initializers for <see cref="N:CloneExtensions"/>

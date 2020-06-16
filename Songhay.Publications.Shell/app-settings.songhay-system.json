@@ -1,0 +1,174 @@
+{
+    "AzureSearchPostTemplate": {
+        "count": true,
+        "minimumCoverage": 100,
+        "queryType": "simple",
+        "search": "{searchText}",
+        "searchFields": "Content, Title",
+        "searchMode": "any",
+        "select": "*",
+        "skip": 0,
+        "top": 10
+    },
+    "ProgramMetadata": {
+        "DefaultTraceSourceName": "rx-log",
+        "CloudStorageSet": {
+            "SonghayCloudStorage": {
+                "classic": "DefaultEndpointsProtocol=https;AccountName=songhay;AccountKey=r5PJ9huYZM4f9hsjSVmwnww+ImQ0BwvIqxLgTdf7jzREsyy0R8XEfKwYrXguZatFGnDj+KWaQZXor43VZgp4AA==",
+                "classic-b-roll-audio-container": "player-audio",
+                "classic-b-roll-video-container": "player-video",
+                "classic-day-path-container": "songhayblog-azurewebsites-net",
+                "classic-kb-container": "funky-kb",
+                "classic-social-twitter-container": "shared-social-twitter",
+                "general-purpose-v1": "DefaultEndpointsProtocol=https;AccountName=songhaystorage;AccountKey=nkPQiVKH0Wj8j7WRFhty7/2jt8L/IadjRzabx3SKAovQPOAyZUX7OcpkVaJHJDGnQaLSGLizdjUJ8Th5oWklUg==;EndpointSuffix=core.windows.net",
+                "general-purpose-v1-gen-web-logs-container": "generic-web-logs"
+            }
+        },
+        "DbmsSet": {
+            "GenericWebAzure": {
+                "ConnectionString": "Data Source=songhay.database.windows.net;Initial Catalog=WebSonghaySystem;Integrated Security=False;User ID=rasx;Password=57XBpQMyyxngwUsIFsQsNw==;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True",
+                "ConnectionStringKey": "password",
+                "EncryptionMetadata": {
+                    "InitialVector": "Zre4Zfg2SioV9ngPkmVToQ==",
+                    "Key": "6CArZ4vVWOruuV6m76C+SkW/i1cbkUYiYSLhjzxywKA="
+                },
+                "ProviderName": "System.Data.SqlClient"
+            },
+            "GenericWebKinteAzure": {
+                "ConnectionString": "Data Source=songhay.database.windows.net;Initial Catalog=WebKinteSpace;Integrated Security=False;User ID=rasx;Password=57XBpQMyyxngwUsIFsQsNw==;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True",
+                "ConnectionStringKey": "password",
+                "EncryptionMetadata": {
+                    "InitialVector": "Zre4Zfg2SioV9ngPkmVToQ==",
+                    "Key": "6CArZ4vVWOruuV6m76C+SkW/i1cbkUYiYSLhjzxywKA="
+                },
+                "ProviderName": "System.Data.SqlClient"
+            }
+        },
+        "RestApiMetadataSet": {
+            "AffiliateAmazon": {
+                "ClaimsSet": {
+                    "AmazonAssociateId": "thekintespacec00",
+                    "AmazonAwsAccessKey": "1SW6D7X6ZXXR92KVX0G2",
+                    "AmazonAwsPrivateKey": "UgSxu6Zl4w/sOE2KOht+ntbAVPaoRSBIdUVF/la6"
+                }
+            },
+            "AzureSearch": {
+                "ApiBase": "https://songhay-free.search.windows.net",
+                "ApiKey": "B0EC4E4C316365630E540B66CE71EC61",
+                "ClaimsSet": {
+                    "component-name-datasources": "datasources",
+                    "component-name-indexers": "indexers",
+                    "component-name-indexes": "indexes",
+                    "search-api-version": "2017-11-11",
+                    "search-item-index-name": "songhayblog-index",
+                    "search-item-indexer-name": "songhayblog-indexer"
+                },
+                "UriTemplates": {
+                    "search-component": "{componentName}{?api_version}",
+                    "search-component-item": "{componentName}/{itemName}{?api_version}",
+                    "search-docs": "indexes/{indexName}/docs/search{?api_version,search}"
+                }
+            },
+            "GenericWebKinteSpace": {
+                "ApiBase": "https://songhay-system.azurewebsites.net/api-genweb/kinte-space/v1/",
+                "ApiKey": "a0631a0d-be83-47cd-8f4a-45bf79fbe8d6",
+                "ClaimsSet": {
+                    "headerKey": "X-ApiKey",
+                    "userName": "ApiUser",
+                    "role": "AuthorizedApiKeys",
+                    "authenticationType": "ApiKey"
+                },
+                "UriTemplates": {
+                    "get-pub-date": "publication-date",
+                    "get-pub-docs": "documents-for-publication/{pubDate}",
+                    "get-pub-fragments": "document-fragments-for-publication/{documentId}",
+                    "get-rss": "rss-data",
+                    "get-splash-index": "splash-index",
+                    "get-top-indices": "top-segment-indexes",
+                    "set-pub-date": "set-publication-date-flag"
+                }
+            },
+            "GenericWebSonghaySystem": {
+                "ApiBase": "https://songhay-system.azurewebsites.net/api-genweb/songhay-system/v1/",
+                "ApiKey": "0d6cc26a-f989-4574-9628-5abb448ae057",
+                "ClaimsSet": {
+                    "headerKey": "X-ApiKey",
+                    "userName": "ApiUser",
+                    "role": "AuthorizedApiKeys",
+                    "authenticationType": "ApiKey"
+                },
+                "UriTemplates": {
+                    "hi!": "hello-world"
+                }
+            },
+            "GoogleYouTube": {
+                "ApiBase": "https://www.googleapis.com/youtube/v3",
+                "ApiKey": "AIzaSyCc3YaQZuBCpTmjg4sWC5595_aCv7d-WWs",
+                "UriTemplates": {
+                    "UriPathTemplateForYouTubeChannel": "channels?part=contentDetails,snippet&id={id}&key={apiKey}",
+                    "UriPathTemplateForYouTubePlaylistItems": "playlistItems?part=contentDetails,snippet&playlistId={playlistId}&maxResults=10&key={apiKey}",
+                    "UriPathTemplateForYouTubeVideos": "videos?part=contentDetails,snippet,status&id={videoIds}&key={apiKey}"
+                }
+            },
+            "MicrosoftGraph": {
+                "ApiBase": "https://graph.microsoft.com/v1.0/me",
+                "ApiKey": "ce864a53-9330-4512-8678-356592cbade3",
+                "ClaimsSet": {
+                    "applicationName": "songhay-system-graph",
+                    "authority": "https://login.microsoftonline.com",
+                    "password": "kythRUYU90*@$ibgPSP985}",
+                    "scopes": "User.Read,User.Read.All,Files.ReadWrite,Files.ReadWrite.All",
+                    "tenant": "consumers"
+                },
+                "UriTemplates": {
+                    "oauth2-authorization": "/oauth2/v2.0/authorize?client_id={clientId}&redirect_uri={redirectUri}&response_type=code&scope={scope}",
+                    "oauth2-token": "/oauth2/v2.0/authorize?client_id={clientId}&redirect_uri={redirectUri}&client_secret={clientSecret}&code={code}&grant_type=code&scope={scope}"
+                }
+            },
+            "PlayerMotionGraphics": {
+                "ApiBase": "http://songhay-system-player.azurewebsites.net/api/player/v1",
+                "ClaimsSet": {}
+            },
+            "PlayerProgressiveAudio": {
+                "ApiBase": "http://songhay-system-player.azurewebsites.net/api/player/v1",
+                "ClaimsSet": {
+                    "storage-set": "CloudStorageSet",
+                    "storage-set-key": "SonghayCloudStorage",
+                    "storage-set-endpoint-key": "classic",
+                    "storage-set-container": "classic-b-roll-audio-container",
+                    "swagger-base": "http://songhay-system-player.azurewebsites.net/swagger/index.html"
+                },
+                "UriTemplates": {
+                    "UriPathTemplateForPresentation": "audio/{presentationKey}",
+                    "UriPathTemplateForPresentationBlob": "audio/{presentationKey}/{subFolder}/{blobName}"
+                }
+            },
+            "PlayerYouTube": {
+                "ApiBase": "http://songhay-system-player.azurewebsites.net/api/player/v1",
+                "ClaimsSet": {
+                    "storage-set": "CloudStorageSet",
+                    "storage-set-key": "SonghayCloudStorage",
+                    "storage-set-endpoint-key": "classic",
+                    "storage-set-container": "classic-b-roll-video-container",
+                    "swagger-base": "http://songhay-system-player.azurewebsites.net/swagger/index.html"
+                },
+                "UriTemplates": {
+                    "UriPathTemplateForPresentation": "video/youtube/{presentationKey}",
+                    "UriPathTemplateForPlaylistIndex": "video/youtube/playlist/index/{suffix}",
+                    "UriPathTemplateForPlaylist": "youtube/playlist/{subFolder}/{blobName}",
+                    "UriPathTemplateForPlaylists": "video/youtube/playlists/{suffix}/{id}",
+                    "UriPathTemplateForVideos": "video/youtube/videos/{presentationKey}"
+                }
+            },
+            "SocialTwitter": {
+                "ClaimsSet": {
+                    "TwitterConsumerKey": "a8nCPZg96ekTkkPx9X7dbQ",
+                    "TwitterConsumerSecret": "jghvWx0Jbng5sGHe6on7lg8Owuf8IArHZ3m3pgEdY",
+                    "TwitterProfileImageRoot": "https://songhay.blob.core.windows.net/shared-social-twitter/",
+                    "TwitterToken": "67803525-jou8VtVNAs0vsZpYyIaCmycRpgU4522Jm3qW6CONA",
+                    "TwitterTokenSecret": "JwpZOZ8xUErq52KynvmBsWA1QPwFvZOoLkXKhmmY9w"
+                }
+            }
+        }
+    }
+}
