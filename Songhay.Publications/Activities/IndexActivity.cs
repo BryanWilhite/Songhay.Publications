@@ -1,26 +1,83 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
+using Songhay.Extensions;
 using Songhay.Models;
+using Songhay.Publications.Extensions;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using System.IO.Compression;
+using System.Linq;
 
 namespace Songhay.Publications.Activities
 {
+    /// <summary>
+    /// <see cref="IActivity"/> implementation for  Publication Indexes
+    /// </summary>
+    /// <seealso cref="Songhay.Models.IActivity" />
+    /// <seealso cref="Songhay.Models.IActivityConfigurationSupport" />
     public class IndexActivity : IActivity, IActivityConfigurationSupport
     {
+        /// <summary>
+        /// Adds the configuration.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
         public void AddConfiguration(IConfigurationRoot configuration)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Displays the help.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        /// <returns></returns>
         public string DisplayHelp(ProgramArgs args)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>Starts with the specified arguments.</summary>
+        /// <param name="args">The arguments.</param>
         public void Start(ProgramArgs args)
         {
             throw new NotImplementedException();
+        }
+
+        internal static void CompressIndex(FileInfo indexInfo)
+        {
+            using (FileStream fileStream = indexInfo.OpenRead())
+            {
+                using (FileStream compressedFileStream = File.Create(indexInfo.FullName.Replace(".json", ".c.json")))
+                {
+                    using (GZipStream gZipStream = new GZipStream(compressedFileStream, CompressionMode.Compress))
+                    {
+                        fileStream.CopyTo(gZipStream);
+                    }
+                }
+            }
+        }
+
+        internal static void GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo jsonRootInfo, string indexFileName)
+        {
+            if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
+            if (jsonRootInfo == null) throw new ArgumentNullException(nameof(jsonRootInfo));
+            if (string.IsNullOrEmpty(indexFileName)) throw new ArgumentNullException(nameof(indexFileName));
+
+            var frontMatterDocuments = entryRootInfo
+                .GetFiles("*.md", SearchOption.AllDirectories)
+                .Select(fileInfo => fileInfo.ToMarkdownEntry().FrontMatter)
+                .Select(jO => JObject.FromObject(new
+                {
+                    extract = JObject.Parse(jO.GetValue<string>("tag")).GetValue<string>("extract"),
+                    clientId = jO.GetValue<string>("clientId"),
+                    inceptDate = jO.GetValue<string>("date"),
+                    modificationDate = jO.GetValue<string>("modificationDate"),
+                    title = jO.GetValue<string>("title")
+                }))
+                .ToArray();
+
+            var jA = new JArray(frontMatterDocuments);
+            File.WriteAllText(jsonRootInfo.FindFile(indexFileName).FullName, jA.ToString());
         }
     }
 }
