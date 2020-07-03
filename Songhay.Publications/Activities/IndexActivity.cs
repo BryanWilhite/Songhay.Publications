@@ -13,8 +13,8 @@ namespace Songhay.Publications.Activities
     /// <summary>
     /// <see cref="IActivity"/> implementation for  Publication Indexes
     /// </summary>
-    /// <seealso cref="Songhay.Models.IActivity" />
-    /// <seealso cref="Songhay.Models.IActivityConfigurationSupport" />
+    /// <seealso cref="IActivity" />
+    /// <seealso cref="IActivityConfigurationSupport" />
     public class IndexActivity : IActivity, IActivityConfigurationSupport
     {
         /// <summary>
@@ -43,11 +43,15 @@ namespace Songhay.Publications.Activities
             throw new NotImplementedException();
         }
 
-        internal static void CompressIndex(FileInfo indexInfo)
+        internal static FileInfo CompressIndex(FileInfo indexInfo)
         {
+            if (indexInfo == null) throw new ArgumentNullException(nameof(indexInfo));
+
+            var compressedIndexInfo = new FileInfo(indexInfo.FullName.Replace(".json", ".c.json"));
+
             using (FileStream fileStream = indexInfo.OpenRead())
             {
-                using (FileStream compressedFileStream = File.Create(indexInfo.FullName.Replace(".json", ".c.json")))
+                using (FileStream compressedFileStream = File.Create(compressedIndexInfo.FullName))
                 {
                     using (GZipStream gZipStream = new GZipStream(compressedFileStream, CompressionMode.Compress))
                     {
@@ -55,9 +59,11 @@ namespace Songhay.Publications.Activities
                     }
                 }
             }
+
+            return compressedIndexInfo;
         }
 
-        internal static void GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo jsonRootInfo, string indexFileName)
+        internal static FileInfo GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo jsonRootInfo, string indexFileName)
         {
             if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
             if (jsonRootInfo == null) throw new ArgumentNullException(nameof(jsonRootInfo));
@@ -77,7 +83,11 @@ namespace Songhay.Publications.Activities
                 .ToArray();
 
             var jA = new JArray(frontMatterDocuments);
-            File.WriteAllText(jsonRootInfo.FindFile(indexFileName).FullName, jA.ToString());
+            var targetInfo = jsonRootInfo.FindFile(indexFileName);
+
+            File.WriteAllText(targetInfo.FullName, jA.ToString());
+
+            return targetInfo;
         }
     }
 }
