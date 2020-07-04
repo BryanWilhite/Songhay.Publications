@@ -4,6 +4,24 @@
         <name>Songhay.Publications</name>
     </assembly>
     <members>
+        <member name="T:Songhay.Publications.Activities.IndexActivity">
+            <summary>
+            <see cref="T:Songhay.Models.IActivity"/> implementation for  Publication Indexes
+            </summary>
+            <seealso cref="T:Songhay.Models.IActivity" />
+            <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
+        </member>
+        <member name="M:Songhay.Publications.Activities.IndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
+            <summary>
+            Displays the help.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Activities.IndexActivity.Start(Songhay.Models.ProgramArgs)">
+            <summary>Starts with the specified arguments.</summary>
+            <param name="args">The arguments.</param>
+        </member>
         <member name="T:Songhay.Publications.Activities.MarkdownEntryActivity">
             <summary>
             <see cref="T:Songhay.Models.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.

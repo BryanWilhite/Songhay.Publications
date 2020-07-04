@@ -15,17 +15,8 @@ namespace Songhay.Publications.Activities
     /// </summary>
     /// <seealso cref="IActivity" />
     /// <seealso cref="IActivityConfigurationSupport" />
-    public class IndexActivity : IActivity, IActivityConfigurationSupport
+    public class IndexActivity : IActivity
     {
-        /// <summary>
-        /// Adds the configuration.
-        /// </summary>
-        /// <param name="configuration">The configuration.</param>
-        public void AddConfiguration(IConfigurationRoot configuration)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Displays the help.
         /// </summary>

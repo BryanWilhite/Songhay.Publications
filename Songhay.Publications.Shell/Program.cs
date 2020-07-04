@@ -1,9 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
-using Songhay.Diagnostics;
+﻿using Songhay.Diagnostics;
 using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
-using Songhay.Publications.Models;
 using System;
 using System.IO;
 using System.Reflection;
@@ -25,10 +23,7 @@ namespace Songhay.Publications.Shell
 
         internal static string Run(string[] args)
         {
-            var configuration = ProgramUtility.LoadConfiguration(
-                Directory.GetCurrentDirectory(),
-                builderModifier => builderModifier.AddJsonFile($"./{AppScalars.ConventionalSettingsFile}")
-            );
+            var configuration = ProgramUtility.LoadConfiguration(Directory.GetCurrentDirectory());
 
             TraceSources.ConfiguredTraceSourceName = configuration[DeploymentEnvironment.DefaultTraceSourceNameConfigurationKey];
 
