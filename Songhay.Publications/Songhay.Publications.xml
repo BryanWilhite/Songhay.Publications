@@ -380,6 +380,22 @@
             Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>
             </summary>
         </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetCompressed11tyIndexParams(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the compressed 11ty index parameters.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+            <returns></returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The expected index root, {indexRoot}, is not here.</exception>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetPublicationCommand(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Gets the publication command.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.JObjectExtensions.ToPresentation(Newtonsoft.Json.Linq.JObject)">
             <summary>
             Converts the <see cref="T:Newtonsoft.Json.Linq.JObject"/> to presentation <see cref="T:Songhay.Publications.Models.Segment"/>.
@@ -1603,6 +1619,16 @@
             <value>
             The is active.
             </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IndexCommands">
+            <summary>
+            Conventional command names for markdown indexes
+            </summary>
+        </member>
+        <member name="F:Songhay.Publications.Models.IndexCommands.CommandNameGenerateCompressed11tyIndex">
+            <summary>
+            Conventional command name
+            </summary>
         </member>
         <member name="T:Songhay.Publications.Models.ISegment">
             <summary>

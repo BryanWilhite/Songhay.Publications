@@ -152,7 +152,7 @@ namespace Songhay.Publications.Activities
 
             this.SetContext(args);
 
-            var command = this._jSettings.GetValue<string>("command");
+            var command = this._jSettings.GetPublicationCommand();
             traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
             if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
