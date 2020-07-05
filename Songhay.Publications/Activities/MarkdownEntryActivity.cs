@@ -167,38 +167,28 @@ namespace Songhay.Publications.Activities
 
         internal void AddEntryExtract()
         {
-            var entryPath = this._jSettings.GetValue<string>("entryPath");
-            entryPath = this._presentationInfo.ToCombinedPath(entryPath);
-
+            var entryPath = this._jSettings.GetAddEntryExtractArg(this._presentationInfo);
             AddEntryExtract(entryPath);
         }
 
         internal void ExpandUris()
         {
-            var collapsedHost = this._jSettings.GetValue<string>("collapsedHost");
-            var entryPath = this._jSettings.GetValue<string>("entryPath");
-            entryPath = this._presentationInfo.ToCombinedPath(entryPath);
+            var (entryPath, collapsedHost) = this._jSettings.GetExpandUrisArgs(this._presentationInfo);
 
             ExpandUris(entryPath, collapsedHost);
         }
 
         internal void GenerateEntry()
         {
-            var entryDraftsRootInfo = this._presentationInfo.FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts);
-            var title = this._jSettings.GetValue<string>("title");
+            var (entryDraftsRootInfo, title) = this._jSettings.GetGenerateEntryArgs(this._presentationInfo);
 
             GenerateEntry(entryDraftsRootInfo, title);
         }
 
         internal void PublishEntry()
         {
-            var entryDraftsRootInfo = this._presentationInfo
-                .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts);
-            var entryRootInfo = this._presentationInfo
-                .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentation)
-                .FindDirectory("entry")
-                .FindDirectory(DateTime.Now.Year.ToString());
-            var entryFileName = this._jSettings.GetValue<string>("entryFileName");
+            var (entryDraftsRootInfo, entryRootInfo, entryFileName) =
+                this._jSettings.GetPublishEntryArgs(this._presentationInfo);
 
             PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
         }

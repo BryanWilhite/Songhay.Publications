@@ -379,15 +379,49 @@
             <summary>
             Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>
             </summary>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetCompressed11tyIndexParams(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
             <summary>
-            Gets the compressed 11ty index parameters.
+            Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetAddEntryExtractArg(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
             </summary>
             <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
             <param name="presentationInfo">The presentation information.</param>
             <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetCompressed11tyIndexArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject" />.</param>
+            <param name="presentationInfo">The presentation information.</param>
+            <returns></returns>
             <exception cref="T:System.IO.DirectoryNotFoundException">The expected index root, {indexRoot}, is not here.</exception>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetExpandUrisArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetGenerateEntryArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetPublishEntryArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetPublicationCommand(Newtonsoft.Json.Linq.JObject)">
             <summary>

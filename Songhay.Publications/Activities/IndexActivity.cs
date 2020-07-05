@@ -104,7 +104,7 @@ namespace Songhay.Publications.Activities
         internal void GenerateCompressed11tyIndex()
         {
             var (entryRootInfo, indexRootInfo, indexFileName) =
-                this._jSettings.GetCompressed11tyIndexParams(this._presentationInfo);
+                this._jSettings.GetCompressed11tyIndexArgs(this._presentationInfo);
 
             var indexInfo = GenerateIndexFrom11tyEntries(
                 entryRootInfo,

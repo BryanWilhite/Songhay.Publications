@@ -5,14 +5,13 @@ using Songhay.Extensions;
 using System;
 using System.Diagnostics;
 using System.Linq;
-using System.IO;
 
 namespace Songhay.Publications.Extensions
 {
     /// <summary>
     /// Extensions of <see cref="JObject"/>
     /// </summary>
-    public static class JObjectExtensions
+    public static partial class JObjectExtensions
     {
         static JObjectExtensions() => traceSource = TraceSources
                 .Instance
@@ -20,29 +19,6 @@ namespace Songhay.Publications.Extensions
                 .WithSourceLevels();
 
         static readonly TraceSource traceSource;
-
-        /// <summary>
-        /// Gets the compressed 11ty index parameters.
-        /// </summary>
-        /// <param name="jObject">The <see cref="JObject"/>.</param>
-        /// <param name="presentationInfo">The presentation information.</param>
-        /// <returns></returns>
-        /// <exception cref="DirectoryNotFoundException">The expected index root, {indexRoot}, is not here.</exception>
-        public static (
-            DirectoryInfo entryRootInfo,
-            DirectoryInfo indexRootInfo,
-            string indexFileName
-            ) GetCompressed11tyIndexParams(this JObject jObject, DirectoryInfo presentationInfo)
-        {
-            var indexRoot = jObject.GetValue<string>("indexRoot");
-            var indexRootInfo = new DirectoryInfo(indexRoot);
-            if (!indexRootInfo.Exists) throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
-
-            var indexFileName = jObject.GetValue<string>("indexFileName");
-            var entryRootInfo = presentationInfo.FindDirectory("presentation").FindDirectory("entries");
-
-            return (entryRootInfo, indexRootInfo, indexFileName);
-        }
 
         /// <summary>
         /// Gets the publication command.
