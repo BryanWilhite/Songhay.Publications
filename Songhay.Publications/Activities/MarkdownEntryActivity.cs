@@ -195,16 +195,9 @@ namespace Songhay.Publications.Activities
 
         internal void SetContext(ProgramArgs args)
         {
-            traceSource?.TraceVerbose($"setting conventional {MarkdownPresentationDirectories.DirectoryNamePresentationShell} directory...");
-            var presentationShellInfo = new DirectoryInfo(args.GetArgValue(ProgramArgs.BasePath));
-            presentationShellInfo.VerifyDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationShell);
+            var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
-            traceSource?.TraceVerbose($"setting conventional {nameof(MarkdownPresentationDirectories)} parent directory...");
-            this._presentationInfo = presentationShellInfo.Parent;
-            this._presentationInfo.HasAllConventionalMarkdownPresentationDirectories();
-
-            traceSource?.TraceVerbose($"getting settings file...");
-            var settingsInfo = presentationShellInfo.FindFile(args.GetArgValue(ProgramArgs.SettingsFile));
+            this._presentationInfo = presentationInfo;
 
             traceSource?.TraceVerbose($"applying settings...");
             this._jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));

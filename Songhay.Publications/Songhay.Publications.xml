@@ -571,6 +571,18 @@
             <param name="tag">the tag of the entry</param>
             <returns></returns>
         </member>
+        <member name="T:Songhay.Publications.Extensions.ProgramArgsExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Models.ProgramArgs" />.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ProgramArgsExtensions.ToPresentationAndSettingsInfo(Songhay.Models.ProgramArgs)">
+            <summary>
+            Converts <see cref="T:Songhay.Models.ProgramArgs"/> to Presentation <see cref="T:System.IO.DirectoryInfo"/>.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
         <member name="T:Songhay.Publications.Extensions.PublicationContextExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.PublicationContext"/>

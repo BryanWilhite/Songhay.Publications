@@ -1,0 +1,5 @@
+{
+  "command": "GenerateCompressed11tyIndex",
+  "indexRoot": "../../../markdown/presentation",
+  "indexFileName": "presentation-index.json"
+}

@@ -43,7 +43,7 @@ namespace Songhay.Publications.Extensions
             if (!indexRootInfo.Exists) throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
 
             var indexFileName = jObject.GetValue<string>("indexFileName");
-            var entryRootInfo = presentationInfo.FindDirectory("presentation").FindDirectory("entries");
+            var entryRootInfo = presentationInfo.FindDirectory("presentation").FindDirectory("entry");
 
             return (entryRootInfo, indexRootInfo, indexFileName);
         }
