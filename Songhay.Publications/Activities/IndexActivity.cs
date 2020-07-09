@@ -28,33 +28,12 @@ namespace Songhay.Publications.Activities
         static readonly TraceSource traceSource;
 
         /// <summary>
-        /// Displays the help.
+        /// Compresses the index.
         /// </summary>
-        /// <param name="args">The arguments.</param>
+        /// <param name="indexInfo">The index information.</param>
         /// <returns></returns>
-        public string DisplayHelp(ProgramArgs args)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>Starts with the specified arguments.</summary>
-        /// <param name="args">The arguments.</param>
-        public void Start(ProgramArgs args)
-        {
-            traceSource?.WriteLine($"starting {nameof(IndexActivity)} with {nameof(ProgramArgs)}: {args} ");
-            this.SetContext(args);
-
-            var command = this._jSettings.GetPublicationCommand();
-            traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
-
-            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11tyIndex)) GenerateCompressed11tyIndex();
-            else
-            {
-                traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
-            }
-        }
-
-        internal static FileInfo CompressIndex(FileInfo indexInfo)
+        /// <exception cref="ArgumentNullException">indexInfo</exception>
+        public static FileInfo CompressIndex(FileInfo indexInfo)
         {
             if (indexInfo == null) throw new ArgumentNullException(nameof(indexInfo));
 
@@ -74,7 +53,21 @@ namespace Songhay.Publications.Activities
             return compressedIndexInfo;
         }
 
-        internal static FileInfo GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName)
+        /// <summary>
+        /// Generates the index from 11ty entries.
+        /// </summary>
+        /// <param name="entryRootInfo">The entry root information.</param>
+        /// <param name="indexRootInfo">The index root information.</param>
+        /// <param name="indexFileName">Name of the index file.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">
+        /// entryRootInfo
+        /// or
+        /// indexRootInfo
+        /// or
+        /// indexFileName
+        /// </exception>
+        public static FileInfo GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName)
         {
             if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
             if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
@@ -99,6 +92,33 @@ namespace Songhay.Publications.Activities
             File.WriteAllText(targetInfo.FullName, jA.ToString());
 
             return targetInfo;
+        }
+
+        /// <summary>
+        /// Displays the help.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        /// <returns></returns>
+        public string DisplayHelp(ProgramArgs args)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>Starts with the specified arguments.</summary>
+        /// <param name="args">The arguments.</param>
+        public void Start(ProgramArgs args)
+        {
+            traceSource?.WriteLine($"starting {nameof(IndexActivity)} with {nameof(ProgramArgs)}: {args} ");
+            this.SetContext(args);
+
+            var command = this._jSettings.GetPublicationCommand();
+            traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+
+            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11tyIndex)) GenerateCompressed11tyIndex();
+            else
+            {
+                traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+            }
         }
 
         internal void GenerateCompressed11tyIndex()

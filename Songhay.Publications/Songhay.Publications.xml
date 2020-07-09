@@ -11,6 +11,30 @@
             <seealso cref="T:Songhay.Models.IActivity" />
             <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
         </member>
+        <member name="M:Songhay.Publications.Activities.IndexActivity.CompressIndex(System.IO.FileInfo)">
+            <summary>
+            Compresses the index.
+            </summary>
+            <param name="indexInfo">The index information.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">indexInfo</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Generates the index from 11ty entries.
+            </summary>
+            <param name="entryRootInfo">The entry root information.</param>
+            <param name="indexRootInfo">The index root information.</param>
+            <param name="indexFileName">Name of the index file.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            entryRootInfo
+            or
+            indexRootInfo
+            or
+            indexFileName
+            </exception>
+        </member>
         <member name="M:Songhay.Publications.Activities.IndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
             <summary>
             Displays the help.
