@@ -99,6 +99,31 @@ namespace Songhay.Publications.Activities
         }
 
         /// <summary>
+        /// Finds the specified pattern in the input.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="pattern">The pattern.</param>
+        /// <param name="replacement">The replacement.</param>
+        /// <param name="useRegex">if set to <c>true</c> [use regex].</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">
+        /// input
+        /// or
+        /// pattern
+        /// </exception>
+        public static string FindChange(string input, string pattern, string replacement, bool useRegex)
+        {
+            if (string.IsNullOrWhiteSpace(input)) throw new ArgumentNullException(nameof(input));
+            if (string.IsNullOrWhiteSpace(pattern)) throw new ArgumentNullException(nameof(pattern));
+            if (string.IsNullOrWhiteSpace(replacement)) replacement = string.Empty;
+
+            return useRegex ?
+                Regex.Replace(input, pattern, replacement)
+                :
+                input.Replace(pattern, replacement);
+        }
+
+        /// <summary>
         /// Generates the <see cref="MarkdownEntry"/>
         /// at the conventional drafts root.
         /// </summary>
