@@ -118,7 +118,7 @@ namespace Songhay.Publications.Activities
             if (string.IsNullOrWhiteSpace(replacement)) replacement = string.Empty;
 
             return useRegex ?
-                Regex.Replace(input, pattern, replacement)
+                Regex.Replace(input, pattern, replacement, RegexOptions.IgnoreCase | RegexOptions.Multiline)
                 :
                 input.Replace(pattern, replacement);
         }
