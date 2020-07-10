@@ -1,0 +1,7 @@
+{
+	"inputPath": "./presentation-drafts/to-extract-test.md",
+	"pattern": "<img alt=\"([^\"]+)\"",
+	"replacement": "<img alt=\"$1-yeah!!!\"",
+	"useRegex": true,
+	"outputPath": "./presentation-drafts/to-extract-test-EDITED.md"
+}

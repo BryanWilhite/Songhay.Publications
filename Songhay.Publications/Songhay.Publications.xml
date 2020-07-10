@@ -153,6 +153,19 @@
             Extensions of <see cref="T:System.IO.DirectoryInfo"/>
             </summary>
         </member>
+        <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.GetAbsoluteOrRelativePath(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Gets the absolute or relative path with the specified file segment.
+            </summary>
+            <param name="directoryInfo">The base information.</param>
+            <param name="fileSegment">The file segment.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            baseInfo
+            or
+            fileSegment
+            </exception>
+        </member>
         <member name="M:Songhay.Publications.Extensions.DirectoryInfoExtensions.HasAllConventionalMarkdownPresentationDirectories(System.IO.DirectoryInfo)">
             <summary>
             Returns true when all of the conventional markdown presentation
@@ -440,6 +453,14 @@
             <exception cref="T:System.IO.DirectoryNotFoundException">The expected index root, {indexRoot}, is not here.</exception>
         </member>
         <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetExpandUrisArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetFindChangeArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
             <summary>
             Gets the arguments for Activity method.
             </summary>
