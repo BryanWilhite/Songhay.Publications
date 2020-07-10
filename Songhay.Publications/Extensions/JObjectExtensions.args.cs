@@ -73,6 +73,36 @@ namespace Songhay.Publications.Extensions
         /// <param name="presentationInfo">The presentation information.</param>
         /// <returns></returns>
         public static (
+            string input,
+            string pattern,
+            string replacement,
+            bool useRegex,
+            string outputPath)
+            GetFindChangeArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        {
+            var inputPath = jObject.GetValue<string>("inputPath");
+            inputPath = presentationInfo.GetAbsoluteOrRelativePath(inputPath);
+            if (!File.Exists(inputPath)) throw new FileNotFoundException($"The expected input file, `{inputPath}`, is not here.");
+
+            var input = File.ReadAllText(inputPath);
+
+            var pattern = jObject.GetValue<string>("pattern");
+            var replacement = jObject.GetValue<string>("replacement");
+            var useRegex = jObject.GetValue<bool>("useRegex");
+
+            var outputPath = jObject.GetValue<string>("outputPath");
+            outputPath = presentationInfo.GetAbsoluteOrRelativePath(outputPath);
+
+            return (input, pattern, replacement, useRegex, outputPath);
+        }
+
+        /// <summary>
+        /// Gets the arguments for Activity method.
+        /// </summary>
+        /// <param name="jObject">The <see cref="JObject"/>.</param>
+        /// <param name="presentationInfo">The presentation information.</param>
+        /// <returns></returns>
+        public static (
             DirectoryInfo entryDraftsRootInfo,
             string title
             ) GetGenerateEntryArgs(this JObject jObject, DirectoryInfo presentationInfo)

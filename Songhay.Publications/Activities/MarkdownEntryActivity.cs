@@ -203,6 +203,14 @@ namespace Songhay.Publications.Activities
             ExpandUris(entryPath, collapsedHost);
         }
 
+        internal void FindChange()
+        {
+            var (input, pattern, replacement, useRegex, outputPath) = this._jSettings.GetFindChangeArgs(this._presentationInfo);
+            var output = FindChange(input, pattern, replacement, useRegex);
+            File.Create(outputPath);
+            File.WriteAllText(outputPath, output);
+        }
+
         internal void GenerateEntry()
         {
             var (entryDraftsRootInfo, title) = this._jSettings.GetGenerateEntryArgs(this._presentationInfo);
