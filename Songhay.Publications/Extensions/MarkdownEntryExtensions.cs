@@ -1,9 +1,12 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Markdig;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Songhay.Diagnostics;
 using Songhay.Extensions;
 using Songhay.Publications.Models;
 
@@ -14,6 +17,13 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static class MarkdownEntryExtensions
     {
+        static MarkdownEntryExtensions() => traceSource = TraceSources
+           .Instance
+           .GetTraceSourceFromConfiguredName()
+           .WithSourceLevels();
+
+        static readonly TraceSource traceSource;
+
         /// <summary>
         /// Effectively validates <see cref="MarkdownEntry" />
         /// </summary>
@@ -130,6 +140,7 @@ namespace Songhay.Publications.Extensions
         public static MarkdownEntry ToMarkdownEntry(this FileInfo entry)
         {
             if (entry == null) throw new NullReferenceException($"The expected {nameof(FileInfo)} is not here.");
+            traceSource?.TraceVerbose($"converting `{entry.FullName}`...");
             if (!File.Exists(entry.FullName)) throw new NullReferenceException($"The expected {nameof(FileInfo)} path is not here.");
 
             var frontTop = "---json";
@@ -150,7 +161,15 @@ namespace Songhay.Publications.Extensions
                 .Skip(1)
                 .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-            var frontMatter = JObject.Parse(json);
+            JObject frontMatter = null;
+            try
+            {
+                frontMatter = JObject.Parse(json);
+            }
+            catch (JsonReaderException ex)
+            {
+                traceSource?.TraceError(ex);
+            }
 
             var mdEntry = new MarkdownEntry
             {
