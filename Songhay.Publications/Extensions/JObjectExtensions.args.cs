@@ -39,6 +39,7 @@ namespace Songhay.Publications.Extensions
             ) GetCompressed11tyIndexArgs(this JObject jObject, DirectoryInfo presentationInfo)
         {
             var indexRoot = jObject.GetValue<string>("indexRoot");
+            indexRoot = presentationInfo.ToCombinedPath(indexRoot);
             var indexRootInfo = new DirectoryInfo(indexRoot);
             if (!indexRootInfo.Exists) throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
 
@@ -81,7 +82,7 @@ namespace Songhay.Publications.Extensions
             GetFindChangeArgs(this JObject jObject, DirectoryInfo presentationInfo)
         {
             var inputPath = jObject.GetValue<string>("inputPath");
-            inputPath = presentationInfo.GetAbsoluteOrRelativePath(inputPath);
+            inputPath = presentationInfo.ToCombinedPath(inputPath);
             if (!File.Exists(inputPath)) throw new FileNotFoundException($"The expected input file, `{inputPath}`, is not here.");
 
             var input = File.ReadAllText(inputPath);
@@ -91,7 +92,7 @@ namespace Songhay.Publications.Extensions
             var useRegex = jObject.GetValue<bool>("useRegex");
 
             var outputPath = jObject.GetValue<string>("outputPath");
-            outputPath = presentationInfo.GetAbsoluteOrRelativePath(outputPath);
+            outputPath = presentationInfo.ToCombinedPath(outputPath);
 
             return (input, pattern, replacement, useRegex, outputPath);
         }

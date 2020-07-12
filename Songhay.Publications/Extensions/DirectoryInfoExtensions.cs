@@ -11,29 +11,6 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static class DirectoryInfoExtensions
     {
-
-        /// <summary>
-        /// Gets the absolute or relative path with the specified file segment.
-        /// </summary>
-        /// <param name="directoryInfo">The base information.</param>
-        /// <param name="fileSegment">The file segment.</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException">
-        /// baseInfo
-        /// or
-        /// fileSegment
-        /// </exception>
-        public static string GetAbsoluteOrRelativePath(this DirectoryInfo directoryInfo, string fileSegment)
-        { // TODO: move to Core
-            if (directoryInfo == null) throw new ArgumentNullException(nameof(directoryInfo));
-            if (string.IsNullOrEmpty(fileSegment)) throw new ArgumentNullException(nameof(fileSegment));
-
-            fileSegment = FrameworkFileUtility.TrimLeadingDirectorySeparatorChars(fileSegment);
-            fileSegment = FrameworkFileUtility.NormalizePath(fileSegment);
-
-            return Path.IsPathRooted(fileSegment) ? fileSegment : directoryInfo.ToCombinedPath(fileSegment);
-        }
-
         /// <summary>
         /// Returns true when all of the conventional markdown presentation
         /// directories are present.

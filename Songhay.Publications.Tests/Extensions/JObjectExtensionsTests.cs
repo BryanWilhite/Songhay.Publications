@@ -46,8 +46,6 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("index-activity-settings.json", "../../../markdown/shell")]
         public void GetCompressed11tyIndexArgs_Test(string settingsFile, string presentationRoot)
         {
-            const string indexRootPropertyName = "indexRoot";
-
             presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
@@ -62,12 +60,13 @@ namespace Songhay.Publications.Tests.Extensions
             Assert.True(settingsInfo.Exists);
 
             var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
-            jO[indexRootPropertyName] = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, jO.GetValue<string>(indexRootPropertyName));
             var (entryRootInfo, indexRootInfo, indexFileName) = jO.GetCompressed11tyIndexArgs(presentationInfo);
 
             Assert.True(entryRootInfo.Exists);
             Assert.True(indexRootInfo.Exists);
             Assert.False(string.IsNullOrWhiteSpace(indexFileName));
+
+            indexRootInfo.FindFile(indexFileName);
 
             var commandName = jO.GetPublicationCommand();
             Assert.Equal(nameof(IndexActivity.GenerateCompressed11tyIndex), commandName);
