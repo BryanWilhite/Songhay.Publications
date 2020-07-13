@@ -15,7 +15,7 @@ using System.Linq;
 namespace Songhay.Publications.Activities
 {
     /// <summary>
-    /// <see cref="IActivity"/> implementation for  Publication Indexes
+    /// <see cref="IActivity"/> implementation for Publication Indices
     /// </summary>
     /// <seealso cref="IActivity" />
     /// <seealso cref="IActivityConfigurationSupport" />

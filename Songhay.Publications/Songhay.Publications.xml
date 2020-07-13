@@ -6,7 +6,7 @@
     <members>
         <member name="T:Songhay.Publications.Activities.IndexActivity">
             <summary>
-            <see cref="T:Songhay.Models.IActivity"/> implementation for  Publication Indexes
+            <see cref="T:Songhay.Models.IActivity"/> implementation for Publication Indices
             </summary>
             <seealso cref="T:Songhay.Models.IActivity" />
             <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
@@ -1728,7 +1728,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.IndexCommands">
             <summary>
-            Conventional command names for markdown indexes
+            Conventional command names for markdown indices
             </summary>
         </member>
         <member name="F:Songhay.Publications.Models.IndexCommands.CommandNameGenerateCompressed11tyIndex">

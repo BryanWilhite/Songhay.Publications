@@ -1,7 +1,7 @@
 ﻿namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// Conventional command names for markdown indexes
+    /// Conventional command names for markdown indices
     /// </summary>
     public static class IndexCommands
     {
