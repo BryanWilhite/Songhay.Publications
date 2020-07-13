@@ -1,6 +1,7 @@
 ﻿using Songhay.Publications.Activities;
 using Songhay.Tests;
 using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace Songhay.Publications.Tests.Activities
@@ -33,8 +34,8 @@ namespace Songhay.Publications.Tests.Activities
             var indexRootInfo = new DirectoryInfo(indexRoot);
             Assert.True(indexRootInfo.Exists);
 
-            var indexInfo = IndexActivity.GenerateIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
-            Assert.True(indexInfo?.Exists);
+            var indices = IndexActivity.GenerateIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
+            Assert.True(indices?.Any());
         }
     }
 }

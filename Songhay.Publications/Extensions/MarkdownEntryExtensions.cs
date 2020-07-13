@@ -161,7 +161,7 @@ namespace Songhay.Publications.Extensions
                 .Skip(1)
                 .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-            JObject frontMatter = null;
+            JObject frontMatter = JObject.FromObject(new { error = "front matter was not found", file = entry.FullName });
             try
             {
                 frontMatter = JObject.Parse(json);

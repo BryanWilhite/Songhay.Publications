@@ -6,6 +6,7 @@ using Songhay.Models;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -60,38 +61,58 @@ namespace Songhay.Publications.Activities
         /// <param name="indexRootInfo">The index root information.</param>
         /// <param name="indexFileName">Name of the index file.</param>
         /// <returns></returns>
-        /// <exception cref="ArgumentNullException">
-        /// entryRootInfo
+        /// <exception cref="ArgumentNullException">entryRootInfo
         /// or
         /// indexRootInfo
         /// or
-        /// indexFileName
-        /// </exception>
-        public static FileInfo GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName)
+        /// indexFileName</exception>
+        public static FileInfo[] GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
+
+        /// <summary>
+        /// Generates the index from 11ty entries.
+        /// </summary>
+        /// <param name="entryRootInfo">The entry root information.</param>
+        /// <param name="indexRootInfo">The index root information.</param>
+        /// <param name="indexFileName">Name of the index file.</param>
+        /// <param name="partitionSize">Size of the partition.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">entryRootInfo
+        /// or
+        /// indexRootInfo
+        /// or
+        /// indexFileName</exception>
+        public static FileInfo[] GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
         {
             if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
             if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
             if (string.IsNullOrEmpty(indexFileName)) throw new ArgumentNullException(nameof(indexFileName));
 
-            var frontMatterDocuments = entryRootInfo
+            var frontMatterDocumentCollections = entryRootInfo
                 .GetFiles("*.md", SearchOption.AllDirectories)
                 .Select(fileInfo => fileInfo.ToMarkdownEntry().FrontMatter)
                 .Select(jO => JObject.FromObject(new
                 {
-                    extract = JObject.Parse(jO.GetValue<string>("tag")).GetValue<string>("extract"),
-                    clientId = jO.GetValue<string>("clientId"),
-                    inceptDate = jO.GetValue<string>("date"),
-                    modificationDate = jO.GetValue<string>("modificationDate"),
-                    title = jO.GetValue<string>("title")
+                    extract = JObject.Parse(jO.GetValue<string>("tag", throwException: false) ?? @"{ ""extract"": ""[empty]"" }").GetValue<string>("extract"),
+                    clientId = jO.GetValue<string>("clientId", throwException: false) ?? "[empty]",
+                    inceptDate = jO.GetValue<string>("date", throwException: false) ?? string.Empty,
+                    modificationDate = jO.GetValue<string>("modificationDate", throwException: false) ?? string.Empty,
+                    title = jO.GetValue<string>("title", throwException: false) ?? string.Empty
                 }))
-                .ToArray();
+                .OrderBy(o => o.GetValue<string>("clientId"))
+                .Partition(partitionSize);
 
-            var jA = new JArray(frontMatterDocuments);
-            var targetInfo = indexRootInfo.FindFile(indexFileName);
+            var indices = new List<FileInfo>();
+            var count = 0;
+            foreach (var frontMatterDocuments in frontMatterDocumentCollections)
+            {
+                var jA = new JArray(frontMatterDocuments);
+                var targetInfo = indexRootInfo.FindFile(indexFileName.Replace(".json", $"-{count:00}.json"));
 
-            File.WriteAllText(targetInfo.FullName, jA.ToString());
+                File.WriteAllText(targetInfo.FullName, jA.ToString());
+                count++;
+            }
 
-            return targetInfo;
+            return indices.ToArray();
         }
 
         /// <summary>
@@ -126,15 +147,19 @@ namespace Songhay.Publications.Activities
             var (entryRootInfo, indexRootInfo, indexFileName) =
                 this._jSettings.GetCompressed11tyIndexArgs(this._presentationInfo);
 
-            var indexInfo = GenerateIndexFrom11tyEntries(
+            var indices = GenerateIndexFrom11tyEntries(
                 entryRootInfo,
                 indexRootInfo,
                 indexFileName
             );
 
-            var compressedIndexInfo = CompressIndex(indexInfo);
+            foreach (var indexInfo in indices)
+            {
+                var compressedIndexInfo = CompressIndex(indexInfo);
 
-            traceSource.WriteLine($"index: {compressedIndexInfo.FullName}");
+                traceSource.WriteLine($"index: {compressedIndexInfo.FullName}");
+            }
+
         }
 
         internal void SetContext(ProgramArgs args)
