@@ -107,8 +107,10 @@ namespace Songhay.Publications.Activities
             {
                 var jA = new JArray(frontMatterDocuments);
                 var path = indexRootInfo.ToCombinedPath(indexFileName.Replace(".json", $"-{count:00}.json"));
+                indices.Add(new FileInfo(path));
 
                 File.WriteAllText(path, jA.ToString());
+
                 count++;
             }
 
@@ -157,7 +159,7 @@ namespace Songhay.Publications.Activities
             {
                 var compressedIndexInfo = CompressIndex(indexInfo);
 
-                traceSource.WriteLine($"index: {compressedIndexInfo.FullName}");
+                traceSource?.WriteLine($"index: {compressedIndexInfo.FullName}");
             }
 
         }
