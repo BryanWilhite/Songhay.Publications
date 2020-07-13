@@ -106,9 +106,9 @@ namespace Songhay.Publications.Activities
             foreach (var frontMatterDocuments in frontMatterDocumentCollections)
             {
                 var jA = new JArray(frontMatterDocuments);
-                var targetInfo = indexRootInfo.FindFile(indexFileName.Replace(".json", $"-{count:00}.json"));
+                var path = indexRootInfo.ToCombinedPath(indexFileName.Replace(".json", $"-{count:00}.json"));
 
-                File.WriteAllText(targetInfo.FullName, jA.ToString());
+                File.WriteAllText(path, jA.ToString());
                 count++;
             }
 
