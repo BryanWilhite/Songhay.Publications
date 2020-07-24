@@ -98,7 +98,7 @@ namespace Songhay.Publications.Activities
                     modificationDate = jO.GetValue<string>("modificationDate", throwException: false) ?? string.Empty,
                     title = jO.GetValue<string>("title", throwException: false) ?? string.Empty
                 }))
-                .OrderBy(o => o.GetValue<string>("clientId"))
+                .OrderByDescending(o => o.GetValue<string>("clientId"))
                 .Partition(partitionSize);
 
             var indices = new List<FileInfo>();
