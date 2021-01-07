@@ -115,7 +115,7 @@ namespace Songhay.Publications
                 draftEntry.WithNew11tyFrontMatter(title, publicationDate, path, tag);
             }
 
-            var combinedPath = FrameworkFileUtility.GetCombinedPath(presentationRoot, $"{draftEntry.FrontMatter.GetValue<string>("clientId")}.md");
+            var combinedPath = ProgramFileUtility.GetCombinedPath(presentationRoot, $"{draftEntry.FrontMatter.GetValue<string>("clientId")}.md");
             File.WriteAllText(combinedPath, draftEntry.ToFinalEdit());
             draftInfo.Delete();
 

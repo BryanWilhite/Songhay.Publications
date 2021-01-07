@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.16</AssemblyVersion>
+    <AssemblyVersion>5.0.0</AssemblyVersion>
     <RootNamespace>Songhay.Publications</RootNamespace>
 
     <Title>Songhay Publications</Title>
     <Description>Core reusable definitions for Songhay Studio Publications</Description>
     <Authors>Bryan D. Wilhite</Authors>
-    <Copyright>(c) 2020 Bryan D. Wilhite</Copyright>
+    <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
     <Company>Songhay System</Company>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
@@ -18,7 +18,7 @@
     <PackageIcon>..\songhay_icon.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-    <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/projects/4</PackageReleaseNotes>
+    <PackageReleaseNotes>📦🔼 update of Core dependencies</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
@@ -27,7 +27,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net5.0;</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,7 +37,7 @@
   <ItemGroup>
     <PackageReference Include="CloneExtensions" Version="1.4.2" />
     <PackageReference Include="Markdig" Version="0.20.0" />
-    <PackageReference Include="SonghayCore" Version="3.2.20" />
+    <PackageReference Include="SonghayCore" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>

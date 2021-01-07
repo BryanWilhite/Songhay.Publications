@@ -15,10 +15,10 @@ namespace Songhay.Publications.Shell
     {
         internal static void DisplayCredits()
         {
-            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(Assembly.GetExecutingAssembly(), true));
+            Console.Write(ProgramAssemblyUtility.GetAssemblyInfo(Assembly.GetExecutingAssembly(), true));
             Console.WriteLine(string.Empty);
             Console.WriteLine("Activities Assembly:");
-            Console.Write(FrameworkAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
+            Console.Write(ProgramAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
         }
 
         internal static string Run(string[] args)

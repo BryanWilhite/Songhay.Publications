@@ -11,20 +11,20 @@ namespace Songhay.Publications.Tests
         [InlineData("../../../markdown/presentation-drafts", "Hello World!")]
         public void GenerateEntryFor11ty_Test(string entryRoot, string title)
         {
-            entryRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
+            entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
 
             var entry = MarkdownEntryUtility.GenerateEntryFor11ty(entryRoot, title);
 
             Assert.NotNull(entry);
-            Assert.True(File.Exists(FrameworkFileUtility.GetCombinedPath(entryRoot, $"{entry.FrontMatter.GetValue<string>("clientId")}.md")));
+            Assert.True(File.Exists(ProgramFileUtility.GetCombinedPath(entryRoot, $"{entry.FrontMatter.GetValue<string>("clientId")}.md")));
         }
 
         [DebuggerAttachedTheory]
         [InlineData("../../../markdown/presentation-drafts", "../../../markdown/presentation/entry", "2019-11-19-hello-world.md")]
         public void PublishEntryFor11ty_Test(string entryRoot, string presentationRoot, string fileName)
         {
-            entryRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var path = MarkdownEntryUtility.PublishEntryFor11ty(entryRoot, presentationRoot, fileName);
 

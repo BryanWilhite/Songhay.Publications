@@ -12,7 +12,7 @@ namespace Songhay.Publications.Tests.Activities
         [InlineData("../../../markdown/presentation/presentation-index.json")]
         public void CompressIndex_Test(string indexFile)
         {
-            indexFile = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexFile);
+            indexFile = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexFile);
 
             var indexFileInfo = new FileInfo(indexFile);
             Assert.True(indexFileInfo.Exists);
@@ -25,8 +25,8 @@ namespace Songhay.Publications.Tests.Activities
         [InlineData("../../../markdown/presentation/entry", "../../../markdown/presentation", "presentation-index.json")]
         public void GenerateIndexFrom11tyEntries_Test(string entryRoot, string indexRoot, string indexFileName)
         {
-            entryRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
-            indexRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexRoot);
+            entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
+            indexRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexRoot);
 
             var entryRootInfo = new DirectoryInfo(entryRoot);
             Assert.True(entryRootInfo.Exists);

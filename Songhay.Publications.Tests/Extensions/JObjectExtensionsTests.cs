@@ -20,7 +20,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("md-add-entry-extract-settings.json", "../../../markdown/shell")]
         public void GetAddEntryExtractArg_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {
@@ -46,7 +46,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("index-activity-settings.json", "../../../markdown/shell")]
         public void GetCompressed11tyIndexArgs_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {
@@ -76,7 +76,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("md-expand-uris-settings.json", "../../../markdown/shell")]
         public void GetExpandUrisArgs_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {
@@ -103,7 +103,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("md-find-change-settings.json", "../../../markdown/shell")]
         public void GetFindChangeArgs_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {
@@ -139,7 +139,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("md-generate-entry-settings.json", "../../../markdown/shell")]
         public void GetGenerateEntryArgs_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {
@@ -166,7 +166,7 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("md-publish-entry-settings.json", "../../../markdown/shell")]
         public void GetPublishEntryArgs_Test(string settingsFile, string presentationRoot)
         {
-            presentationRoot = FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
+            presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
             var args = new ProgramArgs(new[]
                 {

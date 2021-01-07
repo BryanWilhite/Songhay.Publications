@@ -129,9 +129,9 @@ INSERT INTO [Segment]
             var sql = string.Format(sqlFormat,
                 data.SegmentId,
                 data.SegmentName,
-                FrameworkTypeUtility.ParseString(data.SortOrdinal, "NULL"),
-                FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()),
-                FrameworkTypeUtility.ParseString(data.ParentSegmentId, "NULL"),
+                ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"),
+                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()),
+                ProgramTypeUtility.ParseString(data.ParentSegmentId, "NULL"),
                 data.ClientId,
                 data.IsActive.GetValueOrDefault() ? 1 : 0);
 

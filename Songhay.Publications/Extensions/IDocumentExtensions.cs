@@ -179,17 +179,17 @@ INSERT INTO [Document]
             var sql = string.Format(sqlFormat,
                 data.DocumentId,
                 data.ClientId.InDoubleQuotesOrDefault("NULL"),
-                FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()).InDoubleQuotes(),
+                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()).InDoubleQuotes(),
                 data.DocumentShortName.InDoubleQuotesOrDefault("NULL"),
                 data.FileName.InDoubleQuotesOrDefault("NULL"),
                 data.IsActive.GetValueOrDefault() ? 1 : 0,
                 data.IsRoot.GetValueOrDefault() ? 1 : 0,
-                data.ModificationDate.HasValue ? FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
+                data.ModificationDate.HasValue ? ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
                 data.Path.InDoubleQuotesOrDefault("NULL"),
-                FrameworkTypeUtility.ParseString(data.SegmentId, "NULL"),
-                FrameworkTypeUtility.ParseString(data.SortOrdinal, "NULL"),
+                ProgramTypeUtility.ParseString(data.SegmentId, "NULL"),
+                ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"),
                 data.Tag.InDoubleQuotesOrDefault("NULL"),
-                FrameworkTypeUtility.ParseString(data.TemplateId, "NULL"),
+                ProgramTypeUtility.ParseString(data.TemplateId, "NULL"),
                 data.Title.InDoubleQuotesOrDefault("NULL"));
 
             return sql;

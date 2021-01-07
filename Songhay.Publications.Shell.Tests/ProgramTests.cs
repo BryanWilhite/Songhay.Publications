@@ -63,7 +63,7 @@ namespace Songhay.Publications.Shell.Tests
             this._testOutputHelper.WriteLine(Program.Run(args));
         }
 
-        string GetBasePath(string relativePath) => FrameworkAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, relativePath);
+        string GetBasePath(string relativePath) => ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, relativePath);
 
         readonly ITestOutputHelper _testOutputHelper;
     }

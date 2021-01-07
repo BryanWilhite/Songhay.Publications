@@ -140,7 +140,7 @@ namespace Songhay.Publications
 
         internal static string GetCombinedPath(string root, string path, bool shouldBeFile)
         { //TODO consider adding to Core
-            var combinedPath = FrameworkFileUtility.GetCombinedPath(root, path);
+            var combinedPath = ProgramFileUtility.GetCombinedPath(root, path);
 
             if(shouldBeFile)
             {

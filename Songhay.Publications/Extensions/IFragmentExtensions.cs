@@ -199,9 +199,9 @@ INSERT INTO [Fragment]
             var sql = string.Format(sqlFormat,
                 data.FragmentId,
                 data.ClientId.InDoubleQuotesOrDefault("NULL"),
-                FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()).InDoubleQuotes(),
-                FrameworkTypeUtility.ParseString(data.DocumentId, "NULL"),
-                data.EndDate.HasValue ? FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.EndDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
+                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()).InDoubleQuotes(),
+                ProgramTypeUtility.ParseString(data.DocumentId, "NULL"),
+                data.EndDate.HasValue ? ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.EndDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
                 data.FragmentName.InDoubleQuotesOrDefault("NULL"),
                 data.FragmentDisplayName.InDoubleQuotesOrDefault("NULL"),
                 data.IsActive.GetValueOrDefault() ? 1 : 0,
@@ -210,10 +210,10 @@ INSERT INTO [Fragment]
                 data.IsWrapper.GetValueOrDefault() ? 1 : 0,
                 data.ItemChar.InDoubleQuotesOrDefault("NULL"),
                 data.ItemText.InDoubleQuotesOrDefault("NULL"),
-                data.ModificationDate.HasValue ? FrameworkTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
-                FrameworkTypeUtility.ParseString(data.NextFragmentId, "NULL"),
-                FrameworkTypeUtility.ParseString(data.PrevFragmentId, "NULL"),
-                FrameworkTypeUtility.ParseString(data.SortOrdinal, "NULL"));
+                data.ModificationDate.HasValue ? ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
+                ProgramTypeUtility.ParseString(data.NextFragmentId, "NULL"),
+                ProgramTypeUtility.ParseString(data.PrevFragmentId, "NULL"),
+                ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"));
 
             return sql;
         }
