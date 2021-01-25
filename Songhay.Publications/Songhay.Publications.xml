@@ -827,12 +827,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Document.CreateDate">
+        <member name="P:Songhay.Publications.Models.Document.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Document.DocumentId">
@@ -983,12 +983,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.DocumentMetadata.CreateDate">
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.DocumentMetadata.DocumentId">
@@ -1127,12 +1127,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Fragment.CreateDate">
+        <member name="P:Songhay.Publications.Models.Fragment.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Fragment.DocumentId">
@@ -1318,12 +1318,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.FragmentMetadata.CreateDate">
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.FragmentMetadata.DocumentId">
@@ -1491,12 +1491,12 @@
             The path.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IDocument.CreateDate">
+        <member name="P:Songhay.Publications.Models.IDocument.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.ModificationDate">
@@ -1638,12 +1638,12 @@
             The item text.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IFragment.CreateDate">
+        <member name="P:Songhay.Publications.Models.IFragment.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.IFragment.EndDate">
@@ -1765,12 +1765,12 @@
             The sort ordinal.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.ISegment.CreateDate">
+        <member name="P:Songhay.Publications.Models.ISegment.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.ISegment.ParentSegmentId">
@@ -2179,12 +2179,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Segment.CreateDate">
+        <member name="P:Songhay.Publications.Models.Segment.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Segment.IsActive">
@@ -2321,12 +2321,12 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.SegmentMetadata.CreateDate">
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.InceptDate">
             <summary>
-            Gets or sets the create date.
+            Gets or sets the incept date.
             </summary>
             <value>
-            The create date.
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.SegmentMetadata.IsActive">

@@ -30,14 +30,14 @@ namespace Songhay.Publications.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or sets the create date.
+        /// Gets or sets the incept date.
         /// </summary>
         /// <value>
-        /// The create date.
+        /// The incept date.
         /// </value>
         [Display(Name = "Incept Date", Order = 5)]
         [Required]
-        public Nullable<DateTime> CreateDate { get; set; }
+        public Nullable<DateTime> InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the is active.

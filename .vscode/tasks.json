@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "dotnet build",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -12,7 +12,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build [Release]",
+            "label": "dotnet build [Release]",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -24,23 +24,17 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "command": "nuget",
-            "label": "NuGet pack Songhay.Publications",
-            "isBackground": false,
+            "label": "dotnet clean [Solution]",
+            "command": "dotnet",
             "type": "shell",
             "args": [
-                "pack",
-                "Songhay.Publications.nuspec",
-                "-Verbosity",
-                "detailed"
+                "clean",
+                "${workspaceFolder}/Songhay.Publications.sln"
             ],
-            "options": {
-                "cwd": "${workspaceRoot}/Songhay.Publications"
-            },
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish [Songhay.Publications.Shell, linux-x64]",
+            "label": "dotnet publish [Songhay.Publications.Shell, linux-x64]",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -58,7 +52,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish [Songhay.Publications.Shell, win-x64]",
+            "label": "dotnet publish [Songhay.Publications.Shell, win-x64]",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -76,7 +70,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build [Songhay.Publications.Tests]",
+            "label": "dotnet build [Songhay.Publications.Tests]",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -88,7 +82,20 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch [Songhay.Publications.Tests]",
+            "label": "dotnet test [Songhay.Publications.Tests]",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "test",
+                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
+                "--logger:trx",
+                "--results-directory:${workspaceFolder}/TestResults",
+                "--verbosity:normal"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "dotnet watch [Songhay.Publications.Tests]",
             "command": "dotnet",
             "type": "shell",
             "args": [
@@ -98,6 +105,22 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "command": "nuget",
+            "label": "NuGet pack Songhay.Publications",
+            "isBackground": false,
+            "type": "shell",
+            "args": [
+                "pack",
+                "Songhay.Publications.nuspec",
+                "-Verbosity",
+                "detailed"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/Songhay.Publications"
+            },
             "problemMatcher": "$msCompile"
         },
         {

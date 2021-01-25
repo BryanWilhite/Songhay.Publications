@@ -47,7 +47,7 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) return;
 
-            data.CreateDate = DateTime.Now;
+            data.InceptDate = DateTime.Now;
             data.IsActive = true;
             data.IsRoot = false;
             data.ModificationDate = DateTime.Now;
@@ -179,7 +179,7 @@ INSERT INTO [Document]
             var sql = string.Format(sqlFormat,
                 data.DocumentId,
                 data.ClientId.InDoubleQuotesOrDefault("NULL"),
-                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()).InDoubleQuotes(),
+                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.InceptDate.GetValueOrDefault()).InDoubleQuotes(),
                 data.DocumentShortName.InDoubleQuotesOrDefault("NULL"),
                 data.FileName.InDoubleQuotesOrDefault("NULL"),
                 data.IsActive.GetValueOrDefault() ? 1 : 0,

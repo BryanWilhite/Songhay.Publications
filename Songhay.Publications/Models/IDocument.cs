@@ -48,12 +48,12 @@ namespace Songhay.Publications.Models
         string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets the create date.
+        /// Gets or sets the incept date.
         /// </summary>
         /// <value>
-        /// The create date.
+        /// The incept date.
         /// </value>
-        Nullable<DateTime> CreateDate { get; set; }
+        Nullable<DateTime> InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the modification date.

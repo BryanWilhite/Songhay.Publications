@@ -33,7 +33,7 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) return;
 
-            data.CreateDate = DateTime.Now;
+            data.InceptDate = DateTime.Now;
             data.IsActive = true;
         }
 
@@ -49,7 +49,7 @@ namespace Songhay.Publications.Extensions
             builder.Append($", {nameof(data.SegmentName)}: {data?.SegmentName}");
             builder.Append($", {nameof(data.IsActive)}: {data?.IsActive}");
             builder.Append($", {nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
-            builder.Append($", {nameof(data.CreateDate)}: {data?.CreateDate}");
+            builder.Append($", {nameof(data.InceptDate)}: {data?.InceptDate}");
 
             return builder.ToString();
         }
@@ -130,7 +130,7 @@ INSERT INTO [Segment]
                 data.SegmentId,
                 data.SegmentName,
                 ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"),
-                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.CreateDate.GetValueOrDefault()),
+                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.InceptDate.GetValueOrDefault()),
                 ProgramTypeUtility.ParseString(data.ParentSegmentId, "NULL"),
                 data.ClientId,
                 data.IsActive.GetValueOrDefault() ? 1 : 0);

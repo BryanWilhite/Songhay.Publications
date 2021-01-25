@@ -32,12 +32,12 @@ namespace Songhay.Publications.Models
         Nullable<byte> SortOrdinal { get; set; }
 
         /// <summary>
-        /// Gets or sets the create date.
+        /// Gets or sets the incept date.
         /// </summary>
         /// <value>
-        /// The create date.
+        /// The incept date.
         /// </value>
-        Nullable<System.DateTime> CreateDate { get; set; }
+        Nullable<System.DateTime> InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the parent segment identifier.
