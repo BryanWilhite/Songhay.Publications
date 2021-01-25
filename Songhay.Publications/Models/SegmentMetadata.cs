@@ -30,6 +30,16 @@ namespace Songhay.Publications.Models
         public DateTime? InceptDate { get; set; }
 
         /// <summary>
+        /// Gets or sets the modification date.
+        /// </summary>
+        /// <value>
+        /// The modification date.
+        /// </value>
+        [Display(Name = "Modification Date", Order = 8)]
+        [Required]
+        public DateTime? ModificationDate { get; set; }
+
+        /// <summary>
         /// Gets or sets the is active.
         /// </summary>
         /// <value>

@@ -983,14 +983,6 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.DocumentMetadata.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
         <member name="P:Songhay.Publications.Models.DocumentMetadata.DocumentId">
             <summary>
             Gets or sets the document identifier.
@@ -1029,6 +1021,14 @@
             </summary>
             <value>
             The is root.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.InceptDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.DocumentMetadata.ModificationDate">
@@ -1491,22 +1491,6 @@
             The path.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IDocument.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IDocument.ModificationDate">
-            <summary>
-            Gets or sets the modification date.
-            </summary>
-            <value>
-            The modification date.
-            </value>
-        </member>
         <member name="P:Songhay.Publications.Models.IDocument.TemplateId">
             <summary>
             Gets or sets the template identifier.
@@ -1638,28 +1622,12 @@
             The item text.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IFragment.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
         <member name="P:Songhay.Publications.Models.IFragment.EndDate">
             <summary>
             Gets or sets the end date.
             </summary>
             <value>
             The end date.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IFragment.ModificationDate">
-            <summary>
-            Gets or sets the modification date.
-            </summary>
-            <value>
-            The modification date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.IFragment.DocumentId">
@@ -1763,14 +1731,6 @@
             </summary>
             <value>
             The sort ordinal.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.ISegment.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.ISegment.ParentSegmentId">
@@ -2179,14 +2139,6 @@
             The client identifier.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Segment.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
         <member name="P:Songhay.Publications.Models.Segment.IsActive">
             <summary>
             Gets or sets the is active.
@@ -2225,6 +2177,22 @@
             </summary>
             <value>
             The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.InceptDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.Segment.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Segment.Documents">
@@ -2327,6 +2295,14 @@
             </summary>
             <value>
             The incept date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.SegmentMetadata.IsActive">
@@ -2497,6 +2473,29 @@
             <summary>
             Calls <see cref="M:Songhay.Publications.Models.OebpsTextToc.Write"/>.
             </summary>
+        </member>
+        <member name="T:ITemporal">
+            <summary>
+            Centralizes time-based editorial properties
+            for <see cref="T:Songhay.Publications.Models.Segment" />, <see cref="T:Songhay.Publications.Models.Document" />
+            and <see cref="T:Songhay.Publications.Models.Fragment" /> models
+            </summary>
+        </member>
+        <member name="P:ITemporal.InceptDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
+            </value>
+        </member>
+        <member name="P:ITemporal.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
         </member>
     </members>
 </doc>

@@ -1,4 +1,3 @@
-
 using System;
 
 namespace Songhay.Publications.Models
@@ -6,7 +5,7 @@ namespace Songhay.Publications.Models
     /// <summary>
     /// GenericWeb Fragment interface
     /// </summary>
-    public interface IFragment
+    public interface IFragment : ITemporal
     {
         /// <summary>
         /// Gets or sets the fragment identifier.
@@ -57,28 +56,12 @@ namespace Songhay.Publications.Models
         string ItemText { get; set; }
 
         /// <summary>
-        /// Gets or sets the incept date.
-        /// </summary>
-        /// <value>
-        /// The incept date.
-        /// </value>
-        Nullable<DateTime> InceptDate { get; set; }
-
-        /// <summary>
         /// Gets or sets the end date.
         /// </summary>
         /// <value>
         /// The end date.
         /// </value>
         Nullable<DateTime> EndDate { get; set; }
-
-        /// <summary>
-        /// Gets or sets the modification date.
-        /// </summary>
-        /// <value>
-        /// The modification date.
-        /// </value>
-        Nullable<DateTime> ModificationDate { get; set; }
 
         /// <summary>
         /// Gets or sets the document identifier.

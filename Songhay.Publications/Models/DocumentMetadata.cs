@@ -20,16 +20,6 @@ namespace Songhay.Publications.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or sets the incept date.
-        /// </summary>
-        /// <value>
-        /// The incept date.
-        /// </value>
-        [Display(Name = "Incept Date", Order = 7)]
-        [Required]
-        public DateTime? InceptDate { get; set; }
-
-        /// <summary>
         /// Gets or sets the document identifier.
         /// </summary>
         /// <value>
@@ -74,6 +64,16 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Is Root?", Order = 10)]
         public bool? IsRoot { get; set; }
+
+        /// <summary>
+        /// Gets or sets the incept date.
+        /// </summary>
+        /// <value>
+        /// The incept date.
+        /// </value>
+        [Display(Name = "Incept Date", Order = 7)]
+        [Required]
+        public DateTime? InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the modification date.

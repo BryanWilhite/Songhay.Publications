@@ -30,16 +30,6 @@ namespace Songhay.Publications.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// Gets or sets the incept date.
-        /// </summary>
-        /// <value>
-        /// The incept date.
-        /// </value>
-        [Display(Name = "Incept Date", Order = 5)]
-        [Required]
-        public Nullable<DateTime> InceptDate { get; set; }
-
-        /// <summary>
         /// Gets or sets the is active.
         /// </summary>
         /// <value>
@@ -85,6 +75,26 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Sort Ordinal", Order = 6)]
         public Nullable<byte> SortOrdinal { get; set; }
+
+        /// <summary>
+        /// Gets or sets the incept date.
+        /// </summary>
+        /// <value>
+        /// The incept date.
+        /// </value>
+        [Display(Name = "Incept Date", Order = 5)]
+        [Required]
+        public Nullable<DateTime> InceptDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the modification date.
+        /// </summary>
+        /// <value>
+        /// The modification date.
+        /// </value>
+        [Display(Name = "Modification Date", Order = 8)]
+        [Required]
+        public DateTime? ModificationDate { get; set; }
 
         /// <summary>
         /// Gets or sets the documents.

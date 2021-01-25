@@ -5,7 +5,7 @@ namespace Songhay.Publications.Models
     /// <summary>
     /// GenericWeb Segment interface
     /// </summary>
-    public interface ISegment
+    public interface ISegment: ITemporal
     {
         /// <summary>
         /// Gets or sets the segment identifier.
@@ -30,14 +30,6 @@ namespace Songhay.Publications.Models
         /// The sort ordinal.
         /// </value>
         Nullable<byte> SortOrdinal { get; set; }
-
-        /// <summary>
-        /// Gets or sets the incept date.
-        /// </summary>
-        /// <value>
-        /// The incept date.
-        /// </value>
-        Nullable<System.DateTime> InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the parent segment identifier.
