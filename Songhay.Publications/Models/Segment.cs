@@ -17,7 +17,6 @@ namespace Songhay.Publications.Models
         {
             this.Documents = new List<Document>();
             this.ChildSegments = new List<Segment>();
-            this.SegmentDocuments = new List<SegmentDocument>();
         }
 
         /// <summary>
@@ -122,15 +121,6 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(AutoGenerateField = false)]
         public virtual Segment ParentSegment { get; set; }
-
-        /// <summary>
-        /// Gets or sets the <see cref="SegmentDocument"/> join.
-        /// </summary>
-        /// <value>
-        /// The <see cref="SegmentDocument"/> join.
-        /// </value>
-        [Display(AutoGenerateField = false)]
-        public virtual ICollection<SegmentDocument> SegmentDocuments { get; set; }
 
         /// <summary>
         /// Converts to string.

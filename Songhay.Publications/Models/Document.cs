@@ -17,7 +17,6 @@ namespace Songhay.Publications.Models
         {
             this.Fragments = new List<Fragment>();
             this.WebKeywords = new List<WebKeyword>();
-            this.SegmentDocuments = new List<SegmentDocument>();
         }
 
         /// <summary>
@@ -176,16 +175,6 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(AutoGenerateField = false)]
         public virtual ICollection<WebKeyword> WebKeywords { get; set; }
-
-
-        /// <summary>
-        /// Gets or sets the <see cref="SegmentDocument"/> join.
-        /// </summary>
-        /// <value>
-        /// The <see cref="SegmentDocument"/> join.
-        /// </value>
-        [Display(AutoGenerateField = false)]
-        public virtual ICollection<SegmentDocument> SegmentDocuments { get; set; }
 
         /// <summary>
         /// Converts the <see cref="Document"/> into a string.

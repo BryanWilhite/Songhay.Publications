@@ -939,14 +939,6 @@
             The web keywords.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Document.SegmentDocuments">
-            <summary>
-            Gets or sets the <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
-            </summary>
-            <value>
-            The <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
-            </value>
-        </member>
         <member name="M:Songhay.Publications.Models.Document.ToString">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.Document"/> into a string.
@@ -2197,14 +2189,6 @@
             The parent segment.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Segment.SegmentDocuments">
-            <summary>
-            Gets or sets the <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
-            </summary>
-            <value>
-            The <see cref="T:Songhay.Publications.Models.SegmentDocument"/> join.
-            </value>
-        </member>
         <member name="M:Songhay.Publications.Models.Segment.ToString">
             <summary>
             Converts to string.
@@ -2212,45 +2196,6 @@
             <returns>
             A <see cref="T:System.String" /> that represents this instance.
             </returns>
-        </member>
-        <member name="T:Songhay.Publications.Models.SegmentDocument">
-            <summary>
-            Defines many-to-many lookup
-            between <see cref="P:Songhay.Publications.Models.SegmentDocument.Document"/>
-            and <see cref="T:Songhay.Publications.Models.Fragment"/>.
-            </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.SegmentDocument.Document">
-            <summary>
-            Gets or sets the document.
-            </summary>
-            <value>
-            The document.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.SegmentDocument.DocumentId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.SegmentDocument.Segment">
-            <summary>
-            Gets or sets the segment.
-            </summary>
-            <value>
-            The segment.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.SegmentDocument.SegmentId">
-            <summary>
-            Gets or sets the segment identifier.
-            </summary>
-            <value>
-            The segment identifier.
-            </value>
         </member>
         <member name="T:Songhay.Publications.Models.SegmentMetadata">
             <summary>
