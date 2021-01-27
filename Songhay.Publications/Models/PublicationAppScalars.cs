@@ -3,7 +3,7 @@
     /// <summary>
     /// centralizes magic strings
     /// </summary>
-    public class AppScalars
+    public class PublicationAppScalars
     {
         /// <summary>
         /// The conventional settings file
