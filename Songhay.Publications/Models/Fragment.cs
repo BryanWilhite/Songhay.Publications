@@ -37,7 +37,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Incept Date", Order = 4)]
         [Required]
-        public Nullable<DateTime> InceptDate { get; set; }
+        public DateTime? InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the document identifier.
@@ -46,7 +46,7 @@ namespace Songhay.Publications.Models
         /// The document identifier.
         /// </value>
         [Display(Name = "Document ID", Order = 0)]
-        public Nullable<int> DocumentId { get; set; }
+        public int? DocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the end date.
@@ -55,7 +55,7 @@ namespace Songhay.Publications.Models
         /// The end date.
         /// </value>
         [Display(Name = "Expiration Date", Order = 7)]
-        public Nullable<DateTime> EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Gets or sets the display name of the fragment.
@@ -93,7 +93,7 @@ namespace Songhay.Publications.Models
         /// The is active.
         /// </value>
         [Display(Name = "Is Active?", Order = 10)]
-        public Nullable<bool> IsActive { get; set; }
+        public bool? IsActive { get; set; }
 
         /// <summary>
         /// Gets or sets the is next.
@@ -102,7 +102,7 @@ namespace Songhay.Publications.Models
         /// The is next.
         /// </value>
         [Display(Name = "Is Next?", Order = 11)]
-        public Nullable<bool> IsNext { get; set; }
+        public bool? IsNext { get; set; }
 
         /// <summary>
         /// Gets or sets the is previous.
@@ -111,7 +111,7 @@ namespace Songhay.Publications.Models
         /// The is previous.
         /// </value>
         [Display(Name = "Is Previous?", Order = 12)]
-        public Nullable<bool> IsPrevious { get; set; }
+        public bool? IsPrevious { get; set; }
 
         /// <summary>
         /// Gets or sets the is wrapper.
@@ -120,7 +120,7 @@ namespace Songhay.Publications.Models
         /// The is wrapper.
         /// </value>
         [Display(Name = "Is Wrapper?", Order = 13)]
-        public Nullable<bool> IsWrapper { get; set; }
+        public bool? IsWrapper { get; set; }
 
         /// <summary>
         /// Gets or sets the content.
@@ -148,7 +148,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Modification Date", Order = 5)]
         [Required]
-        public Nullable<DateTime> ModificationDate { get; set; }
+        public DateTime? ModificationDate { get; set; }
 
         /// <summary>
         /// Gets or sets the next fragment identifier.
@@ -157,7 +157,7 @@ namespace Songhay.Publications.Models
         /// The next fragment identifier.
         /// </value>
         [Display(Name = "Next Fragment ID", Order = 7)]
-        public Nullable<int> NextFragmentId { get; set; }
+        public int? NextFragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the previous fragment identifier.
@@ -166,7 +166,7 @@ namespace Songhay.Publications.Models
         /// The previous fragment identifier.
         /// </value>
         [Display(Name = "Previous Fragment ID", Order = 8)]
-        public Nullable<int> PrevFragmentId { get; set; }
+        public int? PrevFragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the sort ordinal.
@@ -175,7 +175,7 @@ namespace Songhay.Publications.Models
         /// The sort ordinal.
         /// </value>
         [Display(Name = "Sort Ordinal", Order = 6)]
-        public Nullable<byte> SortOrdinal { get; set; }
+        public byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the document.

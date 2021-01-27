@@ -53,7 +53,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The template identifier.
         /// </value>
-        Nullable<int> TemplateId { get; set; }
+        int? TemplateId { get; set; }
 
         /// <summary>
         /// Gets or sets the segment identifier.
@@ -61,7 +61,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The segment identifier.
         /// </value>
-        Nullable<int> SegmentId { get; set; }
+        int? SegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the is root.
@@ -69,7 +69,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is root.
         /// </value>
-        Nullable<bool> IsRoot { get; set; }
+        bool? IsRoot { get; set; }
 
         /// <summary>
         /// Gets or sets the is active.
@@ -77,7 +77,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is active.
         /// </value>
-        Nullable<bool> IsActive { get; set; }
+        bool? IsActive { get; set; }
 
         /// <summary>
         /// Gets or sets the sort ordinal.
@@ -85,7 +85,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The sort ordinal.
         /// </value>
-        Nullable<byte> SortOrdinal { get; set; }
+        byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the client identifier.

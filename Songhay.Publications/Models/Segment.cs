@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Is Active?", Order = 4)]
         [Required]
-        public Nullable<bool> IsActive { get; set; }
+        public bool? IsActive { get; set; }
 
         /// <summary>
         /// Gets or sets the parent segment identifier.
@@ -45,7 +45,7 @@ namespace Songhay.Publications.Models
         /// The parent segment identifier.
         /// </value>
         [Display(Name = "Parent Segment ID", Order = 0)]
-        public Nullable<int> ParentSegmentId { get; set; }
+        public int? ParentSegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the segment identifier.
@@ -73,7 +73,7 @@ namespace Songhay.Publications.Models
         /// The sort ordinal.
         /// </value>
         [Display(Name = "Sort Ordinal", Order = 6)]
-        public Nullable<byte> SortOrdinal { get; set; }
+        public byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the incept date.
@@ -83,7 +83,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Incept Date", Order = 5)]
         [Required]
-        public Nullable<DateTime> InceptDate { get; set; }
+        public DateTime? InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the modification date.

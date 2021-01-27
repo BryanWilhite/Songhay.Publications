@@ -36,7 +36,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Incept Date", Order = 7)]
         [Required]
-        public Nullable<DateTime> InceptDate { get; set; }
+        public DateTime? InceptDate { get; set; }
 
         /// <summary>
         /// Gets or sets the document identifier.
@@ -73,7 +73,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Is Active?", Order = 9)]
         [Required]
-        public Nullable<bool> IsActive { get; set; }
+        public bool? IsActive { get; set; }
 
         /// <summary>
         /// Gets or sets the is root.
@@ -82,7 +82,7 @@ namespace Songhay.Publications.Models
         /// The is root.
         /// </value>
         [Display(Name = "Is Root?", Order = 10)]
-        public Nullable<bool> IsRoot { get; set; }
+        public bool? IsRoot { get; set; }
 
         /// <summary>
         /// Gets or sets the modification date.
@@ -92,7 +92,7 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(Name = "Modification Date", Order = 8)]
         [Required]
-        public Nullable<DateTime> ModificationDate { get; set; }
+        public DateTime? ModificationDate { get; set; }
 
         /// <summary>
         /// Gets or sets the path.
@@ -110,7 +110,7 @@ namespace Songhay.Publications.Models
         /// The segment identifier.
         /// </value>
         [Display(Name = "Segment ID", Order = 0)]
-        public Nullable<int> SegmentId { get; set; }
+        public int? SegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the sort ordinal.
@@ -119,7 +119,7 @@ namespace Songhay.Publications.Models
         /// The sort ordinal.
         /// </value>
         [Display(Name = "Sort Ordinal", Order = 6)]
-        public Nullable<byte> SortOrdinal { get; set; }
+        public byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the tag.
@@ -137,7 +137,7 @@ namespace Songhay.Publications.Models
         /// The template identifier.
         /// </value>
         [Display(Name = "XSL Template", Order = 12)]
-        public Nullable<int> TemplateId { get; set; }
+        public int? TemplateId { get; set; }
 
         /// <summary>
         /// Gets or sets the title.

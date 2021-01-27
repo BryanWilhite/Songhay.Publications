@@ -37,7 +37,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The sort ordinal.
         /// </value>
-        Nullable<byte> SortOrdinal { get; set; }
+        byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the content.
@@ -53,7 +53,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The end date.
         /// </value>
-        Nullable<DateTime> EndDate { get; set; }
+        DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Gets or sets the document identifier.
@@ -61,7 +61,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The document identifier.
         /// </value>
-        Nullable<int> DocumentId { get; set; }
+        int? DocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the previous fragment identifier.
@@ -69,7 +69,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The previous fragment identifier.
         /// </value>
-        Nullable<int> PrevFragmentId { get; set; }
+        int? PrevFragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the next fragment identifier.
@@ -77,7 +77,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The next fragment identifier.
         /// </value>
-        Nullable<int> NextFragmentId { get; set; }
+        int? NextFragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the is previous.
@@ -85,7 +85,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is previous.
         /// </value>
-        Nullable<bool> IsPrevious { get; set; }
+        bool? IsPrevious { get; set; }
 
         /// <summary>
         /// Gets or sets the is next.
@@ -93,7 +93,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is next.
         /// </value>
-        Nullable<bool> IsNext { get; set; }
+        bool? IsNext { get; set; }
 
         /// <summary>
         /// Gets or sets the is wrapper.
@@ -101,7 +101,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is wrapper.
         /// </value>
-        Nullable<bool> IsWrapper { get; set; }
+        bool? IsWrapper { get; set; }
 
         /// <summary>
         /// Gets or sets the client identifier.
@@ -117,6 +117,6 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is active.
         /// </value>
-        Nullable<bool> IsActive { get; set; }
+        bool? IsActive { get; set; }
     }
 }

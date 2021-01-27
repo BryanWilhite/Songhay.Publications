@@ -29,7 +29,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The sort ordinal.
         /// </value>
-        Nullable<byte> SortOrdinal { get; set; }
+        byte? SortOrdinal { get; set; }
 
         /// <summary>
         /// Gets or sets the parent segment identifier.
@@ -37,7 +37,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The parent segment identifier.
         /// </value>
-        Nullable<int> ParentSegmentId { get; set; }
+        int? ParentSegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the client identifier.
@@ -53,6 +53,6 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is active.
         /// </value>
-        Nullable<bool> IsActive { get; set; }
+        bool? IsActive { get; set; }
     }
 }
