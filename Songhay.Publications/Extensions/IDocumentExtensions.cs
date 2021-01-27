@@ -137,65 +137,6 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Converts the <see cref="IDocument"/> into a SQLite insert statement.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        public static string ToSQLiteInsertStatement(this IDocument data)
-        {
-            if (data == null) return null;
-
-            var sqlFormat = @"
-INSERT INTO [Document]
-    ([DocumentId]
-    ,[ClientId]
-    ,[CreateDate]
-    ,[DocumentShortName]
-    ,[FileName]
-    ,[IsActive]
-    ,[IsRoot]
-    ,[ModificationDate]
-    ,[Path]
-    ,[SegmentId]
-    ,[SortOrdinal]
-    ,[Tag]
-    ,[TemplateId]
-    ,[Title])
-     VALUES
-    ({0}
-    ,{1}
-    ,{2}
-    ,{3}
-    ,{4}
-    ,{5}
-    ,{6}
-    ,{7}
-    ,{8}
-    ,{9}
-    ,{10}
-    ,{11}
-    ,{12}
-    ,{13});
-";
-            var sql = string.Format(sqlFormat,
-                data.DocumentId,
-                data.ClientId.InDoubleQuotesOrDefault("NULL"),
-                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.InceptDate.GetValueOrDefault()).InDoubleQuotes(),
-                data.DocumentShortName.InDoubleQuotesOrDefault("NULL"),
-                data.FileName.InDoubleQuotesOrDefault("NULL"),
-                data.IsActive.GetValueOrDefault() ? 1 : 0,
-                data.IsRoot.GetValueOrDefault() ? 1 : 0,
-                data.ModificationDate.HasValue ? ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
-                data.Path.InDoubleQuotesOrDefault("NULL"),
-                ProgramTypeUtility.ParseString(data.SegmentId, "NULL"),
-                ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"),
-                data.Tag.InDoubleQuotesOrDefault("NULL"),
-                ProgramTypeUtility.ParseString(data.TemplateId, "NULL"),
-                data.Title.InDoubleQuotesOrDefault("NULL"));
-
-            return sql;
-        }
-
-        /// <summary>
         /// Returns <see cref="IDocument"/> with default values.
         /// </summary>
         /// <param name="data">The data.</param>

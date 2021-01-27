@@ -101,44 +101,6 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Converts the <see cref="ISegment"/> into a SQLite insert statement.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        public static string ToSQLiteInsertStatement(this ISegment data)
-        {
-            if (data == null) return null;
-
-            var sqlFormat = @"
-INSERT INTO [Segment]
-    ([SegmentId]
-    ,[SegmentName]
-    ,[SortOrdinal]
-    ,[CreateDate]
-    ,[ParentSegmentId]
-    ,[ClientId]
-    ,[IsActive])
-     VALUES
-    ({0}
-    ,""{1}""
-    ,{2}
-    ,""{3}""
-    ,{4}
-    ,""{5}""
-    ,{6});
-";
-            var sql = string.Format(sqlFormat,
-                data.SegmentId,
-                data.SegmentName,
-                ProgramTypeUtility.ParseString(data.SortOrdinal, "NULL"),
-                ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.InceptDate.GetValueOrDefault()),
-                ProgramTypeUtility.ParseString(data.ParentSegmentId, "NULL"),
-                data.ClientId,
-                data.IsActive.GetValueOrDefault() ? 1 : 0);
-
-            return sql;
-        }
-
-        /// <summary>
         /// Returns <see cref="ISegment"/> with default values.
         /// </summary>
         /// <param name="data">The data.</param>

@@ -236,12 +236,6 @@
             <param name="data">The document.</param>
             <param name="group">The group.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.IDocument)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a SQLite insert statement.
-            </summary>
-            <param name="data">The data.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Models.IDocument)">
             <summary>
             Returns <see cref="T:Songhay.Publications.Models.IDocument"/> with default values.
@@ -320,12 +314,6 @@
             <param name="group">The group.</param>
             <param name="copyFragmentContent">if set to <c>true</c> include <see cref="T:Songhay.Publications.Models.IFragment"/> content.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.IFragment)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a SQLite insert statement.
-            </summary>
-            <param name="data">The data.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.WithDefaults(Songhay.Publications.Models.IFragment)">
             <summary>
             Returns <see cref="T:Songhay.Publications.Models.IFragment"/> with default values.
@@ -398,12 +386,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="group">The group.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToSQLiteInsertStatement(Songhay.Publications.Models.ISegment)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a SQLite insert statement.
-            </summary>
-            <param name="data">The data.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.WithDefaults(Songhay.Publications.Models.ISegment)">
             <summary>
