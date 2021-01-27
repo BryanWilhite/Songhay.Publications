@@ -11,17 +11,17 @@
             <seealso cref="T:Songhay.Models.IActivity" />
             <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
         </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.CompressIndex(System.IO.FileInfo)">
+        <member name="M:Songhay.Publications.Activities.IndexActivity.CompressSearchIndex(System.IO.FileInfo)">
             <summary>
-            Compresses the index.
+            Compresses the Publications Search Index.
             </summary>
             <param name="indexInfo">The index information.</param>
             <returns></returns>
             <exception cref="T:System.ArgumentNullException">indexInfo</exception>
         </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
+        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
             <summary>
-            Generates the index from 11ty entries.
+            Generates the Publications Search Index from 11ty entries.
             </summary>
             <param name="entryRootInfo">The entry root information.</param>
             <param name="indexRootInfo">The index root information.</param>
@@ -33,9 +33,9 @@
             or
             indexFileName</exception>
         </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
+        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
             <summary>
-            Generates the index from 11ty entries.
+            Generates the Publications Search Index from 11ty entries.
             </summary>
             <param name="entryRootInfo">The entry root information.</param>
             <param name="indexRootInfo">The index root information.</param>
@@ -1636,12 +1636,27 @@
             The is active.
             </value>
         </member>
+        <member name="T:Songhay.Publications.Models.IIndexEntry">
+            <summary>
+            Defines the Publication Index
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexEntry.Segments">
+            <summary>
+            Child Index Entries
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexEntry.Documents">
+            <summary>
+            Index Child Documents
+            </summary>
+        </member>
         <member name="T:Songhay.Publications.Models.IndexCommands">
             <summary>
             Conventional command names for markdown indices
             </summary>
         </member>
-        <member name="F:Songhay.Publications.Models.IndexCommands.CommandNameGenerateCompressed11tyIndex">
+        <member name="F:Songhay.Publications.Models.IndexCommands.CommandNameGenerateCompressed11tySearchIndex">
             <summary>
             Conventional command name
             </summary>

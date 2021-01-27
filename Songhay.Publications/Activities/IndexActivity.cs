@@ -29,12 +29,12 @@ namespace Songhay.Publications.Activities
         static readonly TraceSource traceSource;
 
         /// <summary>
-        /// Compresses the index.
+        /// Compresses the Publications Search Index.
         /// </summary>
         /// <param name="indexInfo">The index information.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">indexInfo</exception>
-        public static FileInfo CompressIndex(FileInfo indexInfo)
+        public static FileInfo CompressSearchIndex(FileInfo indexInfo)
         {
             if (indexInfo == null) throw new ArgumentNullException(nameof(indexInfo));
 
@@ -55,7 +55,7 @@ namespace Songhay.Publications.Activities
         }
 
         /// <summary>
-        /// Generates the index from 11ty entries.
+        /// Generates the Publications Search Index from 11ty entries.
         /// </summary>
         /// <param name="entryRootInfo">The entry root information.</param>
         /// <param name="indexRootInfo">The index root information.</param>
@@ -66,10 +66,10 @@ namespace Songhay.Publications.Activities
         /// indexRootInfo
         /// or
         /// indexFileName</exception>
-        public static FileInfo[] GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
+        public static FileInfo[] GenerateSearchIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
 
         /// <summary>
-        /// Generates the index from 11ty entries.
+        /// Generates the Publications Search Index from 11ty entries.
         /// </summary>
         /// <param name="entryRootInfo">The entry root information.</param>
         /// <param name="indexRootInfo">The index root information.</param>
@@ -81,7 +81,7 @@ namespace Songhay.Publications.Activities
         /// indexRootInfo
         /// or
         /// indexFileName</exception>
-        public static FileInfo[] GenerateIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
+        public static FileInfo[] GenerateSearchIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
         {
             if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
             if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
@@ -137,19 +137,19 @@ namespace Songhay.Publications.Activities
             var command = this._jSettings.GetPublicationCommand();
             traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
-            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11tyIndex)) GenerateCompressed11tyIndex();
+            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11tySearchIndex)) GenerateCompressed11tySearchIndex();
             else
             {
                 traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
             }
         }
 
-        internal void GenerateCompressed11tyIndex()
+        internal void GenerateCompressed11tySearchIndex()
         {
             var (entryRootInfo, indexRootInfo, indexFileName) =
                 this._jSettings.GetCompressed11tyIndexArgs(this._presentationInfo);
 
-            var indices = GenerateIndexFrom11tyEntries(
+            var indices = GenerateSearchIndexFrom11tyEntries(
                 entryRootInfo,
                 indexRootInfo,
                 indexFileName
@@ -157,7 +157,7 @@ namespace Songhay.Publications.Activities
 
             foreach (var indexInfo in indices)
             {
-                var compressedIndexInfo = CompressIndex(indexInfo);
+                var compressedIndexInfo = CompressSearchIndex(indexInfo);
 
                 traceSource?.WriteLine($"index: {compressedIndexInfo.FullName}");
             }

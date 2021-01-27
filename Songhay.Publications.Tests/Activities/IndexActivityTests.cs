@@ -10,20 +10,20 @@ namespace Songhay.Publications.Tests.Activities
     {
         [DebuggerAttachedTheory]
         [InlineData("../../../markdown/presentation/presentation-index.json")]
-        public void CompressIndex_Test(string indexFile)
+        public void CompressSearchIndex_Test(string indexFile)
         {
             indexFile = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexFile);
 
             var indexFileInfo = new FileInfo(indexFile);
             Assert.True(indexFileInfo.Exists);
 
-            var compressedIndexFileInfo = IndexActivity.CompressIndex(indexFileInfo);
+            var compressedIndexFileInfo = IndexActivity.CompressSearchIndex(indexFileInfo);
             Assert.True(compressedIndexFileInfo?.Exists);
         }
 
         [DebuggerAttachedTheory]
         [InlineData("../../../markdown/presentation/entry", "../../../markdown/presentation", "presentation-index.json")]
-        public void GenerateIndexFrom11tyEntries_Test(string entryRoot, string indexRoot, string indexFileName)
+        public void GenerateSearchIndexFrom11tyEntries_Test(string entryRoot, string indexRoot, string indexFileName)
         {
             entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
             indexRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, indexRoot);
@@ -34,7 +34,7 @@ namespace Songhay.Publications.Tests.Activities
             var indexRootInfo = new DirectoryInfo(indexRoot);
             Assert.True(indexRootInfo.Exists);
 
-            var indices = IndexActivity.GenerateIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
+            var indices = IndexActivity.GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
             Assert.True(indices?.Any());
         }
     }

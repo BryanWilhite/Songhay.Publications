@@ -1,5 +1,5 @@
 {
-  "command": "GenerateCompressed11tyIndex",
+  "command": "GenerateCompressed11tySearchIndex",
   "indexRoot": "presentation",
   "indexFileName": "presentation-index.json"
 }
