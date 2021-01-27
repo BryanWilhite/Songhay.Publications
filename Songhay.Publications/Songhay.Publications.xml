@@ -270,12 +270,6 @@
             <param name="data">The document.</param>
             <returns><see cref="T:Songhay.Publications.Models.Fragment"/></returns>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.GetFragmentContent(Songhay.Publications.Models.IFragment)">
-            <summary>
-            Gets the content of the fragment.
-            </summary>
-            <param name="data">The fragment.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.SetDefaults(Songhay.Publications.Models.IFragment)">
             <summary>
             Sets the defaults.
@@ -1197,12 +1191,12 @@
             The is wrapper.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Fragment.ItemChar">
+        <member name="P:Songhay.Publications.Models.Fragment.Content">
             <summary>
-            Gets or sets the item character.
+            Gets or sets the content.
             </summary>
             <value>
-            The item character.
+            The content.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Fragment.ItemText">
@@ -1388,20 +1382,12 @@
             The is wrapper.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.FragmentMetadata.ItemChar">
+        <member name="P:Songhay.Publications.Models.FragmentMetadata.Content">
             <summary>
-            Gets or sets the item character.
+            Gets or sets the content.
             </summary>
             <value>
-            The item character.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.FragmentMetadata.ItemText">
-            <summary>
-            Gets or sets the item text.
-            </summary>
-            <value>
-            The item text.
+            The content.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.FragmentMetadata.ModificationDate">
@@ -1596,20 +1582,12 @@
             The sort ordinal.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IFragment.ItemChar">
+        <member name="P:Songhay.Publications.Models.IFragment.Content">
             <summary>
-            Gets or sets the item character.
+            Gets or sets the content.
             </summary>
             <value>
-            The item character.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IFragment.ItemText">
-            <summary>
-            Gets or sets the item text.
-            </summary>
-            <value>
-            The item text.
+            The content.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.IFragment.EndDate">

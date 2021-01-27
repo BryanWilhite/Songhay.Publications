@@ -26,16 +26,6 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Gets the content of the fragment.
-        /// </summary>
-        /// <param name="data">The fragment.</param>
-        public static string GetFragmentContent(this IFragment data)
-        {
-            if (data == null) return null;
-            return data.ItemChar ?? data.ItemText;
-        }
-
-        /// <summary>
         /// Sets the defaults.
         /// </summary>
         /// <param name="data">The fragment.</param>
@@ -63,8 +53,7 @@ namespace Songhay.Publications.Extensions
             builder.Append($", {nameof(data.DocumentId)}: {data?.DocumentId}");
 
             if (!string.IsNullOrEmpty(data.FragmentDisplayName)) builder.Append($", {nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
-            if (!string.IsNullOrEmpty(data.ItemChar)) builder.Append($", {nameof(data.ItemChar)}: {data?.ItemChar.Truncate(32)}");
-            if (!string.IsNullOrEmpty(data.ItemText)) builder.Append($", {nameof(data.ItemText)}: {data?.ItemText.Truncate(32)}");
+            if (!string.IsNullOrEmpty(data.Content)) builder.Append($", {nameof(data.Content)}: {data?.Content.Truncate(32)}");
 
             builder.Append($", {nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
             builder.Append($", {nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
@@ -142,7 +131,7 @@ namespace Songhay.Publications.Extensions
                 Id = data.FragmentId,
                 ItemName = data.FragmentName
             };
-            if (copyFragmentContent) dataOut.Description = data.ItemChar;
+            if (copyFragmentContent) dataOut.Description = data.Content;
             return dataOut;
         }
 
@@ -208,8 +197,7 @@ INSERT INTO [Fragment]
                 data.IsNext.GetValueOrDefault() ? 1 : 0,
                 data.IsPrevious.GetValueOrDefault() ? 1 : 0,
                 data.IsWrapper.GetValueOrDefault() ? 1 : 0,
-                data.ItemChar.InDoubleQuotesOrDefault("NULL"),
-                data.ItemText.InDoubleQuotesOrDefault("NULL"),
+                data.Content.InDoubleQuotesOrDefault("NULL"),
                 data.ModificationDate.HasValue ? ProgramTypeUtility.ConvertDateTimeToRfc3339DateTime(data.ModificationDate.GetValueOrDefault()).InDoubleQuotes() : "NULL",
                 ProgramTypeUtility.ParseString(data.NextFragmentId, "NULL"),
                 ProgramTypeUtility.ParseString(data.PrevFragmentId, "NULL"),

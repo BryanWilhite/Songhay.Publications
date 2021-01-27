@@ -113,22 +113,13 @@ namespace Songhay.Publications.Models
         public bool? IsWrapper { get; set; }
 
         /// <summary>
-        /// Gets or sets the item character.
+        /// Gets or sets the content.
         /// </summary>
         /// <value>
-        /// The item character.
+        /// The content.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public string ItemChar { get; set; }
-
-        /// <summary>
-        /// Gets or sets the item text.
-        /// </summary>
-        /// <value>
-        /// The item text.
-        /// </value>
-        [Display(AutoGenerateField = false)]
-        public string ItemText { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
         /// Gets or sets the modification date.

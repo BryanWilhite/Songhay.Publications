@@ -40,20 +40,12 @@ namespace Songhay.Publications.Models
         Nullable<byte> SortOrdinal { get; set; }
 
         /// <summary>
-        /// Gets or sets the item character.
+        /// Gets or sets the content.
         /// </summary>
         /// <value>
-        /// The item character.
+        /// The content.
         /// </value>
-        string ItemChar { get; set; }
-
-        /// <summary>
-        /// Gets or sets the item text.
-        /// </summary>
-        /// <value>
-        /// The item text.
-        /// </value>
-        string ItemText { get; set; }
+        string Content { get; set; }
 
         /// <summary>
         /// Gets or sets the end date.
