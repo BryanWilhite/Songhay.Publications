@@ -15,13 +15,13 @@ using System.Linq;
 namespace Songhay.Publications.Activities
 {
     /// <summary>
-    /// <see cref="IActivity"/> implementation for Publication Indices
+    /// <see cref="IActivity"/> implementation for Publication Search Indices
     /// </summary>
     /// <seealso cref="IActivity" />
     /// <seealso cref="IActivityConfigurationSupport" />
-    public class IndexActivity : IActivity
+    public class SearchIndexActivity : IActivity
     {
-        static IndexActivity() => traceSource = TraceSources
+        static SearchIndexActivity() => traceSource = TraceSources
            .Instance
            .GetTraceSourceFromConfiguredName()
            .WithSourceLevels();
@@ -131,7 +131,7 @@ namespace Songhay.Publications.Activities
         /// <param name="args">The arguments.</param>
         public void Start(ProgramArgs args)
         {
-            traceSource?.WriteLine($"starting {nameof(IndexActivity)} with {nameof(ProgramArgs)}: {args} ");
+            traceSource?.WriteLine($"starting {nameof(SearchIndexActivity)} with {nameof(ProgramArgs)}: {args} ");
             this.SetContext(args);
 
             var command = this._jSettings.GetPublicationCommand();

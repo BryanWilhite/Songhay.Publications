@@ -20,8 +20,8 @@ namespace Songhay.Publications.Activities
             this.LoadActivities(new Dictionary<string, Lazy<IActivity>>
             {
                 {
-                    nameof(Activities.IndexActivity),
-                    new Lazy<IActivity>(() => new Activities.IndexActivity())
+                    nameof(Activities.SearchIndexActivity),
+                    new Lazy<IActivity>(() => new Activities.SearchIndexActivity())
                 },
                 {
                     nameof(Activities.MarkdownEntryActivity),

@@ -4,61 +4,6 @@
         <name>Songhay.Publications</name>
     </assembly>
     <members>
-        <member name="T:Songhay.Publications.Activities.IndexActivity">
-            <summary>
-            <see cref="T:Songhay.Models.IActivity"/> implementation for Publication Indices
-            </summary>
-            <seealso cref="T:Songhay.Models.IActivity" />
-            <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
-        </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.CompressSearchIndex(System.IO.FileInfo)">
-            <summary>
-            Compresses the Publications Search Index.
-            </summary>
-            <param name="indexInfo">The index information.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">indexInfo</exception>
-        </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
-            <summary>
-            Generates the Publications Search Index from 11ty entries.
-            </summary>
-            <param name="entryRootInfo">The entry root information.</param>
-            <param name="indexRootInfo">The index root information.</param>
-            <param name="indexFileName">Name of the index file.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">entryRootInfo
-            or
-            indexRootInfo
-            or
-            indexFileName</exception>
-        </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
-            <summary>
-            Generates the Publications Search Index from 11ty entries.
-            </summary>
-            <param name="entryRootInfo">The entry root information.</param>
-            <param name="indexRootInfo">The index root information.</param>
-            <param name="indexFileName">Name of the index file.</param>
-            <param name="partitionSize">Size of the partition.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">entryRootInfo
-            or
-            indexRootInfo
-            or
-            indexFileName</exception>
-        </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
-            <summary>
-            Displays the help.
-            </summary>
-            <param name="args">The arguments.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Songhay.Publications.Activities.IndexActivity.Start(Songhay.Models.ProgramArgs)">
-            <summary>Starts with the specified arguments.</summary>
-            <param name="args">The arguments.</param>
-        </member>
         <member name="T:Songhay.Publications.Activities.MarkdownEntryActivity">
             <summary>
             <see cref="T:Songhay.Models.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
@@ -138,6 +83,61 @@
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.PublicationsActivitiesGetter"/> class.
             </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:Songhay.Publications.Activities.SearchIndexActivity">
+            <summary>
+            <see cref="T:Songhay.Models.IActivity"/> implementation for Publication Search Indices
+            </summary>
+            <seealso cref="T:Songhay.Models.IActivity" />
+            <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.CompressSearchIndex(System.IO.FileInfo)">
+            <summary>
+            Compresses the Publications Search Index.
+            </summary>
+            <param name="indexInfo">The index information.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">indexInfo</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Generates the Publications Search Index from 11ty entries.
+            </summary>
+            <param name="entryRootInfo">The entry root information.</param>
+            <param name="indexRootInfo">The index root information.</param>
+            <param name="indexFileName">Name of the index file.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">entryRootInfo
+            or
+            indexRootInfo
+            or
+            indexFileName</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11tyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
+            <summary>
+            Generates the Publications Search Index from 11ty entries.
+            </summary>
+            <param name="entryRootInfo">The entry root information.</param>
+            <param name="indexRootInfo">The index root information.</param>
+            <param name="indexFileName">Name of the index file.</param>
+            <param name="partitionSize">Size of the partition.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">entryRootInfo
+            or
+            indexRootInfo
+            or
+            indexFileName</exception>
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
+            <summary>
+            Displays the help.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.Start(Songhay.Models.ProgramArgs)">
+            <summary>Starts with the specified arguments.</summary>
             <param name="args">The arguments.</param>
         </member>
         <member name="T:Songhay.Publications.EpubUtility">

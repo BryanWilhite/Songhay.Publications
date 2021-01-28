@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Songhay.Publications.Tests.Activities
 {
-    public class IndexActivityTests
+    public class SearchIndexActivityTests
     {
         [DebuggerAttachedTheory]
         [InlineData("../../../markdown/presentation/presentation-index.json")]
@@ -17,7 +17,7 @@ namespace Songhay.Publications.Tests.Activities
             var indexFileInfo = new FileInfo(indexFile);
             Assert.True(indexFileInfo.Exists);
 
-            var compressedIndexFileInfo = IndexActivity.CompressSearchIndex(indexFileInfo);
+            var compressedIndexFileInfo = SearchIndexActivity.CompressSearchIndex(indexFileInfo);
             Assert.True(compressedIndexFileInfo?.Exists);
         }
 
@@ -34,7 +34,7 @@ namespace Songhay.Publications.Tests.Activities
             var indexRootInfo = new DirectoryInfo(indexRoot);
             Assert.True(indexRootInfo.Exists);
 
-            var indices = IndexActivity.GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
+            var indices = SearchIndexActivity.GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
             Assert.True(indices?.Any());
         }
     }
