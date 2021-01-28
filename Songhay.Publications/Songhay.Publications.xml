@@ -374,6 +374,15 @@
             <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
             <returns></returns>
         </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />
+            in the shape of a Publications Index.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a menu display item model.
@@ -2202,12 +2211,12 @@
             The documents.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Segment.ChildSegments">
+        <member name="P:Songhay.Publications.Models.Segment.Segments">
             <summary>
-            Gets or sets the segments of parent.
+            Gets or sets child segments.
             </summary>
             <value>
-            The segments of parent.
+            The child segments.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.Segment.ParentSegment">

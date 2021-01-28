@@ -16,7 +16,7 @@ namespace Songhay.Publications.Models
         public Segment()
         {
             this.Documents = new List<Document>();
-            this.ChildSegments = new List<Segment>();
+            this.Segments = new List<Segment>();
         }
 
         /// <summary>
@@ -114,13 +114,13 @@ namespace Songhay.Publications.Models
         public virtual ICollection<Document> Documents { get; set; }
 
         /// <summary>
-        /// Gets or sets the segments of parent.
+        /// Gets or sets child segments.
         /// </summary>
         /// <value>
-        /// The segments of parent.
+        /// The child segments.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Segment> ChildSegments { get; set; }
+        public virtual ICollection<Segment> Segments { get; set; }
 
         /// <summary>
         /// Gets or sets the parent segment.
