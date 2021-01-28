@@ -1644,21 +1644,6 @@
             The is active.
             </value>
         </member>
-        <member name="T:Songhay.Publications.Models.IIndexEntry">
-            <summary>
-            Defines the Publication Index
-            </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.IIndexEntry.Segments">
-            <summary>
-            Child Index Entries
-            </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.IIndexEntry.Documents">
-            <summary>
-            Index Child Documents
-            </summary>
-        </member>
         <member name="T:Songhay.Publications.Models.IndexCommands">
             <summary>
             Conventional command names for markdown indices
