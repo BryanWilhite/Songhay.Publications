@@ -1,12 +1,12 @@
-﻿using CloneExtensions;
+﻿using System;
+using System.Linq;
+using System.Text;
+using CloneExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Songhay.Publications.Models;
 using Songhay.Extensions;
 using Songhay.Models;
-using System;
-using System.Text;
-using System.Linq;
+using Songhay.Publications.Models;
 
 namespace Songhay.Publications.Extensions
 {
@@ -85,13 +85,21 @@ namespace Songhay.Publications.Extensions
             var jSegment = data.ToJObject(useJavaScriptCase);
 
             var segment = data as Segment;
-            if(segment == null) return jSegment;
+            if (segment == null) return jSegment;
 
-            var jSegmentArray = new JArray(segment.Segments?.Select(i => i.ToJObject(useJavaScriptCase)));
-            var jDocumentArray = new JArray(segment.Documents?.Select(i => i.ToJObject(useJavaScriptCase)));
+            if (segment.Segments != null)
+            {
+                var jSegmentArray = new JArray(segment.Segments.Select(i => i.ToPublicationIndexJObject(useJavaScriptCase)));
 
-            jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
-            jSegment[nameof(Segment.Documents).ToLowerInvariant()] = jDocumentArray;
+                jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
+            }
+
+            if (segment.Documents != null)
+            {
+                var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
+
+                jSegment[nameof(Segment.Documents).ToLowerInvariant()] = jDocumentArray;
+            }
 
             return jSegment;
         }
