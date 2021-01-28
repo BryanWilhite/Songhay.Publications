@@ -22,7 +22,7 @@ namespace Songhay.Publications.Extensions
         /// <returns><see cref="Fragment"/></returns>
         public static Fragment Clone(this IFragment data)
         {
-            return data?.GetClone(CloneInitializers.GenericWeb) as Fragment;
+            return data?.GetClone(CloneInitializers.Publications) as Fragment;
         }
 
         /// <summary>

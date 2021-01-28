@@ -750,9 +750,9 @@
             Centralizes initializers for <see cref="N:CloneExtensions"/>
             </summary>
         </member>
-        <member name="P:Songhay.Publications.Models.CloneInitializers.GenericWeb">
+        <member name="P:Songhay.Publications.Models.CloneInitializers.Publications">
             <summary>
-            Gets initializers for GenericWeb initializers
+            Gets initializers for Publications
             </summary>
         </member>
         <member name="T:Songhay.Publications.Models.DaisyConsortiumNcx">

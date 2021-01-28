@@ -22,7 +22,7 @@ namespace Songhay.Publications.Extensions
         /// <returns><see cref="Document"/></returns>
         public static Document Clone(this IDocument data)
         {
-            return data?.GetClone(CloneInitializers.GenericWeb) as Document;
+            return data?.GetClone(CloneInitializers.Publications) as Document;
         }
 
         /// <summary>

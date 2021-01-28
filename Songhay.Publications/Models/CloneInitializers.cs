@@ -10,7 +10,7 @@ namespace Songhay.Publications.Models
     {
         static CloneInitializers()
         {
-            GenericWeb = new Dictionary<Type, Func<object, object>>
+            Publications = new Dictionary<Type, Func<object, object>>
             {
                 { typeof(ISegment), o => new Segment() },
                 { typeof(IDocument), o => new Document() },
@@ -20,8 +20,8 @@ namespace Songhay.Publications.Models
         }
 
         /// <summary>
-        /// Gets initializers for GenericWeb initializers
+        /// Gets initializers for Publications
         /// </summary>
-        public static Dictionary<Type, Func<object, object>> GenericWeb { get; }
+        public static Dictionary<Type, Func<object, object>> Publications { get; }
     }
 }
