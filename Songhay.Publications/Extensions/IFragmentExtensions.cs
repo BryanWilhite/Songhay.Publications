@@ -123,11 +123,13 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) return null;
 
+            var @namespace = typeof(PublicationContext).Namespace;
+
             var dataOut = new MenuDisplayItemModel()
             {
                 DisplayText = data.FragmentDisplayName,
-                GroupDisplayText = (group == null) ? MenuDisplayItemModelGroups.GenericWebDocument : group.GroupDisplayText,
-                GroupId = (group == null) ? MenuDisplayItemModelGroups.GenericWebDocument.ToLowerInvariant() : group.GroupId,
+                GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Fragment)}" : group.GroupDisplayText,
+                GroupId = (group == null) ? $"{@namespace}.{nameof(Fragment)}".ToLowerInvariant() : group.GroupId,
                 Id = data.FragmentId,
                 ItemName = data.FragmentName
             };

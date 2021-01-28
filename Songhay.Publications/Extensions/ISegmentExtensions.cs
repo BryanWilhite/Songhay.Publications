@@ -90,10 +90,12 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) return null;
 
+            var @namespace = typeof(PublicationContext).Namespace;
+
             var dataOut = new MenuDisplayItemModel()
             {
-                GroupDisplayText = (group == null) ? MenuDisplayItemModelGroups.GenericWebDocument : group.GroupDisplayText,
-                GroupId = (group == null) ? MenuDisplayItemModelGroups.GenericWebDocument.ToLowerInvariant() : group.GroupId,
+                GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Segment)}" : group.GroupDisplayText,
+                GroupId = (group == null) ? $"{@namespace}.{nameof(Segment)}".ToLowerInvariant() : group.GroupId,
                 Id = data.SegmentId,
                 ItemName = data.SegmentName
             };
