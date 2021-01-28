@@ -7,7 +7,7 @@ namespace Songhay.Publications.Models
     /// Defines metadata for <see cref="Document"/>
     /// for validation and display.
     /// </summary>
-    /// <seealso cref="Songhay.Publications.Models.IDocument" />
+    /// <seealso cref="IDocument" />
     public class DocumentMetadata : IDocument
     {
         /// <summary>
@@ -84,6 +84,15 @@ namespace Songhay.Publications.Models
         [Display(Name = "Modification Date", Order = 8)]
         [Required]
         public DateTime? ModificationDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the end date.
+        /// </summary>
+        /// <value>
+        /// The end date.
+        /// </value>
+        [Display(Name = "End Date", Order = 9)]
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Gets or sets the path.

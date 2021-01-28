@@ -1,3 +1,4 @@
+using Songhay.Models;
 using System;
 
 namespace Songhay.Publications.Models
@@ -46,14 +47,6 @@ namespace Songhay.Publications.Models
         /// The content.
         /// </value>
         string Content { get; set; }
-
-        /// <summary>
-        /// Gets or sets the end date.
-        /// </summary>
-        /// <value>
-        /// The end date.
-        /// </value>
-        DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Gets or sets the document identifier.

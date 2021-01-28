@@ -849,6 +849,14 @@
             The modification date.
             </value>
         </member>
+        <member name="P:Songhay.Publications.Models.Document.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
         <member name="P:Songhay.Publications.Models.Document.Path">
             <summary>
             Gets or sets the path.
@@ -995,6 +1003,14 @@
             </summary>
             <value>
             The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentMetadata.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.DocumentMetadata.Path">
@@ -1564,14 +1580,6 @@
             The content.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IFragment.EndDate">
-            <summary>
-            Gets or sets the end date.
-            </summary>
-            <value>
-            The end date.
-            </value>
-        </member>
         <member name="P:Songhay.Publications.Models.IFragment.DocumentId">
             <summary>
             Gets or sets the document identifier.
@@ -1712,6 +1720,37 @@
             </summary>
             <value>
             The is active.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.ITemporal">
+            <summary>
+            Centralizes time-based editorial properties
+            for <see cref="T:Songhay.Publications.Models.Segment" />, <see cref="T:Songhay.Publications.Models.Document" />
+            and <see cref="T:Songhay.Publications.Models.Fragment" /> models
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.ITemporal.InceptDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ITemporal.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ITemporal.EndDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
             </value>
         </member>
         <member name="T:Songhay.Publications.Models.IWebKeyword">
@@ -2162,6 +2201,14 @@
             The modification date.
             </value>
         </member>
+        <member name="P:Songhay.Publications.Models.Segment.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
         <member name="P:Songhay.Publications.Models.Segment.Documents">
             <summary>
             Gets or sets the documents.
@@ -2223,6 +2270,14 @@
             </summary>
             <value>
             The modification date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.SegmentMetadata.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
             </value>
         </member>
         <member name="P:Songhay.Publications.Models.SegmentMetadata.IsActive">
@@ -2393,29 +2448,6 @@
             <summary>
             Calls <see cref="M:Songhay.Publications.Models.OebpsTextToc.Write"/>.
             </summary>
-        </member>
-        <member name="T:ITemporal">
-            <summary>
-            Centralizes time-based editorial properties
-            for <see cref="T:Songhay.Publications.Models.Segment" />, <see cref="T:Songhay.Publications.Models.Document" />
-            and <see cref="T:Songhay.Publications.Models.Fragment" /> models
-            </summary>
-        </member>
-        <member name="P:ITemporal.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
-        <member name="P:ITemporal.ModificationDate">
-            <summary>
-            Gets or sets the modification date.
-            </summary>
-            <value>
-            The modification date.
-            </value>
         </member>
     </members>
 </doc>

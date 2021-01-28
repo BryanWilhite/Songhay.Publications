@@ -71,7 +71,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is active.
         /// </value>
-        [Display(Name = "Is Active?", Order = 9)]
+        [Display(Name = "Is Active?", Order = 10)]
         [Required]
         public bool? IsActive { get; set; }
 
@@ -81,7 +81,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The is root.
         /// </value>
-        [Display(Name = "Is Root?", Order = 10)]
+        [Display(Name = "Is Root?", Order = 11)]
         public bool? IsRoot { get; set; }
 
         /// <summary>
@@ -93,6 +93,15 @@ namespace Songhay.Publications.Models
         [Display(Name = "Modification Date", Order = 8)]
         [Required]
         public DateTime? ModificationDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the end date.
+        /// </summary>
+        /// <value>
+        /// The end date.
+        /// </value>
+        [Display(Name = "End Date", Order = 9)]
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Gets or sets the path.
@@ -127,7 +136,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The tag.
         /// </value>
-        [Display(Name = "Document Tag", Order = 11)]
+        [Display(Name = "Document Tag", Order = 12)]
         public string Tag { get; set; }
 
         /// <summary>
@@ -136,7 +145,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The template identifier.
         /// </value>
-        [Display(Name = "XSL Template", Order = 12)]
+        [Display(Name = "XSL Template", Order = 13)]
         public int? TemplateId { get; set; }
 
         /// <summary>

@@ -40,6 +40,15 @@ namespace Songhay.Publications.Models
         public DateTime? ModificationDate { get; set; }
 
         /// <summary>
+        /// Gets or sets the end date.
+        /// </summary>
+        /// <value>
+        /// The end date.
+        /// </value>
+        [Display(Name = "End Date", Order = 9)]
+        public DateTime? EndDate { get; set; }
+
+        /// <summary>
         /// Gets or sets the is active.
         /// </summary>
         /// <value>
