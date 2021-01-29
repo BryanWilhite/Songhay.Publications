@@ -1,11 +1,10 @@
-
 namespace Songhay.Publications.Models
 {
     /// <summary>
     /// GenericWeb keyword
     /// </summary>
-    /// <seealso cref="Songhay.Publications.Models.IWebKeyword" />
-    public partial class WebKeyword : IWebKeyword
+    /// <seealso cref="Songhay.Publications.Models.IIndexKeyword" />
+    public partial class IndexKeyword : IIndexKeyword
     {
         /// <summary>
         /// Gets or sets the document identifier.
@@ -13,7 +12,15 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The document identifier.
         /// </value>
-        public int DocumentId { get; set; }
+        public int? DocumentId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the document identifier.
+        /// </summary>
+        /// <value>
+        /// The document identifier.
+        /// </value>
+        public string DocumentClientId { get; set; }
 
         /// <summary>
         /// Gets or sets the keyword value.

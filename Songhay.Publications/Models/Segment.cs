@@ -15,8 +15,8 @@ namespace Songhay.Publications.Models
         /// </summary>
         public Segment()
         {
-            this.Documents = new List<Document>();
             this.Segments = new List<Segment>();
+            this.Documents = new List<Document>();
         }
 
         /// <summary>

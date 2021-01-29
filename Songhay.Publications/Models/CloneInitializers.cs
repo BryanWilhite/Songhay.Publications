@@ -15,7 +15,7 @@ namespace Songhay.Publications.Models
                 { typeof(ISegment), o => new Segment() },
                 { typeof(IDocument), o => new Document() },
                 { typeof(IFragment), o => new Fragment() },
-                { typeof(IWebKeyword), o => new WebKeyword() },
+                { typeof(IIndexKeyword), o => new IndexKeyword() },
             };
         }
 

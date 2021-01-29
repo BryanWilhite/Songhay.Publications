@@ -930,12 +930,12 @@
             The fragments.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.Document.WebKeywords">
+        <member name="P:Songhay.Publications.Models.Document.IndexKeywords">
             <summary>
-            Gets or sets the web keywords.
+            Gets or sets the collection of <see cref="T:Songhay.Publications.Models.IndexKeyword" />.
             </summary>
             <value>
-            The web keywords.
+            The collection of <see cref="T:Songhay.Publications.Models.IndexKeyword" />.
             </value>
         </member>
         <member name="M:Songhay.Publications.Models.Document.ToString">
@@ -1653,6 +1653,35 @@
             The is active.
             </value>
         </member>
+        <member name="T:Songhay.Publications.Models.IIndexKeyword">
+            <summary>
+            Generic Web Index Keyword interface
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeyword.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeyword.DocumentClientId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeyword.KeywordValue">
+            <summary>
+            Gets or sets the keyword value.
+            </summary>
+            <value>
+            The keyword value.
+            </value>
+        </member>
         <member name="T:Songhay.Publications.Models.IndexCommands">
             <summary>
             Conventional command names for markdown indices
@@ -1662,6 +1691,44 @@
             <summary>
             Conventional command name
             </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.IndexKeyword">
+            <summary>
+            GenericWeb keyword
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.IIndexKeyword" />
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.DocumentId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.DocumentClientId">
+            <summary>
+            Gets or sets the document identifier.
+            </summary>
+            <value>
+            The document identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.KeywordValue">
+            <summary>
+            Gets or sets the keyword value.
+            </summary>
+            <value>
+            The keyword value.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
         </member>
         <member name="T:Songhay.Publications.Models.ISegment">
             <summary>
@@ -1745,27 +1812,6 @@
             </summary>
             <value>
             The incept date.
-            </value>
-        </member>
-        <member name="T:Songhay.Publications.Models.IWebKeyword">
-            <summary>
-            Generic Web Web Keyword interface
-            </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.IWebKeyword.DocumentId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IWebKeyword.KeywordValue">
-            <summary>
-            Gets or sets the keyword value.
-            </summary>
-            <value>
-            The keyword value.
             </value>
         </member>
         <member name="T:Songhay.Publications.Models.MarkdownEntry">
@@ -2312,36 +2358,6 @@
             </summary>
             <value>
             The sort ordinal.
-            </value>
-        </member>
-        <member name="T:Songhay.Publications.Models.WebKeyword">
-            <summary>
-            GenericWeb keyword
-            </summary>
-            <seealso cref="T:Songhay.Publications.Models.IWebKeyword" />
-        </member>
-        <member name="P:Songhay.Publications.Models.WebKeyword.DocumentId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.WebKeyword.KeywordValue">
-            <summary>
-            Gets or sets the keyword value.
-            </summary>
-            <value>
-            The keyword value.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.WebKeyword.Document">
-            <summary>
-            Gets or sets the document.
-            </summary>
-            <value>
-            The document.
             </value>
         </member>
         <member name="T:Songhay.Publications.PublicationContext">

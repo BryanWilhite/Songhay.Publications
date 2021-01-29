@@ -16,7 +16,7 @@ namespace Songhay.Publications.Models
         public Document()
         {
             this.Fragments = new List<Fragment>();
-            this.WebKeywords = new List<WebKeyword>();
+            this.IndexKeywords = new List<IndexKeyword>();
         }
 
         /// <summary>
@@ -177,13 +177,13 @@ namespace Songhay.Publications.Models
         public virtual ICollection<Fragment> Fragments { get; set; }
 
         /// <summary>
-        /// Gets or sets the web keywords.
+        /// Gets or sets the collection of <see cref="IndexKeyword" />.
         /// </summary>
         /// <value>
-        /// The web keywords.
+        /// The collection of <see cref="IndexKeyword" />.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<WebKeyword> WebKeywords { get; set; }
+        public virtual ICollection<IndexKeyword> IndexKeywords { get; set; }
 
         /// <summary>
         /// Converts the <see cref="Document"/> into a string.

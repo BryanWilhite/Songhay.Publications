@@ -1,11 +1,9 @@
-using System;
-
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// Generic Web Web Keyword interface
+    /// Generic Web Index Keyword interface
     /// </summary>
-    public interface IWebKeyword
+    public interface IIndexKeyword
     {
         /// <summary>
         /// Gets or sets the document identifier.
@@ -13,7 +11,15 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The document identifier.
         /// </value>
-        int DocumentId { get; set; }
+        int? DocumentId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the document identifier.
+        /// </summary>
+        /// <value>
+        /// The document identifier.
+        /// </value>
+        string DocumentClientId { get; set; }
 
         /// <summary>
         /// Gets or sets the keyword value.
