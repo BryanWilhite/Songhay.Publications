@@ -2314,53 +2314,6 @@
             The sort ordinal.
             </value>
         </member>
-        <member name="T:Songhay.Publications.Models.SummaryDisplayKeys">
-            <summary>
-            Centralizes dictionary keys
-            for the display of GenericWeb
-            Summary data.
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.AssociationItems">
-            <summary>
-            Top segments
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.ClientMetadata">
-            <summary>
-            GenericWeb metadata
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.DocumentTemplates">
-            <summary>
-            The document templates (XSLT)
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.FragmentsForAssociations">
-            <summary>
-            The fragments for associations (Previous/Next/Wrapper)
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.FrequentlyUsedAssociationItems">
-            <summary>
-            The frequently used association items
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedDocuments">
-            <summary>
-            The recently used documents
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedFragments">
-            <summary>
-            The recently used fragments
-            </summary>
-        </member>
-        <member name="F:Songhay.Publications.Models.SummaryDisplayKeys.RecentlyUsedSegments">
-            <summary>
-            The recently used segments
-            </summary>
-        </member>
         <member name="T:Songhay.Publications.Models.WebKeyword">
             <summary>
             GenericWeb keyword
