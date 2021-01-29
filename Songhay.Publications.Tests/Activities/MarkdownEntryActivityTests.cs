@@ -10,9 +10,6 @@ namespace Songhay.Publications.Tests.Activities
         [InlineData("one, three, four", @"\w+", "_", true, "_, _, _")]
         [InlineData(@"one
 three
-four", @"\r\n", ", ", true, "one, three, four")]
-        [InlineData(@"one
-three
 four", @"^three", null, true, @"one
 
 four")]
