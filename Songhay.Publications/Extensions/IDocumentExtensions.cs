@@ -102,6 +102,10 @@ namespace Songhay.Publications.Extensions
                 .GetConventionalResolver<IDocument>(useJavaScriptCase)
                 .ToJsonSerializerSettings();
 
+            //TODO: consider making these optional:
+            settings.MissingMemberHandling = MissingMemberHandling.Ignore;
+            settings.NullValueHandling = NullValueHandling.Ignore;
+
             var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
             return jO;
         }

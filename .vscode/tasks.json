@@ -95,6 +95,20 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "dotnet test [Songhay.Publications.Tests, filtered by selected text]",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "test",
+                "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
+                "--filter:${selectedText}",
+                "--logger:trx",
+                "--results-directory:${workspaceFolder}/TestResults",
+                "--verbosity:normal"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "dotnet watch [Songhay.Publications.Tests]",
             "command": "dotnet",
             "type": "shell",
@@ -122,6 +136,29 @@
                 "cwd": "${workspaceRoot}/Songhay.Publications"
             },
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Solution [clean test output folder]",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/TestResults"
+            },
+            "linux": {
+                "command": "rm",
+                "args": [
+                    "--verbose",
+                    "*.trx"
+                ]
+            },
+            "windows": {
+                "command": "Remove-Item",
+                "args": [
+                    "-Path",
+                    "*.trx",
+                    "-Verbose"
+                ]
+            },
+            "problemMatcher": []
         },
         {
             "command": "wyam",

@@ -374,15 +374,6 @@
             <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
             <returns></returns>
         </member>
-        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />
-            in the shape of a Publications Index.
-            </summary>
-            <param name="data">The data.</param>
-            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-            <returns></returns>
-        </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a menu display item model.
@@ -395,6 +386,15 @@
             </summary>
             <param name="data">The data.</param>
             <param name="group">The group.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexEntryJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />
+            in the shape of a Publications Index Entry.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.WithDefaults(Songhay.Publications.Models.ISegment)">
             <summary>

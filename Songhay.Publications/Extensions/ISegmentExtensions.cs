@@ -69,39 +69,12 @@ namespace Songhay.Publications.Extensions
                 .GetConventionalResolver<ISegment>(useJavaScriptCase)
                 .ToJsonSerializerSettings();
 
+            //TODO: consider making these optional:
+            settings.MissingMemberHandling = MissingMemberHandling.Ignore;
+            settings.NullValueHandling = NullValueHandling.Ignore;
+
             var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
             return jO;
-        }
-
-        /// <summary>
-        /// Converts the <see cref="ISegment" /> to <see cref="JObject" />
-        /// in the shape of a Publications Index.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-        /// <returns></returns>
-        public static JObject ToPublicationIndexJObject(this ISegment data, bool useJavaScriptCase)
-        {
-            var jSegment = data.ToJObject(useJavaScriptCase);
-
-            var segment = data as Segment;
-            if (segment == null) return jSegment;
-
-            if (segment.Segments != null)
-            {
-                var jSegmentArray = new JArray(segment.Segments.Select(i => i.ToPublicationIndexJObject(useJavaScriptCase)));
-
-                jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
-            }
-
-            if (segment.Documents != null)
-            {
-                var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
-
-                jSegment[nameof(Segment.Documents).ToLowerInvariant()] = jDocumentArray;
-            }
-
-            return jSegment;
         }
 
         /// <summary>
@@ -132,6 +105,37 @@ namespace Songhay.Publications.Extensions
                 ItemName = data.SegmentName
             };
             return dataOut;
+        }
+
+        /// <summary>
+        /// Converts the <see cref="ISegment" /> to <see cref="JObject" />
+        /// in the shape of a Publications Index Entry.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
+        /// <returns></returns>
+        public static JObject ToPublicationIndexEntryJObject(this ISegment data, bool useJavaScriptCase)
+        {
+            var jSegment = data.ToJObject(useJavaScriptCase);
+
+            var segment = data as Segment;
+            if (segment == null) return jSegment;
+
+            if (segment.Segments != null)
+            {
+                var jSegmentArray = new JArray(segment.Segments.Select(i => i.ToPublicationIndexEntryJObject(useJavaScriptCase)));
+
+                jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
+            }
+
+            if (segment.Documents != null)
+            {
+                var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
+
+                jSegment[nameof(Segment.Documents).ToLowerInvariant()] = jDocumentArray;
+            }
+
+            return jSegment;
         }
 
         /// <summary>
