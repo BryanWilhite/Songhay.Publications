@@ -32,6 +32,9 @@ namespace Songhay.Publications.Tests.Extensions
         [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
             new object[] { 255 },
             "../../../markdown/presentation-drafts/to-extract-test.md")]
+        [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
+            new object[] { 255 },
+            "../../../markdown/presentation-drafts/to-extract-test2.md")]
         public void ToExtract_Test(int expectedLength, FileInfo entryInfo)
         {
             var entry = entryInfo.ToMarkdownEntry();
@@ -136,6 +139,27 @@ namespace Songhay.Publications.Tests.Extensions
                 Assert.True(string.IsNullOrWhiteSpace(extract));
             else
                 Assert.False(string.IsNullOrWhiteSpace(extract));
+        }
+
+        [Theory]
+        [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
+            new object[] { 255 },
+            "../../../markdown/presentation-drafts/to-extract-test.md")]
+        [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
+            new object[] { 255 },
+            "../../../markdown/presentation-drafts/to-extract-test2.md")]
+        public void With11tyExtract_FromFile_Test(int expectedLength, FileInfo entryInfo)
+        {
+            var entry = entryInfo.ToMarkdownEntry()
+                .With11tyExtract(expectedLength);
+
+            var jO = JObject.Parse(entry.FrontMatter.GetValue<string>("tag"));
+            Assert.NotNull(jO);
+
+            var extract = jO.GetValue<string>("extract");
+
+            Assert.False(string.IsNullOrWhiteSpace(extract));
+            Assert.Equal(expectedLength + 1, extract.Length);
         }
 
         [Fact]
