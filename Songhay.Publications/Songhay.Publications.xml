@@ -1398,6 +1398,67 @@
             The keyword value.
             </value>
         </member>
+        <member name="T:Songhay.Publications.Models.ImageCandidate">
+            <summary>
+            Defines a responsive-image candidate.
+            </summary>
+            <remarks>
+            “`srcset` is a string which identifies one
+            or more image candidate strings, separated using commas (,)
+            each specifying image resources to use under given circumstances.”
+            MDN [ 📖 https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset ]
+            </remarks>
+        </member>
+        <member name="P:Songhay.Publications.Models.ImageCandidate.ImageUri">
+            <summary>
+            Gets or sets the image URI.
+            </summary>
+            <value>
+            The image URI.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ImageCandidate.PixelDensity">
+            <summary>
+            Gets or sets the pixel density.
+            </summary>
+            <value>
+            The pixel density.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ImageCandidate.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>
+            The width.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.ImageSize">
+            <summary>
+            Defines responsive-image sizes.
+            </summary>
+            <remarks>
+            “`sizes` allows you to specify the layout width
+            of the image for each of a list of media conditions.”
+            MDN [ 📖 https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes ]
+            </remarks>
+        </member>
+        <member name="P:Songhay.Publications.Models.ImageSize.MediaCondition">
+            <summary>
+            Gets or sets the media condition.
+            </summary>
+            <value>
+            The media condition.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ImageSize.LayoutWidth">
+            <summary>
+            Gets or sets the width of the layout.
+            </summary>
+            <value>
+            The width of the layout.
+            </value>
+        </member>
         <member name="T:Songhay.Publications.Models.IndexCommands">
             <summary>
             Conventional command names for markdown indices
@@ -1882,6 +1943,51 @@
             <summary>
             Conventional namespace for EPUB
             </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.ResponsiveImage">
+            <summary>
+            Defines a responsive image
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.ResponsiveImage.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ResponsiveImage.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>
+            The key.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ResponsiveImage.Source">
+            <summary>
+            Gets or sets the source.
+            </summary>
+            <value>
+            The source.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ResponsiveImage.Candidates">
+            <summary>
+            Gets or sets the candidates.
+            </summary>
+            <value>
+            The candidates.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.ResponsiveImage.Sizes">
+            <summary>
+            Gets or sets the sizes.
+            </summary>
+            <value>
+            The sizes.
+            </value>
         </member>
         <member name="T:Songhay.Publications.Models.Segment">
             <summary>
