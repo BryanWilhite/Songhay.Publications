@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Songhay.Publications.Models
 {
@@ -8,6 +9,15 @@ namespace Songhay.Publications.Models
     /// </summary>
     public class ResponsiveImage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponsiveImage"/> class.
+        /// </summary>
+        public ResponsiveImage()
+        {
+            this.Candidates = Enumerable.Empty<ImageCandidate>().ToList();
+            this.Sizes = Enumerable.Empty<ImageSize>().ToList();
+        }
+
         /// <summary>
         /// Gets or sets the description.
         /// </summary>

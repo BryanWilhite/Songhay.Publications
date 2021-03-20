@@ -1,0 +1,33 @@
+{
+    "Description": "this is an example based on MDN",
+    "Key": "mdn-sizes",
+    "Source": "/files/16870/new-york-skyline-wide.jpg",
+    "Candidates": [
+        {
+            "ImageUri": "/files/16870/new-york-skyline-wide.jpg",
+            "Width": "3724w"
+        },
+        {
+            "ImageUri": "/files/16869/new-york-skyline-4by3.jpg",
+            "Width": "1961w"
+        },
+        {
+            "ImageUri": "/files/16871/new-york-skyline-tall.jpg",
+            "Width": "1060w"
+        }
+    ],
+    "Sizes": [
+        {
+            "MediaCondition": "(min-width: 50em) and (max-width: 60em)",
+            "LayoutWidth": "50em"
+        },
+        {
+            "MediaCondition": "(min-width: 30em) and (max-width: 50em)",
+            "LayoutWidth": "30em"
+        },
+        {
+            "MediaCondition": "max-width: 30em",
+            "LayoutWidth": "20em"
+        }
+    ]
+}

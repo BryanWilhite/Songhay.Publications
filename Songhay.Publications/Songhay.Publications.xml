@@ -640,6 +640,32 @@
             </summary>
             <param name="context"></param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.ResponsiveImageExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.ResponsiveImage" />
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)">
+            <summary>
+            Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
+            </summary>
+            <param name="responsiveImage"><see cref="T:Songhay.Publications.Models.ResponsiveImage" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)">
+            <summary>
+            Reduces <see cref="P:Songhay.Publications.Models.ResponsiveImage.Sizes" /> to the <c>sizes</c> attribute.
+            </summary>
+            <param name="responsiveImage"><see cref="T:Songhay.Publications.Models.ResponsiveImage" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)">
+            <summary>
+            Reduces <see cref="P:Songhay.Publications.Models.ResponsiveImage.Candidates" /> to the <c>srcset</c> attribute.
+            </summary>
+            <param name="responsiveImage"><see cref="T:Songhay.Publications.Models.ResponsiveImage" /></param>
+            <returns></returns>
+        </member>
         <member name="T:Songhay.Publications.MarkdownEntryUtility">
             <summary>
             Shares routines for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
@@ -1947,6 +1973,11 @@
         <member name="T:Songhay.Publications.Models.ResponsiveImage">
             <summary>
             Defines a responsive image
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Models.ResponsiveImage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.ResponsiveImage"/> class.
             </summary>
         </member>
         <member name="P:Songhay.Publications.Models.ResponsiveImage.Description">

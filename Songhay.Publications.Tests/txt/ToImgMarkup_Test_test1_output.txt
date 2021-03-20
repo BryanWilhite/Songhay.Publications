@@ -1,0 +1,10 @@
+
+<img
+    alt="this is an example based on MDN"
+    src="/files/16870/new-york-skyline-wide.jpg"
+    srcset="/files/16870/new-york-skyline-wide.jpg 3724w,
+    /files/16869/new-york-skyline-4by3.jpg 1961w,
+    /files/16871/new-york-skyline-tall.jpg 1060w"
+    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
+    ((min-width: 30em) and (max-width: 50em)) 30em,
+    (max-width: 30em) 20em">
