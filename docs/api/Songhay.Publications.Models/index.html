@@ -195,30 +195,9 @@
     </td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/DocumentMetadata">DocumentMetadata</a></td>
-									<td>
-    Defines metadata for <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Document">Document</a></code>
-    for validation and display.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/DocumentWithContent">DocumentWithContent</a></td>
-									<td>
-    Associates <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></code> metadata
-    with <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code> content.
-    </td>
-							</tr>
-							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></td>
 									<td>
     GenericWeb Fragment
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/FragmentMetadata">FragmentMetadata</a></td>
-									<td>
-    Defines metadata of <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></code>
-    for validation and display.
     </td>
 							</tr>
 							<tr>
@@ -227,6 +206,30 @@
     Defines the content to write the
     International Digital Publishing Forum
     <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationFiles/39025770">IdpfcOpfManifest</a></code> file.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageCandidate">ImageCandidate</a></td>
+									<td>
+    Defines a responsive-image candidate.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></td>
+									<td>
+    Defines responsive-image sizes.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></td>
+									<td>
+    Conventional command names for markdown indices
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></td>
+									<td>
+    GenericWeb keyword
     </td>
 							</tr>
 							<tr>
@@ -277,6 +280,12 @@
      </td>
 							</tr>
 							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationAppScalars">Publication<wbr>App<wbr>Scalars</a></td>
+									<td>
+    centralizes magic strings
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationChapter">PublicationChapter</a></td>
 									<td>
     Defines content for the chapter
@@ -297,38 +306,15 @@
     </td>
 							</tr>
 							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ResponsiveImage">ResponsiveImage</a></td>
+									<td>
+    Defines a responsive image
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/Segment">Segment</a></td>
 									<td>
     GenericWeb Segment
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/SegmentDocument">SegmentDocument</a></td>
-									<td>
-    Defines many-to-many lookup
-    between <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/SegmentDocument/2FAA4410">Document</a></code>
-    and <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></code>.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/SegmentMetadata">SegmentMetadata</a></td>
-									<td>
-    Defines <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Segment">Segment</a></code>
-    attributes for validation and display.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/SummaryDisplayKeys">SummaryDisplayKeys</a></td>
-									<td>
-    Centralizes dictionary keys
-    for the display of GenericWeb
-    Summary data.
-    </td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/WebKeyword">WebKeyword</a></td>
-									<td>
-    GenericWeb keyword
     </td>
 							</tr>
 					</tbody></table>
@@ -359,15 +345,23 @@
     </td>
 							</tr>
 							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></td>
+									<td>
+    Generic Web Index Keyword interface
+    </td>
+							</tr>
+							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></td>
 									<td>
     GenericWeb Segment interface
     </td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IWebKeyword">IWebKeyword</a></td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></td>
 									<td>
-    Generic Web Web Keyword interface
+    Centralizes time-based editorial properties
+    for <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Segment">Segment</a></code>, <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Document">Document</a></code>
+    and <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></code> models
     </td>
 							</tr>
 					</tbody></table>

@@ -139,11 +139,12 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/CloneInitializers">CloneInitializers</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/DaisyConsortiumNcx">DaisyConsortiumNcx</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/Document">Document</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/DocumentMetadata">DocumentMetadata</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/DocumentWithContent">DocumentWithContent</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/FragmentMetadata">FragmentMetadata</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IdpfPackage">IdpfPackage</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageCandidate">ImageCandidate</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry">MarkdownEntry</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands">Markdown<wbr>Presentation<wbr>Commands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories">Markdown<wbr>Presentation<wbr>Directories</a></li>
@@ -151,19 +152,18 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextCopyright">OebpsTextCopyright</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextDedication">OebpsTextDedication</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextToc">OebpsTextToc</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationAppScalars">Publication<wbr>App<wbr>Scalars</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationChapter">PublicationChapter</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationFiles">PublicationFiles</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/PublicationNamespaces">Publication<wbr>Namespaces</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ResponsiveImage">ResponsiveImage</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/Segment">Segment</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/SegmentDocument">SegmentDocument</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/SegmentMetadata">SegmentMetadata</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/SummaryDisplayKeys">SummaryDisplayKeys</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/WebKeyword">WebKeyword</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></li>
 				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IWebKeyword">IWebKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>
 
 
                     </ul>
@@ -197,13 +197,18 @@
 								<dt>Namespace</dt>
 								<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>								
+									</ul>
+								</dd>
 							
 							
 							
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/FragmentMetadata">FragmentMetadata</a></li>								
 											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment">Fragment</a></li>								
 									</ul>
 								</dd>				
@@ -212,12 +217,12 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
+	Type-.-&gt;Interface0["ITemporal"]
+	click Interface0 "/Songhay.Publications/api/Songhay.Publications.Models/ITemporal"
 	Type["IFragment"]
 class Type type-node
-	Implementing0["FragmentMetadata"]-.-&gt;Type
-	click Implementing0 "/Songhay.Publications/api/Songhay.Publications.Models/FragmentMetadata"
-	Implementing1["Fragment"]-.-&gt;Type
-	click Implementing1 "/Songhay.Publications/api/Songhay.Publications.Models/Fragment"
+	Implementing0["Fragment"]-.-&gt;Type
+	click Implementing0 "/Songhay.Publications/api/Songhay.Publications.Models/Fragment"
 
 						</div>
 					</div>
@@ -226,7 +231,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public interface IFragment</code></pre>
+	<pre><code>public interface IFragment : ITemporal</code></pre>
 
 
 
@@ -258,11 +263,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/627FB3A4">CreateDate</a></td>
-								<td>DateTime?</td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/1C9CA03F">Content</a></td>
+								<td>string</td>
 								<td>
 									<div>
-    Gets or sets the create date.
+    Gets or sets the content.
     </div>
 								</td>
 							</tr>
@@ -272,15 +277,6 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets the document identifier.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/76E823F0">EndDate</a></td>
-								<td>DateTime?</td>
-								<td>
-									<div>
-    Gets or sets the end date.
     </div>
 								</td>
 							</tr>
@@ -348,33 +344,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/C6B8783D">ItemChar</a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets or sets the item character.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/9E480D8A">ItemText</a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets or sets the item text.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/55E57875">ModificationDate</a></td>
-								<td>DateTime?</td>
-								<td>
-									<div>
-    Gets or sets the modification date.
-    </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment/66675073">NextFragmentId</a></td>
 								<td>int?</td>
 								<td>
@@ -425,16 +394,6 @@ class Type type-node
 								<td>
 									<div>
     Clones the instance of <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code>.
-    </div>
-										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/59C4B044">GetFragmentContent<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Gets the content of the fragment.
     </div>
 										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
 								</td>
@@ -505,16 +464,6 @@ class Type type-node
 								<td>
 									<div>
     Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code> into a menu display item model.
-    </div>
-										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/1F0E4555">To<wbr>S<wbr>Q<wbr>Lite<wbr>Insert<wbr>Statement<wbr>()<wbr></a></td>
-								<td>string</td>
-								<td>
-									<div>
-    Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code> into a SQLite insert statement.
     </div>
 										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
 								</td>
