@@ -10,6 +10,39 @@ namespace Songhay.Publications.Extensions
     public static class ResponsiveImageExtensions
     {
         /// <summary>
+        /// Returns CSS <c>@media</c> At-rule blocks.
+        /// </summary>
+        /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>
+        /// <returns></returns>
+        public static string ToCssMediaAtRules(this ResponsiveImage responsiveImage)
+        {
+            responsiveImage.EnsureResponsiveImage();
+
+            var candidatesCollection = responsiveImage
+                .Candidates
+                .Select(i => $"background-image: url({i.ImageUri?.OriginalString});");
+
+            if (!candidatesCollection.Any()) return string.Empty;
+
+            var sizesCollection = responsiveImage
+                .Sizes
+                .Select(i => $"@media only screen and {i.MediaCondition}");
+
+            if (!sizesCollection.Any()) return string.Empty;
+
+            var stringCollection = sizesCollection
+                .Zip(candidatesCollection, (media, background) => $@"
+{media} {{{
+    spacer}{background}
+}}");
+            return string.Join(string.Empty,
+                new[] {
+                    $"/* {responsiveImage.Description ?? string.Empty} */"
+                }.Concat(stringCollection)
+            );
+        }
+
+        /// <summary>
         /// Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
         /// </summary>
         /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>

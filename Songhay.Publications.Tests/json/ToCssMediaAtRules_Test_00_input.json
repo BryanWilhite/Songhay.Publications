@@ -1,0 +1,31 @@
+{
+    "Description": "responsive background images for CSS",
+    "Candidates": [
+        {
+            "ImageUri": "https://songhaystorage.blob.core.windows.net/songhay-player/stills/responsive-test-index/index-720x1280.png"
+        },
+        {
+            "ImageUri": "https://songhaystorage.blob.core.windows.net/songhay-player/stills/responsive-test-index/index-1080x1920.png"
+        },
+        {
+            "ImageUri": "https://songhaystorage.blob.core.windows.net/songhay-player/stills/responsive-test-index/index-720p.png"
+        },
+        {
+            "ImageUri": "https://songhaystorage.blob.core.windows.net/songhay-player/stills/responsive-test-index/index-1080p.png"
+        }
+    ],
+    "Sizes": [
+        {
+            "MediaCondition": "(orientation: portrait)"
+        },
+        {
+            "MediaCondition": "(min-width: $width-720x1280) and (orientation: portrait)"
+        },
+        {
+            "MediaCondition": "(orientation: landscape)"
+        },
+        {
+            "MediaCondition": "(min-width: $width-720p) and (orientation: landscape)"
+        }
+    ]
+}

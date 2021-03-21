@@ -645,6 +645,13 @@
             Extensions of <see cref="T:Songhay.Publications.Models.ResponsiveImage" />
             </summary>
         </member>
+        <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)">
+            <summary>
+            Returns CSS <c>@media</c> At-rule blocks.
+            </summary>
+            <param name="responsiveImage"><see cref="T:Songhay.Publications.Models.ResponsiveImage" /></param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)">
             <summary>
             Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
