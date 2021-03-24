@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// GenericWeb Segment
+    /// Publications Segment
     /// </summary>
     public partial class Segment : ISegment
     {

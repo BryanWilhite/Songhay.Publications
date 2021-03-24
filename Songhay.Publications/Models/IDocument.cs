@@ -3,7 +3,7 @@ using Songhay.Models;
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// GenericWeb Document interface
+    /// Publications Document interface
     /// </summary>
     public interface IDocument: ITemporal
     {

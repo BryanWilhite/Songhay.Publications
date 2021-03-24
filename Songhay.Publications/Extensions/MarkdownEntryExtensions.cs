@@ -91,7 +91,7 @@ namespace Songhay.Publications.Extensions
             content = Markdown.ToPlainText(content);
 
             return (content.Length > length) ?
-                string.Concat(content.Substring(0, length), "…") :
+                string.Concat(content.Substring(0, length), "ï¿½") :
                 content;
         }
 
@@ -342,7 +342,7 @@ namespace Songhay.Publications.Extensions
         /// <param name="documentId">the DBMS ID of the entry</param>
         /// <param name="fileName">the file name (with extension) of the entry</param>
         /// <param name="path">the path to the entry</param>
-        /// <param name="segmentId">the DBMS ID of the GenericWeb Segment</param>
+        /// <param name="segmentId">the DBMS ID of the Publications Segment</param>
         /// <param name="tag">the tag of the entry</param>
         /// <returns></returns>
         public static MarkdownEntry WithNewFrontMatter(this MarkdownEntry entry, string title, DateTime inceptDate, int documentId, string fileName, string path, int segmentId, string tag)

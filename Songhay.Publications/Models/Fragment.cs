@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// GenericWeb Fragment
+    /// Publications Fragment
     /// </summary>
     public partial class Fragment : IFragment
     {

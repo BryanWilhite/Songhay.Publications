@@ -3,7 +3,7 @@ using Songhay.Models;
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// GenericWeb Segment interface
+    /// Publications Segment interface
     /// </summary>
     public interface ISegment: ITemporal
     {

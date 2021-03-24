@@ -4,7 +4,7 @@ using System;
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// GenericWeb Fragment interface
+    /// Publications Fragment interface
     /// </summary>
     public interface IFragment : ITemporal
     {

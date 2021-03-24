@@ -1,26 +1,10 @@
 namespace Songhay.Publications.Models
 {
     /// <summary>
-    /// Generic Web Index Keyword interface
+    /// Publication Index Keyword
     /// </summary>
-    public interface IIndexKeyword
+    public interface IIndexKeyword : ITemporal
     {
-        /// <summary>
-        /// Gets or sets the document identifier.
-        /// </summary>
-        /// <value>
-        /// The document identifier.
-        /// </value>
-        int? DocumentId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the document identifier.
-        /// </summary>
-        /// <value>
-        /// The document identifier.
-        /// </value>
-        string DocumentClientId { get; set; }
-
         /// <summary>
         /// Gets or sets the keyword value.
         /// </summary>
