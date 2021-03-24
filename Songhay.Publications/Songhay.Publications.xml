@@ -612,7 +612,7 @@
             <param name="documentId">the DBMS ID of the entry</param>
             <param name="fileName">the file name (with extension) of the entry</param>
             <param name="path">the path to the entry</param>
-            <param name="segmentId">the DBMS ID of the GenericWeb Segment</param>
+            <param name="segmentId">the DBMS ID of the Publications Segment</param>
             <param name="tag">the tag of the entry</param>
             <returns></returns>
         </member>
@@ -819,7 +819,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.Document">
             <summary>
-            GenericWeb Document
+            Publications Document
             </summary>
         </member>
         <member name="M:Songhay.Publications.Models.Document.#ctor">
@@ -978,7 +978,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.Fragment">
             <summary>
-            GenericWeb Fragment
+            Publications Fragment
             </summary>
         </member>
         <member name="M:Songhay.Publications.Models.Fragment.#ctor">
@@ -1172,7 +1172,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.IDocument">
             <summary>
-            GenericWeb Document interface
+            Publications Document interface
             </summary>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.DocumentId">
@@ -1295,7 +1295,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.IFragment">
             <summary>
-            GenericWeb Fragment interface
+            Publications Fragment interface
             </summary>
         </member>
         <member name="P:Songhay.Publications.Models.IFragment.FragmentId">
@@ -1404,24 +1404,8 @@
         </member>
         <member name="T:Songhay.Publications.Models.IIndexKeyword">
             <summary>
-            Generic Web Index Keyword interface
+            Publication Index Keyword
             </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.IIndexKeyword.DocumentId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IIndexKeyword.DocumentClientId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IIndexKeyword.KeywordValue">
             <summary>
@@ -1430,6 +1414,29 @@
             <value>
             The keyword value.
             </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IIndexKeywordGroup">
+            <summary>
+            Publication Index Keyword Group
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeywordGroup.Id">
+            <summary>
+            Index Keyword Group ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeywordGroup.ClientId">
+            <summary>
+            Index Keyword Group Client ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeywordGroup.Name">
+            <summary>
+            Index Keyword Group Name
+            </summary>
+            <value></value>
         </member>
         <member name="T:Songhay.Publications.Models.ImageCandidate">
             <summary>
@@ -1504,25 +1511,14 @@
         </member>
         <member name="T:Songhay.Publications.Models.IndexKeyword">
             <summary>
-            GenericWeb keyword
+            Publications keyword
             </summary>
             <seealso cref="T:Songhay.Publications.Models.IIndexKeyword" />
         </member>
-        <member name="P:Songhay.Publications.Models.IndexKeyword.DocumentId">
+        <member name="M:Songhay.Publications.Models.IndexKeyword.#ctor">
             <summary>
-            Gets or sets the document identifier.
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Models.IndexKeyword"/> class.
             </summary>
-            <value>
-            The document identifier.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.IndexKeyword.DocumentClientId">
-            <summary>
-            Gets or sets the document identifier.
-            </summary>
-            <value>
-            The document identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IndexKeyword.KeywordValue">
             <summary>
@@ -1532,17 +1528,92 @@
             The keyword value.
             </value>
         </member>
-        <member name="P:Songhay.Publications.Models.IndexKeyword.Document">
+        <member name="P:Songhay.Publications.Models.IndexKeyword.Groups">
             <summary>
-            Gets or sets the document.
+            collection of Publication Index Keyword Group
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.Documents">
+            <summary>
+            collection of Publication Index Keyword Group
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.InceptDate">
+            <summary>
+            Gets or sets the incept date.
             </summary>
             <value>
-            The document.
+            The incept date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
+            </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.IndexKeywordGroup">
+            <summary>
+            Publication Index Keyword
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.Id">
+            <summary>
+            Index Keyword Group ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.ClientId">
+            <summary>
+            Index Keyword Group Client ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.Name">
+            <summary>
+            Index Keyword Group Name
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.InceptDate">
+            <summary>
+            Gets or sets the incept date.
+            </summary>
+            <value>
+            The incept date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.EndDate">
+            <summary>
+            Gets or sets the end date.
+            </summary>
+            <value>
+            The end date.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeywordGroup.ModificationDate">
+            <summary>
+            Gets or sets the modification date.
+            </summary>
+            <value>
+            The modification date.
             </value>
         </member>
         <member name="T:Songhay.Publications.Models.ISegment">
             <summary>
-            GenericWeb Segment interface
+            Publications Segment interface
             </summary>
         </member>
         <member name="P:Songhay.Publications.Models.ISegment.SegmentId">
@@ -2029,7 +2100,7 @@
         </member>
         <member name="T:Songhay.Publications.Models.Segment">
             <summary>
-            GenericWeb Segment
+            Publications Segment
             </summary>
         </member>
         <member name="M:Songhay.Publications.Models.Segment.#ctor">
