@@ -13,7 +13,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The document identifier.
         /// </value>
-        int DocumentId { get; set; }
+        int? DocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the title.

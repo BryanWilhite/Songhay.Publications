@@ -101,7 +101,7 @@ namespace Songhay.Publications.Extensions
             {
                 GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Segment)}" : group.GroupDisplayText,
                 GroupId = (group == null) ? $"{@namespace}.{nameof(Segment)}".ToLowerInvariant() : group.GroupId,
-                Id = data.SegmentId,
+                Id = data.SegmentId.GetValueOrDefault(),
                 ItemName = data.SegmentName
             };
             return dataOut;

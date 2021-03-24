@@ -13,7 +13,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The segment identifier.
         /// </value>
-        int SegmentId { get; set; }
+        int? SegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the segment.

@@ -9,7 +9,7 @@ namespace Songhay.Publications.Models
         /// Index Keyword Group ID
         /// </summary>
         /// <value></value>
-        int Id { get; set; }
+        int? Id { get; set; }
 
         /// <summary>
         /// Index Keyword Group Client ID

@@ -45,7 +45,7 @@ namespace Songhay.Publications.Models
         /// The document identifier.
         /// </value>
         [Display(Name = "Document ID", Order = 1)]
-        public int DocumentId { get; set; }
+        public int? DocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the short name of the document.

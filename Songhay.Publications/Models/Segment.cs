@@ -54,7 +54,7 @@ namespace Songhay.Publications.Models
         /// The segment identifier.
         /// </value>
         [Display(Name = "Segment ID", Order = 1)]
-        public int SegmentId { get; set; }
+        public int? SegmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the segment.

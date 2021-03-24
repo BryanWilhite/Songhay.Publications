@@ -135,7 +135,7 @@ namespace Songhay.Publications.Extensions
                 DisplayText = data.Title,
                 GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Document)}" : group.GroupDisplayText,
                 GroupId = (group == null) ? $"{@namespace}.{nameof(Document)}".ToLowerInvariant() : group.GroupId,
-                Id = data.DocumentId,
+                Id = data.DocumentId.GetValueOrDefault(),
                 ItemName = data.DocumentShortName
             };
 
