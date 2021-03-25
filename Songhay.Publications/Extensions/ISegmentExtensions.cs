@@ -1,21 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using CloneExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Songhay.Diagnostics;
 using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Models;
 
 namespace Songhay.Publications.Extensions
 {
-
     /// <summary>
     /// Extensions of <see cref="ISegment"/>
     /// </summary>
     public static class ISegmentExtensions
     {
+        static ISegmentExtensions() => traceSource = TraceSources
+            .Instance
+            .GetTraceSourceFromConfiguredName()
+            .WithSourceLevels();
+
+        static readonly TraceSource traceSource;
+
         /// <summary>
         /// Clones the instance of <see cref="ISegment"/>.
         /// </summary>
@@ -24,6 +33,46 @@ namespace Songhay.Publications.Extensions
         public static Segment Clone(this ISegment data)
         {
             return data?.GetClone(CloneInitializers.Publications) as Segment;
+        }
+
+        /// <summary>
+        /// Returns the first <see cref="ISegment"/>
+        /// based on the specified predicate.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="predicate">The predicate.</param>
+        /// <returns></returns>
+        public static ISegment GetSegmentByPredicate(this IEnumerable<ISegment> data, Func<ISegment, bool> predicate)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+
+            var first = data.FirstOrDefault(predicate);
+
+            traceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+
+            return first;
+        }
+
+        /// <summary>
+        /// Returns <c>true</c> when the <see cref="ISegment"/>
+        /// has any <see cref="Segment.Documents"/>.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static bool HasDocuments(this ISegment data)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+
+            var segment = data as Segment;
+            if (segment == null) return false;
+
+            if (!segment.Documents.Any())
+            {
+                traceSource?.TraceError($"The expected child {nameof(Segment.Documents)} are not here.");
+                return false;
+            };
+
+            return true;
         }
 
         /// <summary>
@@ -39,18 +88,54 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Converts the <see cref="ISegment"/> into a display text.
+        /// Converts the <see cref="ISegment"/> into human-readable display text.
         /// </summary>
         /// <param name="data">The data.</param>
         public static string ToDisplayText(this ISegment data)
         {
-            if (data == null) return null;
+            return data.ToDisplayText(showIdOnly: false);
+        }
 
-            var builder = new StringBuilder($"{nameof(data.SegmentId)}: {data?.SegmentId}");
-            builder.Append($", {nameof(data.SegmentName)}: {data?.SegmentName}");
-            builder.Append($", {nameof(data.IsActive)}: {data?.IsActive}");
-            builder.Append($", {nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
-            builder.Append($", {nameof(data.InceptDate)}: {data?.InceptDate}");
+        /// <summary>
+        /// Converts the <see cref="ISegment"/> into human-readable display text.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
+        public static string ToDisplayText(this ISegment data, bool showIdOnly)
+        {
+            if (data == null)
+                return $"{nameof(ToDisplayText)}: the specified {nameof(ISegment)} is null.";
+
+            var builder = new StringBuilder();
+
+            var prefix = string.Empty;
+
+            if (data.SegmentId.HasValue)
+            {
+                builder.Append($"{nameof(data.SegmentId)}: {data?.SegmentId}");
+                prefix = ", ";
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ClientId))
+            {
+                builder.Append($"{prefix}{nameof(data.ClientId)}: {data?.ClientId}");
+                prefix = ", ";
+            }
+
+            if (!showIdOnly)
+            {
+                if (!string.IsNullOrWhiteSpace(data.SegmentName))
+                    builder.Append($"{prefix}{nameof(data.SegmentName)}: {data?.SegmentName}");
+
+                if (data.IsActive.HasValue)
+                    builder.Append($"{nameof(data.IsActive)}: {data?.IsActive}");
+
+                if (data.ParentSegmentId.HasValue)
+                    builder.Append($"{nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
+
+                if (data.InceptDate.HasValue)
+                    builder.Append($"{nameof(data.InceptDate)}: {data?.InceptDate}");
+            }
 
             return builder.ToString();
         }
@@ -74,6 +159,7 @@ namespace Songhay.Publications.Extensions
             settings.NullValueHandling = NullValueHandling.Ignore;
 
             var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
+
             return jO;
         }
 

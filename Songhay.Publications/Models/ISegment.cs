@@ -1,5 +1,3 @@
-using Songhay.Models;
-
 namespace Songhay.Publications.Models
 {
     /// <summary>

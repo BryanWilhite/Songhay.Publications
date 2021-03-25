@@ -6,6 +6,10 @@ using Songhay.Publications.Models;
 using Songhay.Models;
 using System;
 using System.Text;
+using Songhay.Diagnostics;
+using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Songhay.Publications.Extensions
 {
@@ -15,6 +19,13 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static class IFragmentExtensions
     {
+        static IFragmentExtensions() => traceSource = TraceSources
+            .Instance
+            .GetTraceSourceFromConfiguredName()
+            .WithSourceLevels();
+
+        static readonly TraceSource traceSource;
+
         /// <summary>
         /// Clones the instance of <see cref="IFragment"/>.
         /// </summary>
@@ -23,6 +34,24 @@ namespace Songhay.Publications.Extensions
         public static Fragment Clone(this IFragment data)
         {
             return data?.GetClone(CloneInitializers.Publications) as Fragment;
+        }
+
+        /// <summary>
+        /// Returns the first <see cref="IFragment"/>
+        /// based on the specified predicate.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="predicate">The predicate.</param>
+        /// <returns></returns>
+        public static IFragment GetFragmentByPredicate(this IEnumerable<IFragment> data, Func<IFragment, bool> predicate)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+
+            var first = data.FirstOrDefault(predicate);
+
+            traceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+
+            return first;
         }
 
         /// <summary>
@@ -39,27 +68,73 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
+        /// Converts the <see cref="IFragment"/> into human-readable display text.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public static string ToDisplayText(this IFragment data)
+        {
+            return data.ToDisplayText(showIdOnly: false);
+        }
+
+        /// <summary>
         /// Converts the <see cref="IFragment"/> into a display text.
         /// </summary>
         /// <param name="data">The data.</param>
+        /// <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         /// <returns></returns>
-        public static string ToDisplayText(this IFragment data)
+        public static string ToDisplayText(this IFragment data, bool showIdOnly)
         {
-            if (data == null) return null;
+            if (data == null)
+                return $"{nameof(ToDisplayText)}: the specified {nameof(IFragment)} is null.";
 
-            var builder = new StringBuilder($"{nameof(data.FragmentId)}: {data?.FragmentId}");
-            builder.Append($", {nameof(data.FragmentName)}: {data?.FragmentName}");
-            builder.Append($", {nameof(data.IsActive)}: {data?.IsActive}");
-            builder.Append($", {nameof(data.DocumentId)}: {data?.DocumentId}");
+            var builder = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(data.FragmentDisplayName)) builder.Append($", {nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
-            if (!string.IsNullOrEmpty(data.Content)) builder.Append($", {nameof(data.Content)}: {data?.Content.Truncate(32)}");
+            var prefix = string.Empty;
 
-            builder.Append($", {nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
-            builder.Append($", {nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
-            builder.Append($", {nameof(data.IsNext)}: {data?.IsNext}");
-            builder.Append($", {nameof(data.IsPrevious)}: {data?.IsPrevious}");
-            builder.Append($", {nameof(data.IsWrapper)}: {data?.IsWrapper}");
+            if (data.FragmentId.HasValue)
+            {
+                builder.Append($"{nameof(data.FragmentId)}: {data?.FragmentId}");
+                prefix = ", ";
+            }
+
+            if (!string.IsNullOrWhiteSpace(data.ClientId))
+            {
+                builder.Append($"{prefix}{nameof(data.ClientId)}: {data?.ClientId}");
+                prefix = ", ";
+            }
+
+            if (!showIdOnly)
+            {
+                if (!string.IsNullOrWhiteSpace(data.FragmentName))
+                    builder.Append($", {nameof(data.FragmentName)}: {data?.FragmentName}");
+
+                if (data.IsActive.HasValue)
+                    builder.Append($"{nameof(data.IsActive)}: {data?.IsActive}");
+
+                if (data.DocumentId.HasValue)
+                    builder.Append($", {nameof(data.DocumentId)}: {data?.DocumentId}");
+
+                if (!string.IsNullOrEmpty(data.FragmentDisplayName))
+                    builder.Append($", {nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
+
+                if (!string.IsNullOrEmpty(data.Content))
+                    builder.Append($", {nameof(data.Content)}: {data?.Content.Truncate(32)}");
+
+                if (data.PrevFragmentId.HasValue)
+                    builder.Append($", {nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
+
+                if (data.NextFragmentId.HasValue)
+                    builder.Append($", {nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
+
+                if (data.IsNext.HasValue)
+                    builder.Append($", {nameof(data.IsNext)}: {data?.IsNext}");
+
+                if (data.IsPrevious.HasValue)
+                    builder.Append($", {nameof(data.IsPrevious)}: {data?.IsPrevious}");
+
+                if (data.IsWrapper.HasValue)
+                    builder.Append($", {nameof(data.IsWrapper)}: {data?.IsWrapper}");
+            }
 
             return builder.ToString();
         }
@@ -134,7 +209,7 @@ namespace Songhay.Publications.Extensions
                 DisplayText = data.FragmentDisplayName,
                 GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Fragment)}" : group.GroupDisplayText,
                 GroupId = (group == null) ? $"{@namespace}.{nameof(Fragment)}".ToLowerInvariant() : group.GroupId,
-                Id = data.FragmentId,
+                Id = data.FragmentId.GetValueOrDefault(),
                 ItemName = data.FragmentName
             };
             if (copyFragmentContent) dataOut.Description = data.Content;

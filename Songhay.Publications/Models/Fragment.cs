@@ -74,7 +74,7 @@ namespace Songhay.Publications.Models
         /// The fragment identifier.
         /// </value>
         [Display(Name = "Fragment ID", Order = 1)]
-        public int FragmentId { get; set; }
+        public int? FragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the fragment.

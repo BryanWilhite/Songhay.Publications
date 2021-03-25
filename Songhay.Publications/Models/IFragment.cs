@@ -14,7 +14,7 @@ namespace Songhay.Publications.Models
         /// <value>
         /// The fragment identifier.
         /// </value>
-        int FragmentId { get; set; }
+        int? FragmentId { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the fragment.
