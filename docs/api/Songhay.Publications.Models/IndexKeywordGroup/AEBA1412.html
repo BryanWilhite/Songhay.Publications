@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
-        <title>Songhay.Publications Documentation - API - IndexKeyword.DocumentClientId Property</title>
+        <title>Songhay.Publications Documentation - API - IndexKeywordGroup.InceptDate Property</title>
         <link href="/Songhay.Publications/assets/css/highlight.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -134,13 +134,15 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Property Members</li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/79B06F11">Document</a></li>
-				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/4E4D2224">DocumentClientId</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/AE23211F">DocumentId</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/AB27B8A3">KeywordValue</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/90AEDB58">ClientId</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/7A420A4B">EndDate</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/485D8016">Id</a></li>
+				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/AEBA1412">InceptDate</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/FC72E982">ModificationDate</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup/5496341A">Name</a></li>
 
 
                     </ul>
@@ -155,15 +157,15 @@
 
 
 <section class="content-header">
-			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a>.</h3>
-	<h1>DocumentClientId <small>Property</small></h1>
+			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a>.</h3>
+	<h1>InceptDate <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the document identifier.
+    Gets or sets the incept date.
     </div>
 
 		<div class="panel panel-default">
@@ -174,14 +176,14 @@
 						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></dd>		
+						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public string DocumentClientId { get; set; }</code></pre>
+	<pre><code>public DateTime? InceptDate { get; set; }</code></pre>
 
 
 
@@ -198,9 +200,9 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>string</td>
+					<td>DateTime?</td>
 					<td>
-    The document identifier.
+    The incept date.
     </td>
 				</tr>
 			</tbody></table>

@@ -72,6 +72,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Constructors">Constructors</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#SeeAlso">See Also</a></p>
 <hr class="infobar-hidden">
@@ -145,6 +146,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></li>
 				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry">MarkdownEntry</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands">Markdown<wbr>Presentation<wbr>Commands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories">Markdown<wbr>Presentation<wbr>Directories</a></li>
@@ -162,6 +164,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup">IIndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>
 
@@ -185,7 +188,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    GenericWeb keyword
+    Publications keyword
     </div>
 
 		<div class="panel panel-default">
@@ -201,6 +204,7 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>								
+											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>								
 									</ul>
 								</dd>
 							
@@ -220,6 +224,8 @@
 	Type--&gt;Base0["object"]
 	Type-.-&gt;Interface0["IIndexKeyword"]
 	click Interface0 "/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword"
+	Type-.-&gt;Interface1["ITemporal"]
+	click Interface1 "/Songhay.Publications/api/Songhay.Publications.Models/ITemporal"
 	Type["IndexKeyword"]
 class Type type-node
 
@@ -230,7 +236,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class IndexKeyword : IIndexKeyword</code></pre>
+	<pre><code>public class IndexKeyword : IIndexKeyword, ITemporal</code></pre>
 
 
 
@@ -238,6 +244,26 @@ class Type type-node
 
 
 
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/8F7F73CA">IndexKeyword<wbr>()<wbr></a></td>
+									<td>
+    Initializes a new instance of the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></code> class.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 
@@ -253,29 +279,56 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/79B06F11">Document</a></td>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/Document">Document</a></td>
-								<td>
-									<div>
-    Gets or sets the document.
-    </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/4E4D2224">DocumentClientId</a></td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/B1D31A23">ClientId</a></td>
 								<td>string</td>
 								<td>
 									<div>
-    Gets or sets the document identifier.
+    Index Keyword Group Client ID
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/AE23211F">DocumentId</a></td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/2369C632">Documents</a></td>
+								<td>ICollection<wbr>&lt;<a href="/Songhay.Publications/api/Songhay.Publications.Models/Document">Document</a>&gt;<wbr></td>
+								<td>
+									<div>
+    collection of Publication Index Keyword Group
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/B0CD5C3B">EndDate</a></td>
+								<td>DateTime?</td>
+								<td>
+									<div>
+    Gets or sets the end date.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/FE6D4AEA">Groups</a></td>
+								<td>ICollection<wbr>&lt;<a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a>&gt;<wbr></td>
+								<td>
+									<div>
+    collection of Publication Index Keyword Group
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/E9863C16">Id</a></td>
 								<td>int?</td>
 								<td>
 									<div>
-    Gets or sets the document identifier.
+    Index Keyword Group ID
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/0DD93FB0">InceptDate</a></td>
+								<td>DateTime?</td>
+								<td>
+									<div>
+    Gets or sets the incept date.
     </div>
 								</td>
 							</tr>
@@ -285,6 +338,15 @@ class Type type-node
 								<td>
 									<div>
     Gets or sets the keyword value.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/10BD3C6E">ModificationDate</a></td>
+								<td>DateTime?</td>
+								<td>
+									<div>
+    Gets or sets the modification date.
     </div>
 								</td>
 							</tr>

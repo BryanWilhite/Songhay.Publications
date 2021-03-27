@@ -145,6 +145,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry">MarkdownEntry</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands">Markdown<wbr>Presentation<wbr>Commands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories">Markdown<wbr>Presentation<wbr>Directories</a></li>
@@ -162,6 +163,7 @@
 				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup">IIndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>
 
@@ -185,7 +187,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    GenericWeb Document interface
+    Publications Document interface
     </div>
 
 		<div class="panel panel-default">
@@ -264,7 +266,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument/E56B4DBE">DocumentId</a></td>
-								<td>int</td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the document identifier.
@@ -390,6 +392,17 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions/25710B9A">HasFragments<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Returns <code class="cs">true</code> when the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></code>
+    has any <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/Document/38970A9A">Fragments</a></code>.
+    </div>
+										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions">IDocumentExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions/84427D9B">IsTemplatable<wbr>()<wbr></a></td>
 								<td>bool</td>
 								<td>
@@ -421,6 +434,16 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions/D5535252">ToDisplayText<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></code> into human-readable display text.
+    </div>
+										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions">IDocumentExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions/24FEEE47">ToDisplayText<wbr>(bool)<wbr></a></td>
 								<td>string</td>
 								<td>
 									<div>

@@ -144,6 +144,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry">MarkdownEntry</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands">Markdown<wbr>Presentation<wbr>Commands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories">Markdown<wbr>Presentation<wbr>Directories</a></li>
@@ -161,6 +162,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></li>
 				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup">IIndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>
 
@@ -184,7 +186,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Generic Web Index Keyword interface
+    Publication Index Keyword
     </div>
 
 		<div class="panel panel-default">
@@ -196,6 +198,12 @@
 								<dt>Namespace</dt>
 								<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>								
+									</ul>
+								</dd>
 							
 							
 							
@@ -210,6 +218,8 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
+	Type-.-&gt;Interface0["ITemporal"]
+	click Interface0 "/Songhay.Publications/api/Songhay.Publications.Models/ITemporal"
 	Type["IIndexKeyword"]
 class Type type-node
 	Implementing0["IndexKeyword"]-.-&gt;Type
@@ -222,7 +232,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public interface IIndexKeyword</code></pre>
+	<pre><code>public interface IIndexKeyword : ITemporal</code></pre>
 
 
 
@@ -245,20 +255,20 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/6831BDCD">DocumentClientId</a></td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/B98E944F">ClientId</a></td>
 								<td>string</td>
 								<td>
 									<div>
-    Gets or sets the document identifier.
+    Index Keyword Group Client ID
     </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/61E822C2">DocumentId</a></td>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/EAD16FED">Id</a></td>
 								<td>int?</td>
 								<td>
 									<div>
-    Gets or sets the document identifier.
+    Index Keyword Group ID
     </div>
 								</td>
 							</tr>

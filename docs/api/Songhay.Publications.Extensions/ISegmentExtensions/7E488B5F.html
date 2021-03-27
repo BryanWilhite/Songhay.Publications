@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
-        <title>Songhay.Publications Documentation - API - IndexKeyword.DocumentId Property</title>
+        <title>Songhay.Publications Documentation - API - ISegmentExtensions.ToDisplayText(ISegment, bool) Method</title>
         <link href="/Songhay.Publications/assets/css/highlight.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -72,7 +72,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -132,15 +133,23 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></li>
+		<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions">Songhay<wbr>.Publications<wbr>.Extensions</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+		<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions">ISegmentExtensions</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Property Members</li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/79B06F11">Document</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/4E4D2224">DocumentClientId</a></li>
-				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/AE23211F">DocumentId</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword/AB27B8A3">KeywordValue</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/54E3CE57">Clone<wbr>(ISegment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/C93DFEAC">Get<wbr>Segment<wbr>By<wbr>Predicate<wbr>(IEnumerable<wbr>&lt;ISegment&gt;<wbr>, <wbr>Func<wbr>&lt;ISegment, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/C9B22072">HasDocuments<wbr>(ISegment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/9BCBA9E2">SetDefaults<wbr>(ISegment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/87BD4FF9">ToDisplayText<wbr>(ISegment)<wbr></a></li>
+				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/7E488B5F">ToDisplayText<wbr>(ISegment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/BD9FD8A4">ToJObject<wbr>(ISegment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/FA7397CD">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(ISegment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/9B7E6657">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(ISegment, <wbr>IGroupable)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/4CFD1E9B">To<wbr>Publication<wbr>Index<wbr>Entry<wbr>J<wbr>Object<wbr>(ISegment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/A2734B29">WithDefaults<wbr>(ISegment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions/2C196FE9">WithEdit<wbr>(ISegment, <wbr>Action<wbr>&lt;ISegment&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -155,39 +164,64 @@
 
 
 <section class="content-header">
-			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a>.</h3>
-	<h1>DocumentId <small>Property</small></h1>
+			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions">ISegmentExtensions</a>.</h3>
+	<h1>ToDisplayText<wbr>(ISegment, <wbr>bool)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the document identifier.
+    Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></code> into human-readable display text.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></dd>
+						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Extensions">Songhay<wbr>.Publications<wbr>.Extensions</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></dd>		
+						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions">ISegmentExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public int? DocumentId { get; set; }</code></pre>
+	<pre><code>public static string ToDisplayText(this ISegment data, bool showIdOnly)</code></pre>
 
 
 
 
 
-	<h1 id="Value">Value</h1>
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>data</td>
+						<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></td>
+						<td>The data.</td>
+					</tr>
+					<tr>
+						<td>showIdOnly</td>
+						<td>bool</td>
+						<td>when <code class="cs">true</code> then display identifiers only</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -198,10 +232,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>int?</td>
-					<td>
-    The document identifier.
-    </td>
+					<td>string</td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>

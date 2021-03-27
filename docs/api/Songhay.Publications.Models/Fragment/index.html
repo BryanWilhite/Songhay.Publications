@@ -147,6 +147,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ImageSize">ImageSize</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands">IndexCommands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword">IndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup">IndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry">MarkdownEntry</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands">Markdown<wbr>Presentation<wbr>Commands</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories">Markdown<wbr>Presentation<wbr>Directories</a></li>
@@ -164,6 +165,7 @@
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IDocument">IDocument</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup">IIndexKeywordGroup</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ISegment">ISegment</a></li>
 				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/ITemporal">ITemporal</a></li>
 
@@ -187,7 +189,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    GenericWeb Fragment
+    Publications Fragment
     </div>
 
 		<div class="panel panel-default">
@@ -333,7 +335,7 @@ class Type type-node
 							</tr>
 							<tr>
 								<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/Fragment/8438EB89">FragmentId</a></td>
-								<td>int</td>
+								<td>int?</td>
 								<td>
 									<div>
     Gets or sets the fragment identifier.
@@ -542,6 +544,16 @@ class Type type-node
 								<td>string</td>
 								<td>
 									<div>
+    Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code> into human-readable display text.
+    </div>
+										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/9D21C875">ToDisplayText<wbr>(bool)<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
     Converts the <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code> into a display text.
     </div>
 										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
@@ -613,7 +625,7 @@ class Type type-node
 								<td>
 									<div>
     Returns <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code>
-    after the specified edit <code class="cs">System.Action`1</code>.
+    after the specified edit <code class="cs"><a href="/Songhay.Publications">Action&lt;T&gt;</a></code>.
     </div>
 										<div><small><em>From <a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></em></small></div>
 								</td>

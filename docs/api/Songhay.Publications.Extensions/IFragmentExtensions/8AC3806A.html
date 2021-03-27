@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Songhay.Publications/assets/img/favicon.ico" type="image/x-icon">
-        <title>Songhay.Publications Documentation - API - IIndexKeyword.DocumentId Property</title>
+        <title>Songhay.Publications Documentation - API - IFragmentExtensions.GetFragmentByPredicate(IEnumerable&lt;IFragment&gt;, Func&lt;IFragment, bool&gt;) Method</title>
         <link href="/Songhay.Publications/assets/css/highlight.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Songhay.Publications/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -72,7 +72,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -132,14 +133,23 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></li>
+		<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions">Songhay<wbr>.Publications<wbr>.Extensions</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></li>
+		<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Property Members</li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/6831BDCD">DocumentClientId</a></li>
-				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/61E822C2">DocumentId</a></li>
-				<li><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword/112A6CE3">KeywordValue</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/9496C592">Clone<wbr>(IFragment)<wbr></a></li>
+				<li class="selected"><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/8AC3806A">Get<wbr>Fragment<wbr>By<wbr>Predicate<wbr>(IEnumerable<wbr>&lt;IFragment&gt;<wbr>, <wbr>Func<wbr>&lt;IFragment, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/A3F31581">SetDefaults<wbr>(IFragment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/7386ECA4">ToDisplayText<wbr>(IFragment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/9D21C875">ToDisplayText<wbr>(IFragment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/1E98CE37">ToJObject<wbr>(IFragment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/42C1A63E">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(IFragment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/659BDA25">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(IFragment, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/617D8370">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(IFragment, <wbr>IGroupable)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/F16931C9">To<wbr>Menu<wbr>Display<wbr>Item<wbr>Model<wbr>(IFragment, <wbr>IGroupable, <wbr>bool)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/B8BB4CAE">WithDefaults<wbr>(IFragment)<wbr></a></li>
+				<li><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions/19397189">WithEdit<wbr>(IFragment, <wbr>Action<wbr>&lt;IFragment&gt;<wbr>)<wbr></a></li>
 
 
                     </ul>
@@ -154,39 +164,65 @@
 
 
 <section class="content-header">
-			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a>.</h3>
-	<h1>DocumentId <small>Property</small></h1>
+			<h3><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a>.</h3>
+	<h1>Get<wbr>Fragment<wbr>By<wbr>Predicate<wbr>(IEnumerable<wbr>&lt;IFragment&gt;<wbr>, <wbr>Func<wbr>&lt;IFragment, <wbr>bool&gt;<wbr>)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the document identifier.
+    Returns and traces the first <code class="cs"><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></code>
+    based on the specified predicate.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models">Songhay<wbr>.Publications<wbr>.Models</a></dd>
+						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Extensions">Songhay<wbr>.Publications<wbr>.Extensions</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword">IIndexKeyword</a></dd>		
+						<dd><a href="/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions">IFragmentExtensions</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>int? DocumentId { get; set; }</code></pre>
+	<pre><code>public static IFragment GetFragmentByPredicate(this IEnumerable&lt;IFragment&gt; data, Func&lt;IFragment, bool&gt; predicate)</code></pre>
 
 
 
 
 
-	<h1 id="Value">Value</h1>
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>data</td>
+						<td>IEnumerable<wbr>&lt;<a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a>&gt;<wbr></td>
+						<td>The data.</td>
+					</tr>
+					<tr>
+						<td>predicate</td>
+						<td>Func<wbr>&lt;<a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a>, <wbr>bool&gt;<wbr></td>
+						<td>The predicate.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -197,10 +233,8 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>int?</td>
-					<td>
-    The document identifier.
-    </td>
+					<td><a href="/Songhay.Publications/api/Songhay.Publications.Models/IFragment">IFragment</a></td>
+					<td></td>
 				</tr>
 			</tbody></table>
 		</div>
