@@ -37,7 +37,7 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
-        /// Returns the first <see cref="IDocument"/>
+        /// Returns and traces the first <see cref="IDocument"/>
         /// based on the specified predicate.
         /// </summary>
         /// <param name="data">The data.</param>
