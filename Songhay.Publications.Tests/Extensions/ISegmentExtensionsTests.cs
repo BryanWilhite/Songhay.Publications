@@ -20,6 +20,26 @@ namespace Songhay.Publications.Tests.Extensions
         }
 
         [Fact]
+        public void GetSegmentByPredicate_Test()
+        {
+            var clientId = "my-data";
+
+            var collection = new[]
+            {
+                new Segment(),
+                new Segment(),
+                new Segment { ClientId = clientId },
+                new Segment(),
+            };
+
+            var first = collection
+                .GetSegmentByPredicate(i => i.ClientId == clientId);
+
+            Assert.NotNull(first);
+            Assert.Equal(clientId, first.ClientId);
+        }
+
+        [Fact]
         public void HasDocuments_Test()
         {
             var testCollection = new (bool expectedResult, ISegment data)[]
