@@ -186,6 +186,23 @@
             <param name="data">The document.</param>
             <returns><see cref="T:Songhay.Publications.Models.Document"/></returns>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IDocument},System.Func{Songhay.Publications.Models.IDocument,System.Boolean})">
+            <summary>
+            Returns the first <see cref="T:Songhay.Publications.Models.IDocument"/>
+            based on the specified predicate.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="predicate">The predicate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Models.IDocument)">
+            <summary>
+            Returns <c>true</c> when the <see cref="T:Songhay.Publications.Models.IDocument"/>
+            has any <see cref="P:Songhay.Publications.Models.Document.Fragments"/>.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Models.IDocument)">
             <summary>
             Determines whether the specified document is template-able.
@@ -211,9 +228,16 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Models.IDocument)">
             <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into human-readable display text.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Models.IDocument,System.Boolean)">
+            <summary>
             Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a display text.
             </summary>
             <param name="data">The data.</param>
+            <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToJObject(Songhay.Publications.Models.IDocument,System.Boolean)">
             <summary>
@@ -264,6 +288,15 @@
             <param name="data">The document.</param>
             <returns><see cref="T:Songhay.Publications.Models.Fragment"/></returns>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.GetFragmentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IFragment},System.Func{Songhay.Publications.Models.IFragment,System.Boolean})">
+            <summary>
+            Returns the first <see cref="T:Songhay.Publications.Models.IFragment"/>
+            based on the specified predicate.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="predicate">The predicate.</param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.SetDefaults(Songhay.Publications.Models.IFragment)">
             <summary>
             Sets the defaults.
@@ -272,9 +305,16 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToDisplayText(Songhay.Publications.Models.IFragment)">
             <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into human-readable display text.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToDisplayText(Songhay.Publications.Models.IFragment,System.Boolean)">
+            <summary>
             Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a display text.
             </summary>
             <param name="data">The data.</param>
+            <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
             <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.ToJObject(Songhay.Publications.Models.IFragment,System.Boolean)">
@@ -354,6 +394,23 @@
             <param name="data">The document.</param>
             <returns><see cref="T:Songhay.Publications.Models.Segment"/></returns>
         </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.GetSegmentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.ISegment},System.Func{Songhay.Publications.Models.ISegment,System.Boolean})">
+            <summary>
+            Returns the first <see cref="T:Songhay.Publications.Models.ISegment"/>
+            based on the specified predicate.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="predicate">The predicate.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.HasDocuments(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Returns <c>true</c> when the <see cref="T:Songhay.Publications.Models.ISegment"/>
+            has any <see cref="P:Songhay.Publications.Models.Segment.Documents"/>.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.SetDefaults(Songhay.Publications.Models.ISegment)">
             <summary>
             Sets the defaults.
@@ -362,9 +419,16 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToDisplayText(Songhay.Publications.Models.ISegment)">
             <summary>
-            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a display text.
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into human-readable display text.
             </summary>
             <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToDisplayText(Songhay.Publications.Models.ISegment,System.Boolean)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into human-readable display text.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
             <summary>
@@ -1407,6 +1471,18 @@
             Publication Index Keyword
             </summary>
         </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeyword.Id">
+            <summary>
+            Index Keyword Group ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexKeyword.ClientId">
+            <summary>
+            Index Keyword Group Client ID
+            </summary>
+            <value></value>
+        </member>
         <member name="P:Songhay.Publications.Models.IIndexKeyword.KeywordValue">
             <summary>
             Gets or sets the keyword value.
@@ -1519,6 +1595,18 @@
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.IndexKeyword"/> class.
             </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.Id">
+            <summary>
+            Index Keyword Group ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexKeyword.ClientId">
+            <summary>
+            Index Keyword Group Client ID
+            </summary>
+            <value></value>
         </member>
         <member name="P:Songhay.Publications.Models.IndexKeyword.KeywordValue">
             <summary>

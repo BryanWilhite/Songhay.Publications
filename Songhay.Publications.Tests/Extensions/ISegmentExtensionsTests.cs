@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,35 @@ namespace Songhay.Publications.Tests.Extensions
         public ISegmentExtensionsTests(ITestOutputHelper helper)
         {
             this._testOutputHelper = helper;
+        }
+
+        [Fact]
+        public void HasDocuments_Test()
+        {
+            var testCollection = new (bool expectedResult, ISegment data)[]
+            {
+                ( expectedResult: false, data: null ),
+                ( expectedResult: false, data: new Segment() ),
+                (
+                    expectedResult: true,
+                    data: new Segment
+                    {
+                        Documents = new [] { new Document() }
+                    }
+                ),
+            };
+
+            foreach (var test in testCollection)
+            {
+                if (test.data == null)
+                {
+                    Assert.Throws<ArgumentNullException>(() => test.data.HasDocuments());
+                    continue;
+                }
+
+                var actual = test.data.HasDocuments();
+                Assert.Equal(test.expectedResult, actual);
+            }
         }
 
         [Theory]
