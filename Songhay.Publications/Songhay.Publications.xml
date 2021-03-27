@@ -188,7 +188,7 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IDocument},System.Func{Songhay.Publications.Models.IDocument,System.Boolean})">
             <summary>
-            Returns the first <see cref="T:Songhay.Publications.Models.IDocument"/>
+            Returns and traces the first <see cref="T:Songhay.Publications.Models.IDocument"/>
             based on the specified predicate.
             </summary>
             <param name="data">The data.</param>
@@ -290,7 +290,7 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.IFragmentExtensions.GetFragmentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IFragment},System.Func{Songhay.Publications.Models.IFragment,System.Boolean})">
             <summary>
-            Returns the first <see cref="T:Songhay.Publications.Models.IFragment"/>
+            Returns and traces the first <see cref="T:Songhay.Publications.Models.IFragment"/>
             based on the specified predicate.
             </summary>
             <param name="data">The data.</param>
@@ -396,7 +396,7 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.GetSegmentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.ISegment},System.Func{Songhay.Publications.Models.ISegment,System.Boolean})">
             <summary>
-            Returns the first <see cref="T:Songhay.Publications.Models.ISegment"/>
+            Returns and traces the first <see cref="T:Songhay.Publications.Models.ISegment"/>
             based on the specified predicate.
             </summary>
             <param name="data">The data.</param>

@@ -108,33 +108,33 @@ namespace Songhay.Publications.Extensions
 
             var builder = new StringBuilder();
 
-            var prefix = string.Empty;
+            var delimiter = string.Empty;
 
             if (data.SegmentId.HasValue)
             {
                 builder.Append($"{nameof(data.SegmentId)}: {data?.SegmentId}");
-                prefix = ", ";
+                delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{prefix}{nameof(data.ClientId)}: {data?.ClientId}");
-                prefix = ", ";
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                delimiter = ", ";
             }
 
             if (!showIdOnly)
             {
                 if (!string.IsNullOrWhiteSpace(data.SegmentName))
-                    builder.Append($"{prefix}{nameof(data.SegmentName)}: {data?.SegmentName}");
+                    builder.Append($"{delimiter}{nameof(data.SegmentName)}: {data?.SegmentName}");
 
                 if (data.IsActive.HasValue)
-                    builder.Append($"{nameof(data.IsActive)}: {data?.IsActive}");
+                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data?.IsActive}");
 
                 if (data.ParentSegmentId.HasValue)
-                    builder.Append($"{nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
+                    builder.Append($"{delimiter}{nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
 
                 if (data.InceptDate.HasValue)
-                    builder.Append($"{nameof(data.InceptDate)}: {data?.InceptDate}");
+                    builder.Append($"{delimiter}{nameof(data.InceptDate)}: {data?.InceptDate}");
             }
 
             return builder.ToString();

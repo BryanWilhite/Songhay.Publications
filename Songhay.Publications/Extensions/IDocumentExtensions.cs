@@ -140,41 +140,40 @@ namespace Songhay.Publications.Extensions
         public static string ToDisplayText(this IDocument data, bool showIdOnly)
         {
             if (data == null)
-                return $"{nameof(ToDisplayText)}: the specified {nameof(ISegment)} is null.";
-
+                return $"{nameof(ToDisplayText)}: the specified {nameof(IDocument)} is null.";
 
             var builder = new StringBuilder();
 
-            var prefix = string.Empty;
+            var delimiter = string.Empty;
 
-            if (data.SegmentId.HasValue)
+            if (data.DocumentId.HasValue)
             {
-                builder.Append($"{nameof(data.SegmentId)}: {data?.SegmentId}");
-                prefix = ", ";
+                builder.Append($"{nameof(data.DocumentId)}: {data?.DocumentId}");
+                delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{prefix}{nameof(data.ClientId)}: {data?.ClientId}");
-                prefix = ", ";
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                delimiter = ", ";
             }
 
             if (!showIdOnly)
             {
                 if (!string.IsNullOrEmpty(data.Title))
-                    builder.Append($", {nameof(data.Title)}: {data.Title}");
+                    builder.Append($"{delimiter}{nameof(data.Title)}: {data.Title}");
 
                 if (data.IsActive.HasValue)
-                    builder.Append($", {nameof(data.IsActive)}: {data.IsActive}");
+                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
 
                 if (data.IsRoot.HasValue)
-                    builder.Append($", {nameof(data.IsRoot)}: { data.IsRoot}");
+                    builder.Append($"{delimiter}{nameof(data.IsRoot)}: { data.IsRoot}");
 
                 if (!string.IsNullOrEmpty(data.FileName))
-                    builder.Append($", {nameof(data.Path)}:{data.Path}, {nameof(data.FileName)}: {data.FileName}");
+                    builder.Append($"{delimiter}{nameof(data.Path)}: {data.Path}{delimiter}{nameof(data.FileName)}: {data.FileName}");
 
                 if (!string.IsNullOrEmpty(data.DocumentShortName))
-                    builder.Append($", {nameof(data.DocumentShortName)}: {data.DocumentShortName}");
+                    builder.Append($"{delimiter}{nameof(data.DocumentShortName)}: {data.DocumentShortName}");
             }
 
             return builder.ToString();

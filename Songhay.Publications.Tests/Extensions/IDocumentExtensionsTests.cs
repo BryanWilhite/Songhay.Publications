@@ -62,6 +62,101 @@ namespace Songhay.Publications.Tests.Extensions
             }
         }
 
+        [Fact]
+        public void ToDisplayText_Test()
+        {
+            var testCollection = new (IDocument data, Func<IDocument, bool> test)[]
+            {
+                (
+                    null,
+                    data =>
+                    {
+                        var text = data.ToDisplayText();
+                        return text.Contains("the specified ") && text.Contains("is null.");
+                    }
+                ),
+                (
+                    new Document
+                    {
+                        ClientId = "my-document",
+                        DocumentShortName = "my-short-name",
+                        FileName = "my-file.name",
+                        IsActive = true,
+                        Path = "./",
+                        Title = "my-title",
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = data.ToDisplayText();
+                        return
+                            text.Contains(data.ClientId) &&
+                            text.Contains(data.DocumentShortName) &&
+                            text.Contains(data.FileName) &&
+                            text.Contains(data.Path) &&
+                            text.Contains(data.Title) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+                (
+                    new Document
+                    {
+                        ClientId = "my-document",
+                        DocumentShortName = "my-short-name",
+                        FileName = "my-file.name",
+                        IsActive = true,
+                        Path = "./",
+                        Title = "my-title",
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = $"{data}";
+                        return
+                            text.Contains(data.ClientId) &&
+                            text.Contains(data.DocumentShortName) &&
+                            text.Contains(data.FileName) &&
+                            text.Contains(data.IsActive.ToString()) &&
+                            text.Contains(data.Path) &&
+                            text.Contains(data.Title) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+                (
+                    new Document
+                    {
+                        DocumentId = 999,
+                        ClientId = "my-document",
+                        DocumentShortName = "my-short-name",
+                        FileName = "my-file.name",
+                        Path = "./",
+                        Title = "my-title",
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = data.ToDisplayText(showIdOnly: true);
+                        return
+                            text.Contains(data.DocumentId.ToString()) &&
+                            text.Contains(data.ClientId) &&
+                            !text.Contains(data.DocumentShortName) &&
+                            !text.Contains(data.FileName) &&
+                            !text.Contains(data.Path) &&
+                            !text.Contains(data.Title) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+            };
+
+            foreach (var item in testCollection)
+            {
+                Assert.True(item.test(item.data));
+            }
+        }
+
         readonly ITestOutputHelper _testOutputHelper;
     }
 }

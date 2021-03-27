@@ -89,51 +89,51 @@ namespace Songhay.Publications.Extensions
 
             var builder = new StringBuilder();
 
-            var prefix = string.Empty;
+            var delimiter = string.Empty;
 
             if (data.FragmentId.HasValue)
             {
                 builder.Append($"{nameof(data.FragmentId)}: {data?.FragmentId}");
-                prefix = ", ";
+                delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{prefix}{nameof(data.ClientId)}: {data?.ClientId}");
-                prefix = ", ";
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                delimiter = ", ";
             }
 
             if (!showIdOnly)
             {
                 if (!string.IsNullOrWhiteSpace(data.FragmentName))
-                    builder.Append($", {nameof(data.FragmentName)}: {data?.FragmentName}");
+                    builder.Append($"{delimiter}{nameof(data.FragmentName)}: {data?.FragmentName}");
 
                 if (data.IsActive.HasValue)
-                    builder.Append($"{nameof(data.IsActive)}: {data?.IsActive}");
+                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data?.IsActive}");
 
                 if (data.DocumentId.HasValue)
-                    builder.Append($", {nameof(data.DocumentId)}: {data?.DocumentId}");
+                    builder.Append($"{delimiter}{nameof(data.DocumentId)}: {data?.DocumentId}");
 
                 if (!string.IsNullOrEmpty(data.FragmentDisplayName))
-                    builder.Append($", {nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
+                    builder.Append($"{delimiter}{nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
 
                 if (!string.IsNullOrEmpty(data.Content))
-                    builder.Append($", {nameof(data.Content)}: {data?.Content.Truncate(32)}");
+                    builder.Append($"{delimiter}{nameof(data.Content)}: {data?.Content.Truncate(32)}");
 
                 if (data.PrevFragmentId.HasValue)
-                    builder.Append($", {nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
+                    builder.Append($"{delimiter}{nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
 
                 if (data.NextFragmentId.HasValue)
-                    builder.Append($", {nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
+                    builder.Append($"{delimiter}{nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
 
                 if (data.IsNext.HasValue)
-                    builder.Append($", {nameof(data.IsNext)}: {data?.IsNext}");
+                    builder.Append($"{delimiter}{nameof(data.IsNext)}: {data?.IsNext}");
 
                 if (data.IsPrevious.HasValue)
-                    builder.Append($", {nameof(data.IsPrevious)}: {data?.IsPrevious}");
+                    builder.Append($"{delimiter}{nameof(data.IsPrevious)}: {data?.IsPrevious}");
 
                 if (data.IsWrapper.HasValue)
-                    builder.Append($", {nameof(data.IsWrapper)}: {data?.IsWrapper}");
+                    builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data?.IsWrapper}");
             }
 
             return builder.ToString();

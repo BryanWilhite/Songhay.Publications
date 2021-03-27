@@ -68,6 +68,86 @@ namespace Songhay.Publications.Tests.Extensions
             }
         }
 
+        [Fact]
+        public void ToDisplayText_Test()
+        {
+            var testCollection = new (ISegment data, Func<ISegment, bool> test)[]
+            {
+                (
+                    null,
+                    data =>
+                    {
+                        var text = data.ToDisplayText();
+                        return text.Contains("the specified ") && text.Contains("is null.");
+                    }
+                ),
+                (
+                    new Segment
+                    {
+                        ClientId = "my-segment",
+                        SegmentName = "my-segment-name",
+                        IsActive = true,
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = data.ToDisplayText();
+                        return
+                            text.Contains(data.ClientId) &&
+                            text.Contains(data.SegmentName) &&
+                            text.Contains(data.IsActive.ToString()) &&
+                            text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+                (
+                    new Segment
+                    {
+                        ClientId = "my-segment",
+                        SegmentName = "my-segment-name",
+                        IsActive = true,
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = $"{data}";
+                        return
+                            text.Contains(data.ClientId) &&
+                            text.Contains(data.SegmentName) &&
+                            text.Contains(data.IsActive.ToString()) &&
+                            text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+                (
+                    new Segment
+                    {
+                        SegmentId = 999,
+                        ClientId = "my-segment",
+                        SegmentName = "my-segment-name",
+                        IsActive = true,
+                        InceptDate = DateTime.Now
+                    },
+                    data =>
+                    {
+                        var text = data.ToDisplayText(showIdOnly: true);
+                        return
+                            text.Contains(data.SegmentId.ToString()) &&
+                            text.Contains(data.ClientId) &&
+                            !text.Contains(data.SegmentName) &&
+                            !text.Contains(data.IsActive.ToString()) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                            ;
+                    }
+                ),
+            };
+
+            foreach (var item in testCollection)
+            {
+                Assert.True(item.test(item.data));
+            }
+        }
+
         [Theory]
         [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
         public void ToPublicationIndexEntryJObject_Test(FileInfo indexInfo)
