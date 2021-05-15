@@ -27,7 +27,7 @@ namespace Songhay.Publications.Models
             _publicationMeta = publicationMeta;
             _isbn13 = isbn13;
             _chapterSet = chapterSet;
-            _idpfDocumentPath = PublicationContext.GetCombinedPath(epubOebpsDirectory, PublicationFiles.IdpfcOpfManifest, shouldBeFile: true);
+            _idpfDocumentPath = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, PublicationFiles.IdpfcOpfManifest, fileIsExpected: true);
             _idpfDocument = XDocument.Load(_idpfDocumentPath);
         }
 

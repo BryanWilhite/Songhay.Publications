@@ -25,7 +25,7 @@ namespace Songhay.Publications.Models
             _publicationMeta = publicationMeta;
             _isbn13 = isbn13;
             _chapterSet = chapterSet;
-            _ncxDocumentPath = PublicationContext.GetCombinedPath(epubOebpsDirectory, PublicationFiles.DaisyConsortiumNcxToc, shouldBeFile: true);
+            _ncxDocumentPath = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, PublicationFiles.DaisyConsortiumNcxToc, fileIsExpected: true);
             _ncxDocument = XDocument.Load(_ncxDocumentPath);
         }
 

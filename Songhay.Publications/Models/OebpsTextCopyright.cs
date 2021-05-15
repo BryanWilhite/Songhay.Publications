@@ -28,7 +28,7 @@ namespace Songhay.Publications.Models
         public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
         {
             _publicationMeta = publicationMeta;
-            _documentPath = PublicationContext.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileCopyright, shouldBeFile: true);
+            _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileCopyright, fileIsExpected: true);
             _document = XDocument.Load(_documentPath);
             this.SetSpans();
         }

@@ -39,8 +39,8 @@ namespace Songhay.Publications.Models
         {
             var xhtml = PublicationNamespaces.Xhtml;
 
-            var xhtmlFile = PublicationContext.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileBiography, shouldBeFile: true);
-            var markdownFile = PublicationContext.GetCombinedPath(_markdownDirectory, PublicationFiles.EpubMarkdownBiography, shouldBeFile: true);
+            var xhtmlFile = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileBiography, fileIsExpected: true);
+            var markdownFile = ProgramFileUtility.GetCombinedPath(_markdownDirectory, PublicationFiles.EpubMarkdownBiography, fileIsExpected: true);
 
             Console.WriteLine("    markdown file {0}...", markdownFile);
             var markdown = File.ReadAllText(markdownFile);
@@ -59,7 +59,7 @@ namespace Songhay.Publications.Models
 
         internal void SetBiographyTemplate(string csxRoot)
         {
-            var biographyTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateBiography, shouldBeFile: true);
+            var biographyTemplateFile = ProgramFileUtility.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateBiography, fileIsExpected: true);
             _biographyTemplate = XDocument.Load(biographyTemplateFile);
         }
 

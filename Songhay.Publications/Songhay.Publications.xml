@@ -1752,37 +1752,6 @@
             The is active.
             </value>
         </member>
-        <member name="T:Songhay.Publications.Models.ITemporal">
-            <summary>
-            Centralizes time-based editorial properties
-            for <see cref="T:Songhay.Publications.Models.Segment" />, <see cref="T:Songhay.Publications.Models.Document" />
-            and <see cref="T:Songhay.Publications.Models.Fragment" /> models
-            </summary>
-        </member>
-        <member name="P:Songhay.Publications.Models.ITemporal.InceptDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.ITemporal.ModificationDate">
-            <summary>
-            Gets or sets the modification date.
-            </summary>
-            <value>
-            The modification date.
-            </value>
-        </member>
-        <member name="P:Songhay.Publications.Models.ITemporal.EndDate">
-            <summary>
-            Gets or sets the incept date.
-            </summary>
-            <value>
-            The incept date.
-            </value>
-        </member>
         <member name="T:Songhay.Publications.Models.MarkdownEntry">
             <summary>
             Defines a conventional, Publication entry

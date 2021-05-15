@@ -30,7 +30,7 @@ namespace Songhay.Publications.Models
         {
             _publicationMeta = publicationMeta;
             _chapterSet = chapterSet;
-            _documentPath = PublicationContext.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, shouldBeFile: true);
+            _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, fileIsExpected: true);
             _document = XDocument.Load(_documentPath);
         }
 

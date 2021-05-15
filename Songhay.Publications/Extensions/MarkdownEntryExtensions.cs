@@ -205,13 +205,6 @@ namespace Songhay.Publications.Extensions
         /// <returns></returns>
         public static MarkdownEntry Touch(this MarkdownEntry entry, DateTime date)
         {
-            string ConvertLocalToUtc(DateTime local)
-            { //TODO: move to SonghayCore
-                return local
-                    .ToUniversalTime()
-                    .ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
-            }
-
             return entry.WithEdit(i =>
             {
                 i.DoNullCheckForFrontMatter();
@@ -221,7 +214,7 @@ namespace Songhay.Publications.Extensions
                 if (!i.FrontMatter.HasProperty(propertyName))
                     throw new FormatException($"The expected date property, `{propertyName ?? "[null]"}`, is not here.");
 
-                i.FrontMatter[propertyName] = ConvertLocalToUtc(date);
+                i.FrontMatter[propertyName] = ProgramTypeUtility.ConvertDateTimeToUtc(date);
             });
         }
 
@@ -352,13 +345,6 @@ namespace Songhay.Publications.Extensions
                 throw new NullReferenceException($"The expected {nameof(MarkdownEntry)} is not here.");
             }
 
-            string ConvertLocalToUtc(DateTime local)
-            { //TODO: move to SonghayCore
-                return local
-                    .ToUniversalTime()
-                    .ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
-            }
-
             var slug = title.ToBlogSlug();
 
             var fm = new
@@ -368,8 +354,8 @@ namespace Songhay.Publications.Extensions
                 documentShortName = slug,
                 fileName,
                 path,
-                date = ConvertLocalToUtc(inceptDate),
-                modificationDate = ConvertLocalToUtc(inceptDate),
+                date = ProgramTypeUtility.ConvertDateTimeToUtc(inceptDate),
+                modificationDate = ProgramTypeUtility.ConvertDateTimeToUtc(inceptDate),
                 templateId = 0,
                 segmentId,
                 isRoot = false,

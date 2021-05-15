@@ -1,5 +1,4 @@
 using Songhay.Models;
-using System;
 
 namespace Songhay.Publications.Models
 {

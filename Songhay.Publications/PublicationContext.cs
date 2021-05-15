@@ -41,7 +41,7 @@ namespace Songhay.Publications
         {
             _chapterSet.ToList().ForEach(pair =>
             {
-                var chapterDirectory = GetCombinedPath(_markdownDirectory, pair.Value, shouldBeFile: false);
+                var chapterDirectory = ProgramFileUtility.GetCombinedPath(_markdownDirectory, pair.Value, fileIsExpected: false);
                 Console.WriteLine("looking for {0}...", pair.Key);
 
                 if (!Directory.Exists(chapterDirectory))
@@ -49,7 +49,7 @@ namespace Songhay.Publications
 
                 var chapter = new PublicationChapter(pair, _chapterTemplate, chapterDirectory);
                 var xhtml = chapter.GenerateXhtml();
-                var path = GetCombinedPath(_epubTextDirectory, string.Format("{0}.xhtml", pair.Key), shouldBeFile: true);
+                var path = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, string.Format("{0}.xhtml", pair.Key), fileIsExpected: true);
                 Console.WriteLine("writing to {0}...", path);
                 File.WriteAllText(path, xhtml, EpubUtility.GetUnicodeWithBomEncoding());
             });
@@ -110,7 +110,7 @@ namespace Songhay.Publications
             var author = jPublication.GetValue<string>("author");
 
             var xhtml = PublicationNamespaces.Xhtml;
-            var path = GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileTitle, shouldBeFile: true);
+            var path = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileTitle, fileIsExpected: true);
             var titleDocument = XDocument.Load(path);
 
             var h1Element = titleDocument.Root
@@ -138,24 +138,6 @@ namespace Songhay.Publications
             toc.Write();
         }
 
-        internal static string GetCombinedPath(string root, string path, bool shouldBeFile)
-        { //TODO consider adding to Core
-            var combinedPath = ProgramFileUtility.GetCombinedPath(root, path);
-
-            if(shouldBeFile)
-            {
-                if (!File.Exists(combinedPath))
-                    throw new FileNotFoundException($"The expected file, `{combinedPath ?? "[null]"}`, is not here.");
-            }
-            else
-            {
-                if (!Directory.Exists(combinedPath))
-                    throw new DirectoryNotFoundException($"The expected directory, `{combinedPath ?? "[null]"}`, is not here.");
-            }
-
-            return combinedPath;
-        }
-
         internal static void Throw(string errorMessage)
         {
             throw new Exception(errorMessage);
@@ -163,21 +145,21 @@ namespace Songhay.Publications
 
         internal void SetChapterTemplate(string csxRoot)
         {
-            var chapterTemplateFile = PublicationContext.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateChapter, shouldBeFile: true);
+            var chapterTemplateFile = ProgramFileUtility.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateChapter, fileIsExpected: true);
             _chapterTemplate = XDocument.Load(chapterTemplateFile);
         }
 
         internal void SetEpubOebpsDirectory()
         {
-            var epubRoot = GetCombinedPath(_publicationRoot, "epub", shouldBeFile: false);
-            _epubOebpsDirectory = GetCombinedPath(epubRoot, "OEBPS", shouldBeFile: false);
+            var epubRoot = ProgramFileUtility.GetCombinedPath(_publicationRoot, "epub", fileIsExpected: false);
+            _epubOebpsDirectory = ProgramFileUtility.GetCombinedPath(epubRoot, "OEBPS", fileIsExpected: false);
         }
 
         internal void SetEpubTextDirectory()
         {
-            var epubRoot = GetCombinedPath(_publicationRoot, "epub", shouldBeFile: false);
-            var epubOebpsDirectory = GetCombinedPath(epubRoot, "OEBPS", shouldBeFile: false);
-            _epubTextDirectory = GetCombinedPath(epubOebpsDirectory, "Text", shouldBeFile: false);
+            var epubRoot = ProgramFileUtility.GetCombinedPath(_publicationRoot, "epub", fileIsExpected: false);
+            var epubOebpsDirectory = ProgramFileUtility.GetCombinedPath(epubRoot, "OEBPS", fileIsExpected: false);
+            _epubTextDirectory = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, "Text", fileIsExpected: false);
         }
 
         internal void SetIsbn13()
@@ -198,13 +180,13 @@ namespace Songhay.Publications
 
         internal void SetMarkdownDirectory()
         {
-            _markdownDirectory = GetCombinedPath(_publicationRoot, "markdown", shouldBeFile: false);
+            _markdownDirectory = ProgramFileUtility.GetCombinedPath(_publicationRoot, "markdown", fileIsExpected: false);
         }
 
         internal void SetPublicationMetaAndChapterSet()
         {
-            var publicationMetaPath = GetCombinedPath(_publicationRoot, "json", shouldBeFile: false);
-            var publicationMetaFile = GetCombinedPath(publicationMetaPath, PublicationFiles.EpubMetadata, shouldBeFile: true);
+            var publicationMetaPath = ProgramFileUtility.GetCombinedPath(_publicationRoot, "json", fileIsExpected: false);
+            var publicationMetaFile = ProgramFileUtility.GetCombinedPath(publicationMetaPath, PublicationFiles.EpubMetadata, fileIsExpected: true);
 
             _publicationMeta = JObject.Parse(File.ReadAllText(publicationMetaFile));
             _chapterSet = _publicationMeta
