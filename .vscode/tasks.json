@@ -34,6 +34,24 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "dotnet pack [Songhay.Publications, Debug]",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "pack",
+                "${workspaceFolder}/Songhay.Publications/Songhay.Publications.csproj",
+                "--configuration",
+                "Debug",
+                "-p:NuspecFile=${workspaceFolder}/Songhay.Publications/Songhay.Publications.nuspec",
+                "-p:NuspecBasePath=${workspaceFolder}/Songhay.Publications",
+                "--output",
+                "${workspaceFolder}/Songhay.Publications",
+                "--verbosity",
+                "normal"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "dotnet publish [Songhay.Publications.Shell, linux-x64]",
             "command": "dotnet",
             "type": "shell",
