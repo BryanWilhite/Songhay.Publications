@@ -17,6 +17,7 @@ namespace Songhay.Publications.Models
         {
             this.Fragments = new List<Fragment>();
             this.IndexKeywords = new List<IndexKeyword>();
+            this.ResponsiveImages = new List<ResponsiveImage>();
         }
 
         /// <summary>
@@ -184,6 +185,15 @@ namespace Songhay.Publications.Models
         /// </value>
         [Display(AutoGenerateField = false)]
         public virtual ICollection<IndexKeyword> IndexKeywords { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of <see cref="ResponsiveImage" />.
+        /// </summary>
+        /// <value>
+        /// The collection of <see cref="ResponsiveImage" />.
+        /// </value>
+        [Display(AutoGenerateField = false)]
+        public virtual ICollection<ResponsiveImage> ResponsiveImages { get; set; }
 
         /// <summary>
         /// Converts the <see cref="Document"/> into a string.

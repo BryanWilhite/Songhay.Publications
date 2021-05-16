@@ -1035,6 +1035,14 @@
             The collection of <see cref="T:Songhay.Publications.Models.IndexKeyword" />.
             </value>
         </member>
+        <member name="P:Songhay.Publications.Models.Document.ResponsiveImages">
+            <summary>
+            Gets or sets the collection of <see cref="T:Songhay.Publications.Models.ResponsiveImage" />.
+            </summary>
+            <value>
+            The collection of <see cref="T:Songhay.Publications.Models.ResponsiveImage" />.
+            </value>
+        </member>
         <member name="M:Songhay.Publications.Models.Document.ToString">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.Document"/> into a string.
