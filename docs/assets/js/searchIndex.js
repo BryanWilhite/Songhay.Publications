@@ -39,286 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"PublicationNamespaces",
-            content:"PublicationNamespaces",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/PublicationNamespaces',
-            title:"PublicationNamespaces",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"OebpsTextDedication",
-            content:"OebpsTextDedication",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextDedication',
-            title:"OebpsTextDedication",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"ITemporal",
-            content:"ITemporal",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/ITemporal',
-            title:"ITemporal",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"IIndexKeywordGroup",
-            content:"IIndexKeywordGroup",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup',
-            title:"IIndexKeywordGroup",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
-            title:"Document",
-            content:"Document",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/Document',
-            title:"Document",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
-            title:"JObjectExtensions",
-            content:"JObjectExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/JObjectExtensions',
-            title:"JObjectExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:6,
-            title:"ResponsiveImage",
-            content:"ResponsiveImage",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/ResponsiveImage',
-            title:"ResponsiveImage",
-            description:""
-        }
-    );
-    a(
-        {
-            id:7,
-            title:"MarkdownEntry",
-            content:"MarkdownEntry",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry',
-            title:"MarkdownEntry",
-            description:""
-        }
-    );
-    a(
-        {
-            id:8,
-            title:"MarkdownEntryExtensions",
-            content:"MarkdownEntryExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/MarkdownEntryExtensions',
-            title:"MarkdownEntryExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:9,
-            title:"IGroupableExtensions",
-            content:"IGroupableExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IGroupableExtensions',
-            title:"IGroupableExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:10,
-            title:"IndexKeyword",
-            content:"IndexKeyword",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword',
-            title:"IndexKeyword",
-            description:""
-        }
-    );
-    a(
-        {
-            id:11,
-            title:"ProgramArgsExtensions",
-            content:"ProgramArgsExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/ProgramArgsExtensions',
-            title:"ProgramArgsExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:12,
-            title:"EpubUtility",
-            content:"EpubUtility",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications/EpubUtility',
-            title:"EpubUtility",
-            description:""
-        }
-    );
-    a(
-        {
-            id:13,
-            title:"MarkdownEntryUtility",
-            content:"MarkdownEntryUtility",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications/MarkdownEntryUtility',
-            title:"MarkdownEntryUtility",
-            description:""
-        }
-    );
-    a(
-        {
-            id:14,
-            title:"IDocumentExtensions",
-            content:"IDocumentExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions',
-            title:"IDocumentExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:15,
-            title:"ISegment",
-            content:"ISegment",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/ISegment',
-            title:"ISegment",
-            description:""
-        }
-    );
-    a(
-        {
-            id:16,
-            title:"PublicationChapter",
-            content:"PublicationChapter",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/PublicationChapter',
-            title:"PublicationChapter",
-            description:""
-        }
-    );
-    a(
-        {
-            id:17,
-            title:"MarkdownEntryActivity",
-            content:"MarkdownEntryActivity",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Activities/MarkdownEntryActivity',
-            title:"MarkdownEntryActivity",
-            description:""
-        }
-    );
-    a(
-        {
-            id:18,
-            title:"MarkdownUtility",
-            content:"MarkdownUtility",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications/MarkdownUtility',
-            title:"MarkdownUtility",
-            description:""
-        }
-    );
-    a(
-        {
-            id:19,
-            title:"IndexKeywordGroup",
-            content:"IndexKeywordGroup",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup',
-            title:"IndexKeywordGroup",
-            description:""
-        }
-    );
-    a(
-        {
-            id:20,
             title:"PublicationFiles",
             content:"PublicationFiles",
             description:'',
@@ -332,49 +52,63 @@ var searchModule = function() {
     );
     a(
         {
-            id:21,
-            title:"IDocument",
-            content:"IDocument",
+            id:1,
+            title:"ISegment",
+            content:"ISegment",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IDocument',
-            title:"IDocument",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/ISegment',
+            title:"ISegment",
             description:""
         }
     );
     a(
         {
-            id:22,
-            title:"DirectoryInfoExtensions",
-            content:"DirectoryInfoExtensions",
+            id:2,
+            title:"MarkdownPresentationDirectories",
+            content:"MarkdownPresentationDirectories",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/DirectoryInfoExtensions',
-            title:"DirectoryInfoExtensions",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories',
+            title:"MarkdownPresentationDirectories",
             description:""
         }
     );
     a(
         {
-            id:23,
-            title:"MarkdownPresentationCommands",
-            content:"MarkdownPresentationCommands",
+            id:3,
+            title:"IFragmentExtensions",
+            content:"IFragmentExtensions",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands',
-            title:"MarkdownPresentationCommands",
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions',
+            title:"IFragmentExtensions",
             description:""
         }
     );
     a(
         {
-            id:24,
+            id:4,
+            title:"IFragment",
+            content:"IFragment",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IFragment',
+            title:"IFragment",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
             title:"PublicationContext",
             content:"PublicationContext",
             description:'',
@@ -388,21 +122,77 @@ var searchModule = function() {
     );
     a(
         {
-            id:25,
-            title:"PublicationContextExtensions",
-            content:"PublicationContextExtensions",
+            id:6,
+            title:"IDocument",
+            content:"IDocument",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/PublicationContextExtensions',
-            title:"PublicationContextExtensions",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IDocument',
+            title:"IDocument",
             description:""
         }
     );
     a(
         {
-            id:26,
+            id:7,
+            title:"OebpsTextBiography",
+            content:"OebpsTextBiography",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextBiography',
+            title:"OebpsTextBiography",
+            description:""
+        }
+    );
+    a(
+        {
+            id:8,
+            title:"ProgramArgsExtensions",
+            content:"ProgramArgsExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/ProgramArgsExtensions',
+            title:"ProgramArgsExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:9,
+            title:"ImageSize",
+            content:"ImageSize",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/ImageSize',
+            title:"ImageSize",
+            description:""
+        }
+    );
+    a(
+        {
+            id:10,
+            title:"OebpsTextToc",
+            content:"OebpsTextToc",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextToc',
+            title:"OebpsTextToc",
+            description:""
+        }
+    );
+    a(
+        {
+            id:11,
             title:"ResponsiveImageExtensions",
             content:"ResponsiveImageExtensions",
             description:'',
@@ -416,7 +206,161 @@ var searchModule = function() {
     );
     a(
         {
-            id:27,
+            id:12,
+            title:"PublicationContextExtensions",
+            content:"PublicationContextExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/PublicationContextExtensions',
+            title:"PublicationContextExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:13,
+            title:"CloneInitializers",
+            content:"CloneInitializers",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/CloneInitializers',
+            title:"CloneInitializers",
+            description:""
+        }
+    );
+    a(
+        {
+            id:14,
+            title:"JObjectExtensions",
+            content:"JObjectExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/JObjectExtensions',
+            title:"JObjectExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:15,
+            title:"MarkdownEntryExtensions",
+            content:"MarkdownEntryExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/MarkdownEntryExtensions',
+            title:"MarkdownEntryExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:16,
+            title:"SearchIndexActivity",
+            content:"SearchIndexActivity",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Activities/SearchIndexActivity',
+            title:"SearchIndexActivity",
+            description:""
+        }
+    );
+    a(
+        {
+            id:17,
+            title:"PublicationNamespaces",
+            content:"PublicationNamespaces",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/PublicationNamespaces',
+            title:"PublicationNamespaces",
+            description:""
+        }
+    );
+    a(
+        {
+            id:18,
+            title:"DaisyConsortiumNcx",
+            content:"DaisyConsortiumNcx",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/DaisyConsortiumNcx',
+            title:"DaisyConsortiumNcx",
+            description:""
+        }
+    );
+    a(
+        {
+            id:19,
+            title:"Fragment",
+            content:"Fragment",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/Fragment',
+            title:"Fragment",
+            description:""
+        }
+    );
+    a(
+        {
+            id:20,
+            title:"MarkdownPresentationCommands",
+            content:"MarkdownPresentationCommands",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationCommands',
+            title:"MarkdownPresentationCommands",
+            description:""
+        }
+    );
+    a(
+        {
+            id:21,
+            title:"MarkdownUtility",
+            content:"MarkdownUtility",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications/MarkdownUtility',
+            title:"MarkdownUtility",
+            description:""
+        }
+    );
+    a(
+        {
+            id:22,
+            title:"IIndexKeywordGroup",
+            content:"IIndexKeywordGroup",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeywordGroup',
+            title:"IIndexKeywordGroup",
+            description:""
+        }
+    );
+    a(
+        {
+            id:23,
             title:"IdpfPackage",
             content:"IdpfPackage",
             description:'',
@@ -425,6 +369,62 @@ var searchModule = function() {
         {
             url:'/Songhay.Publications/api/Songhay.Publications.Models/IdpfPackage',
             title:"IdpfPackage",
+            description:""
+        }
+    );
+    a(
+        {
+            id:24,
+            title:"ResponsiveImage",
+            content:"ResponsiveImage",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/ResponsiveImage',
+            title:"ResponsiveImage",
+            description:""
+        }
+    );
+    a(
+        {
+            id:25,
+            title:"IGroupableExtensions",
+            content:"IGroupableExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IGroupableExtensions',
+            title:"IGroupableExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:26,
+            title:"IndexCommands",
+            content:"IndexCommands",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands',
+            title:"IndexCommands",
+            description:""
+        }
+    );
+    a(
+        {
+            id:27,
+            title:"OebpsTextCopyright",
+            content:"OebpsTextCopyright",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextCopyright',
+            title:"OebpsTextCopyright",
             description:""
         }
     );
@@ -445,76 +445,6 @@ var searchModule = function() {
     a(
         {
             id:29,
-            title:"CloneInitializers",
-            content:"CloneInitializers",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/CloneInitializers',
-            title:"CloneInitializers",
-            description:""
-        }
-    );
-    a(
-        {
-            id:30,
-            title:"DaisyConsortiumNcx",
-            content:"DaisyConsortiumNcx",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/DaisyConsortiumNcx',
-            title:"DaisyConsortiumNcx",
-            description:""
-        }
-    );
-    a(
-        {
-            id:31,
-            title:"IFragmentExtensions",
-            content:"IFragmentExtensions",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IFragmentExtensions',
-            title:"IFragmentExtensions",
-            description:""
-        }
-    );
-    a(
-        {
-            id:32,
-            title:"SearchIndexActivity",
-            content:"SearchIndexActivity",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Activities/SearchIndexActivity',
-            title:"SearchIndexActivity",
-            description:""
-        }
-    );
-    a(
-        {
-            id:33,
-            title:"IIndexKeyword",
-            content:"IIndexKeyword",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword',
-            title:"IIndexKeyword",
-            description:""
-        }
-    );
-    a(
-        {
-            id:34,
             title:"PublicationAppScalars",
             content:"PublicationAppScalars",
             description:'',
@@ -528,133 +458,161 @@ var searchModule = function() {
     );
     a(
         {
-            id:35,
-            title:"OebpsTextBiography",
-            content:"OebpsTextBiography",
+            id:30,
+            title:"DirectoryInfoExtensions",
+            content:"DirectoryInfoExtensions",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextBiography',
-            title:"OebpsTextBiography",
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/DirectoryInfoExtensions',
+            title:"DirectoryInfoExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:31,
+            title:"IIndexKeyword",
+            content:"IIndexKeyword",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IIndexKeyword',
+            title:"IIndexKeyword",
+            description:""
+        }
+    );
+    a(
+        {
+            id:32,
+            title:"MarkdownEntry",
+            content:"MarkdownEntry",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownEntry',
+            title:"MarkdownEntry",
+            description:""
+        }
+    );
+    a(
+        {
+            id:33,
+            title:"OebpsTextDedication",
+            content:"OebpsTextDedication",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextDedication',
+            title:"OebpsTextDedication",
+            description:""
+        }
+    );
+    a(
+        {
+            id:34,
+            title:"IndexKeyword",
+            content:"IndexKeyword",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexKeyword',
+            title:"IndexKeyword",
+            description:""
+        }
+    );
+    a(
+        {
+            id:35,
+            title:"MarkdownEntryUtility",
+            content:"MarkdownEntryUtility",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications/MarkdownEntryUtility',
+            title:"MarkdownEntryUtility",
             description:""
         }
     );
     a(
         {
             id:36,
-            title:"ISegmentExtensions",
-            content:"ISegmentExtensions",
+            title:"EpubUtility",
+            content:"EpubUtility",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions',
-            title:"ISegmentExtensions",
+            url:'/Songhay.Publications/api/Songhay.Publications/EpubUtility',
+            title:"EpubUtility",
             description:""
         }
     );
     a(
         {
             id:37,
-            title:"ImageCandidate",
-            content:"ImageCandidate",
+            title:"MarkdownEntryActivity",
+            content:"MarkdownEntryActivity",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/ImageCandidate',
-            title:"ImageCandidate",
+            url:'/Songhay.Publications/api/Songhay.Publications.Activities/MarkdownEntryActivity',
+            title:"MarkdownEntryActivity",
             description:""
         }
     );
     a(
         {
             id:38,
-            title:"IFragment",
-            content:"IFragment",
+            title:"IDocumentExtensions",
+            content:"IDocumentExtensions",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IFragment',
-            title:"IFragment",
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/IDocumentExtensions',
+            title:"IDocumentExtensions",
             description:""
         }
     );
     a(
         {
             id:39,
-            title:"ImageSize",
-            content:"ImageSize",
+            title:"Document",
+            content:"Document",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/ImageSize',
-            title:"ImageSize",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/Document',
+            title:"Document",
             description:""
         }
     );
     a(
         {
             id:40,
-            title:"OebpsTextCopyright",
-            content:"OebpsTextCopyright",
+            title:"IndexKeywordGroup",
+            content:"IndexKeywordGroup",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextCopyright',
-            title:"OebpsTextCopyright",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexKeywordGroup',
+            title:"IndexKeywordGroup",
             description:""
         }
     );
     a(
         {
             id:41,
-            title:"MarkdownPresentationDirectories",
-            content:"MarkdownPresentationDirectories",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/MarkdownPresentationDirectories',
-            title:"MarkdownPresentationDirectories",
-            description:""
-        }
-    );
-    a(
-        {
-            id:42,
-            title:"Fragment",
-            content:"Fragment",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/Fragment',
-            title:"Fragment",
-            description:""
-        }
-    );
-    a(
-        {
-            id:43,
-            title:"OebpsTextToc",
-            content:"OebpsTextToc",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/OebpsTextToc',
-            title:"OebpsTextToc",
-            description:""
-        }
-    );
-    a(
-        {
-            id:44,
             title:"PublicationsActivitiesGetter",
             content:"PublicationsActivitiesGetter",
             description:'',
@@ -668,15 +626,43 @@ var searchModule = function() {
     );
     a(
         {
-            id:45,
-            title:"IndexCommands",
-            content:"IndexCommands",
+            id:42,
+            title:"ImageCandidate",
+            content:"ImageCandidate",
             description:'',
             tags:''
         },
         {
-            url:'/Songhay.Publications/api/Songhay.Publications.Models/IndexCommands',
-            title:"IndexCommands",
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/ImageCandidate',
+            title:"ImageCandidate",
+            description:""
+        }
+    );
+    a(
+        {
+            id:43,
+            title:"ISegmentExtensions",
+            content:"ISegmentExtensions",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Extensions/ISegmentExtensions',
+            title:"ISegmentExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:44,
+            title:"PublicationChapter",
+            content:"PublicationChapter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Songhay.Publications/api/Songhay.Publications.Models/PublicationChapter',
+            title:"PublicationChapter",
             description:""
         }
     );
