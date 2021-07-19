@@ -194,6 +194,44 @@ namespace Songhay.Publications.Extensions
         }
 
         /// <summary>
+        /// Converts the <see cref="IEnumerable{ISegment}" /> to <see cref="IEnumerable{IIndexEntry}" />.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public static IEnumerable<IIndexEntry> ToPublicationIndexEntries(this IEnumerable<ISegment> data)
+        {
+            if(data == null) throw new ArgumentNullException(nameof(data));
+
+            return data.Select(i => i.ToPublicationIndexEntry());
+        }
+
+        /// <summary>
+        /// Converts the <see cref="ISegment" /> to <see cref="IIndexEntry" />.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public static IIndexEntry ToPublicationIndexEntry(this ISegment data)
+        {
+            if(data == null) throw new ArgumentNullException(nameof(data));
+
+            var segment = data as Segment;
+
+            return new IndexEntry
+            {
+                Segments = segment.Segments.Select(s => s.ToPublicationIndexEntry()).ToArray(),
+                Documents = segment.Documents.ToArray(),
+
+                ClientId = segment.ClientId,
+                EndDate = segment.EndDate,
+                InceptDate = segment.InceptDate,
+                IsActive = segment.IsActive,
+                ModificationDate = segment.ModificationDate,
+                ParentSegmentId = segment.ParentSegmentId,
+                SegmentId = segment.SegmentId,
+                SegmentName = segment.SegmentName,
+                SortOrdinal = segment.SortOrdinal,
+            };
+        }
+
+        /// <summary>
         /// Converts the <see cref="ISegment" /> to <see cref="JObject" />
         /// in the shape of a Publications Index Entry.
         /// </summary>

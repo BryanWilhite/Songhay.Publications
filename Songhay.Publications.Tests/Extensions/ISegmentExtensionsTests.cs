@@ -150,6 +150,42 @@ namespace Songhay.Publications.Tests.Extensions
 
         [Theory]
         [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
+        public void ToPublicationIndexEntries_Test(FileInfo indexInfo)
+        {
+            var json = File.ReadAllText(indexInfo.FullName);
+
+            var segments = JsonConvert.DeserializeObject<IEnumerable<Segment>>(json);
+
+            Assert.NotNull(segments);
+            Assert.True(segments.Any());
+
+            this._testOutputHelper.WriteLine($"converting enumeration of {nameof(Segment)}...");
+
+            var entries = segments.ToPublicationIndexEntries();
+            Assert.NotEmpty(entries);
+        }
+
+        [Theory]
+        [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
+        public void ToPublicationIndexEntry_Test(FileInfo indexInfo)
+        {
+            var json = File.ReadAllText(indexInfo.FullName);
+
+            var segments = JsonConvert.DeserializeObject<IEnumerable<Segment>>(json);
+
+            Assert.NotNull(segments);
+            Assert.True(segments.Any());
+
+            var segment = segments.First();
+
+            this._testOutputHelper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
+
+            var entry = segment.ToPublicationIndexEntry();
+            Assert.NotNull(entry);
+        }
+
+        [Theory]
+        [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
         public void ToPublicationIndexEntryJObject_Test(FileInfo indexInfo)
         {
             var json = File.ReadAllText(indexInfo.FullName);

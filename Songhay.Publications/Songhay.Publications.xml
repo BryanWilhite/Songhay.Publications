@@ -451,6 +451,18 @@
             <param name="data">The data.</param>
             <param name="group">The group.</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexEntries(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.ISegment})">
+            <summary>
+            Converts the <see cref="T:System.Collections.Generic.IEnumerable`1" /> to <see cref="T:System.Collections.Generic.IEnumerable`1" />.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Models.ISegment)">
+            <summary>
+            Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Songhay.Publications.Models.IIndexEntry" />.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.ISegmentExtensions.ToPublicationIndexEntryJObject(Songhay.Publications.Models.ISegment,System.Boolean)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />
@@ -1608,6 +1620,90 @@
         <member name="F:Songhay.Publications.Models.IndexCommands.CommandNameGenerateCompressed11tySearchIndex">
             <summary>
             Conventional command name
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.IndexEntry">
+            <summary>
+            Implements <see cref="T:Songhay.Publications.Models.IIndexEntry"/>.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.Segments">
+            <summary>
+            Gets or sets child segments.
+            </summary>
+            <value>
+            The child segments.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.Documents">
+            <summary>
+            Gets or sets the documents.
+            </summary>
+            <value>
+            The documents.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.SegmentId">
+            <summary>
+            Gets or sets the segment identifier.
+            </summary>
+            <value>
+            The segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.SegmentName">
+            <summary>
+            Gets or sets the name of the segment.
+            </summary>
+            <value>
+            The name of the segment.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.SortOrdinal">
+            <summary>
+            Gets or sets the sort ordinal.
+            </summary>
+            <value>
+            The sort ordinal.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.ParentSegmentId">
+            <summary>
+            Gets or sets the parent segment identifier.
+            </summary>
+            <value>
+            The parent segment identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.IsActive">
+            <summary>
+            Gets or sets the is active.
+            </summary>
+            <value>
+            The is active.
+            </value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.EndDate">
+            <summary>
+            End/expiration <see cref="T:System.DateTime"/> of the item.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.InceptDate">
+            <summary>
+            Origin <see cref="T:System.DateTime"/> of the item.
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IndexEntry.ModificationDate">
+            <summary>
+            Modification/editorial <see cref="T:System.DateTime"/> of the item.
             </summary>
         </member>
         <member name="T:Songhay.Publications.Models.IndexKeyword">
