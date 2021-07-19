@@ -1474,6 +1474,23 @@
             The is active.
             </value>
         </member>
+        <member name="T:Songhay.Publications.Models.IIndexEntry">
+            <summary>
+            Defines a Publication Index Entry
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexEntry.Segments">
+            <summary>
+            Index Segments
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Songhay.Publications.Models.IIndexEntry.Documents">
+            <summary>
+            Index Documents
+            </summary>
+            <value></value>
+        </member>
         <member name="T:Songhay.Publications.Models.IIndexKeyword">
             <summary>
             Publication Index Keyword
@@ -2162,6 +2179,17 @@
             <value>
             The sizes.
             </value>
+        </member>
+        <member name="T:Songhay.Publications.Models.SearchIndexEntry">
+            <summary>
+            Defines the Search Index Entry
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.SearchIndexEntry.Extract">
+            <summary>
+            The <see cref="T:Songhay.Publications.Models.Document"/> Extract
+            </summary>
+            <value></value>
         </member>
         <member name="T:Songhay.Publications.Models.Segment">
             <summary>
