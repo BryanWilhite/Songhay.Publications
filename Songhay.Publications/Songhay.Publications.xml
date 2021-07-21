@@ -382,6 +382,20 @@
             <param name="group"></param>
             <param name="name"></param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.IIndexEntryExtensions">
+            <summary>
+            Extensions of <see cref="T:Songhay.Publications.Models.IIndexEntry"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IIndexEntryExtensions.ToJson(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IIndexEntry})">
+            <summary>
+            Converts the <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            to a JSON <see cref="T:System.String"/>
+            with conventional <see cref="T:System.Text.Json.JsonSerializerOptions"/>.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
         <member name="T:Songhay.Publications.Extensions.ISegmentExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.Models.ISegment"/>
@@ -1626,6 +1640,21 @@
             <summary>
             Implements <see cref="T:Songhay.Publications.Models.IIndexEntry"/>.
             </summary>
+            <remarks>
+            The opinion here is that this class demonstrates
+            the advantages of Typescript over a “classic” OOP language.
+            
+            The ability to cast an anonymous object into an interface
+            would eliminate the need for this class.
+            
+            For more detail, see https://github.com/dotnet/roslyn/issues/13#issuecomment-70338359
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Models.IndexEntry.#ctor(Songhay.Publications.Models.Segment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Songhay.Publications.PublicationContext"/> class.
+            </summary>
+            <param name="data"></param>
         </member>
         <member name="P:Songhay.Publications.Models.IndexEntry.Segments">
             <summary>

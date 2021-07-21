@@ -214,20 +214,12 @@ namespace Songhay.Publications.Extensions
 
             var segment = data as Segment;
 
-            return new IndexEntry
+            return new IndexEntry(segment)
             {
-                Segments = segment.Segments.Select(s => s.ToPublicationIndexEntry()).ToArray(),
-                Documents = segment.Documents.ToArray(),
-
-                ClientId = segment.ClientId,
-                EndDate = segment.EndDate,
-                InceptDate = segment.InceptDate,
-                IsActive = segment.IsActive,
-                ModificationDate = segment.ModificationDate,
-                ParentSegmentId = segment.ParentSegmentId,
-                SegmentId = segment.SegmentId,
-                SegmentName = segment.SegmentName,
-                SortOrdinal = segment.SortOrdinal,
+                Segments = segment
+                    .Segments
+                    .Select(s => s.ToPublicationIndexEntry())
+                    .ToArray(),
             };
         }
 

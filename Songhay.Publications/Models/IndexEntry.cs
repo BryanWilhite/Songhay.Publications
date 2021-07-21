@@ -1,12 +1,43 @@
 using System;
+using System.Linq;
 
 namespace Songhay.Publications.Models
 {
     /// <summary>
     /// Implements <see cref="IIndexEntry"/>.
     /// </summary>
+    /// <remarks>
+    /// The opinion here is that this class demonstrates
+    /// the advantages of Typescript over a “classic” OOP language.
+    /// 
+    /// The ability to cast an anonymous object into an interface
+    /// would eliminate the need for this class.
+    /// 
+    /// For more detail, see https://github.com/dotnet/roslyn/issues/13#issuecomment-70338359
+    /// </remarks>
     public class IndexEntry : IIndexEntry
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PublicationContext"/> class.
+        /// </summary>
+        /// <param name="data"></param>
+        public IndexEntry(Segment data)
+        {
+            if(data == null) throw new ArgumentNullException(nameof(data));
+
+            Documents = data.Documents.ToArray();
+
+            ClientId = data.ClientId;
+            EndDate = data.EndDate;
+            InceptDate = data.InceptDate;
+            IsActive = data.IsActive;
+            ModificationDate = data.ModificationDate;
+            ParentSegmentId = data.ParentSegmentId;
+            SegmentId = data.SegmentId;
+            SegmentName = data.SegmentName;
+            SortOrdinal = data.SortOrdinal;
+        }
+
         /// <summary>
         /// Gets or sets child segments.
         /// </summary>

@@ -149,8 +149,10 @@ namespace Songhay.Publications.Tests.Extensions
         }
 
         [Theory]
-        [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
-        public void ToPublicationIndexEntries_Test(FileInfo indexInfo)
+        [ProjectFileData(typeof(ISegmentExtensionsTests),
+            "../../../gen-web-data/responsive-layouts/index.json",
+            "../../../json/ToPublicationIndexEntries_Test_output.json")]
+        public void ToPublicationIndexEntries_Test(FileInfo indexInfo, FileInfo outputInfo)
         {
             var json = File.ReadAllText(indexInfo.FullName);
 
@@ -163,6 +165,10 @@ namespace Songhay.Publications.Tests.Extensions
 
             var entries = segments.ToPublicationIndexEntries();
             Assert.NotEmpty(entries);
+
+            var json_output = entries.ToJson();
+
+            File.WriteAllText(outputInfo.FullName, json_output);
         }
 
         [Theory]
