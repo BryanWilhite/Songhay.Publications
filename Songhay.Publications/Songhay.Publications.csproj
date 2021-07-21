@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>5.2.6</AssemblyVersion>
+    <AssemblyVersion>5.2.7</AssemblyVersion>
     <RootNamespace>Songhay.Publications</RootNamespace>
 
     <Title>Songhay Publications</Title>
@@ -18,7 +18,7 @@
     <PackageIcon>..\songhay_icon.png</PackageIcon>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-    <PackageReleaseNotes>📦🔼 updated core dependencies</PackageReleaseNotes>
+    <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/46</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
