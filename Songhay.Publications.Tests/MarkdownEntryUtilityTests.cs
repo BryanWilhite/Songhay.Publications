@@ -13,7 +13,7 @@ namespace Songhay.Publications.Tests
         {
             entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
 
-            var entry = MarkdownEntryUtility.GenerateEntryFor11ty(entryRoot, title);
+            var entry = MarkdownEntryUtility.GenerateEntryFor11Ty(entryRoot, title);
 
             Assert.NotNull(entry);
             Assert.True(File.Exists(ProgramFileUtility.GetCombinedPath(entryRoot, $"{entry.FrontMatter.GetValue<string>("clientId")}.md")));
@@ -26,7 +26,7 @@ namespace Songhay.Publications.Tests
             entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, entryRoot);
             presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(this.GetType().Assembly, presentationRoot);
 
-            var path = MarkdownEntryUtility.PublishEntryFor11ty(entryRoot, presentationRoot, fileName);
+            var path = MarkdownEntryUtility.PublishEntryFor11Ty(entryRoot, presentationRoot, fileName);
 
             Assert.True(File.Exists(path));
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -11,20 +12,23 @@ using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Models;
 using System.Xml.Linq;
+using FluentValidation.Results;
+using Songhay.Publications.Validators;
 
 namespace Songhay.Publications.Extensions
 {
     /// <summary>
     /// Extensions of <see cref="IDocument"/>
     /// </summary>
+    // ReSharper disable once InconsistentNaming
     public static class IDocumentExtensions
     {
-        static IDocumentExtensions() => traceSource = TraceSources
+        static IDocumentExtensions() => TraceSource = TraceSources
             .Instance
             .GetTraceSourceFromConfiguredName()
             .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Clones the instance of <see cref="IDocument"/>.
@@ -49,7 +53,7 @@ namespace Songhay.Publications.Extensions
 
             var first = data.FirstOrDefault(predicate);
 
-            traceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+            TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
 
             return first;
         }
@@ -64,16 +68,13 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) throw new ArgumentNullException(nameof(data));
 
-            var document = data as Document;
-            if (document == null) return false;
+            if (!(data is Document document)) return false;
 
-            if (!document.Fragments.Any())
-            {
-                traceSource?.TraceError($"The expected child {nameof(Document.Fragments)} are not here.");
-                return false;
-            };
+            if (document.Fragments.Any()) return true;
 
-            return true;
+            TraceSource?.TraceError($"The expected child {nameof(Document.Fragments)} are not here.");
+
+            return false;
         }
 
         /// <summary>
@@ -86,8 +87,8 @@ namespace Songhay.Publications.Extensions
         public static bool IsTemplatable(this IDocument data)
         {
             if (data == null) return false;
-            if (string.IsNullOrEmpty(data.FileName)) return false;
-            return data.FileName.EndsWith(".html");
+
+            return !string.IsNullOrEmpty(data.FileName) && data.FileName.EndsWith(".html");
         }
 
         /// <summary>
@@ -115,12 +116,12 @@ namespace Songhay.Publications.Extensions
             if (data == null) return null;
 
             return new XElement("item",
-                new XAttribute(nameof(Document.SegmentId), data.SegmentId),
-                new XAttribute(nameof(Document.DocumentId), data.DocumentId),
+                new XAttribute(nameof(Document.SegmentId), data.SegmentId.GetValueOrDefault()),
+                new XAttribute(nameof(Document.DocumentId), data.DocumentId.GetValueOrDefault()),
                 new XAttribute(nameof(Document.Title), data.Title),
                 new XAttribute("Template", templateFileName),
                 new XAttribute("PathAndFileName", string.Concat(data.Path, data.FileName)),
-                new XAttribute(nameof(Document.IsRoot), data.IsRoot));
+                new XAttribute(nameof(Document.IsRoot), data.IsRoot.GetValueOrDefault()));
         }
 
         /// <summary>
@@ -148,33 +149,32 @@ namespace Songhay.Publications.Extensions
 
             if (data.DocumentId.HasValue)
             {
-                builder.Append($"{nameof(data.DocumentId)}: {data?.DocumentId}");
+                builder.Append($"{nameof(data.DocumentId)}: {data.DocumentId}");
                 delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data.ClientId}");
                 delimiter = ", ";
             }
 
-            if (!showIdOnly)
-            {
-                if (!string.IsNullOrEmpty(data.Title))
-                    builder.Append($"{delimiter}{nameof(data.Title)}: {data.Title}");
+            if (showIdOnly) return builder.ToString();
 
-                if (data.IsActive.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
+            if (!string.IsNullOrEmpty(data.Title))
+                builder.Append($"{delimiter}{nameof(data.Title)}: {data.Title}");
 
-                if (data.IsRoot.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsRoot)}: { data.IsRoot}");
+            if (data.IsActive.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
 
-                if (!string.IsNullOrEmpty(data.FileName))
-                    builder.Append($"{delimiter}{nameof(data.Path)}: {data.Path}{delimiter}{nameof(data.FileName)}: {data.FileName}");
+            if (data.IsRoot.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsRoot)}: { data.IsRoot}");
 
-                if (!string.IsNullOrEmpty(data.DocumentShortName))
-                    builder.Append($"{delimiter}{nameof(data.DocumentShortName)}: {data.DocumentShortName}");
-            }
+            if (!string.IsNullOrEmpty(data.FileName))
+                builder.Append($"{delimiter}{nameof(data.Path)}: {data.Path}{delimiter}{nameof(data.FileName)}: {data.FileName}");
+
+            if (!string.IsNullOrEmpty(data.DocumentShortName))
+                builder.Append($"{delimiter}{nameof(data.DocumentShortName)}: {data.DocumentShortName}");
 
             return builder.ToString();
         }
@@ -232,6 +232,22 @@ namespace Songhay.Publications.Extensions
             };
 
             return dataOut;
+        }
+
+        /// <summary>
+        /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
+        /// </summary>
+        /// <param name="data">the <see cref="IDocument"/> data</param>
+        /// <returns></returns>
+        public static ValidationResult ToValidationResult(this IDocument data)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+            if (!(data is Document instance))
+                throw new DataException($"The expected {nameof(Document)} data is not here.");
+
+            var validator = new DocumentValidator();
+
+            return validator.Validate(instance);
         }
 
         /// <summary>

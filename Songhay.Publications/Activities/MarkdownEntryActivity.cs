@@ -20,15 +20,15 @@ namespace Songhay.Publications.Activities
     /// <seealso cref="IActivity" />
     public class MarkdownEntryActivity : IActivity
     {
-        static MarkdownEntryActivity() => traceSource = TraceSources
+        static MarkdownEntryActivity() => TraceSource = TraceSources
             .Instance
             .GetTraceSourceFromConfiguredName()
             .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
-        /// Wrapper for <see cref="MarkdownEntryExtensions.With11tyExtract(MarkdownEntry, int)"/>.
+        /// Wrapper for <see cref="MarkdownEntryExtensions.With11TyExtract"/>.
         /// </summary>
         /// <param name="entryPath">The entry path.</param>
         /// <exception cref="FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
@@ -40,13 +40,13 @@ namespace Songhay.Publications.Activities
             var entryInfo = new FileInfo(entryPath);
             var entry = entryInfo.ToMarkdownEntry();
             var finalEdit = entry
-                .With11tyExtract(255)
+                .With11TyExtract(255)
                 .ToFinalEdit();
 
             File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
+            TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Songhay.Publications.Activities
 
             var entryInfo = new FileInfo(entryPath);
 
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
+            TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
 
             var entry = entryInfo.ToMarkdownEntry();
             var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
@@ -73,28 +73,31 @@ namespace Songhay.Publications.Activities
                 KeyValuePair<Uri, Uri>? nullable = null;
                 try
                 {
-                    traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...");
+                    TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...");
                     nullable = await expandableUri.ToExpandedUriPairAsync();
-                    traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.");
+                    TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.");
                 }
                 catch (Exception ex)
                 {
-                    traceSource?.TraceError(ex);
+                    TraceSource?.TraceError(ex);
                 }
 
                 return nullable;
             }
 
-            var tasks = uris.Select(ExpandUriPairAsync).Where(i => i.Result.HasValue).ToArray();
+            var tasks = uris
+                .Select(ExpandUriPairAsync)
+                .Where(i => i.Result.HasValue)
+                .ToArray();
 
             Task.WaitAll(tasks);
 
-            var findChangeSet = tasks.Select(i => i.Result.Value).ToDictionary(k => k.Key, v => v.Value);
+            var findChangeSet = tasks.Select(i => i.Result.GetValueOrDefault()).ToDictionary(k => k.Key, v => v.Value);
 
             foreach (var pair in findChangeSet)
                 entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
 
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
+            TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
             File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
         }
 
@@ -132,7 +135,7 @@ namespace Songhay.Publications.Activities
         /// <exception cref="NullReferenceException">The expected {nameof(entry)} is not here.</exception>
         public static void GenerateEntry(DirectoryInfo entryDraftsRootInfo, string title)
         {
-            var entry = MarkdownEntryUtility.GenerateEntryFor11ty(entryDraftsRootInfo.FullName, title);
+            var entry = MarkdownEntryUtility.GenerateEntryFor11Ty(entryDraftsRootInfo.FullName, title);
 
             if (entry == null)
             {
@@ -140,20 +143,20 @@ namespace Songhay.Publications.Activities
             }
 
             var clientId = entry.FrontMatter.GetValue<string>("clientId");
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
+            TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
         }
 
         /// <summary>
-        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11ty(string, string, string)"/>.
+        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11Ty"/>.
         /// </summary>
         /// <param name="entryDraftsRootInfo">The entry drafts root information.</param>
         /// <param name="entryRootInfo">The entry root information.</param>
         /// <param name="entryFileName">Name of the entry file.</param>
         public static void PublishEntry(DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName)
         {
-            var path = MarkdownEntryUtility.PublishEntryFor11ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
+            var path = MarkdownEntryUtility.PublishEntryFor11Ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
 
-            traceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
+            TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
         }
 
         /// <summary>
@@ -173,12 +176,12 @@ namespace Songhay.Publications.Activities
         /// <param name="args">The arguments.</param>
         public void Start(ProgramArgs args)
         {
-            traceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
+            TraceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
 
             this.SetContext(args);
 
             var command = this._jSettings.GetPublicationCommand();
-            traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+            TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
             if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
@@ -186,7 +189,7 @@ namespace Songhay.Publications.Activities
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
             else
             {
-                traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+                TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
             }
         }
 
@@ -232,7 +235,7 @@ namespace Songhay.Publications.Activities
 
             this._presentationInfo = presentationInfo;
 
-            traceSource?.TraceVerbose($"applying settings...");
+            TraceSource?.TraceVerbose($"applying settings...");
             this._jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
         }
 

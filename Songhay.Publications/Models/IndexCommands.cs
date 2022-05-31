@@ -8,6 +8,6 @@
         /// <summary>
         /// Conventional command name
         /// </summary>
-        public const string CommandNameGenerateCompressed11tySearchIndex = "GenerateCompressed11tySearchIndex";
+        public const string CommandNameGenerateCompressed11TySearchIndex = "GenerateCompressed11tySearchIndex";
     }
 }

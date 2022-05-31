@@ -21,12 +21,12 @@ namespace Songhay.Publications.Activities
     /// <seealso cref="IActivityConfigurationSupport" />
     public class SearchIndexActivity : IActivity
     {
-        static SearchIndexActivity() => traceSource = TraceSources
+        static SearchIndexActivity() => TraceSource = TraceSources
            .Instance
            .GetTraceSourceFromConfiguredName()
            .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Compresses the Publications Search Index.
@@ -66,7 +66,7 @@ namespace Songhay.Publications.Activities
         /// indexRootInfo
         /// or
         /// indexFileName</exception>
-        public static FileInfo[] GenerateSearchIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
+        public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
 
         /// <summary>
         /// Generates the Publications Search Index from 11ty entries.
@@ -81,7 +81,7 @@ namespace Songhay.Publications.Activities
         /// indexRootInfo
         /// or
         /// indexFileName</exception>
-        public static FileInfo[] GenerateSearchIndexFrom11tyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
+        public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
         {
             if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
             if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
@@ -131,25 +131,25 @@ namespace Songhay.Publications.Activities
         /// <param name="args">The arguments.</param>
         public void Start(ProgramArgs args)
         {
-            traceSource?.WriteLine($"starting {nameof(SearchIndexActivity)} with {nameof(ProgramArgs)}: {args} ");
+            TraceSource?.WriteLine($"starting {nameof(SearchIndexActivity)} with {nameof(ProgramArgs)}: {args} ");
             this.SetContext(args);
 
             var command = this._jSettings.GetPublicationCommand();
-            traceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+            TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
-            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11tySearchIndex)) GenerateCompressed11tySearchIndex();
+            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
             else
             {
-                traceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+                TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
             }
         }
 
-        internal void GenerateCompressed11tySearchIndex()
+        internal void GenerateCompressed11TySearchIndex()
         {
             var (entryRootInfo, indexRootInfo, indexFileName) =
-                this._jSettings.GetCompressed11tyIndexArgs(this._presentationInfo);
+                this._jSettings.GetCompressed11TyIndexArgs(this._presentationInfo);
 
-            var indices = GenerateSearchIndexFrom11tyEntries(
+            var indices = GenerateSearchIndexFrom11TyEntries(
                 entryRootInfo,
                 indexRootInfo,
                 indexFileName
@@ -159,7 +159,7 @@ namespace Songhay.Publications.Activities
             {
                 var compressedIndexInfo = CompressSearchIndex(indexInfo);
 
-                traceSource?.WriteLine($"index: {compressedIndexInfo.FullName}");
+                TraceSource?.WriteLine($"index: {compressedIndexInfo.FullName}");
             }
 
         }
@@ -170,7 +170,7 @@ namespace Songhay.Publications.Activities
 
             this._presentationInfo = presentationInfo;
 
-            traceSource?.TraceVerbose($"applying settings...");
+            TraceSource?.TraceVerbose($"applying settings...");
             this._jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
         }
 

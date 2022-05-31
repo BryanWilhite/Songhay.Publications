@@ -33,7 +33,7 @@ namespace Songhay.Publications.Extensions
             var stringCollection = sizesCollection
                 .Zip(candidatesCollection, (media, background) => $@"
 {media} {{{
-    spacer}{background}
+    _spacer}{background}
 }}");
             return string.Join(string.Empty,
                 new[] {
@@ -56,8 +56,8 @@ namespace Songhay.Publications.Extensions
 
             return $@"
 <img{
-    spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
-    spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
+    _spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
+    _spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
 ";
         }
 
@@ -76,9 +76,9 @@ namespace Songhay.Publications.Extensions
 
             if (!collection.Any()) return string.Empty;
 
-            var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
+            var attributeValue = collection.Aggregate((a, i) => $"{a},{_spacer}{i}");
 
-            return $@"{spacer}sizes=""{attributeValue}""";
+            return $@"{_spacer}sizes=""{attributeValue}""";
         }
 
         /// <summary>
@@ -96,9 +96,9 @@ namespace Songhay.Publications.Extensions
 
             if (!collection.Any()) return string.Empty;
 
-            var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
+            var attributeValue = collection.Aggregate((a, i) => $"{a},{_spacer}{i}");
 
-            return $@"{spacer}srcset=""{attributeValue}""";
+            return $@"{_spacer}srcset=""{attributeValue}""";
         }
 
         static void EnsureResponsiveImage(this ResponsiveImage responsiveImage)
@@ -106,6 +106,6 @@ namespace Songhay.Publications.Extensions
             if (responsiveImage == null) throw new ArgumentNullException(nameof(responsiveImage));
         }
 
-        static string spacer = $"{Environment.NewLine}    ";
+        static string _spacer = $"{Environment.NewLine}    ";
     }
 }

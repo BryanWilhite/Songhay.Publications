@@ -34,7 +34,7 @@ namespace Songhay.Publications.Tests.Activities
             var indexRootInfo = new DirectoryInfo(indexRoot);
             Assert.True(indexRootInfo.Exists);
 
-            var indices = SearchIndexActivity.GenerateSearchIndexFrom11tyEntries(entryRootInfo, indexRootInfo, indexFileName);
+            var indices = SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName);
             Assert.True(indices?.Any());
         }
     }

@@ -18,11 +18,11 @@ namespace Songhay.Publications
         /// at the specified entry root.
         /// </summary>
         /// <param name="entryRoot">the conventional directory of <see cref="MarkdownEntry"/> drafts</param>
-        /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11tyFrontMatter"/></param>
-        public static MarkdownEntry GenerateEntryFor11ty(string entryRoot, string title)
+        /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/></param>
+        public static MarkdownEntry GenerateEntryFor11Ty(string entryRoot, string title)
         {
             var tag = JObject.FromObject(new { extract = string.Empty }).ToString();
-            return GenerateEntryFor11ty(entryRoot, title, DateTime.Now, "./entry/", tag);
+            return GenerateEntryFor11Ty(entryRoot, title, DateTime.Now, "./entry/", tag);
         }
 
         /// <summary>
@@ -30,17 +30,17 @@ namespace Songhay.Publications
         /// at the specified entry root.
         /// </summary>
         /// <param name="entryRoot">the conventional directory of <see cref="MarkdownEntry"/> drafts</param>
-        /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11tyFrontMatter"/></param>
-        /// <param name="inceptDate">see <see cref="MarkdownEntryExtensions.WithNew11tyFrontMatter"/></param>
-        /// <param name="path">see <see cref="MarkdownEntryExtensions.WithNew11tyFrontMatter"/></param>
-        /// <param name="tag">see <see cref="MarkdownEntryExtensions.WithNew11tyFrontMatter"/></param>
-        public static MarkdownEntry GenerateEntryFor11ty(string entryRoot, string title, DateTime inceptDate, string path, string tag)
+        /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/></param>
+        /// <param name="inceptDate">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/></param>
+        /// <param name="path">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/></param>
+        /// <param name="tag">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/></param>
+        public static MarkdownEntry GenerateEntryFor11Ty(string entryRoot, string title, DateTime inceptDate, string path, string tag)
         {
             if (!Directory.Exists(entryRoot))
                 throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot ?? "[null]"}`, is not here.");
 
             var entry = new MarkdownEntry()
-                    .WithNew11tyFrontMatter(title, inceptDate, path, tag)
+                    .WithNew11TyFrontMatter(title, inceptDate, path, tag)
                     .WithContentHeader();
 
             File.WriteAllText($"{entryRoot}/{entry.FrontMatter["clientId"]}.md", entry.ToFinalEdit());
@@ -60,9 +60,9 @@ namespace Songhay.Publications
         /// <returns>
         /// Returns the path of the published file.
         /// </returns>
-        public static string PublishEntryFor11ty(string entryRoot, string presentationRoot, string fileName)
+        public static string PublishEntryFor11Ty(string entryRoot, string presentationRoot, string fileName)
         {
-            return PublishEntryFor11ty(entryRoot, presentationRoot, fileName, DateTime.Now);
+            return PublishEntryFor11Ty(entryRoot, presentationRoot, fileName, DateTime.Now);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Songhay.Publications
         /// new eleventy <see cref="MarkdownEntry.FrontMatter"/> will be generated
         /// and the presentation file will be renamed accordingly.
         /// </remarks>
-        public static string PublishEntryFor11ty(string entryRoot, string presentationRoot, string fileName, DateTime publicationDate)
+        public static string PublishEntryFor11Ty(string entryRoot, string presentationRoot, string fileName, DateTime publicationDate)
         {
             if (!Directory.Exists(entryRoot))
                 throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot ?? "[null]"}`, is not here.");
@@ -112,7 +112,7 @@ namespace Songhay.Publications
             {
                 var title = draftEntry.FrontMatter.GetValue<string>("title");
                 var tag = draftEntry.FrontMatter.GetValue<string>("tag", throwException: false);
-                draftEntry.WithNew11tyFrontMatter(title, publicationDate, path, tag);
+                draftEntry.WithNew11TyFrontMatter(title, publicationDate, path, tag);
             }
 
             var combinedPath = ProgramFileUtility.GetCombinedPath(presentationRoot, $"{draftEntry.FrontMatter.GetValue<string>("clientId")}.md");

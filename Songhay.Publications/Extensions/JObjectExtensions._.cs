@@ -13,12 +13,12 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static partial class JObjectExtensions
     {
-        static JObjectExtensions() => traceSource = TraceSources
+        static JObjectExtensions() => TraceSource = TraceSources
                 .Instance
                 .GetTraceSourceFromConfiguredName()
                 .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Gets the publication command.
@@ -38,14 +38,14 @@ namespace Songhay.Publications.Extensions
 
             var rootProperty = "presentation";
 
-            traceSource?.TraceVerbose($"Converting {rootProperty} JSON to {nameof(Segment)} with descendants...");
+            TraceSource?.TraceVerbose($"Converting {rootProperty} JSON to {nameof(Segment)} with descendants...");
 
             var jPresentation = jObject.GetJObject(rootProperty);
             var isPostedToServer = jPresentation.GetValue<bool>("is-posted-to-server");
             if (isPostedToServer)
             {
                 var postedDate = jPresentation.GetValue<DateTime>("posted-date");
-                traceSource?.TraceVerbose($"This {rootProperty} was already posted on {postedDate}.");
+                TraceSource?.TraceVerbose($"This {rootProperty} was already posted on {postedDate}.");
                 return null;
             }
 
@@ -53,30 +53,30 @@ namespace Songhay.Publications.Extensions
             var segment = jSegment.FromJObject<ISegment, Segment>();
             if (segment == null)
             {
-                traceSource?.TraceError($"The expected {nameof(Segment)} is not here.");
+                TraceSource?.TraceError($"The expected {nameof(Segment)} is not here.");
                 return null;
             }
 
             var clientId = segment.ClientId;
             if (string.IsNullOrEmpty(clientId))
             {
-                traceSource?.TraceError("The expected Client ID is not here.");
+                TraceSource?.TraceError("The expected Client ID is not here.");
                 return null;
             }
 
-            traceSource?.TraceVerbose($"{nameof(Segment)}: {segment}");
-            var validationResults = segment.ToValidationResults();
-            if (validationResults.Any())
+            TraceSource?.TraceVerbose($"{nameof(Segment)}: {segment}");
+            var validationResult = segment.ToValidationResult();
+            if (!validationResult.IsValid)
             {
-                traceSource?.TraceError($"{nameof(Segment)} validation error(s)!");
-                traceSource?.TraceError(validationResults.ToDisplayString());
+                TraceSource?.TraceError($"{nameof(Segment)} validation error(s)!");
+                TraceSource?.TraceError(validationResult.Errors.First().ErrorMessage);
                 return null;
             }
 
             var jDocuments = jSegment.GetJArray(nameof(segment.Documents), throwException: true);
             if (!jDocuments.OfType<JObject>().Any())
             {
-                traceSource?.TraceError($"The expected JObject {nameof(Document)} enumeration is not here.");
+                TraceSource?.TraceError($"The expected JObject {nameof(Document)} enumeration is not here.");
                 return null;
             }
 
@@ -85,29 +85,29 @@ namespace Songhay.Publications.Extensions
                 var document = i.FromJObject<IDocument, Document>();
                 if (document == null)
                 {
-                    traceSource?.TraceError($"The expected {nameof(Document)} is not here.");
+                    TraceSource?.TraceError($"The expected {nameof(Document)} is not here.");
                     return;
                 }
 
                 if (document.ClientId != clientId)
                 {
-                    traceSource?.TraceError($"The expected {nameof(Document)} Client ID is not here.");
+                    TraceSource?.TraceError($"The expected {nameof(Document)} Client ID is not here.");
                     return;
                 }
 
-                traceSource?.TraceVerbose($"{nameof(Document)}: {document}");
-                var validationResultsForDocument = document.ToValidationResults();
-                if (validationResultsForDocument.Any())
+                TraceSource?.TraceVerbose($"{nameof(Document)}: {document}");
+                var validationResultForDocument = document.ToValidationResult();
+                if (!validationResultForDocument.IsValid)
                 {
-                    traceSource?.TraceError($"{nameof(Document)} validation error(s)!");
-                    traceSource?.TraceError(validationResultsForDocument.ToDisplayString());
+                    TraceSource?.TraceError($"{nameof(Document)} validation error(s)!");
+                    TraceSource?.TraceError(validationResultForDocument.Errors.First().ErrorMessage);
                     return;
                 }
 
                 var jFragments = i.GetJArray(nameof(document.Fragments), throwException: false);
                 if ((jFragments == null) || !jFragments.OfType<JObject>().Any())
                 {
-                    traceSource?.TraceWarning($"The JObject {nameof(Fragment)} enumeration is not here.");
+                    TraceSource?.TraceWarning($"The JObject {nameof(Fragment)} enumeration is not here.");
                     segment.Documents.Add(document);
                     return;
                 }
@@ -117,22 +117,22 @@ namespace Songhay.Publications.Extensions
                     var fragment = j.FromJObject<IFragment, Fragment>();
                     if (fragment == null)
                     {
-                        traceSource?.TraceError($"The expected {nameof(Fragment)} is not here.");
+                        TraceSource?.TraceError($"The expected {nameof(Fragment)} is not here.");
                         return;
                     }
 
                     if (fragment.ClientId != clientId)
                     {
-                        traceSource?.TraceError($"The expected {nameof(Fragment)} Client ID is not here.");
+                        TraceSource?.TraceError($"The expected {nameof(Fragment)} Client ID is not here.");
                         return;
                     }
 
-                    traceSource?.TraceVerbose($"{nameof(Fragment)}: {fragment}");
-                    var validationResultsForFragment = fragment.ToValidationResults();
-                    if (validationResultsForFragment.Any())
+                    TraceSource?.TraceVerbose($"{nameof(Fragment)}: {fragment}");
+                    var validationResultForFragment = fragment.ToValidationResult();
+                    if (!validationResultForFragment.IsValid)
                     {
-                        traceSource?.TraceError($"{nameof(Fragment)} validation error(s)!");
-                        traceSource?.TraceError(validationResultsForFragment.ToDisplayString());
+                        TraceSource?.TraceError($"{nameof(Fragment)} validation error(s)!");
+                        TraceSource?.TraceError(validationResultForFragment.Errors.First().ErrorMessage);
                         return;
                     }
 

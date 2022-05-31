@@ -1,5 +1,4 @@
 using Songhay.Publications.Extensions;
-using Songhay.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,15 +10,6 @@ namespace Songhay.Publications.Models
     /// </summary>
     public partial class Fragment : IFragment
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Fragment"/> class.
-        /// </summary>
-        public Fragment()
-        {
-            this.NextFragments = new List<Fragment>();
-            this.PrevFragments = new List<Fragment>();
-        }
-
         /// <summary>
         /// Gets or sets the client identifier.
         /// </summary>
@@ -36,7 +26,6 @@ namespace Songhay.Publications.Models
         /// The incept date.
         /// </value>
         [Display(Name = "Incept Date", Order = 4)]
-        [Required]
         public DateTime? InceptDate { get; set; }
 
         /// <summary>
@@ -147,7 +136,6 @@ namespace Songhay.Publications.Models
         /// The modification date.
         /// </value>
         [Display(Name = "Modification Date", Order = 5)]
-        [Required]
         public DateTime? ModificationDate { get; set; }
 
         /// <summary>
@@ -184,7 +172,7 @@ namespace Songhay.Publications.Models
         /// The document.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual Document Document { get; set; }
+        public Document Document { get; set; }
 
         /// <summary>
         /// Gets or sets the next fragments.
@@ -193,7 +181,7 @@ namespace Songhay.Publications.Models
         /// The next fragments.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Fragment> NextFragments { get; set; }
+        public ICollection<Fragment> NextFragments { get; set; } = new List<Fragment>();
 
         /// <summary>
         /// Gets or sets the next fragment.
@@ -202,7 +190,7 @@ namespace Songhay.Publications.Models
         /// The next fragment.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual Fragment NextFragment { get; set; }
+        public Fragment NextFragment { get; set; }
 
         /// <summary>
         /// Gets or sets the previous fragments.
@@ -211,7 +199,7 @@ namespace Songhay.Publications.Models
         /// The previous fragments.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Fragment> PrevFragments { get; set; }
+        public ICollection<Fragment> PrevFragments { get; set; } = new List<Fragment>();
 
         /// <summary>
         /// Gets or sets the previous fragment.
@@ -220,7 +208,7 @@ namespace Songhay.Publications.Models
         /// The previous fragment.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual Fragment PrevFragment { get; set; }
+        public Fragment PrevFragment { get; set; }
 
         /// <summary>
         /// Converts to string.

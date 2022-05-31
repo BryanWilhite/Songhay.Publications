@@ -1,29 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using CloneExtensions;
+using FluentValidation.Results;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Songhay.Diagnostics;
 using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Models;
+using Songhay.Publications.Validators;
 
 namespace Songhay.Publications.Extensions
 {
     /// <summary>
     /// Extensions of <see cref="ISegment"/>
     /// </summary>
-    public static class ISegmentExtensions
+    public static class SegmentExtensions
     {
-        static ISegmentExtensions() => traceSource = TraceSources
+        static SegmentExtensions() => TraceSource = TraceSources
             .Instance
             .GetTraceSourceFromConfiguredName()
             .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Clones the instance of <see cref="ISegment"/>.
@@ -48,7 +51,7 @@ namespace Songhay.Publications.Extensions
 
             var first = data.FirstOrDefault(predicate);
 
-            traceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+            TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
 
             return first;
         }
@@ -63,16 +66,13 @@ namespace Songhay.Publications.Extensions
         {
             if (data == null) throw new ArgumentNullException(nameof(data));
 
-            var segment = data as Segment;
-            if (segment == null) return false;
+            if (!(data is Segment segment)) return false;
 
-            if (!segment.Documents.Any())
-            {
-                traceSource?.TraceError($"The expected child {nameof(Segment.Documents)} are not here.");
-                return false;
-            };
+            if (segment.Documents.Any()) return true;
 
-            return true;
+            TraceSource?.TraceError($"The expected child {nameof(Segment.Documents)} are not here.");
+
+            return false;
         }
 
         /// <summary>
@@ -112,29 +112,29 @@ namespace Songhay.Publications.Extensions
 
             if (data.SegmentId.HasValue)
             {
-                builder.Append($"{nameof(data.SegmentId)}: {data?.SegmentId}");
+                builder.Append($"{nameof(data.SegmentId)}: {data.SegmentId}");
                 delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data.ClientId}");
                 delimiter = ", ";
             }
 
             if (!showIdOnly)
             {
                 if (!string.IsNullOrWhiteSpace(data.SegmentName))
-                    builder.Append($"{delimiter}{nameof(data.SegmentName)}: {data?.SegmentName}");
+                    builder.Append($"{delimiter}{nameof(data.SegmentName)}: {data.SegmentName}");
 
                 if (data.IsActive.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data?.IsActive}");
+                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
 
                 if (data.ParentSegmentId.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.ParentSegmentId)}: {data?.ParentSegmentId}");
+                    builder.Append($"{delimiter}{nameof(data.ParentSegmentId)}: {data.ParentSegmentId}");
 
                 if (data.InceptDate.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.InceptDate)}: {data?.InceptDate}");
+                    builder.Append($"{delimiter}{nameof(data.InceptDate)}: {data.InceptDate}");
             }
 
             return builder.ToString();
@@ -212,11 +212,12 @@ namespace Songhay.Publications.Extensions
         {
             if(data == null) throw new ArgumentNullException(nameof(data));
 
-            var segment = data as Segment;
+            if (!(data is Segment instance))
+                throw new DataException($"The expected {nameof(Segment)} data is not here.");
 
-            return new IndexEntry(segment)
+            return new IndexEntry(instance)
             {
-                Segments = segment
+                Segments = instance
                     .Segments
                     .Select(s => s.ToPublicationIndexEntry())
                     .ToArray(),
@@ -234,8 +235,7 @@ namespace Songhay.Publications.Extensions
         {
             var jSegment = data.ToJObject(useJavaScriptCase);
 
-            var segment = data as Segment;
-            if (segment == null) return jSegment;
+            if (!(data is Segment segment)) return jSegment;
 
             if (segment.Segments != null)
             {
@@ -244,7 +244,7 @@ namespace Songhay.Publications.Extensions
                 jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
             }
 
-            if (segment.Documents != null)
+            if (segment.Documents == null) return jSegment;
             {
                 var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
 
@@ -252,6 +252,22 @@ namespace Songhay.Publications.Extensions
             }
 
             return jSegment;
+        }
+
+        /// <summary>
+        /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
+        /// </summary>
+        /// <param name="data">the <see cref="IDocument"/> data</param>
+        /// <returns></returns>
+        public static ValidationResult ToValidationResult(this ISegment data)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+            if (!(data is Segment instance))
+                throw new DataException($"The expected {nameof(Segment)} data is not here.");
+
+            var validator = new SegmentValidator();
+
+            return validator.Validate(instance);
         }
 
         /// <summary>

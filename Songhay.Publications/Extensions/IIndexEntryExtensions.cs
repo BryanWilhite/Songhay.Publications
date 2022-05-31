@@ -8,7 +8,7 @@ namespace Songhay.Publications.Extensions
     /// <summary>
     /// Extensions of <see cref="IIndexEntry"/>.
     /// </summary>
-    public static class IIndexEntryExtensions
+    public static class IndexEntryExtensions
     {
         /// <summary>
         /// Converts the <see cref="IEnumerable{IIndexEntry}"/>

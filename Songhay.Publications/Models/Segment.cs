@@ -8,17 +8,8 @@ namespace Songhay.Publications.Models
     /// <summary>
     /// Publications Segment
     /// </summary>
-    public partial class Segment : ISegment
+    public class Segment : ISegment
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Segment"/> class.
-        /// </summary>
-        public Segment()
-        {
-            this.Segments = new List<Segment>();
-            this.Documents = new List<Document>();
-        }
-
         /// <summary>
         /// Gets or sets the client identifier.
         /// </summary>
@@ -35,7 +26,6 @@ namespace Songhay.Publications.Models
         /// The is active.
         /// </value>
         [Display(Name = "Is Active?", Order = 4)]
-        [Required]
         public bool? IsActive { get; set; }
 
         /// <summary>
@@ -63,7 +53,6 @@ namespace Songhay.Publications.Models
         /// The name of the segment.
         /// </value>
         [Display(Name = "Segment Name", Order = 3)]
-        [Required]
         public string SegmentName { get; set; }
 
         /// <summary>
@@ -82,7 +71,6 @@ namespace Songhay.Publications.Models
         /// The incept date.
         /// </value>
         [Display(Name = "Incept Date", Order = 5)]
-        [Required]
         public DateTime? InceptDate { get; set; }
 
         /// <summary>
@@ -92,7 +80,6 @@ namespace Songhay.Publications.Models
         /// The modification date.
         /// </value>
         [Display(Name = "Modification Date", Order = 8)]
-        [Required]
         public DateTime? ModificationDate { get; set; }
 
         /// <summary>
@@ -111,7 +98,7 @@ namespace Songhay.Publications.Models
         /// The documents.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Document> Documents { get; set; }
+        public ICollection<Document> Documents { get; set; } = new List<Document>();
 
         /// <summary>
         /// Gets or sets child segments.
@@ -120,7 +107,7 @@ namespace Songhay.Publications.Models
         /// The child segments.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Segment> Segments { get; set; }
+        public ICollection<Segment> Segments { get; set; } = new List<Segment>();
 
         /// <summary>
         /// Gets or sets the parent segment.
@@ -129,13 +116,13 @@ namespace Songhay.Publications.Models
         /// The parent segment.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual Segment ParentSegment { get; set; }
+        public Segment ParentSegment { get; set; }
 
         /// <summary>
         /// Converts to string.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this instance.
+        /// A <see cref="String" /> that represents this instance.
         /// </returns>
         public override string ToString()
         {

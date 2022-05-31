@@ -36,7 +36,7 @@ namespace Songhay.Publications.Extensions
             DirectoryInfo entryRootInfo,
             DirectoryInfo indexRootInfo,
             string indexFileName
-            ) GetCompressed11tyIndexArgs(this JObject jObject, DirectoryInfo presentationInfo)
+            ) GetCompressed11TyIndexArgs(this JObject jObject, DirectoryInfo presentationInfo)
         {
             var indexRoot = jObject.GetValue<string>("indexRoot");
             indexRoot = presentationInfo.ToCombinedPath(indexRoot);

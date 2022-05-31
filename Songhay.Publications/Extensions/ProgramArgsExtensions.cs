@@ -12,12 +12,12 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static class ProgramArgsExtensions
     {
-        static ProgramArgsExtensions() => traceSource = TraceSources
+        static ProgramArgsExtensions() => TraceSource = TraceSources
            .Instance
            .GetTraceSourceFromConfiguredName()
            .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Converts <see cref="ProgramArgs"/> to Presentation <see cref="DirectoryInfo"/>.
@@ -27,15 +27,15 @@ namespace Songhay.Publications.Extensions
         public static (DirectoryInfo presentationInfo, FileInfo settingsInfo)
             ToPresentationAndSettingsInfo(this ProgramArgs args)
         {
-            traceSource?.TraceVerbose($"setting conventional {MarkdownPresentationDirectories.DirectoryNamePresentationShell} directory...");
+            TraceSource?.TraceVerbose($"setting conventional {MarkdownPresentationDirectories.DirectoryNamePresentationShell} directory...");
             var presentationShellInfo = new DirectoryInfo(args.GetArgValue(ProgramArgs.BasePath));
             presentationShellInfo.VerifyDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationShell);
 
-            traceSource?.TraceVerbose($"setting conventional {nameof(MarkdownPresentationDirectories)} parent directory...");
+            TraceSource?.TraceVerbose($"setting conventional {nameof(MarkdownPresentationDirectories)} parent directory...");
             var presentationInfo = presentationShellInfo.Parent;
             presentationInfo.HasAllConventionalMarkdownPresentationDirectories();
 
-            traceSource?.TraceVerbose($"getting settings file...");
+            TraceSource?.TraceVerbose($"getting settings file...");
             var settingsInfo = presentationShellInfo.FindFile(args.GetArgValue(ProgramArgs.SettingsFile));
 
             return (presentationInfo, settingsInfo);

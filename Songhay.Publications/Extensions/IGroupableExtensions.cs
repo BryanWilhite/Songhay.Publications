@@ -5,7 +5,7 @@ namespace Songhay.Publications.Extensions
     /// <summary>
     /// Extensions of <see cref="IGroupable"/>
     /// </summary>
-    public static class IGroupableExtensions
+    public static class GroupableExtensions
     {
         /// <summary>
         /// Returns <c>true</c> when the group has the specified name.

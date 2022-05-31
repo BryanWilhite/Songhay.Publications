@@ -9,7 +9,10 @@ using System.Text;
 using Songhay.Diagnostics;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using FluentValidation.Results;
+using Songhay.Publications.Validators;
 
 namespace Songhay.Publications.Extensions
 {
@@ -17,14 +20,14 @@ namespace Songhay.Publications.Extensions
     /// <summary>
     /// Extensions of <see cref="IFragment"/>
     /// </summary>
-    public static class IFragmentExtensions
+    public static class FragmentExtensions
     {
-        static IFragmentExtensions() => traceSource = TraceSources
+        static FragmentExtensions() => TraceSource = TraceSources
             .Instance
             .GetTraceSourceFromConfiguredName()
             .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Clones the instance of <see cref="IFragment"/>.
@@ -49,7 +52,7 @@ namespace Songhay.Publications.Extensions
 
             var first = data.FirstOrDefault(predicate);
 
-            traceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+            TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
 
             return first;
         }
@@ -93,48 +96,47 @@ namespace Songhay.Publications.Extensions
 
             if (data.FragmentId.HasValue)
             {
-                builder.Append($"{nameof(data.FragmentId)}: {data?.FragmentId}");
+                builder.Append($"{nameof(data.FragmentId)}: {data.FragmentId}");
                 delimiter = ", ";
             }
 
             if (!string.IsNullOrWhiteSpace(data.ClientId))
             {
-                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data?.ClientId}");
+                builder.Append($"{delimiter}{nameof(data.ClientId)}: {data.ClientId}");
                 delimiter = ", ";
             }
 
-            if (!showIdOnly)
-            {
-                if (!string.IsNullOrWhiteSpace(data.FragmentName))
-                    builder.Append($"{delimiter}{nameof(data.FragmentName)}: {data?.FragmentName}");
+            if (showIdOnly) return builder.ToString();
 
-                if (data.IsActive.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsActive)}: {data?.IsActive}");
+            if (!string.IsNullOrWhiteSpace(data.FragmentName))
+                builder.Append($"{delimiter}{nameof(data.FragmentName)}: {data.FragmentName}");
 
-                if (data.DocumentId.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.DocumentId)}: {data?.DocumentId}");
+            if (data.IsActive.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
 
-                if (!string.IsNullOrEmpty(data.FragmentDisplayName))
-                    builder.Append($"{delimiter}{nameof(data.FragmentDisplayName)}: {data?.FragmentDisplayName}");
+            if (data.DocumentId.HasValue)
+                builder.Append($"{delimiter}{nameof(data.DocumentId)}: {data.DocumentId}");
 
-                if (!string.IsNullOrEmpty(data.Content))
-                    builder.Append($"{delimiter}{nameof(data.Content)}: {data?.Content.Truncate(32)}");
+            if (!string.IsNullOrEmpty(data.FragmentDisplayName))
+                builder.Append($"{delimiter}{nameof(data.FragmentDisplayName)}: {data.FragmentDisplayName}");
 
-                if (data.PrevFragmentId.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.PrevFragmentId)}: {data?.PrevFragmentId}");
+            if (!string.IsNullOrEmpty(data.Content))
+                builder.Append($"{delimiter}{nameof(data.Content)}: {data.Content.Truncate(32)}");
 
-                if (data.NextFragmentId.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.NextFragmentId)}: {data?.NextFragmentId}");
+            if (data.PrevFragmentId.HasValue)
+                builder.Append($"{delimiter}{nameof(data.PrevFragmentId)}: {data.PrevFragmentId}");
 
-                if (data.IsNext.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsNext)}: {data?.IsNext}");
+            if (data.NextFragmentId.HasValue)
+                builder.Append($"{delimiter}{nameof(data.NextFragmentId)}: {data.NextFragmentId}");
 
-                if (data.IsPrevious.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsPrevious)}: {data?.IsPrevious}");
+            if (data.IsNext.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsNext)}: {data.IsNext}");
 
-                if (data.IsWrapper.HasValue)
-                    builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data?.IsWrapper}");
-            }
+            if (data.IsPrevious.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsPrevious)}: {data?.IsPrevious}");
+
+            if (data.IsWrapper.HasValue)
+                builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data?.IsWrapper}");
 
             return builder.ToString();
         }
@@ -214,6 +216,22 @@ namespace Songhay.Publications.Extensions
             };
             if (copyFragmentContent) dataOut.Description = data.Content;
             return dataOut;
+        }
+
+        /// <summary>
+        /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
+        /// </summary>
+        /// <param name="data">the <see cref="IDocument"/> data</param>
+        /// <returns></returns>
+        public static ValidationResult ToValidationResult(this IFragment data)
+        {
+            if (data == null) throw new ArgumentNullException(nameof(data));
+            if (!(data is Fragment instance))
+                throw new DataException($"The expected {nameof(Fragment)} data is not here.");
+
+            var validator = new FragmentValidator();
+
+            return validator.Validate(instance);
         }
 
         /// <summary>

@@ -60,7 +60,7 @@ namespace Songhay.Publications.Tests.Extensions
             Assert.True(settingsInfo.Exists);
 
             var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
-            var (entryRootInfo, indexRootInfo, indexFileName) = jO.GetCompressed11tyIndexArgs(presentationInfo);
+            var (entryRootInfo, indexRootInfo, indexFileName) = jO.GetCompressed11TyIndexArgs(presentationInfo);
 
             Assert.True(entryRootInfo.Exists);
             Assert.True(indexRootInfo.Exists);
@@ -69,7 +69,7 @@ namespace Songhay.Publications.Tests.Extensions
             indexRootInfo.FindFile(indexFileName);
 
             var commandName = jO.GetPublicationCommand();
-            Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11tySearchIndex), commandName);
+            Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11TySearchIndex), commandName);
         }
 
         [Theory]

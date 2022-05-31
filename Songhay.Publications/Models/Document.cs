@@ -8,18 +8,8 @@ namespace Songhay.Publications.Models
     /// <summary>
     /// Publications Document
     /// </summary>
-    public partial class Document : IDocument
+    public class Document : IDocument
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Document"/> class.
-        /// </summary>
-        public Document()
-        {
-            this.Fragments = new List<Fragment>();
-            this.IndexKeywords = new List<IndexKeyword>();
-            this.ResponsiveImages = new List<ResponsiveImage>();
-        }
-
         /// <summary>
         /// Gets or sets the client identifier.
         /// </summary>
@@ -36,7 +26,6 @@ namespace Songhay.Publications.Models
         /// The incept date.
         /// </value>
         [Display(Name = "Incept Date", Order = 7)]
-        [Required]
         public DateTime? InceptDate { get; set; }
 
         /// <summary>
@@ -73,7 +62,6 @@ namespace Songhay.Publications.Models
         /// The is active.
         /// </value>
         [Display(Name = "Is Active?", Order = 10)]
-        [Required]
         public bool? IsActive { get; set; }
 
         /// <summary>
@@ -92,7 +80,6 @@ namespace Songhay.Publications.Models
         /// The modification date.
         /// </value>
         [Display(Name = "Modification Date", Order = 8)]
-        [Required]
         public DateTime? ModificationDate { get; set; }
 
         /// <summary>
@@ -156,7 +143,6 @@ namespace Songhay.Publications.Models
         /// The title.
         /// </value>
         [Display(Name = "Document Title", Order = 3)]
-        [Required]
         public string Title { get; set; }
 
         /// <summary>
@@ -175,7 +161,7 @@ namespace Songhay.Publications.Models
         /// The fragments.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<Fragment> Fragments { get; set; }
+        public ICollection<Fragment> Fragments { get; set; } = new List<Fragment>();
 
         /// <summary>
         /// Gets or sets the collection of <see cref="IndexKeyword" />.
@@ -184,7 +170,7 @@ namespace Songhay.Publications.Models
         /// The collection of <see cref="IndexKeyword" />.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<IndexKeyword> IndexKeywords { get; set; }
+        public ICollection<IndexKeyword> IndexKeywords { get; set; } = new List<IndexKeyword>();
 
         /// <summary>
         /// Gets or sets the collection of <see cref="ResponsiveImage" />.
@@ -193,7 +179,7 @@ namespace Songhay.Publications.Models
         /// The collection of <see cref="ResponsiveImage" />.
         /// </value>
         [Display(AutoGenerateField = false)]
-        public virtual ICollection<ResponsiveImage> ResponsiveImages { get; set; }
+        public ICollection<ResponsiveImage> ResponsiveImages { get; set; } = new List<ResponsiveImage>();
 
         /// <summary>
         /// Converts the <see cref="Document"/> into a string.

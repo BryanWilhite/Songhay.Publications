@@ -17,12 +17,12 @@ namespace Songhay.Publications.Extensions
     /// </summary>
     public static class MarkdownEntryExtensions
     {
-        static MarkdownEntryExtensions() => traceSource = TraceSources
+        static MarkdownEntryExtensions() => TraceSource = TraceSources
            .Instance
            .GetTraceSourceFromConfiguredName()
            .WithSourceLevels();
 
-        static readonly TraceSource traceSource;
+        static readonly TraceSource TraceSource;
 
         /// <summary>
         /// Effectively validates <see cref="MarkdownEntry" />
@@ -140,7 +140,7 @@ namespace Songhay.Publications.Extensions
         public static MarkdownEntry ToMarkdownEntry(this FileInfo entry)
         {
             if (entry == null) throw new NullReferenceException($"The expected {nameof(FileInfo)} is not here.");
-            traceSource?.TraceVerbose($"converting `{entry.FullName}`...");
+            TraceSource?.TraceVerbose($"converting `{entry.FullName}`...");
             if (!File.Exists(entry.FullName)) throw new NullReferenceException($"The expected {nameof(FileInfo)} path is not here.");
 
             var frontTop = "---json";
@@ -168,7 +168,7 @@ namespace Songhay.Publications.Extensions
             }
             catch (JsonReaderException ex)
             {
-                traceSource?.TraceError(ex);
+                TraceSource?.TraceError(ex);
             }
 
             var mdEntry = new MarkdownEntry
@@ -226,7 +226,7 @@ namespace Songhay.Publications.Extensions
         /// <param name="entry">the <see cref="MarkdownEntry" /></param>
         /// <param name="length">the string-length of the extract</param>
         /// <returns></returns>
-        public static MarkdownEntry With11tyExtract(this MarkdownEntry entry, int length)
+        public static MarkdownEntry With11TyExtract(this MarkdownEntry entry, int length)
         {
             entry.WithEdit(i =>
             {
@@ -317,7 +317,7 @@ namespace Songhay.Publications.Extensions
         /// <param name="path">the path to the entry</param>
         /// <param name="tag">the tag of the entry</param>
         /// <returns></returns>
-        public static MarkdownEntry WithNew11tyFrontMatter(this MarkdownEntry entry, string title, DateTime inceptDate, string path, string tag)
+        public static MarkdownEntry WithNew11TyFrontMatter(this MarkdownEntry entry, string title, DateTime inceptDate, string path, string tag)
         {
             return entry.WithNewFrontMatter(title, inceptDate,
                 documentId: 0, fileName: "index.html", path: path, segmentId: 0, tag: tag)

@@ -64,32 +64,32 @@ namespace Songhay.Publications.Models
             EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
         }
 
-        internal XElement GetTOCAnchor(string chapterId)
+        internal XElement GetTocAnchor(string chapterId)
         {
             var xhtml = PublicationNamespaces.Xhtml;
-            var hrefTemplate = GetTOCHrefTemplate();
+            var hrefTemplate = GetTocHrefTemplate();
 
             return new XElement(xhtml + "a",
                 new XAttribute("href", string.Format(hrefTemplate, chapterId)),
-                GetTOCChapterValue(chapterId)
+                GetTocChapterValue(chapterId)
                 );
         }
 
-        internal string GetTOCChapterValue(string chapterId)
+        internal string GetTocChapterValue(string chapterId)
         {
             return _chapterSet[chapterId];
         }
 
-        internal string GetTOCHrefTemplate()
+        internal string GetTocHrefTemplate()
         {
             return "../Text/{0}.xhtml";
         }
 
         internal void SetTocAnchor(XElement a, string chapterId)
         {
-            var hrefTemplate = GetTOCHrefTemplate();
+            var hrefTemplate = GetTocHrefTemplate();
 
-            a.Value = GetTOCChapterValue(chapterId);
+            a.Value = GetTocChapterValue(chapterId);
 
             var hrefAttribute = a.Attribute("href");
             hrefAttribute.Value = string.Format(hrefTemplate, chapterId);
@@ -108,7 +108,7 @@ namespace Songhay.Publications.Models
 
             XElement templatedChapterElement = null;
             var newChapterElementList = new List<XElement>();
-            var hrefTemplate = GetTOCHrefTemplate();
+            var hrefTemplate = GetTocHrefTemplate();
 
             _chapterSet.Keys
                 .Select((chapterId, i) => new { chapterId, i })
@@ -138,7 +138,7 @@ namespace Songhay.Publications.Models
                     }
                     else if (canAddNavPoint)
                     {
-                        var @new = GetTOCAnchor(chapterId);
+                        var @new = GetTocAnchor(chapterId);
                         this.SetTocAnchor(@new, chapterId);
                         newChapterElementList.Add(new XElement(xhtml + "br"));
                         newChapterElementList.Add(@new);

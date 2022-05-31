@@ -122,11 +122,10 @@ namespace Songhay.Publications.Tests.Extensions
         [InlineData("Hello World!", "It was the best of times.", "./path", "{\"thing\": true}", 8)]
         public void With11tyExtract_Test(string title, string content, string path, string tag, int length)
         {
-            var entry = (new MarkdownEntry())
-                .WithNew11tyFrontMatter(title, DateTime.Now, path, tag)
-                .WithContentHeader()
-                .WithEdit(i => i.Content = string.Concat(i.Content, content))
-                .With11tyExtract(length);
+            var entry = MarkdownEntryExtensions.With11TyExtract((new MarkdownEntry())
+                    .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
+                    .WithContentHeader()
+                    .WithEdit(i => i.Content = string.Concat(i.Content, content)), length);
             var jO = JObject.Parse(entry.FrontMatter.GetValue<string>("tag"));
             Assert.NotNull(jO);
 
@@ -151,7 +150,7 @@ namespace Songhay.Publications.Tests.Extensions
         public void With11tyExtract_FromFile_Test(int expectedLength, FileInfo entryInfo)
         {
             var entry = entryInfo.ToMarkdownEntry()
-                .With11tyExtract(expectedLength);
+                .With11TyExtract(expectedLength);
 
             var jO = JObject.Parse(entry.FrontMatter.GetValue<string>("tag"));
             Assert.NotNull(jO);
@@ -169,7 +168,7 @@ namespace Songhay.Publications.Tests.Extensions
             var title = "Hello World!";
             var inceptDate = DateTime.Now.AddSeconds(-3);
             var entry = new MarkdownEntry()
-                .WithNew11tyFrontMatter(title, inceptDate, "/path/to/entry/", "entry_tag")
+                .WithNew11TyFrontMatter(title, inceptDate, "/path/to/entry/", "entry_tag")
                 .WithContentHeader();
 
             //act
