@@ -69,7 +69,7 @@ namespace Songhay.Publications.Tests.Extensions
             indexRootInfo.FindFile(indexFileName);
 
             var commandName = jO.GetPublicationCommand();
-            Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11TySearchIndex), commandName);
+            Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11tySearchIndex), commandName);
         }
 
         [Theory]

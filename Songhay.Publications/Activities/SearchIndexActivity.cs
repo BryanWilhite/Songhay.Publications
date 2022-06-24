@@ -137,14 +137,14 @@ namespace Songhay.Publications.Activities
             var command = this._jSettings.GetPublicationCommand();
             TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
-            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
+            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11tySearchIndex();
             else
             {
                 TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
             }
         }
 
-        internal void GenerateCompressed11TySearchIndex()
+        internal void GenerateCompressed11tySearchIndex()
         {
             var (entryRootInfo, indexRootInfo, indexFileName) =
                 this._jSettings.GetCompressed11TyIndexArgs(this._presentationInfo);
