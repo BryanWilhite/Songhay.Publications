@@ -20,20 +20,22 @@ namespace Songhay.Publications.Extensions
 
             var candidatesCollection = responsiveImage
                 .Candidates
-                .Select(i => $"background-image: url({i.ImageUri?.OriginalString});");
+                .Select(i => $"background-image: url({i.ImageUri?.OriginalString});")
+                .ToArray();
 
             if (!candidatesCollection.Any()) return string.Empty;
 
             var sizesCollection = responsiveImage
                 .Sizes
-                .Select(i => $"@media only screen and {i.MediaCondition}");
+                .Select(i => $"@media only screen and {i.MediaCondition}")
+                .ToArray();
 
             if (!sizesCollection.Any()) return string.Empty;
 
             var stringCollection = sizesCollection
                 .Zip(candidatesCollection, (media, background) => $@"
 {media} {{{
-    _spacer}{background}
+    spacer}{background}
 }}");
             return string.Join(string.Empty,
                 new[] {
@@ -56,8 +58,8 @@ namespace Songhay.Publications.Extensions
 
             return $@"
 <img{
-    _spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
-    _spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
+    spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
+    spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
 ";
         }
 
@@ -72,13 +74,14 @@ namespace Songhay.Publications.Extensions
 
             var collection = responsiveImage
                 .Sizes
-                .Select(i => $"({i.MediaCondition}) {i.LayoutWidth}");
+                .Select(i => $"({i.MediaCondition}) {i.LayoutWidth}")
+                .ToArray();
 
             if (!collection.Any()) return string.Empty;
 
-            var attributeValue = collection.Aggregate((a, i) => $"{a},{_spacer}{i}");
+            var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
 
-            return $@"{_spacer}sizes=""{attributeValue}""";
+            return $@"{spacer}sizes=""{attributeValue}""";
         }
 
         /// <summary>
@@ -92,13 +95,14 @@ namespace Songhay.Publications.Extensions
 
             var collection = responsiveImage
                 .Candidates
-                .Select(i => $"{i.ImageUri} {i.Width ?? i.PixelDensity}");
+                .Select(i => $"{i.ImageUri} {i.Width ?? i.PixelDensity}")
+                .ToArray();
 
             if (!collection.Any()) return string.Empty;
 
-            var attributeValue = collection.Aggregate((a, i) => $"{a},{_spacer}{i}");
+            var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
 
-            return $@"{_spacer}srcset=""{attributeValue}""";
+            return $@"{spacer}srcset=""{attributeValue}""";
         }
 
         static void EnsureResponsiveImage(this ResponsiveImage responsiveImage)
@@ -106,6 +110,6 @@ namespace Songhay.Publications.Extensions
             if (responsiveImage == null) throw new ArgumentNullException(nameof(responsiveImage));
         }
 
-        static string _spacer = $"{Environment.NewLine}    ";
+        static readonly string spacer = $"{Environment.NewLine}    ";
     }
 }

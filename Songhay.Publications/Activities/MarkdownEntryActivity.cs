@@ -56,7 +56,7 @@ namespace Songhay.Publications.Activities
         /// <param name="entryPath">The entry path.</param>
         /// <param name="collapsedHost">The collapsed host.</param>
         /// <exception cref="FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
-        public static void ExpandUris(string entryPath, string collapsedHost)
+        public static async Task ExpandUrisAsync(string entryPath, string collapsedHost)
         {
             if (!File.Exists(entryPath))
                 throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
@@ -90,7 +90,7 @@ namespace Songhay.Publications.Activities
                 .Where(i => i.Result.HasValue)
                 .ToArray();
 
-            Task.WaitAll(tasks);
+            await Task.WhenAll(tasks);
 
             var findChangeSet = tasks.Select(i => i.Result.GetValueOrDefault()).ToDictionary(k => k.Key, v => v.Value);
 
@@ -147,7 +147,7 @@ namespace Songhay.Publications.Activities
         }
 
         /// <summary>
-        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11Ty"/>.
+        /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11Ty(string, string, string)"/>.
         /// </summary>
         /// <param name="entryDraftsRootInfo">The entry drafts root information.</param>
         /// <param name="entryRootInfo">The entry root information.</param>
@@ -203,7 +203,7 @@ namespace Songhay.Publications.Activities
         {
             var (entryPath, collapsedHost) = this._jSettings.GetExpandUrisArgs(this._presentationInfo);
 
-            ExpandUris(entryPath, collapsedHost);
+            ExpandUrisAsync(entryPath, collapsedHost).GetAwaiter().GetResult();
         }
 
         internal void FindChange()

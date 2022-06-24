@@ -7,7 +7,7 @@ namespace Songhay.Publications.Models
     /// Publications keyword
     /// </summary>
     /// <seealso cref="IIndexKeyword" />
-    public partial class IndexKeyword : IIndexKeyword
+    public class IndexKeyword : IIndexKeyword
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IndexKeyword"/> class.
@@ -42,13 +42,13 @@ namespace Songhay.Publications.Models
         /// collection of Publication Index Keyword Group
         /// </summary>
         /// <value></value>
-        public ICollection<IndexKeywordGroup> Groups { get; set; }
+        public ICollection<IndexKeywordGroup> Groups { get; }
 
         /// <summary>
         /// collection of Publication Index Keyword Group
         /// </summary>
         /// <value></value>
-        public ICollection<Document> Documents { get; set; }
+        public ICollection<Document> Documents { get; }
 
         /// <summary>
         /// Gets or sets the incept date.

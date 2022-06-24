@@ -45,7 +45,7 @@ namespace Songhay.Publications.Models
             Console.WriteLine("    markdown file {0}...", markdownFile);
             var markdown = File.ReadAllText(markdownFile);
             var raw = Markdown.ToHtml(markdown);
-            var rawElement = XElement.Parse(string.Format(@"<div class=""rx raw tmp"" xmlns=""{0}"">{1}</div>", xhtml, raw));
+            var rawElement = XElement.Parse($@"<div class=""rx raw tmp"" xmlns=""{xhtml}"">{raw}</div>");
             var biographyDocument = new XDocument(_biographyTemplate);
             var divElement = biographyDocument.Root
                 .Element(xhtml + "body")

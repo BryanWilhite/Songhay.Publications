@@ -86,12 +86,12 @@ namespace Songhay.Publications.Extensions
         {
             var paragraphs = entry.ToParagraphs();
             var skip = paragraphs.Count() > 1 ? 1 : 0;
-            var content = paragraphs.Skip(1).Aggregate(string.Empty, (a, i) => $"{a} {i}");
+            var content = paragraphs.Skip(skip).Aggregate(string.Empty, (a, i) => $"{a} {i}");
             content = Regex.Replace(content, @"<[^>]+>", string.Empty);
             content = Markdown.ToPlainText(content);
 
             return (content.Length > length) ?
-                string.Concat(content.Substring(0, length), "�") :
+                string.Concat(content.Substring(0, length), "…") :
                 content;
         }
 
@@ -189,11 +189,12 @@ namespace Songhay.Publications.Extensions
         {
             entry.DoNullCheck();
 
-            var delimiter = new string[] { $"{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}" };
+            var delimiter = new[] { $"{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}" };
 
             var paragraphs = entry.Content
                 .Trim()
                 .Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+
             return paragraphs;
         }
 
@@ -209,10 +210,10 @@ namespace Songhay.Publications.Extensions
             {
                 i.DoNullCheckForFrontMatter();
 
-                var propertyName = "modificationDate";
+                const string propertyName = "modificationDate";
 
                 if (!i.FrontMatter.HasProperty(propertyName))
-                    throw new FormatException($"The expected date property, `{propertyName ?? "[null]"}`, is not here.");
+                    throw new FormatException($"The expected date property, `{propertyName}`, is not here.");
 
                 i.FrontMatter[propertyName] = ProgramTypeUtility.ConvertDateTimeToUtc(date);
             });
@@ -232,7 +233,7 @@ namespace Songhay.Publications.Extensions
             {
                 string UpdateExtractAndReturnTag(string tag, string e)
                 {
-                    var extractPropertyName = "extract";
+                    const string extractPropertyName = "extract";
 
                     var jO = tag.TrimStart().StartsWith("{") ?
                         JObject.Parse(tag) :
@@ -247,7 +248,7 @@ namespace Songhay.Publications.Extensions
                     return jO.ToString();
                 }
 
-                var tagPropertyName = "tag";
+                const string tagPropertyName = "tag";
                 var tagString = i.FrontMatter
                     .GetValue<string>(tagPropertyName, throwException: false);
 
@@ -287,13 +288,14 @@ namespace Songhay.Publications.Extensions
         {
             entry.DoNullCheckForFrontMatter();
 
-            var propertyName = "title";
+            const string propertyName = "title";
 
             if (!entry.FrontMatter.HasProperty(propertyName))
-                throw new FormatException($"The expected date property, `{propertyName ?? "[null]"}`, is not here.");
+                throw new FormatException($"The expected date property, `{propertyName}`, is not here.");
 
             headerLevel = (headerLevel == 0) ? 1 : Math.Abs(headerLevel);
             var markdownHeader = new string(Enumerable.Repeat('#', (headerLevel > 6) ? 6 : headerLevel).ToArray());
+
             return entry.WithEdit(i => i.Content = $"{markdownHeader} {i.FrontMatter[propertyName]}{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}");
         }
 

@@ -9,7 +9,7 @@ namespace Songhay.Publications.Activities
     /// for Songhay Publications.
     /// </summary>
     /// <seealso cref="ActivitiesGetter" />
-    public class PublicationsActivitiesGetter : ActivitiesGetter
+    public sealed class PublicationsActivitiesGetter : ActivitiesGetter
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicationsActivitiesGetter"/> class.

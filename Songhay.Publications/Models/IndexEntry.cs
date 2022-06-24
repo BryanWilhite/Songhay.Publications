@@ -25,7 +25,7 @@ namespace Songhay.Publications.Models
         {
             if(data == null) throw new ArgumentNullException(nameof(data));
 
-            Documents = data.Documents.ToArray();
+            Documents = data.Documents.OfType<IDocument>().ToArray();
 
             ClientId = data.ClientId;
             EndDate = data.EndDate;

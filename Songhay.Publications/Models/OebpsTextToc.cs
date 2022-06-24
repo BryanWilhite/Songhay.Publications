@@ -129,7 +129,7 @@ namespace Songhay.Publications.Models
 
                     if (isFirstChapterIdError)
                     {
-                        PublicationContext.Throw(string.Format("ERROR: cannot find templated element {0}", chapterId));
+                        PublicationContext.Throw($"ERROR: cannot find templated element {chapterId}");
                     }
                     else if (isFirstChapterId)
                     {
@@ -148,7 +148,7 @@ namespace Songhay.Publications.Models
             if (!newChapterElementList.Any()) return;
 
             Console.WriteLine("adding new elements under templated element...");
-            templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
+            templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
         }
 
         readonly Dictionary<string, string> _chapterSet;

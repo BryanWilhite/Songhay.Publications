@@ -8,7 +8,7 @@ namespace Songhay.Publications.Models
     /// <summary>
     /// Publications Fragment
     /// </summary>
-    public partial class Fragment : IFragment
+    public class Fragment : IFragment
     {
         /// <summary>
         /// Gets or sets the client identifier.

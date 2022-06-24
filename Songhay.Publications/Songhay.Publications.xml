@@ -17,7 +17,7 @@
             <param name="entryPath">The entry path.</param>
             <exception cref="T:System.IO.FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
         </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.ExpandUris(System.String,System.String)">
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.ExpandUrisAsync(System.String,System.String)">
             <summary>
             Expands the URIs of the specified host
             with <see cref="M:Songhay.Extensions.UriExtensions.ToExpandedUriPairAsync(System.Uri)"/>.

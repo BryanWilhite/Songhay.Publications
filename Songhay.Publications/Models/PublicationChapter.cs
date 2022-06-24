@@ -134,7 +134,7 @@ namespace Songhay.Publications.Models
                             .Replace(twoSpaces, string.Concat(u00A0, u00A0)));
                     });
 
-                    rawElement.Elements().ForEachInEnumerable(e => chapterBodyBuilder.Append(e.ToString()));
+                    rawElement.Elements().ForEachInEnumerable(e => chapterBodyBuilder.Append(e));
                 });
 
             titleElement.Value = _chapterPair.Value;

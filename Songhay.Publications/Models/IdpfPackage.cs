@@ -146,7 +146,7 @@ namespace Songhay.Publications.Models
             if (!newChapterElementList.Any()) return;
 
             Console.WriteLine("adding new elements under templated element...");
-            templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
+            templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
         }
 
         internal void SetSpineItemref(XElement itemref, string idref)
@@ -204,7 +204,7 @@ namespace Songhay.Publications.Models
             if (!newChapterElementList.Any()) return;
 
             Console.WriteLine("adding new elements under templated element...");
-            templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
+            templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
         }
 
         readonly Dictionary<string, string> _chapterSet;

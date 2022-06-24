@@ -12,7 +12,7 @@ namespace Songhay.Publications.Models
         /// <summary>
         /// Defines the new-line convention for entries.
         /// </summary>
-        public static string NewLine = Environment.NewLine;
+        public static readonly string NewLine = Environment.NewLine;
 
         /// <summary>
         /// Markdown <see cref="FileInfo" />

@@ -27,8 +27,7 @@ namespace Songhay.Publications.Extensions
                 WriteIndented = true,
             };
 
-            var json = JsonSerializer
-                .Serialize<IEnumerable<IIndexEntry>>(data, options);
+            var json = JsonSerializer.Serialize(data, options);
 
             return json;
         }

@@ -134,10 +134,7 @@ namespace Songhay.Publications.Tests.Extensions
             this._testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
             this._testOutputHelper.WriteLine(entry.FrontMatter.ToString());
 
-            if (content == null)
-                Assert.True(string.IsNullOrWhiteSpace(extract));
-            else
-                Assert.False(string.IsNullOrWhiteSpace(extract));
+            Assert.False(string.IsNullOrWhiteSpace(extract));
         }
 
         [Theory]

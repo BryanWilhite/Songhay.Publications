@@ -43,7 +43,8 @@ namespace Songhay.Publications.Models
 
             var navPoints = _ncxDocument.Root
                 .Element(ncx + "navMap")
-                .Elements(ncx + "navPoint");
+                .Elements(ncx + "navPoint")
+                .ToArray();
 
             this.SetChapterNavPoints(navPoints);
             this.UpdateNavPointPlayOrder(navPoints);
@@ -60,7 +61,7 @@ namespace Songhay.Publications.Models
                 new XAttribute("playOrder", string.Empty),
                 new XElement(ncx + "navLabel", new XElement(ncx + "text")),
                 new XElement(ncx + "content",
-                    new XAttribute("src", string.Format("Text/{0}.xhtml", chapterId)))
+                    new XAttribute("src", $"Text/{chapterId}.xhtml"))
                 );
         }
 
@@ -90,7 +91,7 @@ namespace Songhay.Publications.Models
 
                     if (isFirstChapterIdError)
                     {
-                        PublicationContext.Throw(string.Format("ERROR: cannot find templated element {0}", chapterId));
+                        PublicationContext.Throw($"ERROR: cannot find templated element {chapterId}");
                     }
                     else if (isFirstChapterId)
                     {
@@ -108,7 +109,7 @@ namespace Songhay.Publications.Models
             if (!newChapterElementList.Any()) return;
 
             Console.WriteLine("adding new elements under templated element...");
-            templatedChapterElement.AddAfterSelf(newChapterElementList.ToArray());
+            templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
         }
 
         internal void SetChapterNavPointText(XElement navPoint, string text)

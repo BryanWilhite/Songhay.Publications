@@ -13,7 +13,7 @@
         /// <summary>
         /// Conventional command name
         /// </summary>
-        public const string CommandNameExpandUris = "ExpandUris";
+        public const string CommandNameExpandUris = "ExpandUrisAsync";
 
         /// <summary>
         /// Conventional command name
