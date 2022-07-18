@@ -1,34 +1,37 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <AssemblyVersion>5.2021.7.20</AssemblyVersion>
-    <RootNamespace>Songhay.Publications.Shell</RootNamespace>
+    <PropertyGroup>
+        <AssemblyVersion>6.2022.7.20</AssemblyVersion>
+        <RootNamespace>Songhay.Publications.Shell</RootNamespace>
 
-    <Title>Songhay Publications Shell</Title>
-    <Description>The Studio Publications Shell for commandline automation of Activities.</Description>
-    <Authors>Bryan D. Wilhite</Authors>
-    <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
-    <Company>Songhay System</Company>
+        <Title>Songhay Publications Shell</Title>
+        <Description>The Studio Publications Shell for commandline automation of Activities.</Description>
+        <Authors>Bryan D. Wilhite</Authors>
+        <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
+        <Company>Songhay System</Company>
 
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <ApplicationIcon>songhay.ico</ApplicationIcon>
-  </PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ApplicationIcon>songhay.ico</ApplicationIcon>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CloneExtensions" Version="1.4.2" />
-    <PackageReference Include="Markdig" Version="0.30.2" />
-    <PackageReference Include="SonghayCore" Version="5.2.2" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CloneExtensions" Version="1.4.2" />
+        <PackageReference Include="Markdig" Version="0.30.2" />
+        <PackageReference Include="SonghayCore" Version="6.0.0" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>

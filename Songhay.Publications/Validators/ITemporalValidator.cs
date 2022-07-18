@@ -1,26 +1,21 @@
-using FluentValidation;
-using Songhay.Models;
-using Songhay.Publications.Models;
+namespace Songhay.Publications.Validators;
 
-namespace Songhay.Publications.Validators
+/// <summary>
+/// Validator for <see cref="ITemporal"/> implementors.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+public class ITemporalValidator : AbstractValidator<ITemporal>
 {
     /// <summary>
-    /// Validator for <see cref="ITemporal"/> implementors.
+    /// Initializes a new instance of the <see cref="ITemporalValidator"/> class.
     /// </summary>
-    // ReSharper disable once InconsistentNaming
-    public class ITemporalValidator : AbstractValidator<ITemporal>
+    public ITemporalValidator()
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ITemporalValidator"/> class.
-        /// </summary>
-        public ITemporalValidator()
-        {
-            RuleFor(i => i.InceptDate)
-                .NotNull()
-                .WithMessage(Scalars.ValidationMessageRequired);
-            RuleFor(i => i.ModificationDate)
-                .NotNull()
-                .WithMessage(Scalars.ValidationMessageRequired);
-        }
+        RuleFor(i => i.InceptDate)
+            .NotNull()
+            .WithMessage(Scalars.ValidationMessageRequired);
+        RuleFor(i => i.ModificationDate)
+            .NotNull()
+            .WithMessage(Scalars.ValidationMessageRequired);
     }
 }

@@ -1,16 +1,13 @@
-using System;
+namespace Songhay.Publications.Models;
 
-namespace Songhay.Publications.Models
+/// <summary>
+/// Defines the Search Index Entry
+/// </summary>
+public class SearchIndexEntry : Document
 {
     /// <summary>
-    /// Defines the Search Index Entry
+    /// The <see cref="Document"/> Extract
     /// </summary>
-    public class SearchIndexEntry : Document
-    {
-        /// <summary>
-        /// The <see cref="Document"/> Extract
-        /// </summary>
-        /// <value></value>
-        public string Extract { get; set; }
-    }
+    /// <value></value>
+    public string Extract { get; set; }
 }

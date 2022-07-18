@@ -1,159 +1,153 @@
 ﻿using Newtonsoft.Json.Linq;
-using Songhay.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Linq;
 
-namespace Songhay.Publications.Models
+namespace Songhay.Publications.Models;
+
+/// <summary>
+/// Defines the content to write the
+/// <see cref="PublicationFiles.EpubFileToc"/> file.
+/// </summary>
+/// <remarks>
+///  Open eBook Publication Structure (OEBPS),
+///  is a legacy e-book format which
+///  has been superseded by the EPUB format.
+///
+/// https://en.wikipedia.org/wiki/Open_eBook
+/// </remarks>
+public class OebpsTextToc
 {
     /// <summary>
-    /// Defines the content to write the
+    /// Initializes a new instance of the <see cref="OebpsTextToc"/> class.
+    /// </summary>
+    /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
+    /// <param name="chapterSet">chapter data</param>
+    /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+    public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
+    {
+        _publicationMeta = publicationMeta;
+        _chapterSet = chapterSet;
+        _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, fileIsExpected: true);
+        _document = XDocument.Load(_documentPath);
+    }
+
+    /// <summary>
+    /// Writes the
     /// <see cref="PublicationFiles.EpubFileToc"/> file.
     /// </summary>
-    /// <remarks>
-    ///  Open eBook Publication Structure (OEBPS),
-    ///  is a legacy e-book format which
-    ///  has been superseded by the EPUB format.
-    ///
-    /// https://en.wikipedia.org/wiki/Open_eBook
-    /// </remarks>
-    public class OebpsTextToc
+    public void Write()
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OebpsTextToc"/> class.
-        /// </summary>
-        /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
-        /// <param name="chapterSet">chapter data</param>
-        /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
-        public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
-        {
-            _publicationMeta = publicationMeta;
-            _chapterSet = chapterSet;
-            _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, fileIsExpected: true);
-            _document = XDocument.Load(_documentPath);
-        }
+        var jPublication = _publicationMeta.GetJObject("publication");
+        var title = jPublication.GetValue<string>("title");
+        var author = jPublication.GetValue<string>("author");
 
-        /// <summary>
-        /// Writes the
-        /// <see cref="PublicationFiles.EpubFileToc"/> file.
-        /// </summary>
-        public void Write()
-        {
-            var jPublication = _publicationMeta.GetJObject("publication");
-            var title = jPublication.GetValue<string>("title");
-            var author = jPublication.GetValue<string>("author");
+        var xhtml = PublicationNamespaces.Xhtml;
 
-            var xhtml = PublicationNamespaces.Xhtml;
+        var h2Element = _document.Root
+            .Element(xhtml + "body")
+            .Element(xhtml + "div")
+            .Element(xhtml + "h2");
+        var spanElement = _document.Root
+            .Element(xhtml + "body")
+            .Element(xhtml + "div")
+            .Element(xhtml + "h3")
+            .Element(xhtml + "span");
 
-            var h2Element = _document.Root
-                .Element(xhtml + "body")
-                .Element(xhtml + "div")
-                .Element(xhtml + "h2");
-            var spanElement = _document.Root
-                .Element(xhtml + "body")
-                .Element(xhtml + "div")
-                .Element(xhtml + "h3")
-                .Element(xhtml + "span");
+        h2Element.Value = title;
+        spanElement.Value = author;
 
-            h2Element.Value = title;
-            spanElement.Value = author;
+        SetTocAnchors(_document);
 
-            this.SetTocAnchors(_document);
+        EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
+    }
 
-            EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
-        }
+    internal XElement GetTocAnchor(string chapterId)
+    {
+        var xhtml = PublicationNamespaces.Xhtml;
+        var hrefTemplate = GetTocHrefTemplate();
 
-        internal XElement GetTocAnchor(string chapterId)
-        {
-            var xhtml = PublicationNamespaces.Xhtml;
-            var hrefTemplate = GetTocHrefTemplate();
+        return new XElement(xhtml + "a",
+            new XAttribute("href", string.Format(hrefTemplate, chapterId)),
+            GetTocChapterValue(chapterId)
+        );
+    }
 
-            return new XElement(xhtml + "a",
-                new XAttribute("href", string.Format(hrefTemplate, chapterId)),
-                GetTocChapterValue(chapterId)
-                );
-        }
+    internal string GetTocChapterValue(string chapterId)
+    {
+        return _chapterSet[chapterId];
+    }
 
-        internal string GetTocChapterValue(string chapterId)
-        {
-            return _chapterSet[chapterId];
-        }
+    internal string GetTocHrefTemplate()
+    {
+        return "../Text/{0}.xhtml";
+    }
 
-        internal string GetTocHrefTemplate()
-        {
-            return "../Text/{0}.xhtml";
-        }
+    internal void SetTocAnchor(XElement a, string chapterId)
+    {
+        var hrefTemplate = GetTocHrefTemplate();
 
-        internal void SetTocAnchor(XElement a, string chapterId)
-        {
-            var hrefTemplate = GetTocHrefTemplate();
+        a.Value = GetTocChapterValue(chapterId);
 
-            a.Value = GetTocChapterValue(chapterId);
+        var hrefAttribute = a.Attribute("href");
+        hrefAttribute.Value = string.Format(hrefTemplate, chapterId);
+    }
 
-            var hrefAttribute = a.Attribute("href");
-            hrefAttribute.Value = string.Format(hrefTemplate, chapterId);
-        }
+    internal void SetTocAnchors(XDocument tocDocument)
+    {
+        Console.WriteLine("setting TOC chapter anchors...");
 
-        internal void SetTocAnchors(XDocument tocDocument)
-        {
-            Console.WriteLine("setting TOC chapter anchors...");
+        var xhtml = PublicationNamespaces.Xhtml;
 
-            var xhtml = PublicationNamespaces.Xhtml;
+        var anchors = tocDocument.Root
+            .Element(xhtml + "body")
+            .Element(xhtml + "div")
+            .Elements(xhtml + "a");
 
-            var anchors = tocDocument.Root
-                .Element(xhtml + "body")
-                .Element(xhtml + "div")
-                .Elements(xhtml + "a");
+        XElement templatedChapterElement = null;
+        var newChapterElementList = new List<XElement>();
+        var hrefTemplate = GetTocHrefTemplate();
 
-            XElement templatedChapterElement = null;
-            var newChapterElementList = new List<XElement>();
-            var hrefTemplate = GetTocHrefTemplate();
+        _chapterSet.Keys
+            .Select((chapterId, i) => new { chapterId, i })
+            .ForEachInEnumerable(a =>
+            {
+                var chapterId = a.chapterId;
+                var i = a.i;
 
-            _chapterSet.Keys
-                .Select((chapterId, i) => new { chapterId, i })
-                .ForEachInEnumerable(a =>
+                var chapterElement = anchors.SingleOrDefault(item =>
                 {
-                    var chapterId = a.chapterId;
-                    var i = a.i;
-
-                    var chapterElement = anchors.SingleOrDefault(item =>
-                    {
-                        var href = item.Attribute("href").Value;
-                        return href == string.Format(hrefTemplate, chapterId);
-                    });
-
-                    var canAddNavPoint = (chapterElement == null) && (i > 0);
-                    var isFirstChapterIdError = (chapterElement == null) && (i == 0);
-                    var isFirstChapterId = (chapterElement != null) && (i == 0);
-
-                    if (isFirstChapterIdError)
-                    {
-                        PublicationContext.Throw($"ERROR: cannot find templated element {chapterId}");
-                    }
-                    else if (isFirstChapterId)
-                    {
-                        templatedChapterElement = chapterElement;
-                        this.SetTocAnchor(templatedChapterElement, chapterId);
-                    }
-                    else if (canAddNavPoint)
-                    {
-                        var @new = GetTocAnchor(chapterId);
-                        this.SetTocAnchor(@new, chapterId);
-                        newChapterElementList.Add(new XElement(xhtml + "br"));
-                        newChapterElementList.Add(@new);
-                    }
+                    var href = item.Attribute("href").Value;
+                    return href == string.Format(hrefTemplate, chapterId);
                 });
 
-            if (!newChapterElementList.Any()) return;
+                var canAddNavPoint = (chapterElement == null) && (i > 0);
+                var isFirstChapterIdError = (chapterElement == null) && (i == 0);
+                var isFirstChapterId = (chapterElement != null) && (i == 0);
 
-            Console.WriteLine("adding new elements under templated element...");
-            templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
-        }
+                if (isFirstChapterIdError)
+                {
+                    PublicationContext.Throw($"ERROR: cannot find templated element {chapterId}");
+                }
+                else if (isFirstChapterId)
+                {
+                    templatedChapterElement = chapterElement;
+                    SetTocAnchor(templatedChapterElement, chapterId);
+                }
+                else if (canAddNavPoint)
+                {
+                    var @new = GetTocAnchor(chapterId);
+                    SetTocAnchor(@new, chapterId);
+                    newChapterElementList.Add(new XElement(xhtml + "br"));
+                    newChapterElementList.Add(@new);
+                }
+            });
 
-        readonly Dictionary<string, string> _chapterSet;
-        readonly JObject _publicationMeta;
-        readonly string _documentPath;
-        readonly XDocument _document;
+        if (!newChapterElementList.Any()) return;
+
+        Console.WriteLine("adding new elements under templated element...");
+        templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
+
+    readonly Dictionary<string, string> _chapterSet;
+    readonly JObject _publicationMeta;
+    readonly string _documentPath;
+    readonly XDocument _document;
 }

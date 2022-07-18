@@ -1,33 +1,28 @@
-﻿using Songhay.Models;
-using System;
-using System.Collections.Generic;
+﻿namespace Songhay.Publications.Activities;
 
-namespace Songhay.Publications.Activities
+/// <summary>
+/// Implementation of <see cref="ActivitiesGetter"/>
+/// for Songhay Publications.
+/// </summary>
+/// <seealso cref="ActivitiesGetter" />
+public sealed class PublicationsActivitiesGetter : ActivitiesGetter
 {
     /// <summary>
-    /// Implementation of <see cref="ActivitiesGetter"/>
-    /// for Songhay Publications.
+    /// Initializes a new instance of the <see cref="PublicationsActivitiesGetter"/> class.
     /// </summary>
-    /// <seealso cref="ActivitiesGetter" />
-    public sealed class PublicationsActivitiesGetter : ActivitiesGetter
+    /// <param name="args">The arguments.</param>
+    public PublicationsActivitiesGetter(string[] args) : base(args)
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PublicationsActivitiesGetter"/> class.
-        /// </summary>
-        /// <param name="args">The arguments.</param>
-        public PublicationsActivitiesGetter(string[] args) : base(args)
+        this.LoadActivities(new Dictionary<string, Lazy<IActivity>>
         {
-            this.LoadActivities(new Dictionary<string, Lazy<IActivity>>
             {
-                {
-                    nameof(Activities.SearchIndexActivity),
-                    new Lazy<IActivity>(() => new Activities.SearchIndexActivity())
-                },
-                {
-                    nameof(Activities.MarkdownEntryActivity),
-                    new Lazy<IActivity>(() => new Activities.MarkdownEntryActivity())
-                },
-            });
-        }
+                nameof(SearchIndexActivity),
+                new Lazy<IActivity>(() => new SearchIndexActivity())
+            },
+            {
+                nameof(MarkdownEntryActivity),
+                new Lazy<IActivity>(() => new MarkdownEntryActivity())
+            },
+        });
     }
 }

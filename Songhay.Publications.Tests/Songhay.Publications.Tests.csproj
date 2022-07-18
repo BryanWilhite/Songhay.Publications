@@ -1,31 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
 
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+        <IsPackable>false</IsPackable>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
-  </ItemGroup>
+        <LangVersion>10</LangVersion>
 
-  <ItemGroup>
-    <PackageReference Include="Markdig" Version="0.30.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="5.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
-    <PackageReference Include="SonghayCore.xUnit" Version="5.0.7" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
-  </ItemGroup>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Directory Include="markdown\presentation-drafts\" />
-    <Directory Include="markdown\presentation\entry\" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Markdig" Version="0.30.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="6.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+        <PackageReference Include="SonghayCore.xUnit" Version="6.0.0" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Directory Include="markdown\presentation-drafts\" />
+        <Directory Include="markdown\presentation\entry\" />
+    </ItemGroup>
 
 </Project>

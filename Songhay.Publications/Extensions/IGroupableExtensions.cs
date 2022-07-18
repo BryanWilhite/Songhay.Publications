@@ -1,22 +1,19 @@
-﻿using Songhay.Models;
+﻿namespace Songhay.Publications.Extensions;
 
-namespace Songhay.Publications.Extensions
+/// <summary>
+/// Extensions of <see cref="IGroupable"/>
+/// </summary>
+public static class GroupableExtensions
 {
     /// <summary>
-    /// Extensions of <see cref="IGroupable"/>
+    /// Returns <c>true</c> when the group has the specified name.
     /// </summary>
-    public static class GroupableExtensions
+    /// <param name="group"></param>
+    /// <param name="name"></param>
+    public static bool IsGroup(this IGroupable group, string name)
     {
-        /// <summary>
-        /// Returns <c>true</c> when the group has the specified name.
-        /// </summary>
-        /// <param name="group"></param>
-        /// <param name="name"></param>
-        public static bool IsGroup(this IGroupable group, string name)
-        {
-            if (group == null) return false;
+        if (group == null) return false;
 
-            return (group.GroupId.ToLowerInvariant() == name?.ToLowerInvariant());
-        }
+        return (group.GroupId.ToLowerInvariant() == name?.ToLowerInvariant());
     }
 }

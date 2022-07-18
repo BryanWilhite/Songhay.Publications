@@ -1,48 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <AssemblyVersion>5.2.7</AssemblyVersion>
-    <RootNamespace>Songhay.Publications</RootNamespace>
+    <PropertyGroup>
+        <AssemblyVersion>6.0.0</AssemblyVersion>
+        <RootNamespace>Songhay.Publications</RootNamespace>
 
-    <Title>Songhay Publications</Title>
-    <Description>Core reusable definitions for Songhay Studio Publications</Description>
-    <Authors>Bryan D. Wilhite</Authors>
-    <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
-    <Company>Songhay System</Company>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
+        <Title>Songhay Publications</Title>
+        <Description>Core reusable definitions for Songhay Studio Publications</Description>
+        <Authors>Bryan D. Wilhite</Authors>
+        <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
+        <Company>Songhay System</Company>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
 
-    <IncludeSource>false</IncludeSource>
-    <IncludeSymbols>false</IncludeSymbols>
-    <IsPackable>true</IsPackable>
-    <PackageIcon>..\songhay_icon.png</PackageIcon>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-    <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/46</PackageReleaseNotes>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
-    <PackageVersion>$(AssemblyVersion)</PackageVersion>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>$(AssemblyVersion)</Version>
-  </PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IncludeSource>false</IncludeSource>
+        <IncludeSymbols>false</IncludeSymbols>
+        <IsPackable>true</IsPackable>
+        <PackageIcon>..\songhay_icon.png</PackageIcon>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
+        <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/46</PackageReleaseNotes>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
+        <PackageVersion>$(AssemblyVersion)</PackageVersion>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <Version>$(AssemblyVersion)</Version>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net5.0;</TargetFrameworks>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>.\Songhay.Publications.xml</DocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>.\Songhay.Publications.xml</DocumentationFile>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CloneExtensions" Version="1.4.2" />
-    <PackageReference Include="FluentValidation" Version="11.1.0" />
-    <PackageReference Include="Markdig" Version="0.30.2" />
-    <PackageReference Include="SonghayCore" Version="5.2.2" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CloneExtensions" Version="1.4.2" />
+        <PackageReference Include="FluentValidation" Version="11.1.0" />
+        <PackageReference Include="Markdig" Version="0.30.2" />
+        <PackageReference Include="SonghayCore" Version="6.0.0" />
+        <PackageReference Include="SonghayCore.Newtonsoft" Version="6.0.0" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\LICENSE.md" Link="LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="..\LICENSE.md" Link="LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    </ItemGroup>
 
 </Project>

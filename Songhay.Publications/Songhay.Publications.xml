@@ -6,16 +6,15 @@
     <members>
         <member name="T:Songhay.Publications.Activities.MarkdownEntryActivity">
             <summary>
-            <see cref="T:Songhay.Models.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
+            <see cref="T:Songhay.Abstractions.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
             </summary>
-            <seealso cref="T:Songhay.Models.IActivity" />
+            <seealso cref="T:Songhay.Abstractions.IActivity" />
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.AddEntryExtract(System.String)">
             <summary>
             Wrapper for <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)"/>.
             </summary>
             <param name="entryPath">The entry path.</param>
-            <exception cref="T:System.IO.FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.ExpandUrisAsync(System.String,System.String)">
             <summary>
@@ -24,7 +23,6 @@
             </summary>
             <param name="entryPath">The entry path.</param>
             <param name="collapsedHost">The collapsed host.</param>
-            <exception cref="T:System.IO.FileNotFoundException">The expected file, `{entryPath},` is not here.</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.FindChange(System.String,System.String,System.String,System.Boolean)">
             <summary>
@@ -34,12 +32,6 @@
             <param name="pattern">The pattern.</param>
             <param name="replacement">The replacement.</param>
             <param name="useRegex">if set to <c>true</c> [use regex].</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">
-            input
-            or
-            pattern
-            </exception>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.GenerateEntry(System.IO.DirectoryInfo,System.String)">
             <summary>
@@ -48,7 +40,6 @@
             </summary>
             <param name="entryDraftsRootInfo">The entry drafts root information.</param>
             <param name="title">The title.</param>
-            <exception cref="T:System.NullReferenceException">The expected {nameof(entry)} is not here.</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.PublishEntry(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
             <summary>
@@ -63,12 +54,10 @@
             Displays the help.
             </summary>
             <param name="args">The arguments.</param>
-            <returns></returns>
-            <exception cref="T:System.NotImplementedException"></exception>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.Start(Songhay.Models.ProgramArgs)">
             <summary>
-            Starts the <see cref="T:Songhay.Models.IActivity"/>.
+            Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
             </summary>
             <param name="args">The arguments.</param>
         </member>
@@ -87,18 +76,16 @@
         </member>
         <member name="T:Songhay.Publications.Activities.SearchIndexActivity">
             <summary>
-            <see cref="T:Songhay.Models.IActivity"/> implementation for Publication Search Indices
+            <see cref="T:Songhay.Abstractions.IActivity"/> implementation for Publication Search Indices
             </summary>
-            <seealso cref="T:Songhay.Models.IActivity" />
-            <seealso cref="T:Songhay.Models.IActivityConfigurationSupport" />
+            <seealso cref="T:Songhay.Abstractions.IActivity" />
+            <seealso cref="T:Songhay.Abstractions.IActivityConfigurationSupport" />
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.CompressSearchIndex(System.IO.FileInfo)">
             <summary>
             Compresses the Publications Search Index.
             </summary>
             <param name="indexInfo">The index information.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">indexInfo</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
             <summary>
@@ -107,12 +94,6 @@
             <param name="entryRootInfo">The entry root information.</param>
             <param name="indexRootInfo">The index root information.</param>
             <param name="indexFileName">Name of the index file.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">entryRootInfo
-            or
-            indexRootInfo
-            or
-            indexFileName</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
             <summary>
@@ -122,19 +103,12 @@
             <param name="indexRootInfo">The index root information.</param>
             <param name="indexFileName">Name of the index file.</param>
             <param name="partitionSize">Size of the partition.</param>
-            <returns></returns>
-            <exception cref="T:System.ArgumentNullException">entryRootInfo
-            or
-            indexRootInfo
-            or
-            indexFileName</exception>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
             <summary>
             Displays the help.
             </summary>
             <param name="args">The arguments.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.Start(Songhay.Models.ProgramArgs)">
             <summary>Starts with the specified arguments.</summary>
@@ -148,9 +122,8 @@
         <member name="M:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding">
             <summary>
             Gets <see cref="T:System.Text.UTF8Encoding"/>
-            instanitated with <c>encoderShouldEmitUTF8Identifier: true</c>.
+            instantiated with <c>encoderShouldEmitUTF8Identifier: true</c>.
             </summary>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)">
             <summary>
@@ -184,7 +157,6 @@
             Clones the instance of <see cref="T:Songhay.Publications.Models.IDocument"/>.
             </summary>
             <param name="data">The document.</param>
-            <returns><see cref="T:Songhay.Publications.Models.Document"/></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.IDocument},System.Func{Songhay.Publications.Models.IDocument,System.Boolean})">
             <summary>
@@ -193,15 +165,13 @@
             </summary>
             <param name="data">The data.</param>
             <param name="predicate">The predicate.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Models.IDocument)">
             <summary>
             Returns <c>true</c> when the <see cref="T:Songhay.Publications.Models.IDocument"/>
             has any <see cref="P:Songhay.Publications.Models.Document.Fragments"/>.
             </summary>
-            <param name="data"></param>
-            <returns></returns>
+            <param name="data">The data.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Models.IDocument)">
             <summary>
@@ -224,7 +194,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="templateFileName">Name of the template file.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Models.IDocument)">
             <summary>
@@ -245,7 +214,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IDocument)">
             <summary>
@@ -253,7 +221,7 @@
             </summary>
             <param name="data">The document.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IDocument,Songhay.Models.IGroupable)">
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IDocument,Songhay.Abstractions.IGroupable)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> into a menu display item model.
             </summary>
@@ -265,14 +233,12 @@
             Converts the <see cref="T:Songhay.Publications.Models.IDocument"/> data to <see cref="T:FluentValidation.Results.ValidationResult"/>.
             </summary>
             <param name="data">the <see cref="T:Songhay.Publications.Models.IDocument"/> data</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Models.IDocument)">
             <summary>
             Returns <see cref="T:Songhay.Publications.Models.IDocument"/> with default values.
             </summary>
             <param name="data">The data.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Models.IDocument,System.Action{Songhay.Publications.Models.IDocument})">
             <summary>
@@ -281,7 +247,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="editAction">The edit action.</param>
-            <returns></returns>
         </member>
         <member name="T:Songhay.Publications.Extensions.FragmentExtensions">
             <summary>
@@ -346,14 +311,14 @@
             <param name="copyFragmentContent">if set to <c>true</c> include <see cref="T:Songhay.Publications.Models.IFragment" /> content.</param>
             <returns></returns>
         </member>
-        <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Models.IGroupable)">
+        <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Abstractions.IGroupable)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a menu display item model.
             </summary>
             <param name="data">The fragment.</param>
             <param name="group">The group.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Models.IGroupable,System.Boolean)">
+        <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.IFragment"/> into a menu display item model.
             </summary>
@@ -386,10 +351,10 @@
         </member>
         <member name="T:Songhay.Publications.Extensions.GroupableExtensions">
             <summary>
-            Extensions of <see cref="T:Songhay.Models.IGroupable"/>
+            Extensions of <see cref="T:Songhay.Abstractions.IGroupable"/>
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Extensions.GroupableExtensions.IsGroup(Songhay.Models.IGroupable,System.String)">
+        <member name="M:Songhay.Publications.Extensions.GroupableExtensions.IsGroup(Songhay.Abstractions.IGroupable,System.String)">
             <summary>
             Returns <c>true</c> when the group has the specified name.
             </summary>
@@ -407,8 +372,7 @@
             to a JSON <see cref="T:System.String"/>
             with conventional <see cref="T:System.Text.Json.JsonSerializerOptions"/>.
             </summary>
-            <param name="data"></param>
-            <returns></returns>
+            <param name="data">The index data.</param>
         </member>
         <member name="T:Songhay.Publications.Extensions.SegmentExtensions">
             <summary>
@@ -420,7 +384,6 @@
             Clones the instance of <see cref="T:Songhay.Publications.Models.ISegment"/>.
             </summary>
             <param name="data">The document.</param>
-            <returns><see cref="T:Songhay.Publications.Models.Segment"/></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.GetSegmentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Models.ISegment},System.Func{Songhay.Publications.Models.ISegment,System.Boolean})">
             <summary>
@@ -429,7 +392,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="predicate">The predicate.</param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Models.ISegment)">
             <summary>
@@ -437,7 +399,6 @@
             has any <see cref="P:Songhay.Publications.Models.Segment.Documents"/>.
             </summary>
             <param name="data"></param>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Models.ISegment)">
             <summary>
@@ -472,7 +433,7 @@
             </summary>
             <param name="data">The data.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment,Songhay.Models.IGroupable)">
+        <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Models.ISegment,Songhay.Abstractions.IGroupable)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.ISegment"/> into a menu display item model.
             </summary>
@@ -595,34 +556,34 @@
         </member>
         <member name="T:Songhay.Publications.Extensions.MarkdownEntryExtensions">
             <summary>
-            Extensions of <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            Extensions of <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
             </summary>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
-            Effectively validates <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
+            Effectively validates <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
-            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" />
+            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" />.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForFrontMatter(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
-            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter" />
+            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter" />.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
             to an extract of the specified length
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
-            <param name="length">the string-length of the extract</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.</param>
+            <param name="length">the string-length of the extract.</param>
             <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)">
@@ -630,41 +591,27 @@
             Converts the specified <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
             into the final edit <see cref="T:System.String" />
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToMarkdownEntry(System.IO.FileInfo)">
             <summary>
             Converts the specified <see cref="T:System.IO.FileInfo" />
             into <see cref="T:Songhay.Publications.Models.MarkdownEntry" />
             </summary>
-            <param name="entry">the <see cref="T:System.IO.FileInfo" /> entry</param>
-            <returns></returns>
-            <exception cref="T:System.NullReferenceException">
-            The expected {nameof(FileInfo)} is not here.
-            or
-            The expected {nameof(FileInfo)} path is not here.
-            </exception>
-            <exception cref="T:System.FormatException">
-            File {entry.Name} is empty.
-            or
-            The expected entry format is not here [front matter top].
-            or
-            The expected entry format is not here [front matter bottom].
-            </exception>
+            <param name="entry">the <see cref="T:System.IO.FileInfo" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
             Converts <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" /> to paragraphs
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)">
             <summary>
             Sets the modification date of the <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
-            <param name="date">the touch <see cref="T:System.DateTime" /></param>
-            <returns></returns>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
+            <param name="date">the touch <see cref="T:System.DateTime" />.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
             <summary>
@@ -672,9 +619,8 @@
             with the conventional eleventy extract
             of the specified length.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
-            <param name="length">the string-length of the extract</param>
-            <returns></returns>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.</param>
+            <param name="length">the string-length of the extract.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
@@ -682,8 +628,7 @@
             based on <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter"/>
             with a <c>title</c> property.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
-            <returns></returns>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)">
             <summary>
@@ -691,41 +636,39 @@
             based on <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter"/>
             with a <c>title</c> property.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
-            <param name="headerLevel"></param>
-            <returns></returns>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
+            <param name="headerLevel">.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})">
             <summary>
             Edits the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with the specified edit action.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /></param>
-            <param name="editAction">the edit <see cref="T:System.Action`1" /></param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.</param>
+            <param name="editAction">the edit <see cref="T:System.Action`1" />.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)">
             <summary>
             Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with conventional 11ty frontmatter.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
-            <param name="title">the title of th entry</param>
-            <param name="inceptDate">the incept date of the entry</param>
-            <param name="path">the path to the entry</param>
-            <param name="tag">the tag of the entry</param>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
+            <param name="title">the title of th entry.</param>
+            <param name="inceptDate">the incept date of the entry.</param>
+            <param name="path">the path to the entry.</param>
+            <param name="tag">the tag of the entry.</param>
             <returns></returns>
         </member>
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)">
             <summary>
             Returns the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> with conventional frontmatter.
             </summary>
-            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry</param>
-            <param name="title">the title of th entry</param>
-            <param name="inceptDate">the incept date of the entry</param>
-            <param name="documentId">the DBMS ID of the entry</param>
-            <param name="fileName">the file name (with extension) of the entry</param>
-            <param name="path">the path to the entry</param>
-            <param name="segmentId">the DBMS ID of the Publications Segment</param>
-            <param name="tag">the tag of the entry</param>
-            <returns></returns>
+            <param name="entry">the <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
+            <param name="title">the title of th entry.</param>
+            <param name="inceptDate">the incept date of the entry.</param>
+            <param name="documentId">the DBMS ID of the entry.</param>
+            <param name="fileName">the file name (with extension) of the entry.</param>
+            <param name="path">the path to the entry.</param>
+            <param name="segmentId">the DBMS ID of the Publications Segment.</param>
+            <param name="tag">the tag of the entry.</param>
         </member>
         <member name="T:Songhay.Publications.Extensions.ProgramArgsExtensions">
             <summary>
@@ -741,7 +684,7 @@
         </member>
         <member name="T:Songhay.Publications.Extensions.PublicationContextExtensions">
             <summary>
-            Extensions of <see cref="T:Songhay.Publications.PublicationContext"/>
+            Extensions of <see cref="T:Songhay.Publications.PublicationContext"/>.
             </summary>
         </member>
         <member name="M:Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)">
@@ -749,7 +692,7 @@
             Generates an EPUB publication
             in the specified <see cref="T:Songhay.Publications.PublicationContext"/>.
             </summary>
-            <param name="context"></param>
+            <param name="context">The <see cref="T:Songhay.Publications.PublicationContext"/>.</param>
         </member>
         <member name="T:Songhay.Publications.Extensions.ResponsiveImageExtensions">
             <summary>
@@ -794,19 +737,19 @@
             Generates or overwrites a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file
             at the specified entry root.
             </summary>
-            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
-            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+            <param name="entryRoot">The conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts.</param>
+            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/>.</param>
         </member>
         <member name="M:Songhay.Publications.MarkdownEntryUtility.GenerateEntryFor11Ty(System.String,System.String,System.DateTime,System.String,System.String)">
             <summary>
             Generates or overwrites a <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file
             at the specified entry root.
             </summary>
-            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
-            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
-            <param name="inceptDate">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
-            <param name="path">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
-            <param name="tag">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/></param>
+            <param name="entryRoot">The conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts.</param>
+            <param name="title">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/>.</param>
+            <param name="inceptDate">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/>.</param>
+            <param name="path">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/>.</param>
+            <param name="tag">see <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)"/>.</param>
         </member>
         <member name="M:Songhay.Publications.MarkdownEntryUtility.PublishEntryFor11Ty(System.String,System.String,System.String)">
             <summary>
@@ -815,9 +758,9 @@
             to the specified presentation root
             for the eleventy pipeline.
             </summary>
-            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
-            <param name="presentationRoot">the presentation target directory for publication</param>
-            <param name="fileName">the name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory</param>
+            <param name="entryRoot">The conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts.</param>
+            <param name="presentationRoot">The presentation target directory for publication.</param>
+            <param name="fileName">The name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory.</param>
             <returns>
             Returns the path of the published file.
             </returns>
@@ -829,10 +772,10 @@
             to the specified presentation root
             for the eleventy pipeline.
             </summary>
-            <param name="entryRoot">the conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts</param>
-            <param name="presentationRoot">the presentation target directory for publication</param>
-            <param name="fileName">the name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory</param>
-            <param name="publicationDate">the <see cref="T:System.DateTime"/> of publication</param>
+            <param name="entryRoot">The conventional directory of <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> drafts.</param>
+            <param name="presentationRoot">The presentation target directory for publication.</param>
+            <param name="fileName">The name of the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/> file in the entry directory.</param>
+            <param name="publicationDate">The <see cref="T:System.DateTime"/> of publication.</param>
             <returns>
             Returns the path of the published file.
             </returns>
@@ -852,13 +795,12 @@
             Converts a <c>pre</c> element
             into EPUB-friendly HTML.
             </summary>
-            <param name="preElement"></param>
+            <param name="preElement">The <c>pre</c> <see cref="T:System.Xml.Linq.XElement"/>.</param>
         </member>
         <member name="M:Songhay.Publications.MarkdownUtility.GetFourSpaces">
             <summary>
             Returns a conventional number of space characters.
             </summary>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.MarkdownUtility.GetFourSpacesToken">
             <summary>
@@ -867,36 +809,32 @@
             <remarks>
             This is a trick used for automating find-change operations.
             </remarks>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.MarkdownUtility.GetPElementWithNewLine">
             <summary>
             Returns a <c>p</c> element
             delimited by <see cref="P:System.Environment.NewLine"/>.
             </summary>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.MarkdownUtility.GetPreLines(System.Xml.Linq.XElement)">
             <summary>
             Decomposes the <see cref="P:System.Xml.Linq.XElement.Value"/>
             of the specified <c>pre</c> element.
             </summary>
-            <param name="preElement"><c>pre</c> element</param>
+            <param name="preElement">The <c>pre</c> <see cref="T:System.Xml.Linq.XElement"/>.</param>
             <remarks>
             Note: the first and last elements of preList
             *should* be empty(when no leading spaces before<pre />)
             or *should* contain `pre` open and closing, respectively
             (when there are leading spaces before <pre />).
             </remarks>
-            <returns></returns>
         </member>
         <member name="M:Songhay.Publications.MarkdownUtility.IsMarkdownParagraph(System.String)">
             <summary>
             Returns <c>true</c> when a block of text
             starts with a <c>p</c> element.
             </summary>
-            <param name="p"></param>
-            <returns></returns>
+            <param name="input">The <see cref="T:System.String"/> input.</param>
         </member>
         <member name="T:Songhay.Publications.Models.CloneInitializers">
             <summary>
@@ -1288,97 +1226,61 @@
             <summary>
             Gets or sets the document identifier.
             </summary>
-            <value>
-            The document identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.Title">
             <summary>
             Gets or sets the title.
             </summary>
-            <value>
-            The title.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.DocumentShortName">
             <summary>
             Gets or sets the short name of the document.
             </summary>
-            <value>
-            The short name of the document.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.FileName">
             <summary>
             Gets or sets the name of the file.
             </summary>
-            <value>
-            The name of the file.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.Path">
             <summary>
             Gets or sets the path.
             </summary>
-            <value>
-            The path.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.TemplateId">
             <summary>
             Gets or sets the template identifier.
             </summary>
-            <value>
-            The template identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.SegmentId">
             <summary>
             Gets or sets the segment identifier.
             </summary>
-            <value>
-            The segment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.IsRoot">
             <summary>
             Gets or sets the is root.
             </summary>
-            <value>
-            The is root.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.IsActive">
             <summary>
             Gets or sets the is active.
             </summary>
-            <value>
-            The is active.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.SortOrdinal">
             <summary>
             Gets or sets the sort ordinal.
             </summary>
-            <value>
-            The sort ordinal.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.ClientId">
             <summary>
             Gets or sets the client identifier.
             </summary>
-            <value>
-            The client identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Models.IDocument.Tag">
             <summary>
             Gets or sets the tag.
             </summary>
-            <value>
-            The tag.
-            </value>
         </member>
         <member name="T:Songhay.Publications.Models.IdpfPackage">
             <summary>
@@ -2520,7 +2422,7 @@
         </member>
         <member name="T:Songhay.Publications.Validators.ITemporalValidator">
             <summary>
-            Validator for <see cref="T:Songhay.Models.ITemporal"/> implementors.
+            Validator for <see cref="T:Songhay.Abstractions.ITemporal"/> implementors.
             </summary>
         </member>
         <member name="M:Songhay.Publications.Validators.ITemporalValidator.#ctor">

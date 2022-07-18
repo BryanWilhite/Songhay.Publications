@@ -1,24 +1,23 @@
-﻿namespace Songhay.Publications.Models
+﻿namespace Songhay.Publications.Models;
+
+/// <summary>
+/// Defines the conventional directory names
+/// of the markdown presentation.
+/// </summary>
+public static class MarkdownPresentationDirectories
 {
     /// <summary>
-    /// Defines the conventional directory names
-    /// of the markdown presentation.
+    /// Conventional directory name
     /// </summary>
-    public static class MarkdownPresentationDirectories
-    {
-        /// <summary>
-        /// Conventional directory name
-        /// </summary>
-        public const string DirectoryNamePresentation = "presentation";
+    public const string DirectoryNamePresentation = "presentation";
 
-        /// <summary>
-        /// Conventional directory name
-        /// </summary>
-        public const string DirectoryNamePresentationDrafts = "presentation-drafts";
+    /// <summary>
+    /// Conventional directory name
+    /// </summary>
+    public const string DirectoryNamePresentationDrafts = "presentation-drafts";
 
-        /// <summary>
-        /// Conventional directory name
-        /// </summary>
-        public const string DirectoryNamePresentationShell = "shell";
-    }
+    /// <summary>
+    /// Conventional directory name
+    /// </summary>
+    public const string DirectoryNamePresentationShell = "shell";
 }
