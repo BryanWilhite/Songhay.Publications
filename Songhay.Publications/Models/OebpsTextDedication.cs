@@ -23,7 +23,7 @@ public class OebpsTextDedication
     {
         _epubTextDirectory = epubTextDirectory;
         _markdownDirectory = markdownDirectory;
-        SetTemplate(templateRoot);
+        _dedicationTemplate = GetTemplate(templateRoot);
     }
 
     /// <summary>
@@ -42,23 +42,25 @@ public class OebpsTextDedication
         var raw = Markdown.ToHtml(markdown);
         var rawElement = XElement.Parse($@"<div class=""rx raw tmp"" xmlns=""{xhtml}"">{raw}</div>");
         var dedicationDocument = new XDocument(_dedicationTemplate);
-        var divElement = dedicationDocument.Root
-            .Element(xhtml + "body")
+        var divElement = dedicationDocument.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
             .Element(xhtml + "div")
-            .Element(xhtml + "div");
+            .ToReferenceTypeValueOrThrow();
 
-        divElement.ReplaceWith(rawElement.Nodes());
+        divElement?.ReplaceWith(rawElement.Nodes());
 
         EpubUtility.SaveAsUnicodeWithBom(dedicationDocument, xhtmlFile);
     }
 
-    internal void SetTemplate(string csxRoot)
+    internal XDocument GetTemplate(string csxRoot)
     {
         var dedicationTemplateFile = ProgramFileUtility.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateDedication, fileIsExpected: true);
-        _dedicationTemplate = XDocument.Load(dedicationTemplateFile);
+
+        return XDocument.Load(dedicationTemplateFile);
     }
 
     readonly string _epubTextDirectory;
     readonly string _markdownDirectory;
-    XDocument _dedicationTemplate;
+    readonly XDocument _dedicationTemplate;
 }

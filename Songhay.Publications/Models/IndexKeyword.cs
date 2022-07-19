@@ -1,51 +1,40 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Songhay.Publications.Models;
 
 /// <summary>
-/// Publications keyword
+/// Publications keyword.
 /// </summary>
 /// <seealso cref="IIndexKeyword" />
 public class IndexKeyword : IIndexKeyword
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="IndexKeyword"/> class.
+    /// Index Keyword Group ID.
     /// </summary>
-    public IndexKeyword()
-    {
-        Groups = new List<IndexKeywordGroup>();
-        Documents = new List<Document>();
-    }
+    [DisallowNull]
+    public int? Id { get => _id; set => _id = value.ToValueOrThrow(); }
 
     /// <summary>
-    /// Index Keyword Group ID
+    /// Index Keyword Group Client ID.
     /// </summary>
-    /// <value></value>
-    public int? Id { get; set; }
-
-    /// <summary>
-    /// Index Keyword Group Client ID
-    /// </summary>
-    /// <value></value>
-    public string ClientId { get; set; }
+    [DisallowNull]
+    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
 
     /// <summary>
     /// Gets or sets the keyword value.
     /// </summary>
-    /// <value>
-    /// The keyword value.
-    /// </value>
-    public string KeywordValue { get; set; }
+    public string? KeywordValue { get; set; }
 
     /// <summary>
-    /// collection of Publication Index Keyword Group
+    /// Collection of Publication Index Keyword Group.
     /// </summary>
-    /// <value></value>
-    public ICollection<IndexKeywordGroup> Groups { get; }
+    public ICollection<IndexKeywordGroup> Groups { get; init; } = new List<IndexKeywordGroup>();
 
     /// <summary>
-    /// collection of Publication Index Keyword Group
+    /// Collection of Publication Index Keyword Group.
     /// </summary>
     /// <value></value>
-    public ICollection<Document> Documents { get; }
+    public ICollection<Document> Documents { get; init; } = new List<Document>();
 
     /// <summary>
     /// Gets or sets the incept date.
@@ -70,4 +59,7 @@ public class IndexKeyword : IIndexKeyword
     /// The modification date.
     /// </value>
     public DateTime? ModificationDate { get; set; }
+
+    int? _id;
+    string? _clientId;
 }

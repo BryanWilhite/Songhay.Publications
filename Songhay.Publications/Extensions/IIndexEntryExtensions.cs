@@ -1,3 +1,7 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
@@ -15,13 +19,13 @@ public static class IndexEntryExtensions
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
-        var options = new System.Text.Json.JsonSerializerOptions
+        JsonSerializerOptions options = new(JsonSerializerDefaults.Web)
         {
-            IgnoreNullValues = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             WriteIndented = true,
         };
 
-        var json = System.Text.Json.JsonSerializer.Serialize(data, options);
+        var json = JsonSerializer.Serialize(data, options);
 
         return json;
     }

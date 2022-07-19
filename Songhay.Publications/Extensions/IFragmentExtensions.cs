@@ -14,14 +14,13 @@ public static class FragmentExtensions
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Clones the instance of <see cref="IFragment"/>.
     /// </summary>
     /// <param name="data">The document.</param>
-    /// <returns><see cref="Fragment"/></returns>
-    public static Fragment Clone(this IFragment data) => data?.GetClone(CloneInitializers.Publications) as Fragment;
+    public static Fragment? Clone(this IFragment? data) => data?.GetClone(CloneInitializers.Publications) as Fragment;
 
     /// <summary>
     /// Returns and traces the first <see cref="IFragment"/>
@@ -29,14 +28,13 @@ public static class FragmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="predicate">The predicate.</param>
-    /// <returns></returns>
-    public static IFragment GetFragmentByPredicate(this IEnumerable<IFragment> data, Func<IFragment, bool> predicate)
+    public static IFragment? GetFragmentByPredicate(this IEnumerable<IFragment>? data, Func<IFragment, bool> predicate)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         var first = data.FirstOrDefault(predicate);
 
-        TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+        TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
 
         return first;
     }
@@ -45,7 +43,7 @@ public static class FragmentExtensions
     /// Sets the defaults.
     /// </summary>
     /// <param name="data">The fragment.</param>
-    public static void SetDefaults(this IFragment data)
+    public static void SetDefaults(this IFragment? data)
     {
         if (data == null) return;
 
@@ -58,15 +56,14 @@ public static class FragmentExtensions
     /// Converts the <see cref="IFragment"/> into human-readable display text.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static string ToDisplayText(this IFragment data) => data.ToDisplayText(showIdOnly: false);
+    public static string ToDisplayText(this IFragment? data) => data.ToDisplayText(showIdOnly: false);
 
     /// <summary>
     /// Converts the <see cref="IFragment"/> into a display text.
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
-    /// <returns></returns>
-    public static string ToDisplayText(this IFragment data, bool showIdOnly)
+    public static string ToDisplayText(this IFragment? data, bool showIdOnly)
     {
         if (data == null)
             return $"{nameof(ToDisplayText)}: the specified {nameof(IFragment)} is null.";
@@ -114,10 +111,10 @@ public static class FragmentExtensions
             builder.Append($"{delimiter}{nameof(data.IsNext)}: {data.IsNext}");
 
         if (data.IsPrevious.HasValue)
-            builder.Append($"{delimiter}{nameof(data.IsPrevious)}: {data?.IsPrevious}");
+            builder.Append($"{delimiter}{nameof(data.IsPrevious)}: {data.IsPrevious}");
 
         if (data.IsWrapper.HasValue)
-            builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data?.IsWrapper}");
+            builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data.IsWrapper}");
 
         return builder.ToString();
     }
@@ -127,8 +124,7 @@ public static class FragmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    /// <returns></returns>
-    public static JObject ToJObject(this IFragment data, bool useJavaScriptCase)
+    public static JObject? ToJObject(this IFragment? data, bool useJavaScriptCase)
     {
         if (data == null) return null;
 
@@ -149,7 +145,7 @@ public static class FragmentExtensions
     /// Converts the <see cref="IFragment"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The fragment.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IFragment data) =>
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data) =>
         data.ToMenuDisplayItemModel(group: null, copyFragmentContent: false);
 
     /// <summary>
@@ -158,7 +154,7 @@ public static class FragmentExtensions
     /// <param name="data">The data.</param>
     /// <param name="copyFragmentContent">if set to <c>true</c> include <see cref="IFragment" /> content.</param>
     /// <returns></returns>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IFragment data, bool copyFragmentContent)
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data, bool copyFragmentContent)
     {
         return data.ToMenuDisplayItemModel(group: null, copyFragmentContent: copyFragmentContent);
     }
@@ -168,7 +164,7 @@ public static class FragmentExtensions
     /// </summary>
     /// <param name="data">The fragment.</param>
     /// <param name="group">The group.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IFragment data, IGroupable group) =>
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data, IGroupable? group) =>
         data.ToMenuDisplayItemModel(group, copyFragmentContent: false);
 
     /// <summary>
@@ -177,7 +173,7 @@ public static class FragmentExtensions
     /// <param name="data">The document.</param>
     /// <param name="group">The group.</param>
     /// <param name="copyFragmentContent">if set to <c>true</c> include <see cref="IFragment"/> content.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IFragment data, IGroupable group,
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data, IGroupable? group,
         bool copyFragmentContent)
     {
         if (data == null) return null;
@@ -187,8 +183,8 @@ public static class FragmentExtensions
         var dataOut = new MenuDisplayItemModel()
         {
             DisplayText = data.FragmentDisplayName,
-            GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Fragment)}" : group.GroupDisplayText,
-            GroupId = (group == null) ? $"{@namespace}.{nameof(Fragment)}".ToLowerInvariant() : group.GroupId,
+            GroupDisplayText = group == null ? $"{@namespace}.{nameof(Fragment)}" : group.GroupDisplayText,
+            GroupId = group == null ? $"{@namespace}.{nameof(Fragment)}".ToLowerInvariant() : group.GroupId,
             Id = data.FragmentId.GetValueOrDefault(),
             ItemName = data.FragmentName
         };
@@ -201,11 +197,10 @@ public static class FragmentExtensions
     /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
     /// </summary>
     /// <param name="data">the <see cref="IDocument"/> data</param>
-    /// <returns></returns>
-    public static ValidationResult ToValidationResult(this IFragment data)
+    public static ValidationResult ToValidationResult(this IFragment? data)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
-        if (!(data is Fragment instance))
+        if (data is not Fragment instance)
             throw new DataException($"The expected {nameof(Fragment)} data is not here.");
 
         var validator = new FragmentValidator();
@@ -217,8 +212,7 @@ public static class FragmentExtensions
     /// Returns <see cref="IFragment"/> with default values.
     /// </summary>
     /// <param name="data">The data.</param>
-    /// <returns></returns>
-    public static IFragment WithDefaults(this IFragment data)
+    public static IFragment? WithDefaults(this IFragment? data)
     {
         data.SetDefaults();
 
@@ -231,11 +225,10 @@ public static class FragmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="editAction">The edit action.</param>
-    /// <returns></returns>
-    public static IFragment WithEdit(this IFragment data, Action<IFragment> editAction)
+    public static IFragment WithEdit(this IFragment? data, Action<IFragment>? editAction)
     {
-        editAction?.Invoke(data);
+        editAction?.Invoke(data.ToReferenceTypeValueOrThrow());
 
-        return data;
+        return data.ToReferenceTypeValueOrThrow();
     }
 }

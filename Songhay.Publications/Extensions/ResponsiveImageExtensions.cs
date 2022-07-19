@@ -1,18 +1,17 @@
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
-/// Extensions of <see cref="ResponsiveImage" />
+/// Extensions of <see cref="ResponsiveImage" />.
 /// </summary>
 public static class ResponsiveImageExtensions
 {
     /// <summary>
     /// Returns CSS <c>@media</c> At-rule blocks.
     /// </summary>
-    /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>
-    /// <returns></returns>
-    public static string ToCssMediaAtRules(this ResponsiveImage responsiveImage)
+    /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
+    public static string ToCssMediaAtRules(this ResponsiveImage? responsiveImage)
     {
-        responsiveImage.EnsureResponsiveImage();
+        ArgumentNullException.ThrowIfNull(responsiveImage);
 
         var candidatesCollection = responsiveImage
             .Candidates
@@ -31,7 +30,7 @@ public static class ResponsiveImageExtensions
         var stringCollection = sizesCollection
             .Zip(candidatesCollection, (media, background) => $@"
 {media} {{{
-    spacer}{background}
+    Spacer}{background}
 }}");
         return string.Join(string.Empty,
             new[] {
@@ -43,30 +42,28 @@ public static class ResponsiveImageExtensions
     /// <summary>
     /// Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
     /// </summary>
-    /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>
-    /// <returns></returns>
-    public static string ToImgMarkup(this ResponsiveImage responsiveImage)
+    /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
+    public static string ToImgMarkup(this ResponsiveImage? responsiveImage)
     {
-        responsiveImage.EnsureResponsiveImage();
+        ArgumentNullException.ThrowIfNull(responsiveImage);
 
         var srcset = responsiveImage.ToSrcSetAttribute();
         var sizes = responsiveImage.ToSizesSetAttribute();
 
         return $@"
 <img{
-    spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
-        spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
+    Spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
+        Spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
 ";
     }
 
     /// <summary>
     /// Reduces <see cref="ResponsiveImage.Sizes" /> to the <c>sizes</c> attribute.
     /// </summary>
-    /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>
-    /// <returns></returns>
-    public static string ToSizesSetAttribute(this ResponsiveImage responsiveImage)
+    /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
+    public static string ToSizesSetAttribute(this ResponsiveImage? responsiveImage)
     {
-        responsiveImage.EnsureResponsiveImage();
+        ArgumentNullException.ThrowIfNull(responsiveImage);
 
         var collection = responsiveImage
             .Sizes
@@ -75,19 +72,18 @@ public static class ResponsiveImageExtensions
 
         if (!collection.Any()) return string.Empty;
 
-        var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
+        var attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
-        return $@"{spacer}sizes=""{attributeValue}""";
+        return $@"{Spacer}sizes=""{attributeValue}""";
     }
 
     /// <summary>
     /// Reduces <see cref="ResponsiveImage.Candidates" /> to the <c>srcset</c> attribute.
     /// </summary>
-    /// <param name="responsiveImage"><see cref="ResponsiveImage" /></param>
-    /// <returns></returns>
-    public static string ToSrcSetAttribute(this ResponsiveImage responsiveImage)
+    /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
+    public static string ToSrcSetAttribute(this ResponsiveImage? responsiveImage)
     {
-        responsiveImage.EnsureResponsiveImage();
+        ArgumentNullException.ThrowIfNull(responsiveImage);
 
         var collection = responsiveImage
             .Candidates
@@ -96,15 +92,10 @@ public static class ResponsiveImageExtensions
 
         if (!collection.Any()) return string.Empty;
 
-        var attributeValue = collection.Aggregate((a, i) => $"{a},{spacer}{i}");
+        var attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
-        return $@"{spacer}srcset=""{attributeValue}""";
+        return $@"{Spacer}srcset=""{attributeValue}""";
     }
 
-    static void EnsureResponsiveImage(this ResponsiveImage responsiveImage)
-    {
-        if (responsiveImage == null) throw new ArgumentNullException(nameof(responsiveImage));
-    }
-
-    static readonly string spacer = $"{Environment.NewLine}    ";
+    static readonly string Spacer = $"{Environment.NewLine}    ";
 }

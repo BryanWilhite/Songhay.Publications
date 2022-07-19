@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Songhay.Extensions;
+using Songhay.Publications.Abstractions;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 using Songhay.Tests;

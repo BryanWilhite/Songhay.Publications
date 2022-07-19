@@ -12,21 +12,19 @@ public static partial class JObjectExtensions
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Gets the publication command.
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
-    /// <returns></returns>
-    public static string GetPublicationCommand(this JObject jObject) => jObject.GetValue<string>("command");
+    public static string GetPublicationCommand(this JObject? jObject) => jObject.GetValue<string>("command");
 
     /// <summary>
     /// Converts the <see cref="JObject"/> to presentation <see cref="Segment"/>.
     /// </summary>
-    /// <param name="jObject">The j object.</param>
-    /// <returns></returns>
-    public static Segment ToPresentation(this JObject jObject)
+    /// <param name="jObject">The <see cref="JObject"/>.</param>
+    public static Segment? ToPresentation(this JObject? jObject)
     {
         if (jObject == null) return null;
 

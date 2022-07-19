@@ -14,13 +14,13 @@ public class MarkdownEntryActivity : IActivity
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Wrapper for <see cref="MarkdownEntryExtensions.With11TyExtract"/>.
     /// </summary>
     /// <param name="entryPath">The entry path.</param>
-    public static void AddEntryExtract(string entryPath)
+    public static void AddEntryExtract(string? entryPath)
     {
         if (!File.Exists(entryPath))
             throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
@@ -43,7 +43,7 @@ public class MarkdownEntryActivity : IActivity
     /// </summary>
     /// <param name="entryPath">The entry path.</param>
     /// <param name="collapsedHost">The collapsed host.</param>
-    public static async Task ExpandUrisAsync(string entryPath, string collapsedHost)
+    public static async Task ExpandUrisAsync(string? entryPath, string? collapsedHost)
     {
         if (!File.Exists(entryPath))
             throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
@@ -53,11 +53,15 @@ public class MarkdownEntryActivity : IActivity
         TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
 
         var entry = entryInfo.ToMarkdownEntry();
-        var matches = Regex.Matches(entry.Content, $@"https*://{collapsedHost}[^ \]\)]+");
-        var uris = matches.OfType<Match>().Select(i => new Uri(i.Value)).Distinct().ToArray();
-        async Task<KeyValuePair<Uri, Uri>?> ExpandUriPairAsync(Uri expandableUri)
+        var matches =
+            Regex.Matches(entry.Content.ToReferenceTypeValueOrThrow(), $@"https*://{collapsedHost}[^ \]\)]+");
+        var uris = matches.OfType<Match>()
+            .ToReferenceTypeValueOrThrow()
+            .Select(i => new Uri(i.Value))
+            .Distinct().ToArray();
+        async Task<KeyValuePair<Uri?, Uri?>?> ExpandUriPairAsync(Uri expandableUri)
         {
-            KeyValuePair<Uri, Uri>? nullable = null;
+            KeyValuePair<Uri?, Uri?>? nullable = null;
             try
             {
                 TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...");
@@ -79,10 +83,19 @@ public class MarkdownEntryActivity : IActivity
 
         await Task.WhenAll(tasks);
 
-        var findChangeSet = tasks.Select(i => i.Result.GetValueOrDefault()).ToDictionary(k => k.Key, v => v.Value);
+        var findChangeSet =
+            tasks.Select(i =>
+                i.Result.GetValueOrDefault())
+                .ToDictionary(
+                    k => k.Key,
+                    v => v.Value
+                );
 
         foreach (var pair in findChangeSet)
-            entry.Content = entry.Content.Replace(pair.Key.OriginalString, pair.Value.OriginalString);
+            entry.Content = entry.Content.Replace(
+                pair.Key?.OriginalString ?? string.Empty,
+                pair.Value?.OriginalString
+            );
 
         TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
         File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
@@ -143,7 +156,7 @@ public class MarkdownEntryActivity : IActivity
     /// Displays the help.
     /// </summary>
     /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs args)
+    public string DisplayHelp(ProgramArgs? args)
     {
         throw new NotImplementedException();
     }
@@ -152,7 +165,7 @@ public class MarkdownEntryActivity : IActivity
     /// Starts the <see cref="IActivity"/>.
     /// </summary>
     /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs args)
+    public void Start(ProgramArgs? args)
     {
         TraceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
 
@@ -207,7 +220,7 @@ public class MarkdownEntryActivity : IActivity
         PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
     }
 
-    internal void SetContext(ProgramArgs args)
+    internal void SetContext(ProgramArgs? args)
     {
         var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
@@ -217,6 +230,6 @@ public class MarkdownEntryActivity : IActivity
         _jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
     }
 
-    DirectoryInfo _presentationInfo;
-    JObject _jSettings;
+    DirectoryInfo? _presentationInfo;
+    JObject? _jSettings;
 }

@@ -12,13 +12,13 @@ public class SegmentValidator : AbstractValidator<Segment>
     {
         RuleFor(i => i.IsActive)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.SegmentId)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.SegmentName)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
 
         RuleFor(i => i).SetValidator(new ITemporalValidator());
     }

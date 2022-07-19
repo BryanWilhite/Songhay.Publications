@@ -1,4 +1,4 @@
-namespace Songhay.Publications.Models;
+namespace Songhay.Publications.Abstractions;
 
 /// <summary>
 /// Publications Document interface

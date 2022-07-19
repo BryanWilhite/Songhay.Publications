@@ -23,53 +23,56 @@ public class PublicationChapter
     /// Gets the chapter body element.
     /// </summary>
     /// <returns></returns>
-    public XElement GetChapterBodyElement()
+    public XElement? GetChapterBodyElement()
     {
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div")
+        var e = _chapter.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
             .Element(xhtml + "div");
-        Console.WriteLine(e.Value);
+
+        Console.WriteLine(e?.Value);
+
         return e;
     }
 
     /// <summary>
     /// Gets the h1 element.
     /// </summary>
-    /// <returns></returns>
-    public XElement GetH1Element()
+    public XElement? GetH1Element()
     {
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div")
+        var e = _chapter.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
             .Element(xhtml + "h1");
-        Console.WriteLine(e.Value);
+
+        Console.WriteLine(e?.Value);
+
         return e;
     }
 
     /// <summary>
     /// Gets the title element.
     /// </summary>
-    /// <returns></returns>
-    public XElement GetTitleElement()
+    public XElement? GetTitleElement()
     {
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root
-            .Element(xhtml + "head")
+        var e = _chapter.Root?
+            .Element(xhtml + "head")?
             .Element(xhtml + "title");
-        Console.WriteLine(e.Value);
+
+        Console.WriteLine(e?.Value);
+
         return e;
     }
 
     /// <summary>
     /// Generates the XHTML.
     /// </summary>
-    /// <returns></returns>
     public string GenerateXhtml()
     {
         var titleElement = GetTitleElement();
@@ -98,7 +101,7 @@ public class PublicationChapter
                 var h2Elements = rawElement.Descendants("h2");
                 h2Elements.ToArray().ForEachInEnumerable(h2Element =>
                 {
-                    if (h2Element.Parent.Name != "p") return;
+                    if (h2Element.Parent?.Name != "p") return;
                     h2Element.Parent.ReplaceWith(h2Element);
                 });
 
@@ -106,14 +109,15 @@ public class PublicationChapter
                 var h3Elements = rawElement.Descendants("h3");
                 h3Elements.ToArray().ForEachInEnumerable(h3Element =>
                 {
-                    if (h3Element.Parent.Name != "p") return;
+                    if (h3Element.Parent?.Name != "p") return;
                     h3Element.Parent.ReplaceWith(h3Element);
                 });
 
                 Console.WriteLine("    looking for white-space-preservation blocks...");
                 var divElements = rawElement
                     .Elements("div")
-                    .Where(div => div.Attribute("class").Value.Contains("white-space-preservation"));
+                    .Where(div =>
+                        div.Attribute("class").ToReferenceTypeValueOrThrow().Value.Contains("white-space-preservation"));
 
                 divElements.ForEachInEnumerable(div =>
                 {
@@ -128,23 +132,22 @@ public class PublicationChapter
                 rawElement.Elements().ForEachInEnumerable(e => chapterBodyBuilder.Append(e));
             });
 
-        titleElement.Value = _chapterPair.Value;
-        h1Element.Value = _chapterPair.Value;
+        titleElement?.SetValue(_chapterPair.Value);
+        h1Element?.SetValue(_chapterPair.Value);
 
         var xhtml = PublicationNamespaces.Xhtml;
         var ops = PublicationNamespaces.IdpfOpenPackagingStructure;
 
-        var chapterBody = string.Format(
-            @"<div class=""chapter-body"" xmlns=""{1}"" xmlns:epub=""{2}"">{0}</div>",
-            chapterBodyBuilder.ToString(), xhtml, ops);
+        var chapterBody =
+            $@"<div class=""chapter-body"" xmlns=""{xhtml}"" xmlns:epub=""{ops}"">{chapterBodyBuilder}</div>";
 
         var chapterBodyElement = XElement.Parse(chapterBody);
-        divPlaceholderElement.ReplaceWith(chapterBodyElement.Elements());
+        divPlaceholderElement?.ReplaceWith(chapterBodyElement.Elements());
 
         return _chapter.ToString();
     }
 
     readonly DirectoryInfo _chapterDirectoryInfo;
     readonly XDocument _chapter;
-    KeyValuePair<string, string> _chapterPair;
+    readonly KeyValuePair<string, string> _chapterPair;
 }

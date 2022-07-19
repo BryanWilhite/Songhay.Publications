@@ -105,14 +105,14 @@ public class SearchIndexActivity : IActivity
         var command = _jSettings.GetPublicationCommand();
         TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
 
-        if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11tySearchIndex();
+        if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
         else
         {
             TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
         }
     }
 
-    internal void GenerateCompressed11tySearchIndex()
+    internal void GenerateCompressed11TySearchIndex()
     {
         var (entryRootInfo, indexRootInfo, indexFileName) =
             _jSettings.GetCompressed11TyIndexArgs(_presentationInfo);

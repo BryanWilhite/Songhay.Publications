@@ -12,13 +12,13 @@ public class FragmentValidator : AbstractValidator<Fragment>
     {
         RuleFor(i => i.IsActive)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.DocumentId)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.FragmentName)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
 
         RuleFor(i => i).SetValidator(new ITemporalValidator());
     }

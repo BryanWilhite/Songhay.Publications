@@ -41,18 +41,20 @@ public class OebpsTextToc
 
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var h2Element = _document.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div")
-            .Element(xhtml + "h2");
-        var spanElement = _document.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div")
-            .Element(xhtml + "h3")
-            .Element(xhtml + "span");
+        var h2Element = _document.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
+            .Element(xhtml + "h2")
+            .ToReferenceTypeValueOrThrow();
+        var spanElement = _document.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
+            .Element(xhtml + "h3")?
+            .Element(xhtml + "span")
+            .ToReferenceTypeValueOrThrow();
 
-        h2Element.Value = title;
-        spanElement.Value = author;
+        h2Element?.SetValue(title);
+        spanElement?.SetValue(author);
 
         SetTocAnchors(_document);
 
@@ -70,24 +72,19 @@ public class OebpsTextToc
         );
     }
 
-    internal string GetTocChapterValue(string chapterId)
-    {
-        return _chapterSet[chapterId];
-    }
+    internal string GetTocChapterValue(string chapterId) => _chapterSet[chapterId];
 
-    internal string GetTocHrefTemplate()
-    {
-        return "../Text/{0}.xhtml";
-    }
+    internal string GetTocHrefTemplate() => "../Text/{0}.xhtml";
 
-    internal void SetTocAnchor(XElement a, string chapterId)
+    internal void SetTocAnchor(XElement? a, string chapterId)
     {
         var hrefTemplate = GetTocHrefTemplate();
 
-        a.Value = GetTocChapterValue(chapterId);
+        a?.SetValue(GetTocChapterValue(chapterId));
 
-        var hrefAttribute = a.Attribute("href");
-        hrefAttribute.Value = string.Format(hrefTemplate, chapterId);
+        var hrefAttribute = a?.Attribute("href");
+
+        hrefAttribute?.SetValue(string.Format(hrefTemplate, chapterId));
     }
 
     internal void SetTocAnchors(XDocument tocDocument)
@@ -96,12 +93,13 @@ public class OebpsTextToc
 
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var anchors = tocDocument.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div")
-            .Elements(xhtml + "a");
+        var anchors = tocDocument.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
+            .Elements(xhtml + "a")
+            .ToReferenceTypeValueOrThrow();
 
-        XElement templatedChapterElement = null;
+        XElement? templatedChapterElement = null;
         var newChapterElementList = new List<XElement>();
         var hrefTemplate = GetTocHrefTemplate();
 
@@ -112,15 +110,16 @@ public class OebpsTextToc
                 var chapterId = a.chapterId;
                 var i = a.i;
 
-                var chapterElement = anchors.SingleOrDefault(item =>
+                var chapterElement = anchors?.SingleOrDefault(item =>
                 {
-                    var href = item.Attribute("href").Value;
+                    var href = item.Attribute("href")?.Value;
+
                     return href == string.Format(hrefTemplate, chapterId);
                 });
 
-                var canAddNavPoint = (chapterElement == null) && (i > 0);
-                var isFirstChapterIdError = (chapterElement == null) && (i == 0);
-                var isFirstChapterId = (chapterElement != null) && (i == 0);
+                var canAddNavPoint = chapterElement == null && i > 0;
+                var isFirstChapterIdError = chapterElement == null && i == 0;
+                var isFirstChapterId = chapterElement != null && i == 0;
 
                 if (isFirstChapterIdError)
                 {
@@ -143,7 +142,7 @@ public class OebpsTextToc
         if (!newChapterElementList.Any()) return;
 
         Console.WriteLine("adding new elements under templated element...");
-        templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
+        templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
     readonly Dictionary<string, string> _chapterSet;

@@ -19,13 +19,13 @@ public class OebpsTextCopyright
     /// Initializes a new instance of the <see cref="OebpsTextCopyright" /> class.
     /// </summary>
     /// <param name="publicationMeta">The publication meta.</param>
-    /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+    /// <param name="epubTextDirectory">Conventional <c>epub/OEBPS/Text</c> directory.</param>
     public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
     {
         _publicationMeta = publicationMeta;
         _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileCopyright, fileIsExpected: true);
         _document = XDocument.Load(_documentPath);
-        SetSpans();
+        _spans = GetSpans();
     }
 
     /// <summary>
@@ -83,20 +83,21 @@ public class OebpsTextCopyright
         });
     }
 
-    internal void SetSpans()
+    internal IEnumerable<XElement> GetSpans()
     {
         var xhtml = PublicationNamespaces.Xhtml;
 
-        var bodyDivElement = _document.Root
-            .Element(xhtml + "body")
-            .Element(xhtml + "div");
+        var bodyDivElement = _document.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")
+            .ToReferenceTypeValueOrThrow();
 
-        _spans = bodyDivElement
-            .Descendants(xhtml + "span");
+        return bodyDivElement?
+            .Descendants(xhtml + "span") ?? Enumerable.Empty<XElement>();
     }
 
     readonly JObject _publicationMeta;
     readonly string _documentPath;
     readonly XDocument _document;
-    IEnumerable<XElement> _spans;
+    readonly IEnumerable<XElement> _spans;
 }

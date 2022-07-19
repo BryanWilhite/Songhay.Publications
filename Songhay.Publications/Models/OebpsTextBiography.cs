@@ -23,7 +23,7 @@ public class OebpsTextBiography
     {
         _epubTextDirectory = epubTextDirectory;
         _markdownDirectory = markdownDirectory;
-        SetBiographyTemplate(templateRoot);
+        _biographyTemplate = GetBiographyTemplate(templateRoot);
     }
 
     /// <summary>
@@ -42,23 +42,25 @@ public class OebpsTextBiography
         var raw = Markdown.ToHtml(markdown);
         var rawElement = XElement.Parse($@"<div class=""rx raw tmp"" xmlns=""{xhtml}"">{raw}</div>");
         var biographyDocument = new XDocument(_biographyTemplate);
-        var divElement = biographyDocument.Root
-            .Element(xhtml + "body")
+        var divElement = biographyDocument.Root?
+            .Element(xhtml + "body")?
+            .Element(xhtml + "div")?
             .Element(xhtml + "div")
-            .Element(xhtml + "div");
+            .ToReferenceTypeValueOrThrow();
 
-        divElement.ReplaceWith(rawElement.Nodes());
+        divElement?.ReplaceWith(rawElement.Nodes());
 
         EpubUtility.SaveAsUnicodeWithBom(biographyDocument, xhtmlFile);
     }
 
-    internal void SetBiographyTemplate(string csxRoot)
+    internal static XDocument GetBiographyTemplate(string csxRoot)
     {
         var biographyTemplateFile = ProgramFileUtility.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateBiography, fileIsExpected: true);
-        _biographyTemplate = XDocument.Load(biographyTemplateFile);
+
+        return XDocument.Load(biographyTemplateFile);
     }
 
     readonly string _epubTextDirectory;
     readonly string _markdownDirectory;
-    XDocument _biographyTemplate;
+    readonly XDocument _biographyTemplate;
 }

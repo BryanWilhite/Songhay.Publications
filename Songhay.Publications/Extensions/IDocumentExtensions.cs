@@ -15,13 +15,13 @@ public static class IDocumentExtensions
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Clones the instance of <see cref="IDocument"/>.
     /// </summary>
     /// <param name="data">The document.</param>
-    public static Document Clone(this IDocument data) => data?.GetClone(CloneInitializers.Publications) as Document;
+    public static Document? Clone(this IDocument? data) => data?.GetClone(CloneInitializers.Publications) as Document;
 
     /// <summary>
     /// Returns and traces the first <see cref="IDocument"/>
@@ -29,13 +29,13 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="predicate">The predicate.</param>
-    public static IDocument GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate)
+    public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         var first = data.FirstOrDefault(predicate);
 
-        TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+        TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
 
         return first;
     }
@@ -45,7 +45,7 @@ public static class IDocumentExtensions
     /// has any <see cref="Document.Fragments"/>.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static bool HasFragments(this IDocument data)
+    public static bool HasFragments(this IDocument? data)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
@@ -65,14 +65,14 @@ public static class IDocumentExtensions
     /// <returns>
     ///   <c>true</c> if the specified document is template-able; otherwise, <c>false</c>.
     /// </returns>
-    public static bool IsTemplatable(this IDocument data) =>
-        data != null && (!string.IsNullOrEmpty(data.FileName) && data.FileName.EndsWith(".html"));
+    public static bool IsTemplatable(this IDocument? data) =>
+        data != null && !string.IsNullOrEmpty(data.FileName) && data.FileName.EndsWith(".html");
 
     /// <summary>
     /// Sets the defaults.
     /// </summary>
     /// <param name="data">The document.</param>
-    public static void SetDefaults(this IDocument data)
+    public static void SetDefaults(this IDocument? data)
     {
         if (data == null) return;
 
@@ -87,7 +87,7 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="templateFileName">Name of the template file.</param>
-    public static XElement ToConventionalPublicationItem(this IDocument data, string templateFileName)
+    public static XElement? ToConventionalPublicationItem(this IDocument? data, string templateFileName)
     {
         if (data == null) return null;
 
@@ -104,17 +104,14 @@ public static class IDocumentExtensions
     /// Converts the <see cref="IDocument"/> into human-readable display text.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static string ToDisplayText(this IDocument data)
-    {
-        return data.ToDisplayText(showIdOnly: false);
-    }
+    public static string ToDisplayText(this IDocument? data) => data.ToDisplayText(showIdOnly: false);
 
     /// <summary>
     /// Converts the <see cref="IDocument"/> into a display text.
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
-    public static string ToDisplayText(this IDocument data, bool showIdOnly)
+    public static string ToDisplayText(this IDocument? data, bool showIdOnly)
     {
         if (data == null)
             return $"{nameof(ToDisplayText)}: the specified {nameof(IDocument)} is null.";
@@ -160,7 +157,7 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    public static JObject ToJObject(this IDocument data, bool useJavaScriptCase)
+    public static JObject? ToJObject(this IDocument? data, bool useJavaScriptCase)
     {
         if (data == null) return null;
 
@@ -181,17 +178,15 @@ public static class IDocumentExtensions
     /// Converts the <see cref="IDocument"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The document.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IDocument data)
-    {
-        return data.ToMenuDisplayItemModel(group: null);
-    }
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IDocument? data) =>
+        data.ToMenuDisplayItemModel(group: null);
 
     /// <summary>
     /// Converts the <see cref="IDocument"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The document.</param>
     /// <param name="group">The group.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this IDocument data, IGroupable group)
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IDocument? data, IGroupable? group)
     {
         if (data == null) return null;
 
@@ -213,7 +208,7 @@ public static class IDocumentExtensions
     /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
     /// </summary>
     /// <param name="data">the <see cref="IDocument"/> data</param>
-    public static ValidationResult ToValidationResult(this IDocument data)
+    public static ValidationResult ToValidationResult(this IDocument? data)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
         if (data is not Document instance)
@@ -228,7 +223,7 @@ public static class IDocumentExtensions
     /// Returns <see cref="IDocument"/> with default values.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static IDocument WithDefaults(this IDocument data)
+    public static IDocument? WithDefaults(this IDocument? data)
     {
         data.SetDefaults();
 
@@ -241,10 +236,10 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="editAction">The edit action.</param>
-    public static IDocument WithEdit(this IDocument data, Action<IDocument> editAction)
+    public static IDocument WithEdit(this IDocument? data, Action<IDocument>? editAction)
     {
-        editAction?.Invoke(data);
+        editAction?.Invoke(data.ToReferenceTypeValueOrThrow());
 
-        return data;
+        return data.ToReferenceTypeValueOrThrow();
     }
 }

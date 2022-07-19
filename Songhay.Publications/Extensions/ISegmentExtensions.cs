@@ -15,13 +15,13 @@ public static class SegmentExtensions
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Clones the instance of <see cref="ISegment"/>.
     /// </summary>
     /// <param name="data">The document.</param>
-    public static Segment Clone(this ISegment data) => data?.GetClone(CloneInitializers.Publications) as Segment;
+    public static Segment? Clone(this ISegment? data) => data?.GetClone(CloneInitializers.Publications) as Segment;
 
     /// <summary>
     /// Returns and traces the first <see cref="ISegment"/>
@@ -29,9 +29,9 @@ public static class SegmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="predicate">The predicate.</param>
-    public static ISegment GetSegmentByPredicate(this IEnumerable<ISegment> data, Func<ISegment, bool> predicate)
+    public static ISegment? GetSegmentByPredicate(this IEnumerable<ISegment>? data, Func<ISegment, bool> predicate)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         var first = data.FirstOrDefault(predicate);
 
@@ -45,7 +45,7 @@ public static class SegmentExtensions
     /// has any <see cref="Segment.Documents"/>.
     /// </summary>
     /// <param name="data"></param>
-    public static bool HasDocuments(this ISegment data)
+    public static bool HasDocuments(this ISegment? data)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
@@ -62,7 +62,7 @@ public static class SegmentExtensions
     /// Sets the defaults.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static void SetDefaults(this ISegment data)
+    public static void SetDefaults(this ISegment? data)
     {
         if (data == null) return;
 
@@ -74,14 +74,14 @@ public static class SegmentExtensions
     /// Converts the <see cref="ISegment"/> into human-readable display text.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static string ToDisplayText(this ISegment data) => data.ToDisplayText(showIdOnly: false);
+    public static string ToDisplayText(this ISegment? data) => data.ToDisplayText(showIdOnly: false);
 
     /// <summary>
     /// Converts the <see cref="ISegment"/> into human-readable display text.
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
-    public static string ToDisplayText(this ISegment data, bool showIdOnly)
+    public static string ToDisplayText(this ISegment? data, bool showIdOnly)
     {
         if (data == null)
             return $"{nameof(ToDisplayText)}: the specified {nameof(ISegment)} is null.";
@@ -125,8 +125,7 @@ public static class SegmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    /// <returns></returns>
-    public static JObject ToJObject(this ISegment data, bool useJavaScriptCase)
+    public static JObject? ToJObject(this ISegment? data, bool useJavaScriptCase)
     {
         if (data == null) return null;
 
@@ -147,7 +146,7 @@ public static class SegmentExtensions
     /// Converts the <see cref="ISegment"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this ISegment data) =>
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this ISegment? data) =>
         data.ToMenuDisplayItemModel(group: null);
 
     /// <summary>
@@ -155,7 +154,7 @@ public static class SegmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="group">The group.</param>
-    public static MenuDisplayItemModel ToMenuDisplayItemModel(this ISegment data, IGroupable group)
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this ISegment? data, IGroupable? group)
     {
         if (data == null) return null;
 
@@ -168,6 +167,7 @@ public static class SegmentExtensions
             Id = data.SegmentId.GetValueOrDefault(),
             ItemName = data.SegmentName
         };
+
         return dataOut;
     }
 
@@ -177,7 +177,7 @@ public static class SegmentExtensions
     /// <param name="data">The data.</param>
     public static IEnumerable<IIndexEntry> ToPublicationIndexEntries(this IEnumerable<ISegment> data)
     {
-        if(data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         return data.Select(i => i.ToPublicationIndexEntry());
     }
@@ -186,11 +186,11 @@ public static class SegmentExtensions
     /// Converts the <see cref="ISegment" /> to <see cref="IIndexEntry" />.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static IIndexEntry ToPublicationIndexEntry(this ISegment data)
+    public static IIndexEntry ToPublicationIndexEntry(this ISegment? data)
     {
         if(data == null) throw new ArgumentNullException(nameof(data));
 
-        if (!(data is Segment instance))
+        if (data is not Segment instance)
             throw new DataException($"The expected {nameof(Segment)} data is not here.");
 
         return new IndexEntry(instance)
@@ -208,21 +208,20 @@ public static class SegmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    /// <returns></returns>
-    public static JObject ToPublicationIndexEntryJObject(this ISegment data, bool useJavaScriptCase)
+    public static JObject ToPublicationIndexEntryJObject(this ISegment? data, bool useJavaScriptCase)
     {
-        var jSegment = data.ToJObject(useJavaScriptCase);
+        var jSegment = data.ToJObject(useJavaScriptCase).ToReferenceTypeValueOrThrow();
 
-        if (!(data is Segment segment)) return jSegment;
+        if (data is not Segment segment) return jSegment;
 
-        if (segment.Segments != null)
+        if (segment.Segments.Any())
         {
             var jSegmentArray = new JArray(segment.Segments.Select(i => i.ToPublicationIndexEntryJObject(useJavaScriptCase)));
 
             jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
         }
 
-        if (segment.Documents == null) return jSegment;
+        if (!segment.Documents.Any()) return jSegment;
         {
             var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
 
@@ -236,11 +235,10 @@ public static class SegmentExtensions
     /// Converts the <see cref="IDocument"/> data to <see cref="ValidationResult"/>.
     /// </summary>
     /// <param name="data">the <see cref="IDocument"/> data</param>
-    /// <returns></returns>
-    public static ValidationResult ToValidationResult(this ISegment data)
+    public static ValidationResult ToValidationResult(this ISegment? data)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
-        if (!(data is Segment instance))
+        if (data is not Segment instance)
             throw new DataException($"The expected {nameof(Segment)} data is not here.");
 
         var validator = new SegmentValidator();
@@ -252,8 +250,7 @@ public static class SegmentExtensions
     /// Returns <see cref="ISegment"/> with default values.
     /// </summary>
     /// <param name="data">The data.</param>
-    /// <returns></returns>
-    public static ISegment WithDefaults(this ISegment data)
+    public static ISegment? WithDefaults(this ISegment? data)
     {
         data.SetDefaults();
 
@@ -266,11 +263,10 @@ public static class SegmentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="editAction">The edit action.</param>
-    /// <returns></returns>
-    public static ISegment WithEdit(this ISegment data, Action<ISegment> editAction)
+    public static ISegment WithEdit(this ISegment? data, Action<ISegment>? editAction)
     {
-        editAction?.Invoke(data);
+        editAction?.Invoke(data.ToReferenceTypeValueOrThrow());
 
-        return data;
+        return data.ToReferenceTypeValueOrThrow();
     }
 }

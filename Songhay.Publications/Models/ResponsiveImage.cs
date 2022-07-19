@@ -1,56 +1,39 @@
-﻿namespace Songhay.Publications.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Songhay.Publications.Models;
 
 /// <summary>
-/// Defines a responsive image
+/// Defines a responsive image.
 /// </summary>
 public class ResponsiveImage
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="ResponsiveImage"/> class.
-    /// </summary>
-    public ResponsiveImage()
-    {
-        Candidates = Enumerable.Empty<ImageCandidate>().ToList();
-        Sizes = Enumerable.Empty<ImageSize>().ToList();
-    }
-
-    /// <summary>
     /// Gets or sets the description.
     /// </summary>
-    /// <value>
-    /// The description.
-    /// </value>
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the key.
     /// </summary>
-    /// <value>
-    /// The key.
-    /// </value>
-    public string Key { get; set; }
+    [DisallowNull]
+    public string? Key { get => _key; set => _key = value.ToReferenceTypeValueOrThrow(); }
 
     /// <summary>
     /// Gets or sets the source.
     /// </summary>
-    /// <value>
-    /// The source.
-    /// </value>
-    public Uri Source { get; set; }
+    [DisallowNull]
+    public Uri? Source { get => _source; set => _source = value.ToReferenceTypeValueOrThrow(); }
 
     /// <summary>
     /// Gets or sets the candidates.
     /// </summary>
-    /// <value>
-    /// The candidates.
-    /// </value>
-    public ICollection<ImageCandidate> Candidates { get; set; }
+    public ICollection<ImageCandidate> Candidates { get; init; } = Enumerable.Empty<ImageCandidate>().ToList();
 
     /// <summary>
     /// Gets or sets the sizes.
     /// </summary>
-    /// <value>
-    /// The sizes.
-    /// </value>
-    public ICollection<ImageSize> Sizes { get; set; }
+    public ICollection<ImageSize> Sizes { get; init; } = Enumerable.Empty<ImageSize>().ToList();
+
+    string? _key;
+    Uri? _source;
 }

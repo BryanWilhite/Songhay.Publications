@@ -15,11 +15,11 @@ public class DaisyConsortiumNcx
     /// <param name="isbn13">The isbn13.</param>
     /// <param name="chapterSet">The chapter set.</param>
     /// <param name="epubOebpsDirectory">The epub oebps directory.</param>
-    public DaisyConsortiumNcx(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
+    public DaisyConsortiumNcx(JObject? publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
     {
-        _publicationMeta = publicationMeta;
-        _isbn13 = isbn13;
-        _chapterSet = chapterSet;
+        _publicationMeta = publicationMeta.ToReferenceTypeValueOrThrow();
+        _isbn13 = isbn13.ToReferenceTypeValueOrThrow();
+        _chapterSet = chapterSet.ToReferenceTypeValueOrThrow();
         _ncxDocumentPath = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, PublicationFiles.DaisyConsortiumNcxToc, fileIsExpected: true);
         _ncxDocument = XDocument.Load(_ncxDocumentPath);
     }
@@ -36,10 +36,10 @@ public class DaisyConsortiumNcx
         SetNcxMeta();
         SetNcxDocTitle();
 
-        var navPoints = _ncxDocument.Root?
+        var navPoints = (_ncxDocument.Root?
             .Element(ncx + "navMap")?
             .Elements(ncx + "navPoint")
-            .ToArray();
+            .ToArray()).ToReferenceTypeValueOrThrow();
 
         SetChapterNavPoints(navPoints);
         UpdateNavPointPlayOrder(navPoints);
@@ -64,7 +64,7 @@ public class DaisyConsortiumNcx
     {
         Console.WriteLine("setting navPoint elements for chapters...");
 
-        XElement templatedChapterElement = null;
+        XElement? templatedChapterElement = null;
         var newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
@@ -80,9 +80,9 @@ public class DaisyConsortiumNcx
                     return chapterId.Equals(id);
                 });
 
-                var canAddNavPoint = (chapterElement == null) && (i > 0);
-                var isFirstChapterIdError = (chapterElement == null) && (i == 0);
-                var isFirstChapterId = (chapterElement != null) && (i == 0);
+                var canAddNavPoint = chapterElement == null && i > 0;
+                var isFirstChapterIdError = chapterElement == null && i == 0;
+                var isFirstChapterId = chapterElement != null && i == 0;
 
                 if (isFirstChapterIdError)
                 {
@@ -91,7 +91,9 @@ public class DaisyConsortiumNcx
                 else if (isFirstChapterId)
                 {
                     templatedChapterElement = chapterElement;
-                    SetChapterNavPointText(templatedChapterElement, _chapterSet[chapterId]);
+                    SetChapterNavPointText(
+                templatedChapterElement.ToReferenceTypeValueOrThrow(),
+                        _chapterSet[chapterId]);
                 }
                 else if (canAddNavPoint)
                 {
@@ -104,7 +106,7 @@ public class DaisyConsortiumNcx
         if (!newChapterElementList.Any()) return;
 
         Console.WriteLine("adding new elements under templated element...");
-        templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
+        templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
     internal void SetChapterNavPointText(XElement navPoint, string text)
@@ -113,7 +115,7 @@ public class DaisyConsortiumNcx
 
         var ncx = PublicationNamespaces.DaisyNcx;
 
-        var textElement = navPoint?
+        var textElement = navPoint
             .Element(ncx + "navLabel")?
             .Element(ncx + "text");
         textElement?.SetValue(text);

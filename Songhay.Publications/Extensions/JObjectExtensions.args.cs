@@ -3,7 +3,7 @@
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
-/// Extensions of <see cref="JObject"/>
+/// Extensions of <see cref="JObject"/>.
 /// </summary>
 public static partial class JObjectExtensions
 {
@@ -12,7 +12,6 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    /// <returns></returns>
     public static string GetAddEntryExtractArg(this JObject jObject, DirectoryInfo presentationInfo)
     {
         var entryPath = jObject.GetValue<string>("entryPath");
@@ -26,21 +25,23 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject" />.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    /// <returns></returns>
-    /// <exception cref="DirectoryNotFoundException">The expected index root, {indexRoot}, is not here.</exception>
     public static (
         DirectoryInfo entryRootInfo,
         DirectoryInfo indexRootInfo,
         string indexFileName
-        ) GetCompressed11TyIndexArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        ) GetCompressed11TyIndexArgs(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
         var indexRoot = jObject.GetValue<string>("indexRoot");
         indexRoot = presentationInfo.ToCombinedPath(indexRoot);
         var indexRootInfo = new DirectoryInfo(indexRoot);
-        if (!indexRootInfo.Exists) throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
+        if (!indexRootInfo.Exists)
+            throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
 
         var indexFileName = jObject.GetValue<string>("indexFileName");
-        var entryRootInfo = presentationInfo.FindDirectory("presentation").FindDirectory("entry");
+        var entryRootInfo = presentationInfo
+            .FindDirectory("presentation")
+            .FindDirectory("entry")
+            .ToReferenceTypeValueOrThrow();
 
         return (entryRootInfo, indexRootInfo, indexFileName);
     }
@@ -50,7 +51,6 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    /// <returns></returns>
     public static (
         string entryPath,
         string collapsedHost
@@ -68,7 +68,6 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    /// <returns></returns>
     public static (
         string input,
         string pattern,
@@ -79,7 +78,8 @@ public static partial class JObjectExtensions
     {
         var inputPath = jObject.GetValue<string>("inputPath");
         inputPath = presentationInfo.ToCombinedPath(inputPath);
-        if (!File.Exists(inputPath)) throw new FileNotFoundException($"The expected input file, `{inputPath}`, is not here.");
+        if (!File.Exists(inputPath))
+            throw new FileNotFoundException($"The expected input file, `{inputPath}`, is not here.");
 
         var input = File.ReadAllText(inputPath);
 
@@ -98,13 +98,14 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    /// <returns></returns>
     public static (
         DirectoryInfo entryDraftsRootInfo,
         string title
-        ) GetGenerateEntryArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        ) GetGenerateEntryArgs(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
-        var entryDraftsRootInfo = presentationInfo.FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts);
+        var entryDraftsRootInfo = presentationInfo
+            .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts)
+            .ToReferenceTypeValueOrThrow();
         var title = jObject.GetValue<string>("title");
 
         return (entryDraftsRootInfo, title);
@@ -119,14 +120,16 @@ public static partial class JObjectExtensions
         DirectoryInfo entryDraftsRootInfo,
         DirectoryInfo entryRootInfo,
         string entryFileName
-        ) GetPublishEntryArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        ) GetPublishEntryArgs(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
         var entryDraftsRootInfo = presentationInfo
-            .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts);
+            .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts)
+            .ToReferenceTypeValueOrThrow();
         var entryRootInfo = presentationInfo
             .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentation)
             .FindDirectory("entry")
-            .FindDirectory(DateTime.Now.Year.ToString());
+            .FindDirectory(DateTime.Now.Year.ToString())
+            .ToReferenceTypeValueOrThrow();
         var entryFileName = jObject.GetValue<string>("entryFileName");
 
         return (entryDraftsRootInfo, entryRootInfo, entryFileName);

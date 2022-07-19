@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Songhay.Publications.Models;
 
 /// <summary>
@@ -17,7 +19,12 @@ public class IndexEntry : IIndexEntry
     /// <summary>
     /// Initializes a new instance of the <see cref="PublicationContext"/> class.
     /// </summary>
-    /// <param name="data"></param>
+    public IndexEntry() { }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PublicationContext"/> class.
+    /// </summary>
+    /// <param name="data">The <see cref="Segment"/> data.</param>
     public IndexEntry(Segment data)
     {
         if(data == null) throw new ArgumentNullException(nameof(data));
@@ -38,65 +45,51 @@ public class IndexEntry : IIndexEntry
     /// <summary>
     /// Gets or sets child segments.
     /// </summary>
-    /// <value>
-    /// The child segments.
-    /// </value>
-    public IIndexEntry[] Segments { get; set; }
+    public IIndexEntry[] Segments { get; set; } = Enumerable.Empty<IIndexEntry>().ToArray();
 
     /// <summary>
     /// Gets or sets the documents.
     /// </summary>
-    /// <value>
-    /// The documents.
-    /// </value>
-    public IDocument[] Documents { get; set; }
+    public IDocument[] Documents { get; set; } = Enumerable.Empty<IDocument>().ToArray();
 
     /// <summary>
     /// Gets or sets the segment identifier.
     /// </summary>
-    /// <value>
-    /// The segment identifier.
-    /// </value>
     public int? SegmentId { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the segment.
     /// </summary>
-    /// <value>
-    /// The name of the segment.
-    /// </value>
-    public string SegmentName { get; set; }
+    [DisallowNull]
+    public string? SegmentName
+    {
+        get => _segmentName;
+        set => _segmentName = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the sort ordinal.
     /// </summary>
-    /// <value>
-    /// The sort ordinal.
-    /// </value>
     public byte? SortOrdinal { get; set; }
 
     /// <summary>
     /// Gets or sets the parent segment identifier.
     /// </summary>
-    /// <value>
-    /// The parent segment identifier.
-    /// </value>
     public int? ParentSegmentId { get; set; }
 
     /// <summary>
     /// Gets or sets the client identifier.
     /// </summary>
-    /// <value>
-    /// The client identifier.
-    /// </value>
-    public string ClientId { get; set; }
+    [DisallowNull]
+    public string? ClientId
+    {
+        get => _clientId;
+        set => _clientId = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the is active.
     /// </summary>
-    /// <value>
-    /// The is active.
-    /// </value>
     public bool? IsActive { get; set; }
 
     /// <summary>
@@ -113,4 +106,7 @@ public class IndexEntry : IIndexEntry
     /// Modification/editorial <see cref="DateTime"/> of the item.
     /// </summary>
     public DateTime? ModificationDate { get; set; }
+
+    string? _segmentName;
+    string? _clientId;
 }

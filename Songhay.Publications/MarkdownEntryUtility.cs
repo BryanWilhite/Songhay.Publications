@@ -29,8 +29,8 @@ public static class MarkdownEntryUtility
     /// <param name="inceptDate">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/>.</param>
     /// <param name="path">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/>.</param>
     /// <param name="tag">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/>.</param>
-    public static MarkdownEntry GenerateEntryFor11Ty(string entryRoot, string title, DateTime inceptDate, string path,
-        string tag)
+    public static MarkdownEntry GenerateEntryFor11Ty(string? entryRoot, string? title, DateTime inceptDate, string? path,
+        string? tag)
     {
         if (!Directory.Exists(entryRoot))
             throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot ?? "[null]"}`, is not here.");

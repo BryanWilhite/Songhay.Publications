@@ -1,4 +1,4 @@
-namespace Songhay.Publications.Models;
+namespace Songhay.Publications.Abstractions;
 
 /// <summary>
 /// Defines a Publication Index Entry

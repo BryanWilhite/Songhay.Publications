@@ -68,7 +68,7 @@ public class JObjectExtensionsTests
         indexRootInfo.FindFile(indexFileName);
 
         var commandName = jO.GetPublicationCommand();
-        Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11tySearchIndex), commandName);
+        Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11TySearchIndex), commandName);
     }
 
     [Theory]

@@ -13,9 +13,9 @@ public class ITemporalValidator : AbstractValidator<ITemporal>
     {
         RuleFor(i => i.InceptDate)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.ModificationDate)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
     }
 }

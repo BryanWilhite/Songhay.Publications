@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 namespace Songhay.Publications.Models;
 
 /// <summary>
-/// Defines a conventional, Publication entry
+/// Defines a conventional, Publication entry.
 /// </summary>
 public class MarkdownEntry
 {
@@ -13,20 +13,17 @@ public class MarkdownEntry
     public static readonly string NewLine = Environment.NewLine;
 
     /// <summary>
-    /// Markdown <see cref="FileInfo" />
+    /// Markdown <see cref="FileInfo" />.
     /// </summary>
-    /// <value></value>
-    public FileInfo EntryFileInfo { get; set; }
+    public FileInfo? EntryFileInfo { get; set; }
 
     /// <summary>
-    /// JSON front matter
+    /// JSON front matter.
     /// </summary>
-    /// <value></value>
-    public JObject FrontMatter { get; set; }
+    public JObject? FrontMatter { get; set; }
 
     /// <summary>
-    /// Text content
+    /// Text content.
     /// </summary>
-    /// <value></value>
-    public string Content { get; set; }
+    public string? Content { get; set; }
 }

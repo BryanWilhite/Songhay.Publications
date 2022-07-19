@@ -12,16 +12,16 @@ public class DocumentValidator : AbstractValidator<Document>
     {
         RuleFor(i => i.IsActive)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.SegmentId)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.DocumentId)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
         RuleFor(i => i.Title)
             .NotNull()
-            .WithMessage(Scalars.ValidationMessageRequired);
+            .WithMessage(PublicationAppScalars.ValidationMessageRequired);
 
         RuleFor(i => i).SetValidator(new ITemporalValidator());
     }

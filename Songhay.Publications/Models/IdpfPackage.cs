@@ -16,13 +16,15 @@ public class IdpfPackage
     /// <param name="isbn13">International Standard Book Number (ISBN)</param>
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
-    public IdpfPackage(JObject publicationMeta, string isbn13, Dictionary<string, string> chapterSet, string epubOebpsDirectory)
+    public IdpfPackage(JObject? publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
     {
-        _publicationMeta = publicationMeta;
-        _isbn13 = isbn13;
-        _chapterSet = chapterSet;
-        _idpfDocumentPath = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, PublicationFiles.IdpfcOpfManifest, fileIsExpected: true);
-        _idpfDocument = XDocument.Load(_idpfDocumentPath);
+        _publicationMeta = publicationMeta.ToReferenceTypeValueOrThrow();
+        _isbn13 = isbn13.ToReferenceTypeValueOrThrow();
+        _chapterSet = chapterSet.ToReferenceTypeValueOrThrow();
+        _idpfDocumentPath = ProgramFileUtility
+            .GetCombinedPath(epubOebpsDirectory, PublicationFiles.IdpfcOpfManifest, fileIsExpected: true)
+            .ToReferenceTypeValueOrThrow();
+        _idpfDocument = XDocument.Load(_idpfDocumentPath).ToReferenceTypeValueOrThrow();
     }
 
     /// <summary>
@@ -62,8 +64,9 @@ public class IdpfPackage
         var dc = PublicationNamespaces.DublinCore;
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var metadataElement = _idpfDocument.Root
-            .Element(opf + "metadata");
+        var metadataElement = (_idpfDocument.Root?
+            .Element(opf + "metadata"))
+            .ToReferenceTypeValueOrThrow();
 
         var titleElement = metadataElement.Element(dc + "title");
         var identifierElement = metadataElement.Element(dc + "identifier");
@@ -73,11 +76,11 @@ public class IdpfPackage
 
         var jPublication = _publicationMeta.GetJObject("publication");
 
-        titleElement.Value = jPublication.GetValue<string>("title");
-        identifierElement.Value = _isbn13;
-        creatorElement.Value = jPublication.GetValue<string>("author");
-        publisherElement.Value = jPublication.GetValue<string>("publisher");
-        dateElement.Value = jPublication.GetValue<string>("publicationDate");
+        titleElement?.SetValue(jPublication.GetValue<string>("title"));
+        identifierElement?.SetValue(_isbn13);
+        creatorElement?.SetValue(jPublication.GetValue<string>("author"));
+        publisherElement?.SetValue(jPublication.GetValue<string>("publisher"));
+        dateElement?.SetValue(jPublication.GetValue<string>("publicationDate"));
     }
 
     internal void SetManifestItem(XElement item, string id)
@@ -86,8 +89,8 @@ public class IdpfPackage
         var hrefAttribute = item.Attribute("href");
         var idAttribute = item.Attribute("id");
 
-        hrefAttribute.Value = href;
-        idAttribute.Value = id;
+        hrefAttribute?.SetValue(href);
+        idAttribute?.SetValue(id);
     }
 
     internal void SetManifestItemElementsForChapters()
@@ -96,11 +99,12 @@ public class IdpfPackage
 
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var items = _idpfDocument.Root
-            .Element(opf + "manifest")
-            .Elements(opf + "item");
+        var items = (_idpfDocument.Root?
+            .Element(opf + "manifest")?
+            .Elements(opf + "item"))
+            .ToReferenceTypeValueOrThrow();
 
-        XElement templatedChapterElement = null;
+        XElement? templatedChapterElement = null;
         var newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
@@ -112,7 +116,8 @@ public class IdpfPackage
 
                 var chapterElement = items.SingleOrDefault(item =>
                 {
-                    var id = item.Attribute("id").Value;
+                    var id = item.Attribute("id")?.Value;
+
                     return chapterId.Equals(id);
                 });
 
@@ -127,7 +132,7 @@ public class IdpfPackage
                 else if (isFirstChapterId)
                 {
                     templatedChapterElement = chapterElement;
-                    SetManifestItem(templatedChapterElement, chapterId);
+                    SetManifestItem(templatedChapterElement.ToReferenceTypeValueOrThrow(), chapterId);
                 }
                 else if (canAddNavPoint)
                 {
@@ -140,13 +145,13 @@ public class IdpfPackage
         if (!newChapterElementList.Any()) return;
 
         Console.WriteLine("adding new elements under templated element...");
-        templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
+        templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
     internal void SetSpineItemref(XElement itemref, string idref)
     {
         var idrefAttribute = itemref.Attribute("idref");
-        idrefAttribute.Value = idref;
+        idrefAttribute?.SetValue(idref);
     }
 
     internal void SetSpineItemRefElementsForChapters()
@@ -155,11 +160,12 @@ public class IdpfPackage
 
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var itemrefs = _idpfDocument.Root
-            .Element(opf + "spine")
-            .Elements(opf + "itemref");
+        var itemrefs = (_idpfDocument.Root?
+            .Element(opf + "spine")?
+            .Elements(opf + "itemref"))
+            .ToReferenceTypeValueOrThrow();
 
-        XElement templatedChapterElement = null;
+        XElement? templatedChapterElement = null;
         var newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
@@ -170,7 +176,8 @@ public class IdpfPackage
                 var i = a.i;
                 var chapterElement = itemrefs.SingleOrDefault(itemref =>
                 {
-                    var id = itemref.Attribute("idref").Value;
+                    var id = itemref.Attribute("idref")?.Value;
+
                     return chapterId.Equals(id);
                 });
 
@@ -185,7 +192,7 @@ public class IdpfPackage
                 else if (isFirstChapterId)
                 {
                     templatedChapterElement = chapterElement;
-                    SetSpineItemref(templatedChapterElement, chapterId);
+                    SetSpineItemref(templatedChapterElement.ToReferenceTypeValueOrThrow(), chapterId);
                 }
                 else if (canAddNavPoint)
                 {
@@ -198,7 +205,7 @@ public class IdpfPackage
         if (!newChapterElementList.Any()) return;
 
         Console.WriteLine("adding new elements under templated element...");
-        templatedChapterElement.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
+        templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
     readonly Dictionary<string, string> _chapterSet;

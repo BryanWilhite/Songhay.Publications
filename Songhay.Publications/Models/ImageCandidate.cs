@@ -1,4 +1,6 @@
-﻿namespace Songhay.Publications.Models;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines a responsive-image candidate.
@@ -14,24 +16,18 @@ public class ImageCandidate
     /// <summary>
     /// Gets or sets the image URI.
     /// </summary>
-    /// <value>
-    /// The image URI.
-    /// </value>
-    public Uri ImageUri { get; set; }
+    [DisallowNull]
+    public Uri? ImageUri { get => _imageUri; set => _imageUri = value.ToReferenceTypeValueOrThrow(); }
 
     /// <summary>
     /// Gets or sets the pixel density.
     /// </summary>
-    /// <value>
-    /// The pixel density.
-    /// </value>
-    public string PixelDensity { get; set; }
+    public string? PixelDensity { get; set; }
 
     /// <summary>
     /// Gets or sets the width.
     /// </summary>
-    /// <value>
-    /// The width.
-    /// </value>
-    public string Width { get; set; }
+    public string? Width { get; set; }
+
+    Uri? _imageUri;
 }

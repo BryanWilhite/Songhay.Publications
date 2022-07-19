@@ -1,7 +1,7 @@
 ﻿namespace Songhay.Publications.Extensions;
 
 /// <summary>
-/// Extensions of <see cref="DirectoryInfo"/>
+/// Extensions of <see cref="DirectoryInfo"/>.
 /// </summary>
 public static class DirectoryInfoExtensions
 {
@@ -10,8 +10,7 @@ public static class DirectoryInfoExtensions
     /// directories are present.
     /// </summary>
     /// <param name="directoryInfo">the expected top-level presentation directory</param>
-    /// <returns></returns>
-    public static bool HasAllConventionalMarkdownPresentationDirectories(this DirectoryInfo directoryInfo)
+    public static bool HasAllConventionalMarkdownPresentationDirectories(this DirectoryInfo? directoryInfo)
     {
         if (directoryInfo == null) return false;
 
