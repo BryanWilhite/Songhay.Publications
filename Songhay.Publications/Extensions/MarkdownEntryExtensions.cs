@@ -269,7 +269,7 @@ public static class MarkdownEntryExtensions
     /// <param name="path">The path to the entry.</param>
     /// <param name="tag">The tag of the entry.</param>
     public static MarkdownEntry WithNew11TyFrontMatter(this MarkdownEntry? entry, string? title, DateTime inceptDate,
-        string path, string tag) =>
+        string? path, string? tag) =>
         entry
             .ToReferenceTypeValueOrThrow()
             .WithNewFrontMatter(title, inceptDate,

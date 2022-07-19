@@ -59,14 +59,26 @@ public class MarkdownEntryActivity : IActivity
             .ToReferenceTypeValueOrThrow()
             .Select(i => new Uri(i.Value))
             .Distinct().ToArray();
-        async Task<KeyValuePair<Uri?, Uri?>?> ExpandUriPairAsync(Uri expandableUri)
+
+        async Task<KeyValuePair<Uri, Uri>?> ExpandUriPairAsync(Uri expandableUri)
         {
-            KeyValuePair<Uri?, Uri?>? nullable = null;
+            KeyValuePair<Uri, Uri>? nullable = null;
             try
             {
-                TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...");
-                nullable = await expandableUri.ToExpandedUriPairAsync();
-                TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.");
+                var message = $"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...";
+
+                TraceSource?.TraceVerbose(message);
+
+                var pair = await expandableUri.ToExpandedUriPairAsync();
+                if (pair.Key is not null && pair.Value is not null)
+                {
+                    nullable = new KeyValuePair<Uri, Uri>(pair.Key, pair.Value);
+
+                    var successMessage =
+                        $"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.";
+
+                    TraceSource?.TraceVerbose(successMessage);
+                }
             }
             catch (Exception ex)
             {
@@ -93,12 +105,13 @@ public class MarkdownEntryActivity : IActivity
 
         foreach (var pair in findChangeSet)
             entry.Content = entry.Content.Replace(
-                pair.Key?.OriginalString ?? string.Empty,
-                pair.Value?.OriginalString
+                pair.Key.OriginalString,
+                pair.Value.OriginalString
             );
 
         TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
-        File.WriteAllText(entryInfo.FullName, entry.ToFinalEdit());
+
+        await File.WriteAllTextAsync(entryInfo.FullName, entry.ToFinalEdit());
     }
 
     /// <summary>
@@ -169,7 +182,7 @@ public class MarkdownEntryActivity : IActivity
     {
         TraceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
 
-        SetContext(args);
+        (_presentationInfo, _jSettings) = GetContext(args);
 
         var command = _jSettings.GetPublicationCommand();
         TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
@@ -220,14 +233,14 @@ public class MarkdownEntryActivity : IActivity
         PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
     }
 
-    internal void SetContext(ProgramArgs? args)
+    internal (DirectoryInfo presentationInfo, JObject jSettings) GetContext(ProgramArgs? args)
     {
         var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
-        _presentationInfo = presentationInfo;
-
         TraceSource?.TraceVerbose($"applying settings...");
-        _jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+
+        return (presentationInfo, jSettings);
     }
 
     DirectoryInfo? _presentationInfo;

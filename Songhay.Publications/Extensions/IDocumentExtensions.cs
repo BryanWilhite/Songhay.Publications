@@ -87,14 +87,15 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="templateFileName">Name of the template file.</param>
-    public static XElement? ToConventionalPublicationItem(this IDocument? data, string templateFileName)
+    public static XElement? ToConventionalPublicationItem(this IDocument? data, string? templateFileName)
     {
         if (data == null) return null;
+        if (string.IsNullOrEmpty(templateFileName)) return null;
 
         return new XElement("item",
             new XAttribute(nameof(Document.SegmentId), data.SegmentId.GetValueOrDefault()),
             new XAttribute(nameof(Document.DocumentId), data.DocumentId.GetValueOrDefault()),
-            new XAttribute(nameof(Document.Title), data.Title),
+            new XAttribute(nameof(Document.Title), data.Title ?? $"[{nameof(Document.Title)} is null]"),
             new XAttribute("Template", templateFileName),
             new XAttribute("PathAndFileName", string.Concat(data.Path, data.FileName)),
             new XAttribute(nameof(Document.IsRoot), data.IsRoot.GetValueOrDefault()));

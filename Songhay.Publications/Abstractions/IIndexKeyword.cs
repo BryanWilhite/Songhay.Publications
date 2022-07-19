@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Songhay.Publications.Abstractions;
 
 /// <summary>
@@ -8,20 +10,17 @@ public interface IIndexKeyword : ITemporal
     /// <summary>
     /// Index Keyword Group ID
     /// </summary>
-    /// <value></value>
+    [DisallowNull]
     int? Id { get; set; }
 
     /// <summary>
     /// Index Keyword Group Client ID
     /// </summary>
-    /// <value></value>
-    string ClientId { get; set; }
+    [DisallowNull]
+    string? ClientId { get; set; }
 
     /// <summary>
     /// Gets or sets the keyword value.
     /// </summary>
-    /// <value>
-    /// The keyword value.
-    /// </value>
-    string KeywordValue { get; set; }
+    string? KeywordValue { get; set; }
 }

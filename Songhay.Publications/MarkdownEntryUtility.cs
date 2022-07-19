@@ -39,7 +39,7 @@ public static class MarkdownEntryUtility
             .WithNew11TyFrontMatter(title, inceptDate, path, tag)
             .WithContentHeader();
 
-        File.WriteAllText($"{entryRoot}/{entry.FrontMatter["clientId"]}.md", entry.ToFinalEdit());
+        File.WriteAllText($"{entryRoot}/{entry.FrontMatter?["clientId"]}.md", entry.ToFinalEdit());
 
         return entry;
     }
@@ -81,10 +81,10 @@ public static class MarkdownEntryUtility
         DateTime publicationDate)
     {
         if (!Directory.Exists(entryRoot))
-            throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot ?? "[null]"}`, is not here.");
+            throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot}`, is not here.");
 
         if (!Directory.Exists(presentationRoot))
-            throw new DirectoryNotFoundException($"The expected presentation root directory, `{presentationRoot ?? "[null]"}`, is not here.");
+            throw new DirectoryNotFoundException($"The expected presentation root directory, `{presentationRoot}`, is not here.");
 
         if (string.IsNullOrWhiteSpace(fileName))
             throw new NullReferenceException("The expected file name is not here.");

@@ -18,7 +18,7 @@ public static partial class JObjectExtensions
     /// Gets the publication command.
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
-    public static string GetPublicationCommand(this JObject? jObject) => jObject.GetValue<string>("command");
+    public static string? GetPublicationCommand(this JObject? jObject) => jObject.GetValue<string?>("command");
 
     /// <summary>
     /// Converts the <see cref="JObject"/> to presentation <see cref="Segment"/>.

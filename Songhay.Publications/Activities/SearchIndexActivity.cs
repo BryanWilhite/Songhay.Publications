@@ -15,7 +15,7 @@ public class SearchIndexActivity : IActivity
         .GetTraceSourceFromConfiguredName()
         .WithSourceLevels();
 
-    static readonly TraceSource TraceSource;
+    static readonly TraceSource? TraceSource;
 
     /// <summary>
     /// Compresses the Publications Search Index.
@@ -41,7 +41,9 @@ public class SearchIndexActivity : IActivity
     /// <param name="entryRootInfo">The entry root information.</param>
     /// <param name="indexRootInfo">The index root information.</param>
     /// <param name="indexFileName">Name of the index file.</param>
-    public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) => GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
+    public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo,
+        DirectoryInfo indexRootInfo, string indexFileName) =>
+        GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
 
     /// <summary>
     /// Generates the Publications Search Index from 11ty entries.
@@ -90,17 +92,18 @@ public class SearchIndexActivity : IActivity
     /// Displays the help.
     /// </summary>
     /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs args)
+    public string DisplayHelp(ProgramArgs? args)
     {
         throw new NotImplementedException();
     }
 
     /// <summary>Starts with the specified arguments.</summary>
     /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs args)
+    public void Start(ProgramArgs? args)
     {
         TraceSource?.WriteLine($"starting {nameof(SearchIndexActivity)} with {nameof(ProgramArgs)}: {args} ");
-        SetContext(args);
+
+        (_presentationInfo, _jSettings) = GetContext(args);
 
         var command = _jSettings.GetPublicationCommand();
         TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
@@ -132,16 +135,16 @@ public class SearchIndexActivity : IActivity
 
     }
 
-    internal void SetContext(ProgramArgs args)
+    internal (DirectoryInfo presentationInfo, JObject jSettings) GetContext(ProgramArgs? args)
     {
         var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
-        _presentationInfo = presentationInfo;
-
         TraceSource?.TraceVerbose($"applying settings...");
-        _jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+
+        return (presentationInfo, jSettings);
     }
 
-    DirectoryInfo _presentationInfo;
-    JObject _jSettings;
+    DirectoryInfo? _presentationInfo;
+    JObject? _jSettings;
 }

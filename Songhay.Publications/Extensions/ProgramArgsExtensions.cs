@@ -17,7 +17,7 @@ public static class ProgramArgsExtensions
     /// </summary>
     /// <param name="args">The arguments.</param>
     public static (DirectoryInfo presentationInfo, FileInfo settingsInfo)
-        ToPresentationAndSettingsInfo(this ProgramArgs args)
+        ToPresentationAndSettingsInfo(this ProgramArgs? args)
     {
         TraceSource?.TraceVerbose($"setting conventional {MarkdownPresentationDirectories.DirectoryNamePresentationShell} directory...");
         var presentationShellInfo = new DirectoryInfo(args.GetArgValue(ProgramArgs.BasePath).ToReferenceTypeValueOrThrow());

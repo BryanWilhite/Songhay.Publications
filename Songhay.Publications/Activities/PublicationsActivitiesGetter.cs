@@ -13,15 +13,15 @@ public sealed class PublicationsActivitiesGetter : ActivitiesGetter
     /// <param name="args">The arguments.</param>
     public PublicationsActivitiesGetter(string[] args) : base(args)
     {
-        this.LoadActivities(new Dictionary<string, Lazy<IActivity>>
+        LoadActivities(new Dictionary<string, Lazy<IActivity?>>
         {
             {
                 nameof(SearchIndexActivity),
-                new Lazy<IActivity>(() => new SearchIndexActivity())
+                new Lazy<IActivity?>(() => new SearchIndexActivity())
             },
             {
                 nameof(MarkdownEntryActivity),
-                new Lazy<IActivity>(() => new MarkdownEntryActivity())
+                new Lazy<IActivity?>(() => new MarkdownEntryActivity())
             },
         });
     }

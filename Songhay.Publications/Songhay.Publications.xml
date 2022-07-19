@@ -78,105 +78,66 @@
             <summary>
             Gets or sets the fragment identifier.
             </summary>
-            <value>
-            The fragment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.FragmentName">
             <summary>
             Gets or sets the name of the fragment.
             </summary>
-            <value>
-            The name of the fragment.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.FragmentDisplayName">
             <summary>
             Gets or sets the display name of the fragment.
             </summary>
-            <value>
-            The display name of the fragment.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.SortOrdinal">
             <summary>
             Gets or sets the sort ordinal.
             </summary>
-            <value>
-            The sort ordinal.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.Content">
             <summary>
             Gets or sets the content.
             </summary>
-            <value>
-            The content.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.DocumentId">
             <summary>
             Gets or sets the document identifier.
             </summary>
-            <value>
-            The document identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.PrevFragmentId">
             <summary>
             Gets or sets the previous fragment identifier.
             </summary>
-            <value>
-            The previous fragment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.NextFragmentId">
             <summary>
             Gets or sets the next fragment identifier.
             </summary>
-            <value>
-            The next fragment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.IsPrevious">
             <summary>
             Gets or sets the is previous.
             </summary>
-            <value>
-            The is previous.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.IsNext">
             <summary>
             Gets or sets the is next.
             </summary>
-            <value>
-            The is next.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.IsWrapper">
             <summary>
             Gets or sets the is wrapper.
             </summary>
-            <value>
-            The is wrapper.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.ClientId">
             <summary>
             Gets or sets the client identifier.
             </summary>
-            <value>
-            The client identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IFragment.IsActive">
             <summary>
             Gets or sets the is active.
             </summary>
-            <value>
-            The is active.
-            </value>
         </member>
         <member name="T:Songhay.Publications.Abstractions.IIndexEntry">
             <summary>
@@ -204,21 +165,16 @@
             <summary>
             Index Keyword Group ID
             </summary>
-            <value></value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IIndexKeyword.ClientId">
             <summary>
             Index Keyword Group Client ID
             </summary>
-            <value></value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IIndexKeyword.KeywordValue">
             <summary>
             Gets or sets the keyword value.
             </summary>
-            <value>
-            The keyword value.
-            </value>
         </member>
         <member name="T:Songhay.Publications.Abstractions.IIndexKeywordGroup">
             <summary>
@@ -229,19 +185,16 @@
             <summary>
             Index Keyword Group ID
             </summary>
-            <value></value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId">
             <summary>
             Index Keyword Group Client ID
             </summary>
-            <value></value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.IIndexKeywordGroup.Name">
             <summary>
             Index Keyword Group Name
             </summary>
-            <value></value>
         </member>
         <member name="T:Songhay.Publications.Abstractions.ISegment">
             <summary>
@@ -252,49 +205,31 @@
             <summary>
             Gets or sets the segment identifier.
             </summary>
-            <value>
-            The segment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.ISegment.SegmentName">
             <summary>
             Gets or sets the name of the segment.
             </summary>
-            <value>
-            The name of the segment.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.ISegment.SortOrdinal">
             <summary>
             Gets or sets the sort ordinal.
             </summary>
-            <value>
-            The sort ordinal.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.ISegment.ParentSegmentId">
             <summary>
             Gets or sets the parent segment identifier.
             </summary>
-            <value>
-            The parent segment identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.ISegment.ClientId">
             <summary>
             Gets or sets the client identifier.
             </summary>
-            <value>
-            The client identifier.
-            </value>
         </member>
         <member name="P:Songhay.Publications.Abstractions.ISegment.IsActive">
             <summary>
             Gets or sets the is active.
             </summary>
-            <value>
-            The is active.
-            </value>
         </member>
         <member name="T:Songhay.Publications.Activities.MarkdownEntryActivity">
             <summary>

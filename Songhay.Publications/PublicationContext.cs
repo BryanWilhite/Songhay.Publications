@@ -17,13 +17,13 @@ public class PublicationContext
     /// <param name="templateRoot">the root directory of the EPUB template files</param>
     public PublicationContext(string templateRoot)
     {
-        SetPublicationRoot(templateRoot);
-        SetPublicationMetaAndChapterSet();
-        SetChapterTemplate(templateRoot);
-        SetMarkdownDirectory();
-        SetEpubOebpsDirectory();
-        SetEpubTextDirectory();
-        SetIsbn13();
+        (_csxRootInfo, _publicationRoot) = GetCsxRootInfoAndPublicationRoot(templateRoot);
+        (_publicationMeta, _chapterSet) = GetPublicationMetaAndChapterSet();
+        _chapterTemplate = GetChapterTemplate(templateRoot);
+        _markdownDirectory = GetMarkdownDirectory();
+        _epubOebpsDirectory = GetEpubOebpsDirectory();
+        _epubTextDirectory = GetEpubTextDirectory();
+        _isbn13 = GetIsbn13();
     }
 
     /// <summary>
@@ -108,19 +108,19 @@ public class PublicationContext
         var path = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileTitle, fileIsExpected: true);
         var titleDocument = XDocument.Load(path);
 
-        var h1Element = titleDocument.Root?
+        var h1Element = (titleDocument.Root?
             .Element(xhtml + "body")?
             .Element(xhtml + "div")?
-            .Element(xhtml + "h1")
+            .Element(xhtml + "h1"))
             .ToReferenceTypeValueOrThrow();
-        var spanElement = titleDocument.Root?
+        var spanElement = (titleDocument.Root?
             .Element(xhtml + "body")?
             .Element(xhtml + "div")?
-            .Element(xhtml + "span")
+            .Element(xhtml + "span"))
             .ToReferenceTypeValueOrThrow();
 
-        h1Element?.SetValue(title);
-        spanElement?.SetValue(author);
+        h1Element.SetValue(title);
+        spanElement.SetValue(author);
 
         EpubUtility.SaveAsUnicodeWithBom(titleDocument, path);
     }
@@ -135,79 +135,79 @@ public class PublicationContext
         toc.Write();
     }
 
-    internal static void Throw(string errorMessage)
-    {
-        throw new Exception(errorMessage);
-    }
+    internal static void Throw(string errorMessage) => throw new Exception(errorMessage);
 
-    internal void SetChapterTemplate(string csxRoot)
+    internal XDocument GetChapterTemplate(string csxRoot)
     {
         var chapterTemplateFile = ProgramFileUtility.GetCombinedPath(csxRoot, PublicationFiles.EpubTemplateChapter, fileIsExpected: true);
-        _chapterTemplate = XDocument.Load(chapterTemplateFile);
+
+        return XDocument.Load(chapterTemplateFile);
     }
 
-    internal void SetEpubOebpsDirectory()
+    internal string GetEpubOebpsDirectory()
     {
         var epubRoot = ProgramFileUtility.GetCombinedPath(_publicationRoot, "epub", fileIsExpected: false);
-        _epubOebpsDirectory = ProgramFileUtility.GetCombinedPath(epubRoot, "OEBPS", fileIsExpected: false);
+
+        return ProgramFileUtility.GetCombinedPath(epubRoot, "OEBPS", fileIsExpected: false);
     }
 
-    internal void SetEpubTextDirectory()
+    internal string GetEpubTextDirectory()
     {
         var epubRoot = ProgramFileUtility.GetCombinedPath(_publicationRoot, "epub", fileIsExpected: false);
         var epubOebpsDirectory = ProgramFileUtility.GetCombinedPath(epubRoot, "OEBPS", fileIsExpected: false);
-        _epubTextDirectory = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, "Text", fileIsExpected: false);
+
+        return ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, "Text", fileIsExpected: false);
     }
 
-    internal void SetIsbn13()
+    internal string GetIsbn13()
     {
         Console.WriteLine("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
 
-        var dictionary = _publicationMeta?["publication"]?["identifiers"]?.ToObject<Dictionary<string, string>>();
-        var isbn13 = dictionary?
-            .TryGetValueWithKey("ISBN-13", throwException: true)
-            .ToReferenceTypeValueOrThrow();
+        var dictionary = _publicationMeta["publication"]?["identifiers"]?.ToObject<Dictionary<string, string>>();
+        var isbn13 = dictionary.TryGetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
 
-        isbn13 = new string(isbn13!.Where(char.IsDigit).ToArray());
+        isbn13 = new string(isbn13.Where(char.IsDigit).ToArray());
         Console.WriteLine("isbn raw: {0}", isbn13);
 
         isbn13 = Convert.ToInt64(isbn13).ToString("isbn-000-0-000-00000-0");
         Console.WriteLine("isbn formatted: {0}", isbn13);
 
-        _isbn13 = isbn13;
+        return  isbn13;
     }
 
-    internal void SetMarkdownDirectory()
-    {
-        _markdownDirectory = ProgramFileUtility.GetCombinedPath(_publicationRoot, "markdown", fileIsExpected: false);
-    }
+    internal string GetMarkdownDirectory() =>
+        ProgramFileUtility.GetCombinedPath(_publicationRoot, "markdown", fileIsExpected: false);
 
-    internal void SetPublicationMetaAndChapterSet()
+    internal (JObject publicationMeta, Dictionary<string, string> chapterSet) GetPublicationMetaAndChapterSet()
     {
         var publicationMetaPath = ProgramFileUtility
             .GetCombinedPath(_publicationRoot, "json", fileIsExpected: false);
         var publicationMetaFile = ProgramFileUtility
             .GetCombinedPath(publicationMetaPath, PublicationFiles.EpubMetadata, fileIsExpected: true);
 
-        _publicationMeta = JObject.Parse(File.ReadAllText(publicationMetaFile));
-        _chapterSet = _publicationMeta
+        var publicationMeta = JObject.Parse(File.ReadAllText(publicationMetaFile));
+        var chapterSet = publicationMeta
             .GetJObject("publication")
             .GetValue<Dictionary<string, string>>("chapterSet");
+
+        return (publicationMeta, chapterSet);
     }
 
-    internal void SetPublicationRoot(string csxRoot)
+    internal (DirectoryInfo csxRootInfo, string publicationRoot) GetCsxRootInfoAndPublicationRoot(string csxRoot)
     {
-        _csxRootInfo = new DirectoryInfo(csxRoot);
-        _publicationRoot = _csxRootInfo.Parent.ToReferenceTypeValueOrThrow()!.FullName;
+        var csxRootInfo = new DirectoryInfo(csxRoot);
+        var publicationRoot = csxRootInfo.Parent.ToReferenceTypeValueOrThrow().FullName;
+
+        return (csxRootInfo, publicationRoot);
     }
 
-    Dictionary<string, string> _chapterSet;
-    DirectoryInfo _csxRootInfo;
-    JObject _publicationMeta;
-    string _epubOebpsDirectory;
-    string _epubTextDirectory;
-    string _isbn13;
-    string _markdownDirectory;
-    string _publicationRoot;
-    XDocument _chapterTemplate;
+    readonly Dictionary<string, string> _chapterSet;
+    readonly DirectoryInfo _csxRootInfo;
+    readonly JObject _publicationMeta;
+    readonly string _epubOebpsDirectory;
+    readonly string _epubTextDirectory;
+    readonly string _isbn13;
+    readonly string _markdownDirectory;
+    readonly string _publicationRoot;
+    readonly XDocument _chapterTemplate;
 }

@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Songhay.Publications.Abstractions;
 
 /// <summary>
@@ -8,27 +10,28 @@ public interface IDocument: ITemporal
     /// <summary>
     /// Gets or sets the document identifier.
     /// </summary>
+    [DisallowNull]
     int? DocumentId { get; set; }
 
     /// <summary>
     /// Gets or sets the title.
     /// </summary>
-    string Title { get; set; }
+    string? Title { get; set; }
 
     /// <summary>
     /// Gets or sets the short name of the document.
     /// </summary>
-    string DocumentShortName { get; set; }
+    string? DocumentShortName { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the file.
     /// </summary>
-    string FileName { get; set; }
+    string? FileName { get; set; }
 
     /// <summary>
     /// Gets or sets the path.
     /// </summary>
-    string Path { get; set; }
+    string? Path { get; set; }
 
     /// <summary>
     /// Gets or sets the template identifier.
@@ -58,10 +61,11 @@ public interface IDocument: ITemporal
     /// <summary>
     /// Gets or sets the client identifier.
     /// </summary>
-    string ClientId { get; set; }
+    [DisallowNull]
+    string? ClientId { get; set; }
 
     /// <summary>
     /// Gets or sets the tag.
     /// </summary>
-    string Tag { get; set; }
+    string? Tag { get; set; }
 }

@@ -25,20 +25,20 @@ public class IndexEntry : IIndexEntry
     /// Initializes a new instance of the <see cref="PublicationContext"/> class.
     /// </summary>
     /// <param name="data">The <see cref="Segment"/> data.</param>
-    public IndexEntry(Segment data)
+    public IndexEntry(Segment? data)
     {
-        if(data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         Documents = data.Documents.OfType<IDocument>().ToArray();
 
-        ClientId = data.ClientId;
+        ClientId = data.ClientId ?? $"{nameof(data.ClientId)} is null";
         EndDate = data.EndDate;
         InceptDate = data.InceptDate;
         IsActive = data.IsActive;
         ModificationDate = data.ModificationDate;
         ParentSegmentId = data.ParentSegmentId;
         SegmentId = data.SegmentId;
-        SegmentName = data.SegmentName;
+        SegmentName = data.SegmentName ?? $"{nameof(data.SegmentName)} is null";
         SortOrdinal = data.SortOrdinal;
     }
 

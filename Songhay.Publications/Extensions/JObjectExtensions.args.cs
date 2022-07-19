@@ -12,7 +12,7 @@ public static partial class JObjectExtensions
     /// </summary>
     /// <param name="jObject">The <see cref="JObject"/>.</param>
     /// <param name="presentationInfo">The presentation information.</param>
-    public static string GetAddEntryExtractArg(this JObject jObject, DirectoryInfo presentationInfo)
+    public static string GetAddEntryExtractArg(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
         var entryPath = jObject.GetValue<string>("entryPath");
         entryPath = presentationInfo.ToCombinedPath(entryPath);
@@ -54,7 +54,7 @@ public static partial class JObjectExtensions
     public static (
         string entryPath,
         string collapsedHost
-        ) GetExpandUrisArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        ) GetExpandUrisArgs(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
         var collapsedHost = jObject.GetValue<string>("collapsedHost");
         var entryPath = jObject.GetValue<string>("entryPath");
@@ -74,7 +74,7 @@ public static partial class JObjectExtensions
         string replacement,
         bool useRegex,
         string outputPath)
-        GetFindChangeArgs(this JObject jObject, DirectoryInfo presentationInfo)
+        GetFindChangeArgs(this JObject? jObject, DirectoryInfo? presentationInfo)
     {
         var inputPath = jObject.GetValue<string>("inputPath");
         inputPath = presentationInfo.ToCombinedPath(inputPath);
