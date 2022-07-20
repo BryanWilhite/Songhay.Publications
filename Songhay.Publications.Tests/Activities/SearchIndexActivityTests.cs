@@ -16,7 +16,7 @@ public class SearchIndexActivityTests
         Assert.True(indexFileInfo.Exists);
 
         var compressedIndexFileInfo = SearchIndexActivity.CompressSearchIndex(indexFileInfo);
-        Assert.True(compressedIndexFileInfo?.Exists);
+        Assert.True(compressedIndexFileInfo.Exists);
     }
 
     [DebuggerAttachedTheory]
@@ -33,6 +33,6 @@ public class SearchIndexActivityTests
         Assert.True(indexRootInfo.Exists);
 
         var indices = SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName);
-        Assert.True(indices?.Any());
+        Assert.True(indices.Any());
     }
 }

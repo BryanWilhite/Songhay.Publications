@@ -6,10 +6,7 @@ namespace Songhay.Publications.Shell.Tests;
 
 public class ProgramTests
 {
-    public ProgramTests(ITestOutputHelper helper)
-    {
-        _testOutputHelper = helper;
-    }
+    public ProgramTests(ITestOutputHelper helper) => _testOutputHelper = helper;
 
     [Theory]
     [InlineData(

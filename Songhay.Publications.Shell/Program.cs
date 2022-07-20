@@ -19,7 +19,7 @@ class Program
         Console.Write(ProgramAssemblyUtility.GetAssemblyInfo(typeof(PublicationsActivitiesGetter).Assembly, true));
     }
 
-    internal static string Run(string[] args)
+    internal static string? Run(string[] args)
     {
         var configuration = ProgramUtility.LoadConfiguration(Directory.GetCurrentDirectory());
 

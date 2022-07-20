@@ -1,3 +1,4 @@
+using Songhay.Extensions;
 using Songhay.Publications.Abstractions;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
@@ -6,6 +7,7 @@ using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
+// ReSharper disable once InconsistentNaming
 public class IDocumentExtensionsTests
 {
     public IDocumentExtensionsTests(ITestOutputHelper helper)
@@ -27,16 +29,16 @@ public class IDocumentExtensionsTests
         };
 
         var first = collection
-            .GetDocumentByPredicate(i => i.ClientId == clientId);
+            .GetDocumentByPredicate(i => i.ClientId == clientId)
+            .ToReferenceTypeValueOrThrow();
 
-        Assert.NotNull(first);
         Assert.Equal(clientId, first.ClientId);
     }
 
     [Fact]
     public void HasFragments_Test()
     {
-        var testCollection = new (bool expectedResult, IDocument data)[]
+        var testCollection = new (bool expectedResult, IDocument? data)[]
         {
             ( expectedResult: false, data: null ),
             ( expectedResult: false, data: new Document() ),
@@ -65,13 +67,15 @@ public class IDocumentExtensionsTests
     [Fact]
     public void ToDisplayText_Test()
     {
-        var testCollection = new (IDocument data, Func<IDocument, bool> test)[]
+        var testCollection = new (IDocument? data, Func<IDocument?, bool> test)[]
         {
             (
                 null,
                 data =>
                 {
                     var text = data.ToDisplayText();
+                    _testOutputHelper.WriteLine(text);
+
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
             ),
@@ -89,14 +93,19 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.DocumentShortName) &&
-                        text.Contains(data.FileName) &&
-                        text.Contains(data.Path) &&
-                        text.Contains(data.Title) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
+                            !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
+                            !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
+                            !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -113,15 +122,20 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.DocumentShortName) &&
-                        text.Contains(data.FileName) &&
-                        text.Contains(data.IsActive.ToString()) &&
-                        text.Contains(data.Path) &&
-                        text.Contains(data.Title) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
+                            !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
+                            text.Contains($"{data.IsActive}") &&
+                            !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
+                            !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title) &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -138,17 +152,22 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    return
-                        text.Contains(data.DocumentId.ToString()) &&
-                        text.Contains(data.ClientId) &&
-                        !text.Contains(data.DocumentShortName) &&
-                        !text.Contains(data.FileName) &&
-                        !text.Contains(data.Path) &&
-                        !text.Contains(data.Title) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                        {
+                            null => false,
+                            _ =>
+                                text.Contains($"{data.DocumentId}") &&
+                                !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                                !string.IsNullOrWhiteSpace(data.DocumentShortName) && !text.Contains(data.DocumentShortName) &&
+                                !string.IsNullOrWhiteSpace(data.FileName) && !text.Contains(data.FileName) &&
+                                !string.IsNullOrWhiteSpace(data.Path) && !text.Contains(data.Path) &&
+                                !string.IsNullOrWhiteSpace(data.Title) && !text.Contains(data.Title) &&
+                                !text.Contains(DateTime.Now.Day.ToString())
+                        };
                 }
-            ),
+            )
         };
 
         foreach (var item in testCollection)

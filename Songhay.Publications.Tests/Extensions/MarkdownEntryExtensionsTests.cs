@@ -10,16 +10,23 @@ namespace Songhay.Publications.Tests.Extensions;
 
 public class MarkdownEntryExtensionsTests
 {
-    public MarkdownEntryExtensionsTests(ITestOutputHelper helper)
+    public MarkdownEntryExtensionsTests(ITestOutputHelper helper) => _testOutputHelper = helper;
+
+    [Fact]
+    public void DoNullCheck_ArgumentNullException_Test()
     {
-        _testOutputHelper = helper;
+        // arrange
+        MarkdownEntry? data = null;
+
+        // assert
+        Assert.Throws<ArgumentNullException>(() => data.DoNullCheck());
     }
 
     [Fact]
-    public void DoNullCheck_Test()
+    public void DoNullCheck_NullReferenceException_Test()
     {
         // arrange
-        MarkdownEntry data = null;
+        MarkdownEntry? data = new MarkdownEntry();
 
         // assert
         Assert.Throws<NullReferenceException>(() => data.DoNullCheck());
@@ -117,7 +124,7 @@ public class MarkdownEntryExtensionsTests
     [InlineData("Hello World!", "It was the best of times.", "./path", null, 8)]
     [InlineData("Hello World!", "It was the best of times.", "./path", "thing", 8)]
     [InlineData("Hello World!", "It was the best of times.", "./path", "{\"thing\": true}", 8)]
-    public void With11tyExtract_Test(string title, string content, string path, string tag, int length)
+    public void With11tyExtract_Test(string? title, string? content, string? path, string? tag, int length)
     {
         var entry = (new MarkdownEntry())
             .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
@@ -129,7 +136,7 @@ public class MarkdownEntryExtensionsTests
         var extract = jO.GetValue<string>("extract");
 
         _testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
-        _testOutputHelper.WriteLine(entry.FrontMatter.ToString());
+        _testOutputHelper.WriteLine($"{entry.FrontMatter}");
 
         Assert.False(string.IsNullOrWhiteSpace(extract));
     }

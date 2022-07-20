@@ -9,6 +9,7 @@ using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
+// ReSharper disable once InconsistentNaming
 public class ISegmentExtensionsTests
 {
     public ISegmentExtensionsTests(ITestOutputHelper helper)
@@ -30,16 +31,16 @@ public class ISegmentExtensionsTests
         };
 
         var first = collection
-            .GetSegmentByPredicate(i => i.ClientId == clientId);
+            .GetSegmentByPredicate(i => i.ClientId == clientId)
+            .ToReferenceTypeValueOrThrow();
 
-        Assert.NotNull(first);
         Assert.Equal(clientId, first.ClientId);
     }
 
     [Fact]
     public void HasDocuments_Test()
     {
-        var testCollection = new (bool expectedResult, ISegment data)[]
+        var testCollection = new (bool expectedResult, ISegment? data)[]
         {
             ( expectedResult: false, data: null ),
             ( expectedResult: false, data: new Segment() ),
@@ -68,13 +69,15 @@ public class ISegmentExtensionsTests
     [Fact]
     public void ToDisplayText_Test()
     {
-        var testCollection = new (ISegment data, Func<ISegment, bool> test)[]
+        var testCollection = new (ISegment? data, Func<ISegment?, bool> test)[]
         {
             (
                 null,
                 data =>
                 {
                     var text = data.ToDisplayText();
+                    _testOutputHelper.WriteLine(text);
+
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
             ),
@@ -89,12 +92,17 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.SegmentName) &&
-                        text.Contains(data.IsActive.ToString()) &&
-                        text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
+                            text.Contains($"{data.IsActive}") &&
+                            text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -108,12 +116,17 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.SegmentName) &&
-                        text.Contains(data.IsActive.ToString()) &&
-                        text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
+                            text.Contains($"{data.IsActive}") &&
+                            text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -128,15 +141,20 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    return
-                        text.Contains(data.SegmentId.ToString()) &&
-                        text.Contains(data.ClientId) &&
-                        !text.Contains(data.SegmentName) &&
-                        !text.Contains(data.IsActive.ToString()) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            text.Contains($"{data.SegmentId}") &&
+                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrWhiteSpace(data.SegmentName) && !text.Contains(data.SegmentName) &&
+                            !text.Contains($"{data.IsActive}") &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
-            ),
+            )
         };
 
         foreach (var item in testCollection)
@@ -153,19 +171,21 @@ public class ISegmentExtensionsTests
     {
         var json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonConvert.DeserializeObject<IEnumerable<Segment>>(json);
+        var segments = JsonConvert
+            .DeserializeObject<IEnumerable<Segment>>(json)
+            .ToReferenceTypeValueOrThrow()
+            .ToArray();
 
-        Assert.NotNull(segments);
         Assert.True(segments.Any());
 
         _testOutputHelper.WriteLine($"converting enumeration of {nameof(Segment)}...");
 
-        var entries = segments.ToPublicationIndexEntries();
+        var entries = segments.ToPublicationIndexEntries().ToArray();
         Assert.NotEmpty(entries);
 
-        var json_output = entries.ToJson();
+        var jsonOutput = entries.ToJson();
 
-        File.WriteAllText(outputInfo.FullName, json_output);
+        File.WriteAllText(outputInfo.FullName, jsonOutput);
     }
 
     [Theory]
@@ -174,9 +194,11 @@ public class ISegmentExtensionsTests
     {
         var json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonConvert.DeserializeObject<IEnumerable<Segment>>(json);
+        var segments = JsonConvert
+            .DeserializeObject<IEnumerable<Segment>>(json)
+            .ToReferenceTypeValueOrThrow()
+            .ToArray();
 
-        Assert.NotNull(segments);
         Assert.True(segments.Any());
 
         var segment = segments.First();
@@ -193,9 +215,11 @@ public class ISegmentExtensionsTests
     {
         var json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonConvert.DeserializeObject<IEnumerable<Segment>>(json);
+        var segments = JsonConvert
+            .DeserializeObject<IEnumerable<Segment>>(json)
+            .ToReferenceTypeValueOrThrow()
+            .ToArray();
 
-        Assert.NotNull(segments);
         Assert.True(segments.Any());
 
         var segment = segments.First();

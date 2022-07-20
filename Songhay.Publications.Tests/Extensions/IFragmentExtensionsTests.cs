@@ -1,5 +1,3 @@
-using System.Diagnostics;
-using Songhay.Diagnostics;
 using Songhay.Extensions;
 using Songhay.Publications.Abstractions;
 using Songhay.Publications.Extensions;
@@ -9,15 +7,9 @@ using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
+// ReSharper disable once InconsistentNaming
 public class IFragmentExtensionsTests
 {
-    static IFragmentExtensionsTests() => traceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource traceSource;
-
     public IFragmentExtensionsTests(ITestOutputHelper helper)
     {
         _testOutputHelper = helper;
@@ -37,22 +29,24 @@ public class IFragmentExtensionsTests
         };
 
         var first = collection
-            .GetFragmentByPredicate(i => i.ClientId == clientId);
+            .GetFragmentByPredicate(i => i.ClientId == clientId)
+            .ToReferenceTypeValueOrThrow();
 
-        Assert.NotNull(first);
         Assert.Equal(clientId, first.ClientId);
     }
 
     [Fact]
     public void ToDisplayText_Test()
     {
-        var testCollection = new (IFragment data, Func<IFragment, bool> test)[]
+        var testCollection = new (IFragment? data, Func<IFragment?, bool> test)[]
         {
             (
                 null,
                 data =>
                 {
                     var text = data.ToDisplayText();
+                    _testOutputHelper.WriteLine(text);
+
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
             ),
@@ -68,13 +62,18 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.FragmentDisplayName) &&
-                        text.Contains(data.FragmentName) &&
-                        text.Contains(data.IsActive.ToString()) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
+                            !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
+                            text.Contains($"{data.IsActive}") &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -89,13 +88,18 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    return
-                        text.Contains(data.ClientId) &&
-                        text.Contains(data.FragmentDisplayName) &&
-                        text.Contains(data.FragmentName) &&
-                        text.Contains(data.IsActive.ToString()) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
+                            !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
+                            text.Contains($"{data.IsActive}") &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
             ),
             (
@@ -111,16 +115,21 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    return
-                        text.Contains(data.FragmentId.ToString()) &&
-                        text.Contains(data.ClientId) &&
-                        !text.Contains(data.FragmentDisplayName) &&
-                        !text.Contains(data.FragmentName) &&
-                        !text.Contains(data.IsActive.ToString()) &&
-                        !text.Contains(DateTime.Now.Day.ToString())
-                        ;
+                    _testOutputHelper.WriteLine(text);
+
+                    return data switch
+                    {
+                        null => false,
+                        _ =>
+                            text.Contains($"{data.FragmentId}") &&
+                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                            !string.IsNullOrEmpty(data.FragmentDisplayName) && !text.Contains(data.FragmentDisplayName) &&
+                            !string.IsNullOrEmpty(data.FragmentName) && !text.Contains(data.FragmentName) &&
+                            !text.Contains($"{data.IsActive}") &&
+                            !text.Contains(DateTime.Now.Day.ToString())
+                    };
                 }
-            ),
+            )
         };
 
         foreach (var item in testCollection)
