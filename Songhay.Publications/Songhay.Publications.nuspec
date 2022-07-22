@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>5.2.7</version>
+    <version>6.0.0</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -12,30 +12,27 @@
     <license type="file">LICENSE.md</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Core reusable definitions for Songhay Studio Publications</summary>
+    <readme>README.md</readme>
     <releaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/46</releaseNotes>
-    <copyright>(c) 2021 Bryan D. Wilhite</copyright>
+    <copyright>(c) 2022 Bryan D. Wilhite</copyright>
     <tags>Core Songhay Markdown JSON GenericWeb</tags>
     <repository type="git" url="https://github.com/BryanWilhite/Songhay.Publications"></repository>
     <dependencies>
-      <group targetFramework=".NET5.0">
+      <group targetFramework=".NET6.0">
         <dependency id="CloneExtensions" version="1.4.2" />
-        <dependency id="Markdig" version="0.25.0" />
-        <dependency id="SonghayCore" version="5.2.1" />
-      </group>
-      <group targetFramework=".NETStandard2.0">
-        <dependency id="CloneExtensions" version="1.4.2" />
-        <dependency id="Markdig" version="0.25.0" />
-        <dependency id="SonghayCore" version="5.2.1" />
+        <dependency id="FluentValidation" version="11.1.0" />
+        <dependency id="Markdig" version="0.30.2" />
+        <dependency id="SonghayCore" version="6.0.0" />
+        <dependency id="SonghayCore.Newtonsoft" version="6.0.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Debug\net5.0\Songhay.Publications*.dll" target="lib\net5.0" />
-    <file src="bin\Debug\net5.0\Songhay.Publications*.json" target="lib\net5.0" />
-    <file src="bin\Debug\netstandard2.0\Songhay.Publications*.dll" target="lib\netstandard2.0" />
-    <file src="bin\Debug\netstandard2.0\Songhay.Publications*.json" target="lib\netstandard2.0" />
+    <file src="bin\Debug\net6.0\Songhay.Publications*.dll" target="lib\net6.0" />
+    <file src="bin\Debug\net6.0\Songhay.Publications*.json" target="lib\net6.0" />
     <file src="**\*.cs" exclude="**\obj\**" target="src" />
     <file src="..\LICENSE.md" target="" />
+    <file src="..\README.md" target="" />
     <file src="..\songhay_icon.png" target="images\" />
   </files>
 </package>

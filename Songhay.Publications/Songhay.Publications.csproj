@@ -7,7 +7,7 @@
         <Title>Songhay Publications</Title>
         <Description>Core reusable definitions for Songhay Studio Publications</Description>
         <Authors>Bryan D. Wilhite</Authors>
-        <Copyright>(c) 2021 Bryan D. Wilhite</Copyright>
+        <Copyright>(c) 2022 Bryan D. Wilhite</Copyright>
         <Company>Songhay System</Company>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
@@ -16,6 +16,7 @@
         <IncludeSource>false</IncludeSource>
         <IncludeSymbols>false</IncludeSymbols>
         <IsPackable>true</IsPackable>
+        <Nullable>enable</Nullable>
         <PackageIcon>..\songhay_icon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
@@ -25,7 +26,6 @@
         <PackageVersion>$(AssemblyVersion)</PackageVersion>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <Version>$(AssemblyVersion)</Version>
-        <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 
@@ -47,6 +47,11 @@
 
     <ItemGroup>
         <None Include="..\LICENSE.md" Link="LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
+        <None Include="..\README.md" Link="README.md" Pack="true" />
+        <None Include="..\songhay_icon.png">
+          <Pack>True</Pack>
+          <Link>songhay_icon.png</Link>
+        </None>
     </ItemGroup>
 
 </Project>
