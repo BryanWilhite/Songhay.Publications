@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Songhay.Publications.Shell"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Songhay.Publications.Shell.Tests", "Songhay.Publications.Shell.Tests\Songhay.Publications.Shell.Tests.csproj", "{79367FC4-61BC-4F8B-BD15-51517B640767}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statiq.Docs.Shell", "Statiq.Docs.Shell\Statiq.Docs.Shell.csproj", "{A3326F65-047E-4F8F-B24B-D21FE0A471AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,18 @@ Global
 		{79367FC4-61BC-4F8B-BD15-51517B640767}.Release|x64.Build.0 = Release|Any CPU
 		{79367FC4-61BC-4F8B-BD15-51517B640767}.Release|x86.ActiveCfg = Release|Any CPU
 		{79367FC4-61BC-4F8B-BD15-51517B640767}.Release|x86.Build.0 = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|x64.Build.0 = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Debug|x86.Build.0 = Debug|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|x64.ActiveCfg = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|x64.Build.0 = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3326F65-047E-4F8F-B24B-D21FE0A471AE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
