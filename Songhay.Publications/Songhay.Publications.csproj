@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>6.0.0</AssemblyVersion>
+        <AssemblyVersion>6.0.1</AssemblyVersion>
         <RootNamespace>Songhay.Publications</RootNamespace>
 
         <Title>Songhay Publications</Title>
@@ -41,7 +41,7 @@
         <PackageReference Include="CloneExtensions" Version="1.4.2" />
         <PackageReference Include="FluentValidation" Version="11.1.0" />
         <PackageReference Include="Markdig" Version="0.30.2" />
-        <PackageReference Include="SonghayCore" Version="6.0.0" />
+        <PackageReference Include="SonghayCore" Version="6.0.1" />
         <PackageReference Include="SonghayCore.Newtonsoft" Version="6.0.0" />
     </ItemGroup>
 
