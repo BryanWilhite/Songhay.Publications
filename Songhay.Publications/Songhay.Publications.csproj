@@ -20,7 +20,7 @@
         <PackageIcon>..\songhay_icon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-        <PackageReleaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/46</PackageReleaseNotes>
+        <PackageReleaseNotes>upgraded core dependencies 📦↑</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
         <PackageVersion>$(AssemblyVersion)</PackageVersion>
