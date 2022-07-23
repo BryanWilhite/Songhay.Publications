@@ -11,7 +11,7 @@ await Bootstrapper
     {
         { Keys.Title, "API" },
         { Keys.LinkRoot, "Songhay.Publications" },
-        { DocsKeys.ApiPath, "latest" },
+        { DocsKeys.ApiPath, "api" },
         {
             DocsKeys.SourceFiles,
             new []

@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>https://bryanwilhite.github.io/Songhay.Publications</id>
-	<title>Songhay.Publications Documentation</title>
-	<link rel="self" href="https://bryanwilhite.github.io/Songhay.Publications" />
-	<rights>2021</rights>
-	<updated>2021-07-18T05:03:00Z</updated>
+	<id>/Songhay.Publications</id>
+	<title>API</title>
+	<author>
+		<name>@BryanWilhite</name>
+	</author>
+	<link rel="self" href="/Songhay.Publications" />
+	<rights>(c) 2022 Songhay System</rights>
+	<updated>2022-07-23T22:55:28Z</updated>
 </feed>

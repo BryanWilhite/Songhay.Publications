@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 	<channel>
-		<title>Songhay.Publications Documentation</title>
-		<link>https://bryanwilhite.github.io/Songhay.Publications</link>
+		<title>API</title>
+		<link>/Songhay.Publications</link>
 		<description />
-		<copyright>2021</copyright>
-		<pubDate>Sun, 18 Jul 2021 05:03:00 GMT</pubDate>
-		<lastBuildDate>Sun, 18 Jul 2021 05:03:00 GMT</lastBuildDate>
+		<copyright>(c) 2022 Songhay System</copyright>
+		<managingEditor>@BryanWilhite</managingEditor>
+		<pubDate>Sat, 23 Jul 2022 22:55:28 GMT</pubDate>
+		<lastBuildDate>Sat, 23 Jul 2022 22:55:28 GMT</lastBuildDate>
 	</channel>
 </rss>

@@ -88,6 +88,27 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "dotnet Statiq [Release]",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "${workspaceFolder}/Statiq.Docs.Shell/bin/Release/net6.0/Statiq.Docs.Shell.dll",
+                "--configuration",
+                "Release",
+                "--",
+                "--root",
+                "${workspaceFolder}/Statiq.Docs.Shell/bin/Release/net6.0/",
+                "--log-level",
+                "Information",
+                "--log-file",
+                "${workspaceFolder}/Statiq.Docs.Shell/statiq-"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/Statiq.Docs.Shell/bin/Release/net6.0/"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "dotnet build [Songhay.Publications.Tests]",
             "command": "dotnet",
             "type": "shell",
@@ -108,9 +129,22 @@
                 "${workspaceFolder}/Songhay.Publications.Tests/Songhay.Publications.Tests.csproj",
                 "--logger:trx",
                 "--results-directory:${workspaceFolder}/TestResults",
-                "--verbosity:normal"
+                "--verbosity:normal",
+                "--collect:\"XPlat Code Coverage\""
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "reportgenerator [SonghayCore.Tests]",
+            "command": "reportgenerator",
+            "type": "shell",
+            "args": [
+                "-reports:\"${workspaceFolder}/TestResults/*/coverage.cobertura.xml\"",
+                "-reporttypes:Html",
+                "-targetdir:\"${workspaceFolder}/docs/coverlet\"",
+                "-title:SonghayCore"
+            ],
+            "problemMatcher": []
         },
         {
             "label": "dotnet test [Songhay.Publications.Tests, filtered by selected text]",
@@ -140,18 +174,18 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "command": "nuget",
-            "label": "NuGet pack Songhay.Publications",
-            "isBackground": false,
+            "label": "git [Statiq Theme Docable]",
+            "command": "git",
             "type": "shell",
             "args": [
-                "pack",
-                "Songhay.Publications.nuspec",
-                "-Verbosity",
-                "detailed"
+                "submodule",
+                "add",
+                "--force",
+                "git@github.com:statiqdev/Docable.git",
+                "${workspaceFolder}/Statiq.Docs.Shell/bin/Release/net6.0/theme/"
             ],
             "options": {
-                "cwd": "${workspaceRoot}/Songhay.Publications"
+                "cwd": "${workspaceRoot}/Statiq.Docs.Shell/bin/Release/net6.0/"
             },
             "problemMatcher": "$msCompile"
         },
@@ -174,6 +208,28 @@
                     "-Path",
                     "*.trx",
                     "-Verbose"
+                ]
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Statiq: add .nojekyll file for GitHub",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/docs"
+            },
+            "linux": {
+                "command": "touch",
+                "args": [
+                    ".nojekyll"
+                ]
+            },
+            "windows": {
+                "command": "New-Item",
+                "args": [
+                    "-ItemType",
+                    "file",
+                    ".nojekyll"
                 ]
             },
             "problemMatcher": []
