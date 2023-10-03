@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 
 namespace Songhay.Publications;
 
@@ -100,9 +100,9 @@ public class PublicationContext
     {
         Console.WriteLine("writing Title data...");
 
-        var jPublication = _publicationMeta.GetJObject("publication");
-        var title = jPublication.GetValue<string>("title");
-        var author = jPublication.GetValue<string>("author");
+        var jPublication = _publicationMeta.GetProperty("publication");
+        var title = jPublication.GetProperty("title").GetString();
+        var author = jPublication.GetProperty("author").GetString();
 
         var xhtml = PublicationNamespaces.Xhtml;
         var path = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileTitle, fileIsExpected: true);
@@ -119,8 +119,8 @@ public class PublicationContext
             .Element(xhtml + "span"))
             .ToReferenceTypeValueOrThrow();
 
-        h1Element.SetValue(title);
-        spanElement.SetValue(author);
+        h1Element.SetValue(title!);
+        spanElement.SetValue(author!);
 
         EpubUtility.SaveAsUnicodeWithBom(titleDocument, path);
     }
@@ -163,7 +163,7 @@ public class PublicationContext
     {
         Console.WriteLine("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
 
-        var dictionary = _publicationMeta["publication"]?["identifiers"]?.ToObject<Dictionary<string, string>>();
+        var dictionary = _publicationMeta.GetProperty("publication").GetProperty("identifiers").ToObject<Dictionary<string, string>>();
         var isbn13 = dictionary.TryGetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
 
         isbn13 = new string(isbn13.Where(char.IsDigit).ToArray());
@@ -178,17 +178,19 @@ public class PublicationContext
     internal string GetMarkdownDirectory() =>
         ProgramFileUtility.GetCombinedPath(_publicationRoot, "markdown", fileIsExpected: false);
 
-    internal (JObject publicationMeta, Dictionary<string, string> chapterSet) GetPublicationMetaAndChapterSet()
+    internal (JsonElement publicationMeta, Dictionary<string, string> chapterSet) GetPublicationMetaAndChapterSet()
     {
         var publicationMetaPath = ProgramFileUtility
             .GetCombinedPath(_publicationRoot, "json", fileIsExpected: false);
         var publicationMetaFile = ProgramFileUtility
             .GetCombinedPath(publicationMetaPath, PublicationFiles.EpubMetadata, fileIsExpected: true);
 
-        var publicationMeta = JObject.Parse(File.ReadAllText(publicationMetaFile));
+        var publicationMeta = JsonDocument.Parse(File.ReadAllText(publicationMetaFile)).RootElement;
         var chapterSet = publicationMeta
-            .GetJObject("publication")
-            .GetValue<Dictionary<string, string>>("chapterSet");
+            .GetProperty("publication")
+            .GetProperty("chapterSet")
+            .ToObject<Dictionary<string, string>>()
+            .ToReferenceTypeValueOrThrow();
 
         return (publicationMeta, chapterSet);
     }
@@ -203,7 +205,7 @@ public class PublicationContext
 
     readonly Dictionary<string, string> _chapterSet;
     readonly DirectoryInfo _csxRootInfo;
-    readonly JObject _publicationMeta;
+    readonly JsonElement _publicationMeta;
     readonly string _epubOebpsDirectory;
     readonly string _epubTextDirectory;
     readonly string _isbn13;

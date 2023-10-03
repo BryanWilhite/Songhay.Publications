@@ -1051,7 +1051,7 @@
             the <see cref="F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc"/> file.
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(Newtonsoft.Json.Linq.JObject,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.DaisyConsortiumNcx"/> class.
             </summary>
@@ -1300,7 +1300,7 @@
             <see cref="F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest"/> file.
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Models.IdpfPackage.#ctor(Newtonsoft.Json.Linq.JObject,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.IdpfPackage.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.IdpfPackage"/> class.
             </summary>
@@ -1653,7 +1653,7 @@
              https://en.wikipedia.org/wiki/Open_eBook
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Models.OebpsTextCopyright.#ctor(Newtonsoft.Json.Linq.JObject,System.String)">
+        <member name="M:Songhay.Publications.Models.OebpsTextCopyright.#ctor(System.Text.Json.JsonElement,System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextCopyright" /> class.
             </summary>
@@ -1706,7 +1706,7 @@
              https://en.wikipedia.org/wiki/Open_eBook
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Models.OebpsTextToc.#ctor(Newtonsoft.Json.Linq.JObject,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.OebpsTextToc.#ctor(System.Text.Json.JsonElement,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextToc"/> class.
             </summary>
@@ -2098,6 +2098,20 @@
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Validators.SegmentValidator"/> class.
             </summary>
+        </member>
+        <member name="T:Songhay.Extensions.JsonElementExtensions">
+            <summary>
+            Extensions of
+            </summary>
+        </member>
+        <member name="M:Songhay.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)">
+            <summary>
+            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+            to <c>TObject</c>.
+            </summary>
+            <param name="element">the specified <see cref="T:System.Text.Json.JsonElement"/></param>
+            <typeparam name="TObject">the type to convert to</typeparam>
+            <returns></returns>
         </member>
     </members>
 </doc>

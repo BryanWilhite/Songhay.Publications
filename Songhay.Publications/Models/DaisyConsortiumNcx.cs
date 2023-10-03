@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 
 namespace Songhay.Publications.Models;
 
@@ -15,9 +15,9 @@ public class DaisyConsortiumNcx
     /// <param name="isbn13">The isbn13.</param>
     /// <param name="chapterSet">The chapter set.</param>
     /// <param name="epubOebpsDirectory">The epub oebps directory.</param>
-    public DaisyConsortiumNcx(JObject? publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
+    public DaisyConsortiumNcx(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
     {
-        _publicationMeta = publicationMeta.ToReferenceTypeValueOrThrow();
+        _publicationMeta = publicationMeta;
         _isbn13 = isbn13.ToReferenceTypeValueOrThrow();
         _chapterSet = chapterSet.ToReferenceTypeValueOrThrow();
         _ncxDocumentPath = ProgramFileUtility.GetCombinedPath(epubOebpsDirectory, PublicationFiles.DaisyConsortiumNcxToc, fileIsExpected: true);
@@ -127,13 +127,14 @@ public class DaisyConsortiumNcx
 
         var ncx = PublicationNamespaces.DaisyNcx;
         var title = _publicationMeta
-            .GetJObject("publication")
-            .GetValue<string>("title");
+            .GetProperty("publication")
+            .GetProperty("title")
+            .GetString();
 
         var textElement = _ncxDocument.Root?
             .Element(ncx + "docTitle")?
             .Element(ncx + "text");
-        textElement?.SetValue(title);
+        textElement?.SetValue(title!);
     }
 
     internal void SetNcxMeta()
@@ -163,7 +164,7 @@ public class DaisyConsortiumNcx
     }
 
     readonly Dictionary<string, string> _chapterSet;
-    readonly JObject _publicationMeta;
+    readonly JsonElement _publicationMeta;
     readonly XDocument _ncxDocument;
     readonly string _isbn13;
     readonly string _ncxDocumentPath;

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 
 namespace Songhay.Publications.Models;
 
@@ -21,7 +21,7 @@ public class OebpsTextToc
     /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
-    public OebpsTextToc(JObject publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
+    public OebpsTextToc(JsonElement publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
     {
         _publicationMeta = publicationMeta;
         _chapterSet = chapterSet;
@@ -35,9 +35,9 @@ public class OebpsTextToc
     /// </summary>
     public void Write()
     {
-        var jPublication = _publicationMeta.GetJObject("publication");
-        var title = jPublication.GetValue<string>("title");
-        var author = jPublication.GetValue<string>("author");
+        var jPublication = _publicationMeta.GetProperty("publication");
+        var title = jPublication.GetProperty("title").GetString();
+        var author = jPublication.GetProperty("author").GetString();
 
         var xhtml = PublicationNamespaces.Xhtml;
 
@@ -53,8 +53,8 @@ public class OebpsTextToc
             .Element(xhtml + "span")
             .ToReferenceTypeValueOrThrow();
 
-        h2Element?.SetValue(title);
-        spanElement?.SetValue(author);
+        h2Element?.SetValue(title!);
+        spanElement?.SetValue(author!);
 
         SetTocAnchors(_document);
 
@@ -146,7 +146,7 @@ public class OebpsTextToc
     }
 
     readonly Dictionary<string, string> _chapterSet;
-    readonly JObject _publicationMeta;
+    readonly JsonElement _publicationMeta;
     readonly string _documentPath;
     readonly XDocument _document;
 }

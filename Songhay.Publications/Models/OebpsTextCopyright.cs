@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 
 namespace Songhay.Publications.Models;
 
@@ -20,7 +20,7 @@ public class OebpsTextCopyright
     /// </summary>
     /// <param name="publicationMeta">The publication meta.</param>
     /// <param name="epubTextDirectory">Conventional <c>epub/OEBPS/Text</c> directory.</param>
-    public OebpsTextCopyright(JObject publicationMeta, string epubTextDirectory)
+    public OebpsTextCopyright(JsonElement publicationMeta, string epubTextDirectory)
     {
         _publicationMeta = publicationMeta;
         _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileCopyright, fileIsExpected: true);
@@ -35,31 +35,31 @@ public class OebpsTextCopyright
     public void Write()
     {
         var pubYear = _publicationMeta
-            .GetJObject("publication")
-            .GetValue<string>("publicationDate");
-        pubYear = DateTime.Parse(pubYear).Year.ToString();
+            .GetProperty("publication")
+            .GetProperty("publicationDate").GetString();
+        pubYear = DateTime.Parse(pubYear!).Year.ToString();
 
-        var jPub = _publicationMeta.GetJObject("publication");
+        var jPub = _publicationMeta.GetProperty("publication");
 
-        var pubAuthor = jPub.GetValue<string>("author");
-        var pubInquiries = jPub.GetValue<string>("inquiries");
-        var pubCoverArtCredits = jPub.GetValue<string>("coverArtCredits");
-        var pubEpubPublicationDate = jPub.GetValue<string>("epubPublicationDate");
+        var pubAuthor = jPub.GetProperty("author").GetString();
+        var pubInquiries = jPub.GetProperty("inquiries").GetString();
+        var pubCoverArtCredits = jPub.GetProperty("coverArtCredits").GetString();
+        var pubEpubPublicationDate = jPub.GetProperty("epubPublicationDate").GetString();
 
         var span = GetSpan("pub-year");
         span.Value = pubYear + " ";
 
         var spans = GetSpans("pub-author");
-        spans.ForEachInEnumerable(i => i.Value = pubAuthor);
+        spans.ForEachInEnumerable(i => i.Value = pubAuthor!);
 
         span = GetSpan("pub-inquiries");
-        span.Value = pubInquiries;
+        span.Value = pubInquiries!;
 
         span = GetSpan("pub-cover-art-credits");
-        span.Value = pubCoverArtCredits;
+        span.Value = pubCoverArtCredits!;
 
         span = GetSpan("pub-epub-date");
-        span.Value = pubEpubPublicationDate;
+        span.Value = pubEpubPublicationDate!;
 
         EpubUtility.SaveAsUnicodeWithBom(_document, _documentPath);
     }
@@ -96,7 +96,7 @@ public class OebpsTextCopyright
             .Descendants(xhtml + "span") ?? Enumerable.Empty<XElement>();
     }
 
-    readonly JObject _publicationMeta;
+    readonly JsonElement _publicationMeta;
     readonly string _documentPath;
     readonly XDocument _document;
     readonly IEnumerable<XElement> _spans;

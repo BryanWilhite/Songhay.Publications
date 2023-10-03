@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 
 namespace Songhay.Publications.Models;
 
@@ -16,9 +16,9 @@ public class IdpfPackage
     /// <param name="isbn13">International Standard Book Number (ISBN)</param>
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
-    public IdpfPackage(JObject? publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
+    public IdpfPackage(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
     {
-        _publicationMeta = publicationMeta.ToReferenceTypeValueOrThrow();
+        _publicationMeta = publicationMeta;
         _isbn13 = isbn13.ToReferenceTypeValueOrThrow();
         _chapterSet = chapterSet.ToReferenceTypeValueOrThrow();
         _idpfDocumentPath = ProgramFileUtility
@@ -74,13 +74,13 @@ public class IdpfPackage
         var publisherElement = metadataElement.Element(dc + "publisher");
         var dateElement = metadataElement.Element(dc + "date");
 
-        var jPublication = _publicationMeta.GetJObject("publication");
+        var jPublication = _publicationMeta.GetProperty("publication");
 
-        titleElement?.SetValue(jPublication.GetValue<string>("title"));
+        titleElement?.SetValue(jPublication.GetProperty("title").GetString()!);
         identifierElement?.SetValue(_isbn13);
-        creatorElement?.SetValue(jPublication.GetValue<string>("author"));
-        publisherElement?.SetValue(jPublication.GetValue<string>("publisher"));
-        dateElement?.SetValue(jPublication.GetValue<string>("publicationDate"));
+        creatorElement?.SetValue(jPublication.GetProperty("author").GetString()!);
+        publisherElement?.SetValue(jPublication.GetProperty("publisher").GetString()!);
+        dateElement?.SetValue(jPublication.GetProperty("publicationDate").GetString()!);
     }
 
     internal void SetManifestItem(XElement item, string id)
@@ -209,7 +209,7 @@ public class IdpfPackage
     }
 
     readonly Dictionary<string, string> _chapterSet;
-    readonly JObject _publicationMeta;
+    readonly JsonElement _publicationMeta;
     readonly string _isbn13;
     readonly string _idpfDocumentPath;
     readonly XDocument _idpfDocument;
