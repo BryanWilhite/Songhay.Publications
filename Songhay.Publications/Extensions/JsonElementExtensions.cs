@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace Songhay.Extensions;
 
 /// <summary>
-/// Extensions of
+/// Extensions of <see cref="JsonElement"/>.
 /// </summary>
 public static class JsonElementExtensions
 {

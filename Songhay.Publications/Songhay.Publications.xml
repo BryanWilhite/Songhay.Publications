@@ -760,6 +760,62 @@
             </summary>
             <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.JsonElementExtensions">
+            <summary>
+            Extensions of <see cref="T:System.Text.Json.JsonElement"/>.
+            </summary>
+            <summary>
+            Extensions of <see cref="T:System.Text.Json.JsonElement"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement" />.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)">
+            <summary>
+            Gets the arguments for Activity method.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <param name="presentationInfo">The presentation information.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)">
+            <summary>
+            Gets the publication command.
+            </summary>
+            <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
+        </member>
         <member name="T:Songhay.Publications.Extensions.MarkdownEntryExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
@@ -2101,7 +2157,7 @@
         </member>
         <member name="T:Songhay.Extensions.JsonElementExtensions">
             <summary>
-            Extensions of
+            Extensions of <see cref="T:System.Text.Json.JsonElement"/>.
             </summary>
         </member>
         <member name="M:Songhay.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)">
