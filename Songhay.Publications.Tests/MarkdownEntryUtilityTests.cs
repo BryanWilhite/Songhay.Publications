@@ -1,5 +1,4 @@
-﻿using Songhay.Extensions;
-using Songhay.Tests;
+﻿using Songhay.Tests;
 using Xunit;
 
 namespace Songhay.Publications.Tests;
@@ -15,7 +14,7 @@ public class MarkdownEntryUtilityTests
         var entry = MarkdownEntryUtility.GenerateEntryFor11Ty(entryRoot, title);
 
         Assert.NotNull(entry);
-        Assert.True(File.Exists(ProgramFileUtility.GetCombinedPath(entryRoot, $"{entry.FrontMatter.GetValue<string>("clientId")}.md")));
+        Assert.True(File.Exists(ProgramFileUtility.GetCombinedPath(entryRoot, $"{entry.FrontMatter["clientId"]?.GetValue<string>()}.md")));
     }
 
     [DebuggerAttachedTheory]

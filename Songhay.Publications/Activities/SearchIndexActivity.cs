@@ -1,5 +1,6 @@
 ﻿using System.IO.Compression;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace Songhay.Publications.Activities;
 
@@ -61,22 +62,22 @@ public class SearchIndexActivity : IActivity
         var frontMatterDocumentCollections = entryRootInfo
             .GetFiles("*.md", SearchOption.AllDirectories)
             .Select(fileInfo => fileInfo.ToMarkdownEntry().FrontMatter)
-            .Select(jO => JObject.FromObject(new
+            .Select(jO => new
             {
-                extract = JObject.Parse(jO.GetValue<string>("tag", throwException: false) ?? @"{ ""extract"": ""[empty]"" }").GetValue<string>("extract"),
-                clientId = jO.GetValue<string>("clientId", throwException: false) ?? "[empty]",
-                inceptDate = jO.GetValue<string>("date", throwException: false) ?? string.Empty,
-                modificationDate = jO.GetValue<string>("modificationDate", throwException: false) ?? string.Empty,
-                title = jO.GetValue<string>("title", throwException: false) ?? string.Empty
-            }))
-            .OrderByDescending(o => o.GetValue<string>("clientId"))
+                extract = JsonNode.Parse(jO["tag"]?.GetValue<string>() ?? @"{ ""extract"": ""[empty]"" }")?.AsObject()["extract"]?.GetValue<string>(),
+                clientId = jO["clientId"]?.GetValue<string>() ?? "[empty]",
+                inceptDate = jO["date"]?.GetValue<string>() ?? string.Empty,
+                modificationDate = jO["modificationDate"]?.GetValue<string>() ?? string.Empty,
+                title = jO["title"]?.GetValue<string>() ?? string.Empty
+            }.ToJsonNode().ToReferenceTypeValueOrThrow())
+            .OrderByDescending(o => o["clientId"]?.GetValue<string>())
             .Partition(partitionSize);
 
         var indices = new List<FileInfo>();
         var count = 0;
         foreach (var frontMatterDocuments in frontMatterDocumentCollections)
         {
-            var jA = new JArray(frontMatterDocuments);
+            var jA = new JsonArray(new JsonNodeOptions { PropertyNameCaseInsensitive = false },frontMatterDocuments.ToArray());
             var path = indexRootInfo.ToCombinedPath(indexFileName.Replace(".json", $"-{count:00}.json"));
             indices.Add(new FileInfo(path));
 
@@ -135,16 +136,16 @@ public class SearchIndexActivity : IActivity
 
     }
 
-    internal (DirectoryInfo presentationInfo, JObject jSettings) GetContext(ProgramArgs? args)
+    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext(ProgramArgs? args)
     {
         var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
         TraceSource?.TraceVerbose($"applying settings...");
-        var jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         return (presentationInfo, jSettings);
     }
 
     DirectoryInfo? _presentationInfo;
-    JObject? _jSettings;
+    JsonElement _jSettings;
 }

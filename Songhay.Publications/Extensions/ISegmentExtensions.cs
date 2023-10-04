@@ -1,9 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
-
-
-namespace Songhay.Publications.Extensions;
+﻿namespace Songhay.Publications.Extensions;
 
 /// <summary>
 /// Extensions of <see cref="ISegment"/>
@@ -121,28 +116,6 @@ public static class SegmentExtensions
     }
 
     /// <summary>
-    /// Converts the <see cref="ISegment" /> to <see cref="JObject" />.
-    /// </summary>
-    /// <param name="data">The data.</param>
-    /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    public static JObject? ToJObject(this ISegment? data, bool useJavaScriptCase)
-    {
-        if (data == null) return null;
-
-        var settings = JsonSerializationUtility
-            .GetConventionalResolver<ISegment>(useJavaScriptCase)
-            .ToJsonSerializerSettings();
-
-        //TODO: consider making these optional:
-        settings.MissingMemberHandling = MissingMemberHandling.Ignore;
-        settings.NullValueHandling = NullValueHandling.Ignore;
-
-        var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
-
-        return jO;
-    }
-
-    /// <summary>
     /// Converts the <see cref="ISegment"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The data.</param>
@@ -200,35 +173,6 @@ public static class SegmentExtensions
                 .Select(s => s.ToPublicationIndexEntry())
                 .ToArray(),
         };
-    }
-
-    /// <summary>
-    /// Converts the <see cref="ISegment" /> to <see cref="JObject" />
-    /// in the shape of a Publications Index Entry.
-    /// </summary>
-    /// <param name="data">The data.</param>
-    /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    public static JObject ToPublicationIndexEntryJObject(this ISegment? data, bool useJavaScriptCase)
-    {
-        var jSegment = data.ToJObject(useJavaScriptCase).ToReferenceTypeValueOrThrow();
-
-        if (data is not Segment segment) return jSegment;
-
-        if (segment.Segments.Any())
-        {
-            var jSegmentArray = new JArray(segment.Segments.Select(i => i.ToPublicationIndexEntryJObject(useJavaScriptCase)));
-
-            jSegment[nameof(Segment.Segments).ToLowerInvariant()] = jSegmentArray;
-        }
-
-        if (!segment.Documents.Any()) return jSegment;
-        {
-            var jDocumentArray = new JArray(segment.Documents.Select(i => i.ToJObject(useJavaScriptCase)));
-
-            jSegment[nameof(Segment.Documents).ToLowerInvariant()] = jDocumentArray;
-        }
-
-        return jSegment;
     }
 
     /// <summary>

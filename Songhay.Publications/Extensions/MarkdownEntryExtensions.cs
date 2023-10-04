@@ -1,6 +1,6 @@
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Songhay.Publications.Extensions;
 
@@ -21,7 +21,7 @@ public static class MarkdownEntryExtensions
     /// </summary>
     /// <param name="entry">The <see cref="MarkdownEntry" /> entry.</param>
     public static MarkdownEntry DoNullCheck(this MarkdownEntry? entry) =>
-        entry.DoNullCheckForFrontMatter().DoNullCheckForContent();
+        entry.ToReferenceTypeValueOrThrow().DoNullCheckForContent();
 
     /// <summary>
     /// Effectively validates <see cref="MarkdownEntry.Content" />.
@@ -33,19 +33,6 @@ public static class MarkdownEntryExtensions
 
         return string.IsNullOrWhiteSpace(entry.Content)
             ? throw new NullReferenceException($"The expected {nameof(MarkdownEntry.Content)} is not here.")
-            : entry;
-    }
-
-    /// <summary>
-    /// Effectively validates <see cref="MarkdownEntry.FrontMatter" />.
-    /// </summary>
-    /// <param name="entry">The <see cref="MarkdownEntry" /> entry.</param>
-    public static MarkdownEntry DoNullCheckForFrontMatter(this MarkdownEntry? entry)
-    {
-        ArgumentNullException.ThrowIfNull(entry);
-
-        return entry.FrontMatter == null
-            ? throw new NullReferenceException($"The expected {nameof(MarkdownEntry.FrontMatter)} is not here.")
             : entry;
     }
 
@@ -80,7 +67,7 @@ public static class MarkdownEntryExtensions
         var finalEdit = string.Concat(
             "---json",
             MarkdownEntry.NewLine,
-            entry?.FrontMatter?.ToString().Trim(),
+            entry?.FrontMatter.ToString().Trim(),
             MarkdownEntry.NewLine,
             "---",
             MarkdownEntry.NewLine,
@@ -121,12 +108,17 @@ public static class MarkdownEntryExtensions
             .Skip(1)
             .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-        JObject frontMatter = JObject.FromObject(new { error = "front matter was not found", file = entry.FullName });
+        var frontMatter =
+            new {error = "front matter was not found", file = entry.FullName}
+                .ToJsonNode()
+                .ToReferenceTypeValueOrThrow()
+                .AsObject();
+
         try
         {
-            frontMatter = JObject.Parse(json);
+            frontMatter = JsonNode.Parse(json).ToReferenceTypeValueOrThrow().AsObject();
         }
-        catch (JsonReaderException ex)
+        catch (JsonException ex)
         {
             TraceSource?.TraceError(ex);
         }
@@ -166,14 +158,11 @@ public static class MarkdownEntryExtensions
     {
         return entry.WithEdit(i =>
         {
-            i.DoNullCheckForFrontMatter();
+            i.ToReferenceTypeValueOrThrow();
 
             const string propertyName = "modificationDate";
 
-            if (!i.FrontMatter.HasProperty(propertyName))
-                throw new FormatException($"The expected date property, `{propertyName}`, is not here.");
-
-            i.FrontMatter![propertyName] = ProgramTypeUtility.ConvertDateTimeToUtc(date);
+            i.FrontMatter[propertyName] = ProgramTypeUtility.ConvertDateTimeToUtc(date);
         });
     }
 
@@ -192,12 +181,12 @@ public static class MarkdownEntryExtensions
                 const string extractPropertyName = "extract";
 
                 var jO = tag.TrimStart().StartsWith("{") ?
-                    JObject.Parse(tag) :
-                    JObject.FromObject(new { legacy = tag });
+                    JsonNode.Parse(tag) :
+                    new { legacy = tag }.ToJsonNode();
 
                 if (!jO.HasProperty(extractPropertyName))
                 {
-                    jO.Add(extractPropertyName, null);
+                    jO?.AsObject().Add(extractPropertyName, null);
                 }
 
                 jO[extractPropertyName] = e;
@@ -205,13 +194,13 @@ public static class MarkdownEntryExtensions
             }
 
             const string tagPropertyName = "tag";
-            var tagString = i.FrontMatter
-                .GetValue<string>(tagPropertyName, throwException: false);
+            var tagString = i.FrontMatter[tagPropertyName].ToReferenceTypeValueOrThrow()
+                .GetValue<string>();
 
             var extract = i.ToExtract(length);
 
-            i.DoNullCheckForFrontMatter().FrontMatter![tagPropertyName] = string.IsNullOrWhiteSpace(tagString) ?
-                    JObject.FromObject(new { extract }).ToString()
+            i.ToReferenceTypeValueOrThrow().FrontMatter[tagPropertyName] = string.IsNullOrWhiteSpace(tagString) ?
+                    new { extract }.ToJsonNode()?.ToString()
                     :
                     UpdateExtractAndReturnTag(tagString, extract)
                 ;
@@ -234,18 +223,18 @@ public static class MarkdownEntryExtensions
     /// <param name="headerLevel">The header level.</param>
     public static MarkdownEntry WithContentHeader(this MarkdownEntry? entry, int headerLevel)
     {
-        entry.DoNullCheckForFrontMatter();
+        entry.ToReferenceTypeValueOrThrow();
 
         const string propertyName = "title";
 
-        if (!entry!.FrontMatter.HasProperty(propertyName))
+        if (!entry.FrontMatter.HasProperty(propertyName))
             throw new FormatException($"The expected date property, `{propertyName}`, is not here.");
 
         headerLevel = headerLevel == 0 ? 1 : Math.Abs(headerLevel);
         var markdownHeader = new string(Enumerable.Repeat('#', headerLevel > 6 ? 6 : headerLevel).ToArray());
 
         return entry.WithEdit(i =>
-            i.Content = $"{markdownHeader} {i.FrontMatter![propertyName]}{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}");
+            i.Content = $"{markdownHeader} {i.FrontMatter[propertyName]}{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}");
     }
 
     /// <summary>
@@ -274,9 +263,9 @@ public static class MarkdownEntryExtensions
             .ToReferenceTypeValueOrThrow()
             .WithNewFrontMatter(title, inceptDate,
                 documentId: 0, fileName: "index.html", path: path, segmentId: 0, tag: tag)
-            .WithEdit(i => i.FrontMatter!["clientId"] = $"{inceptDate:yyyy-MM-dd}-{i.FrontMatter["clientId"]}")
-            .WithEdit(i => i.FrontMatter!["documentShortName"] = i.FrontMatter["clientId"])
-            .WithEdit(i => i.FrontMatter!["path"] = $"{i.FrontMatter["path"]}{i.FrontMatter["clientId"]}");
+            .WithEdit(i => i.FrontMatter["clientId"] = $"{inceptDate:yyyy-MM-dd}-{i.FrontMatter["clientId"]}")
+            .WithEdit(i => i.FrontMatter["documentShortName"] = i.FrontMatter["clientId"])
+            .WithEdit(i => i.FrontMatter["path"] = $"{i.FrontMatter["path"]}{i.FrontMatter["clientId"]}");
 
     /// <summary>
     /// Returns the <see cref="MarkdownEntry" /> with conventional frontmatter.
@@ -314,7 +303,7 @@ public static class MarkdownEntryExtensions
             tag
         };
 
-        entry.FrontMatter = JObject.FromObject(fm);
+        entry.FrontMatter = fm.ToJsonNode().ToReferenceTypeValueOrThrow().AsObject();
 
         return entry;
     }

@@ -434,13 +434,6 @@
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToJObject(Songhay.Publications.Abstractions.IDocument,System.Boolean)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Abstractions.IDocument" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
-            </summary>
-            <param name="data">The data.</param>
-            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Abstractions.IDocument"/> into a menu display item model.
@@ -511,13 +504,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToJObject(Songhay.Publications.Abstractions.IFragment,System.Boolean)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Abstractions.IFragment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
-            </summary>
-            <param name="data">The data.</param>
-            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)">
             <summary>
@@ -638,13 +624,6 @@
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToJObject(Songhay.Publications.Abstractions.ISegment,System.Boolean)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Abstractions.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />.
-            </summary>
-            <param name="data">The data.</param>
-            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Abstractions.ISegment"/> into a menu display item model.
@@ -670,14 +649,6 @@
             </summary>
             <param name="data">The data.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntryJObject(Songhay.Publications.Abstractions.ISegment,System.Boolean)">
-            <summary>
-            Converts the <see cref="T:Songhay.Publications.Abstractions.ISegment" /> to <see cref="T:Newtonsoft.Json.Linq.JObject" />
-            in the shape of a Publications Index Entry.
-            </summary>
-            <param name="data">The data.</param>
-            <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-        </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Abstractions.IDocument"/> data to <see cref="T:FluentValidation.Results.ValidationResult"/>.
@@ -697,68 +668,6 @@
             </summary>
             <param name="data">The data.</param>
             <param name="editAction">The edit action.</param>
-        </member>
-        <member name="T:Songhay.Publications.Extensions.JObjectExtensions">
-            <summary>
-            Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>.
-            </summary>
-            <summary>
-            Extensions of <see cref="T:Newtonsoft.Json.Linq.JObject"/>
-            </summary>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetAddEntryExtractArg(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetCompressed11TyIndexArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject" />.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetExpandUrisArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetFindChangeArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetGenerateEntryArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetPublishEntryArgs(Newtonsoft.Json.Linq.JObject,System.IO.DirectoryInfo)">
-            <summary>
-            Gets the arguments for Activity method.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-            <param name="presentationInfo">The presentation information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.GetPublicationCommand(Newtonsoft.Json.Linq.JObject)">
-            <summary>
-            Gets the publication command.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JObjectExtensions.ToPresentation(Newtonsoft.Json.Linq.JObject)">
-            <summary>
-            Converts the <see cref="T:Newtonsoft.Json.Linq.JObject"/> to presentation <see cref="T:Songhay.Publications.Models.Segment"/>.
-            </summary>
-            <param name="jObject">The <see cref="T:Newtonsoft.Json.Linq.JObject"/>.</param>
         </member>
         <member name="T:Songhay.Publications.Extensions.JsonElementExtensions">
             <summary>
@@ -816,6 +725,27 @@
             </summary>
             <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.JsonNodeExtensions">
+            <summary>
+            Extensions of <see cref="T:System.Text.Json.Nodes.JsonNode"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.HasProperty(System.Text.Json.Nodes.JsonNode,System.String)">
+            <summary>
+            Returns <c>false</c> when the specified property name does not exist.
+            </summary>
+            <param name="node">the <see cref="T:System.Text.Json.Nodes.JsonNode"/></param>
+            <param name="propertyName">the property name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)">
+            <summary>
+            Converts the specified <see cref="T:System.Object"/>
+            to a <see cref="T:System.Text.Json.Nodes.JsonNode"/>.
+            </summary>
+            <param name="data">any <see cref="T:System.Object"/></param>
+            <returns></returns>
+        </member>
         <member name="T:Songhay.Publications.Extensions.MarkdownEntryExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.Models.MarkdownEntry" />.
@@ -830,12 +760,6 @@
         <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)">
             <summary>
             Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content" />.
-            </summary>
-            <param name="entry">The <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForFrontMatter(Songhay.Publications.Models.MarkdownEntry)">
-            <summary>
-            Effectively validates <see cref="P:Songhay.Publications.Models.MarkdownEntry.FrontMatter" />.
             </summary>
             <param name="entry">The <see cref="T:Songhay.Publications.Models.MarkdownEntry" /> entry.</param>
         </member>

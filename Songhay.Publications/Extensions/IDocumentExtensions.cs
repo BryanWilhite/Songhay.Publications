@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
-
-namespace Songhay.Publications.Extensions;
+﻿namespace Songhay.Publications.Extensions;
 
 /// <summary>
 /// Extensions of <see cref="IDocument"/>
@@ -151,28 +147,6 @@ public static class IDocumentExtensions
             builder.Append($"{delimiter}{nameof(data.DocumentShortName)}: {data.DocumentShortName}");
 
         return builder.ToString();
-    }
-
-    /// <summary>
-    /// Converts the <see cref="IDocument" /> to <see cref="JObject" />.
-    /// </summary>
-    /// <param name="data">The data.</param>
-    /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    public static JObject? ToJObject(this IDocument? data, bool useJavaScriptCase)
-    {
-        if (data == null) return null;
-
-        var settings = JsonSerializationUtility
-            .GetConventionalResolver<IDocument>(useJavaScriptCase)
-            .ToJsonSerializerSettings();
-
-        //TODO: consider making these optional:
-        settings.MissingMemberHandling = MissingMemberHandling.Ignore;
-        settings.NullValueHandling = NullValueHandling.Ignore;
-
-        var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
-
-        return jO;
     }
 
     /// <summary>

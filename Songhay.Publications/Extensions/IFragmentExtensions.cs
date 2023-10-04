@@ -1,8 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
-
-namespace Songhay.Publications.Extensions;
+﻿namespace Songhay.Publications.Extensions;
 
 /// <summary>
 /// Extensions of <see cref="IFragment"/>
@@ -117,28 +113,6 @@ public static class FragmentExtensions
             builder.Append($"{delimiter}{nameof(data.IsWrapper)}: {data.IsWrapper}");
 
         return builder.ToString();
-    }
-
-    /// <summary>
-    /// Converts the <see cref="IFragment" /> to <see cref="JObject" />.
-    /// </summary>
-    /// <param name="data">The data.</param>
-    /// <param name="useJavaScriptCase">when <c>true</c> use “camel” casing.</param>
-    public static JObject? ToJObject(this IFragment? data, bool useJavaScriptCase)
-    {
-        if (data == null) return null;
-
-        var settings = JsonSerializationUtility
-            .GetConventionalResolver<IFragment>(useJavaScriptCase)
-            .ToJsonSerializerSettings();
-
-        //TODO: consider making these optional:
-        settings.MissingMemberHandling = MissingMemberHandling.Ignore;
-        settings.NullValueHandling = NullValueHandling.Ignore;
-
-        var jO = JObject.FromObject(data, JsonSerializer.Create(settings));
-
-        return jO;
     }
 
     /// <summary>

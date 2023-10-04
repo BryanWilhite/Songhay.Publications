@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
 using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
@@ -8,9 +8,9 @@ using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
-public class JObjectExtensionsTests
+public class JsonElementExtensionsTests
 {
-    public JObjectExtensionsTests(ITestOutputHelper helper)
+    public JsonElementExtensionsTests(ITestOutputHelper helper)
     {
         _testOutputHelper = helper;
     }
@@ -32,7 +32,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         var entryPath = jO.GetAddEntryExtractArg(presentationInfo);
         Assert.True(File.Exists(entryPath));
@@ -58,7 +58,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
         var (entryRootInfo, indexRootInfo, indexFileName) = jO.GetCompressed11TyIndexArgs(presentationInfo);
 
         Assert.True(entryRootInfo.Exists);
@@ -88,7 +88,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         var (entryPath, collapsedHost) = jO.GetExpandUrisArgs(presentationInfo);
         Assert.True(File.Exists(entryPath));
@@ -115,7 +115,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
         var (input, pattern, replacement, useRegex, outputPath) = jO.GetFindChangeArgs(presentationInfo);
 
         Assert.False(string.IsNullOrEmpty(input));
@@ -124,7 +124,7 @@ public class JObjectExtensionsTests
         Assert.True(useRegex);
         Assert.False(string.IsNullOrEmpty(outputPath));
 
-        var inputPath = jO.GetValue<string>("inputPath");
+        var inputPath = jO.GetProperty("inputPath").GetString();
 
         _testOutputHelper.WriteLine($"{nameof(inputPath)}: {inputPath}");
         _testOutputHelper.WriteLine($"{nameof(input)}: {input.Substring(0, 16)}...");
@@ -151,7 +151,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         var (entryDraftsRootInfo, title) = jO.GetGenerateEntryArgs(presentationInfo);
         Assert.True(entryDraftsRootInfo.Exists);
@@ -178,7 +178,7 @@ public class JObjectExtensionsTests
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         var (entryDraftsRootInfo, entryRootInfo, entryFileName) =
             jO.GetPublishEntryArgs(presentationInfo);

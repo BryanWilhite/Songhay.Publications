@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+using System.Text.Json.Nodes;
 
 namespace Songhay.Publications.Models;
 
@@ -20,7 +20,7 @@ public class MarkdownEntry
     /// <summary>
     /// JSON front matter.
     /// </summary>
-    public JObject? FrontMatter { get; set; }
+    public JsonObject FrontMatter { get; set; } = new();
 
     /// <summary>
     /// Text content.

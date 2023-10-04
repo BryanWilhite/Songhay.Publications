@@ -1,5 +1,5 @@
-﻿using System.Text.RegularExpressions;
-using Newtonsoft.Json.Linq;
+﻿using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace Songhay.Publications.Activities;
 
@@ -33,7 +33,7 @@ public class MarkdownEntryActivity : IActivity
 
         File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
-        var clientId = entry.FrontMatter.GetValue<string>("clientId");
+        var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
         TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
     }
 
@@ -148,7 +148,7 @@ public class MarkdownEntryActivity : IActivity
             throw new NullReferenceException($"The expected {nameof(entry)} is not here.");
         }
 
-        var clientId = entry.FrontMatter.GetValue<string>("clientId");
+        var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
         TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
     }
 
@@ -233,16 +233,16 @@ public class MarkdownEntryActivity : IActivity
         PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
     }
 
-    internal (DirectoryInfo presentationInfo, JObject jSettings) GetContext(ProgramArgs? args)
+    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext(ProgramArgs? args)
     {
         var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
 
         TraceSource?.TraceVerbose($"applying settings...");
-        var jSettings = JObject.Parse(File.ReadAllText(settingsInfo.FullName));
+        var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         return (presentationInfo, jSettings);
     }
 
     DirectoryInfo? _presentationInfo;
-    JObject? _jSettings;
+    JsonElement _jSettings;
 }

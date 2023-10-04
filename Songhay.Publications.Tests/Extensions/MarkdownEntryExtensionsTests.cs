@@ -1,8 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Text.Json.Nodes;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 using Songhay.Tests;
-using Songhay.Extensions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -78,7 +77,7 @@ public class MarkdownEntryExtensionsTests
 
         // assert
         Assert.NotNull(jFrontMatter);
-        Assert.Equal(clientId, jFrontMatter.GetValue<string>("clientId"));
+        Assert.Equal(clientId, jFrontMatter["clientId"]?.GetValue<string>());
     }
 
     [Theory]
@@ -130,10 +129,10 @@ public class MarkdownEntryExtensionsTests
             .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
             .WithContentHeader()
             .WithEdit(i => i.Content = string.Concat(i.Content, content)).With11TyExtract(length);
-        var jO = JObject.Parse(entry.FrontMatter.GetValue<string>("tag"));
+        var jO = JsonNode.Parse(entry.FrontMatter["tag"].GetValue<string>());
         Assert.NotNull(jO);
 
-        var extract = jO.GetValue<string>("extract");
+        var extract = jO["extract"].GetValue<string>();
 
         _testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
         _testOutputHelper.WriteLine($"{entry.FrontMatter}");
@@ -153,10 +152,10 @@ public class MarkdownEntryExtensionsTests
         var entry = entryInfo.ToMarkdownEntry()
             .With11TyExtract(expectedLength);
 
-        var jO = JObject.Parse(entry.FrontMatter.GetValue<string>("tag"));
+        var jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>());
         Assert.NotNull(jO);
 
-        var extract = jO.GetValue<string>("extract");
+        var extract = jO["extract"]?.GetValue<string>();
 
         Assert.False(string.IsNullOrWhiteSpace(extract));
         Assert.Equal(expectedLength + 1, extract.Length);
@@ -177,7 +176,7 @@ public class MarkdownEntryExtensionsTests
         entry.Touch(DateTime.Now);
 
         //assert
-        Assert.True(entry.FrontMatter.GetValue<DateTime>("modificationDate") > inceptDate);
+        Assert.True(entry.FrontMatter["modificationDate"]?.GetValue<DateTime>() > inceptDate);
     }
 
     readonly ITestOutputHelper _testOutputHelper;
