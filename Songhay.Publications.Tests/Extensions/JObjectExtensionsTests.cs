@@ -3,8 +3,6 @@ using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
 using Songhay.Publications.Extensions;
-using Xunit;
-using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 

@@ -264,7 +264,7 @@ public static class MarkdownEntryExtensions
             .WithNewFrontMatter(title, inceptDate,
                 documentId: 0, fileName: "index.html", path: path, segmentId: 0, tag: tag)
             .WithEdit(i => i.FrontMatter["clientId"] = $"{inceptDate:yyyy-MM-dd}-{i.FrontMatter["clientId"]}")
-            .WithEdit(i => i.FrontMatter["documentShortName"] = i.FrontMatter["clientId"])
+            .WithEdit(i => i.FrontMatter["documentShortName"] = i.FrontMatter["clientId"]?.GetValue<string>())
             .WithEdit(i => i.FrontMatter["path"] = $"{i.FrontMatter["path"]}{i.FrontMatter["clientId"]}");
 
     /// <summary>
@@ -284,6 +284,7 @@ public static class MarkdownEntryExtensions
         ArgumentNullException.ThrowIfNull(entry);
 
         var slug = title.ToBlogSlug();
+        tag ??= string.Empty;
 
         var fm = new
         {

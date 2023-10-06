@@ -1,11 +1,8 @@
-using Newtonsoft.Json;
+using System.Text.Json;
 using Songhay.Extensions;
 using Songhay.Publications.Abstractions;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
-using Songhay.Tests;
-using Xunit;
-using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
@@ -171,8 +168,8 @@ public class ISegmentExtensionsTests
     {
         var json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonConvert
-            .DeserializeObject<IEnumerable<Segment>>(json)
+        var segments = JsonSerializer
+            .Deserialize<IEnumerable<Segment>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })
             .ToReferenceTypeValueOrThrow()
             .ToArray();
 
@@ -194,49 +191,20 @@ public class ISegmentExtensionsTests
     {
         var json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonConvert
-            .DeserializeObject<IEnumerable<Segment>>(json)
+        var segments = JsonSerializer
+            .Deserialize<IEnumerable<Segment>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })
             .ToReferenceTypeValueOrThrow()
             .ToArray();
 
         Assert.True(segments.Any());
 
         var segment = segments.First();
+        Assert.False(string.IsNullOrWhiteSpace(segment.SegmentName));
 
         _testOutputHelper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
 
         var entry = segment.ToPublicationIndexEntry();
         Assert.NotNull(entry);
-    }
-
-    [Theory]
-    [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
-    public void ToPublicationIndexEntryJObject_Test(FileInfo indexInfo)
-    {
-        var json = File.ReadAllText(indexInfo.FullName);
-
-        var segments = JsonConvert
-            .DeserializeObject<IEnumerable<Segment>>(json)
-            .ToReferenceTypeValueOrThrow()
-            .ToArray();
-
-        Assert.True(segments.Any());
-
-        var segment = segments.First();
-
-        _testOutputHelper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
-
-        // var jIndex = segment.ToPublicationIndexEntryJObject(useJavaScriptCase: true);
-        // Assert.NotNull(jIndex);
-        // _testOutputHelper.WriteLine($"{nameof(Segment)} `{segment.SegmentName}` parsed:");
-        // _testOutputHelper.WriteLine(jIndex.ToString());
-        //
-        // var jDocuments = jIndex.GetJArray(nameof(Segment.Documents).ToLowerInvariant(), throwException: false);
-        // Assert.Null(jDocuments);
-        //
-        // var jSegments = jIndex.GetJArray(nameof(Segment.Segments).ToLowerInvariant(), throwException: false);
-        // Assert.NotNull(jSegments);
-        // Assert.True(jSegments.Any());
     }
 
     readonly ITestOutputHelper _testOutputHelper;

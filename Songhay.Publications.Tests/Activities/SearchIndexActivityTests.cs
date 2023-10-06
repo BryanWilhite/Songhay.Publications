@@ -1,6 +1,4 @@
 ﻿using Songhay.Publications.Activities;
-using Songhay.Tests;
-using Xunit;
 
 namespace Songhay.Publications.Tests.Activities;
 

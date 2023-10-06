@@ -1,9 +1,6 @@
 ﻿using System.Text.Json.Nodes;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
-using Songhay.Tests;
-using Xunit;
-using Xunit.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
@@ -129,7 +126,7 @@ public class MarkdownEntryExtensionsTests
             .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
             .WithContentHeader()
             .WithEdit(i => i.Content = string.Concat(i.Content, content)).With11TyExtract(length);
-        var jO = JsonNode.Parse(entry.FrontMatter["tag"].GetValue<string>());
+        var jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>());
         Assert.NotNull(jO);
 
         var extract = jO["extract"].GetValue<string>();
