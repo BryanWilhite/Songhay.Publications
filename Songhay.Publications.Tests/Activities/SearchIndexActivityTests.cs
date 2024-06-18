@@ -1,13 +1,16 @@
-﻿using Songhay.Publications.Activities;
+﻿using System.Diagnostics;
+using Songhay.Publications.Activities;
 
 namespace Songhay.Publications.Tests.Activities;
 
 public class SearchIndexActivityTests
 {
-    [DebuggerAttachedTheory]
+    [SkippableTheory]
     [InlineData("../../../markdown/presentation/presentation-index.json")]
     public void CompressSearchIndex_Test(string indexFile)
     {
+        Skip.IfNot(Debugger.IsAttached);
+
         indexFile = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, indexFile);
 
         var indexFileInfo = new FileInfo(indexFile);
@@ -17,10 +20,12 @@ public class SearchIndexActivityTests
         Assert.True(compressedIndexFileInfo.Exists);
     }
 
-    [DebuggerAttachedTheory]
+    [SkippableTheory]
     [InlineData("../../../markdown/presentation/entry", "../../../markdown/presentation", "presentation-index.json")]
     public void GenerateSearchIndexFrom11tyEntries_Test(string entryRoot, string indexRoot, string indexFileName)
     {
+        Skip.IfNot(Debugger.IsAttached);
+
         entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, entryRoot);
         indexRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, indexRoot);
 

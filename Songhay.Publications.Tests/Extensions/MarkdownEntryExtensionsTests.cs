@@ -173,7 +173,11 @@ public class MarkdownEntryExtensionsTests
         entry.Touch(DateTime.Now);
 
         //assert
-        Assert.True(entry.FrontMatter["modificationDate"]?.GetValue<DateTime>() > inceptDate);
+        var otherDoc = JsonNode.Parse("{ \"entry\": {\"modificationDate\": \"2019-11-22T05:58:34.573Z\" } }");
+        var node = entry.FrontMatter["modificationDate"];
+        var otherNode = otherDoc["entry"]["modificationDate"];
+        var v = otherNode.GetValue<DateTime>();
+        Assert.True(node?.GetValue<DateTime>() > inceptDate);
     }
 
     readonly ITestOutputHelper _testOutputHelper;
