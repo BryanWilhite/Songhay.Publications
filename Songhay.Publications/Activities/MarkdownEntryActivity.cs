@@ -1,5 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.RegularExpressions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications.Activities;
 
@@ -7,20 +9,77 @@ namespace Songhay.Publications.Activities;
 /// <see cref="IActivity"/> implementation for <see cref="MarkdownEntry"/>.
 /// </summary>
 /// <seealso cref="IActivity" />
-public class MarkdownEntryActivity : IActivity
+public class MarkdownEntryActivity : IActivityWithTask
 {
-    static MarkdownEntryActivity() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MarkdownEntryActivity"/> class.
+    /// </summary>
+    /// <param name="configuration">the <see cref="IConfiguration"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public MarkdownEntryActivity(IConfiguration configuration, ILogger<MarkdownEntryActivity> logger)
+    {
+        _configuration = configuration;
+        _logger = logger;
+    }
 
     /// <summary>
-    /// Wrapper for <see cref="MarkdownEntryExtensions.With11TyExtract"/>.
+    /// Displays the help.
     /// </summary>
-    /// <param name="entryPath">The entry path.</param>
-    public static void AddEntryExtract(string? entryPath)
+    /// <param name="args">The arguments.</param>
+    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
+
+    /// <summary>
+    /// Starts the <see cref="IActivity"/>.
+    /// </summary>
+    /// <param name="args">The arguments.</param>
+    public void Start(ProgramArgs? args) => throw new NotImplementedException();
+
+    /// <summary>
+    /// Starts the <see cref="IActivity"/>.
+    /// </summary>
+    public async Task StartAsync()
+    {
+        await Task.Run(() =>
+        {
+            _logger.LogInformation($"starting {nameof(MarkdownEntryActivity)}...");
+
+            (_presentationInfo, _jSettings) = GetContext();
+
+            var command = _jSettings.GetPublicationCommand();
+            _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+
+            if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameGenerateEntry)) GenerateEntry();
+            else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
+            else
+            {
+                _logger.LogWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+            }
+        });
+    }
+
+    internal static string FindChange(string? input, string? pattern, string? replacement, bool useRegex)
+    {
+        input.ThrowWhenNullOrWhiteSpace();
+        pattern.ThrowWhenNullOrWhiteSpace();
+        
+        if (string.IsNullOrWhiteSpace(replacement)) replacement = string.Empty;
+
+        return useRegex ?
+            Regex.Replace(input, pattern, replacement, RegexOptions.IgnoreCase | RegexOptions.Multiline)
+            :
+            input.Replace(pattern, replacement);
+    }
+
+    internal void AddEntryExtract()
+    {
+        var entryPath = _jSettings.GetAddEntryExtractArg(_presentationInfo);
+
+        AddEntryExtract(entryPath);
+    }
+
+    internal void AddEntryExtract(string? entryPath)
     {
         if (!File.Exists(entryPath))
             throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
@@ -34,23 +93,24 @@ public class MarkdownEntryActivity : IActivity
         File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
         var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
+        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
     }
 
-    /// <summary>
-    /// Expands the URIs of the specified host
-    /// with <see cref="UriExtensions.ToExpandedUriPairAsync(Uri)"/>.
-    /// </summary>
-    /// <param name="entryPath">The entry path.</param>
-    /// <param name="collapsedHost">The collapsed host.</param>
-    public static async Task ExpandUrisAsync(string? entryPath, string? collapsedHost)
+    internal void ExpandUris()
+    {
+        var (entryPath, collapsedHost) = _jSettings.GetExpandUrisArgs(_presentationInfo);
+
+        ExpandUrisAsync(entryPath, collapsedHost).GetAwaiter().GetResult();
+    }
+
+    internal async Task ExpandUrisAsync(string? entryPath, string? collapsedHost)
     {
         if (!File.Exists(entryPath))
             throw new FileNotFoundException($"The expected file, `{entryPath},` is not here.");
 
         var entryInfo = new FileInfo(entryPath);
 
-        TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
+        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
 
         var entry = entryInfo.ToMarkdownEntry();
         var matches =
@@ -67,7 +127,7 @@ public class MarkdownEntryActivity : IActivity
             {
                 var message = $"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...";
 
-                TraceSource?.TraceVerbose(message);
+                _logger.LogInformation(message);
 
                 var pair = await expandableUri.ToExpandedUriPairAsync();
                 if (pair.Key is not null && pair.Value is not null)
@@ -77,12 +137,12 @@ public class MarkdownEntryActivity : IActivity
                     var successMessage =
                         $"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.";
 
-                    TraceSource?.TraceVerbose(successMessage);
+                    _logger.LogInformation(successMessage);
                 }
             }
             catch (Exception ex)
             {
-                TraceSource?.TraceError(ex);
+                _logger.LogError("{Message}{NewLine}{StackTrace}", ex.Message, Environment.NewLine, ex.StackTrace);
             }
 
             return nullable;
@@ -109,111 +169,9 @@ public class MarkdownEntryActivity : IActivity
                 pair.Value.OriginalString
             );
 
-        TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
+        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
 
         await File.WriteAllTextAsync(entryInfo.FullName, entry.ToFinalEdit());
-    }
-
-    /// <summary>
-    /// Finds the specified pattern in the input.
-    /// </summary>
-    /// <param name="input">The input.</param>
-    /// <param name="pattern">The pattern.</param>
-    /// <param name="replacement">The replacement.</param>
-    /// <param name="useRegex">if set to <c>true</c> [use regex].</param>
-    public static string FindChange(string? input, string? pattern, string? replacement, bool useRegex)
-    {
-        input.ThrowWhenNullOrWhiteSpace();
-        pattern.ThrowWhenNullOrWhiteSpace();
-        
-        if (string.IsNullOrWhiteSpace(replacement)) replacement = string.Empty;
-
-        return useRegex ?
-            Regex.Replace(input, pattern, replacement, RegexOptions.IgnoreCase | RegexOptions.Multiline)
-            :
-            input.Replace(pattern, replacement);
-    }
-
-    /// <summary>
-    /// Generates the <see cref="MarkdownEntry"/>
-    /// at the conventional drafts root.
-    /// </summary>
-    /// <param name="entryDraftsRootInfo">The entry drafts root information.</param>
-    /// <param name="title">The title.</param>
-    public static void GenerateEntry(DirectoryInfo entryDraftsRootInfo, string title)
-    {
-        var entry = MarkdownEntryUtility.GenerateEntryFor11Ty(entryDraftsRootInfo.FullName, title);
-
-        if (entry == null)
-        {
-            throw new NullReferenceException($"The expected {nameof(entry)} is not here.");
-        }
-
-        var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
-    }
-
-    /// <summary>
-    /// Wrapper for <see cref="MarkdownEntryUtility.PublishEntryFor11Ty(string, string, string)"/>.
-    /// </summary>
-    /// <param name="entryDraftsRootInfo">The entry drafts root information.</param>
-    /// <param name="entryRootInfo">The entry root information.</param>
-    /// <param name="entryFileName">Name of the entry file.</param>
-    public static void PublishEntry(DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName)
-    {
-        var path = MarkdownEntryUtility.PublishEntryFor11Ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
-
-        TraceSource?.WriteLine($"{nameof(MarkdownEntryActivity)}: Published entry: {path}");
-    }
-
-    /// <summary>
-    /// Displays the help.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
-
-    /// <summary>
-    /// Starts the <see cref="IActivity"/>.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs? args)
-    {
-        TraceSource?.WriteLine($"starting {nameof(MarkdownEntryActivity)} with {nameof(ProgramArgs)}: {args} ");
-
-        (_presentationInfo, _jSettings) = GetContext(args);
-
-        var command = _jSettings.GetPublicationCommand();
-        TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
-
-        if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
-        else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
-        else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameGenerateEntry)) GenerateEntry();
-        else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
-        else
-        {
-            TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
-        }
-    }
-
-    internal void AddEntryExtract()
-    {
-        var entryPath = _jSettings.GetAddEntryExtractArg(_presentationInfo);
-        AddEntryExtract(entryPath);
-    }
-
-    internal void ExpandUris()
-    {
-        var (entryPath, collapsedHost) = _jSettings.GetExpandUrisArgs(_presentationInfo);
-
-        ExpandUrisAsync(entryPath, collapsedHost).GetAwaiter().GetResult();
-    }
-
-    internal void FindChange()
-    {
-        var (input, pattern, replacement, useRegex, outputPath) = _jSettings.GetFindChangeArgs(_presentationInfo);
-        var output = FindChange(input, pattern, replacement, useRegex);
-        File.Create(outputPath);
-        File.WriteAllText(outputPath, output);
     }
 
     internal void GenerateEntry()
@@ -223,24 +181,46 @@ public class MarkdownEntryActivity : IActivity
         GenerateEntry(entryDraftsRootInfo, title);
     }
 
-    internal void PublishEntry()
+    internal void GenerateEntry(DirectoryInfo entryDraftsRootInfo, string title)
     {
-        var (entryDraftsRootInfo, entryRootInfo, entryFileName) =
-            _jSettings.GetPublishEntryArgs(_presentationInfo);
+        var entry = MarkdownEntryUtility.GenerateEntryFor11Ty(entryDraftsRootInfo.FullName, title);
 
-        PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
+        if (entry == null)
+        {
+            throw new NullReferenceException($"The expected {nameof(entry)} is not here.");
+        }
+
+        var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
+        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
     }
 
-    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext(ProgramArgs? args)
+    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext()
     {
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        var (presentationInfo, settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
 
-        TraceSource?.TraceVerbose($"applying settings...");
+        _logger.LogInformation($"applying settings...");
         var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         return (presentationInfo, jSettings);
     }
 
+    internal void PublishEntry()
+    {
+        var (entryDraftsRootInfo, entryRootInfo, entryFileName) = _jSettings.GetPublishEntryArgs(_presentationInfo);
+
+        PublishEntry(entryDraftsRootInfo, entryRootInfo, entryFileName);
+    }
+
+    internal void PublishEntry(DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName)
+    {
+        var path = MarkdownEntryUtility.PublishEntryFor11Ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
+
+        _logger.LogInformation("{Name}: Published entry: `{Path}`", nameof(MarkdownEntryActivity), path);
+    }
+
     DirectoryInfo? _presentationInfo;
     JsonElement _jSettings;
+
+    readonly IConfiguration _configuration;
+    readonly ILogger<MarkdownEntryActivity> _logger;
 }

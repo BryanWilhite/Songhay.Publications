@@ -162,7 +162,7 @@ public static class MarkdownEntryExtensions
 
             const string propertyName = "modificationDate";
 
-            i.FrontMatter[propertyName] = ProgramTypeUtility.ConvertDateTimeToUtc(date);
+            i.FrontMatter[propertyName] = date.ToIso8601String();
         });
     }
 
@@ -176,7 +176,7 @@ public static class MarkdownEntryExtensions
     public static MarkdownEntry With11TyExtract(this MarkdownEntry? entry, int length) =>
         entry.WithEdit(i =>
         {
-            string UpdateExtractAndReturnTag(string tag, string e)
+            string? UpdateExtractAndReturnTag(string tag, string e)
             {
                 const string extractPropertyName = "extract";
 
@@ -189,8 +189,9 @@ public static class MarkdownEntryExtensions
                     jO?.AsObject().Add(extractPropertyName, null);
                 }
 
-                jO[extractPropertyName] = e;
-                return jO.ToString();
+                if(jO != null) jO[extractPropertyName] = e;
+
+                return jO?.ToString();
             }
 
             const string tagPropertyName = "tag";
@@ -293,8 +294,8 @@ public static class MarkdownEntryExtensions
             documentShortName = slug,
             fileName,
             path,
-            date = ProgramTypeUtility.ConvertDateTimeToUtc(inceptDate),
-            modificationDate = ProgramTypeUtility.ConvertDateTimeToUtc(inceptDate),
+            date = inceptDate.ToIso8601String(),
+            modificationDate = inceptDate.ToIso8601String(),
             templateId = 0,
             segmentId,
             isRoot = false,

@@ -1,6 +1,8 @@
 ﻿using System.IO.Compression;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications.Activities;
 
@@ -9,20 +11,52 @@ namespace Songhay.Publications.Activities;
 /// </summary>
 /// <seealso cref="IActivity" />
 /// <seealso cref="IActivityConfigurationSupport" />
-public class SearchIndexActivity : IActivity
+public class SearchIndexActivity : IActivityWithTask
 {
-    static SearchIndexActivity() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MarkdownEntryActivity"/> class.
+    /// </summary>
+    /// <param name="configuration">the <see cref="IConfiguration"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public SearchIndexActivity(IConfiguration configuration, ILogger<SearchIndexActivity> logger)
+    {
+        _configuration = configuration;
+        _logger = logger;
+    }
 
     /// <summary>
-    /// Compresses the Publications Search Index.
+    /// Displays the help.
     /// </summary>
-    /// <param name="indexInfo">The index information.</param>
-    public static FileInfo CompressSearchIndex(FileInfo indexInfo)
+    /// <param name="args">The arguments.</param>
+    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
+
+    /// <summary>Starts with the specified arguments.</summary>
+    /// <param name="args">The arguments.</param>
+    public void Start(ProgramArgs? args) => throw new NotImplementedException();
+
+    /// <summary>
+    /// Starts the <see cref="IActivity"/>.
+    /// </summary>
+    public async Task StartAsync()
+    {
+        await Task.Run(() =>
+        {
+            _logger.LogInformation($"Starting {nameof(SearchIndexActivity)}...");
+
+            (_presentationInfo, _jSettings) = GetContext();
+
+            var command = _jSettings.GetPublicationCommand();
+            _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+
+            if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
+            else
+            {
+                _logger.LogWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+            }
+        });
+    }
+
+    internal static FileInfo CompressSearchIndex(FileInfo indexInfo)
     {
         if (indexInfo == null) throw new ArgumentNullException(nameof(indexInfo));
 
@@ -36,24 +70,11 @@ public class SearchIndexActivity : IActivity
         return compressedIndexInfo;
     }
 
-    /// <summary>
-    /// Generates the Publications Search Index from 11ty entries.
-    /// </summary>
-    /// <param name="entryRootInfo">The entry root information.</param>
-    /// <param name="indexRootInfo">The index root information.</param>
-    /// <param name="indexFileName">Name of the index file.</param>
-    public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo,
+    internal static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo,
         DirectoryInfo indexRootInfo, string indexFileName) =>
         GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName, partitionSize: 1000);
 
-    /// <summary>
-    /// Generates the Publications Search Index from 11ty entries.
-    /// </summary>
-    /// <param name="entryRootInfo">The entry root information.</param>
-    /// <param name="indexRootInfo">The index root information.</param>
-    /// <param name="indexFileName">Name of the index file.</param>
-    /// <param name="partitionSize">Size of the partition.</param>
-    public static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
+    internal static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
     {
         if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
         if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
@@ -89,33 +110,6 @@ public class SearchIndexActivity : IActivity
         return indices.ToArray();
     }
 
-    /// <summary>
-    /// Displays the help.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs? args)
-    {
-        throw new NotImplementedException();
-    }
-
-    /// <summary>Starts with the specified arguments.</summary>
-    /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs? args)
-    {
-        TraceSource?.WriteLine($"starting {nameof(SearchIndexActivity)} with {nameof(ProgramArgs)}: {args} ");
-
-        (_presentationInfo, _jSettings) = GetContext(args);
-
-        var command = _jSettings.GetPublicationCommand();
-        TraceSource?.TraceVerbose($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
-
-        if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
-        else
-        {
-            TraceSource?.TraceWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
-        }
-    }
-
     internal void GenerateCompressed11TySearchIndex()
     {
         var (entryRootInfo, indexRootInfo, indexFileName) =
@@ -131,16 +125,16 @@ public class SearchIndexActivity : IActivity
         {
             var compressedIndexInfo = CompressSearchIndex(indexInfo);
 
-            TraceSource?.WriteLine($"index: {compressedIndexInfo.FullName}");
+            _logger.LogInformation($"index: {compressedIndexInfo.FullName}");
         }
 
     }
 
-    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext(ProgramArgs? args)
+    internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext()
     {
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        var (presentationInfo, settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
 
-        TraceSource?.TraceVerbose($"applying settings...");
+        _logger.LogInformation($"applying settings...");
         var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         return (presentationInfo, jSettings);
@@ -148,4 +142,7 @@ public class SearchIndexActivity : IActivity
 
     DirectoryInfo? _presentationInfo;
     JsonElement _jSettings;
+
+    readonly IConfiguration _configuration;
+    readonly ILogger<SearchIndexActivity> _logger;
 }

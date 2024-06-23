@@ -19,6 +19,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Songhay.Publications.Hosting\Songhay.Publications.Hosting.csproj" />
         <ProjectReference Include="..\Songhay.Publications\Songhay.Publications.csproj" />
     </ItemGroup>
 

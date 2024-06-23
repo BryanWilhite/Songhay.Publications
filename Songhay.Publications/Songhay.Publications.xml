@@ -237,44 +237,12 @@
             </summary>
             <seealso cref="T:Songhay.Abstractions.IActivity" />
         </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.AddEntryExtract(System.String)">
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})">
             <summary>
-            Wrapper for <see cref="M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)"/>.
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.MarkdownEntryActivity"/> class.
             </summary>
-            <param name="entryPath">The entry path.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.ExpandUrisAsync(System.String,System.String)">
-            <summary>
-            Expands the URIs of the specified host
-            with <see cref="M:Songhay.Extensions.UriExtensions.ToExpandedUriPairAsync(System.Uri)"/>.
-            </summary>
-            <param name="entryPath">The entry path.</param>
-            <param name="collapsedHost">The collapsed host.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.FindChange(System.String,System.String,System.String,System.Boolean)">
-            <summary>
-            Finds the specified pattern in the input.
-            </summary>
-            <param name="input">The input.</param>
-            <param name="pattern">The pattern.</param>
-            <param name="replacement">The replacement.</param>
-            <param name="useRegex">if set to <c>true</c> [use regex].</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.GenerateEntry(System.IO.DirectoryInfo,System.String)">
-            <summary>
-            Generates the <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>
-            at the conventional drafts root.
-            </summary>
-            <param name="entryDraftsRootInfo">The entry drafts root information.</param>
-            <param name="title">The title.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.PublishEntry(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
-            <summary>
-            Wrapper for <see cref="M:Songhay.Publications.MarkdownEntryUtility.PublishEntryFor11Ty(System.String,System.String,System.String)"/>.
-            </summary>
-            <param name="entryDraftsRootInfo">The entry drafts root information.</param>
-            <param name="entryRootInfo">The entry root information.</param>
-            <param name="entryFileName">Name of the entry file.</param>
+            <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
             <summary>
@@ -288,18 +256,10 @@
             </summary>
             <param name="args">The arguments.</param>
         </member>
-        <member name="T:Songhay.Publications.Activities.PublicationsActivitiesGetter">
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync">
             <summary>
-            Implementation of <see cref="T:Songhay.Models.ActivitiesGetter"/>
-            for Songhay Publications.
+            Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
             </summary>
-            <seealso cref="T:Songhay.Models.ActivitiesGetter" />
-        </member>
-        <member name="M:Songhay.Publications.Activities.PublicationsActivitiesGetter.#ctor(System.String[])">
-            <summary>
-            Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.PublicationsActivitiesGetter"/> class.
-            </summary>
-            <param name="args">The arguments.</param>
         </member>
         <member name="T:Songhay.Publications.Activities.SearchIndexActivity">
             <summary>
@@ -308,28 +268,12 @@
             <seealso cref="T:Songhay.Abstractions.IActivity" />
             <seealso cref="T:Songhay.Abstractions.IActivityConfigurationSupport" />
         </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.CompressSearchIndex(System.IO.FileInfo)">
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.SearchIndexActivity})">
             <summary>
-            Compresses the Publications Search Index.
+            Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.MarkdownEntryActivity"/> class.
             </summary>
-            <param name="indexInfo">The index information.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String)">
-            <summary>
-            Generates the Publications Search Index from 11ty entries.
-            </summary>
-            <param name="entryRootInfo">The entry root information.</param>
-            <param name="indexRootInfo">The index root information.</param>
-            <param name="indexFileName">Name of the index file.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String,System.Int32)">
-            <summary>
-            Generates the Publications Search Index from 11ty entries.
-            </summary>
-            <param name="entryRootInfo">The entry root information.</param>
-            <param name="indexRootInfo">The index root information.</param>
-            <param name="indexFileName">Name of the index file.</param>
-            <param name="partitionSize">Size of the partition.</param>
+            <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
             <summary>
@@ -340,6 +284,11 @@
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.Start(Songhay.Models.ProgramArgs)">
             <summary>Starts with the specified arguments.</summary>
             <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync">
+            <summary>
+            Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
+            </summary>
         </member>
         <member name="T:Songhay.Publications.EpubUtility">
             <summary>
