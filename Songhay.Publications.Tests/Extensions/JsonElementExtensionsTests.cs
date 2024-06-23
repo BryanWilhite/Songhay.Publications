@@ -60,15 +60,25 @@ public class JsonElementExtensionsTests
     [InlineData("index-activity-settings.json", "../../../markdown/shell")]
     public void GetCompressed11tyIndexArgs_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
-        {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+        string[] args = {
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
@@ -90,15 +100,25 @@ public class JsonElementExtensionsTests
     [InlineData("md-expand-uris-settings.json", "../../../markdown/shell")]
     public void GetExpandUrisArgs_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
-        {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+        string[] args = {
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
@@ -117,15 +137,26 @@ public class JsonElementExtensionsTests
     [InlineData("md-find-change-settings.json", "../../../markdown/shell")]
     public void GetFindChangeArgs_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
+        string[] args = new[]
         {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
@@ -153,15 +184,25 @@ public class JsonElementExtensionsTests
     [InlineData("md-generate-entry-settings.json", "../../../markdown/shell")]
     public void GetGenerateEntryArgs_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
-        {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+        string[] args = {
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
@@ -180,15 +221,25 @@ public class JsonElementExtensionsTests
     [InlineData("md-publish-entry-settings.json", "../../../markdown/shell")]
     public void GetPublishEntryArgs_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
-        {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+        string[] args = {
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);

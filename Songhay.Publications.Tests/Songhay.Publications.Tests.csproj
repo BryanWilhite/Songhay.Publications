@@ -34,7 +34,11 @@
 
     <ItemGroup>
         <Directory Include="markdown\presentation-drafts\" />
-        <Directory Include="markdown\presentation\entry\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="markdown\presentation\entry\2023\" />
+      <Folder Include="markdown\presentation\entry\2024\" />
     </ItemGroup>
 
 </Project>
