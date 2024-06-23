@@ -992,7 +992,7 @@
             the <see cref="F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc"/> file.
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.DaisyConsortiumNcx"/> class.
             </summary>
@@ -1000,6 +1000,7 @@
             <param name="isbn13">The isbn13.</param>
             <param name="chapterSet">The chapter set.</param>
             <param name="epubOebpsDirectory">The epub oebps directory.</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta">
             <summary>
@@ -1241,7 +1242,7 @@
             <see cref="F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest"/> file.
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Models.IdpfPackage.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.IdpfPackage.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.IdpfPackage"/> class.
             </summary>
@@ -1249,6 +1250,7 @@
             <param name="isbn13">International Standard Book Number (ISBN)</param>
             <param name="chapterSet">chapter data</param>
             <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.IdpfPackage.SetPublicationMeta">
             <summary>
@@ -1567,13 +1569,14 @@
              https://en.wikipedia.org/wiki/Open_eBook
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Models.OebpsTextBiography.#ctor(System.String,System.String,System.String)">
+        <member name="M:Songhay.Publications.Models.OebpsTextBiography.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextBiography"/> class.
             </summary>
             <param name="templateRoot">the root directory of the EPUB template files</param>
             <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
             <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.OebpsTextBiography.Write">
             <summary>
@@ -1620,13 +1623,14 @@
              https://en.wikipedia.org/wiki/Open_eBook
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Models.OebpsTextDedication.#ctor(System.String,System.String,System.String)">
+        <member name="M:Songhay.Publications.Models.OebpsTextDedication.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextDedication"/> class.
             </summary>
             <param name="templateRoot">the root directory of the EPUB template files</param>
             <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
             <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.OebpsTextDedication.Write">
             <summary>
@@ -1647,13 +1651,14 @@
              https://en.wikipedia.org/wiki/Open_eBook
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Models.OebpsTextToc.#ctor(System.Text.Json.JsonElement,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+        <member name="M:Songhay.Publications.Models.OebpsTextToc.#ctor(System.Text.Json.JsonElement,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.OebpsTextToc"/> class.
             </summary>
             <param name="publicationMeta">deserialized <see cref="F:Songhay.Publications.Models.PublicationFiles.EpubMetadata"/></param>
             <param name="chapterSet">chapter data</param>
             <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.OebpsTextToc.Write">
             <summary>
@@ -1682,13 +1687,14 @@
             of an EPUB publication.
             </summary>
         </member>
-        <member name="M:Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String)">
+        <member name="M:Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Models.PublicationChapter"/> class.
             </summary>
             <param name="chapterPair">The chapter pair.</param>
             <param name="chapterTemplate">The chapter template.</param>
             <param name="chapterDirectory">The chapter directory.</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/>.</param>
         </member>
         <member name="M:Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement">
             <summary>
@@ -1957,11 +1963,12 @@
             by the International Digital Publishing Forum (IDPF).
             </remarks>
         </member>
-        <member name="M:Songhay.Publications.PublicationContext.#ctor(System.String)">
+        <member name="M:Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})">
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.PublicationContext"/> class.
             </summary>
             <param name="templateRoot">the root directory of the EPUB template files</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger`1"/></param>
         </member>
         <member name="M:Songhay.Publications.PublicationContext.GenerateChapters">
             <summary>

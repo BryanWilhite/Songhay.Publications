@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>6.0.1</AssemblyVersion>
+        <AssemblyVersion>6.1.0</AssemblyVersion>
         <RootNamespace>Songhay.Publications</RootNamespace>
 
         <Title>Songhay Publications</Title>
         <Description>Core reusable definitions for Songhay Studio Publications</Description>
         <Authors>Bryan D. Wilhite</Authors>
-        <Copyright>(c) 2022 Bryan D. Wilhite</Copyright>
+        <Copyright>(c) 2024 Bryan D. Wilhite</Copyright>
         <Company>Songhay System</Company>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
@@ -20,7 +20,7 @@
         <PackageIcon>..\songhay_icon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</PackageProjectUrl>
-        <PackageReleaseNotes>upgraded core dependencies 📦↑</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/users/BryanWilhite/projects/24/views/1</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageTags>Core;Songhay;Markdown;JSON;GenericWeb</PackageTags>
         <PackageVersion>$(AssemblyVersion)</PackageVersion>
