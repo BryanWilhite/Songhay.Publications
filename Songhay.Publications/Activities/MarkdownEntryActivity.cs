@@ -121,10 +121,11 @@ public class MarkdownEntryActivity : IActivity
     /// <param name="pattern">The pattern.</param>
     /// <param name="replacement">The replacement.</param>
     /// <param name="useRegex">if set to <c>true</c> [use regex].</param>
-    public static string FindChange(string input, string pattern, string replacement, bool useRegex)
+    public static string FindChange(string? input, string? pattern, string? replacement, bool useRegex)
     {
-        if (string.IsNullOrWhiteSpace(input)) throw new ArgumentNullException(nameof(input));
-        if (string.IsNullOrWhiteSpace(pattern)) throw new ArgumentNullException(nameof(pattern));
+        input.ThrowWhenNullOrWhiteSpace();
+        pattern.ThrowWhenNullOrWhiteSpace();
+        
         if (string.IsNullOrWhiteSpace(replacement)) replacement = string.Empty;
 
         return useRegex ?
@@ -169,10 +170,7 @@ public class MarkdownEntryActivity : IActivity
     /// Displays the help.
     /// </summary>
     /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs? args)
-    {
-        throw new NotImplementedException();
-    }
+    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
 
     /// <summary>
     /// Starts the <see cref="IActivity"/>.

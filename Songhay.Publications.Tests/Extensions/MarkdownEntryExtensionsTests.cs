@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Nodes;
+﻿using System.Text.Json;
+using System.Text.Json.Nodes;
+using Songhay.Extensions;
 using Songhay.Publications.Extensions;
 using Songhay.Publications.Models;
 
@@ -126,10 +128,11 @@ public class MarkdownEntryExtensionsTests
             .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
             .WithContentHeader()
             .WithEdit(i => i.Content = string.Concat(i.Content, content)).With11TyExtract(length);
-        var jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>());
-        Assert.NotNull(jO);
 
-        var extract = jO["extract"].GetValue<string>();
+        JsonNode? jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>() ?? "null");
+        Assert.False(jO.GetJsonValueKind() == JsonValueKind.Null);
+
+        string? extract = jO?["extract"]?.GetValue<string>();
 
         _testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
         _testOutputHelper.WriteLine($"{entry.FrontMatter}");
@@ -149,10 +152,10 @@ public class MarkdownEntryExtensionsTests
         var entry = entryInfo.ToMarkdownEntry()
             .With11TyExtract(expectedLength);
 
-        var jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>());
-        Assert.NotNull(jO);
+        JsonNode? jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>() ?? "null");
+        Assert.False(jO.GetJsonValueKind() == JsonValueKind.Null);
 
-        var extract = jO["extract"]?.GetValue<string>();
+        string? extract = jO?["extract"]?.GetValue<string>();
 
         Assert.False(string.IsNullOrWhiteSpace(extract));
         Assert.Equal(expectedLength + 1, extract.Length);
@@ -162,8 +165,8 @@ public class MarkdownEntryExtensionsTests
     public void WithNew11tyFrontMatterAndContentHeaderAndTouch_Test()
     {
         //arrange
-        var title = "Hello World!";
-        var inceptDate = DateTime.Now.AddSeconds(-3);
+        string title = "Hello World!";
+        DateTime inceptDate = DateTime.Now.AddSeconds(-3);
         var entry = new MarkdownEntry()
             .WithNew11TyFrontMatter(title, inceptDate, "/path/to/entry/", "entry_tag")
             .WithContentHeader();
@@ -173,11 +176,16 @@ public class MarkdownEntryExtensionsTests
         entry.Touch(DateTime.Now);
 
         //assert
-        var otherDoc = JsonNode.Parse("{ \"entry\": {\"modificationDate\": \"2019-11-22T05:58:34.573Z\" } }");
-        var node = entry.FrontMatter["modificationDate"];
-        var otherNode = otherDoc["entry"]["modificationDate"];
-        var v = otherNode.GetValue<DateTime>();
+        JsonNode? otherDoc = JsonNode.Parse("{ \"entry\": {\"modificationDate\": \"2019-11-22T05:58:34.573Z\" } }");
+        JsonNode? node = entry.FrontMatter["modificationDate"];
+        JsonNode? otherNode = otherDoc?["entry"]?["modificationDate"];
+        DateTime? v = otherNode?.GetValue<DateTime>();
+
         Assert.True(node?.GetValue<DateTime>() > inceptDate);
+
+        _testOutputHelper.WriteLine(node.ToJsonString());
+
+        Assert.NotNull(v);
     }
 
     readonly ITestOutputHelper _testOutputHelper;
