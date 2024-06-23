@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications.Models;
 
@@ -16,8 +17,11 @@ public class IdpfPackage
     /// <param name="isbn13">International Standard Book Number (ISBN)</param>
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
-    public IdpfPackage(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory)
+    /// <param name="logger">The <see cref="ILogger"/>.</param>
+    public IdpfPackage(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory, ILogger? logger)
     {
+        _logger = logger;
+
         _publicationMeta = publicationMeta;
         _isbn13 = isbn13.ToReferenceTypeValueOrThrow();
         _chapterSet = chapterSet.ToReferenceTypeValueOrThrow();
@@ -95,7 +99,7 @@ public class IdpfPackage
 
     internal void SetManifestItemElementsForChapters()
     {
-        Console.WriteLine("setting manifest item elements for chapters...");
+        _logger?.LogInformation("setting manifest item elements for chapters...");
 
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
@@ -144,7 +148,7 @@ public class IdpfPackage
 
         if (!newChapterElementList.Any()) return;
 
-        Console.WriteLine("adding new elements under templated element...");
+        _logger?.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
@@ -156,7 +160,7 @@ public class IdpfPackage
 
     internal void SetSpineItemRefElementsForChapters()
     {
-        Console.WriteLine("setting spine itemref elements for chapters...");
+        _logger?.LogInformation("setting spine itemref elements for chapters...");
 
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
@@ -204,10 +208,11 @@ public class IdpfPackage
 
         if (!newChapterElementList.Any()) return;
 
-        Console.WriteLine("adding new elements under templated element...");
+        _logger?.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
+    readonly ILogger? _logger;
     readonly Dictionary<string, string> _chapterSet;
     readonly JsonElement _publicationMeta;
     readonly string _isbn13;

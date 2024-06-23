@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications.Models;
 
@@ -21,8 +22,11 @@ public class OebpsTextToc
     /// <param name="publicationMeta">deserialized <see cref="PublicationFiles.EpubMetadata"/></param>
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
-    public OebpsTextToc(JsonElement publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory)
+    /// <param name="logger">The <see cref="ILogger"/>.</param>
+    public OebpsTextToc(JsonElement publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory, ILogger? logger)
     {
+        _logger = logger;
+
         _publicationMeta = publicationMeta;
         _chapterSet = chapterSet;
         _documentPath = ProgramFileUtility.GetCombinedPath(epubTextDirectory, PublicationFiles.EpubFileToc, fileIsExpected: true);
@@ -89,7 +93,7 @@ public class OebpsTextToc
 
     internal void SetTocAnchors(XDocument tocDocument)
     {
-        Console.WriteLine("setting TOC chapter anchors...");
+        _logger?.LogInformation("setting TOC chapter anchors...");
 
         var xhtml = PublicationNamespaces.Xhtml;
 
@@ -141,10 +145,11 @@ public class OebpsTextToc
 
         if (!newChapterElementList.Any()) return;
 
-        Console.WriteLine("adding new elements under templated element...");
+        _logger?.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
+    readonly ILogger? _logger;
     readonly Dictionary<string, string> _chapterSet;
     readonly JsonElement _publicationMeta;
     readonly string _documentPath;

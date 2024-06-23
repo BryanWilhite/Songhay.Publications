@@ -41,12 +41,13 @@ public class MarkdownEntryActivity : IActivityWithTask
     {
         await Task.Run(() =>
         {
-            _logger.LogInformation($"starting {nameof(MarkdownEntryActivity)}...");
+            _logger.LogInformation("Starting {ActivityName}...", nameof(MarkdownEntryActivity));
 
             (_presentationInfo, _jSettings) = GetContext();
 
-            var command = _jSettings.GetPublicationCommand();
-            _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+            string? command = _jSettings.GetPublicationCommand();
+
+            _logger.LogInformation("{ActivityName}: {Label}: `{Command}`", nameof(MarkdownEntryActivity), nameof(command), command);
 
             if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
@@ -54,7 +55,8 @@ public class MarkdownEntryActivity : IActivityWithTask
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
             else
             {
-                _logger.LogWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+                _logger.LogWarning("{ActivityName}: The expected command is not here. Actual: `{Command}`",
+                    nameof(MarkdownEntryActivity), command ?? "[null]");
             }
         });
     }
@@ -93,7 +95,7 @@ public class MarkdownEntryActivity : IActivityWithTask
         File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
         var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: Added entry extract: {clientId}");
+        _logger.LogInformation("{ActivityName}: Added entry extract: `{Id}`", nameof(MarkdownEntryActivity), clientId);
     }
 
     internal void ExpandUris()
@@ -110,7 +112,8 @@ public class MarkdownEntryActivity : IActivityWithTask
 
         var entryInfo = new FileInfo(entryPath);
 
-        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: expanding `{collapsedHost}` URIs in `{entryInfo.Name}`...");
+        _logger.LogInformation("{ActivityName}: expanding `{Host}` URIs in `{Name}`...", nameof(MarkdownEntryActivity),
+            collapsedHost, entryInfo.Name);
 
         var entry = entryInfo.ToMarkdownEntry();
         var matches =
@@ -125,19 +128,16 @@ public class MarkdownEntryActivity : IActivityWithTask
             KeyValuePair<Uri, Uri>? nullable = null;
             try
             {
-                var message = $"{nameof(MarkdownEntryActivity)}: expanding `{expandableUri.OriginalString}`...";
-
-                _logger.LogInformation(message);
+                _logger.LogInformation("{ActivityName}: expanding `{Uri}`...", nameof(MarkdownEntryActivity),
+                    expandableUri.OriginalString);
 
                 var pair = await expandableUri.ToExpandedUriPairAsync();
                 if (pair.Key is not null && pair.Value is not null)
                 {
                     nullable = new KeyValuePair<Uri, Uri>(pair.Key, pair.Value);
 
-                    var successMessage =
-                        $"{nameof(MarkdownEntryActivity)}: expanded `{nullable.Value.Key.OriginalString}` to `{nullable.Value.Value.OriginalString}`.";
-
-                    _logger.LogInformation(successMessage);
+                    _logger.LogInformation("{ActivityName}: expanded `{Uri}` to `{UriExpanded}`.", nameof(MarkdownEntryActivity),
+                        nullable.Value.Key.OriginalString, nullable.Value.Value.OriginalString);
                 }
             }
             catch (Exception ex)
@@ -169,7 +169,7 @@ public class MarkdownEntryActivity : IActivityWithTask
                 pair.Value.OriginalString
             );
 
-        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: saving `{entryInfo.Name}`...");
+        _logger.LogInformation("{ActivityName}: saving `{Name}`...", nameof(MarkdownEntryActivity), entryInfo.Name);
 
         await File.WriteAllTextAsync(entryInfo.FullName, entry.ToFinalEdit());
     }
@@ -191,7 +191,7 @@ public class MarkdownEntryActivity : IActivityWithTask
         }
 
         var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: Generated entry: {clientId}");
+        _logger.LogInformation("{ActivityName}: Generated entry: `{Id}`", nameof(MarkdownEntryActivity), clientId);
     }
 
     internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext()

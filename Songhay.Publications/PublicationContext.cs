@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications;
 
@@ -15,8 +16,11 @@ public class PublicationContext
     /// Initializes a new instance of the <see cref="PublicationContext"/> class.
     /// </summary>
     /// <param name="templateRoot">the root directory of the EPUB template files</param>
-    public PublicationContext(string templateRoot)
+    /// <param name="logger">the <see cref="ILogger{TCategoryName}"/></param>
+    public PublicationContext(string templateRoot, ILogger<PublicationContext>? logger)
     {
+        _logger = logger;
+
         (_csxRootInfo, _publicationRoot) = GetCsxRootInfoAndPublicationRoot(templateRoot);
         (_publicationMeta, _chapterSet) = GetPublicationMetaAndChapterSet();
         _chapterTemplate = GetChapterTemplate(templateRoot);
@@ -36,16 +40,16 @@ public class PublicationContext
         {
             var chapterDirectory =
                 ProgramFileUtility.GetCombinedPath(_markdownDirectory, pair.Value, fileIsExpected: false);
-            Console.WriteLine("looking for {0}...", pair.Key);
+            _logger?.LogInformation("looking for `{Key}`...", pair.Key);
 
             if (!Directory.Exists(chapterDirectory))
                 Throw($"ERROR: cannot find {chapterDirectory}");
 
-            var chapter = new PublicationChapter(pair, _chapterTemplate, chapterDirectory);
+            var chapter = new PublicationChapter(pair, _chapterTemplate, chapterDirectory, _logger);
             var xhtml = chapter.GenerateXhtml();
             var path = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, $"{pair.Key}.xhtml",
                 fileIsExpected: true);
-            Console.WriteLine("writing to {0}...", path);
+            _logger?.LogInformation("writing to `{Path}`...", path);
             File.WriteAllText(path, xhtml, EpubUtility.GetUnicodeWithBomEncoding());
         });
     }
@@ -56,10 +60,10 @@ public class PublicationContext
     /// </summary>
     public void GenerateMeta()
     {
-        var ncx = new DaisyConsortiumNcx(_publicationMeta, _isbn13, _chapterSet, _epubOebpsDirectory);
+        var ncx = new DaisyConsortiumNcx(_publicationMeta, _isbn13, _chapterSet, _epubOebpsDirectory, _logger);
         ncx.SetPublicationMeta();
 
-        var idpf = new IdpfPackage(_publicationMeta, _isbn13, _chapterSet, _epubOebpsDirectory);
+        var idpf = new IdpfPackage(_publicationMeta, _isbn13, _chapterSet, _epubOebpsDirectory, _logger);
         idpf.SetPublicationMeta();
     }
 
@@ -68,8 +72,8 @@ public class PublicationContext
     /// </summary>
     public void WriteBiography()
     {
-        Console.WriteLine("writing Biography data...");
-        var biography = new OebpsTextBiography(_csxRootInfo.FullName, _epubTextDirectory, _markdownDirectory);
+        _logger?.LogInformation("writing Biography data...");
+        var biography = new OebpsTextBiography(_csxRootInfo.FullName, _epubTextDirectory, _markdownDirectory, _logger);
         biography.Write();
     }
 
@@ -78,7 +82,7 @@ public class PublicationContext
     /// </summary>
     public void WriteCopyright()
     {
-        Console.WriteLine("writing copyright data...");
+        _logger?.LogInformation("writing copyright data...");
         var copyright = new OebpsTextCopyright(_publicationMeta, _epubTextDirectory);
         copyright.Write();
     }
@@ -88,8 +92,8 @@ public class PublicationContext
     /// </summary>
     public void WriteDedication()
     {
-        Console.WriteLine("writing dedication data...");
-        var dedication = new OebpsTextDedication(_csxRootInfo.FullName, _epubTextDirectory, _markdownDirectory);
+        _logger?.LogInformation("writing dedication data...");
+        var dedication = new OebpsTextDedication(_csxRootInfo.FullName, _epubTextDirectory, _markdownDirectory, _logger);
         dedication.Write();
     }
 
@@ -98,7 +102,7 @@ public class PublicationContext
     /// </summary>
     public void WriteTitle()
     {
-        Console.WriteLine("writing Title data...");
+        _logger?.LogInformation("writing Title data...");
 
         var jPublication = _publicationMeta.GetProperty("publication");
         var title = jPublication.GetProperty("title").GetString();
@@ -130,8 +134,8 @@ public class PublicationContext
     /// </summary>
     public void WriteToc()
     {
-        Console.WriteLine("writing TOC data...");
-        var toc = new OebpsTextToc(_publicationMeta, _chapterSet, _epubTextDirectory);
+        _logger?.LogInformation("writing TOC data...");
+        var toc = new OebpsTextToc(_publicationMeta, _chapterSet, _epubTextDirectory, _logger);
         toc.Write();
     }
 
@@ -161,16 +165,16 @@ public class PublicationContext
 
     internal string GetIsbn13()
     {
-        Console.WriteLine("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
+        _logger?.LogInformation("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
 
         var dictionary = _publicationMeta.GetProperty("publication").GetProperty("identifiers").ToObject<Dictionary<string, string>>();
         var isbn13 = dictionary.TryGetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
 
         isbn13 = new string(isbn13.Where(char.IsDigit).ToArray());
-        Console.WriteLine("isbn raw: {0}", isbn13);
+        _logger?.LogInformation("isbn raw: {Number}", isbn13);
 
         isbn13 = Convert.ToInt64(isbn13).ToString("isbn-000-0-000-00000-0");
-        Console.WriteLine("isbn formatted: {0}", isbn13);
+        _logger?.LogInformation("isbn formatted: {Number}", isbn13);
 
         return  isbn13;
     }
@@ -212,4 +216,5 @@ public class PublicationContext
     readonly string _markdownDirectory;
     readonly string _publicationRoot;
     readonly XDocument _chapterTemplate;
+    readonly ILogger<PublicationContext>? _logger;
 }

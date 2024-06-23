@@ -1,4 +1,6 @@
-﻿namespace Songhay.Publications.Models;
+﻿using Microsoft.Extensions.Logging;
+
+namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines content for the chapter
@@ -12,8 +14,10 @@ public class PublicationChapter
     /// <param name="chapterPair">The chapter pair.</param>
     /// <param name="chapterTemplate">The chapter template.</param>
     /// <param name="chapterDirectory">The chapter directory.</param>
-    public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory)
+    /// <param name="logger">The <see cref="ILogger"/>.</param>
+    public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory, ILogger? logger)
     {
+        _logger = logger;
         _chapterPair = chapterPair;
         _chapter = new XDocument(chapterTemplate);
         _chapterDirectoryInfo = new DirectoryInfo(chapterDirectory);
@@ -32,7 +36,7 @@ public class PublicationChapter
             .Element(xhtml + "div")?
             .Element(xhtml + "div");
 
-        Console.WriteLine(e?.Value);
+        _logger?.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -49,7 +53,7 @@ public class PublicationChapter
             .Element(xhtml + "div")?
             .Element(xhtml + "h1");
 
-        Console.WriteLine(e?.Value);
+        _logger?.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -65,7 +69,7 @@ public class PublicationChapter
             .Element(xhtml + "head")?
             .Element(xhtml + "title");
 
-        Console.WriteLine(e?.Value);
+        _logger?.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -92,12 +96,12 @@ public class PublicationChapter
 
                 if (i > 0) chapterBodyBuilder.AppendLine(divPageBreak);
 
-                Console.WriteLine("    markdown file {0}...", markdownFile);
+                _logger?.LogInformation("    markdown file `{Path}`...", markdownFile);
                 var markdown = File.ReadAllText(markdownFile.FullName);
                 var raw = Markdown.ToHtml(markdown);
                 var rawElement = XElement.Parse($"<raw>{raw}</raw>");
 
-                Console.WriteLine("    looking for h2 elements wrapped by p elements...");
+                _logger?.LogInformation("    looking for h2 elements wrapped by p elements...");
                 var h2Elements = rawElement.Descendants("h2");
                 h2Elements.ToArray().ForEachInEnumerable(h2Element =>
                 {
@@ -105,7 +109,7 @@ public class PublicationChapter
                     h2Element.Parent.ReplaceWith(h2Element);
                 });
 
-                Console.WriteLine("    looking for h3 elements wrapped by p elements...");
+                _logger?.LogInformation("    looking for h3 elements wrapped by p elements...");
                 var h3Elements = rawElement.Descendants("h3");
                 h3Elements.ToArray().ForEachInEnumerable(h3Element =>
                 {
@@ -113,7 +117,7 @@ public class PublicationChapter
                     h3Element.Parent.ReplaceWith(h3Element);
                 });
 
-                Console.WriteLine("    looking for white-space-preservation blocks...");
+                _logger?.LogInformation("    looking for white-space-preservation blocks...");
                 var divElements = rawElement
                     .Elements("div")
                     .Where(div =>
@@ -147,6 +151,7 @@ public class PublicationChapter
         return _chapter.ToString();
     }
 
+    readonly ILogger? _logger;
     readonly DirectoryInfo _chapterDirectoryInfo;
     readonly XDocument _chapter;
     readonly KeyValuePair<string, string> _chapterPair;

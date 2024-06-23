@@ -46,12 +46,14 @@ public class SearchIndexActivity : IActivityWithTask
             (_presentationInfo, _jSettings) = GetContext();
 
             var command = _jSettings.GetPublicationCommand();
-            _logger.LogInformation($"{nameof(MarkdownEntryActivity)}: {nameof(command)}: {command}");
+            _logger.LogInformation("{ActivityName}: {Label}: `{Command}`", nameof(MarkdownEntryActivity), nameof(command),
+                command);
 
             if (command.EqualsInvariant(IndexCommands.CommandNameGenerateCompressed11TySearchIndex)) GenerateCompressed11TySearchIndex();
             else
             {
-                _logger.LogWarning($"{nameof(MarkdownEntryActivity)}: The expected command is not here. Actual: `{command ?? "[null]"}`");
+                _logger.LogWarning("{ActivityName}: The expected command is not here. Actual: `{Command}`",
+                    nameof(MarkdownEntryActivity), command ?? "[null]");
             }
         });
     }
@@ -125,7 +127,7 @@ public class SearchIndexActivity : IActivityWithTask
         {
             var compressedIndexInfo = CompressSearchIndex(indexInfo);
 
-            _logger.LogInformation($"index: {compressedIndexInfo.FullName}");
+            _logger.LogInformation("index: `{Name}`", compressedIndexInfo.FullName);
         }
 
     }
@@ -134,7 +136,7 @@ public class SearchIndexActivity : IActivityWithTask
     {
         var (presentationInfo, settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
 
-        _logger.LogInformation($"applying settings...");
+        _logger.LogInformation("applying settings...");
         var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
 
         return (presentationInfo, jSettings);
