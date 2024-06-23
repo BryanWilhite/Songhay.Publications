@@ -2,9 +2,7 @@
 using System.Runtime.CompilerServices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Songhay.Abstractions;
-using Songhay.Publications.Activities;
-using Songhay.Publications.Hosting;
+using Songhay.Publications.Hosting.Extensions;
 
 [assembly: InternalsVisibleTo("Songhay.Publications.Shell.Tests")]
 
@@ -32,18 +30,7 @@ class Program
 
             services.AddLogging();
 
-            switch (activityName)
-            {
-                case nameof(MarkdownEntryActivity):
-                    services.AddSingleton<IActivityWithTask, MarkdownEntryActivity>();
-                    break;
-
-                case nameof(SearchIndexActivity):
-                    services.AddSingleton<IActivityWithTask, SearchIndexActivity>();
-                    break;
-            }
-
-            services.AddSingleton<IHostedService, PublicationsHostedService>();
+            services.AddPublicationsHostedService(activityName);
         });
 
         using IHost host = builder.Build();
