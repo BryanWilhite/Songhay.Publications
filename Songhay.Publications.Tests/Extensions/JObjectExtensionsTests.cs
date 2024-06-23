@@ -1,4 +1,8 @@
 ﻿using System.Text.Json;
+using Meziantou.Extensions.Logging.Xunit;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
@@ -11,21 +15,34 @@ public class JsonElementExtensionsTests
     public JsonElementExtensionsTests(ITestOutputHelper helper)
     {
         _testOutputHelper = helper;
+        _loggerProvider = new XUnitLoggerProvider(helper);
     }
 
     [Theory]
     [InlineData("md-add-entry-extract-settings.json", "../../../markdown/shell")]
     public void GetAddEntryExtractArg_Test(string settingsFile, string presentationRoot)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
+
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        var args = new ProgramArgs(new[]
+        string[] args =
         {
-            ProgramArgs.SettingsFile, settingsFile,
-            ProgramArgs.BasePath, presentationRoot
-        });
+            ConsoleArgsScalars.BaseDirectoryRequired, ConsoleArgsScalars.FlagSpacer,
+            ConsoleArgsScalars.SettingsFile, settingsFile,
+            ConsoleArgsScalars.BaseDirectory, presentationRoot
+        };
 
-        var (presentationInfo, settingsInfo) = args.ToPresentationAndSettingsInfo();
+        IConfiguration? configuration = null;
+        IHostBuilder builder = Host.CreateDefaultBuilder(args);
+
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
+        using IHost _ = builder.Build();
+
+        Assert.NotNull(configuration);
+
+        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
@@ -189,4 +206,5 @@ public class JsonElementExtensionsTests
     }
 
     readonly ITestOutputHelper _testOutputHelper;
+    readonly XUnitLoggerProvider _loggerProvider;
 }

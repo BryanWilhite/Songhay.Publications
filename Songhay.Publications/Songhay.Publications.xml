@@ -373,6 +373,18 @@
             </summary>
             <param name="directoryInfo">the expected top-level presentation directory</param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.IConfigurationExtensions">
+            <summary>
+            Extensions of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts <see cref="T:Songhay.Models.ProgramArgs"/> to Presentation <see cref="T:System.IO.DirectoryInfo"/>.
+            </summary>
+            <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
         <member name="T:Songhay.Publications.Extensions.IDocumentExtensions">
             <summary>
             Extensions of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
