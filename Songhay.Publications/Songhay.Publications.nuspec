@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>6.1.0</version>
+    <version>6.1.1</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -20,10 +20,9 @@
     <dependencies>
       <group targetFramework=".NET6.0">
         <dependency id="CloneExtensions" version="1.4.2" />
-        <dependency id="FluentValidation" version="11.1.0" />
-        <dependency id="Markdig" version="0.30.2" />
-        <dependency id="SonghayCore" version="6.0.1" />
-        <dependency id="SonghayCore.Newtonsoft" version="6.0.0" />
+        <dependency id="FluentValidation" version="11.9.2" />
+        <dependency id="Markdig" version="0.37.0" />
+        <dependency id="SonghayCore" version="6.1.2" />
       </group>
     </dependencies>
   </metadata>
