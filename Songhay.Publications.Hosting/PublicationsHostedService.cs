@@ -48,7 +48,7 @@ public class PublicationsHostedService: IHostedService
     /// <param name="cancellationToken">Indicates that the shutdown process should no longer be graceful.</param>
     public Task StopAsync(CancellationToken cancellationToken)
     {
-        _logger.LogWarning("Stopping `{Name}`...", nameof(DefaultHostedService));
+        _logger.LogWarning("Stopping `{Name}`...", nameof(PublicationsHostedService));
 
         Environment.ExitCode = _exitCode.GetValueOrDefault(-1);
         // FUNKYKB: exit code may be null should use enter Ctrl+c/SIGTERM.
