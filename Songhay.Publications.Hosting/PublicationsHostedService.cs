@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Songhay.Abstractions;
-using Songhay.Hosting;
 
 namespace Songhay.Publications.Hosting;
 
@@ -23,12 +22,17 @@ public class PublicationsHostedService: IHostedService
         // ReSharper disable once AsyncVoidLambda
         _hostApplicationLifetime.ApplicationStarted.Register(async () =>
         {
-            _exitCode = -1;
-
             try
             {
                 await _activity.StartAsync();
+
                 _exitCode = 0;
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogError(ex, "Error in {ClassName}.{MethodName}:", nameof(PublicationsHostedService), nameof(StartAsync));
+
+                _exitCode = -1;
             }
             finally
             {
