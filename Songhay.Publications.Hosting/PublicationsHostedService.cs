@@ -20,18 +20,15 @@ public class PublicationsHostedService: IHostedService
     /// <param name="cancellationToken">Indicates that the start process has been aborted.</param>
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _hostApplicationLifetime.ApplicationStarted.Register(() =>
+        // ReSharper disable once AsyncVoidLambda
+        _hostApplicationLifetime.ApplicationStarted.Register(async () =>
         {
+            _exitCode = -1;
+
             try
             {
-                _activity.StartAsync();
+                await _activity.StartAsync();
                 _exitCode = 0;
-            }
-            catch
-            {
-                _exitCode = -1;
-
-                throw;
             }
             finally
             {
