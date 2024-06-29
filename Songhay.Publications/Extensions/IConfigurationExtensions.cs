@@ -39,6 +39,8 @@ public static class IConfigurationExtensions
 
         string settingsFilePath = configuration.GetSettingsFilePath();
 
+        logger?.LogInformation("Found settings file `{Path}`. Returning...", settingsFilePath);
+
         FileInfo settingsInfo = File.Exists(settingsFilePath) ?
             new(settingsFilePath)
             :

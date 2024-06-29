@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>6.1.1</version>
+    <version>6.1.2</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -22,7 +22,7 @@
         <dependency id="CloneExtensions" version="1.4.2" />
         <dependency id="FluentValidation" version="11.9.2" />
         <dependency id="Markdig" version="0.37.0" />
-        <dependency id="SonghayCore" version="6.1.2" />
+        <dependency id="SonghayCore" version="6.1.4" />
       </group>
     </dependencies>
   </metadata>
