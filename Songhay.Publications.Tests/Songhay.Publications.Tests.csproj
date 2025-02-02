@@ -38,7 +38,7 @@
 
     <ItemGroup>
       <Folder Include="markdown\presentation\entry\2023\" />
-      <Folder Include="markdown\presentation\entry\2024\" />
+      <Folder Include="markdown\presentation\entry\2025\" />
     </ItemGroup>
 
 </Project>
