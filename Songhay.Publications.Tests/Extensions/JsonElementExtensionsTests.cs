@@ -1,12 +1,7 @@
-﻿using System.Text.Json;
-using Meziantou.Extensions.Logging.Xunit;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Songhay.Extensions;
 using Songhay.Models;
 using Songhay.Publications.Activities;
-using Songhay.Publications.Extensions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
@@ -254,6 +249,25 @@ public class JsonElementExtensionsTests
 
         var commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(MarkdownEntryActivity.PublishEntry), commandName);
+    }
+
+    [Theory]
+    [InlineData(@"
+{
+    ""myString"": ""a scalar"",
+    ""myBoolean"": true,
+    ""myDate"": ""2005-12-30T23:16:54.0000000"",
+    ""sequence"": [ ""one"", ""two"" ],
+    ""myObject"": { ""myNumber"": 42, ""isUp"": true, ""nextNumbers"": [ 43, 44 ] }
+}
+")]
+    public void ToYaml_Test(string json)
+    {
+        var jE = JsonDocument.Parse(json).RootElement;
+
+        string yaml = jE.ToYaml();
+
+        _testOutputHelper.WriteLine(yaml);
     }
 
     readonly ITestOutputHelper _testOutputHelper;

@@ -1,7 +1,3 @@
-using System.Text.Json;
-using Songhay.Publications.Extensions;
-using Songhay.Publications.Models;
-
 namespace Songhay.Publications.Tests.Extensions;
 
 public class ResponsiveImageExtensionsTests

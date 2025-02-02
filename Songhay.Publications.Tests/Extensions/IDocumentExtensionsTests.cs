@@ -1,7 +1,4 @@
-using Songhay.Extensions;
 using Songhay.Publications.Abstractions;
-using Songhay.Publications.Extensions;
-using Songhay.Publications.Models;
 
 namespace Songhay.Publications.Tests.Extensions;
 
@@ -11,6 +8,7 @@ public class IDocumentExtensionsTests
     public IDocumentExtensionsTests(ITestOutputHelper helper)
     {
         _testOutputHelper = helper;
+        _loggerProvider = new XUnitLoggerProvider(helper);
     }
 
     [Fact]
@@ -174,5 +172,30 @@ public class IDocumentExtensionsTests
         }
     }
 
+    // ReSharper disable once InconsistentNaming
+    public static IEnumerable<object[]> TestData = new[]
+    {
+        new object[]
+        {
+            new Document { DocumentId = 1, Title = "Hey!", Tag = @"{ ""extract"": ""Hello world!"" }"},
+        },
+        new object[]
+        {
+            new Document { DocumentId = 1, Title = "Hey!", Tag = @"{ ""extract"": ""Hello world!"", ""keywords"": [ ""yup"" ] }"},
+        },
+    };
+
+    [Theory]
+    [MemberData(nameof(TestData))]
+    public void ToYaml_Test(IDocument document)
+    {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(ToYaml_Test));
+
+        string? actual = document.ToYaml(logger);
+
+        logger.LogInformation(actual);
+    }
+
+    readonly XUnitLoggerProvider _loggerProvider;
     readonly ITestOutputHelper _testOutputHelper;
 }
