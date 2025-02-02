@@ -40,8 +40,9 @@
     <ItemGroup>
         <PackageReference Include="CloneExtensions" Version="1.4.2" />
         <PackageReference Include="FluentValidation" Version="11.11.0" />
-        <PackageReference Include="Markdig" Version="0.37.0" />
+        <PackageReference Include="Markdig" Version="0.40.0" />
         <PackageReference Include="SonghayCore" Version="8.0.0" />
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
     </ItemGroup>
 
     <ItemGroup>

@@ -300,6 +300,103 @@
             </summary>
             <param name="directoryInfo">the expected top-level presentation directory</param>
         </member>
+        <member name="T:Songhay.Publications.Extensions.FileInfoExtensions">
+            <summary>
+            Extensions of <see cref="T:System.IO.FileInfo"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Return <c>true</c> when the specified collection of lines look like JSON
+            </summary>
+            <param name="lines">collection of lines</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Return <c>true</c> when the specified collection of lines look like <see cref="P:Songhay.Publications.Models.MarkdownEntry.Content"/>
+            </summary>
+            <param name="lines">collection of lines</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Return <c>true</c> when the specified collection of lines look like YAML
+            </summary>
+            <param name="lines">collection of lines</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:System.IO.FileInfo"/> publications entry
+            into two collections of lines: one for front matter and one for content.
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <remarks>
+            This member expects the first line of the entry to be a front matter fence (<c>---</c>)
+            or it will return empty collections.
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:System.IO.FileInfo"/> to a new <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="title">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Title"/></param>
+            <param name="documentPath">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Path"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:System.IO.FileInfo"/>
+            into a (<see cref="T:Songhay.Publications.Abstractions.IDocument"/>, <see cref="T:System.String"/>) tuple.
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:System.IO.FileInfo"/>
+            into a (<see cref="T:System.Text.Json.Nodes.JsonObject"/>, <see cref="T:System.String"/>) tuple.
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified collection of lines to a JSON string.
+            </summary>
+            <param name="lines">collection of lines where <see cref="M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)"/> returns <c>true</c></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified collection of lines to a YAML string.
+            </summary>
+            <param name="lines">collection of lines where <see cref="M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)"/> returns <c>true</c></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Writes a new entry with JSON front matter to <see cref="P:System.IO.FileSystemInfo.FullName"/>
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="title">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Title"/></param>
+            <param name="documentPath">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Path"/></param>
+            <param name="content">the entry content</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Writes a new entry with YAML front matter to <see cref="P:System.IO.FileSystemInfo.FullName"/>
+            </summary>
+            <param name="entry">the <see cref="T:System.IO.FileInfo"/> publications entry</param>
+            <param name="title">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Title"/></param>
+            <param name="documentPath">the <see cref="P:Songhay.Publications.Abstractions.IDocument.Path"/></param>
+            <param name="content">the entry content</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
         <member name="T:Songhay.Publications.Extensions.IConfigurationExtensions">
             <summary>
             Extensions of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>
@@ -311,6 +408,31 @@
             </summary>
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.IDictionaryExtensions">
+            <summary>
+            Extensions of <see cref="T:System.Collections.Generic.IDictionary`2"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Converts the specified <see cref="T:System.Collections.Generic.IDictionary`2"/> to a JSON string.
+            </summary>
+            <param name="data">the <see cref="T:System.Collections.Generic.IDictionary`2"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger,System.String[])">
+            <summary>
+            Converts the specified <see cref="T:System.Collections.Generic.IDictionary`2"/> to <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            </summary>
+            <param name="data">the <see cref="T:System.Collections.Generic.IDictionary`2"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <param name="tagKeys">the keys to search for tagging the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <remarks>
+            Tagging the <see cref="T:Songhay.Publications.Abstractions.IDocument"/> sets <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/>
+            with serialized JSON key-value pairs from:
+            - the conventional key, <c>extract</c>
+            - keys specified in <c>tagKeys</c>
+            </remarks>
         </member>
         <member name="T:Songhay.Publications.Extensions.IDocumentExtensions">
             <summary>
@@ -373,6 +495,15 @@
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Abstractions.IDocument"/> to <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="entryPath">the entry path</param>
+            <param name="content">the entry content</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Abstractions.IDocument"/> into a menu display item model.
@@ -392,6 +523,23 @@
             </summary>
             <param name="data">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/> data</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            to well-formed YAML.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            to well-formed YAML.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="contentLines">the collection of content lines</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)">
             <summary>
             Returns <see cref="T:Songhay.Publications.Abstractions.IDocument"/> with default values.
@@ -405,6 +553,24 @@
             </summary>
             <param name="data">The data.</param>
             <param name="editAction">The edit action.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Writes an entry with JSON front matter to the specified entry path.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="entryPath">the entry path</param>
+            <param name="content">the entry content</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Writes an entry with YAML front matter to the specified entry path.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="entryPath">the entry path</param>
+            <param name="content">the entry content</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="T:Songhay.Publications.Extensions.FragmentExtensions">
             <summary>
@@ -664,10 +830,50 @@
             </summary>
             <param name="element">The <see cref="T:System.Text.Json.JsonElement"/>.</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)">
+             <summary>
+             Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+             to a boxed <see cref="T:System.Object"/> of boxed objects.
+             </summary>
+             <param name="element">the <see cref="T:System.Text.Json.JsonElement"/></param>
+             <remarks>
+             This method helps the <c>YamlDotNet</c> <see cref="T:YamlDotNet.Serialization.SerializerBuilder"/>
+             serialize <see cref="T:System.Text.Json.JsonElement"/> to YAML
+             without “shadow-converting” all property values to <see cref="T:System.String"/>.
+            
+             See <see cref="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)"/>.
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)">
+            <summary>
+            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+            to <c>TObject</c>.
+            </summary>
+            <param name="element">the specified <see cref="T:System.Text.Json.JsonElement"/></param>
+            <typeparam name="TObject">the type to convert to</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)">
+            <summary>
+            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+            to a YAML <see cref="T:System.String"/>.
+            </summary>
+            <param name="element">the <see cref="T:System.Text.Json.JsonElement"/></param>
+        </member>
         <member name="T:Songhay.Publications.Extensions.JsonNodeExtensions">
             <summary>
             Extensions of <see cref="T:System.Text.Json.Nodes.JsonNode"/>
             </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.CopyNode(System.Text.Json.Nodes.JsonNode)">
+            <summary>
+            Copies the specified <see cref="T:System.Text.Json.Nodes.JsonNode"/>
+            by calling <see cref="M:System.Text.Json.Nodes.JsonNode.ToJsonString(System.Text.Json.JsonSerializerOptions)"/>
+            </summary>
+            <param name="node">The node.</param>
+            <remarks>
+            This method is not efficient. For details, see https://stackoverflow.com/a/71000222/22944.
+            </remarks>
         </member>
         <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.HasProperty(System.Text.Json.Nodes.JsonNode,System.String)">
             <summary>
@@ -684,6 +890,55 @@
             </summary>
             <param name="data">any <see cref="T:System.Object"/></param>
             <returns></returns>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.JsonObjectExtensions">
+            <summary>
+            Extensions of <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+            to a YAML <see cref="T:System.String"/>.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with a Publications extract.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="contentLines">the collection of content lines</param>
+            <param name="extractLength">the length of the extract</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger,System.ValueTuple{System.String,System.String}[])">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with its properties renamed.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <param name="operations">specifies which <see cref="T:System.Text.Json.Nodes.JsonObject"/> properties to rename</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            without the properties that should display in front matter.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            without the properties that are <c>null</c>
+            and marked <c>DisallowNull</c>.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="T:Songhay.Publications.Extensions.MarkdownEntryExtensions">
             <summary>
@@ -1643,6 +1898,11 @@
             The conventional settings file
             </summary>
         </member>
+        <member name="F:Songhay.Publications.Models.PublicationAppScalars.FrontMatterFence">
+            <summary>
+            The conventional “fence” for front matter
+            </summary>
+        </member>
         <member name="F:Songhay.Publications.Models.PublicationAppScalars.ValidationMessageRequired">
             <summary>
             Validation Message
@@ -1974,6 +2234,27 @@
             Calls <see cref="M:Songhay.Publications.Models.OebpsTextToc.Write"/>.
             </summary>
         </member>
+        <member name="T:Songhay.Publications.PublicationLinesUtility">
+            <summary>
+            Shared routines for Publication Lines.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified content lines
+            to a Publications extract.
+            </summary>
+            <param name="contentLines">the collection of content lines</param>
+            <param name="length">The string-length of the extract.</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.PublicationLinesUtility.ConvertToLines(System.String)">
+            <summary>
+            Converts the specified <see cref="T:System.String"/>
+            into Publication lines.
+            </summary>
+            <param name="content">the content <see cref="T:System.String"/></param>
+        </member>
         <member name="T:Songhay.Publications.Validators.DocumentValidator">
             <summary>
             Validator for <see cref="T:Songhay.Publications.Models.Document"/>.
@@ -2014,19 +2295,22 @@
             Initializes a new instance of the <see cref="T:Songhay.Publications.Validators.SegmentValidator"/> class.
             </summary>
         </member>
-        <member name="T:Songhay.Extensions.JsonElementExtensions">
+        <member name="T:Songhay.Publications.YamlUtility">
             <summary>
-            Extensions of <see cref="T:System.Text.Json.JsonElement"/>.
+            Shared routines for `YamlDotNet`.
             </summary>
         </member>
-        <member name="M:Songhay.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)">
+        <member name="M:Songhay.Publications.YamlUtility.DeserializeYaml(System.String)">
             <summary>
-            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
-            to <c>TObject</c>.
+            Returns the <see cref="T:System.Collections.Generic.IDictionary`2"/>
+            from the specified YAML <see cref="T:System.String"/>.
             </summary>
-            <param name="element">the specified <see cref="T:System.Text.Json.JsonElement"/></param>
-            <typeparam name="TObject">the type to convert to</typeparam>
-            <returns></returns>
+            <param name="yaml">the YAML <see cref="T:System.String"/></param>
+            <returns>
+            Returns <see cref="T:System.Collections.Generic.IDictionary`2"/>
+            where <c>TKey</c> and <c>TValue</c> are converted from <see cref="T:System.Object"/>
+            to <see cref="T:System.String"/>
+            </returns>
         </member>
     </members>
 </doc>

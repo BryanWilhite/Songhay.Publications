@@ -1,3 +1,5 @@
+using FluentValidation;
+
 namespace Songhay.Publications.Validators;
 
 /// <summary>

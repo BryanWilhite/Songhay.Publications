@@ -1,8 +1,4 @@
 ﻿using System.IO.Compression;
-using System.Text.Json;
-using System.Text.Json.Nodes;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace Songhay.Publications.Activities;
 

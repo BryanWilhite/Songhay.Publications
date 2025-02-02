@@ -1,4 +1,6 @@
-﻿namespace Songhay.Publications.Extensions;
+﻿using FluentValidation.Results;
+
+namespace Songhay.Publications.Extensions;
 
 /// <summary>
 /// Extensions of <see cref="ISegment"/>
