@@ -26,7 +26,7 @@ IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
 builder.ConfigureServices((hostContext, services) =>
 {
-    string activityName = hostContext.Configuration["activity-name"];
+    string? activityName = hostContext.Configuration["activity-name"];
 
     services.AddLogging();
 

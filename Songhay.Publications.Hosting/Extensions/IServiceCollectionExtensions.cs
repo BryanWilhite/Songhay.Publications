@@ -25,11 +25,11 @@ public static class IServiceCollectionExtensions
         switch (activityName)
         {
             case nameof(MarkdownEntryActivity):
-                services.AddSingleton<IActivityWithTask, MarkdownEntryActivity>();
+                services.AddSingleton<IActivityTask, MarkdownEntryActivity>();
                 break;
 
             case nameof(SearchIndexActivity):
-                services.AddSingleton<IActivityWithTask, SearchIndexActivity>();
+                services.AddSingleton<IActivityTask, SearchIndexActivity>();
                 break;
         }
 

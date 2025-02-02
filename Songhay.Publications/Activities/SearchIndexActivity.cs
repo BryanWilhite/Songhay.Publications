@@ -10,8 +10,8 @@ namespace Songhay.Publications.Activities;
 /// <see cref="IActivity"/> implementation for Publication Search Indices
 /// </summary>
 /// <seealso cref="IActivity" />
-/// <seealso cref="IActivityConfigurationSupport" />
-public class SearchIndexActivity : IActivityWithTask
+/// <seealso cref="IActivityTask" />
+public class SearchIndexActivity : IActivityTask
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="MarkdownEntryActivity"/> class.
@@ -23,16 +23,6 @@ public class SearchIndexActivity : IActivityWithTask
         _configuration = configuration;
         _logger = logger;
     }
-
-    /// <summary>
-    /// Displays the help.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
-
-    /// <summary>Starts with the specified arguments.</summary>
-    /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs? args) => throw new NotImplementedException();
 
     /// <summary>
     /// Starts the <see cref="IActivity"/>.

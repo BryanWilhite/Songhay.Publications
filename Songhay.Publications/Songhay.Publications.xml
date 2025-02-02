@@ -244,18 +244,6 @@
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
-            <summary>
-            Displays the help.
-            </summary>
-            <param name="args">The arguments.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.Start(Songhay.Models.ProgramArgs)">
-            <summary>
-            Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
-            </summary>
-            <param name="args">The arguments.</param>
-        </member>
         <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync">
             <summary>
             Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
@@ -266,7 +254,7 @@
             <see cref="T:Songhay.Abstractions.IActivity"/> implementation for Publication Search Indices
             </summary>
             <seealso cref="T:Songhay.Abstractions.IActivity" />
-            <seealso cref="T:Songhay.Abstractions.IActivityConfigurationSupport" />
+            <seealso cref="T:Songhay.Abstractions.IActivityTask" />
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.SearchIndexActivity})">
             <summary>
@@ -274,16 +262,6 @@
             </summary>
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.DisplayHelp(Songhay.Models.ProgramArgs)">
-            <summary>
-            Displays the help.
-            </summary>
-            <param name="args">The arguments.</param>
-        </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.Start(Songhay.Models.ProgramArgs)">
-            <summary>Starts with the specified arguments.</summary>
-            <param name="args">The arguments.</param>
         </member>
         <member name="M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync">
             <summary>
@@ -329,7 +307,7 @@
         </member>
         <member name="M:Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger)">
             <summary>
-            Converts <see cref="T:Songhay.Models.ProgramArgs"/> to Presentation <see cref="T:System.IO.DirectoryInfo"/>.
+            Converts <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> to Presentation <see cref="T:System.IO.DirectoryInfo"/>.
             </summary>
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
@@ -814,17 +792,6 @@
             <param name="path">The path to the entry.</param>
             <param name="segmentId">the DBMS ID of the Publications Segment.</param>
             <param name="tag">The tag of the entry.</param>
-        </member>
-        <member name="T:Songhay.Publications.Extensions.ProgramArgsExtensions">
-            <summary>
-            Extensions of <see cref="T:Songhay.Models.ProgramArgs" />.
-            </summary>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.ProgramArgsExtensions.ToPresentationAndSettingsInfo(Songhay.Models.ProgramArgs)">
-            <summary>
-            Converts <see cref="T:Songhay.Models.ProgramArgs"/> to Presentation <see cref="T:System.IO.DirectoryInfo"/>.
-            </summary>
-            <param name="args">The arguments.</param>
         </member>
         <member name="T:Songhay.Publications.Extensions.PublicationContextExtensions">
             <summary>

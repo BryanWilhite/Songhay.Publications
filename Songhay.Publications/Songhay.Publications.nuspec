@@ -27,8 +27,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Debug\net6.0\Songhay.Publications*.dll" target="lib\net6.0" />
-    <file src="bin\Debug\net6.0\Songhay.Publications*.json" target="lib\net6.0" />
+    <file src="bin\Debug\net8.0\Songhay.Publications*.dll" target="lib\net8.0" />
+    <file src="bin\Debug\net8.0\Songhay.Publications*.json" target="lib\net8.0" />
     <file src="**\*.cs" exclude="**\obj\**" target="src" />
     <file src="..\LICENSE.md" target="" />
     <file src="..\README.md" target="" />
