@@ -1,8 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json.Nodes;
-using Songhay.Extensions;
-using Songhay.Publications.Extensions;
-using Songhay.Publications.Models;
+﻿using System.Text.Json.Nodes;
 
 namespace Songhay.Publications.Tests.Extensions;
 

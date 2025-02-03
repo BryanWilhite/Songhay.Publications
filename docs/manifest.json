@@ -1,0 +1,762 @@
+{
+  "source_base_path": "/home/rasx/sourceRoot/Songhay.Publications/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.IDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.IDocument.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.IFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.IFragment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.IIndexEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.IIndexEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.IIndexKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.IIndexKeyword.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.IIndexKeywordGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.IIndexKeywordGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.ISegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.ISegment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Activities.MarkdownEntryActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Activities.MarkdownEntryActivity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Activities.SearchIndexActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Activities.SearchIndexActivity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Activities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Activities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.DocumentEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.DocumentEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.ImageCandidateEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.ImageCandidateEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordGroupEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordGroupEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.ResponsiveImageEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.ResponsiveImageEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.SegmentEntityTypeConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.SegmentEntityTypeConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.EntityTypeConfigurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.PublicationsDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.PublicationsDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DataAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DataAccess.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.EpubUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.EpubUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.DirectoryInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.DirectoryInfoExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.FileInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.FileInfoExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.FragmentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.FragmentExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.GroupableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.GroupableExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.IConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.IConfigurationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.IDictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.IDictionaryExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.IDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.IDocumentExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.IndexEntryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.IndexEntryExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.JsonElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.JsonElementExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.JsonNodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.JsonNodeExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.JsonObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.JsonObjectExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.MarkdownEntryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.MarkdownEntryExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.PublicationContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.PublicationContextExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.ResponsiveImageExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.SegmentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.SegmentExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.MarkdownEntryUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.MarkdownEntryUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.MarkdownUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.MarkdownUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.CloneInitializers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.CloneInitializers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.DaisyConsortiumNcx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.DaisyConsortiumNcx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.Document.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.Fragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.Fragment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.IdpfPackage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.IdpfPackage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.ImageCandidate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.ImageCandidate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.ImageSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.ImageSize.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.IndexCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.IndexCommands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.IndexEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.IndexEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.IndexKeyword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.IndexKeyword.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.IndexKeywordGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.IndexKeywordGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.MarkdownEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.MarkdownEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.MarkdownPresentationCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.MarkdownPresentationCommands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.MarkdownPresentationDirectories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.MarkdownPresentationDirectories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.OebpsTextBiography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.OebpsTextBiography.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.OebpsTextCopyright.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.OebpsTextCopyright.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.OebpsTextDedication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.OebpsTextDedication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.OebpsTextToc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.OebpsTextToc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.PublicationAppScalars.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.PublicationAppScalars.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.PublicationChapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.PublicationChapter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.PublicationFiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.PublicationFiles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.PublicationNamespaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.PublicationNamespaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.ResponsiveImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.ResponsiveImage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.SearchIndexEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.SearchIndexEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.Segment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.Segment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.PublicationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.PublicationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.PublicationLinesUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.PublicationLinesUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.DocumentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.DocumentValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.FragmentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.FragmentValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.ITemporalValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.ITemporalValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.SegmentValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.SegmentValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.YamlUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.YamlUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "latest/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/toc.html"
+        },
+        ".json": {
+          "relative_path": "latest/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
-# Songhay.Publications
+# `Songhay.Publications`
 
 **NuGet package 📦:** [`Songhay.Publications`](https://www.nuget.org/packages/Songhay.Publications/)
 
-**Documentation 📚:** [`Songhay.Publications` API](https://bryanwilhite.github.io/Songhay.Publications/api/)
+**Documentation 📚:** [`Songhay.Publications` API](https://bryanwilhite.github.io/Songhay.Publications/)
 
 ## core reusable definitions for Songhay Studio Publications
 
@@ -22,12 +22,21 @@ The SQL Server _schema_ for `GenericWeb` features:
 
 These class definitions are still useful (without much SQL Server or Entity Framework). In fact, the Front Matter of `MarkdownEntry` is based on the GenericWeb Document.
 
+## `Songhay.Publications.DataAccess`
+
+**NuGet package 📦:** [`Songhay.Publications.DataAccess`](https://www.nuget.org/packages/Songhay.Publications.DataAccess/)
+
+`Songhay.Publications.DataAccess` adds SQLite-based Entity Framework data access for Songhay Studio Publications. This represents a renewed commitment to [SQLite](https://www.sqlite.org/index.html) in this Studio.
+
+`Songhay.Publications.DataAccess` is stating with the `PublicationsDbContext` [class](./Songhay.Publications.DataAccess/PublicationsDbContext.cs).
+
 ## Studio packages dependent on `Songhay.Publications`
 
 ```mermaid
 graph BT
     pubs[`Songhay.Publications`]
 
+    pubs-->1[`Songhay.Publications.DataAccess`]
     pubs-->1[`Songhay.Player`]
     pubs-->2[`Songhay.Publications.Analytics`]
     pubs-->3[`Songhay.Publications.KinteSpace`]

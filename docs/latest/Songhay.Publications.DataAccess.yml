@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.DataAccess
+  commentId: N:Songhay.Publications.DataAccess
+  id: Songhay.Publications.DataAccess
+  children:
+  - Songhay.Publications.DataAccess.PublicationsDbContext
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications.DataAccess
+  nameWithType: Songhay.Publications.DataAccess
+  fullName: Songhay.Publications.DataAccess
+  type: Namespace
+  assemblies:
+  - Songhay.Publications.DataAccess
+references:
+- uid: Songhay.Publications.DataAccess.PublicationsDbContext
+  commentId: T:Songhay.Publications.DataAccess.PublicationsDbContext
+  href: Songhay.Publications.DataAccess.PublicationsDbContext.html
+  name: PublicationsDbContext
+  nameWithType: PublicationsDbContext
+  fullName: Songhay.Publications.DataAccess.PublicationsDbContext

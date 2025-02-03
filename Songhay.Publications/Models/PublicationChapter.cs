@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Songhay.Publications.Models;
+﻿namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines content for the chapter

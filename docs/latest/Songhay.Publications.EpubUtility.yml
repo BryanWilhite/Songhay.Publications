@@ -1,0 +1,513 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.EpubUtility
+  commentId: T:Songhay.Publications.EpubUtility
+  id: EpubUtility
+  parent: Songhay.Publications
+  children:
+  - Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  - Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)
+  langs:
+  - csharp
+  - vb
+  name: EpubUtility
+  nameWithType: EpubUtility
+  fullName: Songhay.Publications.EpubUtility
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/EpubUtility.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubUtility
+    path: ../Songhay.Publications/EpubUtility.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Shared routines for EPUB pipeline automation.
+  example: []
+  syntax:
+    content: public static class EpubUtility
+    content.vb: Public Module EpubUtility
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  commentId: M:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  id: GetUnicodeWithBomEncoding
+  parent: Songhay.Publications.EpubUtility
+  langs:
+  - csharp
+  - vb
+  name: GetUnicodeWithBomEncoding()
+  nameWithType: EpubUtility.GetUnicodeWithBomEncoding()
+  fullName: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/EpubUtility.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetUnicodeWithBomEncoding
+    path: ../Songhay.Publications/EpubUtility.cs
+    startLine: 11
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: >-
+    Gets <xref href="System.Text.UTF8Encoding" data-throw-if-not-resolved="false"></xref>
+
+    instantiated with <code>encoderShouldEmitUTF8Identifier: true</code>.
+  example: []
+  syntax:
+    content: public static Encoding GetUnicodeWithBomEncoding()
+    return:
+      type: System.Text.Encoding
+    content.vb: Public Shared Function GetUnicodeWithBomEncoding() As Encoding
+  overload: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding*
+- uid: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)
+  commentId: M:Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)
+  id: SaveAsUnicodeWithBom(System.Xml.Linq.XDocument,System.String)
+  parent: Songhay.Publications.EpubUtility
+  langs:
+  - csharp
+  - vb
+  name: SaveAsUnicodeWithBom(XDocument, string)
+  nameWithType: EpubUtility.SaveAsUnicodeWithBom(XDocument, string)
+  fullName: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument, string)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/EpubUtility.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: SaveAsUnicodeWithBom
+    path: ../Songhay.Publications/EpubUtility.cs
+    startLine: 20
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: >-
+    Saves the specified <xref href="System.Xml.Linq.XDocument" data-throw-if-not-resolved="false"></xref>
+
+    with <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref> encoding
+
+    from <xref href="Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void SaveAsUnicodeWithBom(XDocument document, string path)
+    parameters:
+    - id: document
+      type: System.Xml.Linq.XDocument
+      description: ''
+    - id: path
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub SaveAsUnicodeWithBom(document As XDocument, path As String)
+  overload: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom*
+  nameWithType.vb: EpubUtility.SaveAsUnicodeWithBom(XDocument, String)
+  fullName.vb: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom(System.Xml.Linq.XDocument, String)
+  name.vb: SaveAsUnicodeWithBom(XDocument, String)
+references:
+- uid: Songhay.Publications
+  commentId: N:Songhay.Publications
+  href: Songhay.html
+  name: Songhay.Publications
+  nameWithType: Songhay.Publications
+  fullName: Songhay.Publications
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Text.UTF8Encoding
+  commentId: T:System.Text.UTF8Encoding
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.utf8encoding
+  name: UTF8Encoding
+  nameWithType: UTF8Encoding
+  fullName: System.Text.UTF8Encoding
+- uid: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding*
+  commentId: Overload:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  href: Songhay.Publications.EpubUtility.html#Songhay_Publications_EpubUtility_GetUnicodeWithBomEncoding
+  name: GetUnicodeWithBomEncoding
+  nameWithType: EpubUtility.GetUnicodeWithBomEncoding
+  fullName: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.encoding
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: System.Xml.Linq.XDocument
+  commentId: T:System.Xml.Linq.XDocument
+  parent: System.Xml.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.xml.linq.xdocument
+  name: XDocument
+  nameWithType: XDocument
+  fullName: System.Xml.Linq.XDocument
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  commentId: M:Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+  href: Songhay.Publications.EpubUtility.html#Songhay_Publications_EpubUtility_GetUnicodeWithBomEncoding
+  name: GetUnicodeWithBomEncoding()
+  nameWithType: EpubUtility.GetUnicodeWithBomEncoding()
+  fullName: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding()
+  spec.csharp:
+  - uid: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+    name: GetUnicodeWithBomEncoding
+    href: Songhay.Publications.EpubUtility.html#Songhay_Publications_EpubUtility_GetUnicodeWithBomEncoding
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.EpubUtility.GetUnicodeWithBomEncoding
+    name: GetUnicodeWithBomEncoding
+    href: Songhay.Publications.EpubUtility.html#Songhay_Publications_EpubUtility_GetUnicodeWithBomEncoding
+  - name: (
+  - name: )
+- uid: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom*
+  commentId: Overload:Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom
+  href: Songhay.Publications.EpubUtility.html#Songhay_Publications_EpubUtility_SaveAsUnicodeWithBom_System_Xml_Linq_XDocument_System_String_
+  name: SaveAsUnicodeWithBom
+  nameWithType: EpubUtility.SaveAsUnicodeWithBom
+  fullName: Songhay.Publications.EpubUtility.SaveAsUnicodeWithBom
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Xml.Linq
+  commentId: N:System.Xml.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Xml.Linq
+  nameWithType: System.Xml.Linq
+  fullName: System.Xml.Linq
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Xml
+    name: Xml
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml
+  - name: .
+  - uid: System.Xml.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml.linq
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Xml
+    name: Xml
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml
+  - name: .
+  - uid: System.Xml.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml.linq

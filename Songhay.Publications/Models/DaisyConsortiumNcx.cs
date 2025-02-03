@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using Microsoft.Extensions.Logging;
-
-namespace Songhay.Publications.Models;
+﻿namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines the contents needed to write

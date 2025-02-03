@@ -1,0 +1,844 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.IndexKeywordGroup
+  commentId: T:Songhay.Publications.Models.IndexKeywordGroup
+  id: IndexKeywordGroup
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.IndexKeywordGroup.ClientId
+  - Songhay.Publications.Models.IndexKeywordGroup.EndDate
+  - Songhay.Publications.Models.IndexKeywordGroup.Id
+  - Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+  - Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+  - Songhay.Publications.Models.IndexKeywordGroup.Name
+  langs:
+  - csharp
+  - vb
+  name: IndexKeywordGroup
+  nameWithType: IndexKeywordGroup
+  fullName: Songhay.Publications.Models.IndexKeywordGroup
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IndexKeywordGroup
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Publication Index Keyword.
+  example: []
+  syntax:
+    content: 'public class IndexKeywordGroup : IIndexKeywordGroup, ITemporal'
+    content.vb: Public Class IndexKeywordGroup Implements IIndexKeywordGroup, ITemporal
+  inheritance:
+  - System.Object
+  implements:
+  - Songhay.Publications.Abstractions.IIndexKeywordGroup
+  - Songhay.Abstractions.ITemporal
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.IndexKeywordGroup.Id
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.Id
+  id: Id
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IndexKeywordGroup.Id
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.Id
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Id
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 10
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Index Keyword Group ID.
+  example: []
+  syntax:
+    content: public int? Id { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Id As Integer?
+  overload: Songhay.Publications.Models.IndexKeywordGroup.Id*
+  implements:
+  - Songhay.Publications.Abstractions.IIndexKeywordGroup.Id
+- uid: Songhay.Publications.Models.IndexKeywordGroup.ClientId
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.ClientId
+  id: ClientId
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: ClientId
+  nameWithType: IndexKeywordGroup.ClientId
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.ClientId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ClientId
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 16
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Index Keyword Group Client ID.
+  example: []
+  syntax:
+    content: public string? ClientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientId As String
+  overload: Songhay.Publications.Models.IndexKeywordGroup.ClientId*
+  implements:
+  - Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
+- uid: Songhay.Publications.Models.IndexKeywordGroup.Name
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.Name
+  id: Name
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IndexKeywordGroup.Name
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.Name
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Name
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 22
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Index Keyword Group Name.
+  example: []
+  syntax:
+    content: public string? Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Songhay.Publications.Models.IndexKeywordGroup.Name*
+  implements:
+  - Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
+- uid: Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+  id: InceptDate
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: InceptDate
+  nameWithType: IndexKeywordGroup.InceptDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: InceptDate
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 27
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the incept date.
+  example: []
+  syntax:
+    content: public DateTime? InceptDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property InceptDate As Date?
+  overload: Songhay.Publications.Models.IndexKeywordGroup.InceptDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.InceptDate
+- uid: Songhay.Publications.Models.IndexKeywordGroup.EndDate
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.EndDate
+  id: EndDate
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: IndexKeywordGroup.EndDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.EndDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EndDate
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 32
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the end date.
+  example: []
+  syntax:
+    content: public DateTime? EndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As Date?
+  overload: Songhay.Publications.Models.IndexKeywordGroup.EndDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.EndDate
+- uid: Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+  commentId: P:Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+  id: ModificationDate
+  parent: Songhay.Publications.Models.IndexKeywordGroup
+  langs:
+  - csharp
+  - vb
+  name: ModificationDate
+  nameWithType: IndexKeywordGroup.ModificationDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/IndexKeywordGroup.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ModificationDate
+    path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
+    startLine: 37
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the modification date.
+  example: []
+  syntax:
+    content: public DateTime? ModificationDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property ModificationDate As Date?
+  overload: Songhay.Publications.Models.IndexKeywordGroup.ModificationDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.ModificationDate
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Songhay.Publications.Abstractions.IIndexKeywordGroup
+  commentId: T:Songhay.Publications.Abstractions.IIndexKeywordGroup
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IIndexKeywordGroup.html
+  name: IIndexKeywordGroup
+  nameWithType: IIndexKeywordGroup
+  fullName: Songhay.Publications.Abstractions.IIndexKeywordGroup
+- uid: Songhay.Abstractions.ITemporal
+  commentId: T:Songhay.Abstractions.ITemporal
+  parent: Songhay.Abstractions
+  isExternal: true
+  name: ITemporal
+  nameWithType: ITemporal
+  fullName: Songhay.Abstractions.ITemporal
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+- uid: Songhay.Abstractions
+  commentId: N:Songhay.Abstractions
+  isExternal: true
+  name: Songhay.Abstractions
+  nameWithType: Songhay.Abstractions
+  fullName: Songhay.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Models.IndexKeywordGroup.Id*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.Id
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_Id
+  name: Id
+  nameWithType: IndexKeywordGroup.Id
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.Id
+- uid: Songhay.Publications.Abstractions.IIndexKeywordGroup.Id
+  commentId: P:Songhay.Publications.Abstractions.IIndexKeywordGroup.Id
+  parent: Songhay.Publications.Abstractions.IIndexKeywordGroup
+  href: Songhay.Publications.Abstractions.IIndexKeywordGroup.html#Songhay_Publications_Abstractions_IIndexKeywordGroup_Id
+  name: Id
+  nameWithType: IIndexKeywordGroup.Id
+  fullName: Songhay.Publications.Abstractions.IIndexKeywordGroup.Id
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Songhay.Publications.Models.IndexKeywordGroup.ClientId*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.ClientId
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_ClientId
+  name: ClientId
+  nameWithType: IndexKeywordGroup.ClientId
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.ClientId
+- uid: Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
+  commentId: P:Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
+  parent: Songhay.Publications.Abstractions.IIndexKeywordGroup
+  href: Songhay.Publications.Abstractions.IIndexKeywordGroup.html#Songhay_Publications_Abstractions_IIndexKeywordGroup_ClientId
+  name: ClientId
+  nameWithType: IIndexKeywordGroup.ClientId
+  fullName: Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Songhay.Publications.Models.IndexKeywordGroup.Name*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.Name
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_Name
+  name: Name
+  nameWithType: IndexKeywordGroup.Name
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.Name
+- uid: Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
+  commentId: P:Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
+  parent: Songhay.Publications.Abstractions.IIndexKeywordGroup
+  href: Songhay.Publications.Abstractions.IIndexKeywordGroup.html#Songhay_Publications_Abstractions_IIndexKeywordGroup_Name
+  name: Name
+  nameWithType: IIndexKeywordGroup.Name
+  fullName: Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
+- uid: Songhay.Publications.Models.IndexKeywordGroup.InceptDate*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_InceptDate
+  name: InceptDate
+  nameWithType: IndexKeywordGroup.InceptDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.InceptDate
+- uid: Songhay.Abstractions.ITemporal.InceptDate
+  commentId: P:Songhay.Abstractions.ITemporal.InceptDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: InceptDate
+  nameWithType: ITemporal.InceptDate
+  fullName: Songhay.Abstractions.ITemporal.InceptDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: Songhay.Publications.Models.IndexKeywordGroup.EndDate*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.EndDate
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_EndDate
+  name: EndDate
+  nameWithType: IndexKeywordGroup.EndDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.EndDate
+- uid: Songhay.Abstractions.ITemporal.EndDate
+  commentId: P:Songhay.Abstractions.ITemporal.EndDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: EndDate
+  nameWithType: ITemporal.EndDate
+  fullName: Songhay.Abstractions.ITemporal.EndDate
+- uid: Songhay.Publications.Models.IndexKeywordGroup.ModificationDate*
+  commentId: Overload:Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+  href: Songhay.Publications.Models.IndexKeywordGroup.html#Songhay_Publications_Models_IndexKeywordGroup_ModificationDate
+  name: ModificationDate
+  nameWithType: IndexKeywordGroup.ModificationDate
+  fullName: Songhay.Publications.Models.IndexKeywordGroup.ModificationDate
+- uid: Songhay.Abstractions.ITemporal.ModificationDate
+  commentId: P:Songhay.Abstractions.ITemporal.ModificationDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: ModificationDate
+  nameWithType: ITemporal.ModificationDate
+  fullName: Songhay.Abstractions.ITemporal.ModificationDate

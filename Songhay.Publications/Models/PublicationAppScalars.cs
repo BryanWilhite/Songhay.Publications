@@ -11,6 +11,11 @@ public static class PublicationAppScalars
     public const string ConventionalSettingsFile = "app-settings.songhay-system.json";
 
     /// <summary>
+    /// The conventional “fence” for front matter
+    /// </summary>
+    public const string FrontMatterFence = "---";
+
+    /// <summary>
     /// Validation Message
     /// </summary>
     public const string ValidationMessageRequired = "Value is required.";

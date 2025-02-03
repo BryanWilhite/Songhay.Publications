@@ -1,0 +1,736 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.PublicationFiles
+  commentId: T:Songhay.Publications.Models.PublicationFiles
+  id: PublicationFiles
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc
+  - Songhay.Publications.Models.PublicationFiles.EpubFileBiography
+  - Songhay.Publications.Models.PublicationFiles.EpubFileCopyright
+  - Songhay.Publications.Models.PublicationFiles.EpubFileDedication
+  - Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  - Songhay.Publications.Models.PublicationFiles.EpubFileToc
+  - Songhay.Publications.Models.PublicationFiles.EpubMarkdownBiography
+  - Songhay.Publications.Models.PublicationFiles.EpubMarkdownDedication
+  - Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  - Songhay.Publications.Models.PublicationFiles.EpubTemplateBiography
+  - Songhay.Publications.Models.PublicationFiles.EpubTemplateChapter
+  - Songhay.Publications.Models.PublicationFiles.EpubTemplateDedication
+  - Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest
+  langs:
+  - csharp
+  - vb
+  name: PublicationFiles
+  nameWithType: PublicationFiles
+  fullName: Songhay.Publications.Models.PublicationFiles
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PublicationFiles
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Centralizes the EPUB files.
+  example: []
+  syntax:
+    content: public static class PublicationFiles
+    content.vb: Public Module PublicationFiles
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc
+  commentId: F:Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc
+  id: DaisyConsortiumNcxToc
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: DaisyConsortiumNcxToc
+  nameWithType: PublicationFiles.DaisyConsortiumNcxToc
+  fullName: Songhay.Publications.Models.PublicationFiles.DaisyConsortiumNcxToc
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: DaisyConsortiumNcxToc
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 18
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB DAISY Consortium Navigation Control file.
+  remarks: >-
+    “The NCX file (Navigation Control file for XML),
+
+    traditionally named toc.ncx, contains the hierarchical table
+
+    of contents for the EPUB file.”
+
+
+    https://en.wikipedia.org/wiki/EPUB
+
+    https://web.archive.org/web/20090831133730/http://www.niso.org/workrooms/daisy/Z39-86-2005.html#NCX
+  example: []
+  syntax:
+    content: public const string DaisyConsortiumNcxToc = "toc.ncx"
+    return:
+      type: System.String
+    content.vb: Public Const DaisyConsortiumNcxToc As String = "toc.ncx"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileBiography
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileBiography
+  id: EpubFileBiography
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubFileBiography
+  nameWithType: PublicationFiles.EpubFileBiography
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileBiography
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubFileBiography
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 23
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template output file.
+  example: []
+  syntax:
+    content: public const string EpubFileBiography = "biography.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubFileBiography As String = "biography.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileCopyright
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileCopyright
+  id: EpubFileCopyright
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubFileCopyright
+  nameWithType: PublicationFiles.EpubFileCopyright
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileCopyright
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubFileCopyright
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 28
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template output file.
+  example: []
+  syntax:
+    content: public const string EpubFileCopyright = "copyright.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubFileCopyright As String = "copyright.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileDedication
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileDedication
+  id: EpubFileDedication
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubFileDedication
+  nameWithType: PublicationFiles.EpubFileDedication
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileDedication
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubFileDedication
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 33
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template output file.
+  example: []
+  syntax:
+    content: public const string EpubFileDedication = "dedication.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubFileDedication As String = "dedication.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  id: EpubFileTitle
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubFileTitle
+  nameWithType: PublicationFiles.EpubFileTitle
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubFileTitle
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 38
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template output file.
+  example: []
+  syntax:
+    content: public const string EpubFileTitle = "title.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubFileTitle As String = "title.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileToc
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileToc
+  id: EpubFileToc
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubFileToc
+  nameWithType: PublicationFiles.EpubFileToc
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileToc
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubFileToc
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 43
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template output file.
+  example: []
+  syntax:
+    content: public const string EpubFileToc = "toc.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubFileToc As String = "toc.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubMarkdownBiography
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubMarkdownBiography
+  id: EpubMarkdownBiography
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubMarkdownBiography
+  nameWithType: PublicationFiles.EpubMarkdownBiography
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubMarkdownBiography
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubMarkdownBiography
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 48
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template input file.
+  example: []
+  syntax:
+    content: public const string EpubMarkdownBiography = "author-biography.md"
+    return:
+      type: System.String
+    content.vb: Public Const EpubMarkdownBiography As String = "author-biography.md"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubMarkdownDedication
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubMarkdownDedication
+  id: EpubMarkdownDedication
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubMarkdownDedication
+  nameWithType: PublicationFiles.EpubMarkdownDedication
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubMarkdownDedication
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubMarkdownDedication
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 53
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template input file.
+  example: []
+  syntax:
+    content: public const string EpubMarkdownDedication = "author-dedication.md"
+    return:
+      type: System.String
+    content.vb: Public Const EpubMarkdownDedication As String = "author-dedication.md"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  id: EpubMetadata
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubMetadata
+  nameWithType: PublicationFiles.EpubMetadata
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubMetadata
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 58
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Conventional Songhay System metadata for EPUB publications.
+  example: []
+  syntax:
+    content: public const string EpubMetadata = "publication-meta.json"
+    return:
+      type: System.String
+    content.vb: Public Const EpubMetadata As String = "publication-meta.json"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubTemplateBiography
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubTemplateBiography
+  id: EpubTemplateBiography
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubTemplateBiography
+  nameWithType: PublicationFiles.EpubTemplateBiography
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubTemplateBiography
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubTemplateBiography
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 63
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template file.
+  example: []
+  syntax:
+    content: public const string EpubTemplateBiography = "biography-template.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubTemplateBiography As String = "biography-template.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubTemplateChapter
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubTemplateChapter
+  id: EpubTemplateChapter
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubTemplateChapter
+  nameWithType: PublicationFiles.EpubTemplateChapter
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubTemplateChapter
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubTemplateChapter
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 68
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template file.
+  example: []
+  syntax:
+    content: public const string EpubTemplateChapter = "chapter-template.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubTemplateChapter As String = "chapter-template.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.EpubTemplateDedication
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubTemplateDedication
+  id: EpubTemplateDedication
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: EpubTemplateDedication
+  nameWithType: PublicationFiles.EpubTemplateDedication
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubTemplateDedication
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EpubTemplateDedication
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 73
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: EPUB XHTML template file.
+  example: []
+  syntax:
+    content: public const string EpubTemplateDedication = "dedication-template.xhtml"
+    return:
+      type: System.String
+    content.vb: Public Const EpubTemplateDedication As String = "dedication-template.xhtml"
+- uid: Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest
+  commentId: F:Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest
+  id: IdpfcOpfManifest
+  parent: Songhay.Publications.Models.PublicationFiles
+  langs:
+  - csharp
+  - vb
+  name: IdpfcOpfManifest
+  nameWithType: PublicationFiles.IdpfcOpfManifest
+  fullName: Songhay.Publications.Models.PublicationFiles.IdpfcOpfManifest
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationFiles.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IdpfcOpfManifest
+    path: ../Songhay.Publications/Models/PublicationFiles.cs
+    startLine: 88
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: >-
+    International Digital Publishing Forum
+
+    Open Packaging Format manifest.
+  remarks: >-
+    “Open Packaging Format (OPF) 2.0.1, describes the structure
+
+    of the .epub file in XML…
+
+    The OPF file, traditionally named content.opf,
+
+    houses the EPUB book’s metadata, file manifest,
+
+    and linear reading order.”
+
+
+    https://en.wikipedia.org/wiki/EPUB
+  example: []
+  syntax:
+    content: public const string IdpfcOpfManifest = "content.opf"
+    return:
+      type: System.String
+    content.vb: Public Const IdpfcOpfManifest As String = "content.opf"
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,1065 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Abstractions.IIndexEntry
+  commentId: T:Songhay.Publications.Abstractions.IIndexEntry
+  id: IIndexEntry
+  parent: Songhay.Publications.Abstractions
+  children:
+  - Songhay.Publications.Abstractions.IIndexEntry.Documents
+  - Songhay.Publications.Abstractions.IIndexEntry.Segments
+  langs:
+  - csharp
+  - vb
+  name: IIndexEntry
+  nameWithType: IIndexEntry
+  fullName: Songhay.Publications.Abstractions.IIndexEntry
+  type: Interface
+  source:
+    remote:
+      path: Songhay.Publications/Abstractions/IIndexEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IIndexEntry
+    path: ../Songhay.Publications/Abstractions/IIndexEntry.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Abstractions
+  summary: Defines a Publication Index Entry
+  example: []
+  syntax:
+    content: 'public interface IIndexEntry : ISegment, ITemporal'
+    content.vb: Public Interface IIndexEntry Inherits ISegment, ITemporal
+  inheritedMembers:
+  - Songhay.Publications.Abstractions.ISegment.SegmentId
+  - Songhay.Publications.Abstractions.ISegment.SegmentName
+  - Songhay.Publications.Abstractions.ISegment.SortOrdinal
+  - Songhay.Publications.Abstractions.ISegment.ParentSegmentId
+  - Songhay.Publications.Abstractions.ISegment.ClientId
+  - Songhay.Publications.Abstractions.ISegment.IsActive
+  - Songhay.Abstractions.ITemporal.EndDate
+  - Songhay.Abstractions.ITemporal.InceptDate
+  - Songhay.Abstractions.ITemporal.ModificationDate
+  extensionMethods:
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.Clone
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.HasDocuments
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.SetDefaults
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(System.Boolean)
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.WithDefaults
+  - Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.ISegment})
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Abstractions.IIndexEntry.Segments
+  commentId: P:Songhay.Publications.Abstractions.IIndexEntry.Segments
+  id: Segments
+  parent: Songhay.Publications.Abstractions.IIndexEntry
+  langs:
+  - csharp
+  - vb
+  name: Segments
+  nameWithType: IIndexEntry.Segments
+  fullName: Songhay.Publications.Abstractions.IIndexEntry.Segments
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Abstractions/IIndexEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Segments
+    path: ../Songhay.Publications/Abstractions/IIndexEntry.cs
+    startLine: 11
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Abstractions
+  summary: Index Segments
+  example: []
+  syntax:
+    content: IIndexEntry[] Segments { get; set; }
+    parameters: []
+    return:
+      type: Songhay.Publications.Abstractions.IIndexEntry[]
+      description: ''
+    content.vb: Property Segments As IIndexEntry()
+  overload: Songhay.Publications.Abstractions.IIndexEntry.Segments*
+- uid: Songhay.Publications.Abstractions.IIndexEntry.Documents
+  commentId: P:Songhay.Publications.Abstractions.IIndexEntry.Documents
+  id: Documents
+  parent: Songhay.Publications.Abstractions.IIndexEntry
+  langs:
+  - csharp
+  - vb
+  name: Documents
+  nameWithType: IIndexEntry.Documents
+  fullName: Songhay.Publications.Abstractions.IIndexEntry.Documents
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Abstractions/IIndexEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Documents
+    path: ../Songhay.Publications/Abstractions/IIndexEntry.cs
+    startLine: 17
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Abstractions
+  summary: Index Documents
+  example: []
+  syntax:
+    content: IDocument[] Documents { get; set; }
+    parameters: []
+    return:
+      type: Songhay.Publications.Abstractions.IDocument[]
+      description: ''
+    content.vb: Property Documents As IDocument()
+  overload: Songhay.Publications.Abstractions.IIndexEntry.Documents*
+references:
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+- uid: Songhay.Publications.Abstractions.ISegment.SegmentId
+  commentId: P:Songhay.Publications.Abstractions.ISegment.SegmentId
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_SegmentId
+  name: SegmentId
+  nameWithType: ISegment.SegmentId
+  fullName: Songhay.Publications.Abstractions.ISegment.SegmentId
+- uid: Songhay.Publications.Abstractions.ISegment.SegmentName
+  commentId: P:Songhay.Publications.Abstractions.ISegment.SegmentName
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_SegmentName
+  name: SegmentName
+  nameWithType: ISegment.SegmentName
+  fullName: Songhay.Publications.Abstractions.ISegment.SegmentName
+- uid: Songhay.Publications.Abstractions.ISegment.SortOrdinal
+  commentId: P:Songhay.Publications.Abstractions.ISegment.SortOrdinal
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_SortOrdinal
+  name: SortOrdinal
+  nameWithType: ISegment.SortOrdinal
+  fullName: Songhay.Publications.Abstractions.ISegment.SortOrdinal
+- uid: Songhay.Publications.Abstractions.ISegment.ParentSegmentId
+  commentId: P:Songhay.Publications.Abstractions.ISegment.ParentSegmentId
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_ParentSegmentId
+  name: ParentSegmentId
+  nameWithType: ISegment.ParentSegmentId
+  fullName: Songhay.Publications.Abstractions.ISegment.ParentSegmentId
+- uid: Songhay.Publications.Abstractions.ISegment.ClientId
+  commentId: P:Songhay.Publications.Abstractions.ISegment.ClientId
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_ClientId
+  name: ClientId
+  nameWithType: ISegment.ClientId
+  fullName: Songhay.Publications.Abstractions.ISegment.ClientId
+- uid: Songhay.Publications.Abstractions.ISegment.IsActive
+  commentId: P:Songhay.Publications.Abstractions.ISegment.IsActive
+  parent: Songhay.Publications.Abstractions.ISegment
+  href: Songhay.Publications.Abstractions.ISegment.html#Songhay_Publications_Abstractions_ISegment_IsActive
+  name: IsActive
+  nameWithType: ISegment.IsActive
+  fullName: Songhay.Publications.Abstractions.ISegment.IsActive
+- uid: Songhay.Abstractions.ITemporal.EndDate
+  commentId: P:Songhay.Abstractions.ITemporal.EndDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: EndDate
+  nameWithType: ITemporal.EndDate
+  fullName: Songhay.Abstractions.ITemporal.EndDate
+- uid: Songhay.Abstractions.ITemporal.InceptDate
+  commentId: P:Songhay.Abstractions.ITemporal.InceptDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: InceptDate
+  nameWithType: ITemporal.InceptDate
+  fullName: Songhay.Abstractions.ITemporal.InceptDate
+- uid: Songhay.Abstractions.ITemporal.ModificationDate
+  commentId: P:Songhay.Abstractions.ITemporal.ModificationDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: ModificationDate
+  nameWithType: ITemporal.ModificationDate
+  fullName: Songhay.Abstractions.ITemporal.ModificationDate
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.Clone
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  name: Clone(ISegment)
+  nameWithType: SegmentExtensions.Clone(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+    name: Clone
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+    name: Clone
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.HasDocuments
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  name: HasDocuments(ISegment)
+  nameWithType: SegmentExtensions.HasDocuments(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+    name: HasDocuments
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+    name: HasDocuments
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.SetDefaults
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  name: SetDefaults(ISegment)
+  nameWithType: SegmentExtensions.SetDefaults(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  name: ToDisplayText(ISegment)
+  nameWithType: SegmentExtensions.ToDisplayText(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  name: ToDisplayText(ISegment, bool)
+  nameWithType: SegmentExtensions.ToDisplayText(ISegment, bool)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment, bool)
+  nameWithType.vb: SegmentExtensions.ToDisplayText(ISegment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment, Boolean)
+  name.vb: ToDisplayText(ISegment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  name: ToMenuDisplayItemModel(ISegment)
+  nameWithType: SegmentExtensions.ToMenuDisplayItemModel(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(ISegment, IGroupable)
+  nameWithType: SegmentExtensions.ToMenuDisplayItemModel(ISegment, IGroupable)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  name: ToPublicationIndexEntry(ISegment)
+  nameWithType: SegmentExtensions.ToPublicationIndexEntry(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+    name: ToPublicationIndexEntry
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+    name: ToPublicationIndexEntry
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  name: ToValidationResult(ISegment)
+  nameWithType: SegmentExtensions.ToValidationResult(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.WithDefaults
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  name: WithDefaults(ISegment)
+  nameWithType: SegmentExtensions.WithDefaults(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment.Songhay.Publications.Extensions.SegmentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.ISegment})
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  definition: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  name: WithEdit(ISegment, Action<ISegment>)
+  nameWithType: SegmentExtensions.WithEdit(ISegment, Action<ISegment>)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment, System.Action<Songhay.Publications.Abstractions.ISegment>)
+  nameWithType.vb: SegmentExtensions.WithEdit(ISegment, Action(Of ISegment))
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment, System.Action(Of Songhay.Publications.Abstractions.ISegment))
+  name.vb: WithEdit(ISegment, Action(Of ISegment))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Abstractions.ISegment
+  commentId: T:Songhay.Publications.Abstractions.ISegment
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.ISegment.html
+  name: ISegment
+  nameWithType: ISegment
+  fullName: Songhay.Publications.Abstractions.ISegment
+- uid: Songhay.Abstractions.ITemporal
+  commentId: T:Songhay.Abstractions.ITemporal
+  parent: Songhay.Abstractions
+  isExternal: true
+  name: ITemporal
+  nameWithType: ITemporal
+  fullName: Songhay.Abstractions.ITemporal
+- uid: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  name: Clone(ISegment)
+  nameWithType: SegmentExtensions.Clone(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+    name: Clone
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.Clone(Songhay.Publications.Abstractions.ISegment)
+    name: Clone
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions
+  commentId: T:Songhay.Publications.Extensions.SegmentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.SegmentExtensions.html
+  name: SegmentExtensions
+  nameWithType: SegmentExtensions
+  fullName: Songhay.Publications.Extensions.SegmentExtensions
+- uid: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  name: HasDocuments(ISegment)
+  nameWithType: SegmentExtensions.HasDocuments(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+    name: HasDocuments
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.HasDocuments(Songhay.Publications.Abstractions.ISegment)
+    name: HasDocuments
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  name: SetDefaults(ISegment)
+  nameWithType: SegmentExtensions.SetDefaults(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  name: ToDisplayText(ISegment)
+  nameWithType: SegmentExtensions.ToDisplayText(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+  isExternal: true
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  name: ToDisplayText(ISegment, bool)
+  nameWithType: SegmentExtensions.ToDisplayText(ISegment, bool)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment, bool)
+  nameWithType.vb: SegmentExtensions.ToDisplayText(ISegment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment, Boolean)
+  name.vb: ToDisplayText(ISegment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  name: ToMenuDisplayItemModel(ISegment)
+  nameWithType: SegmentExtensions.ToMenuDisplayItemModel(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+  isExternal: true
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(ISegment, IGroupable)
+  nameWithType: SegmentExtensions.ToMenuDisplayItemModel(ISegment, IGroupable)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  name: ToPublicationIndexEntry(ISegment)
+  nameWithType: SegmentExtensions.ToPublicationIndexEntry(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+    name: ToPublicationIndexEntry
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntry(Songhay.Publications.Abstractions.ISegment)
+    name: ToPublicationIndexEntry
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  name: ToValidationResult(ISegment)
+  nameWithType: SegmentExtensions.ToValidationResult(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.ISegment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  name: WithDefaults(ISegment)
+  nameWithType: SegmentExtensions.WithDefaults(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithDefaults(Songhay.Publications.Abstractions.ISegment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+  isExternal: true
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  name: WithEdit(ISegment, Action<ISegment>)
+  nameWithType: SegmentExtensions.WithEdit(ISegment, Action<ISegment>)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment, System.Action<Songhay.Publications.Abstractions.ISegment>)
+  nameWithType.vb: SegmentExtensions.WithEdit(ISegment, Action(Of ISegment))
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment, System.Action(Of Songhay.Publications.Abstractions.ISegment))
+  name.vb: WithEdit(ISegment, Action(Of ISegment))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.SegmentExtensions.WithEdit(Songhay.Publications.Abstractions.ISegment,System.Action{Songhay.Publications.Abstractions.ISegment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    href: Songhay.Publications.Abstractions.ISegment.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Abstractions
+  commentId: N:Songhay.Abstractions
+  isExternal: true
+  name: Songhay.Abstractions
+  nameWithType: Songhay.Abstractions
+  fullName: Songhay.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Abstractions.IIndexEntry.Segments*
+  commentId: Overload:Songhay.Publications.Abstractions.IIndexEntry.Segments
+  href: Songhay.Publications.Abstractions.IIndexEntry.html#Songhay_Publications_Abstractions_IIndexEntry_Segments
+  name: Segments
+  nameWithType: IIndexEntry.Segments
+  fullName: Songhay.Publications.Abstractions.IIndexEntry.Segments
+- uid: Songhay.Publications.Abstractions.IIndexEntry[]
+  isExternal: true
+  href: Songhay.Publications.Abstractions.IIndexEntry.html
+  name: IIndexEntry[]
+  nameWithType: IIndexEntry[]
+  fullName: Songhay.Publications.Abstractions.IIndexEntry[]
+  nameWithType.vb: IIndexEntry()
+  fullName.vb: Songhay.Publications.Abstractions.IIndexEntry()
+  name.vb: IIndexEntry()
+  spec.csharp:
+  - uid: Songhay.Publications.Abstractions.IIndexEntry
+    name: IIndexEntry
+    href: Songhay.Publications.Abstractions.IIndexEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Songhay.Publications.Abstractions.IIndexEntry
+    name: IIndexEntry
+    href: Songhay.Publications.Abstractions.IIndexEntry.html
+  - name: (
+  - name: )
+- uid: Songhay.Publications.Abstractions.IIndexEntry.Documents*
+  commentId: Overload:Songhay.Publications.Abstractions.IIndexEntry.Documents
+  href: Songhay.Publications.Abstractions.IIndexEntry.html#Songhay_Publications_Abstractions_IIndexEntry_Documents
+  name: Documents
+  nameWithType: IIndexEntry.Documents
+  fullName: Songhay.Publications.Abstractions.IIndexEntry.Documents
+- uid: Songhay.Publications.Abstractions.IDocument[]
+  isExternal: true
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: IDocument[]
+  nameWithType: IDocument[]
+  fullName: Songhay.Publications.Abstractions.IDocument[]
+  nameWithType.vb: IDocument()
+  fullName.vb: Songhay.Publications.Abstractions.IDocument()
+  name.vb: IDocument()
+  spec.csharp:
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: (
+  - name: )

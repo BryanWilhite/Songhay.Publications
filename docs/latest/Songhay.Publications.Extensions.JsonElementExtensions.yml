@@ -1,0 +1,1321 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Extensions.JsonElementExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonElementExtensions
+  id: JsonElementExtensions
+  parent: Songhay.Publications.Extensions
+  children:
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
+  - Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  - Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
+  - Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
+  - Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  langs:
+  - csharp
+  - vb
+  name: JsonElementExtensions
+  nameWithType: JsonElementExtensions
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: JsonElementExtensions
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Extensions of <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class JsonElementExtensions
+    content.vb: Public Module JsonElementExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetAddEntryExtractArg(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAddEntryExtractArg(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetAddEntryExtractArg(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetAddEntryExtractArg
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 12
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static string GetAddEntryExtractArg(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetAddEntryExtractArg(element As JsonElement, presentationInfo As DirectoryInfo) As String
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg*
+  nameWithType.vb: JsonElementExtensions.GetAddEntryExtractArg(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetAddEntryExtractArg(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetCompressed11TyIndexArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCompressed11TyIndexArgs(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetCompressed11TyIndexArgs(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetCompressed11TyIndexArgs
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 25
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static (DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) GetCompressed11TyIndexArgs(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}
+    content.vb: Public Shared Function GetCompressed11TyIndexArgs(element As JsonElement, presentationInfo As DirectoryInfo) As (entryRootInfo As DirectoryInfo, indexRootInfo As DirectoryInfo, indexFileName As String)
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs*
+  nameWithType.vb: JsonElementExtensions.GetCompressed11TyIndexArgs(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetCompressed11TyIndexArgs(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetExpandUrisArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetExpandUrisArgs(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetExpandUrisArgs(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetExpandUrisArgs
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 51
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static (string entryPath, string collapsedHost) GetExpandUrisArgs(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.ValueTuple{System.String,System.String}
+    content.vb: Public Shared Function GetExpandUrisArgs(element As JsonElement, presentationInfo As DirectoryInfo) As (entryPath As String, collapsedHost As String)
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs*
+  nameWithType.vb: JsonElementExtensions.GetExpandUrisArgs(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetExpandUrisArgs(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetFindChangeArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetFindChangeArgs(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetFindChangeArgs(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetFindChangeArgs
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 68
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static (string input, string pattern, string replacement, bool useRegex, string outputPath) GetFindChangeArgs(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}
+    content.vb: Public Shared Function GetFindChangeArgs(element As JsonElement, presentationInfo As DirectoryInfo) As (input As String, pattern As String, replacement As String, useRegex As Boolean, outputPath As String)
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs*
+  nameWithType.vb: JsonElementExtensions.GetFindChangeArgs(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetFindChangeArgs(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetGenerateEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGenerateEntryArgs(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetGenerateEntryArgs(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetGenerateEntryArgs
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 98
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static (DirectoryInfo entryDraftsRootInfo, string title) GetGenerateEntryArgs(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.ValueTuple{System.IO.DirectoryInfo,System.String}
+    content.vb: Public Shared Function GetGenerateEntryArgs(element As JsonElement, presentationInfo As DirectoryInfo) As (entryDraftsRootInfo As DirectoryInfo, title As String)
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs*
+  nameWithType.vb: JsonElementExtensions.GetGenerateEntryArgs(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetGenerateEntryArgs(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  id: GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetPublishEntryArgs(JsonElement, DirectoryInfo?)
+  nameWithType: JsonElementExtensions.GetPublishEntryArgs(JsonElement, DirectoryInfo?)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetPublishEntryArgs
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
+    startLine: 116
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the arguments for Activity method.
+  example: []
+  syntax:
+    content: public static (DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName) GetPublishEntryArgs(this JsonElement element, DirectoryInfo? presentationInfo)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    - id: presentationInfo
+      type: System.IO.DirectoryInfo
+      description: The presentation information.
+    return:
+      type: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}
+    content.vb: Public Shared Function GetPublishEntryArgs(element As JsonElement, presentationInfo As DirectoryInfo) As (entryDraftsRootInfo As DirectoryInfo, entryRootInfo As DirectoryInfo, entryFileName As String)
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs*
+  nameWithType.vb: JsonElementExtensions.GetPublishEntryArgs(JsonElement, DirectoryInfo)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement, System.IO.DirectoryInfo)
+  name.vb: GetPublishEntryArgs(JsonElement, DirectoryInfo)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
+  id: GetPublicationCommand(System.Text.Json.JsonElement)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetPublicationCommand(JsonElement)
+  nameWithType: JsonElementExtensions.GetPublicationCommand(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetPublicationCommand
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 11
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Gets the publication command.
+  example: []
+  syntax:
+    content: public static string? GetPublicationCommand(this JsonElement element)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: The <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetPublicationCommand(element As JsonElement) As String
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand*
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
+  id: ToBoxedValue(System.Text.Json.JsonElement)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToBoxedValue(JsonElement)
+  nameWithType: JsonElementExtensions.ToBoxedValue(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToBoxedValue
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 25
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+
+    to a boxed <xref href="System.Object" data-throw-if-not-resolved="false"></xref> of boxed objects.
+  remarks: >-
+    This method helps the <code>YamlDotNet</code><xref href="YamlDotNet.Serialization.SerializerBuilder" data-throw-if-not-resolved="false"></xref>
+
+    serialize <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref> to YAML
+
+    without “shadow-converting” all property values to <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+
+
+    See <xref href="Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static object? ToBoxedValue(this JsonElement element)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: the <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Object
+    content.vb: Public Shared Function ToBoxedValue(element As JsonElement) As Object
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue*
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
+  id: ToObject``1(System.Text.Json.JsonElement)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToObject<TObject>(JsonElement)
+  nameWithType: JsonElementExtensions.ToObject<TObject>(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject<TObject>(System.Text.Json.JsonElement)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToObject
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 46
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+
+    to <code>TObject</code>.
+  example: []
+  syntax:
+    content: public static TObject? ToObject<TObject>(this JsonElement element)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+    typeParameters:
+    - id: TObject
+      description: the type to convert to
+    return:
+      type: '{TObject}'
+      description: ''
+    content.vb: Public Shared Function ToObject(Of TObject)(element As JsonElement) As TObject
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.ToObject*
+  nameWithType.vb: JsonElementExtensions.ToObject(Of TObject)(JsonElement)
+  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.ToObject(Of TObject)(System.Text.Json.JsonElement)
+  name.vb: ToObject(Of TObject)(JsonElement)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  id: ToYaml(System.Text.Json.JsonElement)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToYaml(JsonElement)
+  nameWithType: JsonElementExtensions.ToYaml(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToYaml
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 58
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+
+    to a YAML <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static string ToYaml(this JsonElement element)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: the <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToYaml(element As JsonElement) As String
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml*
+references:
+- uid: System.Text.Json.JsonElement
+  commentId: T:System.Text.Json.JsonElement
+  parent: System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  name: JsonElement
+  nameWithType: JsonElement
+  fullName: System.Text.Json.JsonElement
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Text.Json
+  commentId: N:System.Text.Json
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json
+  nameWithType: System.Text.Json
+  fullName: System.Text.Json
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetAddEntryExtractArg_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetAddEntryExtractArg
+  nameWithType: JsonElementExtensions.GetAddEntryExtractArg
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetAddEntryExtractArg
+- uid: System.IO.DirectoryInfo
+  commentId: T:System.IO.DirectoryInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: DirectoryInfo
+  nameWithType: DirectoryInfo
+  fullName: System.IO.DirectoryInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetCompressed11TyIndexArgs_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetCompressed11TyIndexArgs
+  nameWithType: JsonElementExtensions.GetCompressed11TyIndexArgs
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetCompressed11TyIndexArgs
+- uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}
+  commentId: T:System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}
+  parent: System
+  definition: System.ValueTuple`3
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: (DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName)
+  nameWithType: (DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName)
+  fullName: (System.IO.DirectoryInfo entryRootInfo, System.IO.DirectoryInfo indexRootInfo, string indexFileName)
+  nameWithType.vb: (entryRootInfo As DirectoryInfo, indexRootInfo As DirectoryInfo, indexFileName As String)
+  fullName.vb: (entryRootInfo As System.IO.DirectoryInfo, indexRootInfo As System.IO.DirectoryInfo, indexFileName As String)
+  name.vb: (entryRootInfo As DirectoryInfo, indexRootInfo As DirectoryInfo, indexFileName As String)
+  spec.csharp:
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.entryRootInfo
+    name: entryRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.entryrootinfo
+  - name: ','
+  - name: " "
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.indexRootInfo
+    name: indexRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.indexrootinfo
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.indexFileName
+    name: indexFileName
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.indexfilename
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.entryRootInfo
+    name: entryRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.entryrootinfo
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.indexRootInfo
+    name: indexRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.indexrootinfo
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.IO.DirectoryInfo,System.String}.indexFileName
+    name: indexFileName
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.io.directoryinfo,system.string-.indexfilename
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  name: (T1, T2, T3)
+  nameWithType: (T1, T2, T3)
+  fullName: (T1, T2, T3)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetExpandUrisArgs_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetExpandUrisArgs
+  nameWithType: JsonElementExtensions.GetExpandUrisArgs
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetExpandUrisArgs
+- uid: System.ValueTuple{System.String,System.String}
+  commentId: T:System.ValueTuple{System.String,System.String}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string entryPath, string collapsedHost)
+  nameWithType: (string entryPath, string collapsedHost)
+  fullName: (string entryPath, string collapsedHost)
+  nameWithType.vb: (entryPath As String, collapsedHost As String)
+  fullName.vb: (entryPath As String, collapsedHost As String)
+  name.vb: (entryPath As String, collapsedHost As String)
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String}.entryPath
+    name: entryPath
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.entrypath
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String}.collapsedHost
+    name: collapsedHost
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.collapsedhost
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.String}.entryPath
+    name: entryPath
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.entrypath
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String}.collapsedHost
+    name: collapsedHost
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.collapsedhost
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetFindChangeArgs_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetFindChangeArgs
+  nameWithType: JsonElementExtensions.GetFindChangeArgs
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetFindChangeArgs
+- uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}
+  commentId: T:System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}
+  parent: System
+  definition: System.ValueTuple`5
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string input, string pattern, string replacement, bool useRegex, string outputPath)
+  nameWithType: (string input, string pattern, string replacement, bool useRegex, string outputPath)
+  fullName: (string input, string pattern, string replacement, bool useRegex, string outputPath)
+  nameWithType.vb: (input As String, pattern As String, replacement As String, useRegex As Boolean, outputPath As String)
+  fullName.vb: (input As String, pattern As String, replacement As String, useRegex As Boolean, outputPath As String)
+  name.vb: (input As String, pattern As String, replacement As String, useRegex As Boolean, outputPath As String)
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.input
+    name: input
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.input
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.pattern
+    name: pattern
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.pattern
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.replacement
+    name: replacement
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.replacement
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.useRegex
+    name: useRegex
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.useregex
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.outputPath
+    name: outputPath
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.outputpath
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.input
+    name: input
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.input
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.pattern
+    name: pattern
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.pattern
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.replacement
+    name: replacement
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.replacement
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.useRegex
+    name: useRegex
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.useregex
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.Boolean,System.String}.outputPath
+    name: outputPath
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.boolean,system.string-.outputpath
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ValueTuple`5
+  commentId: T:System.ValueTuple`5
+  name: (T1, T2, T3, T4, T5)
+  nameWithType: (T1, T2, T3, T4, T5)
+  fullName: (T1, T2, T3, T4, T5)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetGenerateEntryArgs_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetGenerateEntryArgs
+  nameWithType: JsonElementExtensions.GetGenerateEntryArgs
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetGenerateEntryArgs
+- uid: System.ValueTuple{System.IO.DirectoryInfo,System.String}
+  commentId: T:System.ValueTuple{System.IO.DirectoryInfo,System.String}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  name: (DirectoryInfo entryDraftsRootInfo, string title)
+  nameWithType: (DirectoryInfo entryDraftsRootInfo, string title)
+  fullName: (System.IO.DirectoryInfo entryDraftsRootInfo, string title)
+  nameWithType.vb: (entryDraftsRootInfo As DirectoryInfo, title As String)
+  fullName.vb: (entryDraftsRootInfo As System.IO.DirectoryInfo, title As String)
+  name.vb: (entryDraftsRootInfo As DirectoryInfo, title As String)
+  spec.csharp:
+  - name: (
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.String}.entryDraftsRootInfo
+    name: entryDraftsRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.string-.entrydraftsrootinfo
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.String}.title
+    name: title
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.string-.title
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.String}.entryDraftsRootInfo
+    name: entryDraftsRootInfo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.string-.entrydraftsrootinfo
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.IO.DirectoryInfo
+    name: DirectoryInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.directoryinfo
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.IO.DirectoryInfo,System.String}.title
+    name: title
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.io.directoryinfo,system.string-.title
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetPublishEntryArgs_System_Text_Json_JsonElement_System_IO_DirectoryInfo_
+  name: GetPublishEntryArgs
+  nameWithType: JsonElementExtensions.GetPublishEntryArgs
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_GetPublicationCommand_System_Text_Json_JsonElement_
+  name: GetPublicationCommand
+  nameWithType: JsonElementExtensions.GetPublicationCommand
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand
+- uid: YamlDotNet.Serialization.SerializerBuilder
+  commentId: T:YamlDotNet.Serialization.SerializerBuilder
+  isExternal: true
+  name: SerializerBuilder
+  nameWithType: SerializerBuilder
+  fullName: YamlDotNet.Serialization.SerializerBuilder
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
+  name: ToYaml(JsonElement)
+  nameWithType: JsonElementExtensions.ToYaml(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToBoxedValue_System_Text_Json_JsonElement_
+  name: ToBoxedValue
+  nameWithType: JsonElementExtensions.ToBoxedValue
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToObject
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToObject__1_System_Text_Json_JsonElement_
+  name: ToObject
+  nameWithType: JsonElementExtensions.ToObject
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject
+- uid: '{TObject}'
+  commentId: '!:TObject'
+  definition: TObject
+  name: TObject
+  nameWithType: TObject
+  fullName: TObject
+- uid: TObject
+  commentId: '!:TObject'
+  name: TObject
+  nameWithType: TObject
+  fullName: TObject
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
+  name: ToYaml
+  nameWithType: JsonElementExtensions.ToYaml
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml

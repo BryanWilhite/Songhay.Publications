@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>6.2024.6.23</AssemblyVersion>
+        <AssemblyVersion>6.2025.6.23</AssemblyVersion>
         <RootNamespace>Songhay.Publications.Shell</RootNamespace>
 
         <Title>Songhay Publications Shell</Title>
         <Description>The Studio Publications Shell for commandline automation of Activities.</Description>
         <Authors>Bryan D. Wilhite</Authors>
-        <Copyright>(c) 2024 Bryan D. Wilhite</Copyright>
+        <Copyright>(c) 2025 Bryan D. Wilhite</Copyright>
         <Company>Songhay System</Company>
 
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ApplicationIcon>songhay.ico</ApplicationIcon>
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>

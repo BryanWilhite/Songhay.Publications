@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using Microsoft.Extensions.Logging;
-
-namespace Songhay.Publications;
+﻿namespace Songhay.Publications;
 
 /// <summary>
 /// Defines the EPUB Publication Context

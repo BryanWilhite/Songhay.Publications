@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace Songhay.Publications.Models;
+﻿namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines a responsive-image candidate.

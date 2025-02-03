@@ -1,0 +1,34 @@
+erDiagram
+    presentations {
+        int-nullable SegmentId
+        string ClientId
+    }
+
+    segments {
+        int-nullable SegmentId
+        string ClientId
+    }
+
+    images {
+        string Key
+    }
+
+    keywords {
+        int-nullable Id
+        string ClientId
+    }
+
+    keywordGroups {
+        int-nullable Id
+        string ClientId
+    }
+
+    presentations ||..|{ Segment : collects
+    segments ||--|{ Segment : collects
+    presentations ||--|{ Document : embeds
+    keywords ||--|{ IndexKeyword : collects
+    keywordGroups ||..|{ IndexKeywordGroup : collects
+    IndexKeyword ||--|{ IndexKeywordGroup : refers
+    Document ||--|{ IndexKeyword : refers
+    Document ||--|{ ResponsiveImage : refers
+    images ||..|{ ResponsiveImage : collects

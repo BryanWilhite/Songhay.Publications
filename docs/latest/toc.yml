@@ -1,0 +1,230 @@
+### YamlMime:TableOfContent
+items:
+- uid: Songhay.Publications
+  name: Songhay.Publications
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.EpubUtility
+    name: EpubUtility
+    type: Class
+  - uid: Songhay.Publications.MarkdownEntryUtility
+    name: MarkdownEntryUtility
+    type: Class
+  - uid: Songhay.Publications.MarkdownUtility
+    name: MarkdownUtility
+    type: Class
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    type: Class
+  - uid: Songhay.Publications.PublicationLinesUtility
+    name: PublicationLinesUtility
+    type: Class
+  - uid: Songhay.Publications.YamlUtility
+    name: YamlUtility
+    type: Class
+- uid: Songhay.Publications.Abstractions
+  name: Songhay.Publications.Abstractions
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    type: Interface
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    type: Interface
+  - uid: Songhay.Publications.Abstractions.IIndexEntry
+    name: IIndexEntry
+    type: Interface
+  - uid: Songhay.Publications.Abstractions.IIndexKeyword
+    name: IIndexKeyword
+    type: Interface
+  - uid: Songhay.Publications.Abstractions.IIndexKeywordGroup
+    name: IIndexKeywordGroup
+    type: Interface
+  - uid: Songhay.Publications.Abstractions.ISegment
+    name: ISegment
+    type: Interface
+- uid: Songhay.Publications.Activities
+  name: Songhay.Publications.Activities
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.Activities.MarkdownEntryActivity
+    name: MarkdownEntryActivity
+    type: Class
+  - uid: Songhay.Publications.Activities.SearchIndexActivity
+    name: SearchIndexActivity
+    type: Class
+- uid: Songhay.Publications.DataAccess
+  name: Songhay.Publications.DataAccess
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.DataAccess.PublicationsDbContext
+    name: PublicationsDbContext
+    type: Class
+- uid: Songhay.Publications.DataAccess.EntityTypeConfigurations
+  name: Songhay.Publications.DataAccess.EntityTypeConfigurations
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.DocumentEntityTypeConfiguration
+    name: DocumentEntityTypeConfiguration
+    type: Class
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.ImageCandidateEntityTypeConfiguration
+    name: ImageCandidateEntityTypeConfiguration
+    type: Class
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordEntityTypeConfiguration
+    name: IndexKeywordEntityTypeConfiguration
+    type: Class
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.IndexKeywordGroupEntityTypeConfiguration
+    name: IndexKeywordGroupEntityTypeConfiguration
+    type: Class
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.ResponsiveImageEntityTypeConfiguration
+    name: ResponsiveImageEntityTypeConfiguration
+    type: Class
+  - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations.SegmentEntityTypeConfiguration
+    name: SegmentEntityTypeConfiguration
+    type: Class
+- uid: Songhay.Publications.Extensions
+  name: Songhay.Publications.Extensions
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.Extensions.DirectoryInfoExtensions
+    name: DirectoryInfoExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.FileInfoExtensions
+    name: FileInfoExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.FragmentExtensions
+    name: FragmentExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.GroupableExtensions
+    name: GroupableExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.IConfigurationExtensions
+    name: IConfigurationExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.IDictionaryExtensions
+    name: IDictionaryExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions
+    name: IDocumentExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.IndexEntryExtensions
+    name: IndexEntryExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.JsonElementExtensions
+    name: JsonElementExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions
+    name: JsonNodeExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.JsonObjectExtensions
+    name: JsonObjectExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions
+    name: MarkdownEntryExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.PublicationContextExtensions
+    name: PublicationContextExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions
+    name: ResponsiveImageExtensions
+    type: Class
+  - uid: Songhay.Publications.Extensions.SegmentExtensions
+    name: SegmentExtensions
+    type: Class
+- uid: Songhay.Publications.Models
+  name: Songhay.Publications.Models
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.Models.CloneInitializers
+    name: CloneInitializers
+    type: Class
+  - uid: Songhay.Publications.Models.DaisyConsortiumNcx
+    name: DaisyConsortiumNcx
+    type: Class
+  - uid: Songhay.Publications.Models.Document
+    name: Document
+    type: Class
+  - uid: Songhay.Publications.Models.Fragment
+    name: Fragment
+    type: Class
+  - uid: Songhay.Publications.Models.IdpfPackage
+    name: IdpfPackage
+    type: Class
+  - uid: Songhay.Publications.Models.ImageCandidate
+    name: ImageCandidate
+    type: Class
+  - uid: Songhay.Publications.Models.ImageSize
+    name: ImageSize
+    type: Class
+  - uid: Songhay.Publications.Models.IndexCommands
+    name: IndexCommands
+    type: Class
+  - uid: Songhay.Publications.Models.IndexEntry
+    name: IndexEntry
+    type: Class
+  - uid: Songhay.Publications.Models.IndexKeyword
+    name: IndexKeyword
+    type: Class
+  - uid: Songhay.Publications.Models.IndexKeywordGroup
+    name: IndexKeywordGroup
+    type: Class
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    type: Class
+  - uid: Songhay.Publications.Models.MarkdownPresentationCommands
+    name: MarkdownPresentationCommands
+    type: Class
+  - uid: Songhay.Publications.Models.MarkdownPresentationDirectories
+    name: MarkdownPresentationDirectories
+    type: Class
+  - uid: Songhay.Publications.Models.OebpsTextBiography
+    name: OebpsTextBiography
+    type: Class
+  - uid: Songhay.Publications.Models.OebpsTextCopyright
+    name: OebpsTextCopyright
+    type: Class
+  - uid: Songhay.Publications.Models.OebpsTextDedication
+    name: OebpsTextDedication
+    type: Class
+  - uid: Songhay.Publications.Models.OebpsTextToc
+    name: OebpsTextToc
+    type: Class
+  - uid: Songhay.Publications.Models.PublicationAppScalars
+    name: PublicationAppScalars
+    type: Class
+  - uid: Songhay.Publications.Models.PublicationChapter
+    name: PublicationChapter
+    type: Class
+  - uid: Songhay.Publications.Models.PublicationFiles
+    name: PublicationFiles
+    type: Class
+  - uid: Songhay.Publications.Models.PublicationNamespaces
+    name: PublicationNamespaces
+    type: Class
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    type: Class
+  - uid: Songhay.Publications.Models.SearchIndexEntry
+    name: SearchIndexEntry
+    type: Class
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    type: Class
+- uid: Songhay.Publications.Validators
+  name: Songhay.Publications.Validators
+  type: Namespace
+  items:
+  - uid: Songhay.Publications.Validators.DocumentValidator
+    name: DocumentValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.FragmentValidator
+    name: FragmentValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.ITemporalValidator
+    name: ITemporalValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.SegmentValidator
+    name: SegmentValidator
+    type: Class
+memberLayout: SamePage

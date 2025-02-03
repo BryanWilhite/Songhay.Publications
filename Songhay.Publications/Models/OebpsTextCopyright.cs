@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace Songhay.Publications.Models;
+﻿namespace Songhay.Publications.Models;
 
 /// <summary>
 /// Defines the content to write the

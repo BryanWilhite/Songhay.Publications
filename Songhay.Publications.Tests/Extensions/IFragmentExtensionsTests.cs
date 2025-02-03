@@ -1,7 +1,4 @@
-using Songhay.Extensions;
 using Songhay.Publications.Abstractions;
-using Songhay.Publications.Extensions;
-using Songhay.Publications.Models;
 
 namespace Songhay.Publications.Tests.Extensions;
 

@@ -1,0 +1,1729 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.MarkdownEntry
+  commentId: T:Songhay.Publications.Models.MarkdownEntry
+  id: MarkdownEntry
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.MarkdownEntry.Content
+  - Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+  - Songhay.Publications.Models.MarkdownEntry.FrontMatter
+  - Songhay.Publications.Models.MarkdownEntry.NewLine
+  langs:
+  - csharp
+  - vb
+  name: MarkdownEntry
+  nameWithType: MarkdownEntry
+  fullName: Songhay.Publications.Models.MarkdownEntry
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/MarkdownEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: MarkdownEntry
+    path: ../Songhay.Publications/Models/MarkdownEntry.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Defines a conventional, Publication entry.
+  example: []
+  syntax:
+    content: public class MarkdownEntry
+    content.vb: Public Class MarkdownEntry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(System.Int32)
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(System.DateTime)
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(System.Int32)
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(System.Int32)
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(System.Action{Songhay.Publications.Models.MarkdownEntry})
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(System.String,System.DateTime,System.String,System.String)
+  - Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.MarkdownEntry.NewLine
+  commentId: F:Songhay.Publications.Models.MarkdownEntry.NewLine
+  id: NewLine
+  parent: Songhay.Publications.Models.MarkdownEntry
+  langs:
+  - csharp
+  - vb
+  name: NewLine
+  nameWithType: MarkdownEntry.NewLine
+  fullName: Songhay.Publications.Models.MarkdownEntry.NewLine
+  type: Field
+  source:
+    remote:
+      path: Songhay.Publications/Models/MarkdownEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: NewLine
+    path: ../Songhay.Publications/Models/MarkdownEntry.cs
+    startLine: 10
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Defines the new-line convention for entries.
+  example: []
+  syntax:
+    content: public static readonly string NewLine
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly NewLine As String
+- uid: Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+  commentId: P:Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+  id: EntryFileInfo
+  parent: Songhay.Publications.Models.MarkdownEntry
+  langs:
+  - csharp
+  - vb
+  name: EntryFileInfo
+  nameWithType: MarkdownEntry.EntryFileInfo
+  fullName: Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/MarkdownEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EntryFileInfo
+    path: ../Songhay.Publications/Models/MarkdownEntry.cs
+    startLine: 15
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Markdown <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public FileInfo? EntryFileInfo { get; set; }
+    parameters: []
+    return:
+      type: System.IO.FileInfo
+    content.vb: Public Property EntryFileInfo As FileInfo
+  overload: Songhay.Publications.Models.MarkdownEntry.EntryFileInfo*
+- uid: Songhay.Publications.Models.MarkdownEntry.FrontMatter
+  commentId: P:Songhay.Publications.Models.MarkdownEntry.FrontMatter
+  id: FrontMatter
+  parent: Songhay.Publications.Models.MarkdownEntry
+  langs:
+  - csharp
+  - vb
+  name: FrontMatter
+  nameWithType: MarkdownEntry.FrontMatter
+  fullName: Songhay.Publications.Models.MarkdownEntry.FrontMatter
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/MarkdownEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: FrontMatter
+    path: ../Songhay.Publications/Models/MarkdownEntry.cs
+    startLine: 20
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: JSON front matter.
+  example: []
+  syntax:
+    content: public JsonObject FrontMatter { get; set; }
+    parameters: []
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Property FrontMatter As JsonObject
+  overload: Songhay.Publications.Models.MarkdownEntry.FrontMatter*
+- uid: Songhay.Publications.Models.MarkdownEntry.Content
+  commentId: P:Songhay.Publications.Models.MarkdownEntry.Content
+  id: Content
+  parent: Songhay.Publications.Models.MarkdownEntry
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: MarkdownEntry.Content
+  fullName: Songhay.Publications.Models.MarkdownEntry.Content
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/MarkdownEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Content
+    path: ../Songhay.Publications/Models/MarkdownEntry.cs
+    startLine: 25
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Text content.
+  example: []
+  syntax:
+    content: public string? Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Content As String
+  overload: Songhay.Publications.Models.MarkdownEntry.Content*
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  name: DoNullCheck(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.DoNullCheck(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheck
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheck
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  name: DoNullCheckForContent(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.DoNullCheckForContent(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheckForContent
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheckForContent
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: ToExtract(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.ToExtract(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.ToExtract(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: ToExtract(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: ToExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: ToExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  name: ToFinalEdit(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.ToFinalEdit(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+    name: ToFinalEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+    name: ToFinalEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  name: ToParagraphs(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.ToParagraphs(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+    name: ToParagraphs
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+    name: ToParagraphs
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(System.DateTime)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  name: Touch(MarkdownEntry, DateTime)
+  nameWithType: MarkdownEntryExtensions.Touch(MarkdownEntry, DateTime)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry, System.DateTime)
+  nameWithType.vb: MarkdownEntryExtensions.Touch(MarkdownEntry, Date)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry, Date)
+  name.vb: Touch(MarkdownEntry, Date)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+    name: Touch
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+    name: Touch
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: With11TyExtract(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.With11TyExtract(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.With11TyExtract(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: With11TyExtract(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: With11TyExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: With11TyExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  name: WithContentHeader(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: WithContentHeader(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: WithContentHeader(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(System.Action{Songhay.Publications.Models.MarkdownEntry})
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  name: WithEdit(MarkdownEntry, Action<MarkdownEntry>)
+  nameWithType: MarkdownEntryExtensions.WithEdit(MarkdownEntry, Action<MarkdownEntry>)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry, System.Action<Songhay.Publications.Models.MarkdownEntry>)
+  nameWithType.vb: MarkdownEntryExtensions.WithEdit(MarkdownEntry, Action(Of MarkdownEntry))
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry, System.Action(Of Songhay.Publications.Models.MarkdownEntry))
+  name.vb: WithEdit(MarkdownEntry, Action(Of MarkdownEntry))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(System.String,System.DateTime,System.String,System.String)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  name: WithNew11TyFrontMatter(MarkdownEntry, string, DateTime, string, string)
+  nameWithType: MarkdownEntryExtensions.WithNew11TyFrontMatter(MarkdownEntry, string, DateTime, string, string)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry, string, System.DateTime, string, string)
+  nameWithType.vb: MarkdownEntryExtensions.WithNew11TyFrontMatter(MarkdownEntry, String, Date, String, String)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry, String, Date, String, String)
+  name.vb: WithNew11TyFrontMatter(MarkdownEntry, String, Date, String, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+    name: WithNew11TyFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+    name: WithNew11TyFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Models.MarkdownEntry.Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  parent: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  definition: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  name: WithNewFrontMatter(MarkdownEntry, string, DateTime, int, string, string, int, string)
+  nameWithType: MarkdownEntryExtensions.WithNewFrontMatter(MarkdownEntry, string, DateTime, int, string, string, int, string)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry, string, System.DateTime, int, string, string, int, string)
+  nameWithType.vb: MarkdownEntryExtensions.WithNewFrontMatter(MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  name.vb: WithNewFrontMatter(MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+    name: WithNewFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+    name: WithNewFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  name: DoNullCheck(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.DoNullCheck(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheck
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheck(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheck
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheck_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  commentId: T:Songhay.Publications.Extensions.MarkdownEntryExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html
+  name: MarkdownEntryExtensions
+  nameWithType: MarkdownEntryExtensions
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  name: DoNullCheckForContent(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.DoNullCheckForContent(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheckForContent
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.DoNullCheckForContent(Songhay.Publications.Models.MarkdownEntry)
+    name: DoNullCheckForContent
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_DoNullCheckForContent_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: ToExtract(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.ToExtract(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.ToExtract(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: ToExtract(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: ToExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: ToExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  name: ToFinalEdit(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.ToFinalEdit(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+    name: ToFinalEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToFinalEdit(Songhay.Publications.Models.MarkdownEntry)
+    name: ToFinalEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToFinalEdit_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  name: ToParagraphs(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.ToParagraphs(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+    name: ToParagraphs
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.ToParagraphs(Songhay.Publications.Models.MarkdownEntry)
+    name: ToParagraphs
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_ToParagraphs_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  name: Touch(MarkdownEntry, DateTime)
+  nameWithType: MarkdownEntryExtensions.Touch(MarkdownEntry, DateTime)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry, System.DateTime)
+  nameWithType.vb: MarkdownEntryExtensions.Touch(MarkdownEntry, Date)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry, Date)
+  name.vb: Touch(MarkdownEntry, Date)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+    name: Touch
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.Touch(Songhay.Publications.Models.MarkdownEntry,System.DateTime)
+    name: Touch
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_Touch_Songhay_Publications_Models_MarkdownEntry_System_DateTime_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: With11TyExtract(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.With11TyExtract(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.With11TyExtract(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: With11TyExtract(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: With11TyExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.With11TyExtract(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: With11TyExtract
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_With11TyExtract_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  name: WithContentHeader(MarkdownEntry)
+  nameWithType: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  name: WithContentHeader(MarkdownEntry, int)
+  nameWithType: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry, int)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry, int)
+  nameWithType.vb: MarkdownEntryExtensions.WithContentHeader(MarkdownEntry, Integer)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry, Integer)
+  name.vb: WithContentHeader(MarkdownEntry, Integer)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithContentHeader(Songhay.Publications.Models.MarkdownEntry,System.Int32)
+    name: WithContentHeader
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithContentHeader_Songhay_Publications_Models_MarkdownEntry_System_Int32_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  name: WithEdit(MarkdownEntry, Action<MarkdownEntry>)
+  nameWithType: MarkdownEntryExtensions.WithEdit(MarkdownEntry, Action<MarkdownEntry>)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry, System.Action<Songhay.Publications.Models.MarkdownEntry>)
+  nameWithType.vb: MarkdownEntryExtensions.WithEdit(MarkdownEntry, Action(Of MarkdownEntry))
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry, System.Action(Of Songhay.Publications.Models.MarkdownEntry))
+  name.vb: WithEdit(MarkdownEntry, Action(Of MarkdownEntry))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithEdit(Songhay.Publications.Models.MarkdownEntry,System.Action{Songhay.Publications.Models.MarkdownEntry})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithEdit_Songhay_Publications_Models_MarkdownEntry_System_Action_Songhay_Publications_Models_MarkdownEntry__
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  name: WithNew11TyFrontMatter(MarkdownEntry, string, DateTime, string, string)
+  nameWithType: MarkdownEntryExtensions.WithNew11TyFrontMatter(MarkdownEntry, string, DateTime, string, string)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry, string, System.DateTime, string, string)
+  nameWithType.vb: MarkdownEntryExtensions.WithNew11TyFrontMatter(MarkdownEntry, String, Date, String, String)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry, String, Date, String, String)
+  name.vb: WithNew11TyFrontMatter(MarkdownEntry, String, Date, String, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+    name: WithNew11TyFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNew11TyFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.String,System.String)
+    name: WithNew11TyFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNew11TyFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_String_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  commentId: M:Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+  isExternal: true
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  name: WithNewFrontMatter(MarkdownEntry, string, DateTime, int, string, string, int, string)
+  nameWithType: MarkdownEntryExtensions.WithNewFrontMatter(MarkdownEntry, string, DateTime, int, string, string, int, string)
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry, string, System.DateTime, int, string, string, int, string)
+  nameWithType.vb: MarkdownEntryExtensions.WithNewFrontMatter(MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  fullName.vb: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  name.vb: WithNewFrontMatter(MarkdownEntry, String, Date, Integer, String, String, Integer, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+    name: WithNewFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.MarkdownEntryExtensions.WithNewFrontMatter(Songhay.Publications.Models.MarkdownEntry,System.String,System.DateTime,System.Int32,System.String,System.String,System.Int32,System.String)
+    name: WithNewFrontMatter
+    href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html#Songhay_Publications_Extensions_MarkdownEntryExtensions_WithNewFrontMatter_Songhay_Publications_Models_MarkdownEntry_System_String_System_DateTime_System_Int32_System_String_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.MarkdownEntry
+    name: MarkdownEntry
+    href: Songhay.Publications.Models.MarkdownEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IO.FileInfo
+  commentId: T:System.IO.FileInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  name: FileInfo
+  nameWithType: FileInfo
+  fullName: System.IO.FileInfo
+- uid: Songhay.Publications.Models.MarkdownEntry.EntryFileInfo*
+  commentId: Overload:Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+  href: Songhay.Publications.Models.MarkdownEntry.html#Songhay_Publications_Models_MarkdownEntry_EntryFileInfo
+  name: EntryFileInfo
+  nameWithType: MarkdownEntry.EntryFileInfo
+  fullName: Songhay.Publications.Models.MarkdownEntry.EntryFileInfo
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Songhay.Publications.Models.MarkdownEntry.FrontMatter*
+  commentId: Overload:Songhay.Publications.Models.MarkdownEntry.FrontMatter
+  href: Songhay.Publications.Models.MarkdownEntry.html#Songhay_Publications_Models_MarkdownEntry_FrontMatter
+  name: FrontMatter
+  nameWithType: MarkdownEntry.FrontMatter
+  fullName: Songhay.Publications.Models.MarkdownEntry.FrontMatter
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: Songhay.Publications.Models.MarkdownEntry.Content*
+  commentId: Overload:Songhay.Publications.Models.MarkdownEntry.Content
+  href: Songhay.Publications.Models.MarkdownEntry.html#Songhay_Publications_Models_MarkdownEntry_Content
+  name: Content
+  nameWithType: MarkdownEntry.Content
+  fullName: Songhay.Publications.Models.MarkdownEntry.Content

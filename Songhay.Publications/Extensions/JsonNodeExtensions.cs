@@ -1,6 +1,3 @@
-using System.Text.Json;
-using System.Text.Json.Nodes;
-
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
@@ -8,6 +5,28 @@ namespace Songhay.Publications.Extensions;
 /// </summary>
 public static class JsonNodeExtensions
 {
+    /// <summary>
+    /// Copies the specified <see cref="JsonNode"/>
+    /// by calling <see cref="JsonNode.ToJsonString"/>
+    /// </summary>
+    /// <param name="node">The node.</param>
+    /// <remarks>
+    /// This method is not efficient. For details, see https://stackoverflow.com/a/71000222/22944.
+    /// </remarks>
+    public static JsonNode? CopyNode(this JsonNode? node) //TODO: move to SonghayCore
+    {
+        JsonValueKind kind = node.GetJsonValueKind();
+
+        string defaultJson = kind switch
+        {
+            JsonValueKind.Array => "[]",
+            JsonValueKind.Object => "{}",
+            _ => string.Empty
+        };
+
+        return JsonNode.Parse(node?.ToJsonString() ?? defaultJson);
+    }
+
     /// <summary>
     /// Returns <c>false</c> when the specified property name does not exist.
     /// </summary>

@@ -1,4 +1,6 @@
-﻿namespace Songhay.Publications.Extensions;
+﻿using FluentValidation.Results;
+
+namespace Songhay.Publications.Extensions;
 
 /// <summary>
 /// Extensions of <see cref="IDocument"/>
@@ -150,6 +152,44 @@ public static class IDocumentExtensions
     }
 
     /// <summary>
+    /// Converts the specified <see cref="IDocument"/> to <see cref="MarkdownEntry"/>.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="entryPath">the entry path</param>
+    /// <param name="content">the entry content</param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static MarkdownEntry? ToMarkdownEntry(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    {
+        if (document == null)
+        {
+            logger?.LogError("Error: the expected document is not here.");
+
+            return null;
+        }
+
+        if (string.IsNullOrWhiteSpace(entryPath))
+        {
+            logger?.LogError("Error: the expected entry path is not here.");
+
+            return null;
+        }
+
+        JsonObject? jO = document.ToJsonNode()?.AsObject().WithoutConventionalDocumentProperties(logger);
+        if (jO == null) return null;
+
+        content ??= $@"
+# {document.Title}
+        ".Trim();
+
+        return new MarkdownEntry
+        {
+            Content = content,
+            FrontMatter = jO,
+            EntryFileInfo = new FileInfo(entryPath)
+        };
+    }
+
+    /// <summary>
     /// Converts the <see cref="IDocument"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The document.</param>
@@ -195,6 +235,71 @@ public static class IDocumentExtensions
     }
 
     /// <summary>
+    /// Converts the specified <see cref="IDocument"/>
+    /// to well-formed YAML.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static string? ToYaml(this IDocument? document, ILogger? logger) => document.ToYaml(contentLines: null, logger);
+
+    /// <summary>
+    /// Converts the specified <see cref="IDocument"/>
+    /// to well-formed YAML.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="contentLines">the collection of content lines</param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static string? ToYaml(this IDocument? document, IReadOnlyCollection<string>? contentLines, ILogger? logger)
+    {
+        if (document == null) return null;
+
+        ISerializer serializer = new SerializerBuilder()
+            .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            .WithAttributeOverride<IDocument>(d => d.Tag!, new YamlIgnoreAttribute())
+            .Build();
+
+        logger?.LogInformation("Serializing to YAML (ignoring the {Name} property...", nameof(IDocument.Tag));
+
+        string yaml = serializer.Serialize(document, typeof(IDocument));
+
+        logger?.LogInformation("Trying to parse the {Name} property as JSON (`{Json}`)...", nameof(IDocument.Tag), document.Tag.Truncate(32));
+
+        JsonObject? jO = null;
+        bool parsedJsonObject = false;
+
+        if (!string.IsNullOrWhiteSpace(document.Tag))
+        {
+            try
+            {
+                jO = JsonNode.Parse(document.Tag)?.AsObject();
+                parsedJsonObject = true;
+            }
+            catch (Exception e)
+            {
+                logger?.LogError("Error: JSON parsing failed! Message: `{Message}` Returning...", e.Message);
+            }
+        }
+
+        jO ??= new JsonObject();
+
+        string? additionalYaml = jO
+            .WithExtract(contentLines, 255, logger)
+            .WithPropertiesRenamed(logger, ("keywords", "tags"))
+            .ToYaml(logger);
+
+        yaml = string.Concat(yaml, additionalYaml);
+
+        if (!parsedJsonObject && !string.IsNullOrWhiteSpace(document.Tag))
+        {
+            logger?.LogInformation("The {Name} property is probably not JSON. Content will be treated as YAML tags..", nameof(IDocument.Tag));
+            string[] tags = document.Tag.Split(',', ';', '|', ' ');
+            yaml = string.Concat(yaml, "tags: [ ", string.Join(',', tags), " ]");
+        }
+
+        return yaml.Trim();
+    }
+
+    /// <summary>
     /// Returns <see cref="IDocument"/> with default values.
     /// </summary>
     /// <param name="data">The data.</param>
@@ -216,5 +321,100 @@ public static class IDocumentExtensions
         editAction?.Invoke(data.ToReferenceTypeValueOrThrow());
 
         return data.ToReferenceTypeValueOrThrow();
+    }
+
+    /// <summary>
+    /// Writes an entry with JSON front matter to the specified entry path.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="entryPath">the entry path</param>
+    /// <param name="content">the entry content</param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static void WritePublicationEntryWithJsonFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    {
+        MarkdownEntry? entry = document.ToMarkdownEntry(entryPath, content, logger);
+
+        if (entry?.EntryFileInfo == null) return;
+
+        logger?.LogInformation("Writing to `{Path}`...", entryPath);
+
+        var options = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = true
+        };
+
+        string json = entry.FrontMatter.ToJsonString(options);
+        string frontMatter = $@"
+{PublicationAppScalars.FrontMatterFence}json
+{json}
+{PublicationAppScalars.FrontMatterFence}
+".Trim();
+        if (string.IsNullOrWhiteSpace(content))
+        {
+            content = $@"
+{frontMatter}
+# {document?.Title}
+".TrimStart();
+        }
+        else if (!content.TrimStart().StartsWith(PublicationAppScalars.FrontMatterFence))
+        {
+            content = $@"
+{frontMatter}
+{content.Trim()}
+".TrimStart();
+        }
+
+        File.WriteAllText(entry.EntryFileInfo.FullName, content);
+    }
+
+    /// <summary>
+    /// Writes an entry with YAML front matter to the specified entry path.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="entryPath">the entry path</param>
+    /// <param name="content">the entry content</param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static void WritePublicationEntryWithYamlFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    {
+        if (document == null)
+        {
+            logger?.LogError("Error: the expected document is not here.");
+
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(entryPath))
+        {
+            logger?.LogError("Error: the expected entry path is not here.");
+
+            return;
+        }
+
+        logger?.LogInformation("Writing to `{Path}`...", entryPath);
+
+        string yaml = document.ToYaml(PublicationLinesUtility.ConvertToLines(content), logger) ?? string.Empty;
+        string frontMatter = $@"
+{PublicationAppScalars.FrontMatterFence}
+{yaml}
+{PublicationAppScalars.FrontMatterFence}
+".Trim();
+
+        if (string.IsNullOrWhiteSpace(content))
+        {
+            content = $@"
+{frontMatter}
+# {document.Title}
+".TrimStart();
+        }
+        else if (!content.TrimStart().StartsWith(PublicationAppScalars.FrontMatterFence))
+        {
+            content = $@"
+{frontMatter}
+{content.Trim()}
+".TrimStart();
+        }
+
+        File.WriteAllText(entryPath, content);
     }
 }

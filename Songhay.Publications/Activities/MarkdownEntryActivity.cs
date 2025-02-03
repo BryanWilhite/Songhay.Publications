@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.RegularExpressions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+﻿using System.Text.RegularExpressions;
 
 namespace Songhay.Publications.Activities;
 
@@ -9,7 +6,7 @@ namespace Songhay.Publications.Activities;
 /// <see cref="IActivity"/> implementation for <see cref="MarkdownEntry"/>.
 /// </summary>
 /// <seealso cref="IActivity" />
-public class MarkdownEntryActivity : IActivityWithTask
+public class MarkdownEntryActivity : IActivityTask
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="MarkdownEntryActivity"/> class.
@@ -21,18 +18,6 @@ public class MarkdownEntryActivity : IActivityWithTask
         _configuration = configuration;
         _logger = logger;
     }
-
-    /// <summary>
-    /// Displays the help.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public string DisplayHelp(ProgramArgs? args) => throw new NotImplementedException();
-
-    /// <summary>
-    /// Starts the <see cref="IActivity"/>.
-    /// </summary>
-    /// <param name="args">The arguments.</param>
-    public void Start(ProgramArgs? args) => throw new NotImplementedException();
 
     /// <summary>
     /// Starts the <see cref="IActivity"/>.

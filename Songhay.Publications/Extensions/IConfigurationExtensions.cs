@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
@@ -10,7 +7,7 @@ namespace Songhay.Publications.Extensions;
 public static class IConfigurationExtensions
 {
     /// <summary>
-    /// Converts <see cref="ProgramArgs"/> to Presentation <see cref="DirectoryInfo"/>.
+    /// Converts <see cref="IConfiguration"/> to Presentation <see cref="DirectoryInfo"/>.
     /// </summary>
     /// <param name="configuration">the <see cref="IConfiguration"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>

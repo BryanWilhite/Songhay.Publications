@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  id: Songhay.Publications.Extensions
+  children:
+  - Songhay.Publications.Extensions.DirectoryInfoExtensions
+  - Songhay.Publications.Extensions.FileInfoExtensions
+  - Songhay.Publications.Extensions.FragmentExtensions
+  - Songhay.Publications.Extensions.GroupableExtensions
+  - Songhay.Publications.Extensions.IConfigurationExtensions
+  - Songhay.Publications.Extensions.IDictionaryExtensions
+  - Songhay.Publications.Extensions.IDocumentExtensions
+  - Songhay.Publications.Extensions.IndexEntryExtensions
+  - Songhay.Publications.Extensions.JsonElementExtensions
+  - Songhay.Publications.Extensions.JsonNodeExtensions
+  - Songhay.Publications.Extensions.JsonObjectExtensions
+  - Songhay.Publications.Extensions.MarkdownEntryExtensions
+  - Songhay.Publications.Extensions.PublicationContextExtensions
+  - Songhay.Publications.Extensions.ResponsiveImageExtensions
+  - Songhay.Publications.Extensions.SegmentExtensions
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  type: Namespace
+  assemblies:
+  - Songhay.Publications
+references:
+- uid: Songhay.Publications.Extensions.DirectoryInfoExtensions
+  commentId: T:Songhay.Publications.Extensions.DirectoryInfoExtensions
+  href: Songhay.Publications.Extensions.DirectoryInfoExtensions.html
+  name: DirectoryInfoExtensions
+  nameWithType: DirectoryInfoExtensions
+  fullName: Songhay.Publications.Extensions.DirectoryInfoExtensions
+- uid: Songhay.Publications.Extensions.FileInfoExtensions
+  commentId: T:Songhay.Publications.Extensions.FileInfoExtensions
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html
+  name: FileInfoExtensions
+  nameWithType: FileInfoExtensions
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions
+- uid: Songhay.Publications.Extensions.IConfigurationExtensions
+  commentId: T:Songhay.Publications.Extensions.IConfigurationExtensions
+  href: Songhay.Publications.Extensions.IConfigurationExtensions.html
+  name: IConfigurationExtensions
+  nameWithType: IConfigurationExtensions
+  fullName: Songhay.Publications.Extensions.IConfigurationExtensions
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions
+  commentId: T:Songhay.Publications.Extensions.IDictionaryExtensions
+  href: Songhay.Publications.Extensions.IDictionaryExtensions.html
+  name: IDictionaryExtensions
+  nameWithType: IDictionaryExtensions
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions
+- uid: Songhay.Publications.Extensions.IDocumentExtensions
+  commentId: T:Songhay.Publications.Extensions.IDocumentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html
+  name: IDocumentExtensions
+  nameWithType: IDocumentExtensions
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions
+- uid: Songhay.Publications.Extensions.FragmentExtensions
+  commentId: T:Songhay.Publications.Extensions.FragmentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.FragmentExtensions.html
+  name: FragmentExtensions
+  nameWithType: FragmentExtensions
+  fullName: Songhay.Publications.Extensions.FragmentExtensions
+- uid: Songhay.Publications.Extensions.GroupableExtensions
+  commentId: T:Songhay.Publications.Extensions.GroupableExtensions
+  href: Songhay.Publications.Extensions.GroupableExtensions.html
+  name: GroupableExtensions
+  nameWithType: GroupableExtensions
+  fullName: Songhay.Publications.Extensions.GroupableExtensions
+- uid: Songhay.Publications.Extensions.IndexEntryExtensions
+  commentId: T:Songhay.Publications.Extensions.IndexEntryExtensions
+  href: Songhay.Publications.Extensions.IndexEntryExtensions.html
+  name: IndexEntryExtensions
+  nameWithType: IndexEntryExtensions
+  fullName: Songhay.Publications.Extensions.IndexEntryExtensions
+- uid: Songhay.Publications.Extensions.SegmentExtensions
+  commentId: T:Songhay.Publications.Extensions.SegmentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.SegmentExtensions.html
+  name: SegmentExtensions
+  nameWithType: SegmentExtensions
+  fullName: Songhay.Publications.Extensions.SegmentExtensions
+- uid: Songhay.Publications.Extensions.JsonElementExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonElementExtensions
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html
+  name: JsonElementExtensions
+  nameWithType: JsonElementExtensions
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonObjectExtensions
+  href: Songhay.Publications.Extensions.JsonObjectExtensions.html
+  name: JsonObjectExtensions
+  nameWithType: JsonObjectExtensions
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions
+- uid: Songhay.Publications.Extensions.MarkdownEntryExtensions
+  commentId: T:Songhay.Publications.Extensions.MarkdownEntryExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.MarkdownEntryExtensions.html
+  name: MarkdownEntryExtensions
+  nameWithType: MarkdownEntryExtensions
+  fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions
+- uid: Songhay.Publications.Extensions.PublicationContextExtensions
+  commentId: T:Songhay.Publications.Extensions.PublicationContextExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.PublicationContextExtensions.html
+  name: PublicationContextExtensions
+  nameWithType: PublicationContextExtensions
+  fullName: Songhay.Publications.Extensions.PublicationContextExtensions
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  commentId: T:Songhay.Publications.Extensions.ResponsiveImageExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html
+  name: ResponsiveImageExtensions
+  nameWithType: ResponsiveImageExtensions
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html

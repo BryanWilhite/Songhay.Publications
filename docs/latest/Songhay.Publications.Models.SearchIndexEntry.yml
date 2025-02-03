@@ -1,0 +1,2038 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.SearchIndexEntry
+  commentId: T:Songhay.Publications.Models.SearchIndexEntry
+  id: SearchIndexEntry
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.SearchIndexEntry.Extract
+  langs:
+  - csharp
+  - vb
+  name: SearchIndexEntry
+  nameWithType: SearchIndexEntry
+  fullName: Songhay.Publications.Models.SearchIndexEntry
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/SearchIndexEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: SearchIndexEntry
+    path: ../Songhay.Publications/Models/SearchIndexEntry.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Defines the Search Index Entry.
+  example: []
+  syntax:
+    content: 'public class SearchIndexEntry : Document, IDocument, ITemporal'
+    content.vb: Public Class SearchIndexEntry Inherits Document Implements IDocument, ITemporal
+  inheritance:
+  - System.Object
+  - Songhay.Publications.Models.Document
+  implements:
+  - Songhay.Publications.Abstractions.IDocument
+  - Songhay.Abstractions.ITemporal
+  inheritedMembers:
+  - Songhay.Publications.Models.Document.ClientId
+  - Songhay.Publications.Models.Document.InceptDate
+  - Songhay.Publications.Models.Document.DocumentId
+  - Songhay.Publications.Models.Document.DocumentShortName
+  - Songhay.Publications.Models.Document.FileName
+  - Songhay.Publications.Models.Document.IsActive
+  - Songhay.Publications.Models.Document.IsRoot
+  - Songhay.Publications.Models.Document.ModificationDate
+  - Songhay.Publications.Models.Document.EndDate
+  - Songhay.Publications.Models.Document.Path
+  - Songhay.Publications.Models.Document.SegmentId
+  - Songhay.Publications.Models.Document.SortOrdinal
+  - Songhay.Publications.Models.Document.Tag
+  - Songhay.Publications.Models.Document.TemplateId
+  - Songhay.Publications.Models.Document.Title
+  - Songhay.Publications.Models.Document.Segment
+  - Songhay.Publications.Models.Document.Fragments
+  - Songhay.Publications.Models.Document.IndexKeywords
+  - Songhay.Publications.Models.Document.ResponsiveImages
+  - Songhay.Publications.Models.Document.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.Clone
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.HasFragments
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(System.String)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(System.Boolean)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.IDocument})
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.SearchIndexEntry.Extract
+  commentId: P:Songhay.Publications.Models.SearchIndexEntry.Extract
+  id: Extract
+  parent: Songhay.Publications.Models.SearchIndexEntry
+  langs:
+  - csharp
+  - vb
+  name: Extract
+  nameWithType: SearchIndexEntry.Extract
+  fullName: Songhay.Publications.Models.SearchIndexEntry.Extract
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/SearchIndexEntry.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Extract
+    path: ../Songhay.Publications/Models/SearchIndexEntry.cs
+    startLine: 10
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: The <xref href="Songhay.Publications.Models.Document" data-throw-if-not-resolved="false"></xref> Extract.
+  example: []
+  syntax:
+    content: public string? Extract { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Extract As String
+  overload: Songhay.Publications.Models.SearchIndexEntry.Extract*
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Songhay.Publications.Models.Document
+  commentId: T:Songhay.Publications.Models.Document
+  parent: Songhay.Publications.Models
+  href: Songhay.Publications.Models.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: Songhay.Publications.Models.Document
+- uid: Songhay.Publications.Abstractions.IDocument
+  commentId: T:Songhay.Publications.Abstractions.IDocument
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: IDocument
+  nameWithType: IDocument
+  fullName: Songhay.Publications.Abstractions.IDocument
+- uid: Songhay.Abstractions.ITemporal
+  commentId: T:Songhay.Abstractions.ITemporal
+  parent: Songhay.Abstractions
+  isExternal: true
+  name: ITemporal
+  nameWithType: ITemporal
+  fullName: Songhay.Abstractions.ITemporal
+- uid: Songhay.Publications.Models.Document.ClientId
+  commentId: P:Songhay.Publications.Models.Document.ClientId
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ClientId
+  name: ClientId
+  nameWithType: Document.ClientId
+  fullName: Songhay.Publications.Models.Document.ClientId
+- uid: Songhay.Publications.Models.Document.InceptDate
+  commentId: P:Songhay.Publications.Models.Document.InceptDate
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_InceptDate
+  name: InceptDate
+  nameWithType: Document.InceptDate
+  fullName: Songhay.Publications.Models.Document.InceptDate
+- uid: Songhay.Publications.Models.Document.DocumentId
+  commentId: P:Songhay.Publications.Models.Document.DocumentId
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_DocumentId
+  name: DocumentId
+  nameWithType: Document.DocumentId
+  fullName: Songhay.Publications.Models.Document.DocumentId
+- uid: Songhay.Publications.Models.Document.DocumentShortName
+  commentId: P:Songhay.Publications.Models.Document.DocumentShortName
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_DocumentShortName
+  name: DocumentShortName
+  nameWithType: Document.DocumentShortName
+  fullName: Songhay.Publications.Models.Document.DocumentShortName
+- uid: Songhay.Publications.Models.Document.FileName
+  commentId: P:Songhay.Publications.Models.Document.FileName
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_FileName
+  name: FileName
+  nameWithType: Document.FileName
+  fullName: Songhay.Publications.Models.Document.FileName
+- uid: Songhay.Publications.Models.Document.IsActive
+  commentId: P:Songhay.Publications.Models.Document.IsActive
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_IsActive
+  name: IsActive
+  nameWithType: Document.IsActive
+  fullName: Songhay.Publications.Models.Document.IsActive
+- uid: Songhay.Publications.Models.Document.IsRoot
+  commentId: P:Songhay.Publications.Models.Document.IsRoot
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_IsRoot
+  name: IsRoot
+  nameWithType: Document.IsRoot
+  fullName: Songhay.Publications.Models.Document.IsRoot
+- uid: Songhay.Publications.Models.Document.ModificationDate
+  commentId: P:Songhay.Publications.Models.Document.ModificationDate
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ModificationDate
+  name: ModificationDate
+  nameWithType: Document.ModificationDate
+  fullName: Songhay.Publications.Models.Document.ModificationDate
+- uid: Songhay.Publications.Models.Document.EndDate
+  commentId: P:Songhay.Publications.Models.Document.EndDate
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_EndDate
+  name: EndDate
+  nameWithType: Document.EndDate
+  fullName: Songhay.Publications.Models.Document.EndDate
+- uid: Songhay.Publications.Models.Document.Path
+  commentId: P:Songhay.Publications.Models.Document.Path
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_Path
+  name: Path
+  nameWithType: Document.Path
+  fullName: Songhay.Publications.Models.Document.Path
+- uid: Songhay.Publications.Models.Document.SegmentId
+  commentId: P:Songhay.Publications.Models.Document.SegmentId
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_SegmentId
+  name: SegmentId
+  nameWithType: Document.SegmentId
+  fullName: Songhay.Publications.Models.Document.SegmentId
+- uid: Songhay.Publications.Models.Document.SortOrdinal
+  commentId: P:Songhay.Publications.Models.Document.SortOrdinal
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_SortOrdinal
+  name: SortOrdinal
+  nameWithType: Document.SortOrdinal
+  fullName: Songhay.Publications.Models.Document.SortOrdinal
+- uid: Songhay.Publications.Models.Document.Tag
+  commentId: P:Songhay.Publications.Models.Document.Tag
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_Tag
+  name: Tag
+  nameWithType: Document.Tag
+  fullName: Songhay.Publications.Models.Document.Tag
+- uid: Songhay.Publications.Models.Document.TemplateId
+  commentId: P:Songhay.Publications.Models.Document.TemplateId
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_TemplateId
+  name: TemplateId
+  nameWithType: Document.TemplateId
+  fullName: Songhay.Publications.Models.Document.TemplateId
+- uid: Songhay.Publications.Models.Document.Title
+  commentId: P:Songhay.Publications.Models.Document.Title
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_Title
+  name: Title
+  nameWithType: Document.Title
+  fullName: Songhay.Publications.Models.Document.Title
+- uid: Songhay.Publications.Models.Document.Segment
+  commentId: P:Songhay.Publications.Models.Document.Segment
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_Segment
+  name: Segment
+  nameWithType: Document.Segment
+  fullName: Songhay.Publications.Models.Document.Segment
+- uid: Songhay.Publications.Models.Document.Fragments
+  commentId: P:Songhay.Publications.Models.Document.Fragments
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_Fragments
+  name: Fragments
+  nameWithType: Document.Fragments
+  fullName: Songhay.Publications.Models.Document.Fragments
+- uid: Songhay.Publications.Models.Document.IndexKeywords
+  commentId: P:Songhay.Publications.Models.Document.IndexKeywords
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_IndexKeywords
+  name: IndexKeywords
+  nameWithType: Document.IndexKeywords
+  fullName: Songhay.Publications.Models.Document.IndexKeywords
+- uid: Songhay.Publications.Models.Document.ResponsiveImages
+  commentId: P:Songhay.Publications.Models.Document.ResponsiveImages
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ResponsiveImages
+  name: ResponsiveImages
+  nameWithType: Document.ResponsiveImages
+  fullName: Songhay.Publications.Models.Document.ResponsiveImages
+- uid: Songhay.Publications.Models.Document.ToString
+  commentId: M:Songhay.Publications.Models.Document.ToString
+  parent: Songhay.Publications.Models.Document
+  href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ToString
+  name: ToString()
+  nameWithType: Document.ToString()
+  fullName: Songhay.Publications.Models.Document.ToString()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.Document.ToString
+    name: ToString
+    href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.Document.ToString
+    name: ToString
+    href: Songhay.Publications.Models.Document.html#Songhay_Publications_Models_Document_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.Clone
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  name: Clone(IDocument)
+  nameWithType: IDocumentExtensions.Clone(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+    name: Clone
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+    name: Clone
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.HasFragments
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  name: HasFragments(IDocument)
+  nameWithType: IDocumentExtensions.HasFragments(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+    name: HasFragments
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+    name: HasFragments
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  name: IsTemplatable(IDocument)
+  nameWithType: IDocumentExtensions.IsTemplatable(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+    name: IsTemplatable
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+    name: IsTemplatable
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  name: SetDefaults(IDocument)
+  nameWithType: IDocumentExtensions.SetDefaults(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(System.String)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  name: ToConventionalPublicationItem(IDocument, string)
+  nameWithType: IDocumentExtensions.ToConventionalPublicationItem(IDocument, string)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument, string)
+  nameWithType.vb: IDocumentExtensions.ToConventionalPublicationItem(IDocument, String)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument, String)
+  name.vb: ToConventionalPublicationItem(IDocument, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+    name: ToConventionalPublicationItem
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+    name: ToConventionalPublicationItem
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  name: ToDisplayText(IDocument)
+  nameWithType: IDocumentExtensions.ToDisplayText(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  name: ToDisplayText(IDocument, bool)
+  nameWithType: IDocumentExtensions.ToDisplayText(IDocument, bool)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument, bool)
+  nameWithType.vb: IDocumentExtensions.ToDisplayText(IDocument, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument, Boolean)
+  name.vb: ToDisplayText(IDocument, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: ToMarkdownEntry(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.ToMarkdownEntry(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToMarkdownEntry(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: ToMarkdownEntry
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: ToMarkdownEntry
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  name: ToMenuDisplayItemModel(IDocument)
+  nameWithType: IDocumentExtensions.ToMenuDisplayItemModel(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(IDocument, IGroupable)
+  nameWithType: IDocumentExtensions.ToMenuDisplayItemModel(IDocument, IGroupable)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  name: ToValidationResult(IDocument)
+  nameWithType: IDocumentExtensions.ToValidationResult(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  name: ToYaml(IDocument, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: ToYaml(IDocument, IReadOnlyCollection<string>, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection<string>, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection<string>, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  name: WithDefaults(IDocument)
+  nameWithType: IDocumentExtensions.WithDefaults(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.IDocument})
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  name: WithEdit(IDocument, Action<IDocument>)
+  nameWithType: IDocumentExtensions.WithEdit(IDocument, Action<IDocument>)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument, System.Action<Songhay.Publications.Abstractions.IDocument>)
+  nameWithType.vb: IDocumentExtensions.WithEdit(IDocument, Action(Of IDocument))
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument, System.Action(Of Songhay.Publications.Abstractions.IDocument))
+  name.vb: WithEdit(IDocument, Action(Of IDocument))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WritePublicationEntryWithJsonFrontMatter(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithJsonFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithJsonFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  definition: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WritePublicationEntryWithYamlFrontMatter(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithYamlFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithYamlFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+- uid: Songhay.Abstractions
+  commentId: N:Songhay.Abstractions
+  isExternal: true
+  name: Songhay.Abstractions
+  nameWithType: Songhay.Abstractions
+  fullName: Songhay.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  name: Clone(IDocument)
+  nameWithType: IDocumentExtensions.Clone(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+    name: Clone
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
+    name: Clone
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions
+  commentId: T:Songhay.Publications.Extensions.IDocumentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html
+  name: IDocumentExtensions
+  nameWithType: IDocumentExtensions
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  name: HasFragments(IDocument)
+  nameWithType: IDocumentExtensions.HasFragments(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+    name: HasFragments
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+    name: HasFragments
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  name: IsTemplatable(IDocument)
+  nameWithType: IDocumentExtensions.IsTemplatable(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+    name: IsTemplatable
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
+    name: IsTemplatable
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  name: SetDefaults(IDocument)
+  nameWithType: IDocumentExtensions.SetDefaults(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  name: ToConventionalPublicationItem(IDocument, string)
+  nameWithType: IDocumentExtensions.ToConventionalPublicationItem(IDocument, string)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument, string)
+  nameWithType.vb: IDocumentExtensions.ToConventionalPublicationItem(IDocument, String)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument, String)
+  name.vb: ToConventionalPublicationItem(IDocument, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+    name: ToConventionalPublicationItem
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
+    name: ToConventionalPublicationItem
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  name: ToDisplayText(IDocument)
+  nameWithType: IDocumentExtensions.ToDisplayText(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  name: ToDisplayText(IDocument, bool)
+  nameWithType: IDocumentExtensions.ToDisplayText(IDocument, bool)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument, bool)
+  nameWithType.vb: IDocumentExtensions.ToDisplayText(IDocument, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument, Boolean)
+  name.vb: ToDisplayText(IDocument, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: ToMarkdownEntry(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.ToMarkdownEntry(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToMarkdownEntry(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: ToMarkdownEntry
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: ToMarkdownEntry
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  name: ToMenuDisplayItemModel(IDocument)
+  nameWithType: IDocumentExtensions.ToMenuDisplayItemModel(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(IDocument, IGroupable)
+  nameWithType: IDocumentExtensions.ToMenuDisplayItemModel(IDocument, IGroupable)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  name: ToValidationResult(IDocument)
+  nameWithType: IDocumentExtensions.ToValidationResult(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  name: ToYaml(IDocument, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: ToYaml(IDocument, IReadOnlyCollection<string>, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection<string>, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection<string>, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: ToYaml
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  name: WithDefaults(IDocument)
+  nameWithType: IDocumentExtensions.WithDefaults(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  name: WithEdit(IDocument, Action<IDocument>)
+  nameWithType: IDocumentExtensions.WithEdit(IDocument, Action<IDocument>)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument, System.Action<Songhay.Publications.Abstractions.IDocument>)
+  nameWithType.vb: IDocumentExtensions.WithEdit(IDocument, Action(Of IDocument))
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument, System.Action(Of Songhay.Publications.Abstractions.IDocument))
+  name.vb: WithEdit(IDocument, Action(Of IDocument))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WritePublicationEntryWithJsonFrontMatter(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithJsonFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithJsonFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WritePublicationEntryWithYamlFrontMatter(IDocument, string, string, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument, string, string, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument, string, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithYamlFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: WritePublicationEntryWithYamlFrontMatter
+    href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Models.SearchIndexEntry.Extract*
+  commentId: Overload:Songhay.Publications.Models.SearchIndexEntry.Extract
+  href: Songhay.Publications.Models.SearchIndexEntry.html#Songhay_Publications_Models_SearchIndexEntry_Extract
+  name: Extract
+  nameWithType: SearchIndexEntry.Extract
+  fullName: Songhay.Publications.Models.SearchIndexEntry.Extract
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

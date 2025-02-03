@@ -1,5 +1,3 @@
-using System.Text.Json;
-
 namespace Songhay.Publications.Extensions;
 
 /// <summary>
