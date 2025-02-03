@@ -1,0 +1,2870 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.Fragment
+  commentId: T:Songhay.Publications.Models.Fragment
+  id: Fragment
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.Fragment.ClientId
+  - Songhay.Publications.Models.Fragment.Content
+  - Songhay.Publications.Models.Fragment.Document
+  - Songhay.Publications.Models.Fragment.DocumentId
+  - Songhay.Publications.Models.Fragment.EndDate
+  - Songhay.Publications.Models.Fragment.FragmentDisplayName
+  - Songhay.Publications.Models.Fragment.FragmentId
+  - Songhay.Publications.Models.Fragment.FragmentName
+  - Songhay.Publications.Models.Fragment.InceptDate
+  - Songhay.Publications.Models.Fragment.IsActive
+  - Songhay.Publications.Models.Fragment.IsNext
+  - Songhay.Publications.Models.Fragment.IsPrevious
+  - Songhay.Publications.Models.Fragment.IsWrapper
+  - Songhay.Publications.Models.Fragment.ItemText
+  - Songhay.Publications.Models.Fragment.ModificationDate
+  - Songhay.Publications.Models.Fragment.NextFragment
+  - Songhay.Publications.Models.Fragment.NextFragmentId
+  - Songhay.Publications.Models.Fragment.NextFragments
+  - Songhay.Publications.Models.Fragment.PrevFragment
+  - Songhay.Publications.Models.Fragment.PrevFragmentId
+  - Songhay.Publications.Models.Fragment.PrevFragments
+  - Songhay.Publications.Models.Fragment.SortOrdinal
+  - Songhay.Publications.Models.Fragment.ToString
+  langs:
+  - csharp
+  - vb
+  name: Fragment
+  nameWithType: Fragment
+  fullName: Songhay.Publications.Models.Fragment
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Fragment
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 7
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Publications Fragment
+  example: []
+  syntax:
+    content: 'public class Fragment : IFragment, ITemporal'
+    content.vb: Public Class Fragment Implements IFragment, ITemporal
+  inheritance:
+  - System.Object
+  implements:
+  - Songhay.Publications.Abstractions.IFragment
+  - Songhay.Abstractions.ITemporal
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.Clone
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.SetDefaults
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(System.Boolean)
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable,System.Boolean)
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(System.Boolean)
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithDefaults
+  - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.IFragment})
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.Fragment.ClientId
+  commentId: P:Songhay.Publications.Models.Fragment.ClientId
+  id: ClientId
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: ClientId
+  nameWithType: Fragment.ClientId
+  fullName: Songhay.Publications.Models.Fragment.ClientId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ClientId
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 12
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the client identifier.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Client ID", Order = 2)]
+
+      public string? ClientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Display(Name:="Client ID", Order:=2)>
+
+      Public Property ClientId As String
+  overload: Songhay.Publications.Models.Fragment.ClientId*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.ClientId
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Client ID
+    - name: Order
+      type: System.Int32
+      value: 2
+- uid: Songhay.Publications.Models.Fragment.InceptDate
+  commentId: P:Songhay.Publications.Models.Fragment.InceptDate
+  id: InceptDate
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: InceptDate
+  nameWithType: Fragment.InceptDate
+  fullName: Songhay.Publications.Models.Fragment.InceptDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: InceptDate
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 19
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the incept date.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Incept Date", Order = 4)]
+
+      public DateTime? InceptDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <Display(Name:="Incept Date", Order:=4)>
+
+      Public Property InceptDate As Date?
+  overload: Songhay.Publications.Models.Fragment.InceptDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.InceptDate
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Incept Date
+    - name: Order
+      type: System.Int32
+      value: 4
+- uid: Songhay.Publications.Models.Fragment.DocumentId
+  commentId: P:Songhay.Publications.Models.Fragment.DocumentId
+  id: DocumentId
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: DocumentId
+  nameWithType: Fragment.DocumentId
+  fullName: Songhay.Publications.Models.Fragment.DocumentId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: DocumentId
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 25
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the document identifier.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Document ID", Order = 0)]
+
+      public int? DocumentId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Display(Name:="Document ID", Order:=0)>
+
+      Public Property DocumentId As Integer?
+  overload: Songhay.Publications.Models.Fragment.DocumentId*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.DocumentId
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Document ID
+    - name: Order
+      type: System.Int32
+      value: 0
+- uid: Songhay.Publications.Models.Fragment.EndDate
+  commentId: P:Songhay.Publications.Models.Fragment.EndDate
+  id: EndDate
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: Fragment.EndDate
+  fullName: Songhay.Publications.Models.Fragment.EndDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: EndDate
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 32
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the end date.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Expiration Date", Order = 7)]
+
+      public DateTime? EndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <Display(Name:="Expiration Date", Order:=7)>
+
+      Public Property EndDate As Date?
+  overload: Songhay.Publications.Models.Fragment.EndDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.EndDate
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Expiration Date
+    - name: Order
+      type: System.Int32
+      value: 7
+- uid: Songhay.Publications.Models.Fragment.FragmentDisplayName
+  commentId: P:Songhay.Publications.Models.Fragment.FragmentDisplayName
+  id: FragmentDisplayName
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: FragmentDisplayName
+  nameWithType: Fragment.FragmentDisplayName
+  fullName: Songhay.Publications.Models.Fragment.FragmentDisplayName
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: FragmentDisplayName
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 38
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the display name of the fragment.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Display Name", Order = 3)]
+
+      [DisplayFormat(ConvertEmptyStringToNull = true)]
+
+      public string? FragmentDisplayName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Display(Name:="Display Name", Order:=3)>
+
+      <DisplayFormat(ConvertEmptyStringToNull:=True)>
+
+      Public Property FragmentDisplayName As String
+  overload: Songhay.Publications.Models.Fragment.FragmentDisplayName*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.FragmentDisplayName
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Display Name
+    - name: Order
+      type: System.Int32
+      value: 3
+  - type: System.ComponentModel.DataAnnotations.DisplayFormatAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayFormatAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ConvertEmptyStringToNull
+      type: System.Boolean
+      value: true
+- uid: Songhay.Publications.Models.Fragment.FragmentId
+  commentId: P:Songhay.Publications.Models.Fragment.FragmentId
+  id: FragmentId
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: FragmentId
+  nameWithType: Fragment.FragmentId
+  fullName: Songhay.Publications.Models.Fragment.FragmentId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: FragmentId
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 45
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the fragment identifier.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Fragment ID", Order = 1)]
+
+      public int? FragmentId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Display(Name:="Fragment ID", Order:=1)>
+
+      Public Property FragmentId As Integer?
+  overload: Songhay.Publications.Models.Fragment.FragmentId*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.FragmentId
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Fragment ID
+    - name: Order
+      type: System.Int32
+      value: 1
+- uid: Songhay.Publications.Models.Fragment.FragmentName
+  commentId: P:Songhay.Publications.Models.Fragment.FragmentName
+  id: FragmentName
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: FragmentName
+  nameWithType: Fragment.FragmentName
+  fullName: Songhay.Publications.Models.Fragment.FragmentName
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: FragmentName
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 52
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the name of the fragment.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Item Name", Order = 2)]
+
+      [DisplayFormat(ConvertEmptyStringToNull = true)]
+
+      public string? FragmentName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Display(Name:="Item Name", Order:=2)>
+
+      <DisplayFormat(ConvertEmptyStringToNull:=True)>
+
+      Public Property FragmentName As String
+  overload: Songhay.Publications.Models.Fragment.FragmentName*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.FragmentName
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Item Name
+    - name: Order
+      type: System.Int32
+      value: 2
+  - type: System.ComponentModel.DataAnnotations.DisplayFormatAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayFormatAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ConvertEmptyStringToNull
+      type: System.Boolean
+      value: true
+- uid: Songhay.Publications.Models.Fragment.IsActive
+  commentId: P:Songhay.Publications.Models.Fragment.IsActive
+  id: IsActive
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: Fragment.IsActive
+  fullName: Songhay.Publications.Models.Fragment.IsActive
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IsActive
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 59
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the is active.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Is Active?", Order = 10)]
+
+      public bool? IsActive { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Display(Name:="Is Active?", Order:=10)>
+
+      Public Property IsActive As Boolean?
+  overload: Songhay.Publications.Models.Fragment.IsActive*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.IsActive
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Is Active?
+    - name: Order
+      type: System.Int32
+      value: 10
+- uid: Songhay.Publications.Models.Fragment.IsNext
+  commentId: P:Songhay.Publications.Models.Fragment.IsNext
+  id: IsNext
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: IsNext
+  nameWithType: Fragment.IsNext
+  fullName: Songhay.Publications.Models.Fragment.IsNext
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IsNext
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 65
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the is next.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Is Next?", Order = 11)]
+
+      public bool? IsNext { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Display(Name:="Is Next?", Order:=11)>
+
+      Public Property IsNext As Boolean?
+  overload: Songhay.Publications.Models.Fragment.IsNext*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.IsNext
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Is Next?
+    - name: Order
+      type: System.Int32
+      value: 11
+- uid: Songhay.Publications.Models.Fragment.IsPrevious
+  commentId: P:Songhay.Publications.Models.Fragment.IsPrevious
+  id: IsPrevious
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: IsPrevious
+  nameWithType: Fragment.IsPrevious
+  fullName: Songhay.Publications.Models.Fragment.IsPrevious
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IsPrevious
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 71
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the is previous.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Is Previous?", Order = 12)]
+
+      public bool? IsPrevious { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Display(Name:="Is Previous?", Order:=12)>
+
+      Public Property IsPrevious As Boolean?
+  overload: Songhay.Publications.Models.Fragment.IsPrevious*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.IsPrevious
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Is Previous?
+    - name: Order
+      type: System.Int32
+      value: 12
+- uid: Songhay.Publications.Models.Fragment.IsWrapper
+  commentId: P:Songhay.Publications.Models.Fragment.IsWrapper
+  id: IsWrapper
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: IsWrapper
+  nameWithType: Fragment.IsWrapper
+  fullName: Songhay.Publications.Models.Fragment.IsWrapper
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: IsWrapper
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 77
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the is wrapper.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Is Wrapper?", Order = 13)]
+
+      public bool? IsWrapper { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Display(Name:="Is Wrapper?", Order:=13)>
+
+      Public Property IsWrapper As Boolean?
+  overload: Songhay.Publications.Models.Fragment.IsWrapper*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.IsWrapper
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Is Wrapper?
+    - name: Order
+      type: System.Int32
+      value: 13
+- uid: Songhay.Publications.Models.Fragment.Content
+  commentId: P:Songhay.Publications.Models.Fragment.Content
+  id: Content
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: Fragment.Content
+  fullName: Songhay.Publications.Models.Fragment.Content
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Content
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 83
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the content.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public string? Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property Content As String
+  overload: Songhay.Publications.Models.Fragment.Content*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.Content
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.ItemText
+  commentId: P:Songhay.Publications.Models.Fragment.ItemText
+  id: ItemText
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: ItemText
+  nameWithType: Fragment.ItemText
+  fullName: Songhay.Publications.Models.Fragment.ItemText
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ItemText
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 89
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the item text.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public string? ItemText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property ItemText As String
+  overload: Songhay.Publications.Models.Fragment.ItemText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.ModificationDate
+  commentId: P:Songhay.Publications.Models.Fragment.ModificationDate
+  id: ModificationDate
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: ModificationDate
+  nameWithType: Fragment.ModificationDate
+  fullName: Songhay.Publications.Models.Fragment.ModificationDate
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ModificationDate
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 95
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the modification date.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Modification Date", Order = 5)]
+
+      public DateTime? ModificationDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <Display(Name:="Modification Date", Order:=5)>
+
+      Public Property ModificationDate As Date?
+  overload: Songhay.Publications.Models.Fragment.ModificationDate*
+  implements:
+  - Songhay.Abstractions.ITemporal.ModificationDate
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Modification Date
+    - name: Order
+      type: System.Int32
+      value: 5
+- uid: Songhay.Publications.Models.Fragment.NextFragmentId
+  commentId: P:Songhay.Publications.Models.Fragment.NextFragmentId
+  id: NextFragmentId
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: NextFragmentId
+  nameWithType: Fragment.NextFragmentId
+  fullName: Songhay.Publications.Models.Fragment.NextFragmentId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: NextFragmentId
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 101
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the next fragment identifier.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Next Fragment ID", Order = 7)]
+
+      public int? NextFragmentId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Display(Name:="Next Fragment ID", Order:=7)>
+
+      Public Property NextFragmentId As Integer?
+  overload: Songhay.Publications.Models.Fragment.NextFragmentId*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.NextFragmentId
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Next Fragment ID
+    - name: Order
+      type: System.Int32
+      value: 7
+- uid: Songhay.Publications.Models.Fragment.PrevFragmentId
+  commentId: P:Songhay.Publications.Models.Fragment.PrevFragmentId
+  id: PrevFragmentId
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: PrevFragmentId
+  nameWithType: Fragment.PrevFragmentId
+  fullName: Songhay.Publications.Models.Fragment.PrevFragmentId
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PrevFragmentId
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 107
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the previous fragment identifier.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Previous Fragment ID", Order = 8)]
+
+      public int? PrevFragmentId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Display(Name:="Previous Fragment ID", Order:=8)>
+
+      Public Property PrevFragmentId As Integer?
+  overload: Songhay.Publications.Models.Fragment.PrevFragmentId*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.PrevFragmentId
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Previous Fragment ID
+    - name: Order
+      type: System.Int32
+      value: 8
+- uid: Songhay.Publications.Models.Fragment.SortOrdinal
+  commentId: P:Songhay.Publications.Models.Fragment.SortOrdinal
+  id: SortOrdinal
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: SortOrdinal
+  nameWithType: Fragment.SortOrdinal
+  fullName: Songhay.Publications.Models.Fragment.SortOrdinal
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: SortOrdinal
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 113
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the sort ordinal.
+  example: []
+  syntax:
+    content: >-
+      [Display(Name = "Sort Ordinal", Order = 6)]
+
+      public byte? SortOrdinal { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Byte}
+    content.vb: >-
+      <Display(Name:="Sort Ordinal", Order:=6)>
+
+      Public Property SortOrdinal As Byte?
+  overload: Songhay.Publications.Models.Fragment.SortOrdinal*
+  implements:
+  - Songhay.Publications.Abstractions.IFragment.SortOrdinal
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Sort Ordinal
+    - name: Order
+      type: System.Int32
+      value: 6
+- uid: Songhay.Publications.Models.Fragment.Document
+  commentId: P:Songhay.Publications.Models.Fragment.Document
+  id: Document
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: Document
+  nameWithType: Fragment.Document
+  fullName: Songhay.Publications.Models.Fragment.Document
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Document
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 119
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the document.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public Document? Document { get; set; }
+    parameters: []
+    return:
+      type: Songhay.Publications.Models.Document
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property Document As Document
+  overload: Songhay.Publications.Models.Fragment.Document*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.NextFragments
+  commentId: P:Songhay.Publications.Models.Fragment.NextFragments
+  id: NextFragments
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: NextFragments
+  nameWithType: Fragment.NextFragments
+  fullName: Songhay.Publications.Models.Fragment.NextFragments
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: NextFragments
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 125
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the next fragments.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public ICollection<Fragment> NextFragments { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Songhay.Publications.Models.Fragment}
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property NextFragments As ICollection(Of Fragment)
+  overload: Songhay.Publications.Models.Fragment.NextFragments*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.NextFragment
+  commentId: P:Songhay.Publications.Models.Fragment.NextFragment
+  id: NextFragment
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: NextFragment
+  nameWithType: Fragment.NextFragment
+  fullName: Songhay.Publications.Models.Fragment.NextFragment
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: NextFragment
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 131
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the next fragment.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public Fragment? NextFragment { get; set; }
+    parameters: []
+    return:
+      type: Songhay.Publications.Models.Fragment
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property NextFragment As Fragment
+  overload: Songhay.Publications.Models.Fragment.NextFragment*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.PrevFragments
+  commentId: P:Songhay.Publications.Models.Fragment.PrevFragments
+  id: PrevFragments
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: PrevFragments
+  nameWithType: Fragment.PrevFragments
+  fullName: Songhay.Publications.Models.Fragment.PrevFragments
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PrevFragments
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 137
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the previous fragments.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public ICollection<Fragment> PrevFragments { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Songhay.Publications.Models.Fragment}
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property PrevFragments As ICollection(Of Fragment)
+  overload: Songhay.Publications.Models.Fragment.PrevFragments*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.PrevFragment
+  commentId: P:Songhay.Publications.Models.Fragment.PrevFragment
+  id: PrevFragment
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: PrevFragment
+  nameWithType: Fragment.PrevFragment
+  fullName: Songhay.Publications.Models.Fragment.PrevFragment
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PrevFragment
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 143
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the previous fragment.
+  example: []
+  syntax:
+    content: >-
+      [Display(AutoGenerateField = false)]
+
+      public Fragment? PrevFragment { get; set; }
+    parameters: []
+    return:
+      type: Songhay.Publications.Models.Fragment
+    content.vb: >-
+      <Display(AutoGenerateField:=False)>
+
+      Public Property PrevFragment As Fragment
+  overload: Songhay.Publications.Models.Fragment.PrevFragment*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: AutoGenerateField
+      type: System.Boolean
+      value: false
+- uid: Songhay.Publications.Models.Fragment.ToString
+  commentId: M:Songhay.Publications.Models.Fragment.ToString
+  id: ToString
+  parent: Songhay.Publications.Models.Fragment
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Fragment.ToString()
+  fullName: Songhay.Publications.Models.Fragment.ToString()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Models/Fragment.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToString
+    path: ../Songhay.Publications/Models/Fragment.cs
+    startLine: 152
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Converts to string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that represents this instance.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Songhay.Publications.Models.Fragment.ToString*
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Songhay.Publications.Abstractions.IFragment
+  commentId: T:Songhay.Publications.Abstractions.IFragment
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IFragment.html
+  name: IFragment
+  nameWithType: IFragment
+  fullName: Songhay.Publications.Abstractions.IFragment
+- uid: Songhay.Abstractions.ITemporal
+  commentId: T:Songhay.Abstractions.ITemporal
+  parent: Songhay.Abstractions
+  isExternal: true
+  name: ITemporal
+  nameWithType: ITemporal
+  fullName: Songhay.Abstractions.ITemporal
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.Clone
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  name: Clone(IFragment)
+  nameWithType: FragmentExtensions.Clone(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+    name: Clone
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+    name: Clone
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.SetDefaults
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  name: SetDefaults(IFragment)
+  nameWithType: FragmentExtensions.SetDefaults(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  name: ToDisplayText(IFragment)
+  nameWithType: FragmentExtensions.ToDisplayText(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  name: ToDisplayText(IFragment, bool)
+  nameWithType: FragmentExtensions.ToDisplayText(IFragment, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment, bool)
+  nameWithType.vb: FragmentExtensions.ToDisplayText(IFragment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment, Boolean)
+  name.vb: ToDisplayText(IFragment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  name: ToMenuDisplayItemModel(IFragment)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(IFragment, IGroupable)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Abstractions.IGroupable,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  name: ToMenuDisplayItemModel(IFragment, IGroupable, bool)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable, bool)
+  nameWithType.vb: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable, Boolean)
+  name.vb: ToMenuDisplayItemModel(IFragment, IGroupable, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  name: ToMenuDisplayItemModel(IFragment, bool)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, bool)
+  nameWithType.vb: FragmentExtensions.ToMenuDisplayItemModel(IFragment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Boolean)
+  name.vb: ToMenuDisplayItemModel(IFragment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  name: ToValidationResult(IFragment)
+  nameWithType: FragmentExtensions.ToValidationResult(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithDefaults
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  name: WithDefaults(IFragment)
+  nameWithType: FragmentExtensions.WithDefaults(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.IFragment})
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+  parent: Songhay.Publications.Extensions.FragmentExtensions
+  definition: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  name: WithEdit(IFragment, Action<IFragment>)
+  nameWithType: FragmentExtensions.WithEdit(IFragment, Action<IFragment>)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment, System.Action<Songhay.Publications.Abstractions.IFragment>)
+  nameWithType.vb: FragmentExtensions.WithEdit(IFragment, Action(Of IFragment))
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment, System.Action(Of Songhay.Publications.Abstractions.IFragment))
+  name.vb: WithEdit(IFragment, Action(Of IFragment))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+- uid: Songhay.Abstractions
+  commentId: N:Songhay.Abstractions
+  isExternal: true
+  name: Songhay.Abstractions
+  nameWithType: Songhay.Abstractions
+  fullName: Songhay.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    isExternal: true
+  - name: .
+  - uid: Songhay.Abstractions
+    name: Abstractions
+    isExternal: true
+- uid: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  name: Clone(IFragment)
+  nameWithType: FragmentExtensions.Clone(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+    name: Clone
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.Clone(Songhay.Publications.Abstractions.IFragment)
+    name: Clone
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions
+  commentId: T:Songhay.Publications.Extensions.FragmentExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.FragmentExtensions.html
+  name: FragmentExtensions
+  nameWithType: FragmentExtensions
+  fullName: Songhay.Publications.Extensions.FragmentExtensions
+- uid: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  name: SetDefaults(IFragment)
+  nameWithType: FragmentExtensions.SetDefaults(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.SetDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: SetDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  name: ToDisplayText(IFragment)
+  nameWithType: FragmentExtensions.ToDisplayText(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  name: ToDisplayText(IFragment, bool)
+  nameWithType: FragmentExtensions.ToDisplayText(IFragment, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment, bool)
+  nameWithType.vb: FragmentExtensions.ToDisplayText(IFragment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment, Boolean)
+  name.vb: ToDisplayText(IFragment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToDisplayText
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  name: ToMenuDisplayItemModel(IFragment)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  name: ToMenuDisplayItemModel(IFragment, IGroupable)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  name: ToMenuDisplayItemModel(IFragment, IGroupable, bool)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable, bool)
+  nameWithType.vb: FragmentExtensions.ToMenuDisplayItemModel(IFragment, IGroupable, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Songhay.Abstractions.IGroupable, Boolean)
+  name.vb: ToMenuDisplayItemModel(IFragment, IGroupable, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,Songhay.Abstractions.IGroupable,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: Songhay.Abstractions.IGroupable
+    name: IGroupable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  name: ToMenuDisplayItemModel(IFragment, bool)
+  nameWithType: FragmentExtensions.ToMenuDisplayItemModel(IFragment, bool)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, bool)
+  nameWithType.vb: FragmentExtensions.ToMenuDisplayItemModel(IFragment, Boolean)
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment, Boolean)
+  name.vb: ToMenuDisplayItemModel(IFragment, Boolean)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IFragment,System.Boolean)
+    name: ToMenuDisplayItemModel
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  name: ToValidationResult(IFragment)
+  nameWithType: FragmentExtensions.ToValidationResult(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IFragment)
+    name: ToValidationResult
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  name: WithDefaults(IFragment)
+  nameWithType: FragmentExtensions.WithDefaults(IFragment)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithDefaults(Songhay.Publications.Abstractions.IFragment)
+    name: WithDefaults
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+- uid: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+  commentId: M:Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+  isExternal: true
+  href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  name: WithEdit(IFragment, Action<IFragment>)
+  nameWithType: FragmentExtensions.WithEdit(IFragment, Action<IFragment>)
+  fullName: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment, System.Action<Songhay.Publications.Abstractions.IFragment>)
+  nameWithType.vb: FragmentExtensions.WithEdit(IFragment, Action(Of IFragment))
+  fullName.vb: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment, System.Action(Of Songhay.Publications.Abstractions.IFragment))
+  name.vb: WithEdit(IFragment, Action(Of IFragment))
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FragmentExtensions.WithEdit(Songhay.Publications.Abstractions.IFragment,System.Action{Songhay.Publications.Abstractions.IFragment})
+    name: WithEdit
+    href: Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.IFragment
+    name: IFragment
+    href: Songhay.Publications.Abstractions.IFragment.html
+  - name: )
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Models.Fragment.ClientId*
+  commentId: Overload:Songhay.Publications.Models.Fragment.ClientId
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_ClientId
+  name: ClientId
+  nameWithType: Fragment.ClientId
+  fullName: Songhay.Publications.Models.Fragment.ClientId
+- uid: Songhay.Publications.Abstractions.IFragment.ClientId
+  commentId: P:Songhay.Publications.Abstractions.IFragment.ClientId
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_ClientId
+  name: ClientId
+  nameWithType: IFragment.ClientId
+  fullName: Songhay.Publications.Abstractions.IFragment.ClientId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Songhay.Publications.Models.Fragment.InceptDate*
+  commentId: Overload:Songhay.Publications.Models.Fragment.InceptDate
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_InceptDate
+  name: InceptDate
+  nameWithType: Fragment.InceptDate
+  fullName: Songhay.Publications.Models.Fragment.InceptDate
+- uid: Songhay.Abstractions.ITemporal.InceptDate
+  commentId: P:Songhay.Abstractions.ITemporal.InceptDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: InceptDate
+  nameWithType: ITemporal.InceptDate
+  fullName: Songhay.Abstractions.ITemporal.InceptDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Songhay.Publications.Models.Fragment.DocumentId*
+  commentId: Overload:Songhay.Publications.Models.Fragment.DocumentId
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_DocumentId
+  name: DocumentId
+  nameWithType: Fragment.DocumentId
+  fullName: Songhay.Publications.Models.Fragment.DocumentId
+- uid: Songhay.Publications.Abstractions.IFragment.DocumentId
+  commentId: P:Songhay.Publications.Abstractions.IFragment.DocumentId
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_DocumentId
+  name: DocumentId
+  nameWithType: IFragment.DocumentId
+  fullName: Songhay.Publications.Abstractions.IFragment.DocumentId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: Songhay.Publications.Models.Fragment.EndDate*
+  commentId: Overload:Songhay.Publications.Models.Fragment.EndDate
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_EndDate
+  name: EndDate
+  nameWithType: Fragment.EndDate
+  fullName: Songhay.Publications.Models.Fragment.EndDate
+- uid: Songhay.Abstractions.ITemporal.EndDate
+  commentId: P:Songhay.Abstractions.ITemporal.EndDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: EndDate
+  nameWithType: ITemporal.EndDate
+  fullName: Songhay.Abstractions.ITemporal.EndDate
+- uid: Songhay.Publications.Models.Fragment.FragmentDisplayName*
+  commentId: Overload:Songhay.Publications.Models.Fragment.FragmentDisplayName
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_FragmentDisplayName
+  name: FragmentDisplayName
+  nameWithType: Fragment.FragmentDisplayName
+  fullName: Songhay.Publications.Models.Fragment.FragmentDisplayName
+- uid: Songhay.Publications.Abstractions.IFragment.FragmentDisplayName
+  commentId: P:Songhay.Publications.Abstractions.IFragment.FragmentDisplayName
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_FragmentDisplayName
+  name: FragmentDisplayName
+  nameWithType: IFragment.FragmentDisplayName
+  fullName: Songhay.Publications.Abstractions.IFragment.FragmentDisplayName
+- uid: Songhay.Publications.Models.Fragment.FragmentId*
+  commentId: Overload:Songhay.Publications.Models.Fragment.FragmentId
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_FragmentId
+  name: FragmentId
+  nameWithType: Fragment.FragmentId
+  fullName: Songhay.Publications.Models.Fragment.FragmentId
+- uid: Songhay.Publications.Abstractions.IFragment.FragmentId
+  commentId: P:Songhay.Publications.Abstractions.IFragment.FragmentId
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_FragmentId
+  name: FragmentId
+  nameWithType: IFragment.FragmentId
+  fullName: Songhay.Publications.Abstractions.IFragment.FragmentId
+- uid: Songhay.Publications.Models.Fragment.FragmentName*
+  commentId: Overload:Songhay.Publications.Models.Fragment.FragmentName
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_FragmentName
+  name: FragmentName
+  nameWithType: Fragment.FragmentName
+  fullName: Songhay.Publications.Models.Fragment.FragmentName
+- uid: Songhay.Publications.Abstractions.IFragment.FragmentName
+  commentId: P:Songhay.Publications.Abstractions.IFragment.FragmentName
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_FragmentName
+  name: FragmentName
+  nameWithType: IFragment.FragmentName
+  fullName: Songhay.Publications.Abstractions.IFragment.FragmentName
+- uid: Songhay.Publications.Models.Fragment.IsActive*
+  commentId: Overload:Songhay.Publications.Models.Fragment.IsActive
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_IsActive
+  name: IsActive
+  nameWithType: Fragment.IsActive
+  fullName: Songhay.Publications.Models.Fragment.IsActive
+- uid: Songhay.Publications.Abstractions.IFragment.IsActive
+  commentId: P:Songhay.Publications.Abstractions.IFragment.IsActive
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_IsActive
+  name: IsActive
+  nameWithType: IFragment.IsActive
+  fullName: Songhay.Publications.Abstractions.IFragment.IsActive
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: Songhay.Publications.Models.Fragment.IsNext*
+  commentId: Overload:Songhay.Publications.Models.Fragment.IsNext
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_IsNext
+  name: IsNext
+  nameWithType: Fragment.IsNext
+  fullName: Songhay.Publications.Models.Fragment.IsNext
+- uid: Songhay.Publications.Abstractions.IFragment.IsNext
+  commentId: P:Songhay.Publications.Abstractions.IFragment.IsNext
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_IsNext
+  name: IsNext
+  nameWithType: IFragment.IsNext
+  fullName: Songhay.Publications.Abstractions.IFragment.IsNext
+- uid: Songhay.Publications.Models.Fragment.IsPrevious*
+  commentId: Overload:Songhay.Publications.Models.Fragment.IsPrevious
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_IsPrevious
+  name: IsPrevious
+  nameWithType: Fragment.IsPrevious
+  fullName: Songhay.Publications.Models.Fragment.IsPrevious
+- uid: Songhay.Publications.Abstractions.IFragment.IsPrevious
+  commentId: P:Songhay.Publications.Abstractions.IFragment.IsPrevious
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_IsPrevious
+  name: IsPrevious
+  nameWithType: IFragment.IsPrevious
+  fullName: Songhay.Publications.Abstractions.IFragment.IsPrevious
+- uid: Songhay.Publications.Models.Fragment.IsWrapper*
+  commentId: Overload:Songhay.Publications.Models.Fragment.IsWrapper
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_IsWrapper
+  name: IsWrapper
+  nameWithType: Fragment.IsWrapper
+  fullName: Songhay.Publications.Models.Fragment.IsWrapper
+- uid: Songhay.Publications.Abstractions.IFragment.IsWrapper
+  commentId: P:Songhay.Publications.Abstractions.IFragment.IsWrapper
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_IsWrapper
+  name: IsWrapper
+  nameWithType: IFragment.IsWrapper
+  fullName: Songhay.Publications.Abstractions.IFragment.IsWrapper
+- uid: Songhay.Publications.Models.Fragment.Content*
+  commentId: Overload:Songhay.Publications.Models.Fragment.Content
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_Content
+  name: Content
+  nameWithType: Fragment.Content
+  fullName: Songhay.Publications.Models.Fragment.Content
+- uid: Songhay.Publications.Abstractions.IFragment.Content
+  commentId: P:Songhay.Publications.Abstractions.IFragment.Content
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_Content
+  name: Content
+  nameWithType: IFragment.Content
+  fullName: Songhay.Publications.Abstractions.IFragment.Content
+- uid: Songhay.Publications.Models.Fragment.ItemText*
+  commentId: Overload:Songhay.Publications.Models.Fragment.ItemText
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_ItemText
+  name: ItemText
+  nameWithType: Fragment.ItemText
+  fullName: Songhay.Publications.Models.Fragment.ItemText
+- uid: Songhay.Publications.Models.Fragment.ModificationDate*
+  commentId: Overload:Songhay.Publications.Models.Fragment.ModificationDate
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_ModificationDate
+  name: ModificationDate
+  nameWithType: Fragment.ModificationDate
+  fullName: Songhay.Publications.Models.Fragment.ModificationDate
+- uid: Songhay.Abstractions.ITemporal.ModificationDate
+  commentId: P:Songhay.Abstractions.ITemporal.ModificationDate
+  parent: Songhay.Abstractions.ITemporal
+  isExternal: true
+  name: ModificationDate
+  nameWithType: ITemporal.ModificationDate
+  fullName: Songhay.Abstractions.ITemporal.ModificationDate
+- uid: Songhay.Publications.Models.Fragment.NextFragmentId*
+  commentId: Overload:Songhay.Publications.Models.Fragment.NextFragmentId
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_NextFragmentId
+  name: NextFragmentId
+  nameWithType: Fragment.NextFragmentId
+  fullName: Songhay.Publications.Models.Fragment.NextFragmentId
+- uid: Songhay.Publications.Abstractions.IFragment.NextFragmentId
+  commentId: P:Songhay.Publications.Abstractions.IFragment.NextFragmentId
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_NextFragmentId
+  name: NextFragmentId
+  nameWithType: IFragment.NextFragmentId
+  fullName: Songhay.Publications.Abstractions.IFragment.NextFragmentId
+- uid: Songhay.Publications.Models.Fragment.PrevFragmentId*
+  commentId: Overload:Songhay.Publications.Models.Fragment.PrevFragmentId
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_PrevFragmentId
+  name: PrevFragmentId
+  nameWithType: Fragment.PrevFragmentId
+  fullName: Songhay.Publications.Models.Fragment.PrevFragmentId
+- uid: Songhay.Publications.Abstractions.IFragment.PrevFragmentId
+  commentId: P:Songhay.Publications.Abstractions.IFragment.PrevFragmentId
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_PrevFragmentId
+  name: PrevFragmentId
+  nameWithType: IFragment.PrevFragmentId
+  fullName: Songhay.Publications.Abstractions.IFragment.PrevFragmentId
+- uid: Songhay.Publications.Models.Fragment.SortOrdinal*
+  commentId: Overload:Songhay.Publications.Models.Fragment.SortOrdinal
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_SortOrdinal
+  name: SortOrdinal
+  nameWithType: Fragment.SortOrdinal
+  fullName: Songhay.Publications.Models.Fragment.SortOrdinal
+- uid: Songhay.Publications.Abstractions.IFragment.SortOrdinal
+  commentId: P:Songhay.Publications.Abstractions.IFragment.SortOrdinal
+  parent: Songhay.Publications.Abstractions.IFragment
+  href: Songhay.Publications.Abstractions.IFragment.html#Songhay_Publications_Abstractions_IFragment_SortOrdinal
+  name: SortOrdinal
+  nameWithType: IFragment.SortOrdinal
+  fullName: Songhay.Publications.Abstractions.IFragment.SortOrdinal
+- uid: System.Nullable{System.Byte}
+  commentId: T:System.Nullable{System.Byte}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte?
+  nameWithType: byte?
+  fullName: byte?
+  nameWithType.vb: Byte?
+  fullName.vb: Byte?
+  name.vb: Byte?
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '?'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '?'
+- uid: Songhay.Publications.Models.Fragment.Document*
+  commentId: Overload:Songhay.Publications.Models.Fragment.Document
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_Document
+  name: Document
+  nameWithType: Fragment.Document
+  fullName: Songhay.Publications.Models.Fragment.Document
+- uid: Songhay.Publications.Models.Document
+  commentId: T:Songhay.Publications.Models.Document
+  parent: Songhay.Publications.Models
+  href: Songhay.Publications.Models.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: Songhay.Publications.Models.Document
+- uid: Songhay.Publications.Models.Fragment.NextFragments*
+  commentId: Overload:Songhay.Publications.Models.Fragment.NextFragments
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_NextFragments
+  name: NextFragments
+  nameWithType: Fragment.NextFragments
+  fullName: Songhay.Publications.Models.Fragment.NextFragments
+- uid: System.Collections.Generic.ICollection{Songhay.Publications.Models.Fragment}
+  commentId: T:System.Collections.Generic.ICollection{Songhay.Publications.Models.Fragment}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<Fragment>
+  nameWithType: ICollection<Fragment>
+  fullName: System.Collections.Generic.ICollection<Songhay.Publications.Models.Fragment>
+  nameWithType.vb: ICollection(Of Fragment)
+  fullName.vb: System.Collections.Generic.ICollection(Of Songhay.Publications.Models.Fragment)
+  name.vb: ICollection(Of Fragment)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Songhay.Publications.Models.Fragment
+    name: Fragment
+    href: Songhay.Publications.Models.Fragment.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Fragment
+    name: Fragment
+    href: Songhay.Publications.Models.Fragment.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Songhay.Publications.Models.Fragment.NextFragment*
+  commentId: Overload:Songhay.Publications.Models.Fragment.NextFragment
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_NextFragment
+  name: NextFragment
+  nameWithType: Fragment.NextFragment
+  fullName: Songhay.Publications.Models.Fragment.NextFragment
+- uid: Songhay.Publications.Models.Fragment
+  commentId: T:Songhay.Publications.Models.Fragment
+  parent: Songhay.Publications.Models
+  href: Songhay.Publications.Models.Fragment.html
+  name: Fragment
+  nameWithType: Fragment
+  fullName: Songhay.Publications.Models.Fragment
+- uid: Songhay.Publications.Models.Fragment.PrevFragments*
+  commentId: Overload:Songhay.Publications.Models.Fragment.PrevFragments
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_PrevFragments
+  name: PrevFragments
+  nameWithType: Fragment.PrevFragments
+  fullName: Songhay.Publications.Models.Fragment.PrevFragments
+- uid: Songhay.Publications.Models.Fragment.PrevFragment*
+  commentId: Overload:Songhay.Publications.Models.Fragment.PrevFragment
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_PrevFragment
+  name: PrevFragment
+  nameWithType: Fragment.PrevFragment
+  fullName: Songhay.Publications.Models.Fragment.PrevFragment
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Songhay.Publications.Models.Fragment.ToString*
+  commentId: Overload:Songhay.Publications.Models.Fragment.ToString
+  href: Songhay.Publications.Models.Fragment.html#Songhay_Publications_Models_Fragment_ToString
+  name: ToString
+  nameWithType: Fragment.ToString
+  fullName: Songhay.Publications.Models.Fragment.ToString

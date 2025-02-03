@@ -1,0 +1,847 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.PublicationChapter
+  commentId: T:Songhay.Publications.Models.PublicationChapter
+  id: PublicationChapter
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Models.PublicationChapter.GenerateXhtml
+  - Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement
+  - Songhay.Publications.Models.PublicationChapter.GetH1Element
+  - Songhay.Publications.Models.PublicationChapter.GetTitleElement
+  langs:
+  - csharp
+  - vb
+  name: PublicationChapter
+  nameWithType: PublicationChapter
+  fullName: Songhay.Publications.Models.PublicationChapter
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PublicationChapter
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 6
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: >-
+    Defines content for the chapter
+
+    of an EPUB publication.
+  example: []
+  syntax:
+    content: public class PublicationChapter
+    content.vb: Public Class PublicationChapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)
+  id: '#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)'
+  parent: Songhay.Publications.Models.PublicationChapter
+  langs:
+  - csharp
+  - vb
+  name: PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger?)
+  nameWithType: PublicationChapter.PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger?)
+  fullName: Songhay.Publications.Models.PublicationChapter.PublicationChapter(System.Collections.Generic.KeyValuePair<string, string>, System.Xml.Linq.XDocument, string, Microsoft.Extensions.Logging.ILogger?)
+  type: Constructor
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: .ctor
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 15
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Initializes a new instance of the <xref href="Songhay.Publications.Models.PublicationChapter" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory, ILogger? logger)
+    parameters:
+    - id: chapterPair
+      type: System.Collections.Generic.KeyValuePair{System.String,System.String}
+      description: The chapter pair.
+    - id: chapterTemplate
+      type: System.Xml.Linq.XDocument
+      description: The chapter template.
+    - id: chapterDirectory
+      type: System.String
+      description: The chapter directory.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: The <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(chapterPair As KeyValuePair(Of String, String), chapterTemplate As XDocument, chapterDirectory As String, logger As ILogger)
+  overload: Songhay.Publications.Models.PublicationChapter.#ctor*
+  nameWithType.vb: PublicationChapter.New(KeyValuePair(Of String, String), XDocument, String, ILogger)
+  fullName.vb: Songhay.Publications.Models.PublicationChapter.New(System.Collections.Generic.KeyValuePair(Of String, String), System.Xml.Linq.XDocument, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: New(KeyValuePair(Of String, String), XDocument, String, ILogger)
+- uid: Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement
+  commentId: M:Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement
+  id: GetChapterBodyElement
+  parent: Songhay.Publications.Models.PublicationChapter
+  langs:
+  - csharp
+  - vb
+  name: GetChapterBodyElement()
+  nameWithType: PublicationChapter.GetChapterBodyElement()
+  fullName: Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetChapterBodyElement
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 27
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets the chapter body element.
+  example: []
+  syntax:
+    content: public XElement? GetChapterBodyElement()
+    return:
+      type: System.Xml.Linq.XElement
+      description: ''
+    content.vb: Public Function GetChapterBodyElement() As XElement
+  overload: Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement*
+- uid: Songhay.Publications.Models.PublicationChapter.GetH1Element
+  commentId: M:Songhay.Publications.Models.PublicationChapter.GetH1Element
+  id: GetH1Element
+  parent: Songhay.Publications.Models.PublicationChapter
+  langs:
+  - csharp
+  - vb
+  name: GetH1Element()
+  nameWithType: PublicationChapter.GetH1Element()
+  fullName: Songhay.Publications.Models.PublicationChapter.GetH1Element()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetH1Element
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 44
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets the h1 element.
+  example: []
+  syntax:
+    content: public XElement? GetH1Element()
+    return:
+      type: System.Xml.Linq.XElement
+    content.vb: Public Function GetH1Element() As XElement
+  overload: Songhay.Publications.Models.PublicationChapter.GetH1Element*
+- uid: Songhay.Publications.Models.PublicationChapter.GetTitleElement
+  commentId: M:Songhay.Publications.Models.PublicationChapter.GetTitleElement
+  id: GetTitleElement
+  parent: Songhay.Publications.Models.PublicationChapter
+  langs:
+  - csharp
+  - vb
+  name: GetTitleElement()
+  nameWithType: PublicationChapter.GetTitleElement()
+  fullName: Songhay.Publications.Models.PublicationChapter.GetTitleElement()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GetTitleElement
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 61
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets the title element.
+  example: []
+  syntax:
+    content: public XElement? GetTitleElement()
+    return:
+      type: System.Xml.Linq.XElement
+    content.vb: Public Function GetTitleElement() As XElement
+  overload: Songhay.Publications.Models.PublicationChapter.GetTitleElement*
+- uid: Songhay.Publications.Models.PublicationChapter.GenerateXhtml
+  commentId: M:Songhay.Publications.Models.PublicationChapter.GenerateXhtml
+  id: GenerateXhtml
+  parent: Songhay.Publications.Models.PublicationChapter
+  langs:
+  - csharp
+  - vb
+  name: GenerateXhtml()
+  nameWithType: PublicationChapter.GenerateXhtml()
+  fullName: Songhay.Publications.Models.PublicationChapter.GenerateXhtml()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Models/PublicationChapter.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GenerateXhtml
+    path: ../Songhay.Publications/Models/PublicationChapter.cs
+    startLine: 77
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Generates the XHTML.
+  example: []
+  syntax:
+    content: public string GenerateXhtml()
+    return:
+      type: System.String
+    content.vb: Public Function GenerateXhtml() As String
+  overload: Songhay.Publications.Models.PublicationChapter.GenerateXhtml*
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Models.PublicationChapter
+  commentId: T:Songhay.Publications.Models.PublicationChapter
+  href: Songhay.Publications.Models.PublicationChapter.html
+  name: PublicationChapter
+  nameWithType: PublicationChapter
+  fullName: Songhay.Publications.Models.PublicationChapter
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Songhay.Publications.Models.PublicationChapter.#ctor*
+  commentId: Overload:Songhay.Publications.Models.PublicationChapter.#ctor
+  href: Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter__ctor_System_Collections_Generic_KeyValuePair_System_String_System_String__System_Xml_Linq_XDocument_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: PublicationChapter
+  nameWithType: PublicationChapter.PublicationChapter
+  fullName: Songhay.Publications.Models.PublicationChapter.PublicationChapter
+  nameWithType.vb: PublicationChapter.New
+  fullName.vb: Songhay.Publications.Models.PublicationChapter.New
+  name.vb: New
+- uid: System.Collections.Generic.KeyValuePair{System.String,System.String}
+  commentId: T:System.Collections.Generic.KeyValuePair{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<string, string>
+  nameWithType: KeyValuePair<string, string>
+  fullName: System.Collections.Generic.KeyValuePair<string, string>
+  nameWithType.vb: KeyValuePair(Of String, String)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of String, String)
+  name.vb: KeyValuePair(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Xml.Linq.XDocument
+  commentId: T:System.Xml.Linq.XDocument
+  parent: System.Xml.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.xml.linq.xdocument
+  name: XDocument
+  nameWithType: XDocument
+  fullName: System.Xml.Linq.XDocument
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Xml.Linq
+  commentId: N:System.Xml.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Xml.Linq
+  nameWithType: System.Xml.Linq
+  fullName: System.Xml.Linq
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Xml
+    name: Xml
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml
+  - name: .
+  - uid: System.Xml.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml.linq
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Xml
+    name: Xml
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml
+  - name: .
+  - uid: System.Xml.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.xml.linq
+- uid: Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement*
+  commentId: Overload:Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement
+  href: Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter_GetChapterBodyElement
+  name: GetChapterBodyElement
+  nameWithType: PublicationChapter.GetChapterBodyElement
+  fullName: Songhay.Publications.Models.PublicationChapter.GetChapterBodyElement
+- uid: System.Xml.Linq.XElement
+  commentId: T:System.Xml.Linq.XElement
+  parent: System.Xml.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement
+  name: XElement
+  nameWithType: XElement
+  fullName: System.Xml.Linq.XElement
+- uid: Songhay.Publications.Models.PublicationChapter.GetH1Element*
+  commentId: Overload:Songhay.Publications.Models.PublicationChapter.GetH1Element
+  href: Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter_GetH1Element
+  name: GetH1Element
+  nameWithType: PublicationChapter.GetH1Element
+  fullName: Songhay.Publications.Models.PublicationChapter.GetH1Element
+- uid: Songhay.Publications.Models.PublicationChapter.GetTitleElement*
+  commentId: Overload:Songhay.Publications.Models.PublicationChapter.GetTitleElement
+  href: Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter_GetTitleElement
+  name: GetTitleElement
+  nameWithType: PublicationChapter.GetTitleElement
+  fullName: Songhay.Publications.Models.PublicationChapter.GetTitleElement
+- uid: Songhay.Publications.Models.PublicationChapter.GenerateXhtml*
+  commentId: Overload:Songhay.Publications.Models.PublicationChapter.GenerateXhtml
+  href: Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter_GenerateXhtml
+  name: GenerateXhtml
+  nameWithType: PublicationChapter.GenerateXhtml
+  fullName: Songhay.Publications.Models.PublicationChapter.GenerateXhtml

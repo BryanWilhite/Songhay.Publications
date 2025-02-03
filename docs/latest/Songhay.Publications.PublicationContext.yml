@@ -1,0 +1,997 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.PublicationContext
+  commentId: T:Songhay.Publications.PublicationContext
+  id: PublicationContext
+  parent: Songhay.Publications
+  children:
+  - Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
+  - Songhay.Publications.PublicationContext.GenerateChapters
+  - Songhay.Publications.PublicationContext.GenerateMeta
+  - Songhay.Publications.PublicationContext.WriteBiography
+  - Songhay.Publications.PublicationContext.WriteCopyright
+  - Songhay.Publications.PublicationContext.WriteDedication
+  - Songhay.Publications.PublicationContext.WriteTitle
+  - Songhay.Publications.PublicationContext.WriteToc
+  langs:
+  - csharp
+  - vb
+  name: PublicationContext
+  nameWithType: PublicationContext
+  fullName: Songhay.Publications.PublicationContext
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: PublicationContext
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 9
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Defines the EPUB Publication Context
+  remarks: >-
+    EPUB is a technical standard published
+
+    by the International Digital Publishing Forum (IDPF).
+  example: []
+  syntax:
+    content: public class PublicationContext
+    content.vb: Public Class PublicationContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Songhay.Publications.PublicationContext.Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
+  commentId: M:Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
+  id: '#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})'
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: PublicationContext(string, ILogger<PublicationContext>?)
+  nameWithType: PublicationContext.PublicationContext(string, ILogger<PublicationContext>?)
+  fullName: Songhay.Publications.PublicationContext.PublicationContext(string, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>?)
+  type: Constructor
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: .ctor
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 16
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Initializes a new instance of the <xref href="Songhay.Publications.PublicationContext" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PublicationContext(string templateRoot, ILogger<PublicationContext>? logger)
+    parameters:
+    - id: templateRoot
+      type: System.String
+      description: the root directory of the EPUB template files
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext}
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub New(templateRoot As String, logger As ILogger(Of PublicationContext))
+  overload: Songhay.Publications.PublicationContext.#ctor*
+  nameWithType.vb: PublicationContext.New(String, ILogger(Of PublicationContext))
+  fullName.vb: Songhay.Publications.PublicationContext.New(String, Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.PublicationContext))
+  name.vb: New(String, ILogger(Of PublicationContext))
+- uid: Songhay.Publications.PublicationContext.GenerateChapters
+  commentId: M:Songhay.Publications.PublicationContext.GenerateChapters
+  id: GenerateChapters
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: GenerateChapters()
+  nameWithType: PublicationContext.GenerateChapters()
+  fullName: Songhay.Publications.PublicationContext.GenerateChapters()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GenerateChapters
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 33
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: >-
+    Generates EPUB chapters
+
+    from <xref href="Songhay.Publications.Models.PublicationFiles.EpubMetadata" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void GenerateChapters()
+    content.vb: Public Sub GenerateChapters()
+  overload: Songhay.Publications.PublicationContext.GenerateChapters*
+- uid: Songhay.Publications.PublicationContext.GenerateMeta
+  commentId: M:Songhay.Publications.PublicationContext.GenerateMeta
+  id: GenerateMeta
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: GenerateMeta()
+  nameWithType: PublicationContext.GenerateMeta()
+  fullName: Songhay.Publications.PublicationContext.GenerateMeta()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: GenerateMeta
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 57
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: >-
+    Calls <xref href="Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta" data-throw-if-not-resolved="false"></xref>
+
+    and <xref href="Songhay.Publications.Models.IdpfPackage.SetPublicationMeta" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void GenerateMeta()
+    content.vb: Public Sub GenerateMeta()
+  overload: Songhay.Publications.PublicationContext.GenerateMeta*
+- uid: Songhay.Publications.PublicationContext.WriteBiography
+  commentId: M:Songhay.Publications.PublicationContext.WriteBiography
+  id: WriteBiography
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: WriteBiography()
+  nameWithType: PublicationContext.WriteBiography()
+  fullName: Songhay.Publications.PublicationContext.WriteBiography()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteBiography
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 69
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Calls <xref href="Songhay.Publications.Models.OebpsTextBiography.Write" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void WriteBiography()
+    content.vb: Public Sub WriteBiography()
+  overload: Songhay.Publications.PublicationContext.WriteBiography*
+- uid: Songhay.Publications.PublicationContext.WriteCopyright
+  commentId: M:Songhay.Publications.PublicationContext.WriteCopyright
+  id: WriteCopyright
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: WriteCopyright()
+  nameWithType: PublicationContext.WriteCopyright()
+  fullName: Songhay.Publications.PublicationContext.WriteCopyright()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteCopyright
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 79
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Calls <xref href="Songhay.Publications.Models.OebpsTextCopyright.Write" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void WriteCopyright()
+    content.vb: Public Sub WriteCopyright()
+  overload: Songhay.Publications.PublicationContext.WriteCopyright*
+- uid: Songhay.Publications.PublicationContext.WriteDedication
+  commentId: M:Songhay.Publications.PublicationContext.WriteDedication
+  id: WriteDedication
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: WriteDedication()
+  nameWithType: PublicationContext.WriteDedication()
+  fullName: Songhay.Publications.PublicationContext.WriteDedication()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteDedication
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 89
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Calls <xref href="Songhay.Publications.Models.OebpsTextDedication.Write" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void WriteDedication()
+    content.vb: Public Sub WriteDedication()
+  overload: Songhay.Publications.PublicationContext.WriteDedication*
+- uid: Songhay.Publications.PublicationContext.WriteTitle
+  commentId: M:Songhay.Publications.PublicationContext.WriteTitle
+  id: WriteTitle
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: WriteTitle()
+  nameWithType: PublicationContext.WriteTitle()
+  fullName: Songhay.Publications.PublicationContext.WriteTitle()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteTitle
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 99
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Writes the <xref href="Songhay.Publications.Models.PublicationFiles.EpubFileTitle" data-throw-if-not-resolved="false"></xref> file.
+  example: []
+  syntax:
+    content: public void WriteTitle()
+    content.vb: Public Sub WriteTitle()
+  overload: Songhay.Publications.PublicationContext.WriteTitle*
+- uid: Songhay.Publications.PublicationContext.WriteToc
+  commentId: M:Songhay.Publications.PublicationContext.WriteToc
+  id: WriteToc
+  parent: Songhay.Publications.PublicationContext
+  langs:
+  - csharp
+  - vb
+  name: WriteToc()
+  nameWithType: PublicationContext.WriteToc()
+  fullName: Songhay.Publications.PublicationContext.WriteToc()
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationContext.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteToc
+    path: ../Songhay.Publications/PublicationContext.cs
+    startLine: 131
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Calls <xref href="Songhay.Publications.Models.OebpsTextToc.Write" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void WriteToc()
+    content.vb: Public Sub WriteToc()
+  overload: Songhay.Publications.PublicationContext.WriteToc*
+references:
+- uid: Songhay.Publications
+  commentId: N:Songhay.Publications
+  href: Songhay.html
+  name: Songhay.Publications
+  nameWithType: Songhay.Publications
+  fullName: Songhay.Publications
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub
+  commentId: M:Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  parent: Songhay.Publications.Extensions.PublicationContextExtensions
+  definition: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  name: GenerateEpub(PublicationContext)
+  nameWithType: PublicationContextExtensions.GenerateEpub(PublicationContext)
+  fullName: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+    name: GenerateEpub
+    href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  - name: (
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+    name: GenerateEpub
+    href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  - name: (
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  commentId: M:Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  name: GenerateEpub(PublicationContext)
+  nameWithType: PublicationContextExtensions.GenerateEpub(PublicationContext)
+  fullName: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+    name: GenerateEpub
+    href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  - name: (
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub(Songhay.Publications.PublicationContext)
+    name: GenerateEpub
+    href: Songhay.Publications.Extensions.PublicationContextExtensions.html#Songhay_Publications_Extensions_PublicationContextExtensions_GenerateEpub_Songhay_Publications_PublicationContext_
+  - name: (
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: )
+- uid: Songhay.Publications.Extensions.PublicationContextExtensions
+  commentId: T:Songhay.Publications.Extensions.PublicationContextExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.PublicationContextExtensions.html
+  name: PublicationContextExtensions
+  nameWithType: PublicationContextExtensions
+  fullName: Songhay.Publications.Extensions.PublicationContextExtensions
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.PublicationContext
+  commentId: T:Songhay.Publications.PublicationContext
+  parent: Songhay.Publications
+  href: Songhay.Publications.PublicationContext.html
+  name: PublicationContext
+  nameWithType: PublicationContext
+  fullName: Songhay.Publications.PublicationContext
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Songhay.Publications.PublicationContext.#ctor*
+  commentId: Overload:Songhay.Publications.PublicationContext.#ctor
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext__ctor_System_String_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_PublicationContext__
+  name: PublicationContext
+  nameWithType: PublicationContext.PublicationContext
+  fullName: Songhay.Publications.PublicationContext.PublicationContext
+  nameWithType.vb: PublicationContext.New
+  fullName.vb: Songhay.Publications.PublicationContext.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<PublicationContext>
+  nameWithType: ILogger<PublicationContext>
+  fullName: Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>
+  nameWithType.vb: ILogger(Of PublicationContext)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.PublicationContext)
+  name.vb: ILogger(Of PublicationContext)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.PublicationContext
+    name: PublicationContext
+    href: Songhay.Publications.PublicationContext.html
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubMetadata
+  href: Songhay.Publications.Models.PublicationFiles.html#Songhay_Publications_Models_PublicationFiles_EpubMetadata
+  name: EpubMetadata
+  nameWithType: PublicationFiles.EpubMetadata
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubMetadata
+- uid: Songhay.Publications.PublicationContext.GenerateChapters*
+  commentId: Overload:Songhay.Publications.PublicationContext.GenerateChapters
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_GenerateChapters
+  name: GenerateChapters
+  nameWithType: PublicationContext.GenerateChapters
+  fullName: Songhay.Publications.PublicationContext.GenerateChapters
+- uid: Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta
+  commentId: M:Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta
+  href: Songhay.Publications.Models.DaisyConsortiumNcx.html#Songhay_Publications_Models_DaisyConsortiumNcx_SetPublicationMeta
+  name: SetPublicationMeta()
+  nameWithType: DaisyConsortiumNcx.SetPublicationMeta()
+  fullName: Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta
+    name: SetPublicationMeta
+    href: Songhay.Publications.Models.DaisyConsortiumNcx.html#Songhay_Publications_Models_DaisyConsortiumNcx_SetPublicationMeta
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.DaisyConsortiumNcx.SetPublicationMeta
+    name: SetPublicationMeta
+    href: Songhay.Publications.Models.DaisyConsortiumNcx.html#Songhay_Publications_Models_DaisyConsortiumNcx_SetPublicationMeta
+  - name: (
+  - name: )
+- uid: Songhay.Publications.Models.IdpfPackage.SetPublicationMeta
+  commentId: M:Songhay.Publications.Models.IdpfPackage.SetPublicationMeta
+  href: Songhay.Publications.Models.IdpfPackage.html#Songhay_Publications_Models_IdpfPackage_SetPublicationMeta
+  name: SetPublicationMeta()
+  nameWithType: IdpfPackage.SetPublicationMeta()
+  fullName: Songhay.Publications.Models.IdpfPackage.SetPublicationMeta()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.IdpfPackage.SetPublicationMeta
+    name: SetPublicationMeta
+    href: Songhay.Publications.Models.IdpfPackage.html#Songhay_Publications_Models_IdpfPackage_SetPublicationMeta
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.IdpfPackage.SetPublicationMeta
+    name: SetPublicationMeta
+    href: Songhay.Publications.Models.IdpfPackage.html#Songhay_Publications_Models_IdpfPackage_SetPublicationMeta
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.GenerateMeta*
+  commentId: Overload:Songhay.Publications.PublicationContext.GenerateMeta
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_GenerateMeta
+  name: GenerateMeta
+  nameWithType: PublicationContext.GenerateMeta
+  fullName: Songhay.Publications.PublicationContext.GenerateMeta
+- uid: Songhay.Publications.Models.OebpsTextBiography.Write
+  commentId: M:Songhay.Publications.Models.OebpsTextBiography.Write
+  href: Songhay.Publications.Models.OebpsTextBiography.html#Songhay_Publications_Models_OebpsTextBiography_Write
+  name: Write()
+  nameWithType: OebpsTextBiography.Write()
+  fullName: Songhay.Publications.Models.OebpsTextBiography.Write()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.OebpsTextBiography.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextBiography.html#Songhay_Publications_Models_OebpsTextBiography_Write
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.OebpsTextBiography.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextBiography.html#Songhay_Publications_Models_OebpsTextBiography_Write
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.WriteBiography*
+  commentId: Overload:Songhay.Publications.PublicationContext.WriteBiography
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_WriteBiography
+  name: WriteBiography
+  nameWithType: PublicationContext.WriteBiography
+  fullName: Songhay.Publications.PublicationContext.WriteBiography
+- uid: Songhay.Publications.Models.OebpsTextCopyright.Write
+  commentId: M:Songhay.Publications.Models.OebpsTextCopyright.Write
+  href: Songhay.Publications.Models.OebpsTextCopyright.html#Songhay_Publications_Models_OebpsTextCopyright_Write
+  name: Write()
+  nameWithType: OebpsTextCopyright.Write()
+  fullName: Songhay.Publications.Models.OebpsTextCopyright.Write()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.OebpsTextCopyright.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextCopyright.html#Songhay_Publications_Models_OebpsTextCopyright_Write
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.OebpsTextCopyright.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextCopyright.html#Songhay_Publications_Models_OebpsTextCopyright_Write
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.WriteCopyright*
+  commentId: Overload:Songhay.Publications.PublicationContext.WriteCopyright
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_WriteCopyright
+  name: WriteCopyright
+  nameWithType: PublicationContext.WriteCopyright
+  fullName: Songhay.Publications.PublicationContext.WriteCopyright
+- uid: Songhay.Publications.Models.OebpsTextDedication.Write
+  commentId: M:Songhay.Publications.Models.OebpsTextDedication.Write
+  href: Songhay.Publications.Models.OebpsTextDedication.html#Songhay_Publications_Models_OebpsTextDedication_Write
+  name: Write()
+  nameWithType: OebpsTextDedication.Write()
+  fullName: Songhay.Publications.Models.OebpsTextDedication.Write()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.OebpsTextDedication.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextDedication.html#Songhay_Publications_Models_OebpsTextDedication_Write
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.OebpsTextDedication.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextDedication.html#Songhay_Publications_Models_OebpsTextDedication_Write
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.WriteDedication*
+  commentId: Overload:Songhay.Publications.PublicationContext.WriteDedication
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_WriteDedication
+  name: WriteDedication
+  nameWithType: PublicationContext.WriteDedication
+  fullName: Songhay.Publications.PublicationContext.WriteDedication
+- uid: Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  commentId: F:Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+  href: Songhay.Publications.Models.PublicationFiles.html#Songhay_Publications_Models_PublicationFiles_EpubFileTitle
+  name: EpubFileTitle
+  nameWithType: PublicationFiles.EpubFileTitle
+  fullName: Songhay.Publications.Models.PublicationFiles.EpubFileTitle
+- uid: Songhay.Publications.PublicationContext.WriteTitle*
+  commentId: Overload:Songhay.Publications.PublicationContext.WriteTitle
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_WriteTitle
+  name: WriteTitle
+  nameWithType: PublicationContext.WriteTitle
+  fullName: Songhay.Publications.PublicationContext.WriteTitle
+- uid: Songhay.Publications.Models.OebpsTextToc.Write
+  commentId: M:Songhay.Publications.Models.OebpsTextToc.Write
+  href: Songhay.Publications.Models.OebpsTextToc.html#Songhay_Publications_Models_OebpsTextToc_Write
+  name: Write()
+  nameWithType: OebpsTextToc.Write()
+  fullName: Songhay.Publications.Models.OebpsTextToc.Write()
+  spec.csharp:
+  - uid: Songhay.Publications.Models.OebpsTextToc.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextToc.html#Songhay_Publications_Models_OebpsTextToc_Write
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Models.OebpsTextToc.Write
+    name: Write
+    href: Songhay.Publications.Models.OebpsTextToc.html#Songhay_Publications_Models_OebpsTextToc_Write
+  - name: (
+  - name: )
+- uid: Songhay.Publications.PublicationContext.WriteToc*
+  commentId: Overload:Songhay.Publications.PublicationContext.WriteToc
+  href: Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext_WriteToc
+  name: WriteToc
+  nameWithType: PublicationContext.WriteToc
+  fullName: Songhay.Publications.PublicationContext.WriteToc

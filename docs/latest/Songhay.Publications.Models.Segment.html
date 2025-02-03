@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Segment | Songhay.Publications.DataAccess API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Segment | Songhay.Publications.DataAccess API ">
+      
+      <meta name="description" content="Publications Segment.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BryanWilhite/Songhay.Publications/new/dev/version-8.0.0/apiSpec/new?filename=Songhay_Publications_Models_Segment.md&amp;value=---%0Auid%3A%20Songhay.Publications.Models.Segment%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Songhay.Publications.DataAccess">
+            Songhay.Publications.DataAccess
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Songhay.Publications.Models.Segment">
+
+
+
+  <h1 id="Songhay_Publications_Models_Segment" data-uid="Songhay.Publications.Models.Segment" class="text-break">
+Class Segment  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Songhay.html">Songhay</a>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Songhay.Publications.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Publications Segment.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Segment : ISegment, ITemporal</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Segment</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Songhay.Publications.Abstractions.ISegment.html">ISegment</a></div>
+      <div><span class="xref">ITemporal</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_Clone_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.Clone(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_HasDocuments_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.HasDocuments(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_SetDefaults_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.SetDefaults(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.ToDisplayText(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_ISegment_System_Boolean_">SegmentExtensions.ToDisplayText(ISegment?, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.ToMenuDisplayItemModel(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_Songhay_Abstractions_IGroupable_">SegmentExtensions.ToMenuDisplayItemModel(ISegment?, IGroupable?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToPublicationIndexEntry_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.ToPublicationIndexEntry(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.ToValidationResult(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithDefaults_Songhay_Publications_Abstractions_ISegment_">SegmentExtensions.WithDefaults(ISegment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_WithEdit_Songhay_Publications_Abstractions_ISegment_System_Action_Songhay_Publications_Abstractions_ISegment__">SegmentExtensions.WithEdit(ISegment?, Action&lt;ISegment&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_">JsonNodeExtensions.ToJsonNode(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Songhay_Publications_Models_Segment_ClientId_" data-uid="Songhay.Publications.Models.Segment.ClientId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_ClientId" data-uid="Songhay.Publications.Models.Segment.ClientId">
+  ClientId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the client identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Client ID&quot;, Order = 2)]
+public string? ClientId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_Documents_" data-uid="Songhay.Publications.Models.Segment.Documents*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_Documents" data-uid="Songhay.Publications.Models.Segment.Documents">
+  Documents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public ICollection&lt;Document&gt; Documents { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Songhay.Publications.Models.Document.html">Document</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_EndDate_" data-uid="Songhay.Publications.Models.Segment.EndDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_EndDate" data-uid="Songhay.Publications.Models.Segment.EndDate">
+  EndDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the end date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;End Date&quot;, Order = 9)]
+public DateTime? EndDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_InceptDate_" data-uid="Songhay.Publications.Models.Segment.InceptDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_InceptDate" data-uid="Songhay.Publications.Models.Segment.InceptDate">
+  InceptDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the incept date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Incept Date&quot;, Order = 5)]
+public DateTime? InceptDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_IsActive_" data-uid="Songhay.Publications.Models.Segment.IsActive*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_IsActive" data-uid="Songhay.Publications.Models.Segment.IsActive">
+  IsActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Is Active?&quot;, Order = 4)]
+public bool? IsActive { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_ModificationDate_" data-uid="Songhay.Publications.Models.Segment.ModificationDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_ModificationDate" data-uid="Songhay.Publications.Models.Segment.ModificationDate">
+  ModificationDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the modification date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Modification Date&quot;, Order = 8)]
+public DateTime? ModificationDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_ParentSegment_" data-uid="Songhay.Publications.Models.Segment.ParentSegment*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_ParentSegment" data-uid="Songhay.Publications.Models.Segment.ParentSegment">
+  ParentSegment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the parent segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public Segment? ParentSegment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Models.Segment.html">Segment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_ParentSegmentId_" data-uid="Songhay.Publications.Models.Segment.ParentSegmentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_ParentSegmentId" data-uid="Songhay.Publications.Models.Segment.ParentSegmentId">
+  ParentSegmentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the parent segment identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Parent Segment ID&quot;, Order = 0)]
+public int? ParentSegmentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_SegmentId_" data-uid="Songhay.Publications.Models.Segment.SegmentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_SegmentId" data-uid="Songhay.Publications.Models.Segment.SegmentId">
+  SegmentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the segment identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Segment ID&quot;, Order = 1)]
+public int? SegmentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_SegmentName_" data-uid="Songhay.Publications.Models.Segment.SegmentName*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_SegmentName" data-uid="Songhay.Publications.Models.Segment.SegmentName">
+  SegmentName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of the segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Segment Name&quot;, Order = 3)]
+public string? SegmentName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_Segments_" data-uid="Songhay.Publications.Models.Segment.Segments*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_Segments" data-uid="Songhay.Publications.Models.Segment.Segments">
+  Segments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets child segments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public ICollection&lt;Segment&gt; Segments { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Songhay.Publications.Models.Segment.html">Segment</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Segment_SortOrdinal_" data-uid="Songhay.Publications.Models.Segment.SortOrdinal*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_SortOrdinal" data-uid="Songhay.Publications.Models.Segment.SortOrdinal">
+  SortOrdinal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the sort ordinal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Sort Ordinal&quot;, Order = 6)]
+public byte? SortOrdinal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Songhay_Publications_Models_Segment_ToString_" data-uid="Songhay.Publications.Models.Segment.ToString*"></a>
+
+  <h3 id="Songhay_Publications_Models_Segment_ToString" data-uid="Songhay.Publications.Models.Segment.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts to string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Segment.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

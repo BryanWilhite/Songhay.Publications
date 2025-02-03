@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Validators
+  commentId: N:Songhay.Publications.Validators
+  id: Songhay.Publications.Validators
+  children:
+  - Songhay.Publications.Validators.DocumentValidator
+  - Songhay.Publications.Validators.FragmentValidator
+  - Songhay.Publications.Validators.ITemporalValidator
+  - Songhay.Publications.Validators.SegmentValidator
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications.Validators
+  nameWithType: Songhay.Publications.Validators
+  fullName: Songhay.Publications.Validators
+  type: Namespace
+  assemblies:
+  - Songhay.Publications
+references:
+- uid: Songhay.Publications.Validators.DocumentValidator
+  commentId: T:Songhay.Publications.Validators.DocumentValidator
+  href: Songhay.Publications.Validators.DocumentValidator.html
+  name: DocumentValidator
+  nameWithType: DocumentValidator
+  fullName: Songhay.Publications.Validators.DocumentValidator
+- uid: Songhay.Publications.Validators.FragmentValidator
+  commentId: T:Songhay.Publications.Validators.FragmentValidator
+  href: Songhay.Publications.Validators.FragmentValidator.html
+  name: FragmentValidator
+  nameWithType: FragmentValidator
+  fullName: Songhay.Publications.Validators.FragmentValidator
+- uid: Songhay.Publications.Validators.ITemporalValidator
+  commentId: T:Songhay.Publications.Validators.ITemporalValidator
+  href: Songhay.Publications.Validators.ITemporalValidator.html
+  name: ITemporalValidator
+  nameWithType: ITemporalValidator
+  fullName: Songhay.Publications.Validators.ITemporalValidator
+- uid: Songhay.Publications.Validators.SegmentValidator
+  commentId: T:Songhay.Publications.Validators.SegmentValidator
+  href: Songhay.Publications.Validators.SegmentValidator.html
+  name: SegmentValidator
+  nameWithType: SegmentValidator
+  fullName: Songhay.Publications.Validators.SegmentValidator

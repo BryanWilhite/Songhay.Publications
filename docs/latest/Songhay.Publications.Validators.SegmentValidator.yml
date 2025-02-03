@@ -1,0 +1,4414 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Validators.SegmentValidator
+  commentId: T:Songhay.Publications.Validators.SegmentValidator
+  id: SegmentValidator
+  parent: Songhay.Publications.Validators
+  children:
+  - Songhay.Publications.Validators.SegmentValidator.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SegmentValidator
+  nameWithType: SegmentValidator
+  fullName: Songhay.Publications.Validators.SegmentValidator
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Validators/SegmentValidator.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: SegmentValidator
+    path: ../Songhay.Publications/Validators/SegmentValidator.cs
+    startLine: 7
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Validators
+  summary: Validator for <xref href="Songhay.Publications.Models.Segment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class SegmentValidator : AbstractValidator<Segment>, IValidator<Segment>, IValidator, IEnumerable<IValidationRule>, IEnumerable'
+    content.vb: Public Class SegmentValidator Inherits AbstractValidator(Of Segment) Implements IValidator(Of Segment), IValidator, IEnumerable(Of IValidationRule), IEnumerable
+  inheritance:
+  - System.Object
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  implements:
+  - FluentValidation.IValidator{Songhay.Publications.Models.Segment}
+  - FluentValidation.IValidator
+  - System.Collections.Generic.IEnumerable{FluentValidation.IValidationRule}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(Songhay.Publications.Models.Segment)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(Songhay.Publications.Models.Segment,System.Threading.CancellationToken)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CreateDescriptor
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}},System.Func{{TProperty},{TTransformed}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}},System.Func{Songhay.Publications.Models.Segment,{TProperty},{TTransformed}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}},System.Func{{TElement},{TTransformed}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}},System.Func{Songhay.Publications.Models.Segment,{TElement},{TTransformed}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleSet(System.String,System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include(FluentValidation.IValidator{Songhay.Publications.Models.Segment})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include``1(System.Func{Songhay.Publications.Models.Segment,{TValidator}})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.GetEnumerator
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.EnsureInstanceNotNull(System.Object)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.PreValidate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RaiseValidationException(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.OnRuleAdded(FluentValidation.IValidationRule{Songhay.Publications.Models.Segment})
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CascadeMode
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ClassLevelCascadeMode
+  - FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleLevelCascadeMode
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Validators.SegmentValidator.#ctor
+  commentId: M:Songhay.Publications.Validators.SegmentValidator.#ctor
+  id: '#ctor'
+  parent: Songhay.Publications.Validators.SegmentValidator
+  langs:
+  - csharp
+  - vb
+  name: SegmentValidator()
+  nameWithType: SegmentValidator.SegmentValidator()
+  fullName: Songhay.Publications.Validators.SegmentValidator.SegmentValidator()
+  type: Constructor
+  source:
+    remote:
+      path: Songhay.Publications/Validators/SegmentValidator.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: .ctor
+    path: ../Songhay.Publications/Validators/SegmentValidator.cs
+    startLine: 12
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Validators
+  summary: Initializes a new instance of the <xref href="Songhay.Publications.Validators.SegmentValidator" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public SegmentValidator()
+    content.vb: Public Sub New()
+  overload: Songhay.Publications.Validators.SegmentValidator.#ctor*
+  nameWithType.vb: SegmentValidator.New()
+  fullName.vb: Songhay.Publications.Validators.SegmentValidator.New()
+  name.vb: New()
+references:
+- uid: Songhay.Publications.Models.Segment
+  commentId: T:Songhay.Publications.Models.Segment
+  parent: Songhay.Publications.Models
+  href: Songhay.Publications.Models.Segment.html
+  name: Segment
+  nameWithType: Segment
+  fullName: Songhay.Publications.Models.Segment
+- uid: Songhay.Publications.Validators
+  commentId: N:Songhay.Publications.Validators
+  href: Songhay.html
+  name: Songhay.Publications.Validators
+  nameWithType: Songhay.Publications.Validators
+  fullName: Songhay.Publications.Validators
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Validators
+    name: Validators
+    href: Songhay.Publications.Validators.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Validators
+    name: Validators
+    href: Songhay.Publications.Validators.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  commentId: T:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  parent: FluentValidation
+  definition: FluentValidation.AbstractValidator`1
+  href: Songhay.Publications.Models.Segment.html
+  name: AbstractValidator<Segment>
+  nameWithType: AbstractValidator<Segment>
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>
+  nameWithType.vb: AbstractValidator(Of Segment)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment)
+  name.vb: AbstractValidator(Of Segment)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1
+    name: AbstractValidator
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1
+    name: AbstractValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+- uid: FluentValidation.IValidator{Songhay.Publications.Models.Segment}
+  commentId: T:FluentValidation.IValidator{Songhay.Publications.Models.Segment}
+  parent: FluentValidation
+  definition: FluentValidation.IValidator`1
+  href: Songhay.Publications.Models.Segment.html
+  name: IValidator<Segment>
+  nameWithType: IValidator<Segment>
+  fullName: FluentValidation.IValidator<Songhay.Publications.Models.Segment>
+  nameWithType.vb: IValidator(Of Segment)
+  fullName.vb: FluentValidation.IValidator(Of Songhay.Publications.Models.Segment)
+  name.vb: IValidator(Of Segment)
+  spec.csharp:
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  spec.vb:
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+- uid: FluentValidation.IValidator
+  commentId: T:FluentValidation.IValidator
+  parent: FluentValidation
+  isExternal: true
+  name: IValidator
+  nameWithType: IValidator
+  fullName: FluentValidation.IValidator
+- uid: System.Collections.Generic.IEnumerable{FluentValidation.IValidationRule}
+  commentId: T:System.Collections.Generic.IEnumerable{FluentValidation.IValidationRule}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IValidationRule>
+  nameWithType: IEnumerable<IValidationRule>
+  fullName: System.Collections.Generic.IEnumerable<FluentValidation.IValidationRule>
+  nameWithType.vb: IEnumerable(Of IValidationRule)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of FluentValidation.IValidationRule)
+  name.vb: IEnumerable(Of IValidationRule)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: FluentValidation.IValidationRule
+    name: IValidationRule
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FluentValidation.IValidationRule
+    name: IValidationRule
+    isExternal: true
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(Songhay.Publications.Models.Segment)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(Songhay.Publications.Models.Segment)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Validate(`0)
+  href: Songhay.Publications.Models.Segment.html
+  name: Validate(Segment)
+  nameWithType: AbstractValidator<Segment>.Validate(Segment)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Validate(Songhay.Publications.Models.Segment)
+  nameWithType.vb: AbstractValidator(Of Segment).Validate(Segment)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Validate(Songhay.Publications.Models.Segment)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(Songhay.Publications.Models.Segment)
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(Songhay.Publications.Models.Segment)
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(Songhay.Publications.Models.Segment,System.Threading.CancellationToken)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(Songhay.Publications.Models.Segment,System.Threading.CancellationToken)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.ValidateAsync(`0,System.Threading.CancellationToken)
+  href: Songhay.Publications.Models.Segment.html
+  name: ValidateAsync(Segment, CancellationToken)
+  nameWithType: AbstractValidator<Segment>.ValidateAsync(Segment, CancellationToken)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.ValidateAsync(Songhay.Publications.Models.Segment, System.Threading.CancellationToken)
+  nameWithType.vb: AbstractValidator(Of Segment).ValidateAsync(Segment, CancellationToken)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).ValidateAsync(Songhay.Publications.Models.Segment, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(Songhay.Publications.Models.Segment,System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(Songhay.Publications.Models.Segment,System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Validate(FluentValidation.ValidationContext{`0})
+  href: Songhay.Publications.Models.Segment.html
+  name: Validate(ValidationContext<Segment>)
+  nameWithType: AbstractValidator<Segment>.Validate(ValidationContext<Segment>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Validate(FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>)
+  nameWithType.vb: AbstractValidator(Of Segment).Validate(ValidationContext(Of Segment))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Validate(FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment))
+  name.vb: Validate(ValidationContext(Of Segment))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment})
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Validate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment})
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.ValidateAsync(FluentValidation.ValidationContext{`0},System.Threading.CancellationToken)
+  href: Songhay.Publications.Models.Segment.html
+  name: ValidateAsync(ValidationContext<Segment>, CancellationToken)
+  nameWithType: AbstractValidator<Segment>.ValidateAsync(ValidationContext<Segment>, CancellationToken)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.ValidateAsync(FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, System.Threading.CancellationToken)
+  nameWithType.vb: AbstractValidator(Of Segment).ValidateAsync(ValidationContext(Of Segment), CancellationToken)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).ValidateAsync(FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), System.Threading.CancellationToken)
+  name.vb: ValidateAsync(ValidationContext(Of Segment), CancellationToken)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ValidateAsync(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CreateDescriptor
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CreateDescriptor
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.CreateDescriptor
+  name: CreateDescriptor()
+  nameWithType: AbstractValidator<Segment>.CreateDescriptor()
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.CreateDescriptor()
+  nameWithType.vb: AbstractValidator(Of Segment).CreateDescriptor()
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).CreateDescriptor()
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CreateDescriptor
+    name: CreateDescriptor
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CreateDescriptor
+    name: CreateDescriptor
+    isExternal: true
+  - name: (
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: RuleFor<TProperty>(Expression<Func<Segment, TProperty>>)
+  nameWithType: AbstractValidator<Segment>.RuleFor<TProperty>(Expression<Func<Segment, TProperty>>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, TProperty>>)
+  nameWithType.vb: AbstractValidator(Of Segment).RuleFor(Of TProperty)(Expression(Of Func(Of Segment, TProperty)))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).RuleFor(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, TProperty)))
+  name.vb: RuleFor(Of TProperty)(Expression(Of Func(Of Segment, TProperty)))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}})
+    name: RuleFor
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleFor``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}})
+    name: RuleFor
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}},System.Func{{TProperty},{TTransformed}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{``0,``1})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{``0,``1})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Transform<TProperty, TTransformed>(Expression<Func<Segment, TProperty>>, Func<TProperty, TTransformed>)
+  nameWithType: AbstractValidator<Segment>.Transform<TProperty, TTransformed>(Expression<Func<Segment, TProperty>>, Func<TProperty, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Transform<TProperty, TTransformed>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, TProperty>>, System.Func<TProperty, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of Segment).Transform(Of TProperty, TTransformed)(Expression(Of Func(Of Segment, TProperty)), Func(Of TProperty, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Transform(Of TProperty, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, TProperty)), System.Func(Of TProperty, TTransformed))
+  name.vb: Transform(Of TProperty, TTransformed)(Expression(Of Func(Of Segment, TProperty)), Func(Of TProperty, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{``0,``1})
+    name: Transform
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{``0,``1})
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,{TProperty}}},System.Func{Songhay.Publications.Models.Segment,{TProperty},{TTransformed}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{`0,``0,``1})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Transform<TProperty, TTransformed>(Expression<Func<Segment, TProperty>>, Func<Segment, TProperty, TTransformed>)
+  nameWithType: AbstractValidator<Segment>.Transform<TProperty, TTransformed>(Expression<Func<Segment, TProperty>>, Func<Segment, TProperty, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Transform<TProperty, TTransformed>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, TProperty>>, System.Func<Songhay.Publications.Models.Segment, TProperty, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of Segment).Transform(Of TProperty, TTransformed)(Expression(Of Func(Of Segment, TProperty)), Func(Of Segment, TProperty, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Transform(Of TProperty, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, TProperty)), System.Func(Of Songhay.Publications.Models.Segment, TProperty, TTransformed))
+  name.vb: Transform(Of TProperty, TTransformed)(Expression(Of Func(Of Segment, TProperty)), Func(Of Segment, TProperty, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+    name: Transform
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Transform``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,``0}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: RuleForEach<TElement>(Expression<Func<Segment, IEnumerable<TElement>>>)
+  nameWithType: AbstractValidator<Segment>.RuleForEach<TElement>(Expression<Func<Segment, IEnumerable<TElement>>>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.RuleForEach<TElement>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable<TElement>>>)
+  nameWithType.vb: AbstractValidator(Of Segment).RuleForEach(Of TElement)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).RuleForEach(Of TElement)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable(Of TElement))))
+  name.vb: RuleForEach(Of TElement)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}})
+    name: RuleForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}})
+    name: RuleForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}},System.Func{{TElement},{TTransformed}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: TransformForEach<TElement, TTransformed>(Expression<Func<Segment, IEnumerable<TElement>>>, Func<TElement, TTransformed>)
+  nameWithType: AbstractValidator<Segment>.TransformForEach<TElement, TTransformed>(Expression<Func<Segment, IEnumerable<TElement>>>, Func<TElement, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.TransformForEach<TElement, TTransformed>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable<TElement>>>, System.Func<TElement, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of Segment).TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))), Func(Of TElement, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).TransformForEach(Of TElement, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable(Of TElement))), System.Func(Of TElement, TTransformed))
+  name.vb: TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))), Func(Of TElement, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{{TElement}}}},System.Func{Songhay.Publications.Models.Segment,{TElement},{TTransformed}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{`0,``0,``1})
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: TransformForEach<TElement, TTransformed>(Expression<Func<Segment, IEnumerable<TElement>>>, Func<Segment, TElement, TTransformed>)
+  nameWithType: AbstractValidator<Segment>.TransformForEach<TElement, TTransformed>(Expression<Func<Segment, IEnumerable<TElement>>>, Func<Segment, TElement, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.TransformForEach<TElement, TTransformed>(System.Linq.Expressions.Expression<System.Func<Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable<TElement>>>, System.Func<Songhay.Publications.Models.Segment, TElement, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of Segment).TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))), Func(Of Segment, TElement, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).TransformForEach(Of TElement, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of Songhay.Publications.Models.Segment, System.Collections.Generic.IEnumerable(Of TElement))), System.Func(Of Songhay.Publications.Models.Segment, TElement, TTransformed))
+  name.vb: TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of Segment, IEnumerable(Of TElement))), Func(Of Segment, TElement, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{Songhay.Publications.Models.Segment,System.Collections.Generic.IEnumerable{``0}}},System.Func{Songhay.Publications.Models.Segment,``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleSet(System.String,System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleSet(System.String,System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.RuleSet(System.String,System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: RuleSet(string, Action)
+  nameWithType: AbstractValidator<Segment>.RuleSet(string, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.RuleSet(string, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).RuleSet(String, Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).RuleSet(String, System.Action)
+  name.vb: RuleSet(String, Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleSet(System.String,System.Action)
+    name: RuleSet
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleSet(System.String,System.Action)
+    name: RuleSet
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.When(System.Func{`0,System.Boolean},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: When(Func<Segment, bool>, Action)
+  nameWithType: AbstractValidator<Segment>.When(Func<Segment, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.When(System.Func<Songhay.Publications.Models.Segment, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).When(Func(Of Segment, Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).When(System.Func(Of Songhay.Publications.Models.Segment, Boolean), System.Action)
+  name.vb: When(Func(Of Segment, Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.When(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: When(Func<Segment, ValidationContext<Segment>, bool>, Action)
+  nameWithType: AbstractValidator<Segment>.When(Func<Segment, ValidationContext<Segment>, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.When(System.Func<Songhay.Publications.Models.Segment, FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).When(Func(Of Segment, ValidationContext(Of Segment), Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).When(System.Func(Of Songhay.Publications.Models.Segment, FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), Boolean), System.Action)
+  name.vb: When(Func(Of Segment, ValidationContext(Of Segment), Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.When(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,System.Boolean},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Unless(Func<Segment, bool>, Action)
+  nameWithType: AbstractValidator<Segment>.Unless(Func<Segment, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Unless(System.Func<Songhay.Publications.Models.Segment, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).Unless(Func(Of Segment, Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Unless(System.Func(Of Songhay.Publications.Models.Segment, Boolean), System.Action)
+  name.vb: Unless(Func(Of Segment, Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Unless(Func<Segment, ValidationContext<Segment>, bool>, Action)
+  nameWithType: AbstractValidator<Segment>.Unless(Func<Segment, ValidationContext<Segment>, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Unless(System.Func<Songhay.Publications.Models.Segment, FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).Unless(Func(Of Segment, ValidationContext(Of Segment), Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Unless(System.Func(Of Songhay.Publications.Models.Segment, FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), Boolean), System.Action)
+  name.vb: Unless(Func(Of Segment, ValidationContext(Of Segment), Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Unless(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: WhenAsync(Func<Segment, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<Segment>.WhenAsync(Func<Segment, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.WhenAsync(System.Func<Songhay.Publications.Models.Segment, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).WhenAsync(Func(Of Segment, CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).WhenAsync(System.Func(Of Songhay.Publications.Models.Segment, System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: WhenAsync(Func(Of Segment, CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-4
+  name: WhenAsync(Func<Segment, ValidationContext<Segment>, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<Segment>.WhenAsync(Func<Segment, ValidationContext<Segment>, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.WhenAsync(System.Func<Songhay.Publications.Models.Segment, FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).WhenAsync(Func(Of Segment, ValidationContext(Of Segment), CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).WhenAsync(System.Func(Of Songhay.Publications.Models.Segment, FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: WhenAsync(Func(Of Segment, ValidationContext(Of Segment), CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.WhenAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: UnlessAsync(Func<Segment, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<Segment>.UnlessAsync(Func<Segment, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.UnlessAsync(System.Func<Songhay.Publications.Models.Segment, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).UnlessAsync(Func(Of Segment, CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).UnlessAsync(System.Func(Of Songhay.Publications.Models.Segment, System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: UnlessAsync(Func(Of Segment, CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  href: https://learn.microsoft.com/dotnet/api/system.func-4
+  name: UnlessAsync(Func<Segment, ValidationContext<Segment>, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<Segment>.UnlessAsync(Func<Segment, ValidationContext<Segment>, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.UnlessAsync(System.Func<Songhay.Publications.Models.Segment, FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of Segment).UnlessAsync(Func(Of Segment, ValidationContext(Of Segment), CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).UnlessAsync(System.Func(Of Songhay.Publications.Models.Segment, FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: UnlessAsync(Func(Of Segment, ValidationContext(Of Segment), CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.UnlessAsync(System.Func{Songhay.Publications.Models.Segment,FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include(FluentValidation.IValidator{Songhay.Publications.Models.Segment})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include(FluentValidation.IValidator{Songhay.Publications.Models.Segment})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Include(FluentValidation.IValidator{`0})
+  href: Songhay.Publications.Models.Segment.html
+  name: Include(IValidator<Segment>)
+  nameWithType: AbstractValidator<Segment>.Include(IValidator<Segment>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Include(FluentValidation.IValidator<Songhay.Publications.Models.Segment>)
+  nameWithType.vb: AbstractValidator(Of Segment).Include(IValidator(Of Segment))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Include(FluentValidation.IValidator(Of Songhay.Publications.Models.Segment))
+  name.vb: Include(IValidator(Of Segment))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include(FluentValidation.IValidator{Songhay.Publications.Models.Segment})
+    name: Include
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include(FluentValidation.IValidator{Songhay.Publications.Models.Segment})
+    name: Include
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include``1(System.Func{Songhay.Publications.Models.Segment,{TValidator}})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include``1(System.Func{Songhay.Publications.Models.Segment,``0})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.Include``1(System.Func{`0,``0})
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Include<TValidator>(Func<Segment, TValidator>)
+  nameWithType: AbstractValidator<Segment>.Include<TValidator>(Func<Segment, TValidator>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.Include<TValidator>(System.Func<Songhay.Publications.Models.Segment, TValidator>)
+  nameWithType.vb: AbstractValidator(Of Segment).Include(Of TValidator)(Func(Of Segment, TValidator))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).Include(Of TValidator)(System.Func(Of Songhay.Publications.Models.Segment, TValidator))
+  name.vb: Include(Of TValidator)(Func(Of Segment, TValidator))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include``1(System.Func{Songhay.Publications.Models.Segment,``0})
+    name: Include
+    isExternal: true
+  - name: <
+  - name: TValidator
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TValidator
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.Include``1(System.Func{Songhay.Publications.Models.Segment,``0})
+    name: Include
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValidator
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: ','
+  - name: " "
+  - name: TValidator
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.GetEnumerator
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.GetEnumerator
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: AbstractValidator<Segment>.GetEnumerator()
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.GetEnumerator()
+  nameWithType.vb: AbstractValidator(Of Segment).GetEnumerator()
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).GetEnumerator()
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+  - name: (
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.EnsureInstanceNotNull(System.Object)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.EnsureInstanceNotNull(System.Object)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.EnsureInstanceNotNull(System.Object)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: EnsureInstanceNotNull(object)
+  nameWithType: AbstractValidator<Segment>.EnsureInstanceNotNull(object)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.EnsureInstanceNotNull(object)
+  nameWithType.vb: AbstractValidator(Of Segment).EnsureInstanceNotNull(Object)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).EnsureInstanceNotNull(Object)
+  name.vb: EnsureInstanceNotNull(Object)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.EnsureInstanceNotNull(System.Object)
+    name: EnsureInstanceNotNull
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.EnsureInstanceNotNull(System.Object)
+    name: EnsureInstanceNotNull
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.PreValidate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.PreValidate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.PreValidate(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  href: Songhay.Publications.Models.Segment.html
+  name: PreValidate(ValidationContext<Segment>, ValidationResult)
+  nameWithType: AbstractValidator<Segment>.PreValidate(ValidationContext<Segment>, ValidationResult)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.PreValidate(FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, FluentValidation.Results.ValidationResult)
+  nameWithType.vb: AbstractValidator(Of Segment).PreValidate(ValidationContext(Of Segment), ValidationResult)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).PreValidate(FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), FluentValidation.Results.ValidationResult)
+  name.vb: PreValidate(ValidationContext(Of Segment), ValidationResult)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.PreValidate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+    name: PreValidate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.PreValidate(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+    name: PreValidate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RaiseValidationException(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RaiseValidationException(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.RaiseValidationException(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  href: Songhay.Publications.Models.Segment.html
+  name: RaiseValidationException(ValidationContext<Segment>, ValidationResult)
+  nameWithType: AbstractValidator<Segment>.RaiseValidationException(ValidationContext<Segment>, ValidationResult)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.RaiseValidationException(FluentValidation.ValidationContext<Songhay.Publications.Models.Segment>, FluentValidation.Results.ValidationResult)
+  nameWithType.vb: AbstractValidator(Of Segment).RaiseValidationException(ValidationContext(Of Segment), ValidationResult)
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).RaiseValidationException(FluentValidation.ValidationContext(Of Songhay.Publications.Models.Segment), FluentValidation.Results.ValidationResult)
+  name.vb: RaiseValidationException(ValidationContext(Of Segment), ValidationResult)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RaiseValidationException(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+    name: RaiseValidationException
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RaiseValidationException(FluentValidation.ValidationContext{Songhay.Publications.Models.Segment},FluentValidation.Results.ValidationResult)
+    name: RaiseValidationException
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.OnRuleAdded(FluentValidation.IValidationRule{Songhay.Publications.Models.Segment})
+  commentId: M:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.OnRuleAdded(FluentValidation.IValidationRule{Songhay.Publications.Models.Segment})
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.OnRuleAdded(FluentValidation.IValidationRule{`0})
+  href: Songhay.Publications.Models.Segment.html
+  name: OnRuleAdded(IValidationRule<Segment>)
+  nameWithType: AbstractValidator<Segment>.OnRuleAdded(IValidationRule<Segment>)
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.OnRuleAdded(FluentValidation.IValidationRule<Songhay.Publications.Models.Segment>)
+  nameWithType.vb: AbstractValidator(Of Segment).OnRuleAdded(IValidationRule(Of Segment))
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).OnRuleAdded(FluentValidation.IValidationRule(Of Songhay.Publications.Models.Segment))
+  name.vb: OnRuleAdded(IValidationRule(Of Segment))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.OnRuleAdded(FluentValidation.IValidationRule{Songhay.Publications.Models.Segment})
+    name: OnRuleAdded
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidationRule`1
+    name: IValidationRule
+    isExternal: true
+  - name: <
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.OnRuleAdded(FluentValidation.IValidationRule{Songhay.Publications.Models.Segment})
+    name: OnRuleAdded
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidationRule`1
+    name: IValidationRule
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.Segment
+    name: Segment
+    href: Songhay.Publications.Models.Segment.html
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CascadeMode
+  commentId: P:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.CascadeMode
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.CascadeMode
+  name: CascadeMode
+  nameWithType: AbstractValidator<Segment>.CascadeMode
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.CascadeMode
+  nameWithType.vb: AbstractValidator(Of Segment).CascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).CascadeMode
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ClassLevelCascadeMode
+  commentId: P:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.ClassLevelCascadeMode
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.ClassLevelCascadeMode
+  name: ClassLevelCascadeMode
+  nameWithType: AbstractValidator<Segment>.ClassLevelCascadeMode
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.ClassLevelCascadeMode
+  nameWithType.vb: AbstractValidator(Of Segment).ClassLevelCascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).ClassLevelCascadeMode
+- uid: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleLevelCascadeMode
+  commentId: P:FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}.RuleLevelCascadeMode
+  parent: FluentValidation.AbstractValidator{Songhay.Publications.Models.Segment}
+  definition: FluentValidation.AbstractValidator`1.RuleLevelCascadeMode
+  name: RuleLevelCascadeMode
+  nameWithType: AbstractValidator<Segment>.RuleLevelCascadeMode
+  fullName: FluentValidation.AbstractValidator<Songhay.Publications.Models.Segment>.RuleLevelCascadeMode
+  nameWithType.vb: AbstractValidator(Of Segment).RuleLevelCascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of Songhay.Publications.Models.Segment).RuleLevelCascadeMode
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FluentValidation.AbstractValidator`1
+  commentId: T:FluentValidation.AbstractValidator`1
+  isExternal: true
+  name: AbstractValidator<T>
+  nameWithType: AbstractValidator<T>
+  fullName: FluentValidation.AbstractValidator<T>
+  nameWithType.vb: AbstractValidator(Of T)
+  fullName.vb: FluentValidation.AbstractValidator(Of T)
+  name.vb: AbstractValidator(Of T)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1
+    name: AbstractValidator
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1
+    name: AbstractValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FluentValidation
+  commentId: N:FluentValidation
+  isExternal: true
+  name: FluentValidation
+  nameWithType: FluentValidation
+  fullName: FluentValidation
+- uid: FluentValidation.IValidator`1
+  commentId: T:FluentValidation.IValidator`1
+  isExternal: true
+  name: IValidator<T>
+  nameWithType: IValidator<T>
+  fullName: FluentValidation.IValidator<T>
+  nameWithType.vb: IValidator(Of T)
+  fullName.vb: FluentValidation.IValidator(Of T)
+  name.vb: IValidator(Of T)
+  spec.csharp:
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: FluentValidation.AbstractValidator`1.Validate(`0)
+  commentId: M:FluentValidation.AbstractValidator`1.Validate(`0)
+  isExternal: true
+  name: Validate(T)
+  nameWithType: AbstractValidator<T>.Validate(T)
+  fullName: FluentValidation.AbstractValidator<T>.Validate(T)
+  nameWithType.vb: AbstractValidator(Of T).Validate(T)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Validate(T)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Validate(`0)
+    name: Validate
+    isExternal: true
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Validate(`0)
+    name: Validate
+    isExternal: true
+  - name: (
+  - name: T
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.ValidateAsync(`0,System.Threading.CancellationToken)
+  commentId: M:FluentValidation.AbstractValidator`1.ValidateAsync(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: ValidateAsync(T, CancellationToken)
+  nameWithType: AbstractValidator<T>.ValidateAsync(T, CancellationToken)
+  fullName: FluentValidation.AbstractValidator<T>.ValidateAsync(T, System.Threading.CancellationToken)
+  nameWithType.vb: AbstractValidator(Of T).ValidateAsync(T, CancellationToken)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).ValidateAsync(T, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.ValidateAsync(`0,System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.ValidateAsync(`0,System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Validate(FluentValidation.ValidationContext{`0})
+  commentId: M:FluentValidation.AbstractValidator`1.Validate(FluentValidation.ValidationContext{`0})
+  isExternal: true
+  name: Validate(ValidationContext<T>)
+  nameWithType: AbstractValidator<T>.Validate(ValidationContext<T>)
+  fullName: FluentValidation.AbstractValidator<T>.Validate(FluentValidation.ValidationContext<T>)
+  nameWithType.vb: AbstractValidator(Of T).Validate(ValidationContext(Of T))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Validate(FluentValidation.ValidationContext(Of T))
+  name.vb: Validate(ValidationContext(Of T))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Validate(FluentValidation.ValidationContext{`0})
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Validate(FluentValidation.ValidationContext{`0})
+    name: Validate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.ValidateAsync(FluentValidation.ValidationContext{`0},System.Threading.CancellationToken)
+  commentId: M:FluentValidation.AbstractValidator`1.ValidateAsync(FluentValidation.ValidationContext{`0},System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: ValidateAsync(ValidationContext<T>, CancellationToken)
+  nameWithType: AbstractValidator<T>.ValidateAsync(ValidationContext<T>, CancellationToken)
+  fullName: FluentValidation.AbstractValidator<T>.ValidateAsync(FluentValidation.ValidationContext<T>, System.Threading.CancellationToken)
+  nameWithType.vb: AbstractValidator(Of T).ValidateAsync(ValidationContext(Of T), CancellationToken)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).ValidateAsync(FluentValidation.ValidationContext(Of T), System.Threading.CancellationToken)
+  name.vb: ValidateAsync(ValidationContext(Of T), CancellationToken)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.ValidateAsync(FluentValidation.ValidationContext{`0},System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.ValidateAsync(FluentValidation.ValidationContext{`0},System.Threading.CancellationToken)
+    name: ValidateAsync
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.CreateDescriptor
+  commentId: M:FluentValidation.AbstractValidator`1.CreateDescriptor
+  isExternal: true
+  name: CreateDescriptor()
+  nameWithType: AbstractValidator<T>.CreateDescriptor()
+  fullName: FluentValidation.AbstractValidator<T>.CreateDescriptor()
+  nameWithType.vb: AbstractValidator(Of T).CreateDescriptor()
+  fullName.vb: FluentValidation.AbstractValidator(Of T).CreateDescriptor()
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.CreateDescriptor
+    name: CreateDescriptor
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.CreateDescriptor
+    name: CreateDescriptor
+    isExternal: true
+  - name: (
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  commentId: M:FluentValidation.AbstractValidator`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: RuleFor<TProperty>(Expression<Func<T, TProperty>>)
+  nameWithType: AbstractValidator<T>.RuleFor<TProperty>(Expression<Func<T, TProperty>>)
+  fullName: FluentValidation.AbstractValidator<T>.RuleFor<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
+  nameWithType.vb: AbstractValidator(Of T).RuleFor(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).RuleFor(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)))
+  name.vb: RuleFor(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+    name: RuleFor
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.RuleFor``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+    name: RuleFor
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{``0,``1})
+  commentId: M:FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{``0,``1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Transform<TProperty, TTransformed>(Expression<Func<T, TProperty>>, Func<TProperty, TTransformed>)
+  nameWithType: AbstractValidator<T>.Transform<TProperty, TTransformed>(Expression<Func<T, TProperty>>, Func<TProperty, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<T>.Transform<TProperty, TTransformed>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>, System.Func<TProperty, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of T).Transform(Of TProperty, TTransformed)(Expression(Of Func(Of T, TProperty)), Func(Of TProperty, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Transform(Of TProperty, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)), System.Func(Of TProperty, TTransformed))
+  name.vb: Transform(Of TProperty, TTransformed)(Expression(Of Func(Of T, TProperty)), Func(Of TProperty, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{``0,``1})
+    name: Transform
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{``0,``1})
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{`0,``0,``1})
+  commentId: M:FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{`0,``0,``1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Transform<TProperty, TTransformed>(Expression<Func<T, TProperty>>, Func<T, TProperty, TTransformed>)
+  nameWithType: AbstractValidator<T>.Transform<TProperty, TTransformed>(Expression<Func<T, TProperty>>, Func<T, TProperty, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<T>.Transform<TProperty, TTransformed>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>, System.Func<T, TProperty, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of T).Transform(Of TProperty, TTransformed)(Expression(Of Func(Of T, TProperty)), Func(Of T, TProperty, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Transform(Of TProperty, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)), System.Func(Of T, TProperty, TTransformed))
+  name.vb: Transform(Of TProperty, TTransformed)(Expression(Of Func(Of T, TProperty)), Func(Of T, TProperty, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{`0,``0,``1})
+    name: Transform
+    isExternal: true
+  - name: <
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Transform``2(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{`0,``0,``1})
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TProperty
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  commentId: M:FluentValidation.AbstractValidator`1.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: RuleForEach<TElement>(Expression<Func<T, IEnumerable<TElement>>>)
+  nameWithType: AbstractValidator<T>.RuleForEach<TElement>(Expression<Func<T, IEnumerable<TElement>>>)
+  fullName: FluentValidation.AbstractValidator<T>.RuleForEach<TElement>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TElement>>>)
+  nameWithType.vb: AbstractValidator(Of T).RuleForEach(Of TElement)(Expression(Of Func(Of T, IEnumerable(Of TElement))))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).RuleForEach(Of TElement)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TElement))))
+  name.vb: RuleForEach(Of TElement)(Expression(Of Func(Of T, IEnumerable(Of TElement))))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+    name: RuleForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.RuleForEach``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+    name: RuleForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+  commentId: M:FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: TransformForEach<TElement, TTransformed>(Expression<Func<T, IEnumerable<TElement>>>, Func<TElement, TTransformed>)
+  nameWithType: AbstractValidator<T>.TransformForEach<TElement, TTransformed>(Expression<Func<T, IEnumerable<TElement>>>, Func<TElement, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<T>.TransformForEach<TElement, TTransformed>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TElement>>>, System.Func<TElement, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of T).TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of T, IEnumerable(Of TElement))), Func(Of TElement, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).TransformForEach(Of TElement, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TElement))), System.Func(Of TElement, TTransformed))
+  name.vb: TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of T, IEnumerable(Of TElement))), Func(Of TElement, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{`0,``0,``1})
+  commentId: M:FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{`0,``0,``1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: TransformForEach<TElement, TTransformed>(Expression<Func<T, IEnumerable<TElement>>>, Func<T, TElement, TTransformed>)
+  nameWithType: AbstractValidator<T>.TransformForEach<TElement, TTransformed>(Expression<Func<T, IEnumerable<TElement>>>, Func<T, TElement, TTransformed>)
+  fullName: FluentValidation.AbstractValidator<T>.TransformForEach<TElement, TTransformed>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TElement>>>, System.Func<T, TElement, TTransformed>)
+  nameWithType.vb: AbstractValidator(Of T).TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of T, IEnumerable(Of TElement))), Func(Of T, TElement, TTransformed))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).TransformForEach(Of TElement, TTransformed)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TElement))), System.Func(Of T, TElement, TTransformed))
+  name.vb: TransformForEach(Of TElement, TTransformed)(Expression(Of Func(Of T, IEnumerable(Of TElement))), Func(Of T, TElement, TTransformed))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{`0,``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: <
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TElement
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.TransformForEach``2(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}},System.Func{`0,``0,``1})
+    name: TransformForEach
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TElement
+  - name: )
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TElement
+  - name: ','
+  - name: " "
+  - name: TTransformed
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.RuleSet(System.String,System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.RuleSet(System.String,System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: RuleSet(string, Action)
+  nameWithType: AbstractValidator<T>.RuleSet(string, Action)
+  fullName: FluentValidation.AbstractValidator<T>.RuleSet(string, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).RuleSet(String, Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).RuleSet(String, System.Action)
+  name.vb: RuleSet(String, Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.RuleSet(System.String,System.Action)
+    name: RuleSet
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.RuleSet(System.String,System.Action)
+    name: RuleSet
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.When(System.Func{`0,System.Boolean},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: When(Func<T, bool>, Action)
+  nameWithType: AbstractValidator<T>.When(Func<T, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.When(System.Func<T, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).When(Func(Of T, Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).When(System.Func(Of T, Boolean), System.Action)
+  name.vb: When(Func(Of T, Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.When(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: When(Func<T, ValidationContext<T>, bool>, Action)
+  nameWithType: AbstractValidator<T>.When(Func<T, ValidationContext<T>, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.When(System.Func<T, FluentValidation.ValidationContext<T>, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).When(Func(Of T, ValidationContext(Of T), Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).When(System.Func(Of T, FluentValidation.ValidationContext(Of T), Boolean), System.Action)
+  name.vb: When(Func(Of T, ValidationContext(Of T), Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.When(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+    name: When
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.Unless(System.Func{`0,System.Boolean},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Unless(Func<T, bool>, Action)
+  nameWithType: AbstractValidator<T>.Unless(Func<T, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.Unless(System.Func<T, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).Unless(Func(Of T, Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Unless(System.Func(Of T, Boolean), System.Action)
+  name.vb: Unless(Func(Of T, Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.Unless(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Unless(Func<T, ValidationContext<T>, bool>, Action)
+  nameWithType: AbstractValidator<T>.Unless(Func<T, ValidationContext<T>, bool>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.Unless(System.Func<T, FluentValidation.ValidationContext<T>, bool>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).Unless(Func(Of T, ValidationContext(Of T), Boolean), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Unless(System.Func(Of T, FluentValidation.ValidationContext(Of T), Boolean), System.Action)
+  name.vb: Unless(Func(Of T, ValidationContext(Of T), Boolean), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Unless(System.Func{`0,FluentValidation.ValidationContext{`0},System.Boolean},System.Action)
+    name: Unless
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: WhenAsync(Func<T, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<T>.WhenAsync(Func<T, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.WhenAsync(System.Func<T, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).WhenAsync(Func(Of T, CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).WhenAsync(System.Func(Of T, System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: WhenAsync(Func(Of T, CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-4
+  name: WhenAsync(Func<T, ValidationContext<T>, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<T>.WhenAsync(Func<T, ValidationContext<T>, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.WhenAsync(System.Func<T, FluentValidation.ValidationContext<T>, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).WhenAsync(Func(Of T, ValidationContext(Of T), CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).WhenAsync(System.Func(Of T, FluentValidation.ValidationContext(Of T), System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: WhenAsync(Func(Of T, ValidationContext(Of T), CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.WhenAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: WhenAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: UnlessAsync(Func<T, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<T>.UnlessAsync(Func<T, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.UnlessAsync(System.Func<T, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).UnlessAsync(Func(Of T, CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).UnlessAsync(System.Func(Of T, System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: UnlessAsync(Func(Of T, CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  commentId: M:FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-4
+  name: UnlessAsync(Func<T, ValidationContext<T>, CancellationToken, Task<bool>>, Action)
+  nameWithType: AbstractValidator<T>.UnlessAsync(Func<T, ValidationContext<T>, CancellationToken, Task<bool>>, Action)
+  fullName: FluentValidation.AbstractValidator<T>.UnlessAsync(System.Func<T, FluentValidation.ValidationContext<T>, System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>>, System.Action)
+  nameWithType.vb: AbstractValidator(Of T).UnlessAsync(Func(Of T, ValidationContext(Of T), CancellationToken, Task(Of Boolean)), Action)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).UnlessAsync(System.Func(Of T, FluentValidation.ValidationContext(Of T), System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Boolean)), System.Action)
+  name.vb: UnlessAsync(Func(Of T, ValidationContext(Of T), CancellationToken, Task(Of Boolean)), Action)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.UnlessAsync(System.Func{`0,FluentValidation.ValidationContext{`0},System.Threading.CancellationToken,System.Threading.Tasks.Task{System.Boolean}},System.Action)
+    name: UnlessAsync
+    isExternal: true
+  - name: (
+  - uid: System.Func`4
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-4
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Include(FluentValidation.IValidator{`0})
+  commentId: M:FluentValidation.AbstractValidator`1.Include(FluentValidation.IValidator{`0})
+  isExternal: true
+  name: Include(IValidator<T>)
+  nameWithType: AbstractValidator<T>.Include(IValidator<T>)
+  fullName: FluentValidation.AbstractValidator<T>.Include(FluentValidation.IValidator<T>)
+  nameWithType.vb: AbstractValidator(Of T).Include(IValidator(Of T))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Include(FluentValidation.IValidator(Of T))
+  name.vb: Include(IValidator(Of T))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Include(FluentValidation.IValidator{`0})
+    name: Include
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Include(FluentValidation.IValidator{`0})
+    name: Include
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidator`1
+    name: IValidator
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.Include``1(System.Func{`0,``0})
+  commentId: M:FluentValidation.AbstractValidator`1.Include``1(System.Func{`0,``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Include<TValidator>(Func<T, TValidator>)
+  nameWithType: AbstractValidator<T>.Include<TValidator>(Func<T, TValidator>)
+  fullName: FluentValidation.AbstractValidator<T>.Include<TValidator>(System.Func<T, TValidator>)
+  nameWithType.vb: AbstractValidator(Of T).Include(Of TValidator)(Func(Of T, TValidator))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).Include(Of TValidator)(System.Func(Of T, TValidator))
+  name.vb: Include(Of TValidator)(Func(Of T, TValidator))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.Include``1(System.Func{`0,``0})
+    name: Include
+    isExternal: true
+  - name: <
+  - name: TValidator
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TValidator
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.Include``1(System.Func{`0,``0})
+    name: Include
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValidator
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TValidator
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.GetEnumerator
+  commentId: M:FluentValidation.AbstractValidator`1.GetEnumerator
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: AbstractValidator<T>.GetEnumerator()
+  fullName: FluentValidation.AbstractValidator<T>.GetEnumerator()
+  nameWithType.vb: AbstractValidator(Of T).GetEnumerator()
+  fullName.vb: FluentValidation.AbstractValidator(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+  - name: (
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.EnsureInstanceNotNull(System.Object)
+  commentId: M:FluentValidation.AbstractValidator`1.EnsureInstanceNotNull(System.Object)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: EnsureInstanceNotNull(object)
+  nameWithType: AbstractValidator<T>.EnsureInstanceNotNull(object)
+  fullName: FluentValidation.AbstractValidator<T>.EnsureInstanceNotNull(object)
+  nameWithType.vb: AbstractValidator(Of T).EnsureInstanceNotNull(Object)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).EnsureInstanceNotNull(Object)
+  name.vb: EnsureInstanceNotNull(Object)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.EnsureInstanceNotNull(System.Object)
+    name: EnsureInstanceNotNull
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.EnsureInstanceNotNull(System.Object)
+    name: EnsureInstanceNotNull
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.PreValidate(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  commentId: M:FluentValidation.AbstractValidator`1.PreValidate(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  isExternal: true
+  name: PreValidate(ValidationContext<T>, ValidationResult)
+  nameWithType: AbstractValidator<T>.PreValidate(ValidationContext<T>, ValidationResult)
+  fullName: FluentValidation.AbstractValidator<T>.PreValidate(FluentValidation.ValidationContext<T>, FluentValidation.Results.ValidationResult)
+  nameWithType.vb: AbstractValidator(Of T).PreValidate(ValidationContext(Of T), ValidationResult)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).PreValidate(FluentValidation.ValidationContext(Of T), FluentValidation.Results.ValidationResult)
+  name.vb: PreValidate(ValidationContext(Of T), ValidationResult)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.PreValidate(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+    name: PreValidate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.PreValidate(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+    name: PreValidate
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.RaiseValidationException(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  commentId: M:FluentValidation.AbstractValidator`1.RaiseValidationException(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+  isExternal: true
+  name: RaiseValidationException(ValidationContext<T>, ValidationResult)
+  nameWithType: AbstractValidator<T>.RaiseValidationException(ValidationContext<T>, ValidationResult)
+  fullName: FluentValidation.AbstractValidator<T>.RaiseValidationException(FluentValidation.ValidationContext<T>, FluentValidation.Results.ValidationResult)
+  nameWithType.vb: AbstractValidator(Of T).RaiseValidationException(ValidationContext(Of T), ValidationResult)
+  fullName.vb: FluentValidation.AbstractValidator(Of T).RaiseValidationException(FluentValidation.ValidationContext(Of T), FluentValidation.Results.ValidationResult)
+  name.vb: RaiseValidationException(ValidationContext(Of T), ValidationResult)
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.RaiseValidationException(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+    name: RaiseValidationException
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.RaiseValidationException(FluentValidation.ValidationContext{`0},FluentValidation.Results.ValidationResult)
+    name: RaiseValidationException
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.ValidationContext`1
+    name: ValidationContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: FluentValidation.Results.ValidationResult
+    name: ValidationResult
+    isExternal: true
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.OnRuleAdded(FluentValidation.IValidationRule{`0})
+  commentId: M:FluentValidation.AbstractValidator`1.OnRuleAdded(FluentValidation.IValidationRule{`0})
+  isExternal: true
+  name: OnRuleAdded(IValidationRule<T>)
+  nameWithType: AbstractValidator<T>.OnRuleAdded(IValidationRule<T>)
+  fullName: FluentValidation.AbstractValidator<T>.OnRuleAdded(FluentValidation.IValidationRule<T>)
+  nameWithType.vb: AbstractValidator(Of T).OnRuleAdded(IValidationRule(Of T))
+  fullName.vb: FluentValidation.AbstractValidator(Of T).OnRuleAdded(FluentValidation.IValidationRule(Of T))
+  name.vb: OnRuleAdded(IValidationRule(Of T))
+  spec.csharp:
+  - uid: FluentValidation.AbstractValidator`1.OnRuleAdded(FluentValidation.IValidationRule{`0})
+    name: OnRuleAdded
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidationRule`1
+    name: IValidationRule
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FluentValidation.AbstractValidator`1.OnRuleAdded(FluentValidation.IValidationRule{`0})
+    name: OnRuleAdded
+    isExternal: true
+  - name: (
+  - uid: FluentValidation.IValidationRule`1
+    name: IValidationRule
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FluentValidation.AbstractValidator`1.CascadeMode
+  commentId: P:FluentValidation.AbstractValidator`1.CascadeMode
+  isExternal: true
+  name: CascadeMode
+  nameWithType: AbstractValidator<T>.CascadeMode
+  fullName: FluentValidation.AbstractValidator<T>.CascadeMode
+  nameWithType.vb: AbstractValidator(Of T).CascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of T).CascadeMode
+- uid: FluentValidation.AbstractValidator`1.ClassLevelCascadeMode
+  commentId: P:FluentValidation.AbstractValidator`1.ClassLevelCascadeMode
+  isExternal: true
+  name: ClassLevelCascadeMode
+  nameWithType: AbstractValidator<T>.ClassLevelCascadeMode
+  fullName: FluentValidation.AbstractValidator<T>.ClassLevelCascadeMode
+  nameWithType.vb: AbstractValidator(Of T).ClassLevelCascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of T).ClassLevelCascadeMode
+- uid: FluentValidation.AbstractValidator`1.RuleLevelCascadeMode
+  commentId: P:FluentValidation.AbstractValidator`1.RuleLevelCascadeMode
+  isExternal: true
+  name: RuleLevelCascadeMode
+  nameWithType: AbstractValidator<T>.RuleLevelCascadeMode
+  fullName: FluentValidation.AbstractValidator<T>.RuleLevelCascadeMode
+  nameWithType.vb: AbstractValidator(Of T).RuleLevelCascadeMode
+  fullName.vb: FluentValidation.AbstractValidator(Of T).RuleLevelCascadeMode
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Validators.SegmentValidator
+  commentId: T:Songhay.Publications.Validators.SegmentValidator
+  href: Songhay.Publications.Validators.SegmentValidator.html
+  name: SegmentValidator
+  nameWithType: SegmentValidator
+  fullName: Songhay.Publications.Validators.SegmentValidator
+- uid: Songhay.Publications.Validators.SegmentValidator.#ctor*
+  commentId: Overload:Songhay.Publications.Validators.SegmentValidator.#ctor
+  href: Songhay.Publications.Validators.SegmentValidator.html#Songhay_Publications_Validators_SegmentValidator__ctor
+  name: SegmentValidator
+  nameWithType: SegmentValidator.SegmentValidator
+  fullName: Songhay.Publications.Validators.SegmentValidator.SegmentValidator
+  nameWithType.vb: SegmentValidator.New
+  fullName.vb: Songhay.Publications.Validators.SegmentValidator.New
+  name.vb: New

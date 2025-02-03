@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications
+  commentId: N:Songhay.Publications
+  id: Songhay.Publications
+  children:
+  - Songhay.Publications.EpubUtility
+  - Songhay.Publications.MarkdownEntryUtility
+  - Songhay.Publications.MarkdownUtility
+  - Songhay.Publications.PublicationContext
+  - Songhay.Publications.PublicationLinesUtility
+  - Songhay.Publications.YamlUtility
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications
+  nameWithType: Songhay.Publications
+  fullName: Songhay.Publications
+  type: Namespace
+  assemblies:
+  - Songhay.Publications
+references:
+- uid: Songhay.Publications.EpubUtility
+  commentId: T:Songhay.Publications.EpubUtility
+  href: Songhay.Publications.EpubUtility.html
+  name: EpubUtility
+  nameWithType: EpubUtility
+  fullName: Songhay.Publications.EpubUtility
+- uid: Songhay.Publications.MarkdownEntryUtility
+  commentId: T:Songhay.Publications.MarkdownEntryUtility
+  href: Songhay.Publications.MarkdownEntryUtility.html
+  name: MarkdownEntryUtility
+  nameWithType: MarkdownEntryUtility
+  fullName: Songhay.Publications.MarkdownEntryUtility
+- uid: Songhay.Publications.MarkdownUtility
+  commentId: T:Songhay.Publications.MarkdownUtility
+  href: Songhay.Publications.MarkdownUtility.html
+  name: MarkdownUtility
+  nameWithType: MarkdownUtility
+  fullName: Songhay.Publications.MarkdownUtility
+- uid: Songhay.Publications.PublicationContext
+  commentId: T:Songhay.Publications.PublicationContext
+  parent: Songhay.Publications
+  href: Songhay.Publications.PublicationContext.html
+  name: PublicationContext
+  nameWithType: PublicationContext
+  fullName: Songhay.Publications.PublicationContext
+- uid: Songhay.Publications.PublicationLinesUtility
+  commentId: T:Songhay.Publications.PublicationLinesUtility
+  href: Songhay.Publications.PublicationLinesUtility.html
+  name: PublicationLinesUtility
+  nameWithType: PublicationLinesUtility
+  fullName: Songhay.Publications.PublicationLinesUtility
+- uid: Songhay.Publications.YamlUtility
+  commentId: T:Songhay.Publications.YamlUtility
+  href: Songhay.Publications.YamlUtility.html
+  name: YamlUtility
+  nameWithType: YamlUtility
+  fullName: Songhay.Publications.YamlUtility
+- uid: Songhay.Publications
+  commentId: N:Songhay.Publications
+  href: Songhay.html
+  name: Songhay.Publications
+  nameWithType: Songhay.Publications
+  fullName: Songhay.Publications
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html

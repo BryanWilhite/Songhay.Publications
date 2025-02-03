@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  id: Songhay.Publications.Abstractions
+  children:
+  - Songhay.Publications.Abstractions.IDocument
+  - Songhay.Publications.Abstractions.IFragment
+  - Songhay.Publications.Abstractions.IIndexEntry
+  - Songhay.Publications.Abstractions.IIndexKeyword
+  - Songhay.Publications.Abstractions.IIndexKeywordGroup
+  - Songhay.Publications.Abstractions.ISegment
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  type: Namespace
+  assemblies:
+  - Songhay.Publications
+references:
+- uid: Songhay.Publications.Abstractions.IDocument
+  commentId: T:Songhay.Publications.Abstractions.IDocument
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: IDocument
+  nameWithType: IDocument
+  fullName: Songhay.Publications.Abstractions.IDocument
+- uid: Songhay.Publications.Abstractions.IFragment
+  commentId: T:Songhay.Publications.Abstractions.IFragment
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IFragment.html
+  name: IFragment
+  nameWithType: IFragment
+  fullName: Songhay.Publications.Abstractions.IFragment
+- uid: Songhay.Publications.Abstractions.IIndexEntry
+  commentId: T:Songhay.Publications.Abstractions.IIndexEntry
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IIndexEntry.html
+  name: IIndexEntry
+  nameWithType: IIndexEntry
+  fullName: Songhay.Publications.Abstractions.IIndexEntry
+- uid: Songhay.Publications.Abstractions.IIndexKeyword
+  commentId: T:Songhay.Publications.Abstractions.IIndexKeyword
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IIndexKeyword.html
+  name: IIndexKeyword
+  nameWithType: IIndexKeyword
+  fullName: Songhay.Publications.Abstractions.IIndexKeyword
+- uid: Songhay.Publications.Abstractions.IIndexKeywordGroup
+  commentId: T:Songhay.Publications.Abstractions.IIndexKeywordGroup
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IIndexKeywordGroup.html
+  name: IIndexKeywordGroup
+  nameWithType: IIndexKeywordGroup
+  fullName: Songhay.Publications.Abstractions.IIndexKeywordGroup
+- uid: Songhay.Publications.Abstractions.ISegment
+  commentId: T:Songhay.Publications.Abstractions.ISegment
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.ISegment.html
+  name: ISegment
+  nameWithType: ISegment
+  fullName: Songhay.Publications.Abstractions.ISegment
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html

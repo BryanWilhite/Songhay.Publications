@@ -1,0 +1,1518 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Extensions.FileInfoExtensions
+  commentId: T:Songhay.Publications.Extensions.FileInfoExtensions
+  id: FileInfoExtensions
+  parent: Songhay.Publications.Extensions
+  children:
+  - Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  langs:
+  - csharp
+  - vb
+  name: FileInfoExtensions
+  nameWithType: FileInfoExtensions
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: FileInfoExtensions
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Extensions of <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static class FileInfoExtensions
+    content.vb: Public Module FileInfoExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  id: LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: LookLikeJsonFrontMatter
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 12
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Return <code>true</code> when the specified collection of lines look like JSON
+  example: []
+  syntax:
+    content: public static bool LookLikeJsonFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: collection of lines
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function LookLikeJsonFrontMatter(lines As IReadOnlyCollection(Of String), logger As ILogger) As Boolean
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter*
+  nameWithType.vb: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  id: LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: LookLikeMarkdownEntryWithFrontMatter
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 61
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Return <code>true</code> when the specified collection of lines look like <xref href="Songhay.Publications.Models.MarkdownEntry.Content" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static bool LookLikeMarkdownEntryWithFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: collection of lines
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function LookLikeMarkdownEntryWithFrontMatter(lines As IReadOnlyCollection(Of String), logger As ILogger) As Boolean
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter*
+  nameWithType.vb: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  id: LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: LookLikeYamlFrontMatter
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 94
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Return <code>true</code> when the specified collection of lines look like YAML
+  example: []
+  syntax:
+    content: public static bool LookLikeYamlFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: collection of lines
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function LookLikeYamlFrontMatter(lines As IReadOnlyCollection(Of String), logger As ILogger) As Boolean
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter*
+  nameWithType.vb: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  id: ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToFrontMatterLinesAndContentLines
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 134
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+
+    into two collections of lines: one for front matter and one for content.
+  remarks: >-
+    This member expects the first line of the entry to be a front matter fence (<code>---</code>)
+
+    or it will return empty collections.
+  example: []
+  syntax:
+    content: public static (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines) ToFrontMatterLinesAndContentLines(this FileInfo? entry, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}
+    content.vb: Public Shared Function ToFrontMatterLinesAndContentLines(entry As FileInfo, logger As ILogger) As (FrontMatterLines As IReadOnlyCollection(Of String), ContentLines As IReadOnlyCollection(Of String))
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines*
+  nameWithType.vb: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToFrontMatterLinesAndContentLines(FileInfo, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  id: ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToNewIDocument(FileInfo?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.ToNewIDocument(FileInfo?, string?, string?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToNewIDocument
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 176
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Converts the specified <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> to a new <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static IDocument? ToNewIDocument(this FileInfo? entry, string? title, string? documentPath, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: title
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Title" data-throw-if-not-resolved="false"></xref>
+    - id: documentPath
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Path" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: Songhay.Publications.Abstractions.IDocument
+    content.vb: Public Shared Function ToNewIDocument(entry As FileInfo, title As String, documentPath As String, logger As ILogger) As IDocument
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument*
+  nameWithType.vb: FileInfoExtensions.ToNewIDocument(FileInfo, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToNewIDocument(FileInfo, String, String, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  id: ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToIDocumentAndAnyContent(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToIDocumentAndAnyContent
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 213
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref>
+
+    into a (<xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>, <xref href="System.String" data-throw-if-not-resolved="false"></xref>) tuple.
+  example: []
+  syntax:
+    content: public static (IDocument? frontMatter, string? content) ToIDocumentAndAnyContent(this FileInfo? entry, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}
+    content.vb: Public Shared Function ToIDocumentAndAnyContent(entry As FileInfo, logger As ILogger) As (frontMatter As IDocument, content As String)
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent*
+  nameWithType.vb: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToIDocumentAndAnyContent(FileInfo, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  id: ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToJsonObjectAndAnyContent
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 237
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref>
+
+    into a (<xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>, <xref href="System.String" data-throw-if-not-resolved="false"></xref>) tuple.
+  example: []
+  syntax:
+    content: public static (JsonObject? frontMatter, string? content) ToJsonObjectAndAnyContent(this FileInfo? entry, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}
+    content.vb: Public Shared Function ToJsonObjectAndAnyContent(entry As FileInfo, logger As ILogger) As (frontMatter As JsonObject, content As String)
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent*
+  nameWithType.vb: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToJsonObjectAndAnyContent(FileInfo, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  id: ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToJsonString(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.ToJsonString(IReadOnlyCollection<string>?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToJsonString
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 262
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Converts the specified collection of lines to a JSON string.
+  example: []
+  syntax:
+    content: public static string? ToJsonString(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: collection of lines where <xref href="Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cMicrosoft.Extensions.Logging.ILogger)" data-throw-if-not-resolved="false"></xref> returns <code>true</code>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToJsonString(lines As IReadOnlyCollection(Of String), logger As ILogger) As String
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString*
+  nameWithType.vb: FileInfoExtensions.ToJsonString(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToJsonString(IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  id: ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToYamlString(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.ToYamlString(IReadOnlyCollection<string>?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToYamlString
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 274
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Converts the specified collection of lines to a YAML string.
+  example: []
+  syntax:
+    content: public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: collection of lines where <xref href="Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cMicrosoft.Extensions.Logging.ILogger)" data-throw-if-not-resolved="false"></xref> returns <code>true</code>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToYamlString(lines As IReadOnlyCollection(Of String), logger As ILogger) As String
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString*
+  nameWithType.vb: FileInfoExtensions.ToYamlString(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToYamlString(IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  id: WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteNewPublicationEntryWithJsonFrontMatter
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 289
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Writes a new entry with JSON front matter to <xref href="System.IO.FileSystemInfo.FullName" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static void WriteNewPublicationEntryWithJsonFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: title
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Title" data-throw-if-not-resolved="false"></xref>
+    - id: documentPath
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Path" data-throw-if-not-resolved="false"></xref>
+    - id: content
+      type: System.String
+      description: the entry content
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Sub WriteNewPublicationEntryWithJsonFrontMatter(entry As FileInfo, title As String, documentPath As String, content As String, logger As ILogger)
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter*
+  nameWithType.vb: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo, String, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo, String, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo, String, String, String, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  id: WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.FileInfoExtensions
+  langs:
+  - csharp
+  - vb
+  name: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/FileInfoExtensions.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WriteNewPublicationEntryWithYamlFrontMatter
+    path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
+    startLine: 302
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Writes a new entry with YAML front matter to <xref href="System.IO.FileSystemInfo.FullName" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static void WriteNewPublicationEntryWithYamlFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger? logger)
+    parameters:
+    - id: entry
+      type: System.IO.FileInfo
+      description: the <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> publications entry
+    - id: title
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Title" data-throw-if-not-resolved="false"></xref>
+    - id: documentPath
+      type: System.String
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument.Path" data-throw-if-not-resolved="false"></xref>
+    - id: content
+      type: System.String
+      description: the entry content
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Sub WriteNewPublicationEntryWithYamlFrontMatter(entry As FileInfo, title As String, documentPath As String, content As String, logger As ILogger)
+  overload: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter*
+  nameWithType.vb: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo, String, String, String, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo, String, String, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo, String, String, String, ILogger)
+references:
+- uid: System.IO.FileInfo
+  commentId: T:System.IO.FileInfo
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileinfo
+  name: FileInfo
+  nameWithType: FileInfo
+  fullName: System.IO.FileInfo
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeJsonFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: LookLikeJsonFrontMatter
+  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter
+- uid: System.Collections.Generic.IReadOnlyCollection{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<string>
+  nameWithType: IReadOnlyCollection<string>
+  fullName: System.Collections.Generic.IReadOnlyCollection<string>
+  nameWithType.vb: IReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of String)
+  name.vb: IReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Songhay.Publications.Models.MarkdownEntry.Content
+  commentId: P:Songhay.Publications.Models.MarkdownEntry.Content
+  href: Songhay.Publications.Models.MarkdownEntry.html#Songhay_Publications_Models_MarkdownEntry_Content
+  name: Content
+  nameWithType: MarkdownEntry.Content
+  fullName: Songhay.Publications.Models.MarkdownEntry.Content
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeMarkdownEntryWithFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: LookLikeMarkdownEntryWithFrontMatter
+  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeYamlFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: LookLikeYamlFrontMatter
+  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToFrontMatterLinesAndContentLines_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
+  name: ToFrontMatterLinesAndContentLines
+  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines
+- uid: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}
+  commentId: T:System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines)
+  nameWithType: (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines)
+  fullName: (System.Collections.Generic.IReadOnlyCollection<string> FrontMatterLines, System.Collections.Generic.IReadOnlyCollection<string> ContentLines)
+  nameWithType.vb: (FrontMatterLines As IReadOnlyCollection(Of String), ContentLines As IReadOnlyCollection(Of String))
+  fullName.vb: (FrontMatterLines As System.Collections.Generic.IReadOnlyCollection(Of String), ContentLines As System.Collections.Generic.IReadOnlyCollection(Of String))
+  name.vb: (FrontMatterLines As IReadOnlyCollection(Of String), ContentLines As IReadOnlyCollection(Of String))
+  spec.csharp:
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}.FrontMatterLines
+    name: FrontMatterLines
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlycollection-system.string-,system.collections.generic.ireadonlycollection-system.string--.frontmatterlines
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}.ContentLines
+    name: ContentLines
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlycollection-system.string-,system.collections.generic.ireadonlycollection-system.string--.contentlines
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}.FrontMatterLines
+    name: FrontMatterLines
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlycollection-system.string-,system.collections.generic.ireadonlycollection-system.string--.frontmatterlines
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String}}.ContentLines
+    name: ContentLines
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlycollection-system.string-,system.collections.generic.ireadonlycollection-system.string--.contentlines
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument
+  commentId: T:Songhay.Publications.Abstractions.IDocument
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: IDocument
+  nameWithType: IDocument
+  fullName: Songhay.Publications.Abstractions.IDocument
+- uid: Songhay.Publications.Abstractions.IDocument.Title
+  commentId: P:Songhay.Publications.Abstractions.IDocument.Title
+  parent: Songhay.Publications.Abstractions.IDocument
+  href: Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Title
+  name: Title
+  nameWithType: IDocument.Title
+  fullName: Songhay.Publications.Abstractions.IDocument.Title
+- uid: Songhay.Publications.Abstractions.IDocument.Path
+  commentId: P:Songhay.Publications.Abstractions.IDocument.Path
+  parent: Songhay.Publications.Abstractions.IDocument
+  href: Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Path
+  name: Path
+  nameWithType: IDocument.Path
+  fullName: Songhay.Publications.Abstractions.IDocument.Path
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToNewIDocument_System_IO_FileInfo_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: ToNewIDocument
+  nameWithType: FileInfoExtensions.ToNewIDocument
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  href: Songhay.html
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+    href: Songhay.Publications.Abstractions.html
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToIDocumentAndAnyContent_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
+  name: ToIDocumentAndAnyContent
+  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent
+- uid: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}
+  commentId: T:System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}
+  parent: System
+  definition: System.ValueTuple`2
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: (IDocument frontMatter, string content)
+  nameWithType: (IDocument frontMatter, string content)
+  fullName: (Songhay.Publications.Abstractions.IDocument frontMatter, string content)
+  nameWithType.vb: (frontMatter As IDocument, content As String)
+  fullName.vb: (frontMatter As Songhay.Publications.Abstractions.IDocument, content As String)
+  name.vb: (frontMatter As IDocument, content As String)
+  spec.csharp:
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: " "
+  - uid: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}.frontMatter
+    name: frontMatter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-songhay.publications.abstractions.idocument,system.string-.frontmatter
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}.content
+    name: content
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-songhay.publications.abstractions.idocument,system.string-.content
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}.frontMatter
+    name: frontMatter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-songhay.publications.abstractions.idocument,system.string-.frontmatter
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Songhay.Publications.Abstractions.IDocument,System.String}.content
+    name: content
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-songhay.publications.abstractions.idocument,system.string-.content
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonObjectAndAnyContent_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
+  name: ToJsonObjectAndAnyContent
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent
+- uid: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}
+  commentId: T:System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: (JsonObject frontMatter, string content)
+  nameWithType: (JsonObject frontMatter, string content)
+  fullName: (System.Text.Json.Nodes.JsonObject frontMatter, string content)
+  nameWithType.vb: (frontMatter As JsonObject, content As String)
+  fullName.vb: (frontMatter As System.Text.Json.Nodes.JsonObject, content As String)
+  name.vb: (frontMatter As JsonObject, content As String)
+  spec.csharp:
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: " "
+  - uid: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}.frontMatter
+    name: frontMatter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.text.json.nodes.jsonobject,system.string-.frontmatter
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}.content
+    name: content
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.text.json.nodes.jsonobject,system.string-.content
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}.frontMatter
+    name: frontMatter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.text.json.nodes.jsonobject,system.string-.frontmatter
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Text.Json.Nodes.JsonObject,System.String}.content
+    name: content
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.text.json.nodes.jsonobject,system.string-.content
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeJsonFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>, ILogger)
+  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: LookLikeJsonFrontMatter
+    href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeJsonFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: LookLikeJsonFrontMatter
+    href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeJsonFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonString_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: ToJsonString
+  nameWithType: FileInfoExtensions.ToJsonString
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeYamlFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>, ILogger)
+  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  name.vb: LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: LookLikeYamlFrontMatter
+    href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeYamlFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+    name: LookLikeYamlFrontMatter
+    href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeYamlFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToYamlString_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  name: ToYamlString
+  nameWithType: FileInfoExtensions.ToYamlString
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString
+- uid: System.IO.FileSystemInfo.FullName
+  commentId: P:System.IO.FileSystemInfo.FullName
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo.fullname
+  name: FullName
+  nameWithType: FileSystemInfo.FullName
+  fullName: System.IO.FileSystemInfo.FullName
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteNewPublicationEntryWithJsonFrontMatter_System_IO_FileInfo_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WriteNewPublicationEntryWithJsonFrontMatter
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter
+  href: Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteNewPublicationEntryWithYamlFrontMatter_System_IO_FileInfo_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: WriteNewPublicationEntryWithYamlFrontMatter
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter

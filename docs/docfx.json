@@ -1,0 +1,42 @@
+{
+    "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+    "metadata": [
+        {
+            "dest": "./latest",
+            "noRestore": true,
+            "src": [
+                {
+                    "src": "../Songhay.Publications",
+                    "files": [
+                        "**/*.csproj"
+                    ]
+                },
+                {
+                    "src": "../Songhay.Publications.DataAccess",
+                    "files": [
+                        "**/*.csproj"
+                    ]
+                }
+            ]
+        }
+    ],
+    "build": {
+        "globalMetadata": {
+            "_appName": "Songhay.Publications.DataAccess",
+            "_appTitle": "Songhay.Publications.DataAccess API",
+            "_enableSearch": true,
+            "pdf": false
+        },
+        "content": [
+            {
+                "exclude": "**/*xrefmap.yml",
+                "files": ["**/*.{md,yml}"]
+            }
+        ],
+        "resource": [],
+        "template": [
+            "default",
+            "modern"
+        ]
+    }
+}

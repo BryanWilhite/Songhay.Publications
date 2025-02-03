@@ -1,0 +1,959 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Models.ResponsiveImage
+  commentId: T:Songhay.Publications.Models.ResponsiveImage
+  id: ResponsiveImage
+  parent: Songhay.Publications.Models
+  children:
+  - Songhay.Publications.Models.ResponsiveImage.Candidates
+  - Songhay.Publications.Models.ResponsiveImage.Description
+  - Songhay.Publications.Models.ResponsiveImage.Key
+  - Songhay.Publications.Models.ResponsiveImage.Sizes
+  - Songhay.Publications.Models.ResponsiveImage.Source
+  langs:
+  - csharp
+  - vb
+  name: ResponsiveImage
+  nameWithType: ResponsiveImage
+  fullName: Songhay.Publications.Models.ResponsiveImage
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ResponsiveImage
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 5
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Defines a responsive image.
+  example: []
+  syntax:
+    content: public class ResponsiveImage
+    content.vb: Public Class ResponsiveImage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules
+  - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup
+  - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute
+  - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute
+  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+- uid: Songhay.Publications.Models.ResponsiveImage.Description
+  commentId: P:Songhay.Publications.Models.ResponsiveImage.Description
+  id: Description
+  parent: Songhay.Publications.Models.ResponsiveImage
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ResponsiveImage.Description
+  fullName: Songhay.Publications.Models.ResponsiveImage.Description
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Description
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 10
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the description.
+  example: []
+  syntax:
+    content: public string? Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Songhay.Publications.Models.ResponsiveImage.Description*
+- uid: Songhay.Publications.Models.ResponsiveImage.Key
+  commentId: P:Songhay.Publications.Models.ResponsiveImage.Key
+  id: Key
+  parent: Songhay.Publications.Models.ResponsiveImage
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: ResponsiveImage.Key
+  fullName: Songhay.Publications.Models.ResponsiveImage.Key
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Key
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 15
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the key.
+  example: []
+  syntax:
+    content: public string? Key { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Key As String
+  overload: Songhay.Publications.Models.ResponsiveImage.Key*
+- uid: Songhay.Publications.Models.ResponsiveImage.Source
+  commentId: P:Songhay.Publications.Models.ResponsiveImage.Source
+  id: Source
+  parent: Songhay.Publications.Models.ResponsiveImage
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: ResponsiveImage.Source
+  fullName: Songhay.Publications.Models.ResponsiveImage.Source
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Source
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 21
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the source.
+  example: []
+  syntax:
+    content: public Uri? Source { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property Source As Uri
+  overload: Songhay.Publications.Models.ResponsiveImage.Source*
+- uid: Songhay.Publications.Models.ResponsiveImage.Candidates
+  commentId: P:Songhay.Publications.Models.ResponsiveImage.Candidates
+  id: Candidates
+  parent: Songhay.Publications.Models.ResponsiveImage
+  langs:
+  - csharp
+  - vb
+  name: Candidates
+  nameWithType: ResponsiveImage.Candidates
+  fullName: Songhay.Publications.Models.ResponsiveImage.Candidates
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Candidates
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 27
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the candidates.
+  example: []
+  syntax:
+    content: public ICollection<ImageCandidate> Candidates { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageCandidate}
+    content.vb: Public Property Candidates As ICollection(Of ImageCandidate)
+  overload: Songhay.Publications.Models.ResponsiveImage.Candidates*
+- uid: Songhay.Publications.Models.ResponsiveImage.Sizes
+  commentId: P:Songhay.Publications.Models.ResponsiveImage.Sizes
+  id: Sizes
+  parent: Songhay.Publications.Models.ResponsiveImage
+  langs:
+  - csharp
+  - vb
+  name: Sizes
+  nameWithType: ResponsiveImage.Sizes
+  fullName: Songhay.Publications.Models.ResponsiveImage.Sizes
+  type: Property
+  source:
+    remote:
+      path: Songhay.Publications/Models/ResponsiveImage.cs
+      branch: dev/version-8.0.0
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Sizes
+    path: ../Songhay.Publications/Models/ResponsiveImage.cs
+    startLine: 32
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Models
+  summary: Gets or sets the sizes.
+  example: []
+  syntax:
+    content: public ICollection<ImageSize> Sizes { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageSize}
+    content.vb: Public Property Sizes As ICollection(Of ImageSize)
+  overload: Songhay.Publications.Models.ResponsiveImage.Sizes*
+references:
+- uid: Songhay.Publications.Models
+  commentId: N:Songhay.Publications.Models
+  href: Songhay.html
+  name: Songhay.Publications.Models
+  nameWithType: Songhay.Publications.Models
+  fullName: Songhay.Publications.Models
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Models
+    name: Models
+    href: Songhay.Publications.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  definition: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  name: ToCssMediaAtRules(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToCssMediaAtRules(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+    name: ToCssMediaAtRules
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+    name: ToCssMediaAtRules
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  definition: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  name: ToImgMarkup(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  definition: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  name: ToSizesSetAttribute(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToSizesSetAttribute(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSizesSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSizesSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  definition: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  name: ToSrcSetAttribute(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToSrcSetAttribute(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSrcSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSrcSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  parent: Songhay.Publications.Extensions.JsonNodeExtensions
+  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  name: ToCssMediaAtRules(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToCssMediaAtRules(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+    name: ToCssMediaAtRules
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
+    name: ToCssMediaAtRules
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToCssMediaAtRules_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  commentId: T:Songhay.Publications.Extensions.ResponsiveImageExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html
+  name: ResponsiveImageExtensions
+  nameWithType: ResponsiveImageExtensions
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  name: ToImgMarkup(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  name: ToSizesSetAttribute(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToSizesSetAttribute(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSizesSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSizesSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  name: ToSrcSetAttribute(ResponsiveImage)
+  nameWithType: ResponsiveImageExtensions.ToSrcSetAttribute(ResponsiveImage)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSrcSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
+    name: ToSrcSetAttribute
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSrcSetAttribute_Songhay_Publications_Models_ResponsiveImage_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+  isExternal: true
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  name: ToJsonNode(object)
+  nameWithType: JsonNodeExtensions.ToJsonNode(object)
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
+  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
+  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
+  name.vb: ToJsonNode(Object)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
+    name: ToJsonNode
+    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Songhay.Publications.Extensions.JsonNodeExtensions
+  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
+  parent: Songhay.Publications.Extensions
+  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
+  name: JsonNodeExtensions
+  nameWithType: JsonNodeExtensions
+  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  href: Songhay.html
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+    href: Songhay.html
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+    href: Songhay.Publications.html
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+    href: Songhay.Publications.Extensions.html
+- uid: Songhay.Publications.Models.ResponsiveImage.Description*
+  commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Description
+  href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Description
+  name: Description
+  nameWithType: ResponsiveImage.Description
+  fullName: Songhay.Publications.Models.ResponsiveImage.Description
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Songhay.Publications.Models.ResponsiveImage.Key*
+  commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Key
+  href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Key
+  name: Key
+  nameWithType: ResponsiveImage.Key
+  fullName: Songhay.Publications.Models.ResponsiveImage.Key
+- uid: Songhay.Publications.Models.ResponsiveImage.Source*
+  commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Source
+  href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Source
+  name: Source
+  nameWithType: ResponsiveImage.Source
+  fullName: Songhay.Publications.Models.ResponsiveImage.Source
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Songhay.Publications.Models.ResponsiveImage.Candidates*
+  commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Candidates
+  href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Candidates
+  name: Candidates
+  nameWithType: ResponsiveImage.Candidates
+  fullName: Songhay.Publications.Models.ResponsiveImage.Candidates
+- uid: System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageCandidate}
+  commentId: T:System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageCandidate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<ImageCandidate>
+  nameWithType: ICollection<ImageCandidate>
+  fullName: System.Collections.Generic.ICollection<Songhay.Publications.Models.ImageCandidate>
+  nameWithType.vb: ICollection(Of ImageCandidate)
+  fullName.vb: System.Collections.Generic.ICollection(Of Songhay.Publications.Models.ImageCandidate)
+  name.vb: ICollection(Of ImageCandidate)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Songhay.Publications.Models.ImageCandidate
+    name: ImageCandidate
+    href: Songhay.Publications.Models.ImageCandidate.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.ImageCandidate
+    name: ImageCandidate
+    href: Songhay.Publications.Models.ImageCandidate.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Songhay.Publications.Models.ResponsiveImage.Sizes*
+  commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Sizes
+  href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Sizes
+  name: Sizes
+  nameWithType: ResponsiveImage.Sizes
+  fullName: Songhay.Publications.Models.ResponsiveImage.Sizes
+- uid: System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageSize}
+  commentId: T:System.Collections.Generic.ICollection{Songhay.Publications.Models.ImageSize}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<ImageSize>
+  nameWithType: ICollection<ImageSize>
+  fullName: System.Collections.Generic.ICollection<Songhay.Publications.Models.ImageSize>
+  nameWithType.vb: ICollection(Of ImageSize)
+  fullName.vb: System.Collections.Generic.ICollection(Of Songhay.Publications.Models.ImageSize)
+  name.vb: ICollection(Of ImageSize)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Songhay.Publications.Models.ImageSize
+    name: ImageSize
+    href: Songhay.Publications.Models.ImageSize.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Songhay.Publications.Models.ImageSize
+    name: ImageSize
+    href: Songhay.Publications.Models.ImageSize.html
+  - name: )

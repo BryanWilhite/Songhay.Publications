@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Fragment | Songhay.Publications.DataAccess API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Fragment | Songhay.Publications.DataAccess API ">
+      
+      <meta name="description" content="Publications Fragment">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BryanWilhite/Songhay.Publications/new/dev/version-8.0.0/apiSpec/new?filename=Songhay_Publications_Models_Fragment.md&amp;value=---%0Auid%3A%20Songhay.Publications.Models.Fragment%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Songhay.Publications.DataAccess">
+            Songhay.Publications.DataAccess
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Songhay.Publications.Models.Fragment">
+
+
+
+  <h1 id="Songhay_Publications_Models_Fragment" data-uid="Songhay.Publications.Models.Fragment" class="text-break">
+Class Fragment  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Songhay.html">Songhay</a>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Songhay.Publications.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Publications Fragment</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Fragment : IFragment, ITemporal</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Fragment</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Songhay.Publications.Abstractions.IFragment.html">IFragment</a></div>
+      <div><span class="xref">ITemporal</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_Clone_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.Clone(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_SetDefaults_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.SetDefaults(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.ToDisplayText(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IFragment_System_Boolean_">FragmentExtensions.ToDisplayText(IFragment?, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.ToMenuDisplayItemModel(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_">FragmentExtensions.ToMenuDisplayItemModel(IFragment?, IGroupable?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_Songhay_Abstractions_IGroupable_System_Boolean_">FragmentExtensions.ToMenuDisplayItemModel(IFragment?, IGroupable?, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IFragment_System_Boolean_">FragmentExtensions.ToMenuDisplayItemModel(IFragment?, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.ToValidationResult(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithDefaults_Songhay_Publications_Abstractions_IFragment_">FragmentExtensions.WithDefaults(IFragment?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.FragmentExtensions.html#Songhay_Publications_Extensions_FragmentExtensions_WithEdit_Songhay_Publications_Abstractions_IFragment_System_Action_Songhay_Publications_Abstractions_IFragment__">FragmentExtensions.WithEdit(IFragment?, Action&lt;IFragment&gt;?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_">JsonNodeExtensions.ToJsonNode(object?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Songhay_Publications_Models_Fragment_ClientId_" data-uid="Songhay.Publications.Models.Fragment.ClientId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_ClientId" data-uid="Songhay.Publications.Models.Fragment.ClientId">
+  ClientId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the client identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Client ID&quot;, Order = 2)]
+public string? ClientId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_Content_" data-uid="Songhay.Publications.Models.Fragment.Content*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_Content" data-uid="Songhay.Publications.Models.Fragment.Content">
+  Content
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public string? Content { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_Document_" data-uid="Songhay.Publications.Models.Fragment.Document*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_Document" data-uid="Songhay.Publications.Models.Fragment.Document">
+  Document
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public Document? Document { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Models.Document.html">Document</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_DocumentId_" data-uid="Songhay.Publications.Models.Fragment.DocumentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_DocumentId" data-uid="Songhay.Publications.Models.Fragment.DocumentId">
+  DocumentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the document identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Document ID&quot;, Order = 0)]
+public int? DocumentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_EndDate_" data-uid="Songhay.Publications.Models.Fragment.EndDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_EndDate" data-uid="Songhay.Publications.Models.Fragment.EndDate">
+  EndDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the end date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Expiration Date&quot;, Order = 7)]
+public DateTime? EndDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_FragmentDisplayName_" data-uid="Songhay.Publications.Models.Fragment.FragmentDisplayName*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_FragmentDisplayName" data-uid="Songhay.Publications.Models.Fragment.FragmentDisplayName">
+  FragmentDisplayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the display name of the fragment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Display Name&quot;, Order = 3)]
+[DisplayFormat(ConvertEmptyStringToNull = true)]
+public string? FragmentDisplayName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_FragmentId_" data-uid="Songhay.Publications.Models.Fragment.FragmentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_FragmentId" data-uid="Songhay.Publications.Models.Fragment.FragmentId">
+  FragmentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fragment identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Fragment ID&quot;, Order = 1)]
+public int? FragmentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_FragmentName_" data-uid="Songhay.Publications.Models.Fragment.FragmentName*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_FragmentName" data-uid="Songhay.Publications.Models.Fragment.FragmentName">
+  FragmentName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of the fragment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Item Name&quot;, Order = 2)]
+[DisplayFormat(ConvertEmptyStringToNull = true)]
+public string? FragmentName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_InceptDate_" data-uid="Songhay.Publications.Models.Fragment.InceptDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_InceptDate" data-uid="Songhay.Publications.Models.Fragment.InceptDate">
+  InceptDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the incept date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Incept Date&quot;, Order = 4)]
+public DateTime? InceptDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_IsActive_" data-uid="Songhay.Publications.Models.Fragment.IsActive*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_IsActive" data-uid="Songhay.Publications.Models.Fragment.IsActive">
+  IsActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Is Active?&quot;, Order = 10)]
+public bool? IsActive { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_IsNext_" data-uid="Songhay.Publications.Models.Fragment.IsNext*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_IsNext" data-uid="Songhay.Publications.Models.Fragment.IsNext">
+  IsNext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the is next.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Is Next?&quot;, Order = 11)]
+public bool? IsNext { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_IsPrevious_" data-uid="Songhay.Publications.Models.Fragment.IsPrevious*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_IsPrevious" data-uid="Songhay.Publications.Models.Fragment.IsPrevious">
+  IsPrevious
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the is previous.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Is Previous?&quot;, Order = 12)]
+public bool? IsPrevious { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_IsWrapper_" data-uid="Songhay.Publications.Models.Fragment.IsWrapper*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_IsWrapper" data-uid="Songhay.Publications.Models.Fragment.IsWrapper">
+  IsWrapper
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the is wrapper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Is Wrapper?&quot;, Order = 13)]
+public bool? IsWrapper { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_ItemText_" data-uid="Songhay.Publications.Models.Fragment.ItemText*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_ItemText" data-uid="Songhay.Publications.Models.Fragment.ItemText">
+  ItemText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the item text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public string? ItemText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_ModificationDate_" data-uid="Songhay.Publications.Models.Fragment.ModificationDate*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_ModificationDate" data-uid="Songhay.Publications.Models.Fragment.ModificationDate">
+  ModificationDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the modification date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Modification Date&quot;, Order = 5)]
+public DateTime? ModificationDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_NextFragment_" data-uid="Songhay.Publications.Models.Fragment.NextFragment*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_NextFragment" data-uid="Songhay.Publications.Models.Fragment.NextFragment">
+  NextFragment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the next fragment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public Fragment? NextFragment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Models.Fragment.html">Fragment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_NextFragmentId_" data-uid="Songhay.Publications.Models.Fragment.NextFragmentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_NextFragmentId" data-uid="Songhay.Publications.Models.Fragment.NextFragmentId">
+  NextFragmentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the next fragment identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Next Fragment ID&quot;, Order = 7)]
+public int? NextFragmentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_NextFragments_" data-uid="Songhay.Publications.Models.Fragment.NextFragments*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_NextFragments" data-uid="Songhay.Publications.Models.Fragment.NextFragments">
+  NextFragments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the next fragments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public ICollection&lt;Fragment&gt; NextFragments { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Songhay.Publications.Models.Fragment.html">Fragment</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_PrevFragment_" data-uid="Songhay.Publications.Models.Fragment.PrevFragment*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_PrevFragment" data-uid="Songhay.Publications.Models.Fragment.PrevFragment">
+  PrevFragment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the previous fragment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public Fragment? PrevFragment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Models.Fragment.html">Fragment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_PrevFragmentId_" data-uid="Songhay.Publications.Models.Fragment.PrevFragmentId*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_PrevFragmentId" data-uid="Songhay.Publications.Models.Fragment.PrevFragmentId">
+  PrevFragmentId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the previous fragment identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Previous Fragment ID&quot;, Order = 8)]
+public int? PrevFragmentId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_PrevFragments_" data-uid="Songhay.Publications.Models.Fragment.PrevFragments*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_PrevFragments" data-uid="Songhay.Publications.Models.Fragment.PrevFragments">
+  PrevFragments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the previous fragments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(AutoGenerateField = false)]
+public ICollection&lt;Fragment&gt; PrevFragments { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Songhay.Publications.Models.Fragment.html">Fragment</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Models_Fragment_SortOrdinal_" data-uid="Songhay.Publications.Models.Fragment.SortOrdinal*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_SortOrdinal" data-uid="Songhay.Publications.Models.Fragment.SortOrdinal">
+  SortOrdinal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the sort ordinal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Display(Name = &quot;Sort Ordinal&quot;, Order = 6)]
+public byte? SortOrdinal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Songhay_Publications_Models_Fragment_ToString_" data-uid="Songhay.Publications.Models.Fragment.ToString*"></a>
+
+  <h3 id="Songhay_Publications_Models_Fragment_ToString" data-uid="Songhay.Publications.Models.Fragment.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts to string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BryanWilhite/Songhay.Publications/blob/dev/version-8.0.0/Songhay.Publications/Models/Fragment.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

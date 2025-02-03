@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Activities
+  commentId: N:Songhay.Publications.Activities
+  id: Songhay.Publications.Activities
+  children:
+  - Songhay.Publications.Activities.MarkdownEntryActivity
+  - Songhay.Publications.Activities.SearchIndexActivity
+  langs:
+  - csharp
+  - vb
+  name: Songhay.Publications.Activities
+  nameWithType: Songhay.Publications.Activities
+  fullName: Songhay.Publications.Activities
+  type: Namespace
+  assemblies:
+  - Songhay.Publications
+references:
+- uid: Songhay.Publications.Activities.MarkdownEntryActivity
+  commentId: T:Songhay.Publications.Activities.MarkdownEntryActivity
+  href: Songhay.Publications.Activities.MarkdownEntryActivity.html
+  name: MarkdownEntryActivity
+  nameWithType: MarkdownEntryActivity
+  fullName: Songhay.Publications.Activities.MarkdownEntryActivity
+- uid: Songhay.Publications.Activities.SearchIndexActivity
+  commentId: T:Songhay.Publications.Activities.SearchIndexActivity
+  href: Songhay.Publications.Activities.SearchIndexActivity.html
+  name: SearchIndexActivity
+  nameWithType: SearchIndexActivity
+  fullName: Songhay.Publications.Activities.SearchIndexActivity
