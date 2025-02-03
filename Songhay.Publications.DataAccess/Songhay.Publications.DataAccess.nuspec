@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Songhay.Publications.DataAccess</id>
+    <version>8.0.0</version>
+    <description>SQLite-based Entity Framework data access for Songhay Studio Publications</description>
+    <authors>Bryan D. Wilhite</authors>
+    <title>Songhay Publications</title>
+    <owners>Bryan D. Wilhite</owners>
+    <projectUrl>https://github.com/BryanWilhite/Songhay.Publications/projects</projectUrl>
+    <icon>images\songhay_icon.png</icon>
+    <license type="file">LICENSE.md</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>SQLite-based Entity Framework data access for Songhay Studio Publications</summary>
+    <readme>README.md</readme>
+    <releaseNotes>https://github.com/users/BryanWilhite/projects/24/views/1</releaseNotes>
+    <copyright>(c) 2025 Bryan D. Wilhite</copyright>
+    <tags>EF Entity Framework SQLite</tags>
+    <repository type="git" url="https://github.com/BryanWilhite/Songhay.Publications"></repository>
+    <dependencies>
+      <group targetFramework=".NET8.0">
+        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="8.0.12" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\net8.0\Songhay.Publications*.dll" target="lib\net8.0" />
+    <file src="bin\Debug\net8.0\Songhay.Publications*.json" target="lib\net8.0" />
+    <file src="**\*.cs" exclude="**\obj\**" target="src" />
+    <file src="..\LICENSE.md" target="" />
+    <file src="..\README.md" target="" />
+    <file src="..\songhay_icon.png" target="images\" />
+  </files>
+</package>
