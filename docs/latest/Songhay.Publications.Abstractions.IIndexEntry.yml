@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IIndexEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IIndexEntry
     path: ../Songhay.Publications/Abstractions/IIndexEntry.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IIndexEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segments
     path: ../Songhay.Publications/Abstractions/IIndexEntry.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IIndexEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Documents
     path: ../Songhay.Publications/Abstractions/IIndexEntry.cs

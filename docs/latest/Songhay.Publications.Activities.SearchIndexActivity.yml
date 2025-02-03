@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Activities/SearchIndexActivity.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SearchIndexActivity
     path: ../Songhay.Publications/Activities/SearchIndexActivity.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Activities/SearchIndexActivity.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: .ctor
     path: ../Songhay.Publications/Activities/SearchIndexActivity.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Activities/SearchIndexActivity.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: StartAsync
     path: ../Songhay.Publications/Activities/SearchIndexActivity.cs

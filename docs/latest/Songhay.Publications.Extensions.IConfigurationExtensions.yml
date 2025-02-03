@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/IConfigurationExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IConfigurationExtensions
     path: ../Songhay.Publications/Extensions/IConfigurationExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/IConfigurationExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToPresentationAndSettingsInfo
     path: ../Songhay.Publications/Extensions/IConfigurationExtensions.cs

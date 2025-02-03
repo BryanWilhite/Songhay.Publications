@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownPresentationCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MarkdownPresentationCommands
     path: ../Songhay.Publications/Models/MarkdownPresentationCommands.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownPresentationCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CommandNameAddEntryExtract
     path: ../Songhay.Publications/Models/MarkdownPresentationCommands.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownPresentationCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CommandNameExpandUris
     path: ../Songhay.Publications/Models/MarkdownPresentationCommands.cs
@@ -114,7 +114,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownPresentationCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CommandNameGenerateEntry
     path: ../Songhay.Publications/Models/MarkdownPresentationCommands.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownPresentationCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CommandNamePublishEntry
     path: ../Songhay.Publications/Models/MarkdownPresentationCommands.cs

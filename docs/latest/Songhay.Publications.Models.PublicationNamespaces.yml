@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublicationNamespaces
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DaisyNcx
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DublinCore
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IdpfOpenPackagingFormat
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IdpfOpenPackagingStructure
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Xhtml
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationNamespaces.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Xml
     path: ../Songhay.Publications/Models/PublicationNamespaces.cs

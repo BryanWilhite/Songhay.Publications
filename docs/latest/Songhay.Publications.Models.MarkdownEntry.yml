@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MarkdownEntry
     path: ../Songhay.Publications/Models/MarkdownEntry.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NewLine
     path: ../Songhay.Publications/Models/MarkdownEntry.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EntryFileInfo
     path: ../Songhay.Publications/Models/MarkdownEntry.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FrontMatter
     path: ../Songhay.Publications/Models/MarkdownEntry.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/MarkdownEntry.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Content
     path: ../Songhay.Publications/Models/MarkdownEntry.cs

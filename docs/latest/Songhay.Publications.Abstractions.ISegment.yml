@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ISegment
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentId
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentName
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ParentSegmentId
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Abstractions/ISegment.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/ISegment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Abstractions/ISegment.cs

@@ -38,7 +38,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Fragment
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentId
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentDisplayName
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -401,7 +401,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentName
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -462,7 +462,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -512,7 +512,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsNext
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -562,7 +562,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsPrevious
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -612,7 +612,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsWrapper
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -662,7 +662,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Content
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -709,7 +709,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ItemText
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -804,7 +804,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -854,7 +854,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -904,7 +904,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -954,7 +954,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Document
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -999,7 +999,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragments
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -1044,7 +1044,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragment
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -1089,7 +1089,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragments
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -1134,7 +1134,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragment
     path: ../Songhay.Publications/Models/Fragment.cs
@@ -1179,7 +1179,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Fragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToString
     path: ../Songhay.Publications/Models/Fragment.cs

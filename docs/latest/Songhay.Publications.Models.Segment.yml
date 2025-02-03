@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segment
     path: ../Songhay.Publications/Models/Segment.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Models/Segment.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Models/Segment.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ParentSegmentId
     path: ../Songhay.Publications/Models/Segment.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentId
     path: ../Songhay.Publications/Models/Segment.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentName
     path: ../Songhay.Publications/Models/Segment.cs
@@ -330,7 +330,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Models/Segment.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/Segment.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/Segment.cs
@@ -480,7 +480,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/Segment.cs
@@ -530,7 +530,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Documents
     path: ../Songhay.Publications/Models/Segment.cs
@@ -575,7 +575,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segments
     path: ../Songhay.Publications/Models/Segment.cs
@@ -620,7 +620,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ParentSegment
     path: ../Songhay.Publications/Models/Segment.cs
@@ -665,7 +665,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/Segment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToString
     path: ../Songhay.Publications/Models/Segment.cs

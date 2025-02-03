@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationLinesUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublicationLinesUtility
     path: ../Songhay.Publications/PublicationLinesUtility.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationLinesUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ConvertToExtract
     path: ../Songhay.Publications/PublicationLinesUtility.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationLinesUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ConvertToLines
     path: ../Songhay.Publications/PublicationLinesUtility.cs

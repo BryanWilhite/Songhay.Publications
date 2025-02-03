@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IDocument
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentId
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Title
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentShortName
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FileName
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Path
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: TemplateId
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentId
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsRoot
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -356,7 +356,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Abstractions/IDocument.cs
@@ -418,7 +418,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IDocument.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Tag
     path: ../Songhay.Publications/Abstractions/IDocument.cs

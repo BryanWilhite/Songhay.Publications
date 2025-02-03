@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ResponsiveImage
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Description
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Key
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Source
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Candidates
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ResponsiveImage.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Sizes
     path: ../Songhay.Publications/Models/ResponsiveImage.cs

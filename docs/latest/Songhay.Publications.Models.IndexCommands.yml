@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IndexCommands
     path: ../Songhay.Publications/Models/IndexCommands.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexCommands.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CommandNameGenerateCompressed11TySearchIndex
     path: ../Songhay.Publications/Models/IndexCommands.cs
