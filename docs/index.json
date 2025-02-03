@@ -1,4 +1,9 @@
 {
+  "index.html": {
+    "href": "index.html",
+    "title": "SonghayCore API | Songhay.Publications.DataAccess API",
+    "keywords": "SonghayCore API view the latest documentation source repository"
+  },
   "latest/Songhay.Publications.Abstractions.IDocument.html": {
     "href": "latest/Songhay.Publications.Abstractions.IDocument.html",
     "title": "Interface IDocument | Songhay.Publications.DataAccess API",
