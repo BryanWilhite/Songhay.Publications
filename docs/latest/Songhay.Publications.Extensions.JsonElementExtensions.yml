@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: JsonElementExtensions
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetAddEntryExtractArg
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetCompressed11TyIndexArgs
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetExpandUrisArgs
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetFindChangeArgs
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetGenerateEntryArgs
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions.args.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetPublishEntryArgs
     path: ../Songhay.Publications/Extensions/JsonElementExtensions.args.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetPublicationCommand
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToBoxedValue
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToObject
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
@@ -436,7 +436,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs

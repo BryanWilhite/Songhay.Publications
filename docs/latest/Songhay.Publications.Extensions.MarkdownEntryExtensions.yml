@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MarkdownEntryExtensions
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DoNullCheck
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DoNullCheckForContent
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToExtract
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToFinalEdit
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMarkdownEntry
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToParagraphs
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Touch
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: With11TyExtract
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithContentHeader
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -433,7 +433,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithContentHeader
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -520,7 +520,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithNew11TyFrontMatter
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
@@ -570,7 +570,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithNewFrontMatter
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs

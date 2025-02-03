@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/CloneInitializers.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: CloneInitializers
     path: ../Songhay.Publications/Models/CloneInitializers.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/CloneInitializers.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Publications
     path: ../Songhay.Publications/Models/CloneInitializers.cs

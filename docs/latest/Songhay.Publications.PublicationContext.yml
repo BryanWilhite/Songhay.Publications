@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublicationContext
     path: ../Songhay.Publications/PublicationContext.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: .ctor
     path: ../Songhay.Publications/PublicationContext.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GenerateChapters
     path: ../Songhay.Publications/PublicationContext.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GenerateMeta
     path: ../Songhay.Publications/PublicationContext.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteBiography
     path: ../Songhay.Publications/PublicationContext.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteCopyright
     path: ../Songhay.Publications/PublicationContext.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteDedication
     path: ../Songhay.Publications/PublicationContext.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteTitle
     path: ../Songhay.Publications/PublicationContext.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/PublicationContext.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteToc
     path: ../Songhay.Publications/PublicationContext.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IndexKeywordGroup
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Id
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Name
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/IndexKeywordGroup.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs

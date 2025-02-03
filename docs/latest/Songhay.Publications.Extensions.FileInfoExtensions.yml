@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FileInfoExtensions
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: LookLikeJsonFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: LookLikeMarkdownEntryWithFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: LookLikeYamlFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToFrontMatterLinesAndContentLines
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToNewIDocument
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToIDocumentAndAnyContent
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToJsonObjectAndAnyContent
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToJsonString
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYamlString
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteNewPublicationEntryWithJsonFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
@@ -500,7 +500,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/FileInfoExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteNewPublicationEntryWithYamlFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications.DataAccess/EntityTypeConfigurations/ImageCandidateEntityTypeConfiguration.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ImageCandidateEntityTypeConfiguration
     path: ../Songhay.Publications.DataAccess/EntityTypeConfigurations/ImageCandidateEntityTypeConfiguration.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Songhay.Publications.DataAccess/EntityTypeConfigurations/ImageCandidateEntityTypeConfiguration.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Configure
     path: ../Songhay.Publications.DataAccess/EntityTypeConfigurations/ImageCandidateEntityTypeConfiguration.cs

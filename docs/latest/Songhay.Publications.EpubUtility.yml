@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/EpubUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubUtility
     path: ../Songhay.Publications/EpubUtility.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/EpubUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetUnicodeWithBomEncoding
     path: ../Songhay.Publications/EpubUtility.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/EpubUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SaveAsUnicodeWithBom
     path: ../Songhay.Publications/EpubUtility.cs

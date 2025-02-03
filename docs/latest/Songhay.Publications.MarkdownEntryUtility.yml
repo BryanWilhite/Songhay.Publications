@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/MarkdownEntryUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MarkdownEntryUtility
     path: ../Songhay.Publications/MarkdownEntryUtility.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/MarkdownEntryUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GenerateEntryFor11Ty
     path: ../Songhay.Publications/MarkdownEntryUtility.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/MarkdownEntryUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GenerateEntryFor11Ty
     path: ../Songhay.Publications/MarkdownEntryUtility.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/MarkdownEntryUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublishEntryFor11Ty
     path: ../Songhay.Publications/MarkdownEntryUtility.cs
@@ -202,7 +202,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/MarkdownEntryUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublishEntryFor11Ty
     path: ../Songhay.Publications/MarkdownEntryUtility.cs

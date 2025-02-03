@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublicationFiles
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DaisyConsortiumNcxToc
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubFileBiography
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubFileCopyright
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubFileDedication
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubFileTitle
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubFileToc
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubMarkdownBiography
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubMarkdownDedication
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubMetadata
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubTemplateBiography
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -366,7 +366,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubTemplateChapter
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -395,7 +395,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EpubTemplateDedication
     path: ../Songhay.Publications/Models/PublicationFiles.cs
@@ -424,7 +424,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/PublicationFiles.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IdpfcOpfManifest
     path: ../Songhay.Publications/Models/PublicationFiles.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/PublicationContextExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PublicationContextExtensions
     path: ../Songhay.Publications/Extensions/PublicationContextExtensions.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/PublicationContextExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GenerateEpub
     path: ../Songhay.Publications/Extensions/PublicationContextExtensions.cs

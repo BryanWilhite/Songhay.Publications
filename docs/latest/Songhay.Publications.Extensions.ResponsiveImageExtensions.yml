@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ResponsiveImageExtensions
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToCssMediaAtRules
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToImgMarkup
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToSizesSetAttribute
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToSrcSetAttribute
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: JsonObjectExtensions
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithExtract
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithPropertiesRenamed
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithoutConventionalDocumentProperties
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/JsonObjectExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithoutNonNullableDocumentProperties
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs

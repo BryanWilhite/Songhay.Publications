@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IFragment
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentId
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentName
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentDisplayName
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Content
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentId
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragmentId
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -289,7 +289,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragmentId
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -320,7 +320,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsPrevious
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsNext
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsWrapper
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -413,7 +413,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Abstractions/IFragment.cs
@@ -444,7 +444,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Abstractions/IFragment.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Abstractions/IFragment.cs

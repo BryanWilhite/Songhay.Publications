@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/DaisyConsortiumNcx.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DaisyConsortiumNcx
     path: ../Songhay.Publications/Models/DaisyConsortiumNcx.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/DaisyConsortiumNcx.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: .ctor
     path: ../Songhay.Publications/Models/DaisyConsortiumNcx.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/DaisyConsortiumNcx.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SetPublicationMeta
     path: ../Songhay.Publications/Models/DaisyConsortiumNcx.cs

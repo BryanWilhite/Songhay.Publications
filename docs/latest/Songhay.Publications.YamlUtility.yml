@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/YamlUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: YamlUtility
     path: ../Songhay.Publications/YamlUtility.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/YamlUtility.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DeserializeYaml
     path: ../Songhay.Publications/YamlUtility.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ImageSize.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ImageSize
     path: ../Songhay.Publications/Models/ImageSize.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ImageSize.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MediaCondition
     path: ../Songhay.Publications/Models/ImageSize.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Models/ImageSize.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: LayoutWidth
     path: ../Songhay.Publications/Models/ImageSize.cs

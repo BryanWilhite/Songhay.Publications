@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/IDictionaryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IDictionaryExtensions
     path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/IDictionaryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToJsonString
     path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Songhay.Publications/Extensions/IDictionaryExtensions.cs
-      branch: dev/version-8.0.0
+      branch: main
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToTaggedDocument
     path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
