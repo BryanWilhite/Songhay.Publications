@@ -161,7 +161,7 @@ public class MarkdownEntryExtensionsTests
     public void WithNew11tyFrontMatterAndContentHeaderAndTouch_Test()
     {
         //arrange
-        string title = "Hello World!";
+        const string title = "Hello World!";
         DateTime inceptDate = DateTime.Now.AddSeconds(-3);
         var entry = new MarkdownEntry()
             .WithNew11TyFrontMatter(title, inceptDate, "/path/to/entry/", "entry_tag")
@@ -184,5 +184,5 @@ public class MarkdownEntryExtensionsTests
         Assert.NotNull(v);
     }
 
-    readonly ITestOutputHelper _testOutputHelper;
+    private readonly ITestOutputHelper _testOutputHelper;
 }

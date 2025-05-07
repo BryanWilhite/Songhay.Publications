@@ -157,9 +157,7 @@ public static class MarkdownEntryExtensions
         {
             i.ToReferenceTypeValueOrThrow();
 
-            const string propertyName = "modificationDate";
-
-            i.FrontMatter[propertyName] = date.ToIso8601String();
+            i.FrontMatter["modificationDate"] = JsonValue.Create(date);
         });
     }
 
