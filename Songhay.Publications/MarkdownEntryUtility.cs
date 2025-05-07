@@ -13,7 +13,7 @@ public static class MarkdownEntryUtility
     /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/>.</param>
     public static MarkdownEntry GenerateEntryFor11Ty(string entryRoot, string title)
     {
-        var tag = new { extract = string.Empty }.ToJsonNode()?.ToString();
+        var tag = JsonNodeUtility.ConvertToJsonNode(new { extract = string.Empty })?.ToString();
 
         return GenerateEntryFor11Ty(entryRoot, title, DateTime.Now, "./entry/", tag);
     }

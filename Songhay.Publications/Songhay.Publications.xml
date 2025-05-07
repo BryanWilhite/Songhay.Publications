@@ -844,52 +844,12 @@
              See <see cref="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)"/>.
              </remarks>
         </member>
-        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)">
-            <summary>
-            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
-            to <c>TObject</c>.
-            </summary>
-            <param name="element">the specified <see cref="T:System.Text.Json.JsonElement"/></param>
-            <typeparam name="TObject">the type to convert to</typeparam>
-            <returns></returns>
-        </member>
         <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)">
             <summary>
             Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
             to a YAML <see cref="T:System.String"/>.
             </summary>
             <param name="element">the <see cref="T:System.Text.Json.JsonElement"/></param>
-        </member>
-        <member name="T:Songhay.Publications.Extensions.JsonNodeExtensions">
-            <summary>
-            Extensions of <see cref="T:System.Text.Json.Nodes.JsonNode"/>
-            </summary>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.CopyNode(System.Text.Json.Nodes.JsonNode)">
-            <summary>
-            Copies the specified <see cref="T:System.Text.Json.Nodes.JsonNode"/>
-            by calling <see cref="M:System.Text.Json.Nodes.JsonNode.ToJsonString(System.Text.Json.JsonSerializerOptions)"/>
-            </summary>
-            <param name="node">The node.</param>
-            <remarks>
-            This method is not efficient. For details, see https://stackoverflow.com/a/71000222/22944.
-            </remarks>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.HasProperty(System.Text.Json.Nodes.JsonNode,System.String)">
-            <summary>
-            Returns <c>false</c> when the specified property name does not exist.
-            </summary>
-            <param name="node">the <see cref="T:System.Text.Json.Nodes.JsonNode"/></param>
-            <param name="propertyName">the property name</param>
-            <returns></returns>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)">
-            <summary>
-            Converts the specified <see cref="T:System.Object"/>
-            to a <see cref="T:System.Text.Json.Nodes.JsonNode"/>.
-            </summary>
-            <param name="data">any <see cref="T:System.Object"/></param>
-            <returns></returns>
         </member>
         <member name="T:Songhay.Publications.Extensions.JsonObjectExtensions">
             <summary>
@@ -913,15 +873,6 @@
             <param name="contentLines">the collection of content lines</param>
             <param name="extractLength">the length of the extract</param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
-        </member>
-        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger,System.ValueTuple{System.String,System.String}[])">
-            <summary>
-            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
-            with its properties renamed.
-            </summary>
-            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
-            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
-            <param name="operations">specifies which <see cref="T:System.Text.Json.Nodes.JsonObject"/> properties to rename</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
             <summary>

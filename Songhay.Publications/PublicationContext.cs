@@ -196,7 +196,7 @@ public class PublicationContext
         return (publicationMeta, chapterSet);
     }
 
-    internal (DirectoryInfo csxRootInfo, string publicationRoot) GetCsxRootInfoAndPublicationRoot(string csxRoot)
+    internal static (DirectoryInfo csxRootInfo, string publicationRoot) GetCsxRootInfoAndPublicationRoot(string csxRoot)
     {
         var csxRootInfo = new DirectoryInfo(csxRoot);
         var publicationRoot = csxRootInfo.Parent.ToReferenceTypeValueOrThrow().FullName;
@@ -204,14 +204,14 @@ public class PublicationContext
         return (csxRootInfo, publicationRoot);
     }
 
-    readonly Dictionary<string, string> _chapterSet;
-    readonly DirectoryInfo _csxRootInfo;
-    readonly JsonElement _publicationMeta;
-    readonly string _epubOebpsDirectory;
-    readonly string _epubTextDirectory;
-    readonly string _isbn13;
-    readonly string _markdownDirectory;
-    readonly string _publicationRoot;
-    readonly XDocument _chapterTemplate;
-    readonly ILogger<PublicationContext>? _logger;
+    private readonly Dictionary<string, string> _chapterSet;
+    private readonly DirectoryInfo _csxRootInfo;
+    private readonly JsonElement _publicationMeta;
+    private readonly string _epubOebpsDirectory;
+    private readonly string _epubTextDirectory;
+    private readonly string _isbn13;
+    private readonly string _markdownDirectory;
+    private readonly string _publicationRoot;
+    private readonly XDocument _chapterTemplate;
+    private readonly ILogger<PublicationContext>? _logger;
 }

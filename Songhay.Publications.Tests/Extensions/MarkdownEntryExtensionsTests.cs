@@ -126,7 +126,7 @@ public class MarkdownEntryExtensionsTests
             .WithEdit(i => i.Content = string.Concat(i.Content, content)).With11TyExtract(length);
 
         JsonNode? jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>() ?? "null");
-        Assert.False(jO.GetJsonValueKind() == JsonValueKind.Null);
+        Assert.NotEqual(JsonValueKind.Null, jO?.GetValueKind());
 
         string? extract = jO?["extract"]?.GetValue<string>();
 
@@ -149,7 +149,7 @@ public class MarkdownEntryExtensionsTests
             .With11TyExtract(expectedLength);
 
         JsonNode? jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>() ?? "null");
-        Assert.False(jO.GetJsonValueKind() == JsonValueKind.Null);
+        Assert.NotEqual(JsonValueKind.Null, jO?.GetValueKind());
 
         string? extract = jO?["extract"]?.GetValue<string>();
 

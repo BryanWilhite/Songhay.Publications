@@ -158,23 +158,24 @@ public static class IDocumentExtensions
     /// <param name="entryPath">the entry path</param>
     /// <param name="content">the entry content</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static MarkdownEntry? ToMarkdownEntry(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    public static MarkdownEntry? ToMarkdownEntry(this IDocument? document, string? entryPath, string? content, ILogger logger)
     {
         if (document == null)
         {
-            logger?.LogError("Error: the expected document is not here.");
+            logger.LogError("Error: the expected document is not here.");
 
             return null;
         }
 
         if (string.IsNullOrWhiteSpace(entryPath))
         {
-            logger?.LogError("Error: the expected entry path is not here.");
+            logger.LogError("Error: the expected entry path is not here.");
 
             return null;
         }
 
-        JsonObject? jO = document.ToJsonNode()?.AsObject().WithoutConventionalDocumentProperties(logger);
+        JsonObject? jO = JsonNodeUtility.ConvertToJsonNode(document)?.ToJsonObject(logger).WithoutConventionalDocumentProperties(logger);
+
         if (jO == null) return null;
 
         content ??= $@"
@@ -240,7 +241,7 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="document">the <see cref="IDocument"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ToYaml(this IDocument? document, ILogger? logger) => document.ToYaml(contentLines: null, logger);
+    public static string? ToYaml(this IDocument? document, ILogger logger) => document.ToYaml(contentLines: null, logger);
 
     /// <summary>
     /// Converts the specified <see cref="IDocument"/>
@@ -249,7 +250,7 @@ public static class IDocumentExtensions
     /// <param name="document">the <see cref="IDocument"/></param>
     /// <param name="contentLines">the collection of content lines</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ToYaml(this IDocument? document, IReadOnlyCollection<string>? contentLines, ILogger? logger)
+    public static string? ToYaml(this IDocument? document, IReadOnlyCollection<string>? contentLines, ILogger logger)
     {
         if (document == null) return null;
 
@@ -258,11 +259,11 @@ public static class IDocumentExtensions
             .WithAttributeOverride<IDocument>(d => d.Tag!, new YamlIgnoreAttribute())
             .Build();
 
-        logger?.LogInformation("Serializing to YAML (ignoring the {Name} property...", nameof(IDocument.Tag));
+        logger.LogInformation("Serializing to YAML (ignoring the {Name} property...", nameof(IDocument.Tag));
 
         string yaml = serializer.Serialize(document, typeof(IDocument));
 
-        logger?.LogInformation("Trying to parse the {Name} property as JSON (`{Json}`)...", nameof(IDocument.Tag), document.Tag.Truncate(32));
+        logger.LogInformation("Trying to parse the {Name} property as JSON (`{Json}`)...", nameof(IDocument.Tag), document.Tag.Truncate(32));
 
         JsonObject? jO = null;
         bool parsedJsonObject = false;
@@ -276,7 +277,7 @@ public static class IDocumentExtensions
             }
             catch (Exception e)
             {
-                logger?.LogError("Error: JSON parsing failed! Message: `{Message}` Returning...", e.Message);
+                logger.LogError("Error: JSON parsing failed! Message: `{Message}` Returning...", e.Message);
             }
         }
 
@@ -291,7 +292,7 @@ public static class IDocumentExtensions
 
         if (!parsedJsonObject && !string.IsNullOrWhiteSpace(document.Tag))
         {
-            logger?.LogInformation("The {Name} property is probably not JSON. Content will be treated as YAML tags..", nameof(IDocument.Tag));
+            logger.LogInformation("The {Name} property is probably not JSON. Content will be treated as YAML tags..", nameof(IDocument.Tag));
             string[] tags = document.Tag.Split(',', ';', '|', ' ');
             yaml = string.Concat(yaml, "tags: [ ", string.Join(',', tags), " ]");
         }
@@ -330,13 +331,13 @@ public static class IDocumentExtensions
     /// <param name="entryPath">the entry path</param>
     /// <param name="content">the entry content</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static void WritePublicationEntryWithJsonFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    public static void WritePublicationEntryWithJsonFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger logger)
     {
         MarkdownEntry? entry = document.ToMarkdownEntry(entryPath, content, logger);
 
         if (entry?.EntryFileInfo == null) return;
 
-        logger?.LogInformation("Writing to `{Path}`...", entryPath);
+        logger.LogInformation("Writing to `{Path}`...", entryPath);
 
         var options = new JsonSerializerOptions
         {
@@ -375,23 +376,23 @@ public static class IDocumentExtensions
     /// <param name="entryPath">the entry path</param>
     /// <param name="content">the entry content</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static void WritePublicationEntryWithYamlFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    public static void WritePublicationEntryWithYamlFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger logger)
     {
         if (document == null)
         {
-            logger?.LogError("Error: the expected document is not here.");
+            logger.LogError("Error: the expected document is not here.");
 
             return;
         }
 
         if (string.IsNullOrWhiteSpace(entryPath))
         {
-            logger?.LogError("Error: the expected entry path is not here.");
+            logger.LogError("Error: the expected entry path is not here.");
 
             return;
         }
 
-        logger?.LogInformation("Writing to `{Path}`...", entryPath);
+        logger.LogInformation("Writing to `{Path}`...", entryPath);
 
         string yaml = document.ToYaml(PublicationLinesUtility.ConvertToLines(content), logger) ?? string.Empty;
         string frontMatter = $@"

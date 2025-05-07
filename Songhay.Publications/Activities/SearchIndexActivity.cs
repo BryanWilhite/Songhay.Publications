@@ -64,21 +64,25 @@ public class SearchIndexActivity : IActivityTask
 
     internal static FileInfo[] GenerateSearchIndexFrom11TyEntries(DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName, int partitionSize)
     {
-        if (entryRootInfo == null) throw new ArgumentNullException(nameof(entryRootInfo));
-        if (indexRootInfo == null) throw new ArgumentNullException(nameof(indexRootInfo));
-        if (string.IsNullOrEmpty(indexFileName)) throw new ArgumentNullException(nameof(indexFileName));
+        ArgumentNullException.ThrowIfNull(entryRootInfo);
+        ArgumentNullException.ThrowIfNull(indexRootInfo);
+        indexFileName.ThrowWhenNullOrWhiteSpace();
 
         var frontMatterDocumentCollections = entryRootInfo
             .GetFiles("*.md", SearchOption.AllDirectories)
             .Select(fileInfo => fileInfo.ToMarkdownEntry().FrontMatter)
-            .Select(jO => new
+            .Select(jO =>
             {
-                extract = JsonNode.Parse(jO["tag"]?.GetValue<string>() ?? @"{ ""extract"": ""[empty]"" }")?.AsObject()["extract"]?.GetValue<string>(),
-                clientId = jO["clientId"]?.GetValue<string>() ?? "[empty]",
-                inceptDate = jO["date"]?.GetValue<string>() ?? string.Empty,
-                modificationDate = jO["modificationDate"]?.GetValue<string>() ?? string.Empty,
-                title = jO["title"]?.GetValue<string>() ?? string.Empty
-            }.ToJsonNode().ToReferenceTypeValueOrThrow())
+                JsonNode? node = JsonNodeUtility.ConvertToJsonNode(new {
+                    extract = JsonNode.Parse(jO["tag"]?.GetValue<string>() ?? @"{ ""extract"": ""[empty]"" }")?.AsObject()["extract"]?.GetValue<string>(),
+                    clientId = jO["clientId"]?.GetValue<string>() ?? "[empty]",
+                    inceptDate = jO["date"]?.GetValue<string>() ?? string.Empty,
+                    modificationDate = jO["modificationDate"]?.GetValue<string>() ?? string.Empty,
+                    title = jO["title"]?.GetValue<string>() ?? string.Empty
+                });
+
+                return node.ToReferenceTypeValueOrThrow();
+            })
             .OrderByDescending(o => o["clientId"]?.GetValue<string>())
             .Partition(partitionSize);
 
@@ -128,9 +132,9 @@ public class SearchIndexActivity : IActivityTask
         return (presentationInfo, jSettings);
     }
 
-    DirectoryInfo? _presentationInfo;
-    JsonElement _jSettings;
+    private DirectoryInfo? _presentationInfo;
+    private JsonElement _jSettings;
 
-    readonly IConfiguration _configuration;
-    readonly ILogger<SearchIndexActivity> _logger;
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<SearchIndexActivity> _logger;
 }

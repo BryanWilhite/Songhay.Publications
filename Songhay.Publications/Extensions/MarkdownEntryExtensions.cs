@@ -107,8 +107,7 @@ public static class MarkdownEntryExtensions
             .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
         var frontMatter =
-            new {error = "front matter was not found", file = entry.FullName}
-                .ToJsonNode()
+            JsonNodeUtility.ConvertToJsonNode(new { error = "front matter was not found", file = entry.FullName })
                 .ToReferenceTypeValueOrThrow()
                 .AsObject();
 
@@ -178,9 +177,9 @@ public static class MarkdownEntryExtensions
             {
                 const string extractPropertyName = "extract";
 
-                var jO = tag.TrimStart().StartsWith("{") ?
+                JsonNode? jO = tag.TrimStart().StartsWith('{') ?
                     JsonNode.Parse(tag) :
-                    new { legacy = tag }.ToJsonNode();
+                    JsonNodeUtility.ConvertToJsonNode(new { legacy = tag });
 
                 if (!jO.HasProperty(extractPropertyName))
                 {
@@ -199,7 +198,7 @@ public static class MarkdownEntryExtensions
             var extract = i.ToExtract(length);
 
             i.ToReferenceTypeValueOrThrow().FrontMatter[tagPropertyName] = string.IsNullOrWhiteSpace(tagString) ?
-                    new { extract }.ToJsonNode()?.ToString()
+                    JsonNodeUtility.ConvertToJsonNode(new { extract })?.ToString()
                     :
                     UpdateExtractAndReturnTag(tagString, extract)
                 ;
@@ -303,7 +302,7 @@ public static class MarkdownEntryExtensions
             tag
         };
 
-        entry.FrontMatter = fm.ToJsonNode().ToReferenceTypeValueOrThrow().AsObject();
+        entry.FrontMatter = JsonNodeUtility.ConvertToJsonNode(fm).ToReferenceTypeValueOrThrow().AsObject();
 
         return entry;
     }

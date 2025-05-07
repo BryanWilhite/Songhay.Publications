@@ -55,29 +55,6 @@ public static class JsonObjectExtensions
 
     /// <summary>
     /// Returns the specified <see cref="JsonObject"/>
-    /// with its properties renamed.
-    /// </summary>
-    /// <param name="documentData">the <see cref="JsonObject"/></param>
-    /// <param name="logger">the <see cref="ILogger"/></param>
-    /// <param name="operations">specifies which <see cref="JsonObject"/> properties to rename</param>
-    public static JsonObject? WithPropertiesRenamed(this JsonObject? documentData, ILogger? logger, params (string oldName, string newName)[] operations)
-    {
-        if (documentData == null) return documentData;
-        foreach (var (oldName, newName) in operations)
-        {
-            if(!documentData.HasProperty(oldName)) continue;
-
-            logger?.LogWarning("Warning: renaming `{OldName}` property to `{NewName}`...", oldName, newName);
-
-            documentData[newName] = documentData[oldName].CopyNode();
-            documentData.Remove(oldName);
-        }
-
-        return documentData;
-    }
-
-    /// <summary>
-    /// Returns the specified <see cref="JsonObject"/>
     /// without the properties that should display in front matter.
     /// </summary>
     /// <param name="documentData">the <see cref="JsonObject"/></param>
