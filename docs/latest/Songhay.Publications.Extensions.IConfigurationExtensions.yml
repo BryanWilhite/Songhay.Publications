@@ -47,9 +47,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToPresentationAndSettingsInfo(IConfiguration?, ILogger?)
-  nameWithType: IConfigurationExtensions.ToPresentationAndSettingsInfo(IConfiguration?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToPresentationAndSettingsInfo(IConfiguration?, ILogger)
+  nameWithType: IConfigurationExtensions.ToPresentationAndSettingsInfo(IConfiguration?, ILogger)
+  fullName: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -65,7 +65,7 @@ items:
   summary: Converts <xref href="Microsoft.Extensions.Configuration.IConfiguration" data-throw-if-not-resolved="false"></xref> to Presentation <xref href="System.IO.DirectoryInfo" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public static (DirectoryInfo presentationInfo, FileInfo settingsInfo) ToPresentationAndSettingsInfo(this IConfiguration? configuration, ILogger? logger)
+    content: public static (DirectoryInfo presentationInfo, FileInfo settingsInfo) ToPresentationAndSettingsInfo(this IConfiguration? configuration, ILogger logger)
     parameters:
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration

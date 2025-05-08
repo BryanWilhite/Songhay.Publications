@@ -76,7 +76,7 @@ items:
     parameters:
     - id: preElement
       type: System.Xml.Linq.XElement
-      description: The <code>pre</code><xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref>.
+      description: The <code>pre</code> <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Shared Sub ConvertPreBlockToHtml(preElement As XElement)
   overload: Songhay.Publications.MarkdownUtility.ConvertPreBlockToHtml*
 - uid: Songhay.Publications.MarkdownUtility.GetFourSpaces
@@ -213,7 +213,7 @@ items:
     parameters:
     - id: preElement
       type: System.Xml.Linq.XElement
-      description: The <code>pre</code><xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref>.
+      description: The <code>pre</code> <xref href="System.Xml.Linq.XElement" data-throw-if-not-resolved="false"></xref>.
     return:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public Shared Function GetPreLines(preElement As XElement) As List(Of String)

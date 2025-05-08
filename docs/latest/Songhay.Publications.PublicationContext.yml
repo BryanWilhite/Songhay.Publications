@@ -52,7 +52,6 @@ items:
   - System.Object.ToString
   extensionMethods:
   - Songhay.Publications.PublicationContext.Songhay.Publications.Extensions.PublicationContextExtensions.GenerateEpub
-  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
 - uid: Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
   commentId: M:Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
   id: '#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})'
@@ -60,9 +59,9 @@ items:
   langs:
   - csharp
   - vb
-  name: PublicationContext(string, ILogger<PublicationContext>?)
-  nameWithType: PublicationContext.PublicationContext(string, ILogger<PublicationContext>?)
-  fullName: Songhay.Publications.PublicationContext.PublicationContext(string, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>?)
+  name: PublicationContext(string, ILogger<PublicationContext>)
+  nameWithType: PublicationContext.PublicationContext(string, ILogger<PublicationContext>)
+  fullName: Songhay.Publications.PublicationContext.PublicationContext(string, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>)
   type: Constructor
   source:
     remote:
@@ -78,7 +77,7 @@ items:
   summary: Initializes a new instance of the <xref href="Songhay.Publications.PublicationContext" data-throw-if-not-resolved="false"></xref> class.
   example: []
   syntax:
-    content: public PublicationContext(string templateRoot, ILogger<PublicationContext>? logger)
+    content: public PublicationContext(string templateRoot, ILogger<PublicationContext> logger)
     parameters:
     - id: templateRoot
       type: System.String
@@ -572,37 +571,6 @@ references:
     name: PublicationContext
     href: Songhay.Publications.PublicationContext.html
   - name: )
-- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
-  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  parent: Songhay.Publications.Extensions.JsonNodeExtensions
-  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  name: ToJsonNode(object)
-  nameWithType: JsonNodeExtensions.ToJsonNode(object)
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
-  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
-  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
-  name.vb: ToJsonNode(Object)
-  spec.csharp:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -641,43 +609,6 @@ references:
   name: PublicationContextExtensions
   nameWithType: PublicationContextExtensions
   fullName: Songhay.Publications.Extensions.PublicationContextExtensions
-- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  isExternal: true
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  name: ToJsonNode(object)
-  nameWithType: JsonNodeExtensions.ToJsonNode(object)
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
-  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
-  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
-  name.vb: ToJsonNode(Object)
-  spec.csharp:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: Songhay.Publications.Extensions.JsonNodeExtensions
-  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
-  parent: Songhay.Publications.Extensions
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
-  name: JsonNodeExtensions
-  nameWithType: JsonNodeExtensions
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
   href: Songhay.html

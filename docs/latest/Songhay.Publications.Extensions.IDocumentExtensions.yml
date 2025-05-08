@@ -382,9 +382,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToMarkdownEntry(IDocument?, string?, string?, ILogger?)
-  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToMarkdownEntry(IDocument?, string?, string?, ILogger)
+  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -400,7 +400,7 @@ items:
   summary: Converts the specified <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref> to <xref href="Songhay.Publications.Models.MarkdownEntry" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public static MarkdownEntry? ToMarkdownEntry(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    content: public static MarkdownEntry? ToMarkdownEntry(this IDocument? document, string? entryPath, string? content, ILogger logger)
     parameters:
     - id: document
       type: Songhay.Publications.Abstractions.IDocument
@@ -440,7 +440,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 195
+    startLine: 196
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -478,7 +478,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 203
+    startLine: 204
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -519,7 +519,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToValidationResult
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 225
+    startLine: 226
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -546,9 +546,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToYaml(IDocument?, ILogger?)
-  nameWithType: IDocumentExtensions.ToYaml(IDocument?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToYaml(IDocument?, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -557,7 +557,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 242
+    startLine: 244
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -567,7 +567,7 @@ items:
     to well-formed YAML.
   example: []
   syntax:
-    content: public static string? ToYaml(this IDocument? document, ILogger? logger)
+    content: public static string? ToYaml(this IDocument? document, ILogger logger)
     parameters:
     - id: document
       type: Songhay.Publications.Abstractions.IDocument
@@ -590,9 +590,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: IDocumentExtensions.ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -601,7 +601,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 251
+    startLine: 253
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -611,7 +611,7 @@ items:
     to well-formed YAML.
   example: []
   syntax:
-    content: public static string? ToYaml(this IDocument? document, IReadOnlyCollection<string>? contentLines, ILogger? logger)
+    content: public static string? ToYaml(this IDocument? document, IReadOnlyCollection<string>? contentLines, ILogger logger)
     parameters:
     - id: document
       type: Songhay.Publications.Abstractions.IDocument
@@ -648,7 +648,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithDefaults
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 305
+    startLine: 307
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -686,7 +686,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 318
+    startLine: 320
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -719,9 +719,9 @@ items:
   langs:
   - csharp
   - vb
-  name: WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger?)
-  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -730,14 +730,14 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithJsonFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 332
+    startLine: 334
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
   summary: Writes an entry with JSON front matter to the specified entry path.
   example: []
   syntax:
-    content: public static void WritePublicationEntryWithJsonFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    content: public static void WritePublicationEntryWithJsonFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger logger)
     parameters:
     - id: document
       type: Songhay.Publications.Abstractions.IDocument
@@ -764,9 +764,9 @@ items:
   langs:
   - csharp
   - vb
-  name: WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger?)
-  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -775,14 +775,14 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithYamlFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 377
+    startLine: 385
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
   summary: Writes an entry with YAML front matter to the specified entry path.
   example: []
   syntax:
-    content: public static void WritePublicationEntryWithYamlFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger? logger)
+    content: public static void WritePublicationEntryWithYamlFrontMatter(this IDocument? document, string? entryPath, string? content, ILogger logger)
     parameters:
     - id: document
       type: Songhay.Publications.Abstractions.IDocument

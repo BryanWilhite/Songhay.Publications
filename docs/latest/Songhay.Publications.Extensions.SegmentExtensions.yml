@@ -70,7 +70,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Clone
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 20
+    startLine: 13
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -108,7 +108,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetSegmentByPredicate
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 28
+    startLine: 21
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -152,7 +152,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: HasDocuments
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 44
+    startLine: 35
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -193,7 +193,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SetDefaults
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 61
+    startLine: 48
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -229,7 +229,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToDisplayText
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 73
+    startLine: 60
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -267,7 +267,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToDisplayText
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 80
+    startLine: 67
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -308,7 +308,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 123
+    startLine: 110
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -346,7 +346,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 131
+    startLine: 118
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -387,7 +387,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToPublicationIndexEntries
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 152
+    startLine: 139
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -425,7 +425,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToPublicationIndexEntry
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 163
+    startLine: 150
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -463,7 +463,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToValidationResult
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 183
+    startLine: 170
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -501,7 +501,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithDefaults
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 198
+    startLine: 185
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -539,7 +539,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 211
+    startLine: 198
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

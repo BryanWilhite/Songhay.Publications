@@ -5,7 +5,6 @@ items:
   id: PublicationAppScalars
   parent: Songhay.Publications.Models
   children:
-  - Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
   - Songhay.Publications.Models.PublicationAppScalars.FrontMatterFence
   - Songhay.Publications.Models.PublicationAppScalars.ValidationMessageRequired
   langs:
@@ -41,35 +40,6 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  commentId: F:Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  id: ConventionalSettingsFile
-  parent: Songhay.Publications.Models.PublicationAppScalars
-  langs:
-  - csharp
-  - vb
-  name: ConventionalSettingsFile
-  nameWithType: PublicationAppScalars.ConventionalSettingsFile
-  fullName: Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  type: Field
-  source:
-    remote:
-      path: Songhay.Publications/Models/PublicationAppScalars.cs
-      branch: main
-      repo: git@github.com:BryanWilhite/Songhay.Publications.git
-    id: ConventionalSettingsFile
-    path: ../Songhay.Publications/Models/PublicationAppScalars.cs
-    startLine: 10
-  assemblies:
-  - Songhay.Publications
-  namespace: Songhay.Publications.Models
-  summary: The conventional settings file
-  example: []
-  syntax:
-    content: public const string ConventionalSettingsFile = "app-settings.songhay-system.json"
-    return:
-      type: System.String
-    content.vb: Public Const ConventionalSettingsFile As String = "app-settings.songhay-system.json"
 - uid: Songhay.Publications.Models.PublicationAppScalars.FrontMatterFence
   commentId: F:Songhay.Publications.Models.PublicationAppScalars.FrontMatterFence
   id: FrontMatterFence
@@ -88,7 +58,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FrontMatterFence
     path: ../Songhay.Publications/Models/PublicationAppScalars.cs
-    startLine: 15
+    startLine: 10
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -117,7 +87,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ValidationMessageRequired
     path: ../Songhay.Publications/Models/PublicationAppScalars.cs
-    startLine: 20
+    startLine: 15
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

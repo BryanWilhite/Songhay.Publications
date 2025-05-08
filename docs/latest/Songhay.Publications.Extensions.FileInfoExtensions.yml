@@ -57,9 +57,9 @@ items:
   langs:
   - csharp
   - vb
-  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -75,7 +75,7 @@ items:
   summary: Return <code>true</code> when the specified collection of lines look like JSON
   example: []
   syntax:
-    content: public static bool LookLikeJsonFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    content: public static bool LookLikeJsonFrontMatter(this IReadOnlyCollection<string>? lines, ILogger logger)
     parameters:
     - id: lines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}
@@ -98,9 +98,9 @@ items:
   langs:
   - csharp
   - vb
-  name: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -116,7 +116,7 @@ items:
   summary: Return <code>true</code> when the specified collection of lines look like <xref href="Songhay.Publications.Models.MarkdownEntry.Content" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public static bool LookLikeMarkdownEntryWithFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    content: public static bool LookLikeMarkdownEntryWithFrontMatter(this IReadOnlyCollection<string>? lines, ILogger logger)
     parameters:
     - id: lines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}
@@ -139,9 +139,9 @@ items:
   langs:
   - csharp
   - vb
-  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -157,7 +157,7 @@ items:
   summary: Return <code>true</code> when the specified collection of lines look like YAML
   example: []
   syntax:
-    content: public static bool LookLikeYamlFrontMatter(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    content: public static bool LookLikeYamlFrontMatter(this IReadOnlyCollection<string>? lines, ILogger logger)
     parameters:
     - id: lines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}
@@ -180,9 +180,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
-  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToFrontMatterLinesAndContentLines(FileInfo?, ILogger)
+  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -205,7 +205,7 @@ items:
     or it will return empty collections.
   example: []
   syntax:
-    content: public static (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines) ToFrontMatterLinesAndContentLines(this FileInfo? entry, ILogger? logger)
+    content: public static (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines) ToFrontMatterLinesAndContentLines(this FileInfo? entry, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo
@@ -228,9 +228,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToNewIDocument(FileInfo?, string?, string?, ILogger?)
-  nameWithType: FileInfoExtensions.ToNewIDocument(FileInfo?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToNewIDocument(FileInfo?, string?, string?, ILogger)
+  nameWithType: FileInfoExtensions.ToNewIDocument(FileInfo?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -246,7 +246,7 @@ items:
   summary: Converts the specified <xref href="System.IO.FileInfo" data-throw-if-not-resolved="false"></xref> to a new <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public static IDocument? ToNewIDocument(this FileInfo? entry, string? title, string? documentPath, ILogger? logger)
+    content: public static IDocument? ToNewIDocument(this FileInfo? entry, string? title, string? documentPath, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo
@@ -275,9 +275,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToIDocumentAndAnyContent(FileInfo?, ILogger?)
-  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToIDocumentAndAnyContent(FileInfo?, ILogger)
+  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -296,7 +296,7 @@ items:
     into a (<xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>, <xref href="System.String" data-throw-if-not-resolved="false"></xref>) tuple.
   example: []
   syntax:
-    content: public static (IDocument? frontMatter, string? content) ToIDocumentAndAnyContent(this FileInfo? entry, ILogger? logger)
+    content: public static (IDocument? frontMatter, string? content) ToIDocumentAndAnyContent(this FileInfo? entry, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo
@@ -319,9 +319,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
-  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToJsonObjectAndAnyContent(FileInfo?, ILogger)
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -340,7 +340,7 @@ items:
     into a (<xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>, <xref href="System.String" data-throw-if-not-resolved="false"></xref>) tuple.
   example: []
   syntax:
-    content: public static (JsonObject? frontMatter, string? content) ToJsonObjectAndAnyContent(this FileInfo? entry, ILogger? logger)
+    content: public static (JsonObject? frontMatter, string? content) ToJsonObjectAndAnyContent(this FileInfo? entry, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo
@@ -363,9 +363,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToJsonString(IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: FileInfoExtensions.ToJsonString(IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToJsonString(IReadOnlyCollection<string>?, ILogger)
+  nameWithType: FileInfoExtensions.ToJsonString(IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -381,7 +381,7 @@ items:
   summary: Converts the specified collection of lines to a JSON string.
   example: []
   syntax:
-    content: public static string? ToJsonString(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    content: public static string? ToJsonString(this IReadOnlyCollection<string>? lines, ILogger logger)
     parameters:
     - id: lines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}
@@ -404,9 +404,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToYamlString(IReadOnlyCollection<string>?, ILogger?)
-  nameWithType: FileInfoExtensions.ToYamlString(IReadOnlyCollection<string>?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  name: ToYamlString(IReadOnlyCollection<string>?, ILogger)
+  nameWithType: FileInfoExtensions.ToYamlString(IReadOnlyCollection<string>?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -415,14 +415,14 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYamlString
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
-    startLine: 274
+    startLine: 269
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
   summary: Converts the specified collection of lines to a YAML string.
   example: []
   syntax:
-    content: public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger? logger)
+    content: public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger logger)
     parameters:
     - id: lines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}
@@ -445,9 +445,9 @@ items:
   langs:
   - csharp
   - vb
-  name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
-  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -456,14 +456,14 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteNewPublicationEntryWithJsonFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
-    startLine: 289
+    startLine: 279
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
   summary: Writes a new entry with JSON front matter to <xref href="System.IO.FileSystemInfo.FullName" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public static void WriteNewPublicationEntryWithJsonFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger? logger)
+    content: public static void WriteNewPublicationEntryWithJsonFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo
@@ -493,9 +493,9 @@ items:
   langs:
   - csharp
   - vb
-  name: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
-  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  name: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -504,14 +504,14 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WriteNewPublicationEntryWithYamlFrontMatter
     path: ../Songhay.Publications/Extensions/FileInfoExtensions.cs
-    startLine: 302
+    startLine: 292
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
   summary: Writes a new entry with YAML front matter to <xref href="System.IO.FileSystemInfo.FullName" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
-    content: public static void WriteNewPublicationEntryWithYamlFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger? logger)
+    content: public static void WriteNewPublicationEntryWithYamlFrontMatter(this FileInfo? entry, string? title, string? documentPath, string? content, ILogger logger)
     parameters:
     - id: entry
       type: System.IO.FileInfo

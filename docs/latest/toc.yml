@@ -114,9 +114,6 @@ items:
   - uid: Songhay.Publications.Extensions.JsonElementExtensions
     name: JsonElementExtensions
     type: Class
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions
-    name: JsonNodeExtensions
-    type: Class
   - uid: Songhay.Publications.Extensions.JsonObjectExtensions
     name: JsonObjectExtensions
     type: Class

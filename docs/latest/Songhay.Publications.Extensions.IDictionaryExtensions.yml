@@ -66,7 +66,7 @@ items:
   summary: Converts the specified <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> to a JSON string.
   example: []
   syntax:
-    content: public static string? ToJsonString(this IDictionary<string, object>? data)
+    content: public static string ToJsonString(this IDictionary<string, object>? data)
     parameters:
     - id: data
       type: System.Collections.Generic.IDictionary{System.String,System.Object}
@@ -86,9 +86,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ToTaggedDocument(IDictionary<string, object>?, ILogger?, params string[])
-  nameWithType: IDictionaryExtensions.ToTaggedDocument(IDictionary<string, object>?, ILogger?, params string[])
-  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary<string, object>?, Microsoft.Extensions.Logging.ILogger?, params string[])
+  name: ToTaggedDocument(IDictionary<string, object>?, ILogger, params string[])
+  nameWithType: IDictionaryExtensions.ToTaggedDocument(IDictionary<string, object>?, ILogger, params string[])
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary<string, object>?, Microsoft.Extensions.Logging.ILogger, params string[])
   type: Method
   source:
     remote:
@@ -112,7 +112,7 @@ items:
     - keys specified in <code>tagKeys</code>
   example: []
   syntax:
-    content: public static IDocument? ToTaggedDocument(this IDictionary<string, object>? data, ILogger? logger, params string[] tagKeys)
+    content: public static IDocument? ToTaggedDocument(this IDictionary<string, object>? data, ILogger logger, params string[] tagKeys)
     parameters:
     - id: data
       type: System.Collections.Generic.IDictionary{System.String,System.Object}

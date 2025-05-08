@@ -165,7 +165,7 @@ Class IDictionaryExtensions  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string? ToJsonString(this IDictionary&lt;string, object&gt;? data)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string ToJsonString(this IDictionary&lt;string, object&gt;? data)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -194,7 +194,7 @@ Class IDictionaryExtensions  <a class="header-action link-secondary" title="View
   <a id="Songhay_Publications_Extensions_IDictionaryExtensions_ToTaggedDocument_" data-uid="Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDictionaryExtensions_ToTaggedDocument_System_Collections_Generic_IDictionary_System_String_System_Object__Microsoft_Extensions_Logging_ILogger_System_String___" data-uid="Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger,System.String[])">
-  ToTaggedDocument(IDictionary&lt;string, object&gt;?, ILogger?, params string[])
+  ToTaggedDocument(IDictionary&lt;string, object&gt;?, ILogger, params string[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDictionaryExtensions.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -203,7 +203,7 @@ Class IDictionaryExtensions  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IDocument? ToTaggedDocument(this IDictionary&lt;string, object&gt;? data, ILogger? logger, params string[] tagKeys)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IDocument? ToTaggedDocument(this IDictionary&lt;string, object&gt;? data, ILogger logger, params string[] tagKeys)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

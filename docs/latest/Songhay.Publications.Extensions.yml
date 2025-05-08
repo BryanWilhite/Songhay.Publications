@@ -13,7 +13,6 @@ items:
   - Songhay.Publications.Extensions.IDocumentExtensions
   - Songhay.Publications.Extensions.IndexEntryExtensions
   - Songhay.Publications.Extensions.JsonElementExtensions
-  - Songhay.Publications.Extensions.JsonNodeExtensions
   - Songhay.Publications.Extensions.JsonObjectExtensions
   - Songhay.Publications.Extensions.MarkdownEntryExtensions
   - Songhay.Publications.Extensions.PublicationContextExtensions
@@ -92,13 +91,6 @@ references:
   name: JsonElementExtensions
   nameWithType: JsonElementExtensions
   fullName: Songhay.Publications.Extensions.JsonElementExtensions
-- uid: Songhay.Publications.Extensions.JsonNodeExtensions
-  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
-  parent: Songhay.Publications.Extensions
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
-  name: JsonNodeExtensions
-  nameWithType: JsonNodeExtensions
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions
   commentId: T:Songhay.Publications.Extensions.JsonObjectExtensions
   href: Songhay.Publications.Extensions.JsonObjectExtensions.html

@@ -57,7 +57,6 @@ items:
   - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.ToValidationResult
   - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithDefaults
   - Songhay.Publications.Abstractions.IFragment.Songhay.Publications.Extensions.FragmentExtensions.WithEdit(System.Action{Songhay.Publications.Abstractions.IFragment})
-  - System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
 - uid: Songhay.Publications.Abstractions.IFragment.FragmentId
   commentId: P:Songhay.Publications.Abstractions.IFragment.FragmentId
   id: FragmentId
@@ -891,37 +890,6 @@ references:
     href: Songhay.Publications.Abstractions.IFragment.html
   - name: )
   - name: )
-- uid: System.Object.Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode
-  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  parent: Songhay.Publications.Extensions.JsonNodeExtensions
-  definition: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  name: ToJsonNode(object)
-  nameWithType: JsonNodeExtensions.ToJsonNode(object)
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
-  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
-  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
-  name.vb: ToJsonNode(Object)
-  spec.csharp:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
 - uid: Songhay.Abstractions.ITemporal
   commentId: T:Songhay.Abstractions.ITemporal
   parent: Songhay.Abstractions
@@ -1297,43 +1265,6 @@ references:
     href: Songhay.Publications.Abstractions.IFragment.html
   - name: )
   - name: )
-- uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  commentId: M:Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-  isExternal: true
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  name: ToJsonNode(object)
-  nameWithType: JsonNodeExtensions.ToJsonNode(object)
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(object)
-  nameWithType.vb: JsonNodeExtensions.ToJsonNode(Object)
-  fullName.vb: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(Object)
-  name.vb: ToJsonNode(Object)
-  spec.csharp:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: Songhay.Publications.Extensions.JsonNodeExtensions.ToJsonNode(System.Object)
-    name: ToJsonNode
-    href: Songhay.Publications.Extensions.JsonNodeExtensions.html#Songhay_Publications_Extensions_JsonNodeExtensions_ToJsonNode_System_Object_
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: Songhay.Publications.Extensions.JsonNodeExtensions
-  commentId: T:Songhay.Publications.Extensions.JsonNodeExtensions
-  parent: Songhay.Publications.Extensions
-  href: Songhay.Publications.Extensions.JsonNodeExtensions.html
-  name: JsonNodeExtensions
-  nameWithType: JsonNodeExtensions
-  fullName: Songhay.Publications.Extensions.JsonNodeExtensions
 - uid: Songhay.Abstractions
   commentId: N:Songhay.Abstractions
   isExternal: true

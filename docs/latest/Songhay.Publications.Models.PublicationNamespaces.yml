@@ -72,10 +72,10 @@ items:
   summary: Conventional namespace for EPUB.
   example: []
   syntax:
-    content: public static XNamespace DaisyNcx
+    content: public static readonly XNamespace DaisyNcx
     return:
       type: System.Xml.Linq.XNamespace
-    content.vb: Public Shared DaisyNcx As XNamespace
+    content.vb: Public Shared ReadOnly DaisyNcx As XNamespace
 - uid: Songhay.Publications.Models.PublicationNamespaces.DublinCore
   commentId: F:Songhay.Publications.Models.PublicationNamespaces.DublinCore
   id: DublinCore
@@ -101,10 +101,10 @@ items:
   summary: Conventional namespace for EPUB.
   example: []
   syntax:
-    content: public static XNamespace DublinCore
+    content: public static readonly XNamespace DublinCore
     return:
       type: System.Xml.Linq.XNamespace
-    content.vb: Public Shared DublinCore As XNamespace
+    content.vb: Public Shared ReadOnly DublinCore As XNamespace
 - uid: Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingFormat
   commentId: F:Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingFormat
   id: IdpfOpenPackagingFormat
@@ -130,10 +130,10 @@ items:
   summary: Conventional namespace for EPUB.
   example: []
   syntax:
-    content: public static XNamespace IdpfOpenPackagingFormat
+    content: public static readonly XNamespace IdpfOpenPackagingFormat
     return:
       type: System.Xml.Linq.XNamespace
-    content.vb: Public Shared IdpfOpenPackagingFormat As XNamespace
+    content.vb: Public Shared ReadOnly IdpfOpenPackagingFormat As XNamespace
 - uid: Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingStructure
   commentId: F:Songhay.Publications.Models.PublicationNamespaces.IdpfOpenPackagingStructure
   id: IdpfOpenPackagingStructure
@@ -159,10 +159,10 @@ items:
   summary: Conventional namespace for EPUB.
   example: []
   syntax:
-    content: public static XNamespace IdpfOpenPackagingStructure
+    content: public static readonly XNamespace IdpfOpenPackagingStructure
     return:
       type: System.Xml.Linq.XNamespace
-    content.vb: Public Shared IdpfOpenPackagingStructure As XNamespace
+    content.vb: Public Shared ReadOnly IdpfOpenPackagingStructure As XNamespace
 - uid: Songhay.Publications.Models.PublicationNamespaces.Xhtml
   commentId: F:Songhay.Publications.Models.PublicationNamespaces.Xhtml
   id: Xhtml
@@ -188,10 +188,10 @@ items:
   summary: Conventional namespace for EPUB.
   example: []
   syntax:
-    content: public static XNamespace Xhtml
+    content: public static readonly XNamespace Xhtml
     return:
       type: System.Xml.Linq.XNamespace
-    content.vb: Public Shared Xhtml As XNamespace
+    content.vb: Public Shared ReadOnly Xhtml As XNamespace
 - uid: Songhay.Publications.Models.PublicationNamespaces.Xml
   commentId: F:Songhay.Publications.Models.PublicationNamespaces.Xml
   id: Xml

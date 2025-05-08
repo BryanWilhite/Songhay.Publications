@@ -175,7 +175,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToSrcSetAttribute
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-    startLine: 83
+    startLine: 85
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

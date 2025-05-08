@@ -13,7 +13,6 @@ items:
   - Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
   - Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
   - Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
-  - Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
   - Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   langs:
   - csharp
@@ -357,7 +356,7 @@ items:
 
     to a boxed <xref href="System.Object" data-throw-if-not-resolved="false"></xref> of boxed objects.
   remarks: >-
-    This method helps the <code>YamlDotNet</code><xref href="YamlDotNet.Serialization.SerializerBuilder" data-throw-if-not-resolved="false"></xref>
+    This method helps the <code>YamlDotNet</code> <xref href="YamlDotNet.Serialization.SerializerBuilder" data-throw-if-not-resolved="false"></xref>
 
     serialize <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref> to YAML
 
@@ -376,51 +375,6 @@ items:
       type: System.Object
     content.vb: Public Shared Function ToBoxedValue(element As JsonElement) As Object
   overload: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue*
-- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
-  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
-  id: ToObject``1(System.Text.Json.JsonElement)
-  isExtensionMethod: true
-  parent: Songhay.Publications.Extensions.JsonElementExtensions
-  langs:
-  - csharp
-  - vb
-  name: ToObject<TObject>(JsonElement)
-  nameWithType: JsonElementExtensions.ToObject<TObject>(JsonElement)
-  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject<TObject>(System.Text.Json.JsonElement)
-  type: Method
-  source:
-    remote:
-      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
-      branch: main
-      repo: git@github.com:BryanWilhite/Songhay.Publications.git
-    id: ToObject
-    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
-    startLine: 46
-  assemblies:
-  - Songhay.Publications
-  namespace: Songhay.Publications.Extensions
-  summary: >-
-    Converts the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
-
-    to <code>TObject</code>.
-  example: []
-  syntax:
-    content: public static TObject? ToObject<TObject>(this JsonElement element)
-    parameters:
-    - id: element
-      type: System.Text.Json.JsonElement
-      description: the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
-    typeParameters:
-    - id: TObject
-      description: the type to convert to
-    return:
-      type: '{TObject}'
-      description: ''
-    content.vb: Public Shared Function ToObject(Of TObject)(element As JsonElement) As TObject
-  overload: Songhay.Publications.Extensions.JsonElementExtensions.ToObject*
-  nameWithType.vb: JsonElementExtensions.ToObject(Of TObject)(JsonElement)
-  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.ToObject(Of TObject)(System.Text.Json.JsonElement)
-  name.vb: ToObject(Of TObject)(JsonElement)
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   id: ToYaml(System.Text.Json.JsonElement)
@@ -440,7 +394,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
-    startLine: 58
+    startLine: 44
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -1296,23 +1250,6 @@ references:
   name: ToBoxedValue
   nameWithType: JsonElementExtensions.ToBoxedValue
   fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
-- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject*
-  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToObject
-  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToObject__1_System_Text_Json_JsonElement_
-  name: ToObject
-  nameWithType: JsonElementExtensions.ToObject
-  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject
-- uid: '{TObject}'
-  commentId: '!:TObject'
-  definition: TObject
-  name: TObject
-  nameWithType: TObject
-  fullName: TObject
-- uid: TObject
-  commentId: '!:TObject'
-  name: TObject
-  nameWithType: TObject
-  fullName: TObject
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml*
   commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml
   href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_

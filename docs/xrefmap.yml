@@ -955,13 +955,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions
   nameWithType: FileInfoExtensions
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  name: LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeJsonFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: FileInfoExtensions.LookLikeJsonFrontMatter(IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter*
   name: LookLikeJsonFrontMatter
@@ -971,13 +971,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeJsonFrontMatter
   nameWithType: FileInfoExtensions.LookLikeJsonFrontMatter
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  name: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeMarkdownEntryWithFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter(IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter*
   name: LookLikeMarkdownEntryWithFrontMatter
@@ -987,13 +987,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter
   nameWithType: FileInfoExtensions.LookLikeMarkdownEntryWithFrontMatter
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  name: LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_LookLikeYamlFrontMatter_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: FileInfoExtensions.LookLikeYamlFrontMatter(IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter*
   name: LookLikeYamlFrontMatter
@@ -1003,13 +1003,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.LookLikeYamlFrontMatter
   nameWithType: FileInfoExtensions.LookLikeYamlFrontMatter
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
-  name: ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
+  name: ToFrontMatterLinesAndContentLines(FileInfo?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToFrontMatterLinesAndContentLines_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToFrontMatterLinesAndContentLines(FileInfo, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToFrontMatterLinesAndContentLines(FileInfo, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines*
   name: ToFrontMatterLinesAndContentLines
@@ -1019,13 +1019,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToFrontMatterLinesAndContentLines
   nameWithType: FileInfoExtensions.ToFrontMatterLinesAndContentLines
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
-  name: ToIDocumentAndAnyContent(FileInfo?, ILogger?)
+  name: ToIDocumentAndAnyContent(FileInfo?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToIDocumentAndAnyContent_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToIDocumentAndAnyContent(FileInfo, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToIDocumentAndAnyContent(FileInfo, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent*
   name: ToIDocumentAndAnyContent
@@ -1035,13 +1035,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToIDocumentAndAnyContent
   nameWithType: FileInfoExtensions.ToIDocumentAndAnyContent
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
-  name: ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
+  name: ToJsonObjectAndAnyContent(FileInfo?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonObjectAndAnyContent_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToJsonObjectAndAnyContent(FileInfo, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo?, ILogger?)
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToJsonObjectAndAnyContent(FileInfo, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent*
   name: ToJsonObjectAndAnyContent
@@ -1051,13 +1051,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent
   nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: ToJsonString(IReadOnlyCollection<string>?, ILogger?)
+  name: ToJsonString(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonString_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: ToJsonString(IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToJsonString(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.ToJsonString(IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToJsonString(IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString*
   name: ToJsonString
@@ -1067,13 +1067,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString
   nameWithType: FileInfoExtensions.ToJsonString
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: ToNewIDocument(FileInfo?, string?, string?, ILogger?)
+  name: ToNewIDocument(FileInfo?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToNewIDocument_System_IO_FileInfo_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToNewIDocument(FileInfo, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument(System.IO.FileInfo, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToNewIDocument(FileInfo?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.ToNewIDocument(FileInfo?, string?, string?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToNewIDocument(FileInfo, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument*
   name: ToNewIDocument
@@ -1083,13 +1083,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToNewIDocument
   nameWithType: FileInfoExtensions.ToNewIDocument
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: ToYamlString(IReadOnlyCollection<string>?, ILogger?)
+  name: ToYamlString(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToYamlString_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: ToYamlString(IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString(System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.ToYamlString(IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: FileInfoExtensions.ToYamlString(IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: FileInfoExtensions.ToYamlString(IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString*
   name: ToYamlString
@@ -1099,13 +1099,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString
   nameWithType: FileInfoExtensions.ToYamlString
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteNewPublicationEntryWithJsonFrontMatter_System_IO_FileInfo_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo, String, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo, String, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger)
   nameWithType.vb: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(FileInfo, String, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter*
   name: WriteNewPublicationEntryWithJsonFrontMatter
@@ -1115,13 +1115,13 @@ references:
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter
   nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  name: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteNewPublicationEntryWithYamlFrontMatter_System_IO_FileInfo_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: WriteNewPublicationEntryWithYamlFrontMatter(FileInfo, String, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo?, string?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(System.IO.FileInfo, String, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger?)
+  nameWithType: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo?, string?, string?, string?, ILogger)
   nameWithType.vb: FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter(FileInfo, String, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithYamlFrontMatter*
   name: WriteNewPublicationEntryWithYamlFrontMatter
@@ -1329,13 +1329,13 @@ references:
   fullName: Songhay.Publications.Extensions.IConfigurationExtensions
   nameWithType: IConfigurationExtensions
 - uid: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger)
-  name: ToPresentationAndSettingsInfo(IConfiguration?, ILogger?)
+  name: ToPresentationAndSettingsInfo(IConfiguration?, ILogger)
   href: latest/Songhay.Publications.Extensions.IConfigurationExtensions.html#Songhay_Publications_Extensions_IConfigurationExtensions_ToPresentationAndSettingsInfo_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToPresentationAndSettingsInfo(IConfiguration, ILogger)
-  fullName: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IConfigurationExtensions.ToPresentationAndSettingsInfo(IConfiguration?, ILogger?)
+  nameWithType: IConfigurationExtensions.ToPresentationAndSettingsInfo(IConfiguration?, ILogger)
   nameWithType.vb: IConfigurationExtensions.ToPresentationAndSettingsInfo(IConfiguration, ILogger)
 - uid: Songhay.Publications.Extensions.IConfigurationExtensions.ToPresentationAndSettingsInfo*
   name: ToPresentationAndSettingsInfo
@@ -1367,13 +1367,13 @@ references:
   fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString
   nameWithType: IDictionaryExtensions.ToJsonString
 - uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger,System.String[])
-  name: ToTaggedDocument(IDictionary<string, object>?, ILogger?, params string[])
+  name: ToTaggedDocument(IDictionary<string, object>?, ILogger, params string[])
   href: latest/Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToTaggedDocument_System_Collections_Generic_IDictionary_System_String_System_Object__Microsoft_Extensions_Logging_ILogger_System_String___
   commentId: M:Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger,System.String[])
   name.vb: ToTaggedDocument(IDictionary(Of String, Object), ILogger, ParamArray String())
-  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary<string, object>?, Microsoft.Extensions.Logging.ILogger?, params string[])
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary<string, object>?, Microsoft.Extensions.Logging.ILogger, params string[])
   fullName.vb: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary(Of String, Object), Microsoft.Extensions.Logging.ILogger, ParamArray String())
-  nameWithType: IDictionaryExtensions.ToTaggedDocument(IDictionary<string, object>?, ILogger?, params string[])
+  nameWithType: IDictionaryExtensions.ToTaggedDocument(IDictionary<string, object>?, ILogger, params string[])
   nameWithType.vb: IDictionaryExtensions.ToTaggedDocument(IDictionary(Of String, Object), ILogger, ParamArray String())
 - uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument*
   name: ToTaggedDocument
@@ -1510,13 +1510,13 @@ references:
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText
   nameWithType: IDocumentExtensions.ToDisplayText
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: ToMarkdownEntry(IDocument?, string?, string?, ILogger?)
+  name: ToMarkdownEntry(IDocument?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToMarkdownEntry(IDocument, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument?, string?, string?, ILogger?)
+  nameWithType: IDocumentExtensions.ToMarkdownEntry(IDocument?, string?, string?, ILogger)
   nameWithType.vb: IDocumentExtensions.ToMarkdownEntry(IDocument, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry*
   name: ToMarkdownEntry
@@ -1567,22 +1567,22 @@ references:
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
   nameWithType: IDocumentExtensions.ToValidationResult
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
-  name: ToYaml(IDocument?, ILogger?)
+  name: ToYaml(IDocument?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToYaml(IDocument, ILogger)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IDocumentExtensions.ToYaml(IDocument?, ILogger?)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument?, ILogger)
   nameWithType.vb: IDocumentExtensions.ToYaml(IDocument, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
-  name: ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger?)
+  name: ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name.vb: ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IDocumentExtensions.ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger?)
+  nameWithType: IDocumentExtensions.ToYaml(IDocument?, IReadOnlyCollection<string>?, ILogger)
   nameWithType.vb: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml*
   name: ToYaml
@@ -1624,13 +1624,13 @@ references:
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit
   nameWithType: IDocumentExtensions.WithEdit
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger?)
+  name: WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger?)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
   nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(IDocument, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter*
   name: WritePublicationEntryWithJsonFrontMatter
@@ -1640,13 +1640,13 @@ references:
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter
   nameWithType: IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger?)
+  name: WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument?, string?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger?)
+  nameWithType: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger)
   nameWithType.vb: IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(IDocument, String, String, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter*
   name: WritePublicationEntryWithYamlFrontMatter
@@ -1805,22 +1805,6 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
   nameWithType: JsonElementExtensions.ToBoxedValue
-- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject*
-  name: ToObject
-  href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToObject_
-  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToObject
-  isSpec: "True"
-  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject
-  nameWithType: JsonElementExtensions.ToObject
-- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
-  name: ToObject<TObject>(JsonElement)
-  href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToObject__1_System_Text_Json_JsonElement_
-  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToObject``1(System.Text.Json.JsonElement)
-  name.vb: ToObject(Of TObject)(JsonElement)
-  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToObject<TObject>(System.Text.Json.JsonElement)
-  fullName.vb: Songhay.Publications.Extensions.JsonElementExtensions.ToObject(Of TObject)(System.Text.Json.JsonElement)
-  nameWithType: JsonElementExtensions.ToObject<TObject>(JsonElement)
-  nameWithType.vb: JsonElementExtensions.ToObject(Of TObject)(JsonElement)
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   name: ToYaml(JsonElement)
   href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
@@ -1895,13 +1879,13 @@ references:
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions
   nameWithType: JsonObjectExtensions
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
-  name: ToYaml(JsonObject?, ILogger?)
+  name: ToYaml(JsonObject?, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_ToYaml_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   name.vb: ToYaml(JsonObject, ILogger)
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: JsonObjectExtensions.ToYaml(JsonObject?, ILogger?)
+  nameWithType: JsonObjectExtensions.ToYaml(JsonObject?, ILogger)
   nameWithType.vb: JsonObjectExtensions.ToYaml(JsonObject, ILogger)
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml*
   name: ToYaml
@@ -1911,13 +1895,13 @@ references:
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml
   nameWithType: JsonObjectExtensions.ToYaml
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
-  name: WithExtract(JsonObject?, IReadOnlyCollection<string>?, int, ILogger?)
+  name: WithExtract(JsonObject?, IReadOnlyCollection<string>?, int, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithExtract_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
   name.vb: WithExtract(JsonObject, IReadOnlyCollection(Of String), Integer, ILogger)
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Integer, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: JsonObjectExtensions.WithExtract(JsonObject?, IReadOnlyCollection<string>?, int, ILogger?)
+  nameWithType: JsonObjectExtensions.WithExtract(JsonObject?, IReadOnlyCollection<string>?, int, ILogger)
   nameWithType.vb: JsonObjectExtensions.WithExtract(JsonObject, IReadOnlyCollection(Of String), Integer, ILogger)
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract*
   name: WithExtract
@@ -1926,30 +1910,14 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract
   nameWithType: JsonObjectExtensions.WithExtract
-- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger,System.ValueTuple{System.String,System.String}[])
-  name: WithPropertiesRenamed(JsonObject?, ILogger?, params (string oldName, string newName)[])
-  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithPropertiesRenamed_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_System_ValueTuple_System_String_System_String____
-  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger,System.ValueTuple{System.String,System.String}[])
-  name.vb: WithPropertiesRenamed(JsonObject, ILogger, ParamArray (oldName As String, newName As String)())
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger?, params (string oldName, string newName)[])
-  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger, ParamArray (oldName As String, newName As String)())
-  nameWithType: JsonObjectExtensions.WithPropertiesRenamed(JsonObject?, ILogger?, params (string oldName, string newName)[])
-  nameWithType.vb: JsonObjectExtensions.WithPropertiesRenamed(JsonObject, ILogger, ParamArray (oldName As String, newName As String)())
-- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed*
-  name: WithPropertiesRenamed
-  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithPropertiesRenamed_
-  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed
-  isSpec: "True"
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithPropertiesRenamed
-  nameWithType: JsonObjectExtensions.WithPropertiesRenamed
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
-  name: WithoutConventionalDocumentProperties(JsonObject?, ILogger?)
+  name: WithoutConventionalDocumentProperties(JsonObject?, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithoutConventionalDocumentProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   name.vb: WithoutConventionalDocumentProperties(JsonObject, ILogger)
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: JsonObjectExtensions.WithoutConventionalDocumentProperties(JsonObject?, ILogger?)
+  nameWithType: JsonObjectExtensions.WithoutConventionalDocumentProperties(JsonObject?, ILogger)
   nameWithType.vb: JsonObjectExtensions.WithoutConventionalDocumentProperties(JsonObject, ILogger)
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties*
   name: WithoutConventionalDocumentProperties
@@ -1959,13 +1927,13 @@ references:
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties
   nameWithType: JsonObjectExtensions.WithoutConventionalDocumentProperties
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
-  name: WithoutNonNullableDocumentProperties(JsonObject?, ILogger?)
+  name: WithoutNonNullableDocumentProperties(JsonObject?, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithoutNonNullableDocumentProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   name.vb: WithoutNonNullableDocumentProperties(JsonObject, ILogger)
-  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: JsonObjectExtensions.WithoutNonNullableDocumentProperties(JsonObject?, ILogger?)
+  nameWithType: JsonObjectExtensions.WithoutNonNullableDocumentProperties(JsonObject?, ILogger)
   nameWithType.vb: JsonObjectExtensions.WithoutNonNullableDocumentProperties(JsonObject, ILogger)
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties*
   name: WithoutNonNullableDocumentProperties
@@ -2642,13 +2610,13 @@ references:
   fullName: Songhay.Publications.Models.DaisyConsortiumNcx
   nameWithType: DaisyConsortiumNcx
 - uid: Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
-  name: DaisyConsortiumNcx(JsonElement, string?, Dictionary<string, string>?, string?, ILogger?)
+  name: DaisyConsortiumNcx(JsonElement, string?, Dictionary<string, string>?, string?, ILogger)
   href: latest/Songhay.Publications.Models.DaisyConsortiumNcx.html#Songhay_Publications_Models_DaisyConsortiumNcx__ctor_System_Text_Json_JsonElement_System_String_System_Collections_Generic_Dictionary_System_String_System_String__System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.DaisyConsortiumNcx.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(JsonElement, String, Dictionary(Of String, String), String, ILogger)
-  fullName: Songhay.Publications.Models.DaisyConsortiumNcx.DaisyConsortiumNcx(System.Text.Json.JsonElement, string?, System.Collections.Generic.Dictionary<string, string>?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.DaisyConsortiumNcx.DaisyConsortiumNcx(System.Text.Json.JsonElement, string?, System.Collections.Generic.Dictionary<string, string>?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.DaisyConsortiumNcx.New(System.Text.Json.JsonElement, String, System.Collections.Generic.Dictionary(Of String, String), String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: DaisyConsortiumNcx.DaisyConsortiumNcx(JsonElement, string?, Dictionary<string, string>?, string?, ILogger?)
+  nameWithType: DaisyConsortiumNcx.DaisyConsortiumNcx(JsonElement, string?, Dictionary<string, string>?, string?, ILogger)
   nameWithType.vb: DaisyConsortiumNcx.New(JsonElement, String, Dictionary(Of String, String), String, ILogger)
 - uid: Songhay.Publications.Models.DaisyConsortiumNcx.#ctor*
   name: DaisyConsortiumNcx
@@ -3251,13 +3219,13 @@ references:
   fullName: Songhay.Publications.Models.IdpfPackage
   nameWithType: IdpfPackage
 - uid: Songhay.Publications.Models.IdpfPackage.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
-  name: IdpfPackage(JsonElement, string?, Dictionary<string, string>?, string?, ILogger?)
+  name: IdpfPackage(JsonElement, string?, Dictionary<string, string>?, string?, ILogger)
   href: latest/Songhay.Publications.Models.IdpfPackage.html#Songhay_Publications_Models_IdpfPackage__ctor_System_Text_Json_JsonElement_System_String_System_Collections_Generic_Dictionary_System_String_System_String__System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.IdpfPackage.#ctor(System.Text.Json.JsonElement,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(JsonElement, String, Dictionary(Of String, String), String, ILogger)
-  fullName: Songhay.Publications.Models.IdpfPackage.IdpfPackage(System.Text.Json.JsonElement, string?, System.Collections.Generic.Dictionary<string, string>?, string?, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.IdpfPackage.IdpfPackage(System.Text.Json.JsonElement, string?, System.Collections.Generic.Dictionary<string, string>?, string?, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.IdpfPackage.New(System.Text.Json.JsonElement, String, System.Collections.Generic.Dictionary(Of String, String), String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: IdpfPackage.IdpfPackage(JsonElement, string?, Dictionary<string, string>?, string?, ILogger?)
+  nameWithType: IdpfPackage.IdpfPackage(JsonElement, string?, Dictionary<string, string>?, string?, ILogger)
   nameWithType.vb: IdpfPackage.New(JsonElement, String, Dictionary(Of String, String), String, ILogger)
 - uid: Songhay.Publications.Models.IdpfPackage.#ctor*
   name: IdpfPackage
@@ -3854,13 +3822,13 @@ references:
   fullName: Songhay.Publications.Models.OebpsTextBiography
   nameWithType: OebpsTextBiography
 - uid: Songhay.Publications.Models.OebpsTextBiography.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: OebpsTextBiography(string, string, string, ILogger?)
+  name: OebpsTextBiography(string, string, string, ILogger)
   href: latest/Songhay.Publications.Models.OebpsTextBiography.html#Songhay_Publications_Models_OebpsTextBiography__ctor_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.OebpsTextBiography.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(String, String, String, ILogger)
-  fullName: Songhay.Publications.Models.OebpsTextBiography.OebpsTextBiography(string, string, string, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.OebpsTextBiography.OebpsTextBiography(string, string, string, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.OebpsTextBiography.New(String, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: OebpsTextBiography.OebpsTextBiography(string, string, string, ILogger?)
+  nameWithType: OebpsTextBiography.OebpsTextBiography(string, string, string, ILogger)
   nameWithType.vb: OebpsTextBiography.New(String, String, String, ILogger)
 - uid: Songhay.Publications.Models.OebpsTextBiography.#ctor*
   name: OebpsTextBiography
@@ -3930,13 +3898,13 @@ references:
   fullName: Songhay.Publications.Models.OebpsTextDedication
   nameWithType: OebpsTextDedication
 - uid: Songhay.Publications.Models.OebpsTextDedication.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: OebpsTextDedication(string, string, string, ILogger?)
+  name: OebpsTextDedication(string, string, string, ILogger)
   href: latest/Songhay.Publications.Models.OebpsTextDedication.html#Songhay_Publications_Models_OebpsTextDedication__ctor_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.OebpsTextDedication.#ctor(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(String, String, String, ILogger)
-  fullName: Songhay.Publications.Models.OebpsTextDedication.OebpsTextDedication(string, string, string, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.OebpsTextDedication.OebpsTextDedication(string, string, string, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.OebpsTextDedication.New(String, String, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: OebpsTextDedication.OebpsTextDedication(string, string, string, ILogger?)
+  nameWithType: OebpsTextDedication.OebpsTextDedication(string, string, string, ILogger)
   nameWithType.vb: OebpsTextDedication.New(String, String, String, ILogger)
 - uid: Songhay.Publications.Models.OebpsTextDedication.#ctor*
   name: OebpsTextDedication
@@ -3968,13 +3936,13 @@ references:
   fullName: Songhay.Publications.Models.OebpsTextToc
   nameWithType: OebpsTextToc
 - uid: Songhay.Publications.Models.OebpsTextToc.#ctor(System.Text.Json.JsonElement,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
-  name: OebpsTextToc(JsonElement, Dictionary<string, string>, string, ILogger?)
+  name: OebpsTextToc(JsonElement, Dictionary<string, string>, string, ILogger)
   href: latest/Songhay.Publications.Models.OebpsTextToc.html#Songhay_Publications_Models_OebpsTextToc__ctor_System_Text_Json_JsonElement_System_Collections_Generic_Dictionary_System_String_System_String__System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.OebpsTextToc.#ctor(System.Text.Json.JsonElement,System.Collections.Generic.Dictionary{System.String,System.String},System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(JsonElement, Dictionary(Of String, String), String, ILogger)
-  fullName: Songhay.Publications.Models.OebpsTextToc.OebpsTextToc(System.Text.Json.JsonElement, System.Collections.Generic.Dictionary<string, string>, string, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.OebpsTextToc.OebpsTextToc(System.Text.Json.JsonElement, System.Collections.Generic.Dictionary<string, string>, string, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.OebpsTextToc.New(System.Text.Json.JsonElement, System.Collections.Generic.Dictionary(Of String, String), String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: OebpsTextToc.OebpsTextToc(JsonElement, Dictionary<string, string>, string, ILogger?)
+  nameWithType: OebpsTextToc.OebpsTextToc(JsonElement, Dictionary<string, string>, string, ILogger)
   nameWithType.vb: OebpsTextToc.New(JsonElement, Dictionary(Of String, String), String, ILogger)
 - uid: Songhay.Publications.Models.OebpsTextToc.#ctor*
   name: OebpsTextToc
@@ -4005,12 +3973,6 @@ references:
   commentId: T:Songhay.Publications.Models.PublicationAppScalars
   fullName: Songhay.Publications.Models.PublicationAppScalars
   nameWithType: PublicationAppScalars
-- uid: Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  name: ConventionalSettingsFile
-  href: latest/Songhay.Publications.Models.PublicationAppScalars.html#Songhay_Publications_Models_PublicationAppScalars_ConventionalSettingsFile
-  commentId: F:Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  fullName: Songhay.Publications.Models.PublicationAppScalars.ConventionalSettingsFile
-  nameWithType: PublicationAppScalars.ConventionalSettingsFile
 - uid: Songhay.Publications.Models.PublicationAppScalars.FrontMatterFence
   name: FrontMatterFence
   href: latest/Songhay.Publications.Models.PublicationAppScalars.html#Songhay_Publications_Models_PublicationAppScalars_FrontMatterFence
@@ -4030,13 +3992,13 @@ references:
   fullName: Songhay.Publications.Models.PublicationChapter
   nameWithType: PublicationChapter
 - uid: Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)
-  name: PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger?)
+  name: PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger)
   href: latest/Songhay.Publications.Models.PublicationChapter.html#Songhay_Publications_Models_PublicationChapter__ctor_System_Collections_Generic_KeyValuePair_System_String_System_String__System_Xml_Linq_XDocument_System_String_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.Models.PublicationChapter.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String},System.Xml.Linq.XDocument,System.String,Microsoft.Extensions.Logging.ILogger)
   name.vb: New(KeyValuePair(Of String, String), XDocument, String, ILogger)
-  fullName: Songhay.Publications.Models.PublicationChapter.PublicationChapter(System.Collections.Generic.KeyValuePair<string, string>, System.Xml.Linq.XDocument, string, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.Models.PublicationChapter.PublicationChapter(System.Collections.Generic.KeyValuePair<string, string>, System.Xml.Linq.XDocument, string, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.Models.PublicationChapter.New(System.Collections.Generic.KeyValuePair(Of String, String), System.Xml.Linq.XDocument, String, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: PublicationChapter.PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger?)
+  nameWithType: PublicationChapter.PublicationChapter(KeyValuePair<string, string>, XDocument, string, ILogger)
   nameWithType.vb: PublicationChapter.New(KeyValuePair(Of String, String), XDocument, String, ILogger)
 - uid: Songhay.Publications.Models.PublicationChapter.#ctor*
   name: PublicationChapter
@@ -4498,13 +4460,13 @@ references:
   fullName: Songhay.Publications.PublicationContext
   nameWithType: PublicationContext
 - uid: Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
-  name: PublicationContext(string, ILogger<PublicationContext>?)
+  name: PublicationContext(string, ILogger<PublicationContext>)
   href: latest/Songhay.Publications.PublicationContext.html#Songhay_Publications_PublicationContext__ctor_System_String_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_PublicationContext__
   commentId: M:Songhay.Publications.PublicationContext.#ctor(System.String,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.PublicationContext})
   name.vb: New(String, ILogger(Of PublicationContext))
-  fullName: Songhay.Publications.PublicationContext.PublicationContext(string, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>?)
+  fullName: Songhay.Publications.PublicationContext.PublicationContext(string, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.PublicationContext>)
   fullName.vb: Songhay.Publications.PublicationContext.New(String, Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.PublicationContext))
-  nameWithType: PublicationContext.PublicationContext(string, ILogger<PublicationContext>?)
+  nameWithType: PublicationContext.PublicationContext(string, ILogger<PublicationContext>)
   nameWithType.vb: PublicationContext.New(String, ILogger(Of PublicationContext))
 - uid: Songhay.Publications.PublicationContext.#ctor*
   name: PublicationContext
@@ -4614,13 +4576,13 @@ references:
   fullName: Songhay.Publications.PublicationLinesUtility
   nameWithType: PublicationLinesUtility
 - uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
-  name: ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger?)
+  name: ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger)
   href: latest/Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
   commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
   name.vb: ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
-  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger?)
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger)
   fullName.vb: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection(Of String), Integer, Microsoft.Extensions.Logging.ILogger)
-  nameWithType: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger?)
+  nameWithType: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger)
   nameWithType.vb: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
 - uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract*
   name: ConvertToExtract

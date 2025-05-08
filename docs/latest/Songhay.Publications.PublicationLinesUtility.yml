@@ -47,9 +47,9 @@ items:
   langs:
   - csharp
   - vb
-  name: ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger?)
-  nameWithType: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger?)
-  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger?)
+  name: ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger)
+  nameWithType: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger)
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection<string>?, int, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -68,7 +68,7 @@ items:
     to a Publications extract.
   example: []
   syntax:
-    content: public static string? ConvertToExtract(IReadOnlyCollection<string>? contentLines, int length, ILogger? logger)
+    content: public static string? ConvertToExtract(IReadOnlyCollection<string>? contentLines, int length, ILogger logger)
     parameters:
     - id: contentLines
       type: System.Collections.Generic.IReadOnlyCollection{System.String}

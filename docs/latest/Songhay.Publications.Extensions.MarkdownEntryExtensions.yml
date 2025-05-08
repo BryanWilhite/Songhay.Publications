@@ -26,13 +26,9 @@ items:
   fullName: Songhay.Publications.Extensions.MarkdownEntryExtensions
   type: Class
   source:
-    remote:
-      path: Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-      branch: main
-      repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: MarkdownEntryExtensions
-    path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 7
+    path: System.Text.RegularExpressions.Generator/System.Text.RegularExpressions.Generator.RegexGenerator/RegexGenerator.g.cs
+    startLine: 8
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -70,7 +66,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DoNullCheck
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 20
+    startLine: 13
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -108,7 +104,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DoNullCheckForContent
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 27
+    startLine: 20
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -146,7 +142,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToExtract
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 42
+    startLine: 35
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -190,7 +186,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToFinalEdit
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 60
+    startLine: 53
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -231,7 +227,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMarkdownEntry
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 84
+    startLine: 77
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -269,7 +265,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToParagraphs
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 137
+    startLine: 128
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -307,7 +303,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Touch
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 154
+    startLine: 145
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -348,7 +344,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: With11TyExtract
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 173
+    startLine: 162
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -394,7 +390,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithContentHeader
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 213
+    startLine: 202
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -437,7 +433,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithContentHeader
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 222
+    startLine: 211
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -483,7 +479,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 243
+    startLine: 232
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -524,7 +520,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithNew11TyFrontMatter
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 258
+    startLine: 247
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -574,7 +570,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithNewFrontMatter
     path: ../Songhay.Publications/Extensions/MarkdownEntryExtensions.cs
-    startLine: 279
+    startLine: 268
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
