@@ -14,8 +14,4 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.15" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ER-Diagrams\" />
-    </ItemGroup>
-
 </Project>

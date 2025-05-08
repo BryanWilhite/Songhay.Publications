@@ -30,13 +30,4 @@
         <PackageReference Include="Xunit.SkippableFact" Version="1.5.23" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Directory Include="markdown\presentation-drafts\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="markdown\presentation\entry\2023\" />
-      <Folder Include="markdown\presentation\entry\2025\" />
-    </ItemGroup>
-
 </Project>
