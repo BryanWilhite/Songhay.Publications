@@ -12,18 +12,18 @@ public static class MarkdownUtility
     /// <param name="preElement">The <c>pre</c> <see cref="XElement"/>.</param>
     public static void ConvertPreBlockToHtml(XElement preElement)
     {
-        var preList = GetPreLines(preElement);
+        List<string> preList = GetPreLines(preElement);
         preElement.RemoveNodes();
 
-        var fourSpaces = GetFourSpaces();
-        var fourSpacesToken = GetFourSpacesToken();
+        string fourSpaces = GetFourSpaces();
+        string fourSpacesToken = GetFourSpacesToken();
         preList.ForEach(line =>
         {
-            var p = Markdown.ToHtml(line.Replace(fourSpaces, fourSpacesToken));
+            string p = Markdown.ToHtml(line.Replace(fourSpaces, fourSpacesToken));
             if (!IsMarkdownParagraph(p)) p = GetPElementWithNewLine();
 
             p = p.Replace(fourSpacesToken, fourSpaces);
-            var pElement = XElement.Parse(p);
+            XElement pElement = XElement.Parse(p);
             pElement.Add(Environment.NewLine);
             preElement.Add(pElement.Nodes());
         });
@@ -61,7 +61,7 @@ public static class MarkdownUtility
     /// </remarks>
     public static List<string> GetPreLines(XElement preElement)
     {
-        var preList = preElement.Value
+        List<string> preList = preElement.Value
             .Split(Environment.NewLine.ToCharArray())
             .ToList();
         preList.RemoveAt(0);

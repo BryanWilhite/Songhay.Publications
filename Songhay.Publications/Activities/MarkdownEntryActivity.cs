@@ -203,9 +203,9 @@ public class MarkdownEntryActivity : IActivityTask
         _logger.LogInformation("{Name}: Published entry: `{Path}`", nameof(MarkdownEntryActivity), path);
     }
 
-    DirectoryInfo? _presentationInfo;
-    JsonElement _jSettings;
+    private DirectoryInfo? _presentationInfo;
+    private JsonElement _jSettings;
 
-    readonly IConfiguration _configuration;
-    readonly ILogger<MarkdownEntryActivity> _logger;
+    private readonly IConfiguration _configuration;
+    private readonly ILogger<MarkdownEntryActivity> _logger;
 }

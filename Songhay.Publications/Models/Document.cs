@@ -131,6 +131,6 @@ public class Document : IDocument
         return this.ToDisplayText();
     }
 
-    string? _clientId;
-    int? _documentId;
+    private string? _clientId;
+    private int? _documentId;
 }

@@ -11,12 +11,12 @@ public static class JsonObjectExtensions
     /// </summary>
     /// <param name="documentData">the <see cref="JsonObject"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ToYaml(this JsonObject? documentData, ILogger? logger)
+    public static string? ToYaml(this JsonObject? documentData, ILogger logger)
     {
         switch (documentData)
         {
             case null:
-                logger?.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
+                logger.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
 
                 return null;
             default:
@@ -32,7 +32,7 @@ public static class JsonObjectExtensions
     /// <param name="contentLines">the collection of content lines</param>
     /// <param name="extractLength">the length of the extract</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static JsonObject? WithExtract(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int extractLength, ILogger? logger)
+    public static JsonObject? WithExtract(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int extractLength, ILogger logger)
     {
         if (documentData == null || contentLines == null) return null;
 
@@ -41,12 +41,12 @@ public static class JsonObjectExtensions
 
         if (documentData.HasProperty(extract))
         {
-            logger?.LogInformation("Updating extract from content...");
+            logger.LogInformation("Updating extract from content...");
             documentData[extract] = extractData;
         }
         else
         {
-            logger?.LogInformation("Adding extract from content...");
+            logger.LogInformation("Adding extract from content...");
             documentData.Add(extract, extractData);
         }
 
@@ -59,11 +59,11 @@ public static class JsonObjectExtensions
     /// </summary>
     /// <param name="documentData">the <see cref="JsonObject"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static JsonObject? WithoutConventionalDocumentProperties(this JsonObject? documentData, ILogger? logger)
+    public static JsonObject? WithoutConventionalDocumentProperties(this JsonObject? documentData, ILogger logger)
     {
         if (documentData == null)
         {
-            logger?.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
+            logger.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
 
             return null;
         }
@@ -84,11 +84,11 @@ public static class JsonObjectExtensions
     /// </summary>
     /// <param name="documentData">the <see cref="JsonObject"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static JsonObject? WithoutNonNullableDocumentProperties(this JsonObject? documentData, ILogger? logger)
+    public static JsonObject? WithoutNonNullableDocumentProperties(this JsonObject? documentData, ILogger logger)
     {
         if (documentData == null)
         {
-            logger?.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
+            logger.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
 
             return null;
         }

@@ -68,13 +68,13 @@ public class Segment : ISegment
     /// Gets or sets the documents.
     /// </summary>
     [Display(AutoGenerateField = false)]
-    public ICollection<Document> Documents { get; init; } = new List<Document>();
+    public ICollection<Document> Documents { get; init; } = [];
 
     /// <summary>
     /// Gets or sets child segments.
     /// </summary>
     [Display(AutoGenerateField = false)]
-    public ICollection<Segment> Segments { get; init; } = new List<Segment>();
+    public ICollection<Segment> Segments { get; init; } = [];
 
     /// <summary>
     /// Gets or sets the parent segment.
@@ -88,12 +88,9 @@ public class Segment : ISegment
     /// <returns>
     /// A <see cref="String" /> that represents this instance.
     /// </returns>
-    public override string ToString()
-    {
-        return this.ToDisplayText();
-    }
+    public override string ToString() => this.ToDisplayText();
 
-    string? _clientId;
-    int? _segmentId;
-    string? _segmentName;
+    private string? _clientId;
+    private int? _segmentId;
+    private string? _segmentName;
 }

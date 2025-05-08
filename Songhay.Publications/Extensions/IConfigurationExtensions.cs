@@ -12,7 +12,7 @@ public static class IConfigurationExtensions
     /// <param name="configuration">the <see cref="IConfiguration"/></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
     public static (DirectoryInfo presentationInfo, FileInfo settingsInfo) ToPresentationAndSettingsInfo(
-        this IConfiguration? configuration, ILogger? logger)
+        this IConfiguration? configuration, ILogger logger)
     {
         ArgumentNullException.ThrowIfNull(configuration);
 
@@ -21,22 +21,22 @@ public static class IConfigurationExtensions
         if (!Directory.Exists(basePath))
             throw new DirectoryNotFoundException($"The expected base path, `{basePath}`, is not here.");
 
-        logger?.LogInformation("Verifying conventional markdown {Name} directory...",
+        logger.LogInformation("Verifying conventional markdown {Name} directory...",
             MarkdownPresentationDirectories.DirectoryNamePresentationShell);
 
         DirectoryInfo presentationShellInfo = new(basePath);
         presentationShellInfo.VerifyDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationShell);
 
-        logger?.LogInformation("Verifying all conventional markdown directories...");
+        logger.LogInformation("Verifying all conventional markdown directories...");
 
         DirectoryInfo presentationInfo = presentationShellInfo.Parent.ToReferenceTypeValueOrThrow();
         presentationInfo.HasAllConventionalMarkdownPresentationDirectories();
 
-        logger?.LogInformation("Verifying settings file...");
+        logger.LogInformation("Verifying settings file...");
 
         string settingsFilePath = configuration.GetSettingsFilePath();
 
-        logger?.LogInformation("Found settings file `{Path}`. Returning...", settingsFilePath);
+        logger.LogInformation("Found settings file `{Path}`. Returning...", settingsFilePath);
 
         FileInfo settingsInfo = File.Exists(settingsFilePath) ?
             new(settingsFilePath)

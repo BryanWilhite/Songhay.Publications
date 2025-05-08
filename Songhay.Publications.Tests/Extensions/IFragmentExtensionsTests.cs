@@ -3,17 +3,12 @@ using Songhay.Publications.Abstractions;
 namespace Songhay.Publications.Tests.Extensions;
 
 // ReSharper disable once InconsistentNaming
-public class IFragmentExtensionsTests
+public class IFragmentExtensionsTests(ITestOutputHelper helper)
 {
-    public IFragmentExtensionsTests(ITestOutputHelper helper)
-    {
-        _testOutputHelper = helper;
-    }
-
     [Fact]
     public void GetFragmentByPredicate_Test()
     {
-        var clientId = "my-data";
+        const string clientId = "my-data";
 
         var collection = new[]
         {
@@ -40,7 +35,7 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
@@ -57,7 +52,7 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -83,7 +78,7 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -110,7 +105,7 @@ public class IFragmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -132,6 +127,4 @@ public class IFragmentExtensionsTests
             Assert.True(item.test(item.data));
         }
     }
-
-    readonly ITestOutputHelper _testOutputHelper;
 }

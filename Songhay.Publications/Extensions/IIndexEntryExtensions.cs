@@ -16,7 +16,7 @@ public static class IndexEntryExtensions
     /// <param name="data">The index data.</param>
     public static string ToJson(this IEnumerable<IIndexEntry> data)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         JsonSerializerOptions options = new(JsonSerializerDefaults.Web)
         {

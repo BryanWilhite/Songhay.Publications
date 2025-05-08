@@ -7,13 +7,6 @@ namespace Songhay.Publications.Extensions;
 /// </summary>
 public static class SegmentExtensions
 {
-    static SegmentExtensions() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
-
     /// <summary>
     /// Clones the instance of <see cref="ISegment"/>.
     /// </summary>
@@ -30,9 +23,7 @@ public static class SegmentExtensions
     {
         ArgumentNullException.ThrowIfNull(data);
 
-        var first = data.FirstOrDefault(predicate);
-
-        TraceSource?.TraceVerbose(first.ToDisplayText(showIdOnly: true));
+        ISegment? first = data.FirstOrDefault(predicate);
 
         return first;
     }
@@ -44,15 +35,11 @@ public static class SegmentExtensions
     /// <param name="data"></param>
     public static bool HasDocuments(this ISegment? data)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         if (data is not Segment segment) return false;
 
-        if (segment.Documents.Any()) return true;
-
-        TraceSource?.TraceError($"The expected child {nameof(Segment.Documents)} are not here.");
-
-        return false;
+        return segment.Documents.Count != 0;
     }
 
     /// <summary>
@@ -163,7 +150,7 @@ public static class SegmentExtensions
     /// <param name="data">The data.</param>
     public static IIndexEntry ToPublicationIndexEntry(this ISegment? data)
     {
-        if(data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
 
         if (data is not Segment instance)
             throw new DataException($"The expected {nameof(Segment)} data is not here.");
@@ -183,7 +170,7 @@ public static class SegmentExtensions
     /// <param name="data">the <see cref="IDocument"/> data</param>
     public static ValidationResult ToValidationResult(this ISegment? data)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
         if (data is not Segment instance)
             throw new DataException($"The expected {nameof(Segment)} data is not here.");
 

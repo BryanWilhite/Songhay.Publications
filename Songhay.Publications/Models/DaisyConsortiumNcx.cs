@@ -14,7 +14,7 @@ public class DaisyConsortiumNcx
     /// <param name="chapterSet">The chapter set.</param>
     /// <param name="epubOebpsDirectory">The epub oebps directory.</param>
     /// <param name="logger">The <see cref="ILogger"/>.</param>
-    public DaisyConsortiumNcx(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory, ILogger? logger)
+    public DaisyConsortiumNcx(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory, ILogger logger)
     {
         _logger = logger;
 
@@ -30,7 +30,7 @@ public class DaisyConsortiumNcx
     /// </summary>
     public void SetPublicationMeta()
     {
-        _logger?.LogInformation("setting publication meta...");
+        _logger.LogInformation("setting publication meta...");
 
         var ncx = PublicationNamespaces.DaisyNcx;
 
@@ -63,7 +63,7 @@ public class DaisyConsortiumNcx
 
     internal void SetChapterNavPoints(IEnumerable<XElement> navPoints)
     {
-        _logger?.LogInformation("setting navPoint elements for chapters...");
+        _logger.LogInformation("setting navPoint elements for chapters...");
 
         XElement? templatedChapterElement = null;
         var newChapterElementList = new List<XElement>();
@@ -106,13 +106,13 @@ public class DaisyConsortiumNcx
 
         if (!newChapterElementList.Any()) return;
 
-        _logger?.LogInformation("adding new elements under templated element...");
+        _logger.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
     internal void SetChapterNavPointText(XElement navPoint, string text)
     {
-        _logger?.LogInformation("setting navPoint navLabel text...");
+        _logger.LogInformation("setting navPoint navLabel text...");
 
         var ncx = PublicationNamespaces.DaisyNcx;
 
@@ -124,7 +124,7 @@ public class DaisyConsortiumNcx
 
     internal void SetNcxDocTitle()
     {
-        _logger?.LogInformation("setting ncx docTitle title...");
+        _logger.LogInformation("setting ncx docTitle title...");
 
         var ncx = PublicationNamespaces.DaisyNcx;
         var title = _publicationMeta
@@ -140,7 +140,7 @@ public class DaisyConsortiumNcx
 
     internal void SetNcxMeta()
     {
-        _logger?.LogInformation("setting ncx docTitle meta...");
+        _logger.LogInformation("setting ncx docTitle meta...");
 
         var ncx = PublicationNamespaces.DaisyNcx;
 
@@ -153,7 +153,7 @@ public class DaisyConsortiumNcx
 
     internal void UpdateNavPointPlayOrder(IEnumerable<XElement> navPoints)
     {
-        _logger?.LogInformation("updating navPoint playOrder...");
+        _logger.LogInformation("updating navPoint playOrder...");
 
         navPoints
             .Select((navPoint, i) => new { navPoint, i })
@@ -164,10 +164,10 @@ public class DaisyConsortiumNcx
             });
     }
 
-    readonly ILogger? _logger;
-    readonly Dictionary<string, string> _chapterSet;
-    readonly JsonElement _publicationMeta;
-    readonly XDocument _ncxDocument;
-    readonly string _isbn13;
-    readonly string _ncxDocumentPath;
+    private readonly ILogger _logger;
+    private readonly Dictionary<string, string> _chapterSet;
+    private readonly JsonElement _publicationMeta;
+    private readonly XDocument _ncxDocument;
+    private readonly string _isbn13;
+    private readonly string _ncxDocumentPath;
 }

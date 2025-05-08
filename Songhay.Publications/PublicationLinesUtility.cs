@@ -14,30 +14,30 @@ public static class PublicationLinesUtility
     /// <param name="contentLines">the collection of content lines</param>
     /// <param name="length">The string-length of the extract.</param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ConvertToExtract(IReadOnlyCollection<string>? contentLines, int length, ILogger? logger)
+    public static string? ConvertToExtract(IReadOnlyCollection<string>? contentLines, int length, ILogger logger)
     {
         if (contentLines == null) return null;
 
-        logger?.LogInformation("Converting content lines to extract...");
+        logger.LogInformation("Converting content lines to extract...");
 
-        logger?.LogInformation("Skipping beginning content lines with markdown headers and line breaks...");
+        logger.LogInformation("Skipping beginning content lines with markdown headers and line breaks...");
         string content = contentLines
             .SkipWhile(line => Regex.IsMatch(line, @"^[\n\r\#]"))
             .Aggregate(string.Empty, (a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-        logger?.LogInformation("Removing any `div` blocks...");
+        logger.LogInformation("Removing any `div` blocks...");
         content = Regex.Replace(content, @"<div[^>]+>(.|\n)+?</div>\n", string.Empty);
 
-        logger?.LogInformation("Removing any self-closing elements...");
+        logger.LogInformation("Removing any self-closing elements...");
         content = Regex.Replace(content, @"<[^>]+>", string.Empty);
 
-        logger?.LogInformation("Removing any headers that were not at the beginning...");
+        logger.LogInformation("Removing any headers that were not at the beginning...");
         content = Regex.Replace(content, @"#[^#\n]+", string.Empty);
 
-        logger?.LogInformation("Removing any notification blocks...");
+        logger.LogInformation("Removing any notification blocks...");
         content = Regex.Replace(content, @">[^>\n]+", string.Empty);
 
-        logger?.LogInformation("Calling {Class}.{Method}...", nameof(Markdown), nameof(Markdown.ToPlainText));
+        logger.LogInformation("Calling {Class}.{Method}...", nameof(Markdown), nameof(Markdown.ToPlainText));
         content = Markdown.ToPlainText(content).Replace("\n", " ").Replace("\r", " ").Replace("  ", " ").Trim();
 
         return content.Length > length ? string.Concat(content[..length], "…") : content; 
@@ -50,7 +50,7 @@ public static class PublicationLinesUtility
     /// <param name="content">the content <see cref="string"/></param>
     public static IReadOnlyCollection<string> ConvertToLines(string? content)
     {
-        string[] delimiter = { $"{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}" };
+        string[] delimiter = [$"{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}"];
 
         string[]? lines = content?.Trim()
             .Split(delimiter, StringSplitOptions.RemoveEmptyEntries);

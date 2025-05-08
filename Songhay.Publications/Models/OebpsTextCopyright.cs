@@ -32,22 +32,22 @@ public class OebpsTextCopyright
     /// </summary>
     public void Write()
     {
-        var pubYear = _publicationMeta
+        string? pubYear = _publicationMeta
             .GetProperty("publication")
             .GetProperty("publicationDate").GetString();
         pubYear = DateTime.Parse(pubYear!).Year.ToString();
 
-        var jPub = _publicationMeta.GetProperty("publication");
+        JsonElement jPub = _publicationMeta.GetProperty("publication");
 
-        var pubAuthor = jPub.GetProperty("author").GetString();
-        var pubInquiries = jPub.GetProperty("inquiries").GetString();
-        var pubCoverArtCredits = jPub.GetProperty("coverArtCredits").GetString();
-        var pubEpubPublicationDate = jPub.GetProperty("epubPublicationDate").GetString();
+        string? pubAuthor = jPub.GetProperty("author").GetString();
+        string? pubInquiries = jPub.GetProperty("inquiries").GetString();
+        string? pubCoverArtCredits = jPub.GetProperty("coverArtCredits").GetString();
+        string? pubEpubPublicationDate = jPub.GetProperty("epubPublicationDate").GetString();
 
-        var span = GetSpan("pub-year");
+        XElement span = GetSpan("pub-year");
         span.Value = pubYear + " ";
 
-        var spans = GetSpans("pub-author");
+        IEnumerable<XElement> spans = GetSpans("pub-author");
         spans.ForEachInEnumerable(i => i.Value = pubAuthor!);
 
         span = GetSpan("pub-inquiries");
@@ -83,19 +83,19 @@ public class OebpsTextCopyright
 
     internal IEnumerable<XElement> GetSpans()
     {
-        var xhtml = PublicationNamespaces.Xhtml;
+        XNamespace xhtml = PublicationNamespaces.Xhtml;
 
-        var bodyDivElement = _document.Root?
+        XElement? bodyDivElement = _document.Root?
             .Element(xhtml + "body")?
             .Element(xhtml + "div")
             .ToReferenceTypeValueOrThrow();
 
         return bodyDivElement?
-            .Descendants(xhtml + "span") ?? Enumerable.Empty<XElement>();
+            .Descendants(xhtml + "span") ?? [];
     }
 
-    readonly JsonElement _publicationMeta;
-    readonly string _documentPath;
-    readonly XDocument _document;
-    readonly IEnumerable<XElement> _spans;
+    private readonly JsonElement _publicationMeta;
+    private readonly string _documentPath;
+    private readonly XDocument _document;
+    private readonly IEnumerable<XElement> _spans;
 }

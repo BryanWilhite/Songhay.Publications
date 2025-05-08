@@ -5,14 +5,8 @@ using Songhay.Publications.Activities;
 
 namespace Songhay.Publications.Tests.Extensions;
 
-public class JsonElementExtensionsTests
+public class JsonElementExtensionsTests(ITestOutputHelper helper)
 {
-    public JsonElementExtensionsTests(ITestOutputHelper helper)
-    {
-        _testOutputHelper = helper;
-        _loggerProvider = new XUnitLoggerProvider(helper);
-    }
-
     [Theory]
     [InlineData("md-add-entry-extract-settings.json", "../../../markdown/shell")]
     public void GetAddEntryExtractArg_Test(string settingsFile, string presentationRoot)
@@ -22,16 +16,16 @@ public class JsonElementExtensionsTests
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
         string[] args =
-        {
+        [
             ConsoleArgsScalars.BaseDirectoryRequired, ConsoleArgsScalars.FlagSpacer,
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -59,15 +53,16 @@ public class JsonElementExtensionsTests
 
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        string[] args = {
+        string[] args =
+        [
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -99,15 +94,16 @@ public class JsonElementExtensionsTests
 
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        string[] args = {
+        string[] args =
+        [
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -136,16 +132,16 @@ public class JsonElementExtensionsTests
 
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        string[] args = new[]
-        {
+        string[] args =
+        [
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -167,12 +163,12 @@ public class JsonElementExtensionsTests
 
         var inputPath = jO.GetProperty("inputPath").GetString();
 
-        _testOutputHelper.WriteLine($"{nameof(inputPath)}: {inputPath}");
-        _testOutputHelper.WriteLine($"{nameof(input)}: {input.Substring(0, 16)}...");
-        _testOutputHelper.WriteLine($"{nameof(pattern)}: {pattern}");
-        _testOutputHelper.WriteLine($"{nameof(replacement)}: {replacement}");
-        _testOutputHelper.WriteLine($"{nameof(useRegex)}: {useRegex}");
-        _testOutputHelper.WriteLine($"{nameof(outputPath)}: {outputPath}");
+        helper.WriteLine($"{nameof(inputPath)}: {inputPath}");
+        helper.WriteLine($"{nameof(input)}: {input.Substring(0, 16)}...");
+        helper.WriteLine($"{nameof(pattern)}: {pattern}");
+        helper.WriteLine($"{nameof(replacement)}: {replacement}");
+        helper.WriteLine($"{nameof(useRegex)}: {useRegex}");
+        helper.WriteLine($"{nameof(outputPath)}: {outputPath}");
     }
 
     [Theory]
@@ -183,15 +179,16 @@ public class JsonElementExtensionsTests
 
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        string[] args = {
+        string[] args =
+        [
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -220,15 +217,16 @@ public class JsonElementExtensionsTests
 
         presentationRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, presentationRoot);
 
-        string[] args = {
+        string[] args =
+        [
             ConsoleArgsScalars.SettingsFile, settingsFile,
             ConsoleArgsScalars.BaseDirectory, presentationRoot
-        };
+        ];
 
         IConfiguration? configuration = null;
         IHostBuilder builder = Host.CreateDefaultBuilder(args);
 
-        builder.ConfigureHostConfiguration(b => b.AddCommandLine(new[] {"--ENVIRONMENT", Environments.Development}));
+        builder.ConfigureHostConfiguration(b => b.AddCommandLine(["--ENVIRONMENT", Environments.Development]));
         builder.ConfigureAppConfiguration((hostingContext, _) => configuration = hostingContext.Configuration);
         using IHost _ = builder.Build();
 
@@ -252,24 +250,25 @@ public class JsonElementExtensionsTests
     }
 
     [Theory]
-    [InlineData(@"
-{
-    ""myString"": ""a scalar"",
-    ""myBoolean"": true,
-    ""myDate"": ""2005-12-30T23:16:54.0000000"",
-    ""sequence"": [ ""one"", ""two"" ],
-    ""myObject"": { ""myNumber"": 42, ""isUp"": true, ""nextNumbers"": [ 43, 44 ] }
-}
-")]
+    [InlineData("""
+
+                {
+                    "myString": "a scalar",
+                    "myBoolean": true,
+                    "myDate": "2005-12-30T23:16:54.0000000",
+                    "sequence": [ "one", "two" ],
+                    "myObject": { "myNumber": 42, "isUp": true, "nextNumbers": [ 43, 44 ] }
+                }
+
+                """)]
     public void ToYaml_Test(string json)
     {
         var jE = JsonDocument.Parse(json).RootElement;
 
         string yaml = jE.ToYaml();
 
-        _testOutputHelper.WriteLine(yaml);
+        helper.WriteLine(yaml);
     }
 
-    readonly ITestOutputHelper _testOutputHelper;
-    readonly XUnitLoggerProvider _loggerProvider;
+    private readonly XUnitLoggerProvider _loggerProvider = new(helper);
 }

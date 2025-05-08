@@ -13,10 +13,10 @@ public class ImageSize
     /// <summary>
     /// Gets or sets the media condition.
     /// </summary>
-    public string? MediaCondition { get; set; }
+    public string? MediaCondition { get; init; }
 
     /// <summary>
     /// Gets or sets the width of the layout.
     /// </summary>
-    public string? LayoutWidth { get; set; }
+    public string? LayoutWidth { get; init; }
 }

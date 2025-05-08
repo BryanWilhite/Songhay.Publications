@@ -3,28 +3,15 @@ using Songhay.Publications.Abstractions;
 namespace Songhay.Publications.Tests.Extensions;
 
 // ReSharper disable once InconsistentNaming
-public class IDictionaryExtensionsTests
+public class IDictionaryExtensionsTests(ITestOutputHelper helper)
 {
-    static IDictionaryExtensionsTests()
-    {
-        var type = typeof(IDictionaryExtensionsTests);
-        var projectDirectory = ProgramAssemblyUtility.GetPathFromAssembly(type.Assembly, "../../../");
-
-        ProjectDirInfo = new DirectoryInfo(projectDirectory);
-    }
-
-    public IDictionaryExtensionsTests(ITestOutputHelper helper)
-    {
-        _loggerProvider = new XUnitLoggerProvider(helper);
-    }
-
     [Theory]
-    [InlineData(@"yaml/hello-world-01-tagged.yaml", "myCustomProperty", "myOtherCustomProperty")]
-    public void ToTaggedDocument_Test(string path, params string[] tagKeys)
+    [ProjectDirectoryData("yaml/hello-world-01-tagged.yaml", "myCustomProperty", "myOtherCustomProperty")]
+    public void ToTaggedDocument_Test(DirectoryInfo projectDirInfo, string path, params string[] tagKeys)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToTaggedDocument_Test));
 
-        var entry = new FileInfo(ProjectDirInfo.ToCombinedPath(path));
+        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
         var yaml = entry.ToFrontMatterLinesAndContentLines(logger).FrontMatterLines.ToYamlString(logger);
 
         logger.LogInformation("YAML:{NL}{Data}", Environment.NewLine, yaml);
@@ -39,7 +26,5 @@ public class IDictionaryExtensionsTests
         logger.LogInformation("{Label}:{NL}{Data}", nameof(IDocument.Tag), Environment.NewLine, actual.Tag);
     }
 
-    static readonly DirectoryInfo ProjectDirInfo;
-
-    readonly XUnitLoggerProvider _loggerProvider;
+    readonly XUnitLoggerProvider _loggerProvider = new(helper);
 }

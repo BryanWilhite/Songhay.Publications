@@ -3,17 +3,12 @@ using Songhay.Publications.Abstractions;
 namespace Songhay.Publications.Tests.Extensions;
 
 // ReSharper disable once InconsistentNaming
-public class ISegmentExtensionsTests
+public class ISegmentExtensionsTests(ITestOutputHelper helper)
 {
-    public ISegmentExtensionsTests(ITestOutputHelper helper)
-    {
-        _testOutputHelper = helper;
-    }
-
     [Fact]
     public void GetSegmentByPredicate_Test()
     {
-        var clientId = "my-data";
+        const string clientId = "my-data";
 
         var collection = new[]
         {
@@ -41,7 +36,7 @@ public class ISegmentExtensionsTests
                 expectedResult: true,
                 data: new Segment
                 {
-                    Documents = new [] { new Document() }
+                    Documents = [new Document()]
                 }
             ),
         };
@@ -69,7 +64,7 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
@@ -85,7 +80,7 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -109,7 +104,7 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -134,7 +129,7 @@ public class ISegmentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -157,21 +152,20 @@ public class ISegmentExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(ISegmentExtensionsTests),
-        "../../../gen-web-data/responsive-layouts/index.json",
+    [ProjectFileData("../../../gen-web-data/responsive-layouts/index.json",
         "../../../json/ToPublicationIndexEntries_Test_output.json")]
     public void ToPublicationIndexEntries_Test(FileInfo indexInfo, FileInfo outputInfo)
     {
-        var json = File.ReadAllText(indexInfo.FullName);
+        string json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonSerializer
+        Segment[] segments = JsonSerializer
             .Deserialize<IEnumerable<Segment>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })
             .ToReferenceTypeValueOrThrow()
             .ToArray();
 
         Assert.True(segments.Any());
 
-        _testOutputHelper.WriteLine($"converting enumeration of {nameof(Segment)}...");
+        helper.WriteLine($"converting enumeration of {nameof(Segment)}...");
 
         var entries = segments.ToPublicationIndexEntries().ToArray();
         Assert.NotEmpty(entries);
@@ -182,12 +176,12 @@ public class ISegmentExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(ISegmentExtensionsTests), "../../../gen-web-data/responsive-layouts/index.json")]
+    [ProjectFileData("../../../gen-web-data/responsive-layouts/index.json")]
     public void ToPublicationIndexEntry_Test(FileInfo indexInfo)
     {
-        var json = File.ReadAllText(indexInfo.FullName);
+        string json = File.ReadAllText(indexInfo.FullName);
 
-        var segments = JsonSerializer
+        Segment[] segments = JsonSerializer
             .Deserialize<IEnumerable<Segment>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase })
             .ToReferenceTypeValueOrThrow()
             .ToArray();
@@ -197,11 +191,9 @@ public class ISegmentExtensionsTests
         var segment = segments.First();
         Assert.False(string.IsNullOrWhiteSpace(segment.SegmentName));
 
-        _testOutputHelper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
+        helper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
 
         var entry = segment.ToPublicationIndexEntry();
         Assert.NotNull(entry);
     }
-
-    readonly ITestOutputHelper _testOutputHelper;
 }

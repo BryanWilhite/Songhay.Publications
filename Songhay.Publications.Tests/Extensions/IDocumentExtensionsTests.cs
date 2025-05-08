@@ -3,14 +3,8 @@ using Songhay.Publications.Abstractions;
 namespace Songhay.Publications.Tests.Extensions;
 
 // ReSharper disable once InconsistentNaming
-public class IDocumentExtensionsTests
+public class IDocumentExtensionsTests(ITestOutputHelper helper)
 {
-    public IDocumentExtensionsTests(ITestOutputHelper helper)
-    {
-        _testOutputHelper = helper;
-        _loggerProvider = new XUnitLoggerProvider(helper);
-    }
-
     [Fact]
     public void GetDocumentByPredicate_Test()
     {
@@ -70,7 +64,7 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return text.Contains("the specified ") && text.Contains("is null.");
                 }
@@ -89,7 +83,7 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText();
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -118,7 +112,7 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = $"{data}";
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                     {
@@ -148,7 +142,7 @@ public class IDocumentExtensionsTests
                 data =>
                 {
                     var text = data.ToDisplayText(showIdOnly: true);
-                    _testOutputHelper.WriteLine(text);
+                    helper.WriteLine(text);
 
                     return data switch
                         {
@@ -173,20 +167,17 @@ public class IDocumentExtensionsTests
     }
 
     // ReSharper disable once InconsistentNaming
-    public static IEnumerable<object[]> TestData = new[]
-    {
-        new object[]
-        {
-            new Document { DocumentId = 1, Title = "Hey!", Tag = @"{ ""extract"": ""Hello world!"" }"},
-        },
-        new object[]
-        {
-            new Document { DocumentId = 1, Title = "Hey!", Tag = @"{ ""extract"": ""Hello world!"", ""keywords"": [ ""yup"" ] }"},
-        },
-    };
+    public static IEnumerable<object[]> TestData =
+    [
+        [
+            new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!" }"""}
+        ],
+        [
+            new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!", "keywords": [ "yup" ] }"""}
+        ]
+    ];
 
-    [Theory]
-    [MemberData(nameof(TestData))]
+    [Theory, MemberData(nameof(TestData))]
     public void ToYaml_Test(IDocument document)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToYaml_Test));
@@ -196,6 +187,5 @@ public class IDocumentExtensionsTests
         logger.LogInformation(actual);
     }
 
-    readonly XUnitLoggerProvider _loggerProvider;
-    readonly ITestOutputHelper _testOutputHelper;
+    private readonly XUnitLoggerProvider _loggerProvider = new(helper);
 }

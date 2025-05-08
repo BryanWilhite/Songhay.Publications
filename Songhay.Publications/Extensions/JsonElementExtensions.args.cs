@@ -29,13 +29,13 @@ public static partial class JsonElementExtensions
         string indexFileName
         ) GetCompressed11TyIndexArgs(this JsonElement element, DirectoryInfo? presentationInfo)
     {
-        var indexRoot = element.GetProperty("indexRoot").GetString();
+        string? indexRoot = element.GetProperty("indexRoot").GetString();
         indexRoot = presentationInfo.ToCombinedPath(indexRoot);
         DirectoryInfo indexRootInfo = new DirectoryInfo(indexRoot);
         if (!indexRootInfo.Exists)
             throw new DirectoryNotFoundException($"The expected index root, {indexRoot}, is not here.");
 
-        var indexFileName = element.GetProperty("indexFileName").GetString().ToReferenceTypeValueOrThrow();
+        string indexFileName = element.GetProperty("indexFileName").GetString().ToReferenceTypeValueOrThrow();
         DirectoryInfo entryRootInfo = presentationInfo
             .FindDirectory("presentation")
             .FindDirectory("entry")
@@ -54,8 +54,8 @@ public static partial class JsonElementExtensions
         string collapsedHost
         ) GetExpandUrisArgs(this JsonElement element, DirectoryInfo? presentationInfo)
     {
-        var collapsedHost = element.GetProperty("collapsedHost").GetString().ToReferenceTypeValueOrThrow();
-        var entryPath = element.GetProperty("entryPath").GetString();
+        string collapsedHost = element.GetProperty("collapsedHost").GetString().ToReferenceTypeValueOrThrow();
+        string? entryPath = element.GetProperty("entryPath").GetString();
         entryPath = presentationInfo.ToCombinedPath(entryPath).ToReferenceTypeValueOrThrow();
 
         return (entryPath, collapsedHost);
@@ -74,18 +74,18 @@ public static partial class JsonElementExtensions
         string outputPath)
         GetFindChangeArgs(this JsonElement element, DirectoryInfo? presentationInfo)
     {
-        var inputPath = element.GetProperty("inputPath").GetString();
+        string? inputPath = element.GetProperty("inputPath").GetString();
         inputPath = presentationInfo.ToCombinedPath(inputPath);
         if (!File.Exists(inputPath))
             throw new FileNotFoundException($"The expected input file, `{inputPath}`, is not here.");
 
-        var input = File.ReadAllText(inputPath).ToReferenceTypeValueOrThrow();
+        string input = File.ReadAllText(inputPath).ToReferenceTypeValueOrThrow();
 
-        var pattern = element.GetProperty("pattern").GetString().ToReferenceTypeValueOrThrow();
-        var replacement = element.GetProperty("replacement").GetString().ToReferenceTypeValueOrThrow();
-        var useRegex = element.GetProperty("useRegex").GetBoolean();
+        string pattern = element.GetProperty("pattern").GetString().ToReferenceTypeValueOrThrow();
+        string replacement = element.GetProperty("replacement").GetString().ToReferenceTypeValueOrThrow();
+        bool useRegex = element.GetProperty("useRegex").GetBoolean();
 
-        var outputPath = element.GetProperty("outputPath").GetString();
+        string? outputPath = element.GetProperty("outputPath").GetString();
         outputPath = presentationInfo.ToCombinedPath(outputPath);
 
         return (input, pattern, replacement, useRegex, outputPath);
@@ -104,7 +104,7 @@ public static partial class JsonElementExtensions
         DirectoryInfo entryDraftsRootInfo = presentationInfo
             .FindDirectory(MarkdownPresentationDirectories.DirectoryNamePresentationDrafts)
             .ToReferenceTypeValueOrThrow();
-        var title = element.GetProperty("title").GetString().ToReferenceTypeValueOrThrow();
+        string title = element.GetProperty("title").GetString().ToReferenceTypeValueOrThrow();
 
         return (entryDraftsRootInfo, title);
     }
@@ -128,7 +128,7 @@ public static partial class JsonElementExtensions
             .FindDirectory("entry")
             .FindDirectory(DateTime.Now.Year.ToString())
             .ToReferenceTypeValueOrThrow();
-        var entryFileName = element.GetProperty("entryFileName").GetString().ToReferenceTypeValueOrThrow();
+        string entryFileName = element.GetProperty("entryFileName").GetString().ToReferenceTypeValueOrThrow();
 
         return (entryDraftsRootInfo, entryRootInfo, entryFileName);
     }

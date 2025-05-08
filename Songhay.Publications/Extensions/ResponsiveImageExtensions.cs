@@ -18,14 +18,14 @@ public static class ResponsiveImageExtensions
             .Select(i => $"background-image: url({i.ImageUri?.OriginalString});")
             .ToArray();
 
-        if (!candidatesCollection.Any()) return string.Empty;
+        if (candidatesCollection.Length == 0) return string.Empty;
 
         var sizesCollection = responsiveImage
             .Sizes
             .Select(i => $"@media only screen and {i.MediaCondition}")
             .ToArray();
 
-        if (!sizesCollection.Any()) return string.Empty;
+        if (sizesCollection.Length == 0) return string.Empty;
 
         var stringCollection = sizesCollection
             .Zip(candidatesCollection, (media, background) => $@"
@@ -47,8 +47,8 @@ public static class ResponsiveImageExtensions
     {
         ArgumentNullException.ThrowIfNull(responsiveImage);
 
-        var srcset = responsiveImage.ToSrcSetAttribute();
-        var sizes = responsiveImage.ToSizesSetAttribute();
+        string srcset = responsiveImage.ToSrcSetAttribute();
+        string sizes = responsiveImage.ToSizesSetAttribute();
 
         return $@"
 <img{
@@ -65,16 +65,18 @@ public static class ResponsiveImageExtensions
     {
         ArgumentNullException.ThrowIfNull(responsiveImage);
 
-        var collection = responsiveImage
+        string[] collection = responsiveImage
             .Sizes
             .Select(i => $"({i.MediaCondition}) {i.LayoutWidth}")
             .ToArray();
 
-        if (!collection.Any()) return string.Empty;
+        if (collection.Length == 0) return string.Empty;
 
-        var attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
+        string attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
-        return $@"{Spacer}sizes=""{attributeValue}""";
+        return $"""
+                {Spacer}sizes="{attributeValue}"
+                """;
     }
 
     /// <summary>
@@ -85,17 +87,19 @@ public static class ResponsiveImageExtensions
     {
         ArgumentNullException.ThrowIfNull(responsiveImage);
 
-        var collection = responsiveImage
+        string[] collection = responsiveImage
             .Candidates
             .Select(i => $"{i.ImageUri} {i.Width ?? i.PixelDensity}")
             .ToArray();
 
-        if (!collection.Any()) return string.Empty;
+        if (collection.Length == 0) return string.Empty;
 
-        var attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
+        string attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
-        return $@"{Spacer}srcset=""{attributeValue}""";
+        return $"""
+                {Spacer}srcset="{attributeValue}"
+                """;
     }
 
-    static readonly string Spacer = $"{Environment.NewLine}    ";
+    private static readonly string Spacer = $"{Environment.NewLine}    ";
 }

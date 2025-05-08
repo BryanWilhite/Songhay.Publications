@@ -13,7 +13,7 @@ public static class MarkdownEntryUtility
     /// <param name="title">see <see cref="MarkdownEntryExtensions.WithNew11TyFrontMatter"/>.</param>
     public static MarkdownEntry GenerateEntryFor11Ty(string entryRoot, string title)
     {
-        var tag = JsonNodeUtility.ConvertToJsonNode(new { extract = string.Empty })?.ToString();
+        string? tag = JsonNodeUtility.ConvertToJsonNode(new { extract = string.Empty })?.ToString();
 
         return GenerateEntryFor11Ty(entryRoot, title, DateTime.Now, "./entry/", tag);
     }
@@ -33,7 +33,7 @@ public static class MarkdownEntryUtility
         if (!Directory.Exists(entryRoot))
             throw new DirectoryNotFoundException($"The expected entry root directory, `{entryRoot ?? "[null]"}`, is not here.");
 
-        var entry = new MarkdownEntry()
+        MarkdownEntry entry = new MarkdownEntry()
             .WithNew11TyFrontMatter(title, inceptDate, path, tag)
             .WithContentHeader();
 
@@ -90,25 +90,25 @@ public static class MarkdownEntryUtility
         if (!fileName.EndsWith(".md"))
             throw new FormatException("The expected file name format, `*.md`, is not here.");
 
-        var rootInfo = new DirectoryInfo(entryRoot);
+        DirectoryInfo rootInfo = new DirectoryInfo(entryRoot);
 
-        var draftInfo = rootInfo.GetFiles().FirstOrDefault(i => i.Name.EqualsInvariant(fileName));
+        FileInfo? draftInfo = rootInfo.GetFiles().FirstOrDefault(i => i.Name.EqualsInvariant(fileName));
         if (draftInfo == null)
             throw new FileNotFoundException($"The expected file, `{fileName}`, under `{rootInfo.FullName}` is not here.");
 
-        var draftEntry = draftInfo.ToMarkdownEntry();
-        var inceptDate = draftEntry.FrontMatter["date"].ToReferenceTypeValueOrThrow().GetValue<DateTime>();
-        var clientId = draftEntry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        var path = draftEntry.FrontMatter["path"]?.GetValue<string>().Replace(clientId, string.Empty);
+        MarkdownEntry draftEntry = draftInfo.ToMarkdownEntry();
+        DateTime inceptDate = draftEntry.FrontMatter["date"].ToReferenceTypeValueOrThrow().GetValue<DateTime>();
+        string clientId = draftEntry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
+        string? path = draftEntry.FrontMatter["path"]?.GetValue<string>().Replace(clientId, string.Empty);
 
         if ((publicationDate - inceptDate).Days >= 1)
         {
-            var title = draftEntry.FrontMatter["title"]?.GetValue<string>();
-            var tag = draftEntry.FrontMatter["tag"]?.GetValue<string>();
+            string? title = draftEntry.FrontMatter["title"]?.GetValue<string>();
+            string? tag = draftEntry.FrontMatter["tag"]?.GetValue<string>();
             draftEntry.WithNew11TyFrontMatter(title, publicationDate, path, tag);
         }
 
-        var combinedPath = ProgramFileUtility.GetCombinedPath(presentationRoot,
+        string combinedPath = ProgramFileUtility.GetCombinedPath(presentationRoot,
             $"{draftEntry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>()}.md");
         File.WriteAllText(combinedPath, draftEntry.ToFinalEdit());
         draftInfo.Delete();

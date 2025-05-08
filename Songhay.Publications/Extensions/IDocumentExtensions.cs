@@ -226,7 +226,8 @@ public static class IDocumentExtensions
     /// <param name="data">the <see cref="IDocument"/> data</param>
     public static ValidationResult ToValidationResult(this IDocument? data)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
+
         if (data is not Document instance)
             throw new DataException($"The expected {nameof(Document)} data is not here.");
 
@@ -346,24 +347,30 @@ public static class IDocumentExtensions
         };
 
         string json = entry.FrontMatter.ToJsonString(options);
-        string frontMatter = $@"
-{PublicationAppScalars.FrontMatterFence}json
-{json}
-{PublicationAppScalars.FrontMatterFence}
-".Trim();
+        string frontMatter = $"""
+
+                              {PublicationAppScalars.FrontMatterFence}json
+                              {json}
+                              {PublicationAppScalars.FrontMatterFence}
+
+                              """.Trim();
         if (string.IsNullOrWhiteSpace(content))
         {
-            content = $@"
-{frontMatter}
-# {document?.Title}
-".TrimStart();
+            content = $"""
+
+                       {frontMatter}
+                       # {document?.Title}
+
+                       """.TrimStart();
         }
         else if (!content.TrimStart().StartsWith(PublicationAppScalars.FrontMatterFence))
         {
-            content = $@"
-{frontMatter}
-{content.Trim()}
-".TrimStart();
+            content = $"""
+
+                       {frontMatter}
+                       {content.Trim()}
+
+                       """.TrimStart();
         }
 
         File.WriteAllText(entry.EntryFileInfo.FullName, content);
@@ -403,17 +410,21 @@ public static class IDocumentExtensions
 
         if (string.IsNullOrWhiteSpace(content))
         {
-            content = $@"
-{frontMatter}
-# {document.Title}
-".TrimStart();
+            content = $"""
+
+                       {frontMatter}
+                       # {document.Title}
+
+                       """.TrimStart();
         }
         else if (!content.TrimStart().StartsWith(PublicationAppScalars.FrontMatterFence))
         {
-            content = $@"
-{frontMatter}
-{content.Trim()}
-".TrimStart();
+            content = $"""
+
+                       {frontMatter}
+                       {content.Trim()}
+
+                       """.TrimStart();
         }
 
         File.WriteAllText(entryPath, content);

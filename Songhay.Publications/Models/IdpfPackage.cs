@@ -15,7 +15,7 @@ public class IdpfPackage
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubOebpsDirectory">conventional <c>epub/OEBPS</c> directory</param>
     /// <param name="logger">The <see cref="ILogger"/>.</param>
-    public IdpfPackage(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory, ILogger? logger)
+    public IdpfPackage(JsonElement publicationMeta, string? isbn13, Dictionary<string, string>? chapterSet, string? epubOebpsDirectory, ILogger logger)
     {
         _logger = logger;
 
@@ -96,7 +96,7 @@ public class IdpfPackage
 
     internal void SetManifestItemElementsForChapters()
     {
-        _logger?.LogInformation("setting manifest item elements for chapters...");
+        _logger.LogInformation("setting manifest item elements for chapters...");
 
         var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
@@ -143,48 +143,51 @@ public class IdpfPackage
                 }
             });
 
-        if (!newChapterElementList.Any()) return;
+        if (newChapterElementList.Count == 0) return;
 
-        _logger?.LogInformation("adding new elements under templated element...");
+        _logger.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
-    internal void SetSpineItemref(XElement itemref, string idref)
+    internal void SetSpineItemRef(XElement itemRef, string idref)
     {
-        var idrefAttribute = itemref.Attribute("idref");
+        XAttribute? idrefAttribute = itemRef.Attribute("idref");
+
+        if(idrefAttribute == null) _logger.LogErrorForMissingData<XAttribute>();
+
         idrefAttribute?.SetValue(idref);
     }
 
     internal void SetSpineItemRefElementsForChapters()
     {
-        _logger?.LogInformation("setting spine itemref elements for chapters...");
+        _logger.LogInformation("setting spine itemref elements for chapters...");
 
-        var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
+        XNamespace opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var itemrefs = (_idpfDocument.Root?
+        IEnumerable<XElement> itemRefs = (_idpfDocument.Root?
             .Element(opf + "spine")?
             .Elements(opf + "itemref"))
             .ToReferenceTypeValueOrThrow();
 
         XElement? templatedChapterElement = null;
-        var newChapterElementList = new List<XElement>();
+        List<XElement> newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
             .Select((chapterId, i) => new { chapterId, i })
             .ForEachInEnumerable(a =>
             {
-                var chapterId = a.chapterId;
-                var i = a.i;
-                var chapterElement = itemrefs.SingleOrDefault(itemref =>
+                string chapterId = a.chapterId;
+                int i = a.i;
+                XElement? chapterElement = itemRefs.SingleOrDefault(itemRef =>
                 {
-                    var id = itemref.Attribute("idref")?.Value;
+                    string? id = itemRef.Attribute("idref")?.Value;
 
                     return chapterId.Equals(id);
                 });
 
-                var canAddNavPoint = (chapterElement == null) && (i > 0);
-                var isFirstChapterIdError = (chapterElement == null) && (i == 0);
-                var isFirstChapterId = (chapterElement != null) && (i == 0);
+                bool canAddNavPoint = chapterElement == null && i > 0;
+                bool isFirstChapterIdError = chapterElement == null && i == 0;
+                bool isFirstChapterId = chapterElement != null && i == 0;
 
                 if (isFirstChapterIdError)
                 {
@@ -193,26 +196,26 @@ public class IdpfPackage
                 else if (isFirstChapterId)
                 {
                     templatedChapterElement = chapterElement;
-                    SetSpineItemref(templatedChapterElement.ToReferenceTypeValueOrThrow(), chapterId);
+                    SetSpineItemRef(templatedChapterElement.ToReferenceTypeValueOrThrow(), chapterId);
                 }
                 else if (canAddNavPoint)
                 {
-                    var @new = GetItemRef(chapterId);
-                    SetSpineItemref(@new, chapterId);
+                    XElement @new = GetItemRef(chapterId);
+                    SetSpineItemRef(@new, chapterId);
                     newChapterElementList.Add(@new);
                 }
             });
 
-        if (!newChapterElementList.Any()) return;
+        if (newChapterElementList.Count == 0) return;
 
-        _logger?.LogInformation("adding new elements under templated element...");
+        _logger.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
-    readonly ILogger? _logger;
-    readonly Dictionary<string, string> _chapterSet;
-    readonly JsonElement _publicationMeta;
-    readonly string _isbn13;
-    readonly string _idpfDocumentPath;
-    readonly XDocument _idpfDocument;
+    private readonly ILogger _logger;
+    private readonly Dictionary<string, string> _chapterSet;
+    private readonly JsonElement _publicationMeta;
+    private readonly string _isbn13;
+    private readonly string _idpfDocumentPath;
+    private readonly XDocument _idpfDocument;
 }

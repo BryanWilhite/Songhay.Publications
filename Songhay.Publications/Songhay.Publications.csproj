@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>8.0.0</AssemblyVersion>
+        <AssemblyVersion>8.0.1</AssemblyVersion>
+        <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>Songhay.Publications</RootNamespace>
 
         <Title>Songhay Publications</Title>
@@ -26,11 +27,6 @@
         <PackageVersion>$(AssemblyVersion)</PackageVersion>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <Version>$(AssemblyVersion)</Version>
-        <LangVersion>10</LangVersion>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <TargetFrameworks>net8.0</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

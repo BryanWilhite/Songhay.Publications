@@ -20,7 +20,7 @@ public class OebpsTextBiography
     /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
     /// <param name="markdownDirectory">conventional <c>markdown</c> directory</param>
     /// <param name="logger">The <see cref="ILogger"/>.</param>
-    public OebpsTextBiography(string templateRoot, string epubTextDirectory, string markdownDirectory, ILogger? logger)
+    public OebpsTextBiography(string templateRoot, string epubTextDirectory, string markdownDirectory, ILogger logger)
     {
         _logger = logger;
 
@@ -40,7 +40,7 @@ public class OebpsTextBiography
         var xhtmlFile = ProgramFileUtility.GetCombinedPath(_epubTextDirectory, PublicationFiles.EpubFileBiography, fileIsExpected: true);
         var markdownFile = ProgramFileUtility.GetCombinedPath(_markdownDirectory, PublicationFiles.EpubMarkdownBiography, fileIsExpected: true);
 
-        _logger?.LogInformation("    markdown file `{Path}`...", markdownFile);
+        _logger.LogInformation("    markdown file `{Path}`...", markdownFile);
         var markdown = File.ReadAllText(markdownFile);
         var raw = Markdown.ToHtml(markdown);
         var rawElement = XElement.Parse($@"<div class=""rx raw tmp"" xmlns=""{xhtml}"">{raw}</div>");
@@ -63,8 +63,8 @@ public class OebpsTextBiography
         return XDocument.Load(biographyTemplateFile);
     }
 
-    readonly ILogger? _logger;
-    readonly string _epubTextDirectory;
-    readonly string _markdownDirectory;
-    readonly XDocument _biographyTemplate;
+    private readonly ILogger _logger;
+    private readonly string _epubTextDirectory;
+    private readonly string _markdownDirectory;
+    private readonly XDocument _biographyTemplate;
 }

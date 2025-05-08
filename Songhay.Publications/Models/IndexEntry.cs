@@ -105,6 +105,6 @@ public class IndexEntry : IIndexEntry
     /// </summary>
     public DateTime? ModificationDate { get; set; }
 
-    string? _segmentName;
-    string? _clientId;
+    private string? _segmentName;
+    private string? _clientId;
 }

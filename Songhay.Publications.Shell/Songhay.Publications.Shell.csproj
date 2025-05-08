@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>6.2025.6.23</AssemblyVersion>
+        <AssemblyVersion>8.2025.05.07</AssemblyVersion>
         <RootNamespace>Songhay.Publications.Shell</RootNamespace>
 
         <Title>Songhay Publications Shell</Title>
@@ -13,7 +13,6 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net8.0</TargetFramework>
         <ApplicationIcon>songhay.ico</ApplicationIcon>
-        <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>

@@ -37,6 +37,6 @@ public class IndexKeywordGroup : IIndexKeywordGroup
     /// </summary>
     public DateTime? ModificationDate { get; set; }
 
-    int? _id;
-    string? _clientId;
+    private int? _id;
+    private string? _clientId;
 }

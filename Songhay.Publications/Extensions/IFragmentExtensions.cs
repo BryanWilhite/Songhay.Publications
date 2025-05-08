@@ -7,13 +7,6 @@ namespace Songhay.Publications.Extensions;
 /// </summary>
 public static class FragmentExtensions
 {
-    static FragmentExtensions() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
-
     /// <summary>
     /// Clones the instance of <see cref="IFragment"/>.
     /// </summary>
@@ -30,9 +23,7 @@ public static class FragmentExtensions
     {
         ArgumentNullException.ThrowIfNull(data);
 
-        var first = data.FirstOrDefault(predicate);
-
-        TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
+        IFragment? first = data.FirstOrDefault(predicate);
 
         return first;
     }
@@ -130,10 +121,8 @@ public static class FragmentExtensions
     /// <param name="data">The data.</param>
     /// <param name="copyFragmentContent">if set to <c>true</c> include <see cref="IFragment" /> content.</param>
     /// <returns></returns>
-    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data, bool copyFragmentContent)
-    {
-        return data.ToMenuDisplayItemModel(group: null, copyFragmentContent: copyFragmentContent);
-    }
+    public static MenuDisplayItemModel? ToMenuDisplayItemModel(this IFragment? data, bool copyFragmentContent) =>
+        data.ToMenuDisplayItemModel(group: null, copyFragmentContent: copyFragmentContent);
 
     /// <summary>
     /// Converts the <see cref="IFragment"/> into a menu display item model.
@@ -175,7 +164,7 @@ public static class FragmentExtensions
     /// <param name="data">the <see cref="IDocument"/> data</param>
     public static ValidationResult ToValidationResult(this IFragment? data)
     {
-        if (data == null) throw new ArgumentNullException(nameof(data));
+        ArgumentNullException.ThrowIfNull(data);
         if (data is not Fragment instance)
             throw new DataException($"The expected {nameof(Fragment)} data is not here.");
 

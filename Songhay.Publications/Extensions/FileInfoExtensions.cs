@@ -21,14 +21,14 @@ public static class FileInfoExtensions
 
         logger.LogInformation("Scanning front matter lines for JSON-like format...");
 
-        if (!lines.First().Trim().StartsWith("{"))
+        if (!lines.First().Trim().StartsWith('{'))
         {
             logger.LogWarning("Warning: Cannot find leading `{{`. Does not look like well-formed JSON front matter. Returning...");
 
             return false;
         }
 
-        if (!lines.Skip(1).First().Trim().StartsWith("\""))
+        if (!lines.Skip(1).First().Trim().StartsWith('"'))
         {
             logger.LogWarning("Warning: Cannot find leading `\"`. Does not look like well-formed JSON front matter. Returning...");
 
@@ -42,7 +42,7 @@ public static class FileInfoExtensions
             return false;
         }
 
-        if (!lines.Last().Trim().EndsWith("}"))
+        if (!lines.Last().Trim().EndsWith('}'))
         {
             logger.LogWarning("Warning: Cannot find trailing `}}`. Does not look like well-formed JSON front matter. Returning...");
 
@@ -139,7 +139,7 @@ public static class FileInfoExtensions
         {
             logger.LogError("Error: the expected entry is not here.");
 
-            return (Array.Empty<string>(), Array.Empty<string>());
+            return ([], []);
         }
 
         string[] lines = File.ReadAllLines(entry.FullName);
@@ -148,7 +148,7 @@ public static class FileInfoExtensions
         {
             logger.LogWarning("Warning: the expected markdown entry lines are not here. Returning {Count} lines as content...", lines.Length);
 
-            return (Array.Empty<string>(), lines.ToArray());
+            return ([], lines.ToArray());
         }
 
         string[] frontMatterLines = lines
@@ -260,24 +260,14 @@ public static class FileInfoExtensions
     /// </summary>
     /// <param name="lines">collection of lines where <see cref="LookLikeJsonFrontMatter"/> returns <c>true</c></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ToJsonString(this IReadOnlyCollection<string>? lines, ILogger logger)
-    {
-        if (!lines.LookLikeJsonFrontMatter(logger)) return null;
-
-        return lines?.Aggregate(string.Concat);
-    }
+    public static string? ToJsonString(this IReadOnlyCollection<string>? lines, ILogger logger) => !lines.LookLikeJsonFrontMatter(logger) ? null : lines?.Aggregate(string.Concat);
 
     /// <summary>
     /// Converts the specified collection of lines to a YAML string.
     /// </summary>
     /// <param name="lines">collection of lines where <see cref="LookLikeYamlFrontMatter"/> returns <c>true</c></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
-    public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger logger)
-    {
-        if (!lines.LookLikeYamlFrontMatter(logger)) return null;
-
-        return lines?.Aggregate((a, line) => string.Concat(a, MarkdownEntry.NewLine, line));
-    }
+    public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger logger) => !lines.LookLikeYamlFrontMatter(logger) ? null : lines?.Aggregate((a, line) => string.Concat(a, MarkdownEntry.NewLine, line));
 
     /// <summary>
     /// Writes a new entry with JSON front matter to <see cref="FileSystemInfo.FullName"/>

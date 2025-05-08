@@ -13,7 +13,7 @@ public class PublicationChapter
     /// <param name="chapterTemplate">The chapter template.</param>
     /// <param name="chapterDirectory">The chapter directory.</param>
     /// <param name="logger">The <see cref="ILogger"/>.</param>
-    public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory, ILogger? logger)
+    public PublicationChapter(KeyValuePair<string, string> chapterPair, XDocument chapterTemplate, string chapterDirectory, ILogger logger)
     {
         _logger = logger;
         _chapterPair = chapterPair;
@@ -27,14 +27,14 @@ public class PublicationChapter
     /// <returns></returns>
     public XElement? GetChapterBodyElement()
     {
-        var xhtml = PublicationNamespaces.Xhtml;
+        XNamespace xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root?
+        XElement? e = _chapter.Root?
             .Element(xhtml + "body")?
             .Element(xhtml + "div")?
             .Element(xhtml + "div");
 
-        _logger?.LogInformation("{Value}", e?.Value);
+        _logger.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -44,14 +44,14 @@ public class PublicationChapter
     /// </summary>
     public XElement? GetH1Element()
     {
-        var xhtml = PublicationNamespaces.Xhtml;
+        XNamespace xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root?
+        XElement? e = _chapter.Root?
             .Element(xhtml + "body")?
             .Element(xhtml + "div")?
             .Element(xhtml + "h1");
 
-        _logger?.LogInformation("{Value}", e?.Value);
+        _logger.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -61,13 +61,13 @@ public class PublicationChapter
     /// </summary>
     public XElement? GetTitleElement()
     {
-        var xhtml = PublicationNamespaces.Xhtml;
+        XNamespace xhtml = PublicationNamespaces.Xhtml;
 
-        var e = _chapter.Root?
+        XElement? e = _chapter.Root?
             .Element(xhtml + "head")?
             .Element(xhtml + "title");
 
-        _logger?.LogInformation("{Value}", e?.Value);
+        _logger.LogInformation("{Value}", e?.Value);
 
         return e;
     }
@@ -77,55 +77,55 @@ public class PublicationChapter
     /// </summary>
     public string GenerateXhtml()
     {
-        var titleElement = GetTitleElement();
-        var h1Element = GetH1Element();
-        var divPlaceholderElement = GetChapterBodyElement();
+        XElement? titleElement = GetTitleElement();
+        XElement? h1Element = GetH1Element();
+        XElement? divPlaceholderElement = GetChapterBodyElement();
 
-        var chapterBodyBuilder = new StringBuilder();
-        var divPageBreak = @"<div style=""page-break-before:always;""><span epub:type=""pagebreak"" /></div>";
+        StringBuilder chapterBodyBuilder = new StringBuilder();
+        string divPageBreak = """<div style="page-break-before:always;"><span epub:type="pagebreak" /></div>""";
 
         _chapterDirectoryInfo
             .EnumerateFiles("*.md")
             .Select((markdownFile, i) => new { markdownFile, i })
             .ForEachInEnumerable(a =>
             {
-                var markdownFile = a.markdownFile;
-                var i = a.i;
+                FileInfo markdownFile = a.markdownFile;
+                int i = a.i;
 
                 if (i > 0) chapterBodyBuilder.AppendLine(divPageBreak);
 
-                _logger?.LogInformation("    markdown file `{Path}`...", markdownFile);
-                var markdown = File.ReadAllText(markdownFile.FullName);
-                var raw = Markdown.ToHtml(markdown);
-                var rawElement = XElement.Parse($"<raw>{raw}</raw>");
+                _logger.LogInformation("    markdown file `{Path}`...", markdownFile);
+                string markdown = File.ReadAllText(markdownFile.FullName);
+                string raw = Markdown.ToHtml(markdown);
+                XElement rawElement = XElement.Parse($"<raw>{raw}</raw>");
 
-                _logger?.LogInformation("    looking for h2 elements wrapped by p elements...");
-                var h2Elements = rawElement.Descendants("h2");
+                _logger.LogInformation("    looking for h2 elements wrapped by p elements...");
+                IEnumerable<XElement> h2Elements = rawElement.Descendants("h2");
                 h2Elements.ToArray().ForEachInEnumerable(h2Element =>
                 {
                     if (h2Element.Parent?.Name != "p") return;
                     h2Element.Parent.ReplaceWith(h2Element);
                 });
 
-                _logger?.LogInformation("    looking for h3 elements wrapped by p elements...");
-                var h3Elements = rawElement.Descendants("h3");
+                _logger.LogInformation("    looking for h3 elements wrapped by p elements...");
+                IEnumerable<XElement> h3Elements = rawElement.Descendants("h3");
                 h3Elements.ToArray().ForEachInEnumerable(h3Element =>
                 {
                     if (h3Element.Parent?.Name != "p") return;
                     h3Element.Parent.ReplaceWith(h3Element);
                 });
 
-                _logger?.LogInformation("    looking for white-space-preservation blocks...");
-                var divElements = rawElement
+                _logger.LogInformation("    looking for white-space-preservation blocks...");
+                IEnumerable<XElement> divElements = rawElement
                     .Elements("div")
                     .Where(div =>
                         div.Attribute("class").ToReferenceTypeValueOrThrow().Value.Contains("white-space-preservation"));
 
                 divElements.ForEachInEnumerable(div =>
                 {
-                    var u00A0 = " ";
-                    var twoSpaces = "  ";
-                    var pElements = div.Elements("p").Where(p => p.Value.Contains(twoSpaces));
+                    const string u00A0 = " ";
+                    const string twoSpaces = "  ";
+                    IEnumerable<XElement> pElements = div.Elements("p").Where(p => p.Value.Contains(twoSpaces));
                     pElements.ForEachInEnumerable(p => p.Value = p.Value
                         .Replace("&#160;", u00A0)
                         .Replace(twoSpaces, string.Concat(u00A0, u00A0)));
@@ -137,20 +137,20 @@ public class PublicationChapter
         titleElement?.SetValue(_chapterPair.Value);
         h1Element?.SetValue(_chapterPair.Value);
 
-        var xhtml = PublicationNamespaces.Xhtml;
-        var ops = PublicationNamespaces.IdpfOpenPackagingStructure;
+        XNamespace xhtml = PublicationNamespaces.Xhtml;
+        XNamespace ops = PublicationNamespaces.IdpfOpenPackagingStructure;
 
-        var chapterBody =
-            $@"<div class=""chapter-body"" xmlns=""{xhtml}"" xmlns:epub=""{ops}"">{chapterBodyBuilder}</div>";
+        string chapterBody =
+            $"""<div class="chapter-body" xmlns="{xhtml}" xmlns:epub="{ops}">{chapterBodyBuilder}</div>""";
 
-        var chapterBodyElement = XElement.Parse(chapterBody);
+        XElement chapterBodyElement = XElement.Parse(chapterBody);
         divPlaceholderElement?.ReplaceWith(chapterBodyElement.Elements());
 
         return _chapter.ToString();
     }
 
-    readonly ILogger? _logger;
-    readonly DirectoryInfo _chapterDirectoryInfo;
-    readonly XDocument _chapter;
-    readonly KeyValuePair<string, string> _chapterPair;
+    private readonly ILogger _logger;
+    private readonly DirectoryInfo _chapterDirectoryInfo;
+    private readonly XDocument _chapter;
+    private readonly KeyValuePair<string, string> _chapterPair;
 }

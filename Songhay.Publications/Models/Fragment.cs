@@ -155,7 +155,7 @@ public class Fragment : IFragment
         return this.ToDisplayText();
     }
 
-    string? _clientId;
-    int? _documentId;
-    int? _fragmentId;
+    private string? _clientId;
+    private int? _documentId;
+    private int? _fragmentId;
 }

@@ -20,7 +20,7 @@ public class OebpsTextToc
     /// <param name="chapterSet">chapter data</param>
     /// <param name="epubTextDirectory">conventional <c>epub/OEBPS/Text</c> directory</param>
     /// <param name="logger">The <see cref="ILogger"/>.</param>
-    public OebpsTextToc(JsonElement publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory, ILogger? logger)
+    public OebpsTextToc(JsonElement publicationMeta, Dictionary<string, string> chapterSet, string epubTextDirectory, ILogger logger)
     {
         _logger = logger;
 
@@ -90,7 +90,7 @@ public class OebpsTextToc
 
     internal void SetTocAnchors(XDocument tocDocument)
     {
-        _logger?.LogInformation("setting TOC chapter anchors...");
+        _logger.LogInformation("setting TOC chapter anchors...");
 
         var xhtml = PublicationNamespaces.Xhtml;
 
@@ -142,13 +142,13 @@ public class OebpsTextToc
 
         if (!newChapterElementList.Any()) return;
 
-        _logger?.LogInformation("adding new elements under templated element...");
+        _logger.LogInformation("adding new elements under templated element...");
         templatedChapterElement?.AddAfterSelf(newChapterElementList.OfType<object>().ToArray());
     }
 
-    readonly ILogger? _logger;
-    readonly Dictionary<string, string> _chapterSet;
-    readonly JsonElement _publicationMeta;
-    readonly string _documentPath;
-    readonly XDocument _document;
+    private readonly ILogger _logger;
+    private readonly Dictionary<string, string> _chapterSet;
+    private readonly JsonElement _publicationMeta;
+    private readonly string _documentPath;
+    private readonly XDocument _document;
 }

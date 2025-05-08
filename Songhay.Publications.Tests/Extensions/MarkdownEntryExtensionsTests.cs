@@ -2,10 +2,8 @@
 
 namespace Songhay.Publications.Tests.Extensions;
 
-public class MarkdownEntryExtensionsTests
+public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
 {
-    public MarkdownEntryExtensionsTests(ITestOutputHelper helper) => _testOutputHelper = helper;
-
     [Fact]
     public void DoNullCheck_ArgumentNullException_Test()
     {
@@ -20,19 +18,15 @@ public class MarkdownEntryExtensionsTests
     public void DoNullCheck_NullReferenceException_Test()
     {
         // arrange
-        MarkdownEntry? data = new MarkdownEntry();
+        MarkdownEntry data = new();
 
         // assert
         Assert.Throws<NullReferenceException>(() => data.DoNullCheck());
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { 255 },
-        "../../../markdown/presentation-drafts/to-extract-test.md")]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { 255 },
-        "../../../markdown/presentation-drafts/to-extract-test2.md")]
+    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test.md")]
+    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
     public void ToExtract_Test(int expectedLength, FileInfo entryInfo)
     {
         var entry = entryInfo.ToMarkdownEntry();
@@ -44,8 +38,7 @@ public class MarkdownEntryExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        "../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData("../../../markdown/to-markdown-entry-test.md")]
     public void ToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
@@ -59,8 +52,8 @@ public class MarkdownEntryExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { "2005-01-18-msn-video-replaces-feedroomcom" },
+    [ProjectFileData(
+        ["2005-01-18-msn-video-replaces-feedroomcom"],
         "../../../markdown/to-markdown-entry-test.md")]
     public void ToMarkdownEntry_Test(string clientId, FileInfo entryInfo)
     {
@@ -76,9 +69,7 @@ public class MarkdownEntryExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { 5 },
-        "../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData([5], "../../../markdown/to-markdown-entry-test.md")]
     public void ToParagraphs_Test(int expectedNumberOfParagraphs, FileInfo entryInfo)
     {
         //arrange
@@ -92,8 +83,7 @@ public class MarkdownEntryExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        "../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData("../../../markdown/to-markdown-entry-test.md")]
     public void ToParagraphsAndToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
@@ -130,19 +120,15 @@ public class MarkdownEntryExtensionsTests
 
         string? extract = jO?["extract"]?.GetValue<string>();
 
-        _testOutputHelper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
-        _testOutputHelper.WriteLine($"{entry.FrontMatter}");
+        helper.WriteLine($"front matter (input-tag: `{tag ?? "[null]"}`):");
+        helper.WriteLine($"{entry.FrontMatter}");
 
         Assert.False(string.IsNullOrWhiteSpace(extract));
     }
 
     [Theory]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { 255 },
-        "../../../markdown/presentation-drafts/to-extract-test.md")]
-    [ProjectFileData(typeof(MarkdownEntryExtensionsTests),
-        new object[] { 255 },
-        "../../../markdown/presentation-drafts/to-extract-test2.md")]
+    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test.md")]
+    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
     public void With11tyExtract_FromFile_Test(int expectedLength, FileInfo entryInfo)
     {
         var entry = entryInfo.ToMarkdownEntry()
@@ -168,7 +154,7 @@ public class MarkdownEntryExtensionsTests
             .WithContentHeader();
 
         //act
-        _testOutputHelper.WriteLine(entry.ToFinalEdit());
+        helper.WriteLine(entry.ToFinalEdit());
         entry.Touch(DateTime.Now);
 
         //assert
@@ -179,10 +165,8 @@ public class MarkdownEntryExtensionsTests
 
         Assert.True(node?.GetValue<DateTime>() > inceptDate);
 
-        _testOutputHelper.WriteLine(node.ToJsonString());
+        helper.WriteLine(node.ToJsonString());
 
         Assert.NotNull(v);
     }
-
-    private readonly ITestOutputHelper _testOutputHelper;
 }

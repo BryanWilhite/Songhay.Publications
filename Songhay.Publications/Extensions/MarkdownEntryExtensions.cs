@@ -5,15 +5,8 @@ namespace Songhay.Publications.Extensions;
 /// <summary>
 /// Extensions of <see cref="MarkdownEntry" />.
 /// </summary>
-public static class MarkdownEntryExtensions
+public static partial class MarkdownEntryExtensions
 {
-    static MarkdownEntryExtensions() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
-
     /// <summary>
     /// Effectively validates <see cref="MarkdownEntry" />.
     /// </summary>
@@ -42,10 +35,10 @@ public static class MarkdownEntryExtensions
     /// <param name="length">The string-length of the extract.</param>
     public static string ToExtract(this MarkdownEntry? entry, int length)
     {
-        var paragraphs = entry.ToParagraphs();
-        var skip = paragraphs.Length > 1 ? 1 : 0;
-        var content = paragraphs.Skip(skip).Aggregate(string.Empty, (a, i) => $"{a} {i}");
-        content = Regex.Replace(content, @"<[^>]+>", string.Empty);
+        string[] paragraphs = entry.ToParagraphs();
+        int skip = paragraphs.Length > 1 ? 1 : 0;
+        string content = paragraphs.Skip(skip).Aggregate(string.Empty, (a, i) => $"{a} {i}");
+        content = MarkupRegex().Replace(content, string.Empty);
         content = Markdown.ToPlainText(content);
 
         return content.Length > length ?
@@ -62,7 +55,7 @@ public static class MarkdownEntryExtensions
     {
         entry.DoNullCheck();
 
-        var finalEdit = string.Concat(
+        string finalEdit = string.Concat(
             "---json",
             MarkdownEntry.NewLine,
             entry?.FrontMatter.ToString().Trim(),
@@ -84,29 +77,28 @@ public static class MarkdownEntryExtensions
     /// <param name="entry">The <see cref="FileInfo" /> entry.</param>
     public static MarkdownEntry ToMarkdownEntry(this FileInfo entry)
     {
-        if (entry == null) throw new NullReferenceException($"The expected {nameof(FileInfo)} is not here.");
-        TraceSource?.TraceVerbose($"converting `{entry.FullName}`...");
+        ArgumentNullException.ThrowIfNull(entry);
         if (!File.Exists(entry.FullName)) throw new NullReferenceException($"The expected {nameof(FileInfo)} path is not here.");
 
-        var frontTop = "---json";
-        var frontBottom = "---";
-        var lines = File.ReadAllLines(entry.FullName);
+        const string frontTop = "---json";
+        const string frontBottom = "---";
+        string[] lines = File.ReadAllLines(entry.FullName);
 
-        if (!lines.Any()) throw new FormatException($"File {entry.Name} is empty.");
+        if (lines.Length == 0) throw new FormatException($"File {entry.Name} is empty.");
         if (lines.First().Trim() != frontTop) throw new FormatException("The expected entry format is not here [front matter top].");
         if (!lines.Contains(frontBottom)) throw new FormatException("The expected entry format is not here [front matter bottom].");
 
-        var json = lines
+        string json = lines
             .Skip(1)
             .TakeWhile(i => !i.Contains(frontBottom))
             .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-        var content = lines
+        string content = lines
             .SkipWhile(i => !i.Equals(frontBottom))
             .Skip(1)
             .Aggregate((a, i) => $"{a}{MarkdownEntry.NewLine}{i}");
 
-        var frontMatter =
+        JsonObject frontMatter =
             JsonNodeUtility.ConvertToJsonNode(new { error = "front matter was not found", file = entry.FullName })
                 .ToReferenceTypeValueOrThrow()
                 .AsObject();
@@ -117,10 +109,10 @@ public static class MarkdownEntryExtensions
         }
         catch (JsonException ex)
         {
-            TraceSource?.TraceError(ex);
+            frontMatter["error"] = JsonValue.Create(ex.Message);
         }
 
-        var mdEntry = new MarkdownEntry
+        MarkdownEntry mdEntry = new MarkdownEntry
         {
             EntryFileInfo = entry,
             FrontMatter = frontMatter,
@@ -279,7 +271,7 @@ public static class MarkdownEntryExtensions
     {
         ArgumentNullException.ThrowIfNull(entry);
 
-        var slug = title.ToBlogSlug();
+        string slug = title.ToBlogSlug();
         tag ??= string.Empty;
 
         var fm = new
@@ -304,4 +296,7 @@ public static class MarkdownEntryExtensions
 
         return entry;
     }
+
+    [GeneratedRegex(@"<[^>]+>")]
+    private static partial Regex MarkupRegex();
 }

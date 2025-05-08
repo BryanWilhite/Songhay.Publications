@@ -25,13 +25,13 @@ public class ResponsiveImage
     /// <summary>
     /// Gets or sets the candidates.
     /// </summary>
-    public ICollection<ImageCandidate> Candidates { get; init; } = Enumerable.Empty<ImageCandidate>().ToList();
+    public ICollection<ImageCandidate> Candidates { get; init; } = [];
 
     /// <summary>
     /// Gets or sets the sizes.
     /// </summary>
-    public ICollection<ImageSize> Sizes { get; init; } = Enumerable.Empty<ImageSize>().ToList();
+    public ICollection<ImageSize> Sizes { get; init; } = [];
 
-    string? _key;
-    Uri? _source;
+    private string? _key;
+    private Uri? _source;
 }
