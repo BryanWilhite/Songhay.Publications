@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>8.0.1</version>
+    <version>8.0.2</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -22,7 +22,7 @@
         <dependency id="CloneExtensions" version="1.4.2" />
         <dependency id="FluentValidation" version="12.0.0" />
         <dependency id="Markdig" version="0.41.1" />
-        <dependency id="SonghayCore" version="8.0.0" />
+        <dependency id="SonghayCore" version="8.0.1" />
         <dependency id="YamlDotNet" version="16.3.0" />
       </group>
     </dependencies>
