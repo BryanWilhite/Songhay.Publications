@@ -186,7 +186,8 @@ public class PublicationContext
         string publicationMetaFile = ProgramFileUtility
             .GetCombinedPath(publicationMetaPath, PublicationFiles.EpubMetadata, fileIsExpected: true);
 
-        JsonElement publicationMeta = JsonDocument.Parse(File.ReadAllText(publicationMetaFile)).RootElement;
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(publicationMetaFile));
+        JsonElement publicationMeta = jDoc.RootElement;
         Dictionary<string, string> chapterSet = publicationMeta
             .GetProperty("publication")
             .GetProperty("chapterSet")

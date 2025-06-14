@@ -181,10 +181,12 @@ public class MarkdownEntryActivity : IActivityTask
 
     internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext()
     {
-        var (presentationInfo, settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
 
-        _logger.LogInformation($"applying settings...");
-        var jSettings = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
+        _logger.LogInformation("applying settings...");
+
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jSettings = jDoc.RootElement;
 
         return (presentationInfo, jSettings);
     }

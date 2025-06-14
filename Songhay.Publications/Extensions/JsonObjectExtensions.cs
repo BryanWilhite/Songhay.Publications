@@ -20,7 +20,11 @@ public static class JsonObjectExtensions
 
                 return null;
             default:
-                return JsonDocument.Parse(documentData.ToJsonString()).RootElement.ToYaml();
+            {
+                using var jDoc = JsonDocument.Parse(documentData.ToJsonString());
+
+                return jDoc.RootElement.ToYaml();
+            }
         }
     }
 
