@@ -31,17 +31,18 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
 
-        var entryPath = jO.GetAddEntryExtractArg(presentationInfo);
+        string entryPath = jO.GetAddEntryExtractArg(presentationInfo);
         Assert.True(File.Exists(entryPath));
 
-        var commandName = jO.GetPublicationCommand();
+        string? commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(MarkdownEntryActivity.AddEntryExtract), commandName);
     }
 
@@ -68,13 +69,14 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
-        var (entryRootInfo, indexRootInfo, indexFileName) = jO.GetCompressed11TyIndexArgs(presentationInfo);
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
+        (DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) = jO.GetCompressed11TyIndexArgs(presentationInfo);
 
         Assert.True(entryRootInfo.Exists);
         Assert.True(indexRootInfo.Exists);
@@ -82,7 +84,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         indexRootInfo.FindFile(indexFileName);
 
-        var commandName = jO.GetPublicationCommand();
+        string? commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(SearchIndexActivity.GenerateCompressed11TySearchIndex), commandName);
     }
 
@@ -109,18 +111,19 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
 
-        var (entryPath, collapsedHost) = jO.GetExpandUrisArgs(presentationInfo);
+        (string entryPath, string collapsedHost) = jO.GetExpandUrisArgs(presentationInfo);
         Assert.True(File.Exists(entryPath));
         Assert.False(string.IsNullOrEmpty(collapsedHost));
 
-        var commandName = jO.GetPublicationCommand();
+        string? commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(MarkdownEntryActivity.ExpandUris), commandName);
     }
 
@@ -147,13 +150,14 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
-        var (input, pattern, replacement, useRegex, outputPath) = jO.GetFindChangeArgs(presentationInfo);
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
+        (string input, string pattern, string replacement, bool useRegex, string outputPath) = jO.GetFindChangeArgs(presentationInfo);
 
         Assert.False(string.IsNullOrEmpty(input));
         Assert.False(string.IsNullOrEmpty(pattern));
@@ -161,7 +165,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(useRegex);
         Assert.False(string.IsNullOrEmpty(outputPath));
 
-        var inputPath = jO.GetProperty("inputPath").GetString();
+        string? inputPath = jO.GetProperty("inputPath").GetString();
 
         helper.WriteLine($"{nameof(inputPath)}: {inputPath}");
         helper.WriteLine($"{nameof(input)}: {input.Substring(0, 16)}...");
@@ -194,18 +198,19 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
 
-        var (entryDraftsRootInfo, title) = jO.GetGenerateEntryArgs(presentationInfo);
+        (DirectoryInfo entryDraftsRootInfo, string title) = jO.GetGenerateEntryArgs(presentationInfo);
         Assert.True(entryDraftsRootInfo.Exists);
         Assert.False(string.IsNullOrEmpty(title));
 
-        var commandName = jO.GetPublicationCommand();
+        string? commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(MarkdownEntryActivity.GenerateEntry), commandName);
     }
 
@@ -232,20 +237,21 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
 
         Assert.NotNull(configuration);
 
-        var (presentationInfo, settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        var jO = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow().RootElement;
+        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        JsonElement jO = jDoc.RootElement;
 
-        var (entryDraftsRootInfo, entryRootInfo, entryFileName) =
+        (DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName) =
             jO.GetPublishEntryArgs(presentationInfo);
         Assert.True(entryDraftsRootInfo.Exists);
         Assert.True(entryRootInfo.Exists);
         Assert.False(string.IsNullOrEmpty(entryFileName));
 
-        var commandName = jO.GetPublicationCommand();
+        string? commandName = jO.GetPublicationCommand();
         Assert.Equal(nameof(MarkdownEntryActivity.PublishEntry), commandName);
     }
 
@@ -263,7 +269,8 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
                 """)]
     public void ToYaml_Test(string json)
     {
-        var jE = JsonDocument.Parse(json).RootElement;
+        using var jDoc = JsonDocument.Parse(json);
+        JsonElement jE = jDoc.RootElement;
 
         string yaml = jE.ToYaml();
 
