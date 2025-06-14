@@ -34,12 +34,12 @@ These class definitions are still useful (without much SQL Server or Entity Fram
 
 ```mermaid
 graph BT
-    pubs[`Songhay.Publications`]
+    pubs[Songhay.Publications]
 
-    pubs-->1[`Songhay.Publications.DataAccess`]
-    pubs-->1[`Songhay.Player`]
-    pubs-->2[`Songhay.Publications.Analytics`]
-    pubs-->3[`Songhay.Publications.KinteSpace`]
+    pubs-->1[Songhay.Publications.DataAccess]
+    pubs-->1[Songhay.Player]
+    pubs-->2[Songhay.Publications.Analytics]
+    pubs-->3[Songhay.Publications.KinteSpace]
 ```
 
 @[BryanWilhite](https://twitter.com/BryanWilhite)
