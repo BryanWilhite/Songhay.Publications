@@ -12,7 +12,11 @@ public class Segment : ISegment
     /// </summary>
     [Display(Name = "Client ID", Order = 2)]
     [DisallowNull]
-    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
+    public string? ClientId
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the is active.
@@ -31,14 +35,22 @@ public class Segment : ISegment
     /// </summary>
     [Display(Name = "Segment ID", Order = 1)]
     [DisallowNull]
-    public int? SegmentId { get => _segmentId; set => _segmentId = value.ToValueOrThrow(); }
+    public int? SegmentId
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the name of the segment.
     /// </summary>
     [Display(Name = "Segment Name", Order = 3)]
     [DisallowNull]
-    public string? SegmentName { get => _segmentName; set => _segmentName = value.ToReferenceTypeValueOrThrow(); }
+    public string? SegmentName
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the sort ordinal.
@@ -89,8 +101,4 @@ public class Segment : ISegment
     /// A <see cref="String" /> that represents this instance.
     /// </returns>
     public override string ToString() => this.ToDisplayText();
-
-    private string? _clientId;
-    private int? _segmentId;
-    private string? _segmentName;
 }

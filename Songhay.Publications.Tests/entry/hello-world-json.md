@@ -1,13 +1,13 @@
 ---json
 {
   "ClientId": null,
-  "InceptDate": "2025-05-07T17:28:28.0408557-07:00",
+  "InceptDate": "2026-04-09T20:04:05.5113507-07:00",
   "DocumentId": null,
   "DocumentShortName": null,
   "FileName": "hello-world-json.md",
   "IsActive": true,
   "IsRoot": null,
-  "ModificationDate": "2025-05-07T17:28:28.0408557-07:00",
+  "ModificationDate": "2026-04-09T20:04:05.5113507-07:00",
   "EndDate": null,
   "Path": "./entries/",
   "SegmentId": null,

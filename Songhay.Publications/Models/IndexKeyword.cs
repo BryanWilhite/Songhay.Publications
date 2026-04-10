@@ -10,13 +10,21 @@ public class IndexKeyword : IIndexKeyword
     /// Index Keyword Group ID.
     /// </summary>
     [DisallowNull]
-    public int? Id { get => _id; set => _id = value.ToValueOrThrow(); }
+    public int? Id
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Index Keyword Group Client ID.
     /// </summary>
     [DisallowNull]
-    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
+    public string? ClientId
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the keyword value.
@@ -57,7 +65,4 @@ public class IndexKeyword : IIndexKeyword
     /// The modification date.
     /// </value>
     public DateTime? ModificationDate { get; set; }
-
-    private int? _id;
-    private string? _clientId;
 }

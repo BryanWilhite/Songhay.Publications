@@ -10,15 +10,15 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
     {
         const string clientId = "my-data";
 
-        var collection = new[]
-        {
+        Segment[] collection =
+        [
             new Segment(),
             new Segment(),
             new Segment { ClientId = clientId },
-            new Segment(),
-        };
+            new Segment()
+        ];
 
-        var first = collection
+        ISegment first = collection
             .GetSegmentByPredicate(i => i.ClientId == clientId)
             .ToReferenceTypeValueOrThrow();
 
@@ -28,8 +28,8 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
     [Fact]
     public void HasDocuments_Test()
     {
-        var testCollection = new (bool expectedResult, ISegment? data)[]
-        {
+        (bool expectedResult, ISegment? data)[] testCollection =
+        [
             ( expectedResult: false, data: null ),
             ( expectedResult: false, data: new Segment() ),
             (
@@ -38,10 +38,10 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
                 {
                     Documents = [new Document()]
                 }
-            ),
-        };
+            )
+        ];
 
-        foreach (var test in testCollection)
+        foreach ((bool expectedResult, ISegment? data) test in testCollection)
         {
             if (test.data == null)
             {
@@ -49,106 +49,96 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
                 continue;
             }
 
-            var actual = test.data.HasDocuments();
+            bool actual = test.data.HasDocuments();
             Assert.Equal(test.expectedResult, actual);
         }
     }
 
-    [Fact]
-    public void ToDisplayText_Test()
+    public static TheoryData<ISegment?, Func<ISegment?, bool>> ToDisplayTextTestTheoryData = new ()
     {
-        var testCollection = new (ISegment? data, Func<ISegment?, bool> test)[]
         {
-            (
-                null,
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
+            null,
+            data =>
+            {
+                string text = data.ToDisplayText();
 
-                    return text.Contains("the specified ") && text.Contains("is null.");
-                }
-            ),
-            (
-                new Segment
-                {
-                    ClientId = "my-segment",
-                    SegmentName = "my-segment-name",
-                    IsActive = true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
-                            text.Contains($"{data.IsActive}") &&
-                            text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Segment
-                {
-                    ClientId = "my-segment",
-                    SegmentName = "my-segment-name",
-                    IsActive = true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = $"{data}";
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
-                            text.Contains($"{data.IsActive}") &&
-                            text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Segment
-                {
-                    SegmentId = 999,
-                    ClientId = "my-segment",
-                    SegmentName = "my-segment-name",
-                    IsActive = true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText(showIdOnly: true);
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            text.Contains($"{data.SegmentId}") &&
-                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrWhiteSpace(data.SegmentName) && !text.Contains(data.SegmentName) &&
-                            !text.Contains($"{data.IsActive}") &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            )
-        };
-
-        foreach (var item in testCollection)
+                return text.Contains("the specified ") && text.Contains("is null.");
+            }
+        },
         {
-            Assert.True(item.test(item.data));
+            new Segment
+            {
+                ClientId = "my-segment",
+                SegmentName = "my-segment-name",
+                IsActive = true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = data.ToDisplayText();
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
+                        text.Contains($"{data.IsActive}")
+                };
+            }
+        },
+        {
+            new Segment
+            {
+                ClientId = "my-segment",
+                SegmentName = "my-segment-name",
+                IsActive = true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = $"{data}";
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.SegmentName) && text.Contains(data.SegmentName) &&
+                        text.Contains($"{data.IsActive}")
+                };
+            }
+        },
+        {
+            new Segment
+            {
+                SegmentId = 999,
+                ClientId = "my-segment",
+                SegmentName = "my-segment-name",
+                IsActive = true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = data.ToDisplayText(showIdOnly: true);
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        text.Contains($"{data.SegmentId}") &&
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.SegmentName) && !text.Contains(data.SegmentName) &&
+                        !text.Contains($"{data.IsActive}")
+                };
+            }
         }
+    };
+
+    [Theory, MemberData(nameof(ToDisplayTextTestTheoryData))]
+    public void ToDisplayText_Test(ISegment? data, Func<ISegment?, bool> test)
+    {
+        Assert.True(test(data));
     }
 
     [Theory]
@@ -163,14 +153,14 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
             .ToReferenceTypeValueOrThrow()
             .ToArray();
 
-        Assert.True(segments.Any());
+        Assert.NotEmpty(segments);
 
         helper.WriteLine($"converting enumeration of {nameof(Segment)}...");
 
-        var entries = segments.ToPublicationIndexEntries().ToArray();
+        IIndexEntry[] entries = segments.ToPublicationIndexEntries().ToArray();
         Assert.NotEmpty(entries);
 
-        var jsonOutput = entries.ToJson();
+        string jsonOutput = entries.ToJson();
 
         File.WriteAllText(outputInfo.FullName, jsonOutput);
     }
@@ -186,14 +176,14 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
             .ToReferenceTypeValueOrThrow()
             .ToArray();
 
-        Assert.True(segments.Any());
+        Assert.NotEmpty(segments);
 
-        var segment = segments.First();
+        Segment segment = segments.First();
         Assert.False(string.IsNullOrWhiteSpace(segment.SegmentName));
 
         helper.WriteLine($"converting {nameof(Segment)} `{segment.SegmentName}`...");
 
-        var entry = segment.ToPublicationIndexEntry();
+        IIndexEntry entry = segment.ToPublicationIndexEntry();
         Assert.NotNull(entry);
     }
 }

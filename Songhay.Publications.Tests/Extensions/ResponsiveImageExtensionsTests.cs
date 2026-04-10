@@ -28,7 +28,7 @@ public class ResponsiveImageExtensionsTests
         ResponsiveImage? responsiveImage = JsonSerializer.Deserialize<ResponsiveImage>(json);
         Assert.NotNull(responsiveImage);
 
-        var txt = responsiveImage.ToImgMarkup();
+        string txt = responsiveImage.ToImgMarkup();
         File.WriteAllText(outputInfo.FullName, txt);
     }
 }

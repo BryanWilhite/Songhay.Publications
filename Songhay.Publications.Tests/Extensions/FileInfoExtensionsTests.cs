@@ -1,4 +1,5 @@
 using System.Text.Json.Nodes;
+using Songhay.Publications.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
 
@@ -11,11 +12,11 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeJsonFrontMatter_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
 
-        var (frontMatterLines, _) = entry.ToFrontMatterLinesAndContentLines(logger);
+        (IReadOnlyCollection<string> frontMatterLines, _) = entry.ToFrontMatterLinesAndContentLines(logger);
 
-        var actual = frontMatterLines.LookLikeJsonFrontMatter(logger);
+        bool actual = frontMatterLines.LookLikeJsonFrontMatter(logger);
         Assert.Equal(expected, actual);
     }
 
@@ -26,11 +27,11 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeYamlFrontMatter_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
 
-        var (frontMatterLines, _) = entry.ToFrontMatterLinesAndContentLines(logger);
+        (IReadOnlyCollection<string> frontMatterLines, _) = entry.ToFrontMatterLinesAndContentLines(logger);
 
-        var actual = frontMatterLines.LookLikeYamlFrontMatter(logger);
+        bool actual = frontMatterLines.LookLikeYamlFrontMatter(logger);
         Assert.Equal(expected, actual);
     }
 
@@ -42,9 +43,9 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeYamlFrontMatter_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
 
-        var actual = entry.ToFrontMatterLinesAndContentLines(logger);
+        (IReadOnlyCollection<string> FrontMatterLines, IReadOnlyCollection<string> ContentLines) actual = entry.ToFrontMatterLinesAndContentLines(logger);
 
         if(expectedFrontMatterLineCount > 0)
         {
@@ -67,9 +68,9 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));
 
-        var actual = new FileInfo(projectDirInfo.ToCombinedPath(entryPath));
+        FileInfo actual = new(projectDirInfo.ToCombinedPath(entryPath));
 
-        var (frontMatter, content) = actual.ToIDocumentAndAnyContent(logger);
+        (IDocument? frontMatter, string? content) = actual.ToIDocumentAndAnyContent(logger);
         logger.LogInformation("{Label}: {Value}", nameof(frontMatter), frontMatter?.ToString());
         logger.LogInformation("{Label}: {Value}", nameof(content), content);
     }
@@ -80,10 +81,10 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToJsonString_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
         string? actual = entry.ToFrontMatterLinesAndContentLines(logger).FrontMatterLines.ToJsonString(logger);
 
-        var node = JsonNode.Parse(actual!);
+        JsonNode? node = JsonNode.Parse(actual!);
         logger.LogInformation(node!.ToJsonString());
     }
 
@@ -94,7 +95,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToYamlString_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
         string? actual = entry.ToFrontMatterLinesAndContentLines(logger).FrontMatterLines.ToYamlString(logger);
 
         logger.LogInformation("Attempting to parse:{NL}{Yaml}", Environment.NewLine, actual);
@@ -108,7 +109,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));
 
-        var actual = new FileInfo(projectDirInfo.ToCombinedPath(entryPath));
+        FileInfo actual = new(projectDirInfo.ToCombinedPath(entryPath));
 
         actual.WriteNewPublicationEntryWithJsonFrontMatter(title,"./entries/", content, logger);
 
@@ -121,7 +122,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));
 
-        var actual = new FileInfo(projectDirInfo.ToCombinedPath(entryPath));
+        FileInfo actual = new(projectDirInfo.ToCombinedPath(entryPath));
 
         actual.WriteNewPublicationEntryWithYamlFrontMatter(title,"./", content, logger);
 

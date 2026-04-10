@@ -39,7 +39,7 @@ public static class IConfigurationExtensions
         logger.LogInformation("Found settings file `{Path}`. Returning...", settingsFilePath);
 
         FileInfo settingsInfo = File.Exists(settingsFilePath) ?
-            new(settingsFilePath)
+            new FileInfo(settingsFilePath)
             :
             presentationShellInfo.FindFile(settingsFilePath).ToReferenceTypeValueOrThrow();
 

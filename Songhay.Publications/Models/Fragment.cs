@@ -12,7 +12,11 @@ public class Fragment : IFragment
     /// </summary>
     [Display(Name = "Client ID", Order = 2)]
     [DisallowNull]
-    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
+    public string? ClientId
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the incept date.
@@ -25,7 +29,11 @@ public class Fragment : IFragment
     /// </summary>
     [Display(Name = "Document ID", Order = 0)]
     [DisallowNull]
-    public int? DocumentId { get => _documentId; set => _documentId = value.ToValueOrThrow(); }
+    public int? DocumentId
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the end date.
@@ -45,7 +53,11 @@ public class Fragment : IFragment
     /// </summary>
     [Display(Name = "Fragment ID", Order = 1)]
     [DisallowNull]
-    public int? FragmentId { get => _fragmentId; set => _fragmentId = value.ToValueOrThrow(); }
+    public int? FragmentId
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the name of the fragment.
@@ -150,12 +162,5 @@ public class Fragment : IFragment
     /// <returns>
     /// A <see cref="System.String" /> that represents this instance.
     /// </returns>
-    public override string ToString()
-    {
-        return this.ToDisplayText();
-    }
-
-    private string? _clientId;
-    private int? _documentId;
-    private int? _fragmentId;
+    public override string ToString() => this.ToDisplayText();
 }

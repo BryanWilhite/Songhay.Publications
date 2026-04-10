@@ -24,7 +24,7 @@ public static class IndexEntryExtensions
             WriteIndented = true,
         };
 
-        var json = JsonSerializer.Serialize(data, options);
+        string json = JsonSerializer.Serialize(data, options);
 
         return json;
     }

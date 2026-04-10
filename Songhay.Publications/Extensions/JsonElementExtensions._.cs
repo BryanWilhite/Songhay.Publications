@@ -44,11 +44,11 @@ public static partial class JsonElementExtensions
     /// <param name="element">the <see cref="JsonElement"/></param>
     public static string ToYaml(this JsonElement element)
     {
-        var serializer = new SerializerBuilder()
+        ISerializer serializer = new SerializerBuilder()
             .WithNamingConvention(CamelCaseNamingConvention.Instance)
             .Build();
 
-        var dict = element
+        Dictionary<string, object?> dict = element
             .EnumerateObject()
             .ToDictionary(p => p.Name, p => p.Value.ToBoxedValue());
 

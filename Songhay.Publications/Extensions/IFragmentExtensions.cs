@@ -143,9 +143,9 @@ public static class FragmentExtensions
     {
         if (data == null) return null;
 
-        var @namespace = typeof(PublicationContext).Namespace;
+        string? @namespace = typeof(PublicationContext).Namespace;
 
-        var dataOut = new MenuDisplayItemModel()
+        MenuDisplayItemModel dataOut = new ()
         {
             DisplayText = data.FragmentDisplayName,
             GroupDisplayText = group == null ? $"{@namespace}.{nameof(Fragment)}" : group.GroupDisplayText,
@@ -153,6 +153,7 @@ public static class FragmentExtensions
             Id = data.FragmentId.GetValueOrDefault(),
             ItemName = data.FragmentName
         };
+
         if (copyFragmentContent) dataOut.Description = data.Content;
 
         return dataOut;

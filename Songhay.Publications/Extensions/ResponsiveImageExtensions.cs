@@ -13,21 +13,21 @@ public static class ResponsiveImageExtensions
     {
         ArgumentNullException.ThrowIfNull(responsiveImage);
 
-        var candidatesCollection = responsiveImage
+        string[] candidatesCollection = responsiveImage
             .Candidates
             .Select(i => $"background-image: url({i.ImageUri?.OriginalString});")
             .ToArray();
 
         if (candidatesCollection.Length == 0) return string.Empty;
 
-        var sizesCollection = responsiveImage
+        string[] sizesCollection = responsiveImage
             .Sizes
             .Select(i => $"@media only screen and {i.MediaCondition}")
             .ToArray();
 
         if (sizesCollection.Length == 0) return string.Empty;
 
-        var stringCollection = sizesCollection
+        IEnumerable<string> stringCollection = sizesCollection
             .Zip(candidatesCollection, (media, background) => $@"
 {media} {{{
     Spacer}{background}

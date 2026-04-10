@@ -11,7 +11,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
         MarkdownEntry? data = null;
 
         // assert
-        Assert.Throws<ArgumentNullException>(() => data.DoNullCheck());
+        Assert.Throws<ArgumentNullException>(data.DoNullCheck);
     }
 
     [Fact]
@@ -21,7 +21,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
         MarkdownEntry data = new();
 
         // assert
-        Assert.Throws<NullReferenceException>(() => data.DoNullCheck());
+        Assert.Throws<NullReferenceException>(data.DoNullCheck);
     }
 
     [Theory]
@@ -29,9 +29,9 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
     public void ToExtract_Test(int expectedLength, FileInfo entryInfo)
     {
-        var entry = entryInfo.ToMarkdownEntry();
+        MarkdownEntry entry = entryInfo.ToMarkdownEntry();
 
-        var extract = entry.ToExtract(expectedLength);
+        string extract = entry.ToExtract(expectedLength);
 
         Assert.False(string.IsNullOrWhiteSpace(extract));
         Assert.Equal(expectedLength + 1, extract.Length);
@@ -42,10 +42,10 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     public void ToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
-        var expected = File.ReadAllText(entryInfo.FullName);
+        string expected = File.ReadAllText(entryInfo.FullName);
 
         // act
-        var actual = entryInfo.ToMarkdownEntry().ToFinalEdit();
+        string actual = entryInfo.ToMarkdownEntry().ToFinalEdit();
 
         //assert
         Assert.Equal(expected, actual);
@@ -58,10 +58,10 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     public void ToMarkdownEntry_Test(string clientId, FileInfo entryInfo)
     {
         // arrange
-        var entry = entryInfo.ToMarkdownEntry();
+        MarkdownEntry entry = entryInfo.ToMarkdownEntry();
 
         // act
-        var jFrontMatter = entry.FrontMatter;
+        JsonObject jFrontMatter = entry.FrontMatter;
 
         // assert
         Assert.NotNull(jFrontMatter);
@@ -73,10 +73,10 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     public void ToParagraphs_Test(int expectedNumberOfParagraphs, FileInfo entryInfo)
     {
         //arrange
-        var entry = entryInfo.ToMarkdownEntry();
+        MarkdownEntry entry = entryInfo.ToMarkdownEntry();
 
         // act
-        var paragraphs = entry.ToParagraphs();
+        string[] paragraphs = entry.ToParagraphs();
 
         //assert
         Assert.Equal(expectedNumberOfParagraphs, paragraphs.Length);
@@ -87,9 +87,9 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     public void ToParagraphsAndToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
-        var expected = File.ReadAllText(entryInfo.FullName);
-        var entry = entryInfo.ToMarkdownEntry();
-        var paragraphs = entry.ToParagraphs();
+        string expected = File.ReadAllText(entryInfo.FullName);
+        MarkdownEntry entry = entryInfo.ToMarkdownEntry();
+        string[] paragraphs = entry.ToParagraphs();
 
         // act
         entry.Content = paragraphs
@@ -97,7 +97,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
                 string.Empty,
                 (a, p) => string.Concat(a, $"{MarkdownEntry.NewLine}{MarkdownEntry.NewLine}", p)
             );
-        var actual = entryInfo.ToMarkdownEntry().ToFinalEdit();
+        string actual = entryInfo.ToMarkdownEntry().ToFinalEdit();
 
         //assert
         Assert.Equal(expected, actual);
@@ -110,7 +110,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     [InlineData("Hello World!", "It was the best of times.", "./path", "{\"thing\": true}", 8)]
     public void With11tyExtract_Test(string? title, string? content, string? path, string? tag, int length)
     {
-        var entry = (new MarkdownEntry())
+        MarkdownEntry entry = (new MarkdownEntry())
             .WithNew11TyFrontMatter(title, DateTime.Now, path, tag)
             .WithContentHeader()
             .WithEdit(i => i.Content = string.Concat(i.Content, content)).With11TyExtract(length);
@@ -131,7 +131,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
     public void With11tyExtract_FromFile_Test(int expectedLength, FileInfo entryInfo)
     {
-        var entry = entryInfo.ToMarkdownEntry()
+        MarkdownEntry entry = entryInfo.ToMarkdownEntry()
             .With11TyExtract(expectedLength);
 
         JsonNode? jO = JsonNode.Parse(entry.FrontMatter["tag"]?.GetValue<string>() ?? "null");
@@ -149,7 +149,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
         //arrange
         const string title = "Hello World!";
         DateTime inceptDate = DateTime.Now.AddSeconds(-3);
-        var entry = new MarkdownEntry()
+        MarkdownEntry entry = new MarkdownEntry()
             .WithNew11TyFrontMatter(title, inceptDate, "/path/to/entry/", "entry_tag")
             .WithContentHeader();
 

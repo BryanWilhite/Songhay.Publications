@@ -11,12 +11,12 @@ public class IDictionaryExtensionsTests(ITestOutputHelper helper)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToTaggedDocument_Test));
 
-        var entry = new FileInfo(projectDirInfo.ToCombinedPath(path));
-        var yaml = entry.ToFrontMatterLinesAndContentLines(logger).FrontMatterLines.ToYamlString(logger);
+        FileInfo entry = new(projectDirInfo.ToCombinedPath(path));
+        string? yaml = entry.ToFrontMatterLinesAndContentLines(logger).FrontMatterLines.ToYamlString(logger);
 
         logger.LogInformation("YAML:{NL}{Data}", Environment.NewLine, yaml);
 
-        var data = YamlUtility.DeserializeYaml(yaml);
+        IDictionary<string, object>? data = YamlUtility.DeserializeYaml(yaml);
         Assert.NotNull(data);
         Assert.NotEmpty(data);
 

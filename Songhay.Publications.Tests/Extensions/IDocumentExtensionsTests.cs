@@ -8,176 +8,161 @@ public class IDocumentExtensionsTests(ITestOutputHelper helper)
     [Fact]
     public void GetDocumentByPredicate_Test()
     {
-        var clientId = "my-data";
+        const string clientId = "my-data";
 
-        var collection = new[]
-        {
-            new Document(),
-            new Document(),
-            new Document { ClientId = clientId },
-            new Document(),
-        };
+        Document[] collection =
+        [
+            new(),
+            new(),
+            new() { ClientId = clientId },
+            new()
+        ];
 
-        var first = collection
+        IDocument first = collection
             .GetDocumentByPredicate(i => i.ClientId == clientId)
             .ToReferenceTypeValueOrThrow();
 
         Assert.Equal(clientId, first.ClientId);
     }
 
-    [Fact]
-    public void HasFragments_Test()
+    public static TheoryData<bool, IDocument?> HasFragmentsTestTheoryData = new()
     {
-        var testCollection = new (bool expectedResult, IDocument? data)[]
+        { false, null },
+        { false, new Document() },
         {
-            ( expectedResult: false, data: null ),
-            ( expectedResult: false, data: new Document() ),
-            (
-                expectedResult: true,
-                data: new Document
-                {
-                    Fragments = new [] { new Fragment() }
-                }
-            ),
-        };
-
-        foreach (var test in testCollection)
-        {
-            if (test.data == null)
+            true,
+            new Document
             {
-                Assert.Throws<ArgumentNullException>(() => test.data.HasFragments());
-                continue;
+                Fragments = [new()]
             }
-
-            var actual = test.data.HasFragments();
-            Assert.Equal(test.expectedResult, actual);
         }
+    };
+
+    [Theory, MemberData(nameof(HasFragmentsTestTheoryData))]
+    public void HasFragments_Test(bool expectedResult, IDocument? data)
+    {
+        if (data == null)
+        {
+            Assert.Throws<ArgumentNullException>(() => data.HasFragments());
+
+            return;
+        }
+
+        bool actual = data.HasFragments();
+
+        Assert.Equal(expectedResult, actual);
     }
 
-    [Fact]
-    public void ToDisplayText_Test()
+    public static TheoryData<IDocument?, Func<IDocument?, bool>> ToDisplayTextTestTheoryData = new()
     {
-        var testCollection = new (IDocument? data, Func<IDocument?, bool> test)[]
         {
-            (
-                null,
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
+            null,
+            data =>
+            {
+                string text = data.ToDisplayText();
 
-                    return text.Contains("the specified ") && text.Contains("is null.");
-                }
-            ),
-            (
-                new Document
-                {
-                    ClientId = "my-document",
-                    DocumentShortName = "my-short-name",
-                    FileName = "my-file.name",
-                    IsActive = true,
-                    Path = "./",
-                    Title = "my-title",
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
-                            !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
-                            !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
-                            !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title) &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Document
-                {
-                    ClientId = "my-document",
-                    DocumentShortName = "my-short-name",
-                    FileName = "my-file.name",
-                    IsActive = true,
-                    Path = "./",
-                    Title = "my-title",
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = $"{data}";
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
-                            !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
-                            text.Contains($"{data.IsActive}") &&
-                            !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
-                            !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title) &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Document
-                {
-                    DocumentId = 999,
-                    ClientId = "my-document",
-                    DocumentShortName = "my-short-name",
-                    FileName = "my-file.name",
-                    Path = "./",
-                    Title = "my-title",
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText(showIdOnly: true);
-                    helper.WriteLine(text);
-
-                    return data switch
-                        {
-                            null => false,
-                            _ =>
-                                text.Contains($"{data.DocumentId}") &&
-                                !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
-                                !string.IsNullOrWhiteSpace(data.DocumentShortName) && !text.Contains(data.DocumentShortName) &&
-                                !string.IsNullOrWhiteSpace(data.FileName) && !text.Contains(data.FileName) &&
-                                !string.IsNullOrWhiteSpace(data.Path) && !text.Contains(data.Path) &&
-                                !string.IsNullOrWhiteSpace(data.Title) && !text.Contains(data.Title) &&
-                                !text.Contains(DateTime.Now.Day.ToString())
-                        };
-                }
-            )
-        };
-
-        foreach (var item in testCollection)
+                return text.Contains("the specified ") && text.Contains("is null.");
+            }
+        },
         {
-            Assert.True(item.test(item.data));
+            new Document
+            {
+                ClientId = "my-document",
+                DocumentShortName = "my-short-name",
+                FileName = "my-file.name",
+                IsActive = true,
+                Path = "./",
+                Title = "my-title",
+            },
+            data =>
+            {
+                string text = data.ToDisplayText();
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
+                        !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
+                        !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
+                        !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title)
+                };
+            }
+        },
+        {
+            new Document
+            {
+                ClientId = "my-document",
+                DocumentShortName = "my-short-name",
+                FileName = "my-file.name",
+                IsActive = true,
+                Path = "./",
+                Title = "my-title",
+            },
+            data =>
+            {
+                string text = $"{data}";
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.DocumentShortName) && text.Contains(data.DocumentShortName) &&
+                        !string.IsNullOrWhiteSpace(data.FileName) && text.Contains(data.FileName) &&
+                        text.Contains($"{data.IsActive}") &&
+                        !string.IsNullOrWhiteSpace(data.Path) && text.Contains(data.Path) &&
+                        !string.IsNullOrWhiteSpace(data.Title) && text.Contains(data.Title)
+                };
+            }
+        },
+        {
+            new Document
+            {
+                DocumentId = 999,
+                ClientId = "my-document",
+                DocumentShortName = "my-short-name",
+                FileName = "my-file.name",
+                Path = "./",
+                Title = "my-title",
+            },
+            data =>
+            {
+                string text = data.ToDisplayText(showIdOnly: true);
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        text.Contains($"{data.DocumentId}") &&
+                        !string.IsNullOrWhiteSpace(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrWhiteSpace(data.DocumentShortName) && !text.Contains(data.DocumentShortName) &&
+                        !string.IsNullOrWhiteSpace(data.FileName) && !text.Contains(data.FileName) &&
+                        !string.IsNullOrWhiteSpace(data.Path) && !text.Contains(data.Path) &&
+                        !string.IsNullOrWhiteSpace(data.Title) && !text.Contains(data.Title)
+                };
+            }
         }
+    };
+
+    [Theory]
+    [MemberData(nameof(ToDisplayTextTestTheoryData))]
+    public void ToDisplayText_Test(IDocument? data, Func<IDocument?, bool> test)
+    {
+        bool actual = test(data);
+
+        Assert.True(actual);
     }
 
     // ReSharper disable once InconsistentNaming
-    public static IEnumerable<object[]> TestData =
+    public static TheoryData<IDocument> ToYamlTestTheoryData =
     [
-        [
-            new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!" }"""}
-        ],
-        [
-            new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!", "keywords": [ "yup" ] }"""}
-        ]
+        new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!" }""" },
+        new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!", "keywords": [ "yup" ] }""" }
     ];
 
-    [Theory, MemberData(nameof(TestData))]
+    [Theory, MemberData(nameof(ToYamlTestTheoryData))]
     public void ToYaml_Test(IDocument document)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToYaml_Test));

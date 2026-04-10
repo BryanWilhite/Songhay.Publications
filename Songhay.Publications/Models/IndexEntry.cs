@@ -5,7 +5,7 @@ namespace Songhay.Publications.Models;
 /// </summary>
 /// <remarks>
 /// The opinion here is that this class demonstrates
-/// the advantages of Typescript over a “classic” OOP language.
+/// the advantages of TypeScript over a “classic” OOP language.
 /// 
 /// The ability to cast an anonymous object into an interface
 /// would eliminate the need for this class.
@@ -61,8 +61,8 @@ public class IndexEntry : IIndexEntry
     [DisallowNull]
     public string? SegmentName
     {
-        get => _segmentName;
-        set => _segmentName = value.ToReferenceTypeValueOrThrow();
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
     }
 
     /// <summary>
@@ -81,8 +81,8 @@ public class IndexEntry : IIndexEntry
     [DisallowNull]
     public string? ClientId
     {
-        get => _clientId;
-        set => _clientId = value.ToReferenceTypeValueOrThrow();
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
     }
 
     /// <summary>
@@ -104,7 +104,4 @@ public class IndexEntry : IIndexEntry
     /// Modification/editorial <see cref="DateTime"/> of the item.
     /// </summary>
     public DateTime? ModificationDate { get; set; }
-
-    private string? _segmentName;
-    private string? _clientId;
 }

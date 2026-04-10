@@ -31,7 +31,7 @@ public static class IDocumentExtensions
     {
         ArgumentNullException.ThrowIfNull(data);
 
-        var first = data.FirstOrDefault(predicate);
+        IDocument? first = data.FirstOrDefault(predicate);
 
         TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
 
@@ -90,7 +90,7 @@ public static class IDocumentExtensions
         if (data == null) return null;
         if (string.IsNullOrEmpty(templateFileName)) return null;
 
-        return new XElement("item",
+        return new("item",
             new XAttribute(nameof(Document.SegmentId), data.SegmentId.GetValueOrDefault()),
             new XAttribute(nameof(Document.DocumentId), data.DocumentId.GetValueOrDefault()),
             new XAttribute(nameof(Document.Title), data.Title ?? $"[{nameof(Document.Title)} is null]"),
@@ -115,9 +115,9 @@ public static class IDocumentExtensions
         if (data == null)
             return $"{nameof(ToDisplayText)}: the specified {nameof(IDocument)} is null.";
 
-        var builder = new StringBuilder();
+        StringBuilder builder = new();
 
-        var delimiter = string.Empty;
+        string delimiter = string.Empty;
 
         if (data.DocumentId.HasValue)
         {
@@ -178,11 +178,13 @@ public static class IDocumentExtensions
 
         if (jO == null) return null;
 
-        content ??= $@"
-# {document.Title}
-        ".Trim();
+        content ??= $"""
 
-        return new MarkdownEntry
+                     # {document.Title}
+
+                     """.Trim();
+
+        return new MarkdownEntry()
         {
             Content = content,
             FrontMatter = jO,
@@ -206,9 +208,9 @@ public static class IDocumentExtensions
     {
         if (data == null) return null;
 
-        var @namespace = typeof(PublicationContext).Namespace;
+        string? @namespace = typeof(PublicationContext).Namespace;
 
-        var dataOut = new MenuDisplayItemModel()
+        MenuDisplayItemModel dataOut = new()
         {
             DisplayText = data.Title,
             GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Document)}" : group.GroupDisplayText,
@@ -231,7 +233,7 @@ public static class IDocumentExtensions
         if (data is not Document instance)
             throw new DataException($"The expected {nameof(Document)} data is not here.");
 
-        var validator = new DocumentValidator();
+        DocumentValidator validator = new();
 
         return validator.Validate(instance);
     }
@@ -340,7 +342,7 @@ public static class IDocumentExtensions
 
         logger.LogInformation("Writing to `{Path}`...", entryPath);
 
-        var options = new JsonSerializerOptions
+        JsonSerializerOptions options = new()
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             WriteIndented = true
@@ -402,11 +404,13 @@ public static class IDocumentExtensions
         logger.LogInformation("Writing to `{Path}`...", entryPath);
 
         string yaml = document.ToYaml(PublicationLinesUtility.ConvertToLines(content), logger) ?? string.Empty;
-        string frontMatter = $@"
-{PublicationAppScalars.FrontMatterFence}
-{yaml}
-{PublicationAppScalars.FrontMatterFence}
-".Trim();
+        string frontMatter = $"""
+
+                              {PublicationAppScalars.FrontMatterFence}
+                              {yaml}
+                              {PublicationAppScalars.FrontMatterFence}
+
+                              """.Trim();
 
         if (string.IsNullOrWhiteSpace(content))
         {

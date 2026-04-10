@@ -18,15 +18,15 @@
     <tags>EF Entity Framework SQLite</tags>
     <repository type="git" url="https://github.com/BryanWilhite/Songhay.Publications"></repository>
     <dependencies>
-      <group targetFramework=".NET8.0">
+      <group targetFramework=".NET10.0">
         <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="8.0.12" />
         <dependency id="Songhay.Publications" version="8.0.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Debug\net8.0\Songhay.Publications.DataAccess*.dll" target="lib\net8.0" />
-    <file src="bin\Debug\net8.0\Songhay.Publications.DataAccess*.json" target="lib\net8.0" />
+    <file src="bin\Debug\net10.0\Songhay.Publications.DataAccess*.dll" target="lib\net10.0" />
+    <file src="bin\Debug\net10.0\Songhay.Publications.DataAccess*.json" target="lib\net10.0" />
     <file src="**\*.cs" exclude="**\obj\**" target="src" />
     <file src="..\LICENSE.md" target="" />
     <file src="..\README.md" target="" />

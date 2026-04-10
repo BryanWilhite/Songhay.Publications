@@ -49,7 +49,7 @@ public class DaisyConsortiumNcx
 
     internal XElement GetNavPoint(string chapterId)
     {
-        var ncx = PublicationNamespaces.DaisyNcx;
+        XNamespace ncx = PublicationNamespaces.DaisyNcx;
 
         return new XElement(ncx + "navPoint",
             new XAttribute("class", "chapter"),
@@ -66,24 +66,24 @@ public class DaisyConsortiumNcx
         _logger.LogInformation("setting navPoint elements for chapters...");
 
         XElement? templatedChapterElement = null;
-        var newChapterElementList = new List<XElement>();
+        List<XElement> newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
             .Select((chapterId, i) => new { chapterId, i })
             .ForEachInEnumerable(a =>
             {
-                var chapterId = a.chapterId;
-                var i = a.i;
+                string chapterId = a.chapterId;
+                int i = a.i;
 
-                var chapterElement = navPoints.SingleOrDefault(navPoint =>
+                XElement? chapterElement = navPoints.SingleOrDefault(navPoint =>
                 {
-                    var id = navPoint.Attribute("id")?.Value;
+                    string? id = navPoint.Attribute("id")?.Value;
                     return chapterId.Equals(id);
                 });
 
-                var canAddNavPoint = chapterElement == null && i > 0;
-                var isFirstChapterIdError = chapterElement == null && i == 0;
-                var isFirstChapterId = chapterElement != null && i == 0;
+                bool canAddNavPoint = chapterElement == null && i > 0;
+                bool isFirstChapterIdError = chapterElement == null && i == 0;
+                bool isFirstChapterId = chapterElement != null && i == 0;
 
                 if (isFirstChapterIdError)
                 {
@@ -98,7 +98,7 @@ public class DaisyConsortiumNcx
                 }
                 else if (canAddNavPoint)
                 {
-                    var @new = GetNavPoint(chapterId);
+                    XElement @new = GetNavPoint(chapterId);
                     SetChapterNavPointText(@new, _chapterSet[chapterId]);
                     newChapterElementList.Add(@new);
                 }
@@ -126,13 +126,13 @@ public class DaisyConsortiumNcx
     {
         _logger.LogInformation("setting ncx docTitle title...");
 
-        var ncx = PublicationNamespaces.DaisyNcx;
-        var title = _publicationMeta
+        XNamespace ncx = PublicationNamespaces.DaisyNcx;
+        string? title = _publicationMeta
             .GetProperty("publication")
             .GetProperty("title")
             .GetString();
 
-        var textElement = _ncxDocument.Root?
+        XElement? textElement = _ncxDocument.Root?
             .Element(ncx + "docTitle")?
             .Element(ncx + "text");
         textElement?.SetValue(title!);
@@ -142,9 +142,9 @@ public class DaisyConsortiumNcx
     {
         _logger.LogInformation("setting ncx docTitle meta...");
 
-        var ncx = PublicationNamespaces.DaisyNcx;
+        XNamespace ncx = PublicationNamespaces.DaisyNcx;
 
-        var content = _ncxDocument.Root?
+        XAttribute? content = _ncxDocument.Root?
             .Element(ncx + "head")?
             .Element(ncx + "meta")?
             .Attribute("content");
@@ -159,7 +159,7 @@ public class DaisyConsortiumNcx
             .Select((navPoint, i) => new { navPoint, i })
             .ForEachInEnumerable(a =>
             {
-                var playOrder = a.navPoint.Attribute("playOrder");
+                XAttribute? playOrder = a.navPoint.Attribute("playOrder");
                 playOrder?.SetValue((a.i + 1).ToString());
             });
     }

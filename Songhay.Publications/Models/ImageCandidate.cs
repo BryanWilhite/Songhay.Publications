@@ -15,7 +15,11 @@ public class ImageCandidate
     /// Gets or sets the image URI.
     /// </summary>
     [DisallowNull]
-    public Uri? ImageUri { get => _imageUri; init => _imageUri = value.ToReferenceTypeValueOrThrow(); }
+    public Uri? ImageUri
+    {
+        get;
+        init => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the pixel density.
@@ -26,6 +30,4 @@ public class ImageCandidate
     /// Gets or sets the width.
     /// </summary>
     public string? Width { get; init; }
-
-    private readonly Uri? _imageUri;
 }

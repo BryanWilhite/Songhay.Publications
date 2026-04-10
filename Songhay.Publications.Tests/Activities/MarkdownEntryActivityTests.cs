@@ -15,7 +15,7 @@ four")]
     [InlineData("one, three, four", @"\w+", "$&_", true, "one_, three_, four_")]
     public void FindChange_Test(string? input, string? pattern, string? replacement, bool useRegex, string expectedResult)
     {
-        var actual = MarkdownEntryActivity.FindChange(input, pattern, replacement, useRegex);
+        string actual = MarkdownEntryActivity.FindChange(input, pattern, replacement, useRegex);
         Assert.Equal(expectedResult, actual);
     }
 }

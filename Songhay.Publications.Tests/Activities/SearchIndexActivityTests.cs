@@ -13,10 +13,10 @@ public class SearchIndexActivityTests
 
         indexFile = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, indexFile);
 
-        var indexFileInfo = new FileInfo(indexFile);
+        FileInfo indexFileInfo = new(indexFile);
         Assert.True(indexFileInfo.Exists);
 
-        var compressedIndexFileInfo = SearchIndexActivity.CompressSearchIndex(indexFileInfo);
+        FileInfo compressedIndexFileInfo = SearchIndexActivity.CompressSearchIndex(indexFileInfo);
         Assert.True(compressedIndexFileInfo.Exists);
     }
 
@@ -29,13 +29,13 @@ public class SearchIndexActivityTests
         entryRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, entryRoot);
         indexRoot = ProgramAssemblyUtility.GetPathFromAssembly(GetType().Assembly, indexRoot);
 
-        var entryRootInfo = new DirectoryInfo(entryRoot);
+        DirectoryInfo entryRootInfo = new(entryRoot);
         Assert.True(entryRootInfo.Exists);
 
-        var indexRootInfo = new DirectoryInfo(indexRoot);
+        DirectoryInfo indexRootInfo = new(indexRoot);
         Assert.True(indexRootInfo.Exists);
 
-        var indices = SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName);
-        Assert.True(indices.Any());
+        FileInfo[] indices = SearchIndexActivity.GenerateSearchIndexFrom11TyEntries(entryRootInfo, indexRootInfo, indexFileName);
+        Assert.NotEmpty(indices);
     }
 }

@@ -19,9 +19,10 @@ public static class JsonObjectExtensions
                 logger.LogWarning("Warning: the expected {Name} is not here.", nameof(JsonObject));
 
                 return null;
+
             default:
             {
-                using var jDoc = JsonDocument.Parse(documentData.ToJsonString());
+                using JsonDocument jDoc = JsonDocument.Parse(documentData.ToJsonString());
 
                 return jDoc.RootElement.ToYaml();
             }

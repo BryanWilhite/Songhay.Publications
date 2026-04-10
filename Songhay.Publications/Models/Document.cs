@@ -12,7 +12,11 @@ public class Document : IDocument
     /// </summary>
     [Display(Name = "Client ID", Order = 2)]
     [DisallowNull]
-    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
+    public string? ClientId
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the incept date.
@@ -25,7 +29,11 @@ public class Document : IDocument
     /// </summary>
     [Display(Name = "Document ID", Order = 1)]
     [DisallowNull]
-    public int? DocumentId { get => _documentId; set => _documentId = value.ToValueOrThrow(); }
+    public int? DocumentId
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the short name of the document.
@@ -126,11 +134,5 @@ public class Document : IDocument
     /// <summary>
     /// Converts the <see cref="Document"/> into a string.
     /// </summary>
-    public override string ToString()
-    {
-        return this.ToDisplayText();
-    }
-
-    private string? _clientId;
-    private int? _documentId;
+    public override string ToString() => this.ToDisplayText();
 }

@@ -9,13 +9,21 @@ public class IndexKeywordGroup : IIndexKeywordGroup
     /// Index Keyword Group ID.
     /// </summary>
     [DisallowNull]
-    public int? Id { get => _id; set => _id = value.ToValueOrThrow(); }
+    public int? Id
+    {
+        get;
+        set => field = value.ToValueOrThrow();
+    }
 
     /// <summary>
     /// Index Keyword Group Client ID.
     /// </summary>
     [DisallowNull]
-    public string? ClientId { get => _clientId; set => _clientId = value.ToReferenceTypeValueOrThrow(); }
+    public string? ClientId
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Index Keyword Group Name.
@@ -36,7 +44,4 @@ public class IndexKeywordGroup : IIndexKeywordGroup
     /// Gets or sets the modification date.
     /// </summary>
     public DateTime? ModificationDate { get; set; }
-
-    private int? _id;
-    private string? _clientId;
 }

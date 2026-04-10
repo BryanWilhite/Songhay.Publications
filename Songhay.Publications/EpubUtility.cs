@@ -20,7 +20,7 @@ public static class EpubUtility
     /// <param name="path"></param>
     public static void SaveAsUnicodeWithBom(XDocument document, string path)
     {
-        var encoding = GetUnicodeWithBomEncoding();
+        Encoding encoding = GetUnicodeWithBomEncoding();
         using var stream = new StreamWriter(path, append: false, encoding: encoding);
         document.Save(stream);
     }

@@ -43,7 +43,7 @@ public class IdpfPackage
 
     internal XElement GetItemRef(string chapterId)
     {
-        var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
+        XNamespace opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
         return new XElement(opf + "itemref",
             new XAttribute("idref", chapterId));
@@ -51,7 +51,7 @@ public class IdpfPackage
 
     internal XElement GetManifestItem(string chapterId)
     {
-        var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
+        XNamespace opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
         return new XElement(opf + "item",
             new XAttribute("href", $"Text/{chapterId}.xhtml"),
@@ -62,20 +62,20 @@ public class IdpfPackage
 
     internal void SetDublinCoreMeta()
     {
-        var dc = PublicationNamespaces.DublinCore;
-        var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
+        XNamespace dc = PublicationNamespaces.DublinCore;
+        XNamespace opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var metadataElement = (_idpfDocument.Root?
+        XElement metadataElement = (_idpfDocument.Root?
             .Element(opf + "metadata"))
             .ToReferenceTypeValueOrThrow();
 
-        var titleElement = metadataElement.Element(dc + "title");
-        var identifierElement = metadataElement.Element(dc + "identifier");
-        var creatorElement = metadataElement.Element(dc + "creator");
-        var publisherElement = metadataElement.Element(dc + "publisher");
-        var dateElement = metadataElement.Element(dc + "date");
+        XElement? titleElement = metadataElement.Element(dc + "title");
+        XElement? identifierElement = metadataElement.Element(dc + "identifier");
+        XElement? creatorElement = metadataElement.Element(dc + "creator");
+        XElement? publisherElement = metadataElement.Element(dc + "publisher");
+        XElement? dateElement = metadataElement.Element(dc + "date");
 
-        var jPublication = _publicationMeta.GetProperty("publication");
+        JsonElement jPublication = _publicationMeta.GetProperty("publication");
 
         titleElement?.SetValue(jPublication.GetProperty("title").GetString()!);
         identifierElement?.SetValue(_isbn13);
@@ -86,9 +86,9 @@ public class IdpfPackage
 
     internal void SetManifestItem(XElement item, string id)
     {
-        var href = $"Text/{id}.xhtml";
-        var hrefAttribute = item.Attribute("href");
-        var idAttribute = item.Attribute("id");
+        string href = $"Text/{id}.xhtml";
+        XAttribute? hrefAttribute = item.Attribute("href");
+        XAttribute? idAttribute = item.Attribute("id");
 
         hrefAttribute?.SetValue(href);
         idAttribute?.SetValue(id);
@@ -98,33 +98,33 @@ public class IdpfPackage
     {
         _logger.LogInformation("setting manifest item elements for chapters...");
 
-        var opf = PublicationNamespaces.IdpfOpenPackagingFormat;
+        XNamespace opf = PublicationNamespaces.IdpfOpenPackagingFormat;
 
-        var items = (_idpfDocument.Root?
+        IEnumerable<XElement> items = (_idpfDocument.Root?
             .Element(opf + "manifest")?
             .Elements(opf + "item"))
             .ToReferenceTypeValueOrThrow();
 
         XElement? templatedChapterElement = null;
-        var newChapterElementList = new List<XElement>();
+        List<XElement> newChapterElementList = new List<XElement>();
 
         _chapterSet.Keys
             .Select((chapterId, i) => new { chapterId, i })
             .ForEachInEnumerable(a =>
             {
-                var chapterId = a.chapterId;
-                var i = a.i;
+                string chapterId = a.chapterId;
+                int i = a.i;
 
-                var chapterElement = items.SingleOrDefault(item =>
+                XElement? chapterElement = items.SingleOrDefault(item =>
                 {
-                    var id = item.Attribute("id")?.Value;
+                    string? id = item.Attribute("id")?.Value;
 
                     return chapterId.Equals(id);
                 });
 
-                var canAddNavPoint = (chapterElement == null) && (i > 0);
-                var isFirstChapterIdError = (chapterElement == null) && (i == 0);
-                var isFirstChapterId = (chapterElement != null) && (i == 0);
+                bool canAddNavPoint = (chapterElement == null) && (i > 0);
+                bool isFirstChapterIdError = (chapterElement == null) && (i == 0);
+                bool isFirstChapterId = (chapterElement != null) && (i == 0);
 
                 if (isFirstChapterIdError)
                 {
@@ -137,7 +137,7 @@ public class IdpfPackage
                 }
                 else if (canAddNavPoint)
                 {
-                    var @new = GetManifestItem(chapterId);
+                    XElement @new = GetManifestItem(chapterId);
                     SetManifestItem(@new, chapterId);
                     newChapterElementList.Add(@new);
                 }

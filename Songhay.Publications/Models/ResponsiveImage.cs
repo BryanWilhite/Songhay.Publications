@@ -14,13 +14,21 @@ public class ResponsiveImage
     /// Gets or sets the key.
     /// </summary>
     [DisallowNull]
-    public string? Key { get => _key; set => _key = value.ToReferenceTypeValueOrThrow(); }
+    public string? Key
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the source.
     /// </summary>
     [DisallowNull]
-    public Uri? Source { get => _source; set => _source = value.ToReferenceTypeValueOrThrow(); }
+    public Uri? Source
+    {
+        get;
+        set => field = value.ToReferenceTypeValueOrThrow();
+    }
 
     /// <summary>
     /// Gets or sets the candidates.
@@ -31,7 +39,4 @@ public class ResponsiveImage
     /// Gets or sets the sizes.
     /// </summary>
     public ICollection<ImageSize> Sizes { get; init; } = [];
-
-    private string? _key;
-    private Uri? _source;
 }

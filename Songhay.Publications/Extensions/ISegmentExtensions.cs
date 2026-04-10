@@ -70,9 +70,9 @@ public static class SegmentExtensions
         if (data == null)
             return $"{nameof(ToDisplayText)}: the specified {nameof(ISegment)} is null.";
 
-        var builder = new StringBuilder();
+        StringBuilder builder = new();
 
-        var delimiter = string.Empty;
+        string delimiter = string.Empty;
 
         if (data.SegmentId.HasValue)
         {
@@ -86,20 +86,19 @@ public static class SegmentExtensions
             delimiter = ", ";
         }
 
-        if (!showIdOnly)
-        {
-            if (!string.IsNullOrWhiteSpace(data.SegmentName))
-                builder.Append($"{delimiter}{nameof(data.SegmentName)}: {data.SegmentName}");
+        if (showIdOnly) return builder.ToString();
 
-            if (data.IsActive.HasValue)
-                builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
+        if (!string.IsNullOrWhiteSpace(data.SegmentName))
+            builder.Append($"{delimiter}{nameof(data.SegmentName)}: {data.SegmentName}");
 
-            if (data.ParentSegmentId.HasValue)
-                builder.Append($"{delimiter}{nameof(data.ParentSegmentId)}: {data.ParentSegmentId}");
+        if (data.IsActive.HasValue)
+            builder.Append($"{delimiter}{nameof(data.IsActive)}: {data.IsActive}");
 
-            if (data.InceptDate.HasValue)
-                builder.Append($"{delimiter}{nameof(data.InceptDate)}: {data.InceptDate}");
-        }
+        if (data.ParentSegmentId.HasValue)
+            builder.Append($"{delimiter}{nameof(data.ParentSegmentId)}: {data.ParentSegmentId}");
+
+        if (data.InceptDate.HasValue)
+            builder.Append($"{delimiter}{nameof(data.InceptDate)}: {data.InceptDate}");
 
         return builder.ToString();
     }
@@ -120,9 +119,9 @@ public static class SegmentExtensions
     {
         if (data == null) return null;
 
-        var @namespace = typeof(PublicationContext).Namespace;
+        string? @namespace = typeof(PublicationContext).Namespace;
 
-        var dataOut = new MenuDisplayItemModel()
+        MenuDisplayItemModel dataOut = new ()
         {
             GroupDisplayText = (group == null) ? $"{@namespace}.{nameof(Segment)}" : group.GroupDisplayText,
             GroupId = (group == null) ? $"{@namespace}.{nameof(Segment)}".ToLowerInvariant() : group.GroupId,
@@ -171,10 +170,11 @@ public static class SegmentExtensions
     public static ValidationResult ToValidationResult(this ISegment? data)
     {
         ArgumentNullException.ThrowIfNull(data);
+
         if (data is not Segment instance)
             throw new DataException($"The expected {nameof(Segment)} data is not here.");
 
-        var validator = new SegmentValidator();
+        SegmentValidator validator = new ();
 
         return validator.Validate(instance);
     }

@@ -36,7 +36,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
 
         string entryPath = jO.GetAddEntryExtractArg(presentationInfo);
@@ -74,7 +74,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
         (DirectoryInfo entryRootInfo, DirectoryInfo indexRootInfo, string indexFileName) = jO.GetCompressed11TyIndexArgs(presentationInfo);
 
@@ -116,7 +116,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
 
         (string entryPath, string collapsedHost) = jO.GetExpandUrisArgs(presentationInfo);
@@ -155,7 +155,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
         (string input, string pattern, string replacement, bool useRegex, string outputPath) = jO.GetFindChangeArgs(presentationInfo);
 
@@ -203,7 +203,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
 
         (DirectoryInfo entryDraftsRootInfo, string title) = jO.GetGenerateEntryArgs(presentationInfo);
@@ -242,7 +242,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
         Assert.True(presentationInfo.Exists);
         Assert.True(settingsInfo.Exists);
 
-        using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
+        using JsonDocument jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jO = jDoc.RootElement;
 
         (DirectoryInfo entryDraftsRootInfo, DirectoryInfo entryRootInfo, string entryFileName) =
@@ -269,7 +269,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
                 """)]
     public void ToYaml_Test(string json)
     {
-        using var jDoc = JsonDocument.Parse(json);
+        using JsonDocument jDoc = JsonDocument.Parse(json);
         JsonElement jE = jDoc.RootElement;
 
         string yaml = jE.ToYaml();

@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyVersion>8.0.3</AssemblyVersion>
-        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyVersion>10.0.0</AssemblyVersion>
+        <TargetFramework>net10.0</TargetFramework>
         <RootNamespace>Songhay.Publications</RootNamespace>
 
         <Title>Songhay Publications</Title>
         <Description>Core reusable definitions for Songhay Studio Publications</Description>
         <Authors>Bryan D. Wilhite</Authors>
-        <Copyright>(c) 2025 Bryan D. Wilhite</Copyright>
+        <Copyright>(c) 2026 Bryan D. Wilhite</Copyright>
         <Company>Songhay System</Company>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/BryanWilhite/Songhay.Publications</RepositoryUrl>
@@ -35,10 +35,10 @@
 
     <ItemGroup>
         <PackageReference Include="CloneExtensions" Version="1.4.2" />
-        <PackageReference Include="FluentValidation" Version="12.0.0" />
-        <PackageReference Include="Markdig" Version="0.41.2" />
-        <PackageReference Include="SonghayCore" Version="8.0.2" />
-        <PackageReference Include="YamlDotNet" Version="16.3.0" />
+        <PackageReference Include="FluentValidation" Version="12.1.1" />
+        <PackageReference Include="Markdig" Version="1.1.2" />
+        <PackageReference Include="SonghayCore" Version="10.0.0" />
+        <PackageReference Include="YamlDotNet" Version="17.0.0" />
     </ItemGroup>
 
     <ItemGroup>

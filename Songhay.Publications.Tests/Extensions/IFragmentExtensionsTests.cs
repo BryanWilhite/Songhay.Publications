@@ -3,128 +3,118 @@ using Songhay.Publications.Abstractions;
 namespace Songhay.Publications.Tests.Extensions;
 
 // ReSharper disable once InconsistentNaming
-public class IFragmentExtensionsTests(ITestOutputHelper helper)
+public class IFragmentExtensionsTests
 {
     [Fact]
     public void GetFragmentByPredicate_Test()
     {
         const string clientId = "my-data";
 
-        var collection = new[]
-        {
-            new Fragment(),
-            new Fragment(),
-            new Fragment { ClientId = clientId },
-            new Fragment(),
-        };
+        Fragment[] collection =
+        [
+            new(),
+            new(),
+            new() { ClientId = clientId },
+            new()
+        ];
 
-        var first = collection
+        IFragment first = collection
             .GetFragmentByPredicate(i => i.ClientId == clientId)
             .ToReferenceTypeValueOrThrow();
 
         Assert.Equal(clientId, first.ClientId);
     }
 
-    [Fact]
-    public void ToDisplayText_Test()
+    public static TheoryData<IFragment?, Func<IFragment?, bool>> ToDisplayTextTheoryData = new()
     {
-        var testCollection = new (IFragment? data, Func<IFragment?, bool> test)[]
         {
-            (
-                null,
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
+            null,
+            data =>
+            {
+                string text = data.ToDisplayText();
 
-                    return text.Contains("the specified ") && text.Contains("is null.");
-                }
-            ),
-            (
-                new Fragment
-                {
-                    ClientId = "my-fragment",
-                    FragmentDisplayName = "my-display-name",
-                    FragmentName = "my-name",
-                    IsActive =  true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText();
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
-                            !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
-                            text.Contains($"{data.IsActive}") &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Fragment
-                {
-                    ClientId = "my-fragment",
-                    FragmentDisplayName = "my-display-name",
-                    FragmentName = "my-name",
-                    IsActive =  true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = $"{data}";
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
-                            !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
-                            text.Contains($"{data.IsActive}") &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            ),
-            (
-                new Fragment
-                {
-                    FragmentId = 999,
-                    ClientId = "my-fragment",
-                    FragmentDisplayName = "my-display-name",
-                    FragmentName = "my-name",
-                    IsActive =  true,
-                    InceptDate = DateTime.Now
-                },
-                data =>
-                {
-                    var text = data.ToDisplayText(showIdOnly: true);
-                    helper.WriteLine(text);
-
-                    return data switch
-                    {
-                        null => false,
-                        _ =>
-                            text.Contains($"{data.FragmentId}") &&
-                            !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
-                            !string.IsNullOrEmpty(data.FragmentDisplayName) && !text.Contains(data.FragmentDisplayName) &&
-                            !string.IsNullOrEmpty(data.FragmentName) && !text.Contains(data.FragmentName) &&
-                            !text.Contains($"{data.IsActive}") &&
-                            !text.Contains(DateTime.Now.Day.ToString())
-                    };
-                }
-            )
-        };
-
-        foreach (var item in testCollection)
+                return text.Contains("the specified ") && text.Contains("is null.");
+            }
+        },
         {
-            Assert.True(item.test(item.data));
+            new Fragment
+            {
+                ClientId = "my-fragment",
+                FragmentDisplayName = "my-display-name",
+                FragmentName = "my-name",
+                IsActive =  true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = data.ToDisplayText();
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
+                        !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
+                        text.Contains($"{data.IsActive}")
+                };
+            }
+        },
+        {
+            new Fragment
+            {
+                ClientId = "my-fragment",
+                FragmentDisplayName = "my-display-name",
+                FragmentName = "my-name",
+                IsActive =  true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = $"{data}";
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrEmpty(data.FragmentDisplayName) && text.Contains(data.FragmentDisplayName) &&
+                        !string.IsNullOrEmpty(data.FragmentName) && text.Contains(data.FragmentName) &&
+                        text.Contains($"{data.IsActive}")
+                };
+            }
+        },
+        {
+            new Fragment
+            {
+                FragmentId = 999,
+                ClientId = "my-fragment",
+                FragmentDisplayName = "my-display-name",
+                FragmentName = "my-name",
+                IsActive =  true,
+                InceptDate = DateTime.Now
+            },
+            data =>
+            {
+                string text = data.ToDisplayText(showIdOnly: true);
+
+                return data switch
+                {
+                    null => false,
+                    _ =>
+                        text.Contains($"{data.FragmentId}") &&
+                        !string.IsNullOrEmpty(data.ClientId) && text.Contains(data.ClientId) &&
+                        !string.IsNullOrEmpty(data.FragmentDisplayName) && !text.Contains(data.FragmentDisplayName) &&
+                        !string.IsNullOrEmpty(data.FragmentName) && !text.Contains(data.FragmentName) &&
+                        !text.Contains($"{data.IsActive}")
+                };
+            }
         }
+    };
+
+    [Theory, MemberData(nameof(ToDisplayTextTheoryData))]
+    public void ToDisplayText_Test(IFragment? data, Func<IFragment?, bool> test)
+    {
+        Assert.True(test(data));
     }
 }

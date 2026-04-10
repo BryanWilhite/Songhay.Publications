@@ -164,7 +164,7 @@ public class PublicationContext
     {
         _logger.LogInformation("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
 
-        Dictionary<string, string>? dictionary = _publicationMeta.GetProperty("publication").GetProperty("identifiers").ToObject<Dictionary<string, string>>();
+        Dictionary<string, string>? dictionary = _publicationMeta.GetProperty("publication").GetProperty("identifiers").ToInstanceOrNull<Dictionary<string, string>>();
         string isbn13 = dictionary.TryGetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
 
         isbn13 = new string(isbn13.Where(char.IsDigit).ToArray());
@@ -191,7 +191,7 @@ public class PublicationContext
         Dictionary<string, string> chapterSet = publicationMeta
             .GetProperty("publication")
             .GetProperty("chapterSet")
-            .ToObject<Dictionary<string, string>>()
+            .ToInstanceOrNull<Dictionary<string, string>>()
             .ToReferenceTypeValueOrThrow();
 
         return (publicationMeta, chapterSet);
