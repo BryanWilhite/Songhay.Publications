@@ -30,4 +30,8 @@
         <PackageReference Include="Xunit.SkippableFact" Version="1.5.61" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="test-files\" />
+    </ItemGroup>
+
 </Project>

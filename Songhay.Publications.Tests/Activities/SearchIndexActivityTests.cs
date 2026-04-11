@@ -6,7 +6,7 @@ namespace Songhay.Publications.Tests.Activities;
 public class SearchIndexActivityTests
 {
     [SkippableTheory]
-    [InlineData("../../../markdown/presentation/presentation-index.json")]
+    [InlineData("../../../test-files/markdown/presentation/presentation-index.json")]
     public void CompressSearchIndex_Test(string indexFile)
     {
         Skip.IfNot(Debugger.IsAttached);
@@ -21,7 +21,7 @@ public class SearchIndexActivityTests
     }
 
     [SkippableTheory]
-    [InlineData("../../../markdown/presentation/entry", "../../../markdown/presentation", "presentation-index.json")]
+    [InlineData("../../../test-files/markdown/presentation/entry", "../../../test-files/markdown/presentation", "presentation-index.json")]
     public void GenerateSearchIndexFrom11tyEntries_Test(string entryRoot, string indexRoot, string indexFileName)
     {
         Skip.IfNot(Debugger.IsAttached);

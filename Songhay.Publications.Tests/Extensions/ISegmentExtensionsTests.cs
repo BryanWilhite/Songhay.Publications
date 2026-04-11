@@ -142,8 +142,8 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData("../../../gen-web-data/responsive-layouts/index.json",
-        "../../../json/ToPublicationIndexEntries_Test_output.json")]
+    [ProjectFileData("../../../test-files/gen-web-data/responsive-layouts/index.json",
+        "../../../test-files/json/ToPublicationIndexEntries_Test_output.json")]
     public void ToPublicationIndexEntries_Test(FileInfo indexInfo, FileInfo outputInfo)
     {
         string json = File.ReadAllText(indexInfo.FullName);
@@ -166,7 +166,7 @@ public class ISegmentExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData("../../../gen-web-data/responsive-layouts/index.json")]
+    [ProjectFileData("../../../test-files/gen-web-data/responsive-layouts/index.json")]
     public void ToPublicationIndexEntry_Test(FileInfo indexInfo)
     {
         string json = File.ReadAllText(indexInfo.FullName);

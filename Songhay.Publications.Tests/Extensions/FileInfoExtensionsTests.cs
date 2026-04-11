@@ -6,8 +6,8 @@ namespace Songhay.Publications.Tests.Extensions;
 public class FileInfoExtensionsTests(ITestOutputHelper helper)
 {
     [Theory]
-    [ProjectDirectoryData(@"yaml/hello-world-01.yaml", false)]
-    [ProjectDirectoryData(@"yaml/hello-world-01-with-json-front-matter.yaml", true)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01.yaml", false)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01-with-json-front-matter.yaml", true)]
     public void LookLikeJsonFrontMatter_Test(DirectoryInfo projectDirInfo, string path, bool expected)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeJsonFrontMatter_Test));
@@ -21,8 +21,8 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData(@"yaml/hello-world-01.yaml", true)]
-    [ProjectDirectoryData(@"yaml/hello-world-01-with-json-front-matter.yaml", false)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01.yaml", true)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01-with-json-front-matter.yaml", false)]
     public void LookLikeYamlFrontMatter_Test(DirectoryInfo projectDirInfo, string path, bool expected)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeYamlFrontMatter_Test));
@@ -36,9 +36,9 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData(@"yaml/hello-world-01.yaml", 3, 3)]
-    [ProjectDirectoryData(@"yaml/hello-world-02.yaml", 3, 0)]
-    [ProjectDirectoryData(@"yaml/hello-world-03.yaml", 3, 0)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01.yaml", 3, 3)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-02.yaml", 3, 0)]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-03.yaml", 3, 0)]
     public void ToFrontMatterLinesAndContentLines_Test(DirectoryInfo projectDirInfo, string path, int expectedFrontMatterLineCount, int expectedContentLineCount)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(LookLikeYamlFrontMatter_Test));
@@ -63,7 +63,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData("entry/hello-world-json.md")]
+    [ProjectDirectoryData("test-files/entry/hello-world-json.md")]
     public void ToIDocumentAndAnyContent_Test(DirectoryInfo projectDirInfo, string entryPath)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));
@@ -76,7 +76,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData(@"yaml/hello-world-01-with-json-front-matter.yaml")]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01-with-json-front-matter.yaml")]
     public void ToJsonString_Test(DirectoryInfo projectDirInfo, string path)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToJsonString_Test));
@@ -89,8 +89,8 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData(@"yaml/hello-world-01.yaml")]
-    [ProjectDirectoryData(@"yaml/hello-world-01-not-inline.yaml")]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01.yaml")]
+    [ProjectDirectoryData(@"test-files/yaml/hello-world-01-not-inline.yaml")]
     public void ToYamlString_Test(DirectoryInfo projectDirInfo, string path)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToYamlString_Test));
@@ -104,7 +104,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData("Hello World!", "entry/hello-world-json.md", null!)]
+    [ProjectDirectoryData("Hello World!", "test-files/entry/hello-world-json.md", null!)]
     public void WriteNewPublicationEntryWithJsonFrontMatter_Test(DirectoryInfo projectDirInfo, string title, string entryPath, string? content)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));
@@ -117,7 +117,7 @@ public class FileInfoExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectDirectoryData("Hello World!", "entry/hello-world.md", null!)]
+    [ProjectDirectoryData("Hello World!", "test-files/entry/hello-world.md", null!)]
     public void WriteNewPublicationEntryWithYamlFrontMatter_Test(DirectoryInfo projectDirInfo, string title, string entryPath, string? content)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(WriteNewPublicationEntryWithJsonFrontMatter_Test));

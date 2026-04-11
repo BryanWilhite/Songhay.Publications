@@ -25,8 +25,8 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test.md")]
-    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
+    [ProjectFileData([255], "../../../test-files/markdown/presentation-drafts/to-extract-test.md")]
+    [ProjectFileData([255], "../../../test-files/markdown/presentation-drafts/to-extract-test2.md")]
     public void ToExtract_Test(int expectedLength, FileInfo entryInfo)
     {
         MarkdownEntry entry = entryInfo.ToMarkdownEntry();
@@ -38,7 +38,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData("../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData("../../../test-files/markdown/to-markdown-entry-test.md")]
     public void ToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
@@ -54,7 +54,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     [Theory]
     [ProjectFileData(
         ["2005-01-18-msn-video-replaces-feedroomcom"],
-        "../../../markdown/to-markdown-entry-test.md")]
+        "../../../test-files/markdown/to-markdown-entry-test.md")]
     public void ToMarkdownEntry_Test(string clientId, FileInfo entryInfo)
     {
         // arrange
@@ -69,7 +69,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData([5], "../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData([5], "../../../test-files/markdown/to-markdown-entry-test.md")]
     public void ToParagraphs_Test(int expectedNumberOfParagraphs, FileInfo entryInfo)
     {
         //arrange
@@ -83,7 +83,7 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData("../../../markdown/to-markdown-entry-test.md")]
+    [ProjectFileData("../../../test-files/markdown/to-markdown-entry-test.md")]
     public void ToParagraphsAndToFinalEdit_Test(FileInfo entryInfo)
     {
         //arrange
@@ -127,8 +127,8 @@ public class MarkdownEntryExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test.md")]
-    [ProjectFileData([255], "../../../markdown/presentation-drafts/to-extract-test2.md")]
+    [ProjectFileData([255], "../../../test-files/markdown/presentation-drafts/to-extract-test.md")]
+    [ProjectFileData([255], "../../../test-files/markdown/presentation-drafts/to-extract-test2.md")]
     public void With11tyExtract_FromFile_Test(int expectedLength, FileInfo entryInfo)
     {
         MarkdownEntry entry = entryInfo.ToMarkdownEntry()

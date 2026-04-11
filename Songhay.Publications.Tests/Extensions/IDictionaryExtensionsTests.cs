@@ -6,7 +6,7 @@ namespace Songhay.Publications.Tests.Extensions;
 public class IDictionaryExtensionsTests(ITestOutputHelper helper)
 {
     [Theory]
-    [ProjectDirectoryData("yaml/hello-world-01-tagged.yaml", "myCustomProperty", "myOtherCustomProperty")]
+    [ProjectDirectoryData("test-files/yaml/hello-world-01-tagged.yaml", "myCustomProperty", "myOtherCustomProperty")]
     public void ToTaggedDocument_Test(DirectoryInfo projectDirInfo, string path, params string[] tagKeys)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(ToTaggedDocument_Test));
@@ -26,5 +26,5 @@ public class IDictionaryExtensionsTests(ITestOutputHelper helper)
         logger.LogInformation("{Label}:{NL}{Data}", nameof(IDocument.Tag), Environment.NewLine, actual.Tag);
     }
 
-    readonly XUnitLoggerProvider _loggerProvider = new(helper);
+    private readonly XUnitLoggerProvider _loggerProvider = new(helper);
 }

@@ -8,7 +8,7 @@ namespace Songhay.Publications.Tests.Extensions;
 public class JsonElementExtensionsTests(ITestOutputHelper helper)
 {
     [Theory]
-    [InlineData("md-add-entry-extract-settings.json", "../../../markdown/shell")]
+    [InlineData("md-add-entry-extract-settings.json", "../../../test-files/markdown/shell")]
     public void GetAddEntryExtractArg_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
@@ -47,7 +47,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [InlineData("index-activity-settings.json", "../../../markdown/shell")]
+    [InlineData("index-activity-settings.json", "../../../test-files/markdown/shell")]
     public void GetCompressed11tyIndexArgs_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
@@ -89,7 +89,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [InlineData("md-expand-uris-settings.json", "../../../markdown/shell")]
+    [InlineData("md-expand-uris-settings.json", "../../../test-files/markdown/shell")]
     public void GetExpandUrisArgs_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
@@ -128,7 +128,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [InlineData("md-find-change-settings.json", "../../../markdown/shell")]
+    [InlineData("md-find-change-settings.json", "../../../test-files/markdown/shell")]
     public void GetFindChangeArgs_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
@@ -176,7 +176,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [InlineData("md-generate-entry-settings.json", "../../../markdown/shell")]
+    [InlineData("md-generate-entry-settings.json", "../../../test-files/markdown/shell")]
     public void GetGenerateEntryArgs_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));
@@ -215,7 +215,7 @@ public class JsonElementExtensionsTests(ITestOutputHelper helper)
     }
 
     [Theory]
-    [InlineData("md-publish-entry-settings.json", "../../../markdown/shell")]
+    [InlineData("md-publish-entry-settings.json", "../../../test-files/markdown/shell")]
     public void GetPublishEntryArgs_Test(string settingsFile, string presentationRoot)
     {
         ILogger logger = _loggerProvider.CreateLogger(nameof(GetAddEntryExtractArg_Test));

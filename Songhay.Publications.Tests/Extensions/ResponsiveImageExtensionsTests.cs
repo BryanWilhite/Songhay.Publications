@@ -3,8 +3,8 @@ namespace Songhay.Publications.Tests.Extensions;
 public class ResponsiveImageExtensionsTests
 {
     [Theory]
-    [ProjectFileData("../../../json/ToCssMediaAtRules_Test_00_input.json",
-        "../../../txt/ToCssMediaAtRules_Test_00_output.txt")]
+    [ProjectFileData("../../../test-files/json/ToCssMediaAtRules_Test_00_input.json",
+        "../../../test-files/txt/ToCssMediaAtRules_Test_00_output.txt")]
     public void ToCssMediaAtRules_Test(FileInfo inputInfo, FileInfo outputInfo)
     {
         string json = File.ReadAllText(inputInfo.FullName);
@@ -17,10 +17,10 @@ public class ResponsiveImageExtensionsTests
     }
 
     [Theory]
-    [ProjectFileData("../../../json/ToImgMarkup_Test_00_input.json",
-        "../../../txt/ToImgMarkup_Test_00_output.txt")]
-    [ProjectFileData("../../../json/ToImgMarkup_Test_01_input.json",
-        "../../../txt/ToImgMarkup_Test_01_output.txt")]
+    [ProjectFileData("../../../test-files/json/ToImgMarkup_Test_00_input.json",
+        "../../../test-files/txt/ToImgMarkup_Test_00_output.txt")]
+    [ProjectFileData("../../../test-files/json/ToImgMarkup_Test_01_input.json",
+        "../../../test-files/txt/ToImgMarkup_Test_01_output.txt")]
     public void ToImgMarkup_Test(FileInfo inputInfo, FileInfo outputInfo)
     {
         string json = File.ReadAllText(inputInfo.FullName);

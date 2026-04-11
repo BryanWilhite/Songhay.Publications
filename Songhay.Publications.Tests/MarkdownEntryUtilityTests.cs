@@ -5,7 +5,7 @@ namespace Songhay.Publications.Tests;
 public class MarkdownEntryUtilityTests
 {
     [SkippableTheory]
-    [InlineData("../../../markdown/presentation-drafts", "Hello World!")]
+    [InlineData("../../../test-files/markdown/presentation-drafts", "Hello World!")]
     public void GenerateEntryFor11ty_Test(string entryRoot, string title)
     {
         Skip.IfNot(Debugger.IsAttached);
@@ -19,7 +19,7 @@ public class MarkdownEntryUtilityTests
     }
 
     [SkippableTheory]
-    [InlineData("../../../markdown/presentation-drafts", "../../../markdown/presentation/entry", "2019-11-19-hello-world.md")]
+    [InlineData("../../../test-files/markdown/presentation-drafts", "../../../test-files/markdown/presentation/entry", "2019-11-19-hello-world.md")]
     public void PublishEntryFor11ty_Test(string entryRoot, string presentationRoot, string fileName)
     {
         Skip.IfNot(Debugger.IsAttached);
