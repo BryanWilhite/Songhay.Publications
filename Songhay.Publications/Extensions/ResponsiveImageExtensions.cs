@@ -43,18 +43,32 @@ public static class ResponsiveImageExtensions
     /// Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
     /// </summary>
     /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
-    public static string ToImgMarkup(this ResponsiveImage? responsiveImage)
+    public static string ToImgMarkup(this ResponsiveImage? responsiveImage) => ToImgMarkup(responsiveImage, cssClasses: null);
+    
+    /// <summary>
+    /// Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
+    /// </summary>
+    /// <param name="responsiveImage">The <see cref="ResponsiveImage" />.</param>
+    /// <param name="cssClasses">optional CSS class name(s) for the <c>img</c> element</param>
+    public static string ToImgMarkup(this ResponsiveImage? responsiveImage, string? cssClasses)
     {
         ArgumentNullException.ThrowIfNull(responsiveImage);
+
+        if (!string.IsNullOrWhiteSpace(cssClasses)) cssClasses = $"""
+                                                                   class="{cssClasses.Trim()}"
+                                                                  """;
 
         string srcset = responsiveImage.ToSrcSetAttribute();
         string sizes = responsiveImage.ToSizesSetAttribute();
 
-        return $@"
-<img{
-    Spacer}alt=""{responsiveImage.Description ?? string.Empty}""{
-        Spacer}src=""{responsiveImage.Source?.OriginalString ?? string.Empty}""{srcset}{sizes}>
-";
+        return $"""
+                <img{cssClasses}
+                    alt="{responsiveImage.Description}"
+                    src="{responsiveImage.Source?.OriginalString}"
+                    {sizes}
+                    {srcset}
+                    />
+                """;
     }
 
     /// <summary>
@@ -67,7 +81,7 @@ public static class ResponsiveImageExtensions
 
         string[] collection = responsiveImage
             .Sizes
-            .Select(i => $"({i.MediaCondition}) {i.LayoutWidth}")
+            .Select(i => $"{i.MediaCondition} {i.LayoutWidth}".Trim())
             .ToArray();
 
         if (collection.Length == 0) return string.Empty;
@@ -75,7 +89,7 @@ public static class ResponsiveImageExtensions
         string attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
         return $"""
-                {Spacer}sizes="{attributeValue}"
+                sizes="{attributeValue}"
                 """;
     }
 
@@ -97,7 +111,7 @@ public static class ResponsiveImageExtensions
         string attributeValue = collection.Aggregate((a, i) => $"{a},{Spacer}{i}");
 
         return $"""
-                {Spacer}srcset="{attributeValue}"
+                srcset="{attributeValue}"
                 """;
     }
 

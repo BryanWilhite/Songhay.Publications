@@ -1,0 +1,33 @@
+{
+    "Description": "“hero” index splash",
+    "Key": "hero-index-splash",
+    "Source": "images/hero-index-splash/1360x765.png",
+    "Candidates": [
+        {
+            "ImageUri": "images/hero-index-splash/2560x1440.png",
+            "Width": "2560w"
+        },
+        {
+            "ImageUri": "images/hero-index-splash/1360x765.png",
+            "Width": "1360w"
+        },
+        {
+            "ImageUri": "images/hero-index-splash/640x360.png",
+            "Width": "640w"
+        }
+    ],
+    "Sizes": [
+        {
+            "MediaCondition": "(min-width: 1408px)",
+            "LayoutWidth": "2560px"
+        },
+        {
+            "MediaCondition": "(min-width: 769px)",
+            "LayoutWidth": "1360px"
+        },
+        {
+            "MediaCondition": null,
+            "LayoutWidth": "100vw"
+        }
+    ]
+}

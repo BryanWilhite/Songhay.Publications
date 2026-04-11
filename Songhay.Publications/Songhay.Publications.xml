@@ -1040,6 +1040,13 @@
             </summary>
             <param name="responsiveImage">The <see cref="T:Songhay.Publications.Models.ResponsiveImage" />.</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)">
+            <summary>
+            Returns <c>img</c> markup with <c>srcset</c> and <c>sizes</c>.
+            </summary>
+            <param name="responsiveImage">The <see cref="T:Songhay.Publications.Models.ResponsiveImage" />.</param>
+            <param name="cssClasses">optional CSS class name(s) for the <c>img</c> element</param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)">
             <summary>
             Reduces <see cref="P:Songhay.Publications.Models.ResponsiveImage.Sizes" /> to the <c>sizes</c> attribute.

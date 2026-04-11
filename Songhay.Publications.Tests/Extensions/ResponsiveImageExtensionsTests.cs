@@ -21,6 +21,8 @@ public class ResponsiveImageExtensionsTests
         "../../../test-files/txt/ToImgMarkup_Test_00_output.txt")]
     [ProjectFileData("../../../test-files/json/ToImgMarkup_Test_01_input.json",
         "../../../test-files/txt/ToImgMarkup_Test_01_output.txt")]
+    [ProjectFileData("../../../test-files/json/ToImgMarkup_Test_02_input.json",
+        "../../../test-files/txt/ToImgMarkup_Test_02_output.txt")]
     public void ToImgMarkup_Test(FileInfo inputInfo, FileInfo outputInfo)
     {
         string json = File.ReadAllText(inputInfo.FullName);
