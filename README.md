@@ -39,7 +39,7 @@ graph BT
     pubs-->1[Songhay.Publications.DataAccess]
     pubs-->2[Songhay.Player]
     pubs-->3[Songhay.Publications.Analytics]
-    pubs-->4[Songhay.Publications.KinteSpace]
+    1-->4[Songhay.Publications.KinteSpace]
 ```
 
 @[BryanWilhite](https://twitter.com/BryanWilhite)
