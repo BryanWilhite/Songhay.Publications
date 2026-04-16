@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications</id>
-    <version>10.0.0</version>
+    <version>10.0.1</version>
     <description>Core reusable definitions for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -13,7 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Core reusable definitions for Songhay Studio Publications</summary>
     <readme>README.md</readme>
-    <releaseNotes>update of dependencies📦🔝</releaseNotes>
+    <releaseNotes>see https://github.com/BryanWilhite/Songhay.Publications/issues/63 📖</releaseNotes>
     <copyright>(c) 2026 Bryan D. Wilhite</copyright>
     <tags>Core Songhay Markdown JSON GenericWeb</tags>
     <repository type="git" url="https://github.com/BryanWilhite/Songhay.Publications"></repository>
@@ -23,7 +23,7 @@
         <dependency id="FluentValidation" version="12.1.1" />
         <dependency id="Markdig" version="1.1.2" />
         <dependency id="SonghayCore" version="10.0.0" />
-        <dependency id="YamlDotNet" version="17.0.0" />
+        <dependency id="YamlDotNet" version="17.0.1" />
       </group>
     </dependencies>
   </metadata>
