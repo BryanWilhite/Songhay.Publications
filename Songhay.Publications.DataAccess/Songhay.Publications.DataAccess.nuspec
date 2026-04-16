@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Songhay.Publications.DataAccess</id>
-    <version>10.0.0</version>
+    <version>10.0.1</version>
     <description>SQLite-based Entity Framework data access for Songhay Studio Publications</description>
     <authors>Bryan D. Wilhite</authors>
     <title>Songhay Publications</title>
@@ -19,7 +19,7 @@
     <repository type="git" url="https://github.com/BryanWilhite/Songhay.Publications"></repository>
     <dependencies>
       <group targetFramework=".NET10.0">
-        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="10.0.5" />
+        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="10.0.6" />
         <dependency id="Songhay.Publications" version="10.0.1" />
       </group>
     </dependencies>
