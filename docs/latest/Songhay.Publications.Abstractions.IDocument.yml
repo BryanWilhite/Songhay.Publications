@@ -40,6 +40,9 @@ items:
   syntax:
     content: 'public interface IDocument : ITemporal'
     content.vb: Public Interface IDocument Inherits ITemporal
+  derivedClasses:
+  - Songhay.Publications.Models.Document
+  - Songhay.Publications.Models.SearchIndexEntry
   inheritedMembers:
   - Songhay.Abstractions.ITemporal.EndDate
   - Songhay.Abstractions.ITemporal.InceptDate
@@ -87,12 +90,22 @@ items:
   summary: Gets or sets the document identifier.
   example: []
   syntax:
-    content: int? DocumentId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      int? DocumentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Property DocumentId As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Property DocumentId As Integer?
   overload: Songhay.Publications.Abstractions.IDocument.DocumentId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IDocument.Title
   commentId: P:Songhay.Publications.Abstractions.IDocument.Title
   id: Title
@@ -397,12 +410,22 @@ items:
   summary: Gets or sets the client identifier.
   example: []
   syntax:
-    content: string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Property ClientId As String
   overload: Songhay.Publications.Abstractions.IDocument.ClientId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IDocument.Tag
   commentId: P:Songhay.Publications.Abstractions.IDocument.Tag
   id: Tag

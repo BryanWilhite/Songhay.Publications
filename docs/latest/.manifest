@@ -168,6 +168,7 @@
   "Songhay.Publications.Extensions.ResponsiveImageExtensions": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
   "Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
   "Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
+  "Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
   "Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
   "Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)": "Songhay.Publications.Extensions.ResponsiveImageExtensions.yml",
   "Songhay.Publications.Extensions.SegmentExtensions": "Songhay.Publications.Extensions.SegmentExtensions.yml",

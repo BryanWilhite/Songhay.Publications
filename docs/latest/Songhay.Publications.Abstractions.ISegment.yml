@@ -34,6 +34,9 @@ items:
   syntax:
     content: 'public interface ISegment : ITemporal'
     content.vb: Public Interface ISegment Inherits ITemporal
+  derivedClasses:
+  - Songhay.Publications.Models.IndexEntry
+  - Songhay.Publications.Models.Segment
   inheritedMembers:
   - Songhay.Abstractions.ITemporal.EndDate
   - Songhay.Abstractions.ITemporal.InceptDate
@@ -75,12 +78,22 @@ items:
   summary: Gets or sets the segment identifier.
   example: []
   syntax:
-    content: int? SegmentId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      int? SegmentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Property SegmentId As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Property SegmentId As Integer?
   overload: Songhay.Publications.Abstractions.ISegment.SegmentId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.ISegment.SegmentName
   commentId: P:Songhay.Publications.Abstractions.ISegment.SegmentName
   id: SegmentName
@@ -106,12 +119,22 @@ items:
   summary: Gets or sets the name of the segment.
   example: []
   syntax:
-    content: string? SegmentName { get; set; }
+    content: >-
+      [DisallowNull]
+
+      string? SegmentName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property SegmentName As String
+    content.vb: >-
+      <DisallowNull>
+
+      Property SegmentName As String
   overload: Songhay.Publications.Abstractions.ISegment.SegmentName*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.ISegment.SortOrdinal
   commentId: P:Songhay.Publications.Abstractions.ISegment.SortOrdinal
   id: SortOrdinal
@@ -199,12 +222,22 @@ items:
   summary: Gets or sets the client identifier.
   example: []
   syntax:
-    content: string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Property ClientId As String
   overload: Songhay.Publications.Abstractions.ISegment.ClientId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.ISegment.IsActive
   commentId: P:Songhay.Publications.Abstractions.ISegment.IsActive
   id: IsActive

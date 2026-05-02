@@ -93,12 +93,16 @@ items:
     content: >-
       [Display(Name = "Client ID", Order = 2)]
 
+      [DisallowNull]
+
       public string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <Display(Name:="Client ID", Order:=2)>
+
+      <DisallowNull>
 
       Public Property ClientId As String
   overload: Songhay.Publications.Models.Segment.ClientId*
@@ -115,6 +119,9 @@ items:
     - name: Order
       type: System.Int32
       value: 2
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Segment.IsActive
   commentId: P:Songhay.Publications.Models.Segment.IsActive
   id: IsActive
@@ -133,7 +140,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -183,7 +190,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ParentSegmentId
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -233,7 +240,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentId
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 31
+    startLine: 35
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -243,12 +250,16 @@ items:
     content: >-
       [Display(Name = "Segment ID", Order = 1)]
 
+      [DisallowNull]
+
       public int? SegmentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
       <Display(Name:="Segment ID", Order:=1)>
+
+      <DisallowNull>
 
       Public Property SegmentId As Integer?
   overload: Songhay.Publications.Models.Segment.SegmentId*
@@ -265,6 +276,9 @@ items:
     - name: Order
       type: System.Int32
       value: 1
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Segment.SegmentName
   commentId: P:Songhay.Publications.Models.Segment.SegmentName
   id: SegmentName
@@ -283,7 +297,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentName
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 38
+    startLine: 46
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -293,12 +307,16 @@ items:
     content: >-
       [Display(Name = "Segment Name", Order = 3)]
 
+      [DisallowNull]
+
       public string? SegmentName { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <Display(Name:="Segment Name", Order:=3)>
+
+      <DisallowNull>
 
       Public Property SegmentName As String
   overload: Songhay.Publications.Models.Segment.SegmentName*
@@ -315,6 +333,9 @@ items:
     - name: Order
       type: System.Int32
       value: 3
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Segment.SortOrdinal
   commentId: P:Songhay.Publications.Models.Segment.SortOrdinal
   id: SortOrdinal
@@ -333,7 +354,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 45
+    startLine: 57
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -383,7 +404,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 51
+    startLine: 63
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -433,7 +454,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 57
+    startLine: 69
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -483,7 +504,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 63
+    startLine: 75
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -533,7 +554,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Documents
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 69
+    startLine: 81
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -578,7 +599,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segments
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 75
+    startLine: 87
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -623,7 +644,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ParentSegment
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 81
+    startLine: 93
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -668,7 +689,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToString
     path: ../Songhay.Publications/Models/Segment.cs
-    startLine: 90
+    startLine: 102
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

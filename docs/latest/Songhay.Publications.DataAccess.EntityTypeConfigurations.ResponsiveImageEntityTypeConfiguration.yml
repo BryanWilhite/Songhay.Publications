@@ -145,7 +145,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.IEntityTypeConfiguration`1
@@ -157,7 +157,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -477,7 +477,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: '>'
   - name: )
   spec.vb:
@@ -495,7 +495,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: )
   - name: )
 - uid: Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Songhay.Publications.Models.ResponsiveImage}
@@ -517,7 +517,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1
@@ -529,7 +529,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: )
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models

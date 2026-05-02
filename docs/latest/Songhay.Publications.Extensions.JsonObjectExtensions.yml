@@ -105,7 +105,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithExtract
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
-    startLine: 34
+    startLine: 39
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -155,7 +155,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithoutConventionalDocumentProperties
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
-    startLine: 61
+    startLine: 66
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -199,7 +199,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithoutNonNullableDocumentProperties
     path: ../Songhay.Publications/Extensions/JsonObjectExtensions.cs
-    startLine: 86
+    startLine: 91
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

@@ -40,7 +40,7 @@ items:
   remarks: >-
     The opinion here is that this class demonstrates
 
-    the advantages of Typescript over a “classic” OOP language.
+    the advantages of TypeScript over a “classic” OOP language.
 
 
     The ability to cast an anonymous object into an interface
@@ -269,14 +269,24 @@ items:
   summary: Gets or sets the name of the segment.
   example: []
   syntax:
-    content: public string? SegmentName { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public string? SegmentName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property SegmentName As String
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property SegmentName As String
   overload: Songhay.Publications.Models.IndexEntry.SegmentName*
   implements:
   - Songhay.Publications.Abstractions.ISegment.SegmentName
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.IndexEntry.SortOrdinal
   commentId: P:Songhay.Publications.Models.IndexEntry.SortOrdinal
   id: SortOrdinal
@@ -368,14 +378,24 @@ items:
   summary: Gets or sets the client identifier.
   example: []
   syntax:
-    content: public string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property ClientId As String
   overload: Songhay.Publications.Models.IndexEntry.ClientId*
   implements:
   - Songhay.Publications.Abstractions.ISegment.ClientId
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.IndexEntry.IsActive
   commentId: P:Songhay.Publications.Models.IndexEntry.IsActive
   id: IsActive

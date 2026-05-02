@@ -41,6 +41,8 @@ items:
   syntax:
     content: 'public interface IFragment : ITemporal'
     content.vb: Public Interface IFragment Inherits ITemporal
+  derivedClasses:
+  - Songhay.Publications.Models.Fragment
   inheritedMembers:
   - Songhay.Abstractions.ITemporal.EndDate
   - Songhay.Abstractions.ITemporal.InceptDate
@@ -82,12 +84,22 @@ items:
   summary: Gets or sets the fragment identifier.
   example: []
   syntax:
-    content: int? FragmentId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      int? FragmentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Property FragmentId As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Property FragmentId As Integer?
   overload: Songhay.Publications.Abstractions.IFragment.FragmentId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IFragment.FragmentName
   commentId: P:Songhay.Publications.Abstractions.IFragment.FragmentName
   id: FragmentName
@@ -237,12 +249,22 @@ items:
   summary: Gets or sets the document identifier.
   example: []
   syntax:
-    content: int? DocumentId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      int? DocumentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Property DocumentId As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Property DocumentId As Integer?
   overload: Songhay.Publications.Abstractions.IFragment.DocumentId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IFragment.PrevFragmentId
   commentId: P:Songhay.Publications.Abstractions.IFragment.PrevFragmentId
   id: PrevFragmentId
@@ -423,12 +445,22 @@ items:
   summary: Gets or sets the client identifier.
   example: []
   syntax:
-    content: string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Property ClientId As String
   overload: Songhay.Publications.Abstractions.IFragment.ClientId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IFragment.IsActive
   commentId: P:Songhay.Publications.Abstractions.IFragment.IsActive
   id: IsActive

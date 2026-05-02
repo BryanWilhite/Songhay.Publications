@@ -199,14 +199,7 @@ items:
     Decomposes the <xref href="System.Xml.Linq.XElement.Value" data-throw-if-not-resolved="false"></xref>
 
     of the specified <code>pre</code> element.
-  remarks: >-
-    Note: the first and last elements of preList
-
-    *should* be empty(when no leading spaces before<pre></pre>)
-
-    or *should* contain `pre` open and closing, respectively
-
-    (when there are leading spaces before <pre></pre>).
+  remarks: "    Note: the first and last elements of preList\n    *should* be empty(when no leading spaces before\n<pre></pre>\n)\n    or *should* contain `pre` open and closing, respectively\n    (when there are leading spaces before \n<pre></pre>\n)."
   example: []
   syntax:
     content: public static List<string> GetPreLines(XElement preElement)

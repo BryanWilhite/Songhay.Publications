@@ -103,12 +103,16 @@ items:
     content: >-
       [Display(Name = "Client ID", Order = 2)]
 
+      [DisallowNull]
+
       public string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <Display(Name:="Client ID", Order:=2)>
+
+      <DisallowNull>
 
       Public Property ClientId As String
   overload: Songhay.Publications.Models.Fragment.ClientId*
@@ -125,6 +129,9 @@ items:
     - name: Order
       type: System.Int32
       value: 2
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Fragment.InceptDate
   commentId: P:Songhay.Publications.Models.Fragment.InceptDate
   id: InceptDate
@@ -143,7 +150,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -193,7 +200,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentId
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -203,12 +210,16 @@ items:
     content: >-
       [Display(Name = "Document ID", Order = 0)]
 
+      [DisallowNull]
+
       public int? DocumentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
       <Display(Name:="Document ID", Order:=0)>
+
+      <DisallowNull>
 
       Public Property DocumentId As Integer?
   overload: Songhay.Publications.Models.Fragment.DocumentId*
@@ -225,6 +236,9 @@ items:
     - name: Order
       type: System.Int32
       value: 0
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Fragment.EndDate
   commentId: P:Songhay.Publications.Models.Fragment.EndDate
   id: EndDate
@@ -243,7 +257,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 32
+    startLine: 40
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -293,7 +307,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentDisplayName
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 38
+    startLine: 46
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -354,7 +368,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 45
+    startLine: 53
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -364,12 +378,16 @@ items:
     content: >-
       [Display(Name = "Fragment ID", Order = 1)]
 
+      [DisallowNull]
+
       public int? FragmentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
       <Display(Name:="Fragment ID", Order:=1)>
+
+      <DisallowNull>
 
       Public Property FragmentId As Integer?
   overload: Songhay.Publications.Models.Fragment.FragmentId*
@@ -386,6 +404,9 @@ items:
     - name: Order
       type: System.Int32
       value: 1
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Fragment.FragmentName
   commentId: P:Songhay.Publications.Models.Fragment.FragmentName
   id: FragmentName
@@ -404,7 +425,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FragmentName
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 52
+    startLine: 64
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -465,7 +486,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 59
+    startLine: 71
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -515,7 +536,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsNext
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 65
+    startLine: 77
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -565,7 +586,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsPrevious
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 71
+    startLine: 83
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -615,7 +636,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsWrapper
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 77
+    startLine: 89
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -665,7 +686,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Content
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 83
+    startLine: 95
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -712,7 +733,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ItemText
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 89
+    startLine: 101
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -757,7 +778,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 95
+    startLine: 107
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -807,7 +828,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 101
+    startLine: 113
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -857,7 +878,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragmentId
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 107
+    startLine: 119
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -907,7 +928,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 113
+    startLine: 125
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -957,7 +978,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Document
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 119
+    startLine: 131
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1002,7 +1023,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragments
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 125
+    startLine: 137
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1047,7 +1068,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: NextFragment
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 131
+    startLine: 143
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1092,7 +1113,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragments
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 137
+    startLine: 149
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1137,7 +1158,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PrevFragment
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 143
+    startLine: 155
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1182,7 +1203,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToString
     path: ../Songhay.Publications/Models/Fragment.cs
-    startLine: 152
+    startLine: 164
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

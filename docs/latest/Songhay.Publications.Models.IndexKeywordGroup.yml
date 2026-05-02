@@ -72,14 +72,24 @@ items:
   summary: Index Keyword Group ID.
   example: []
   syntax:
-    content: public int? Id { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public int? Id { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Public Property Id As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property Id As Integer?
   overload: Songhay.Publications.Models.IndexKeywordGroup.Id*
   implements:
   - Songhay.Publications.Abstractions.IIndexKeywordGroup.Id
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.IndexKeywordGroup.ClientId
   commentId: P:Songhay.Publications.Models.IndexKeywordGroup.ClientId
   id: ClientId
@@ -98,21 +108,31 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ClientId
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
   summary: Index Keyword Group Client ID.
   example: []
   syntax:
-    content: public string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property ClientId As String
   overload: Songhay.Publications.Models.IndexKeywordGroup.ClientId*
   implements:
   - Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.IndexKeywordGroup.Name
   commentId: P:Songhay.Publications.Models.IndexKeywordGroup.Name
   id: Name
@@ -131,7 +151,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Name
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
-    startLine: 22
+    startLine: 30
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -164,7 +184,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
-    startLine: 27
+    startLine: 35
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -197,7 +217,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
-    startLine: 32
+    startLine: 40
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -230,7 +250,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/IndexKeywordGroup.cs
-    startLine: 37
+    startLine: 45
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

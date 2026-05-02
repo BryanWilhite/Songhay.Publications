@@ -207,6 +207,7 @@ Class Segment  <a class="header-action link-secondary" title="View source" href=
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Display(Name = &quot;Client ID&quot;, Order = 2)]
+[DisallowNull]
 public string? ClientId { get; set; }</code></pre>
   </div>
 
@@ -231,7 +232,7 @@ public string? ClientId { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_Documents" data-uid="Songhay.Publications.Models.Segment.Documents">
   Documents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the documents.</p>
@@ -264,7 +265,7 @@ public ICollection&lt;Document&gt; Documents { get; init; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_EndDate" data-uid="Songhay.Publications.Models.Segment.EndDate">
   EndDate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the end date.</p>
@@ -297,7 +298,7 @@ public DateTime? EndDate { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_InceptDate" data-uid="Songhay.Publications.Models.Segment.InceptDate">
   InceptDate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the incept date.</p>
@@ -330,7 +331,7 @@ public DateTime? InceptDate { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_IsActive" data-uid="Songhay.Publications.Models.Segment.IsActive">
   IsActive
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the is active.</p>
@@ -363,7 +364,7 @@ public bool? IsActive { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_ModificationDate" data-uid="Songhay.Publications.Models.Segment.ModificationDate">
   ModificationDate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the modification date.</p>
@@ -396,7 +397,7 @@ public DateTime? ModificationDate { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_ParentSegment" data-uid="Songhay.Publications.Models.Segment.ParentSegment">
   ParentSegment
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the parent segment.</p>
@@ -429,7 +430,7 @@ public Segment? ParentSegment { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_ParentSegmentId" data-uid="Songhay.Publications.Models.Segment.ParentSegmentId">
   ParentSegmentId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the parent segment identifier.</p>
@@ -462,7 +463,7 @@ public int? ParentSegmentId { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_SegmentId" data-uid="Songhay.Publications.Models.Segment.SegmentId">
   SegmentId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the segment identifier.</p>
@@ -471,6 +472,7 @@ public int? ParentSegmentId { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Display(Name = &quot;Segment ID&quot;, Order = 1)]
+[DisallowNull]
 public int? SegmentId { get; set; }</code></pre>
   </div>
 
@@ -495,7 +497,7 @@ public int? SegmentId { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_SegmentName" data-uid="Songhay.Publications.Models.Segment.SegmentName">
   SegmentName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the name of the segment.</p>
@@ -504,6 +506,7 @@ public int? SegmentId { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Display(Name = &quot;Segment Name&quot;, Order = 3)]
+[DisallowNull]
 public string? SegmentName { get; set; }</code></pre>
   </div>
 
@@ -528,7 +531,7 @@ public string? SegmentName { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_Segments" data-uid="Songhay.Publications.Models.Segment.Segments">
   Segments
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets child segments.</p>
@@ -561,7 +564,7 @@ public ICollection&lt;Segment&gt; Segments { get; init; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_SortOrdinal" data-uid="Songhay.Publications.Models.Segment.SortOrdinal">
   SortOrdinal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the sort ordinal.</p>
@@ -598,7 +601,7 @@ public byte? SortOrdinal { get; set; }</code></pre>
 
   <h3 id="Songhay_Publications_Models_Segment_ToString" data-uid="Songhay.Publications.Models.Segment.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/Segment.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts to string.</p>

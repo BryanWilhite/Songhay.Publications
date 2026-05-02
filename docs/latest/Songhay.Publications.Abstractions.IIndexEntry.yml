@@ -30,6 +30,8 @@ items:
   syntax:
     content: 'public interface IIndexEntry : ISegment, ITemporal'
     content.vb: Public Interface IIndexEntry Inherits ISegment, ITemporal
+  derivedClasses:
+  - Songhay.Publications.Models.IndexEntry
   inheritedMembers:
   - Songhay.Publications.Abstractions.ISegment.SegmentId
   - Songhay.Publications.Abstractions.ISegment.SegmentName

@@ -27,8 +27,8 @@ items:
   type: Class
   source:
     id: MarkdownEntryExtensions
-    path: System.Text.RegularExpressions.Generator/System.Text.RegularExpressions.Generator.RegexGenerator/RegexGenerator.g.cs
-    startLine: 8
+    path: /home/rasx/sourceRoot/Songhay.Publications/Songhay.Publications/obj/Release/net10.0/System.Text.RegularExpressions.Generator/System.Text.RegularExpressions.Generator.RegexGenerator/RegexGenerator.g.cs
+    startLine: 6
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

@@ -440,7 +440,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 196
+    startLine: 198
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -478,7 +478,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 204
+    startLine: 206
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -519,7 +519,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToValidationResult
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 226
+    startLine: 228
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -557,7 +557,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 244
+    startLine: 246
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -601,7 +601,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 253
+    startLine: 255
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -648,7 +648,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithDefaults
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 307
+    startLine: 309
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -686,7 +686,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 320
+    startLine: 322
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -730,7 +730,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithJsonFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 334
+    startLine: 336
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -775,7 +775,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithYamlFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 385
+    startLine: 387
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

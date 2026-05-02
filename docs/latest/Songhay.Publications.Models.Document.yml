@@ -108,12 +108,16 @@ items:
     content: >-
       [Display(Name = "Client ID", Order = 2)]
 
+      [DisallowNull]
+
       public string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <Display(Name:="Client ID", Order:=2)>
+
+      <DisallowNull>
 
       Public Property ClientId As String
   overload: Songhay.Publications.Models.Document.ClientId*
@@ -130,6 +134,9 @@ items:
     - name: Order
       type: System.Int32
       value: 2
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Document.InceptDate
   commentId: P:Songhay.Publications.Models.Document.InceptDate
   id: InceptDate
@@ -148,7 +155,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: InceptDate
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -198,7 +205,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentId
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -208,12 +215,16 @@ items:
     content: >-
       [Display(Name = "Document ID", Order = 1)]
 
+      [DisallowNull]
+
       public int? DocumentId { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
       <Display(Name:="Document ID", Order:=1)>
+
+      <DisallowNull>
 
       Public Property DocumentId As Integer?
   overload: Songhay.Publications.Models.Document.DocumentId*
@@ -230,6 +241,9 @@ items:
     - name: Order
       type: System.Int32
       value: 1
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.Document.DocumentShortName
   commentId: P:Songhay.Publications.Models.Document.DocumentShortName
   id: DocumentShortName
@@ -248,7 +262,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: DocumentShortName
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 32
+    startLine: 40
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -298,7 +312,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: FileName
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 38
+    startLine: 46
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -348,7 +362,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsActive
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 44
+    startLine: 52
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -398,7 +412,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsRoot
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 50
+    startLine: 58
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -448,7 +462,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ModificationDate
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 56
+    startLine: 64
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -498,7 +512,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: EndDate
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 62
+    startLine: 70
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -548,7 +562,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Path
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 68
+    startLine: 76
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -598,7 +612,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SegmentId
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 74
+    startLine: 82
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -648,7 +662,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SortOrdinal
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 80
+    startLine: 88
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -698,7 +712,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Tag
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 86
+    startLine: 94
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -748,7 +762,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: TemplateId
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 92
+    startLine: 100
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -798,7 +812,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Title
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 98
+    startLine: 106
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -848,7 +862,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segment
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 104
+    startLine: 112
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -893,7 +907,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Fragments
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 110
+    startLine: 118
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -938,7 +952,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IndexKeywords
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 116
+    startLine: 124
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -983,7 +997,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ResponsiveImages
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 122
+    startLine: 130
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -1028,7 +1042,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToString
     path: ../Songhay.Publications/Models/Document.cs
-    startLine: 128
+    startLine: 136
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

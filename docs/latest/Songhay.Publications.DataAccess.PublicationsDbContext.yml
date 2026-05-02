@@ -138,6 +138,7 @@ items:
 
     Example:
 
+
     <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 
     {
@@ -2941,7 +2942,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.Segment
     name: Segment
-    href: Songhay.Publications.Models.Segment.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.DbSet`1
@@ -2953,7 +2954,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.Segment
     name: Segment
-    href: Songhay.Publications.Models.Segment.html
+    isExternal: true
   - name: )
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
@@ -3017,7 +3018,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.Document
     name: Document
-    href: Songhay.Publications.Models.Document.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.DbSet`1
@@ -3029,7 +3030,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.Document
     name: Document
-    href: Songhay.Publications.Models.Document.html
+    isExternal: true
   - name: )
 - uid: Songhay.Publications.Models.IndexKeyword
   commentId: T:Songhay.Publications.Models.IndexKeyword
@@ -3062,7 +3063,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.DbSet`1
@@ -3074,7 +3075,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: )
 - uid: Songhay.Publications.Models.ResponsiveImage
   commentId: T:Songhay.Publications.Models.ResponsiveImage
@@ -3108,7 +3109,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.DbSet`1
@@ -3120,7 +3121,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
-    href: Songhay.Publications.Models.ResponsiveImage.html
+    isExternal: true
   - name: )
 - uid: Songhay.Publications.Models.ImageCandidate
   commentId: T:Songhay.Publications.Models.ImageCandidate
@@ -3153,7 +3154,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.ImageCandidate
     name: ImageCandidate
-    href: Songhay.Publications.Models.ImageCandidate.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.DbSet`1
@@ -3165,7 +3166,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.ImageCandidate
     name: ImageCandidate
-    href: Songhay.Publications.Models.ImageCandidate.html
+    isExternal: true
   - name: )
 - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
   commentId: M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)

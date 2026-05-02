@@ -154,6 +154,9 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_">ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage?)</a>
   </div>
   <div>
+      <a class="xref" href="Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_">ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage?, string?)</a>
+  </div>
+  <div>
       <a class="xref" href="Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToSizesSetAttribute_Songhay_Publications_Models_ResponsiveImage_">ResponsiveImageExtensions.ToSizesSetAttribute(ResponsiveImage?)</a>
   </div>
   <div>
@@ -173,7 +176,7 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Songhay_Publications_Models_ResponsiveImage_Candidates" data-uid="Songhay.Publications.Models.ResponsiveImage.Candidates">
   Candidates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the candidates.</p>
@@ -245,7 +248,8 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Key { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DisallowNull]
+public string? Key { get; set; }</code></pre>
   </div>
 
 
@@ -269,7 +273,7 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Songhay_Publications_Models_ResponsiveImage_Sizes" data-uid="Songhay.Publications.Models.ResponsiveImage.Sizes">
   Sizes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the sizes.</p>
@@ -301,7 +305,7 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="Songhay_Publications_Models_ResponsiveImage_Source" data-uid="Songhay.Publications.Models.ResponsiveImage.Source">
   Source
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Models/ResponsiveImage.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the source.</p>
@@ -309,7 +313,8 @@ Class ResponsiveImage  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Uri? Source { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DisallowNull]
+public Uri? Source { get; set; }</code></pre>
   </div>
 
 

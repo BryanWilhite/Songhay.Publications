@@ -46,6 +46,7 @@ items:
   extensionMethods:
   - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules
   - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup
+  - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(System.String)
   - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute
   - Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute
 - uid: Songhay.Publications.Models.ResponsiveImage.Description
@@ -104,12 +105,22 @@ items:
   summary: Gets or sets the key.
   example: []
   syntax:
-    content: public string? Key { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public string? Key { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Key As String
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property Key As String
   overload: Songhay.Publications.Models.ResponsiveImage.Key*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.ResponsiveImage.Source
   commentId: P:Songhay.Publications.Models.ResponsiveImage.Source
   id: Source
@@ -128,19 +139,29 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Source
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
   summary: Gets or sets the source.
   example: []
   syntax:
-    content: public Uri? Source { get; set; }
+    content: >-
+      [DisallowNull]
+
+      public Uri? Source { get; set; }
     parameters: []
     return:
       type: System.Uri
-    content.vb: Public Property Source As Uri
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property Source As Uri
   overload: Songhay.Publications.Models.ResponsiveImage.Source*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.ResponsiveImage.Candidates
   commentId: P:Songhay.Publications.Models.ResponsiveImage.Candidates
   id: Candidates
@@ -159,7 +180,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Candidates
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
-    startLine: 27
+    startLine: 35
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -190,7 +211,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Sizes
     path: ../Songhay.Publications/Models/ResponsiveImage.cs
-    startLine: 32
+    startLine: 40
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -516,6 +537,47 @@ references:
     name: ResponsiveImage
     href: Songhay.Publications.Models.ResponsiveImage.html
   - name: )
+- uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(System.String)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  definition: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  name: ToImgMarkup(ResponsiveImage, string)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, string)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, string)
+  nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, String)
+  fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, String)
+  name.vb: ToImgMarkup(ResponsiveImage, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: Songhay.Publications.Models.ResponsiveImage.Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute
   commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
@@ -629,6 +691,46 @@ references:
   - uid: Songhay.Publications.Models.ResponsiveImage
     name: ResponsiveImage
     href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: )
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  isExternal: true
+  href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  name: ToImgMarkup(ResponsiveImage, string)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, string)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, string)
+  nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, String)
+  fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, String)
+  name.vb: ToImgMarkup(ResponsiveImage, String)
+  spec.csharp:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+    name: ToImgMarkup
+    href: Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  - name: (
+  - uid: Songhay.Publications.Models.ResponsiveImage
+    name: ResponsiveImage
+    href: Songhay.Publications.Models.ResponsiveImage.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)

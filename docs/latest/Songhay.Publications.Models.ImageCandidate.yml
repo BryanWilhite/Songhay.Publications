@@ -74,12 +74,22 @@ items:
   summary: Gets or sets the image URI.
   example: []
   syntax:
-    content: public Uri? ImageUri { get; init; }
+    content: >-
+      [DisallowNull]
+
+      public Uri? ImageUri { get; init; }
     parameters: []
     return:
       type: System.Uri
-    content.vb: Public Property ImageUri As Uri
+    content.vb: >-
+      <DisallowNull>
+
+      Public Property ImageUri As Uri
   overload: Songhay.Publications.Models.ImageCandidate.ImageUri*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Models.ImageCandidate.PixelDensity
   commentId: P:Songhay.Publications.Models.ImageCandidate.PixelDensity
   id: PixelDensity
@@ -98,7 +108,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: PixelDensity
     path: ../Songhay.Publications/Models/ImageCandidate.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models
@@ -129,7 +139,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Width
     path: ../Songhay.Publications/Models/ImageCandidate.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Models

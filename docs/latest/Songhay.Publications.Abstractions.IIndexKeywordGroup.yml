@@ -31,6 +31,8 @@ items:
   syntax:
     content: 'public interface IIndexKeywordGroup : ITemporal'
     content.vb: Public Interface IIndexKeywordGroup Inherits ITemporal
+  derivedClasses:
+  - Songhay.Publications.Models.IndexKeywordGroup
   inheritedMembers:
   - Songhay.Abstractions.ITemporal.EndDate
   - Songhay.Abstractions.ITemporal.InceptDate
@@ -60,12 +62,22 @@ items:
   summary: Index Keyword Group ID
   example: []
   syntax:
-    content: int? Id { get; set; }
+    content: >-
+      [DisallowNull]
+
+      int? Id { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
-    content.vb: Property Id As Integer?
+    content.vb: >-
+      <DisallowNull>
+
+      Property Id As Integer?
   overload: Songhay.Publications.Abstractions.IIndexKeywordGroup.Id*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
   commentId: P:Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId
   id: ClientId
@@ -91,12 +103,22 @@ items:
   summary: Index Keyword Group Client ID
   example: []
   syntax:
-    content: string? ClientId { get; set; }
+    content: >-
+      [DisallowNull]
+
+      string? ClientId { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property ClientId As String
+    content.vb: >-
+      <DisallowNull>
+
+      Property ClientId As String
   overload: Songhay.Publications.Abstractions.IIndexKeywordGroup.ClientId*
+  attributes:
+  - type: System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+    ctor: System.Diagnostics.CodeAnalysis.DisallowNullAttribute.#ctor
+    arguments: []
 - uid: Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
   commentId: P:Songhay.Publications.Abstractions.IIndexKeywordGroup.Name
   id: Name

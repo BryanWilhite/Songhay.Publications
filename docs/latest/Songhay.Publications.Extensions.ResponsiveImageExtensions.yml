@@ -7,6 +7,7 @@ items:
   children:
   - Songhay.Publications.Extensions.ResponsiveImageExtensions.ToCssMediaAtRules(Songhay.Publications.Models.ResponsiveImage)
   - Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
+  - Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
   - Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   - Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSrcSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   langs:
@@ -118,6 +119,47 @@ items:
   nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage)
   fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
   name.vb: ToImgMarkup(ResponsiveImage)
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  id: ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.ResponsiveImageExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToImgMarkup(ResponsiveImage?, string?)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage?, string?)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage?, string?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToImgMarkup
+    path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
+    startLine: 52
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Returns <code>img</code> markup with <code>srcset</code> and <code>sizes</code>.
+  example: []
+  syntax:
+    content: public static string ToImgMarkup(this ResponsiveImage? responsiveImage, string? cssClasses)
+    parameters:
+    - id: responsiveImage
+      type: Songhay.Publications.Models.ResponsiveImage
+      description: The <xref href="Songhay.Publications.Models.ResponsiveImage" data-throw-if-not-resolved="false"></xref>.
+    - id: cssClasses
+      type: System.String
+      description: optional CSS class name(s) for the <code>img</code> element
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToImgMarkup(responsiveImage As ResponsiveImage, cssClasses As String) As String
+  overload: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup*
+  nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, String)
+  fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, String)
+  name.vb: ToImgMarkup(ResponsiveImage, String)
 - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
   id: ToSizesSetAttribute(Songhay.Publications.Models.ResponsiveImage)
@@ -137,7 +179,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToSizesSetAttribute
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-    startLine: 63
+    startLine: 77
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -175,7 +217,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToSrcSetAttribute
     path: ../Songhay.Publications/Extensions/ResponsiveImageExtensions.cs
-    startLine: 85
+    startLine: 99
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions

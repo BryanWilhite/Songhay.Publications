@@ -145,7 +145,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.IEntityTypeConfiguration`1
@@ -157,7 +157,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -476,7 +476,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: '>'
   - name: )
   spec.vb:
@@ -494,7 +494,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: )
   - name: )
 - uid: Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Songhay.Publications.Models.IndexKeyword}
@@ -516,7 +516,7 @@ references:
   - name: <
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: '>'
   spec.vb:
   - uid: Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1
@@ -528,7 +528,7 @@ references:
   - name: " "
   - uid: Songhay.Publications.Models.IndexKeyword
     name: IndexKeyword
-    href: Songhay.Publications.Models.IndexKeyword.html
+    isExternal: true
   - name: )
 - uid: Microsoft.EntityFrameworkCore.IEntityTypeConfiguration`1.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{`0})
   commentId: M:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration`1.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{`0})

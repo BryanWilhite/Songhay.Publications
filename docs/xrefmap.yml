@@ -2196,6 +2196,15 @@ references:
   fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage)
   nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage?)
   nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage)
+- uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  name: ToImgMarkup(ResponsiveImage?, string?)
+  href: latest/Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_Songhay_Publications_Models_ResponsiveImage_System_String_
+  commentId: M:Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage,System.String)
+  name.vb: ToImgMarkup(ResponsiveImage, String)
+  fullName: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage?, string?)
+  fullName.vb: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup(Songhay.Publications.Models.ResponsiveImage, String)
+  nameWithType: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage?, string?)
+  nameWithType.vb: ResponsiveImageExtensions.ToImgMarkup(ResponsiveImage, String)
 - uid: Songhay.Publications.Extensions.ResponsiveImageExtensions.ToImgMarkup*
   name: ToImgMarkup
   href: latest/Songhay.Publications.Extensions.ResponsiveImageExtensions.html#Songhay_Publications_Extensions_ResponsiveImageExtensions_ToImgMarkup_
