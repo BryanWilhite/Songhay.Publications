@@ -21,9 +21,9 @@ public class YamlUtilityTests(ITestOutputHelper helper)
         helper.WriteLine(yaml);
         helper.WriteLine("deserializing to `IDictionary<string, object>`...");
 
-        IDictionary<string, object>? yO = YamlUtility.DeserializeYaml(yaml);
+        IDictionary<string, object>? data = YamlUtility.DeserializeYaml(yaml);
 
-        Assert.NotNull(yO);
+        Assert.NotNull(data);
     }
 
     [Theory]
