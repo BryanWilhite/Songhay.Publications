@@ -17,7 +17,7 @@ public class PublicationsHostedService(IActivityTask activity, IHostApplicationL
         {
             try
             {
-                await activity.StartAsync();
+                await activity.StartAsync(cancellationToken);
 
                 _exitCode = 0;
             }

@@ -235,16 +235,21 @@
             <summary>
             <see cref="T:Songhay.Abstractions.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
             </summary>
+            <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
+            <param name="httpClientFactory">the <see cref="T:System.Net.Http.IHttpClientFactory"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
             <seealso cref="T:Songhay.Abstractions.IActivity" />
         </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})">
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})">
             <summary>
-            Initializes a new instance of the <see cref="T:Songhay.Publications.Activities.MarkdownEntryActivity"/> class.
+            <see cref="T:Songhay.Abstractions.IActivity"/> implementation for <see cref="T:Songhay.Publications.Models.MarkdownEntry"/>.
             </summary>
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
+            <param name="httpClientFactory">the <see cref="T:System.Net.Http.IHttpClientFactory"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="T:Songhay.Abstractions.IActivity" />
         </member>
-        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync">
+        <member name="M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync(System.Threading.CancellationToken)">
             <summary>
             Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
             </summary>
@@ -263,7 +268,7 @@
             <param name="configuration">the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
-        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync">
+        <member name="M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)">
             <summary>
             Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
             </summary>

@@ -48,7 +48,7 @@ public static class IDictionaryExtensions
 
         string propertyName = nameof(document.DocumentId).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        int? documentId = ProgramTypeUtility.ParseInt32(data.TryGetValueWithKey(propertyName));
+        int? documentId = ProgramTypeUtility.ParseInt32(data.GetValueWithKey(propertyName));
         if (documentId == null)
         {
             logger.LogError("Error: the expected property, `{Name}`, is not here. This is a key! Continuing...", propertyName);
@@ -57,7 +57,7 @@ public static class IDictionaryExtensions
 
         propertyName = nameof(document.ClientId).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        string? clientId = (string?)data.TryGetValueWithKey(propertyName);
+        string? clientId = (string?)data.GetValueWithKey(propertyName);
         if (clientId == null)
         {
             logger.LogWarning("Warning: the expected property, `{Name}`, is not here. This is a key! Continuing...", propertyName);
@@ -66,47 +66,47 @@ public static class IDictionaryExtensions
 
         propertyName = nameof(document.DocumentShortName).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.DocumentShortName = (string?)data.TryGetValueWithKey(propertyName);
+        document.DocumentShortName = (string?)data.GetValueWithKey(propertyName);
 
         propertyName = nameof(document.FileName).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.FileName = (string?)data.TryGetValueWithKey(propertyName);
+        document.FileName = (string?)data.GetValueWithKey(propertyName);
 
         propertyName = nameof(document.EndDate).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.EndDate = ProgramTypeUtility.ParseDateTime(data.TryGetValueWithKey(propertyName));
+        document.EndDate = ProgramTypeUtility.ParseDateTime(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.InceptDate).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.InceptDate = ProgramTypeUtility.ParseDateTime(data.TryGetValueWithKey(propertyName));
+        document.InceptDate = ProgramTypeUtility.ParseDateTime(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.IsActive).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.IsActive = ProgramTypeUtility.ParseBoolean(data.TryGetValueWithKey(propertyName));
+        document.IsActive = ProgramTypeUtility.ParseBoolean(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.IsRoot).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.IsRoot = ProgramTypeUtility.ParseBoolean(data.TryGetValueWithKey(propertyName));
+        document.IsRoot = ProgramTypeUtility.ParseBoolean(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.ModificationDate).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.ModificationDate = ProgramTypeUtility.ParseDateTime(data.TryGetValueWithKey(propertyName));
+        document.ModificationDate = ProgramTypeUtility.ParseDateTime(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.Path).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.Path = (string?)data.TryGetValueWithKey(propertyName);
+        document.Path = (string?)data.GetValueWithKey(propertyName);
 
         propertyName = nameof(document.SegmentId).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.SegmentId = ProgramTypeUtility.ParseInt32(data.TryGetValueWithKey(propertyName));
+        document.SegmentId = ProgramTypeUtility.ParseInt32(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.TemplateId).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.TemplateId = ProgramTypeUtility.ParseInt32(data.TryGetValueWithKey(propertyName));
+        document.TemplateId = ProgramTypeUtility.ParseInt32(data.GetValueWithKey(propertyName));
 
         propertyName = nameof(document.Title).ToCamelCase().ToReferenceTypeValueOrThrow();
         logger.LogInformation("Trying to get `{Name}`...", propertyName);
-        document.Title = (string?)data.TryGetValueWithKey(propertyName);
+        document.Title = (string?)data.GetValueWithKey(propertyName);
 
         #endregion
 
@@ -119,11 +119,11 @@ public static class IDictionaryExtensions
 
         propertyName = "extract";
         logger.LogInformation("Trying to get `{Name}` for IDocument.Tag...", propertyName);
-        jO[propertyName] = (string?)data.TryGetValueWithKey(propertyName);
+        jO[propertyName] = (string?)data.GetValueWithKey(propertyName);
         foreach (string key in tagKeys.Distinct())
         {
             logger.LogInformation("Trying to get `{Name}` for IDocument.Tag...", key);
-            jO[key] = (string?)data.TryGetValueWithKey(key);
+            jO[key] = (string?)data.GetValueWithKey(key);
         }
 
         document.Tag = jO.ToJsonString();

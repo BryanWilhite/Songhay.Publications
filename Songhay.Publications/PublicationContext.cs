@@ -165,7 +165,7 @@ public class PublicationContext
         _logger.LogInformation("setting isbn 13 into form `isbn-000-0-000-00000-0`...");
 
         Dictionary<string, string>? dictionary = _publicationMeta.GetProperty("publication").GetProperty("identifiers").ToInstanceOrNull<Dictionary<string, string>>();
-        string isbn13 = dictionary.TryGetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
+        string isbn13 = dictionary.GetValueWithKey("ISBN-13", throwException: true).ToReferenceTypeValueOrThrow();
 
         isbn13 = new string(isbn13.Where(char.IsDigit).ToArray());
         _logger.LogInformation("isbn raw: {Number}", isbn13);

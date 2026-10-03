@@ -5,34 +5,26 @@ namespace Songhay.Publications.Activities;
 /// <summary>
 /// <see cref="IActivity"/> implementation for <see cref="MarkdownEntry"/>.
 /// </summary>
+/// <param name="configuration">the <see cref="IConfiguration"/></param>
+/// <param name="httpClientFactory">the <see cref="IHttpClientFactory"/></param>
+/// <param name="logger">the <see cref="ILogger"/></param>
 /// <seealso cref="IActivity" />
-public class MarkdownEntryActivity : IActivityTask
+public class MarkdownEntryActivity(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<MarkdownEntryActivity> logger) : IActivityTask
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="MarkdownEntryActivity"/> class.
-    /// </summary>
-    /// <param name="configuration">the <see cref="IConfiguration"/></param>
-    /// <param name="logger">the <see cref="ILogger"/></param>
-    public MarkdownEntryActivity(IConfiguration configuration, ILogger<MarkdownEntryActivity> logger)
-    {
-        _configuration = configuration;
-        _logger = logger;
-    }
-
     /// <summary>
     /// Starts the <see cref="IActivity"/>.
     /// </summary>
-    public async Task StartAsync()
+    public async Task StartAsync(CancellationToken cancellationToken)
     {
         await Task.Run(() =>
         {
-            _logger.LogInformation("Starting {ActivityName}...", nameof(MarkdownEntryActivity));
+            logger.LogInformation("Starting {ActivityName}...", nameof(MarkdownEntryActivity));
 
             (_presentationInfo, _jSettings) = GetContext();
 
             string? command = _jSettings.GetPublicationCommand();
 
-            _logger.LogInformation("{ActivityName}: {Label}: `{Command}`", nameof(MarkdownEntryActivity), nameof(command), command);
+            logger.LogInformation("{ActivityName}: {Label}: `{Command}`", nameof(MarkdownEntryActivity), nameof(command), command);
 
             if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameAddEntryExtract)) AddEntryExtract();
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNameExpandUris)) ExpandUris();
@@ -40,10 +32,10 @@ public class MarkdownEntryActivity : IActivityTask
             else if (command.EqualsInvariant(MarkdownPresentationCommands.CommandNamePublishEntry)) PublishEntry();
             else
             {
-                _logger.LogWarning("{ActivityName}: The expected command is not here. Actual: `{Command}`",
+                logger.LogWarning("{ActivityName}: The expected command is not here. Actual: `{Command}`",
                     nameof(MarkdownEntryActivity), command ?? "[null]");
             }
-        });
+        }, cancellationToken);
     }
 
     internal static string FindChange(string? input, string? pattern, string? replacement, bool useRegex)
@@ -80,7 +72,7 @@ public class MarkdownEntryActivity : IActivityTask
         File.WriteAllText(entryInfo.FullName, $"{finalEdit}");
 
         var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        _logger.LogInformation("{ActivityName}: Added entry extract: `{Id}`", nameof(MarkdownEntryActivity), clientId);
+        logger.LogInformation("{ActivityName}: Added entry extract: `{Id}`", nameof(MarkdownEntryActivity), clientId);
     }
 
     internal void ExpandUris()
@@ -97,7 +89,7 @@ public class MarkdownEntryActivity : IActivityTask
 
         var entryInfo = new FileInfo(entryPath);
 
-        _logger.LogInformation("{ActivityName}: expanding `{Host}` URIs in `{Name}`...", nameof(MarkdownEntryActivity),
+        logger.LogInformation("{ActivityName}: expanding `{Host}` URIs in `{Name}`...", nameof(MarkdownEntryActivity),
             collapsedHost, entryInfo.Name);
 
         var entry = entryInfo.ToMarkdownEntry();
@@ -113,21 +105,21 @@ public class MarkdownEntryActivity : IActivityTask
             KeyValuePair<Uri, Uri>? nullable = null;
             try
             {
-                _logger.LogInformation("{ActivityName}: expanding `{Uri}`...", nameof(MarkdownEntryActivity),
+                logger.LogInformation("{ActivityName}: expanding `{Uri}`...", nameof(MarkdownEntryActivity),
                     expandableUri.OriginalString);
 
-                var pair = await expandableUri.ToExpandedUriPairAsync();
+                var pair = await expandableUri.ToExpandedUriPairAsync(httpClientFactory.CreateClient);
                 if (pair.Key is not null && pair.Value is not null)
                 {
                     nullable = new KeyValuePair<Uri, Uri>(pair.Key, pair.Value);
 
-                    _logger.LogInformation("{ActivityName}: expanded `{Uri}` to `{UriExpanded}`.", nameof(MarkdownEntryActivity),
+                    logger.LogInformation("{ActivityName}: expanded `{Uri}` to `{UriExpanded}`.", nameof(MarkdownEntryActivity),
                         nullable.Value.Key.OriginalString, nullable.Value.Value.OriginalString);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError("{Message}{NewLine}{StackTrace}", ex.Message, Environment.NewLine, ex.StackTrace);
+                logger.LogError("{Message}{NewLine}{StackTrace}", ex.Message, Environment.NewLine, ex.StackTrace);
             }
 
             return nullable;
@@ -154,7 +146,7 @@ public class MarkdownEntryActivity : IActivityTask
                 pair.Value.OriginalString
             );
 
-        _logger.LogInformation("{ActivityName}: saving `{Name}`...", nameof(MarkdownEntryActivity), entryInfo.Name);
+        logger.LogInformation("{ActivityName}: saving `{Name}`...", nameof(MarkdownEntryActivity), entryInfo.Name);
 
         await File.WriteAllTextAsync(entryInfo.FullName, entry.ToFinalEdit());
     }
@@ -176,14 +168,14 @@ public class MarkdownEntryActivity : IActivityTask
         }
 
         var clientId = entry.FrontMatter["clientId"].ToReferenceTypeValueOrThrow().GetValue<string>();
-        _logger.LogInformation("{ActivityName}: Generated entry: `{Id}`", nameof(MarkdownEntryActivity), clientId);
+        logger.LogInformation("{ActivityName}: Generated entry: `{Id}`", nameof(MarkdownEntryActivity), clientId);
     }
 
     internal (DirectoryInfo presentationInfo, JsonElement jSettings) GetContext()
     {
-        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = _configuration.ToPresentationAndSettingsInfo(_logger);
+        (DirectoryInfo presentationInfo, FileInfo settingsInfo) = configuration.ToPresentationAndSettingsInfo(logger);
 
-        _logger.LogInformation("applying settings...");
+        logger.LogInformation("applying settings...");
 
         using var jDoc = JsonDocument.Parse(File.ReadAllText(settingsInfo.FullName)).ToReferenceTypeValueOrThrow();
         JsonElement jSettings = jDoc.RootElement;
@@ -202,12 +194,9 @@ public class MarkdownEntryActivity : IActivityTask
     {
         var path = MarkdownEntryUtility.PublishEntryFor11Ty(entryDraftsRootInfo.FullName, entryRootInfo.FullName, entryFileName);
 
-        _logger.LogInformation("{Name}: Published entry: `{Path}`", nameof(MarkdownEntryActivity), path);
+        logger.LogInformation("{Name}: Published entry: `{Path}`", nameof(MarkdownEntryActivity), path);
     }
 
     private DirectoryInfo? _presentationInfo;
     private JsonElement _jSettings;
-
-    private readonly IConfiguration _configuration;
-    private readonly ILogger<MarkdownEntryActivity> _logger;
 }

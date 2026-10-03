@@ -23,7 +23,7 @@ public class SearchIndexActivity : IActivityTask
     /// <summary>
     /// Starts the <see cref="IActivity"/>.
     /// </summary>
-    public async Task StartAsync()
+    public async Task StartAsync(CancellationToken cancellationToken)
     {
         await Task.Run(() =>
         {
@@ -41,7 +41,7 @@ public class SearchIndexActivity : IActivityTask
                 _logger.LogWarning("{ActivityName}: The expected command is not here. Actual: `{Command}`",
                     nameof(MarkdownEntryActivity), command ?? "[null]");
             }
-        });
+        }, cancellationToken);
     }
 
     internal static FileInfo CompressSearchIndex(FileInfo indexInfo)
