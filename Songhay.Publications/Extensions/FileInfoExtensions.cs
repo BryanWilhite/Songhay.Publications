@@ -148,23 +148,54 @@ public static class FileInfoExtensions
         {
             logger.LogWarning("Warning: the expected markdown entry lines are not here. Returning {Count} lines as content...", lines.Length);
 
-            return ([], lines.ToArray());
+            return ([], [.. lines]);
         }
 
-        string[] frontMatterLines = lines
-            .Skip(1)
-            .TakeWhile(i => !i.Contains(PublicationAppScalars.FrontMatterFence))
-            .ToArray();
-        string[] contentLines = lines
-            .Skip(1)
-            .SkipWhile(line => !line.Trim().EqualsInvariant(PublicationAppScalars.FrontMatterFence))
-            .Skip(1)
-            .ToArray();
+        string[] frontMatterLines =
+        [
+            .. lines
+                .Skip(1)
+                .TakeWhile(i => !i.Contains(PublicationAppScalars.FrontMatterFence))
+        ];
 
-        logger.LogInformation("Found {Count} front-matter lines and {Count} content lines. Returning...",
+        string[] contentLines =
+        [
+            .. lines
+                .Skip(1)
+                .SkipWhile(line => !line.Trim().EqualsInvariant(PublicationAppScalars.FrontMatterFence))
+                .Skip(1)
+        ];
+
+        logger.LogInformation("Found {FrontMatterCount} front-matter lines and {LineCount} content lines. Returning...",
             frontMatterLines.Length, contentLines.Length);
 
         return (frontMatterLines, contentLines);
+    }
+
+    /// <summary>
+    /// Converts the text file represented by <see cref="FileInfo"/>
+    /// into a <see cref="JsonObject"/> shaped like <see cref="IDocument"/>
+    /// </summary>
+    /// <param name="fileInfo">the <see cref="FileInfo"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static (JsonObject? frontMatter, IReadOnlyCollection<string>? contentLines) ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(this FileInfo? fileInfo, ILogger logger)
+    {
+        if (fileInfo == null) return default;
+
+        var (frontMatterLines, contentLines) = fileInfo.ToFrontMatterLinesAndContentLines(logger);
+
+        JsonObject?  frontMatter =
+            frontMatterLines.Count > 0 ?
+                YamlUtility.DeserializeYaml(frontMatterLines.ToYamlString(logger)).ToIDocumentJsonObject()
+                :
+                new Dictionary<string, object>
+                    {
+                        { "fileName", fileInfo.Name },
+                        { "tags", Array.Empty<string>() }
+                    }
+                    .ToIDocumentJsonObject();
+
+        return (frontMatter, contentLines);
     }
 
     /// <summary>
@@ -268,6 +299,30 @@ public static class FileInfoExtensions
     /// <param name="lines">collection of lines where <see cref="LookLikeYamlFrontMatter"/> returns <c>true</c></param>
     /// <param name="logger">the <see cref="ILogger"/></param>
     public static string? ToYamlString(this IReadOnlyCollection<string>? lines, ILogger logger) => !lines.LookLikeYamlFrontMatter(logger) ? null : lines?.Aggregate((a, line) => string.Concat(a, MarkdownEntry.NewLine, line));
+
+    /// <summary>
+    /// Writes the specified front matter and content lines
+    /// to the location represented by <see cref="FileInfo"/>.
+    /// </summary>
+    /// <param name="fileInfo">the <see cref="FileInfo"/></param>
+    /// <param name="frontMatter">the <see cref="JsonObject"/> shaped like front matter</param>
+    /// <param name="contentLines">a collection of strings, representing lines of content</param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static void WriteFrontMatterAndContentLines(this FileInfo? fileInfo, JsonObject? frontMatter, IReadOnlyCollection<string>? contentLines, ILogger logger)
+    {
+        if (fileInfo == null) return;
+
+        string newContent =
+            $"""
+             ---
+             {frontMatter.ToYaml(logger)?.Trim()}
+             ---
+             {PublicationLinesUtility.ConvertToContent(contentLines)}
+
+             """;
+
+        File.WriteAllText(fileInfo.FullName, newContent);
+    }
 
     /// <summary>
     /// Writes a new entry with JSON front matter to <see cref="FileSystemInfo.FullName"/>

@@ -7,6 +7,43 @@ namespace Songhay.Publications.Extensions;
 public static class IDictionaryExtensions
 {
     /// <summary>
+    /// Converts the conventional, <c>YamlDotNet</c> dictionary
+    /// to the conventional, Publications <seealso cref="JsonObject"/>
+    /// </summary>
+    /// <param name="data">the conventional, <c>YamlDotNet</c> dictionary</param>
+    /// <seealso cref="YamlUtility.DeserializeYaml"/>
+    /// <remarks>
+    /// The incoming <c>YamlDotNet</c> dictionary should have keys
+    /// that match the property names of <seealso cref="IDocument"/>.
+    /// </remarks>
+    public static JsonObject? ToIDocumentJsonObject(this IDictionary<string, object>? data)
+    {
+        if (data == null) return null;
+
+        JsonObject jsonObject = new();
+
+        foreach (KeyValuePair<string, object> kvp in data)
+        {
+            jsonObject[kvp.Key] = kvp.Key.ToPascalCase() switch
+            {
+                nameof(IDocument.DocumentId)
+                    or nameof(IDocument.SegmentId)
+                    or nameof(IDocument.TemplateId)
+                    => JsonValue.Create(ProgramTypeUtility.ParseInt32(kvp.Value)),
+                nameof(IDocument.IsRoot)
+                    or nameof(IDocument.IsActive)
+                    => JsonValue.Create(ProgramTypeUtility.ParseBoolean(kvp.Value)),
+                nameof(IDocument.SortOrdinal)
+                    => JsonValue.Create(ProgramTypeUtility.ParseByte(kvp.Value)),
+                _
+                    => JsonValue.Create(kvp.Value)
+            };
+        }
+
+        return jsonObject;
+    }
+
+    /// <summary>
     /// Converts the specified <see cref="IDictionary{TKey,TValue}"/> to a JSON string.
     /// </summary>
     /// <param name="data">the <see cref="IDictionary{TKey,TValue}"/></param>
