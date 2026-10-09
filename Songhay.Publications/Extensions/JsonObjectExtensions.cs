@@ -6,6 +6,73 @@ namespace Songhay.Publications.Extensions;
 public static class JsonObjectExtensions
 {
     /// <summary>
+    /// Returns a serialized JSON string,
+    /// according to the conventions
+    /// for <see cref="IDocument.Tag"/>.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    /// <remarks>
+    /// <para>
+    /// This member expects to see a <see cref="JsonObject"/>
+    /// with several properties with names prefixed with <c>rx</c>
+    /// and a <c>tags</c> property.
+    /// </para>
+    ///
+    /// <para>
+    /// This implies that the <see cref="JsonObject"/> is generated
+    /// from a Markdown file and this member is being used to save
+    /// into a Publications database.
+    /// </para>
+    /// </remarks>
+    public static string? GetSerializedTagsAndCustomProperties(this JsonObject? documentData, ILogger logger)
+    {
+        if (documentData == null) return null;
+
+        JsonNode? tags = documentData.GetPropertyJsonNodeOrNull("tags", logger);
+        if (tags == null)
+        {
+            logger.LogError("The expected front-matter tags are not here.");
+
+            return null;
+        }
+
+        const string prefix = "rx";
+        JsonObject properties = new();
+
+        foreach (var (propertyName, node) in documentData.AsEnumerable())
+        {
+            if(!propertyName.StartsWith(prefix)) continue;
+
+            properties[propertyName] = node?.DeepClone();
+        }
+
+        var anon = new { tags, properties };
+
+        string json = JsonSerializer.Serialize(anon);
+
+        return json;
+    }
+
+    /// <summary>
+    /// Converts the <see cref="JsonObject"/>
+    /// into a newly allocated instance of <see cref="IDocument"/>.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    /// <seealso cref="DocumentUtility.UpdateDocument"/>
+    public static IDocument ToIDocument(this JsonObject? documentData, ILogger logger)
+    {
+        Document document = new();
+
+        if (documentData == null) return document;
+
+        DocumentUtility.UpdateDocument(document, documentData, logger);
+
+        return document;
+    }
+
+    /// <summary>
     /// Converts the specified <see cref="JsonElement"/>
     /// to a YAML <see cref="string"/>.
     /// </summary>
@@ -27,6 +94,33 @@ public static class JsonObjectExtensions
                 return jDoc.RootElement.ToYaml();
             }
         }
+    }
+
+    /// <summary>
+    /// Updates the <see cref="JsonObject"/>
+    /// with the specified instance of <see cref="IDocument"/>.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <seealso cref="DocumentUtility.UpdateFrontMatter"/>
+    public static void Update(this JsonObject? documentData, IDocument? document) =>
+        DocumentUtility.UpdateFrontMatter(documentData, document as Document);
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with a <see cref="JsonArray"/> property.
+    /// </summary>
+    /// <param name="jsonObject">the <see cref="JsonObject"/></param>
+    /// <param name="arrayPropertyName">the property name of the array</param>
+    public static JsonObject? WithArrayProperty(this JsonObject? jsonObject, string? arrayPropertyName)
+    {
+        if (jsonObject == null) return null;
+        if (string.IsNullOrWhiteSpace(arrayPropertyName)) return jsonObject;
+
+        if (!jsonObject.HasProperty(arrayPropertyName))
+            jsonObject[arrayPropertyName] = JsonArray.Create(JsonElement.Parse("[]"));
+
+        return jsonObject;
     }
 
     /// <summary>
@@ -54,6 +148,28 @@ public static class JsonObjectExtensions
             logger.LogInformation("Adding extract from content...");
             documentData.Add(extract, extractData);
         }
+
+        return documentData;
+    }
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional Index-document properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="tag">the value of <see cref="IDocument.Tag"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    /// <seealso cref="DocumentUtility.GetConventionalTagsAndPropertiesElements"/>
+    public static JsonObject WithIndexDocumentProperties(this JsonObject? documentData, string? tag, ILogger logger)
+    {
+        if (documentData == null) return new JsonObject();
+        if(string.IsNullOrWhiteSpace(tag)) return documentData;
+
+        var (tagsE, propE) = DocumentUtility.GetConventionalTagsAndPropertiesElements(documentData, tag, logger);
+
+        if (propE.ValueKind == JsonValueKind.Object) documentData["properties"] = propE.ToJsonNode();
+        if(tagsE.ValueKind == JsonValueKind.Array) documentData["keywords"] = JsonArray.Create(tagsE);
 
         return documentData;
     }

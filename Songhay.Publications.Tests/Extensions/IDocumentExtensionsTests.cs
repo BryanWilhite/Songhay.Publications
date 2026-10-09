@@ -1,3 +1,5 @@
+using System.Text.Json.Nodes;
+using FluentValidation.Results;
 using Songhay.Publications.Abstractions;
 
 namespace Songhay.Publications.Tests.Extensions;
@@ -161,6 +163,113 @@ public class IDocumentExtensionsTests(ITestOutputHelper helper)
         new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!" }""" },
         new Document { DocumentId = 1, Title = "Hey!", Tag = """{ "extract": "Hello world!", "keywords": [ "yup" ] }""" }
     ];
+
+    [Theory]
+    [InlineData(
+        """
+        {
+            "documentId": 101,
+            "title": "My Document",
+            "tag": "{\"tags\": [\"one\",\"two\",\"three\"], \"properties\": { \"rxOne\": 1, \"rxTwo\": \"dos\", \"rxThree\": true }}"
+        }
+        """,
+        """
+        {
+          "documentId": 101,
+          "title": "My Document",
+          "documentShortName": null,
+          "fileName": null,
+          "path": null,
+          "templateId": null,
+          "segmentId": null,
+          "isRoot": null,
+          "isActive": null,
+          "sortOrdinal": null,
+          "clientId": null,
+          "endDate": null,
+          "inceptDate": null,
+          "modificationDate": null,
+          "tags": [
+            "one",
+            "two",
+            "three"
+          ],
+          "rxExtract": null,
+          "rxIndexThumb": null,
+          "rxNextLink": null,
+          "rxOpenGraphProtocolImageUri": "urn:og:image:default",
+          "rxPreviousLink": null,
+          "rxWrapperLink": null,
+          "rxOne": 1,
+          "rxTwo": "dos",
+          "rxThree": true
+        }
+        """
+    )]
+    public void ToConventionalFrontMatter_Test(string inputJson, string expectedOutput)
+    {
+        // arrange:
+        ILogger logger = _loggerProvider.CreateLogger(nameof(ToConventionalFrontMatter_Test));
+        IDocument document = JsonSerializer
+            .Deserialize<Document>(inputJson, JsonSerializerOptionsCache.OptionsForCamelCaseWithIndentation)
+            .ToReferenceTypeValueOrThrow();
+        JsonObject jO = document.ToConventionalFrontMatter(logger);
+
+        // act:
+        string actual = jO.ToJsonString(JsonSerializerOptionsCache.OptionsForCamelCaseWithIndentation);
+
+        helper.WriteLine(actual);
+
+        // assert:
+        Assert.Equal(expectedOutput, actual);
+    }
+
+    [Theory]
+    [InlineData(
+        """
+        {
+            "documentId": 101,
+            "title": "My Document"
+        }
+        """, false)]
+    [InlineData(
+        """
+        {
+            "documentId": 102,
+            "title": "My Document",
+            "inceptDate": "1999-08-24T20:40:23.000Z",
+            "modificationDate": "2011-07-10T19:58:49.403Z",
+            "fileName": "hello.html",
+            "path": "./",
+            "segmentId": 12345 
+        }
+        """, true)]
+    [InlineData(
+        """
+        {
+            "documentId": 103,
+            "title": "My Document",
+            "inceptDate": "1999-08-24T20:40:23.000Z",
+            "modificationDate": "2011-07-10T19:58:49.403",
+            "fileName": "hello.html",
+            "path": "./",
+            "segmentId": 12345 
+        }
+        """, false)] // modificationDate is not UTC
+    public void ToStaticFileValidationResult_Test(string inputJson, bool shouldValidate)
+    {
+        // arrange:
+        ILogger logger = _loggerProvider.CreateLogger(nameof(ToConventionalFrontMatter_Test));
+        IDocument document = JsonSerializer
+            .Deserialize<Document>(inputJson, JsonSerializerOptionsCache.OptionsForCamelCaseWithIndentation)
+            .ToReferenceTypeValueOrThrow();
+
+        // act:
+        ValidationResult? actual = document.ToStaticFileValidationResult(logger);
+
+        // assert:
+        Assert.Equal(shouldValidate, actual?.IsValid);
+    }
 
     [Theory, MemberData(nameof(ToYamlTestTheoryData))]
     public void ToYaml_Test(IDocument document)

@@ -273,6 +273,85 @@
             Starts the <see cref="T:Songhay.Abstractions.IActivity"/>.
             </summary>
         </member>
+        <member name="T:Songhay.Publications.DocumentUtility">
+            <summary>
+            Shared routines for <seealso cref="T:Songhay.Publications.Models.Document"/> or <seealso cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties(System.Boolean)">
+            <summary>
+            Returns a collection of property names
+            based on <seealso cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            </summary>
+            <param name="includeTagProperty">When <c>true</c> return <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/> in the collection of property names</param>
+        </member>
+        <member name="M:Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)">
+             <summary>
+             Returns a tuple of two <see cref="T:System.Text.Json.JsonElement"/> instances
+             representing the conventional tags and properties elements.
+             </summary>
+             <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+             <param name="tag">the value of <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/></param>
+             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+             <remarks>
+             The <see cref="T:System.Text.Json.Nodes.JsonObject"/> passed into this method
+             should be or will be shaped like <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+             where <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/> can be serialized JSON
+             of the form:
+            
+             <code>
+             {
+                 \"tags\": [...],
+                 \"properties\": { ... }
+             }
+             </code>
+            
+             ...where the <c>tags</c> property is an array of strings
+             and the <c>properties</c> property is an object
+             of conventional properties, named with a prefix of <c>rx</c>.
+            
+             This use of <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/> is a temporary workaround
+             until a formal concept of Document properties can be defined.
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Updates the instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            with the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <remarks>
+            This member operates in the opposite ‘direction’
+            of <see cref="M:Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Models.Document)"/>.
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Models.Document)">
+            <summary>
+            Updates the <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the specified instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <remarks>
+            This member operates in the opposite ‘direction’
+            of <see cref="M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)"/>.
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Updates the <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter properties
+            based on <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/>
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="tag">the value of <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)"/>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)"/>
+        </member>
         <member name="T:Songhay.Publications.EpubUtility">
             <summary>
             Shared routines for EPUB pipeline automation.
@@ -510,6 +589,24 @@
             </summary>
             <param name="data">The document.</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            to the conventional, front-matter <see cref="T:System.Text.Json.Nodes.JsonObject"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="logger">the <seealso cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            to the conventional, front-matter <see cref="T:System.Text.Json.Nodes.JsonObject"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="contentLines">the document content lines</param>
+            <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)"/></param>
+            <param name="logger">the <seealso cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)">
             <summary>
             Converts <see cref="T:Songhay.Publications.Models.Document"/> to the conventional publication item.
@@ -529,6 +626,13 @@
             </summary>
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)">
+            <summary>
+            Converts the instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            to its <see cref="T:System.Text.Json.Nodes.JsonObject"/> representation.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
@@ -551,6 +655,14 @@
             </summary>
             <param name="data">The document.</param>
             <param name="group">The group.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            into a <see cref="T:FluentValidation.Results.ValidationResult"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)">
             <summary>
@@ -575,6 +687,84 @@
             <param name="contentLines">the collection of content lines</param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Updates the instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            with the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>.
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <seealso cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)"/>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="contentLines">the document content lines</param>
+            <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter <see cref="T:Songhay.Publications.Abstractions.IDocument"/> properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <remarks>
+            This member ensures conventional document order of <seealso cref="T:Songhay.Publications.Abstractions.IDocument"/> properties
+            so that front matter appears consistently in your Markdown editor of choice.
+            </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter properties
+            based on <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/>
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)"/>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter Publications properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional front-matter Publications properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="contentLines">the document content lines</param>
+            <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)"/>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)"/>
+            <remarks>
+            “Publications properties” refers to any front-matter property prefixed with <c>rx</c>
+            (e.g. <c>rxNextLink</c>).
+            </remarks>
+        </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)">
             <summary>
             Returns <see cref="T:Songhay.Publications.Abstractions.IDocument"/> with default values.
@@ -588,6 +778,13 @@
             </summary>
             <param name="data">The data.</param>
             <param name="editAction">The edit action.</param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)">
+            <summary>
+            Returns <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            with all dates specified as <see cref="F:System.DateTimeKind.Utc"/>
+            </summary>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
@@ -764,6 +961,13 @@
             <param name="data">The data.</param>
             <param name="showIdOnly">when <c>true</c> then display identifiers only</param>
         </member>
+        <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)">
+            <summary>
+            Converts the specified <see cref="T:Songhay.Publications.Abstractions.ISegment"/>
+            to its <see cref="T:System.Text.Json.Nodes.JsonObject"/> shape
+            </summary>
+            <param name="data">the <see cref="T:Songhay.Publications.Abstractions.ISegment"/></param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Abstractions.ISegment"/> into a menu display item model.
@@ -879,6 +1083,13 @@
              See <see cref="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)"/>.
              </remarks>
         </member>
+        <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)">
+            <summary>
+            Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
+            to <see cref="T:System.Text.Json.Nodes.JsonNode"/> based on <see cref="P:System.Text.Json.JsonElement.ValueKind"/>.
+            </summary>
+            <param name="element"></param>
+        </member>
         <member name="M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)">
             <summary>
             Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
@@ -891,6 +1102,37 @@
             Extensions of <see cref="T:System.Text.Json.Nodes.JsonObject"/>
             </summary>
         </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+             <summary>
+             Returns a serialized JSON string,
+             according to the conventions
+             for <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/>.
+             </summary>
+             <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+             <remarks>
+             <para>
+             This member expects to see a <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+             with several properties with names prefixed with <c>rx</c>
+             and a <c>tags</c> property.
+             </para>
+            
+             <para>
+             This implies that the <see cref="T:System.Text.Json.Nodes.JsonObject"/> is generated
+             from a Markdown file and this member is being used to save
+             into a Publications database.
+             </para>
+             </remarks>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Converts the <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            into a newly allocated instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)"/>
+        </member>
         <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Converts the specified <see cref="T:System.Text.Json.JsonElement"/>
@@ -898,6 +1140,23 @@
             </summary>
             <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Abstractions.IDocument)">
+            <summary>
+            Updates the <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the specified instance of <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="document">the <see cref="T:Songhay.Publications.Abstractions.IDocument"/></param>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Models.Document)"/>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject,System.String)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with a <see cref="T:System.Text.Json.Nodes.JsonArray"/> property.
+            </summary>
+            <param name="jsonObject">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="arrayPropertyName">the property name of the array</param>
         </member>
         <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)">
             <summary>
@@ -908,6 +1167,17 @@
             <param name="contentLines">the collection of content lines</param>
             <param name="extractLength">the length of the extract</param>
             <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Returns the specified <see cref="T:System.Text.Json.Nodes.JsonObject"/>
+            with the conventional Index-document properties
+            for Studio Publications.
+            </summary>
+            <param name="documentData">the <see cref="T:System.Text.Json.Nodes.JsonObject"/></param>
+            <param name="tag">the value of <see cref="P:Songhay.Publications.Abstractions.IDocument.Tag"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
+            <seealso cref="M:Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)"/>
         </member>
         <member name="M:Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
             <summary>
@@ -1093,6 +1363,19 @@
             Reduces <see cref="P:Songhay.Publications.Models.ResponsiveImage.Candidates" /> to the <c>srcset</c> attribute.
             </summary>
             <param name="responsiveImage">The <see cref="T:Songhay.Publications.Models.ResponsiveImage" />.</param>
+        </member>
+        <member name="T:Songhay.Publications.Extensions.ValidationResultExtensions">
+            <summary>
+            Extensions of <see cref="T:FluentValidation.Results.ValidationResult"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Logs the <see cref="P:FluentValidation.Results.ValidationResult.Errors"/>
+            with the specified <see cref="T:Microsoft.Extensions.Logging.ILogger"/>
+            </summary>
+            <param name="validationResult">the <see cref="T:FluentValidation.Results.ValidationResult"/></param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="T:Songhay.Publications.MarkdownEntryUtility">
             <summary>
@@ -1337,6 +1620,46 @@
         <member name="M:Songhay.Publications.Models.Document.ToString">
             <summary>
             Converts the <see cref="T:Songhay.Publications.Models.Document"/> into a string.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.DocumentProperties">
+            <summary>
+            Defines the properties of an <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.DocumentTags"/>
+            <remarks>
+            The intent here is to make the general-purpose assertion
+            that all Publication documents are adorned with tags and properties.
+            </remarks>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentProperties.DocumentId">
+            <summary>
+            The <see cref="P:Songhay.Publications.Abstractions.IDocument.DocumentId"/>
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentProperties.Properties">
+            <summary>
+            The set of <see cref="T:Songhay.Publications.Abstractions.IDocument"/> properties.
+            </summary>
+        </member>
+        <member name="T:Songhay.Publications.Models.DocumentTags">
+            <summary>
+            Defines the tags or keywords of an <see cref="T:Songhay.Publications.Abstractions.IDocument"/>.
+            </summary>
+            <seealso cref="T:Songhay.Publications.Models.DocumentProperties"/>
+            <remarks>
+            The intent here is to make the general-purpose assertion
+            that all Publication documents are adorned with tags and properties.
+            </remarks>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentTags.DocumentId">
+            <summary>
+            The <see cref="P:Songhay.Publications.Abstractions.IDocument.DocumentId"/>
+            </summary>
+        </member>
+        <member name="P:Songhay.Publications.Models.DocumentTags.Tags">
+            <summary>
+            The collection of <see cref="T:Songhay.Publications.Abstractions.IDocument"/> tags.
             </summary>
         </member>
         <member name="T:Songhay.Publications.Models.Fragment">
@@ -2280,6 +2603,30 @@
             <summary>
             Initializes a new instance of the <see cref="T:Songhay.Publications.Validators.FragmentValidator"/> class.
             </summary>
+        </member>
+        <member name="T:Songhay.Publications.Validators.IDocumentCoreValidator">
+            <summary>
+            Validator for ‘core’ <see cref="T:Songhay.Publications.Abstractions.IDocument"/> properties
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Validators.IDocumentCoreValidator.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:Songhay.Publications.Validators.IDocumentStaticFileValidator">
+            <summary>
+            Validator for ‘static’ <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Validators.IDocumentStaticFileValidator.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:Songhay.Publications.Validators.ITemporalUtcValidator">
+            <summary>
+            Validator for <see cref="T:Songhay.Abstractions.ITemporal"/> under UTC time
+            </summary>
+        </member>
+        <member name="M:Songhay.Publications.Validators.ITemporalUtcValidator.#ctor">
+            <inheritdoc/>
         </member>
         <member name="T:Songhay.Publications.Validators.ITemporalValidator">
             <summary>

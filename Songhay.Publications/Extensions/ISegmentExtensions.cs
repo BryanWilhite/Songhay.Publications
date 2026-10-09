@@ -104,6 +104,25 @@ public static class SegmentExtensions
     }
 
     /// <summary>
+    /// Converts the specified <see cref="ISegment"/>
+    /// to its <see cref="JsonObject"/> shape
+    /// </summary>
+    /// <param name="data">the <see cref="ISegment"/></param>
+    public static JsonObject ToJsonObject(this ISegment? data) =>
+        new()
+        {
+            [nameof(ISegment.SegmentId).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.SegmentId,
+            [nameof(ISegment.SegmentName).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.SegmentName,
+            [nameof(ISegment.SortOrdinal).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.SortOrdinal,
+            [nameof(ISegment.ParentSegmentId).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.ParentSegmentId,
+            [nameof(ISegment.ClientId).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.ClientId,
+            [nameof(ISegment.IsActive).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.IsActive,
+            [nameof(ISegment.EndDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.EndDate,
+            [nameof(ISegment.InceptDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.InceptDate,
+            [nameof(ISegment.ModificationDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = data?.IsActive
+        };
+
+    /// <summary>
     /// Converts the <see cref="ISegment"/> into a menu display item model.
     /// </summary>
     /// <param name="data">The data.</param>
