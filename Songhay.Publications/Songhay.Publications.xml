@@ -559,20 +559,22 @@
             </summary>
             <param name="data">The document.</param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})">
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Returns and traces the first <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
             based on the specified predicate.
             </summary>
             <param name="data">The data.</param>
             <param name="predicate">The predicate.</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
-        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)">
+        <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Returns <c>true</c> when the <see cref="T:Songhay.Publications.Abstractions.IDocument"/>
             has any <see cref="P:Songhay.Publications.Models.Document.Fragments"/>.
             </summary>
             <param name="data">The data.</param>
+            <param name="logger">the <see cref="T:Microsoft.Extensions.Logging.ILogger"/></param>
         </member>
         <member name="M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)">
             <summary>

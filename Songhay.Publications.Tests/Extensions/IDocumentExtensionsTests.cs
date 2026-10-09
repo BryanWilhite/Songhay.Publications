@@ -11,6 +11,7 @@ public class IDocumentExtensionsTests(ITestOutputHelper helper)
     public void GetDocumentByPredicate_Test()
     {
         const string clientId = "my-data";
+        ILogger logger = _loggerProvider.CreateLogger(nameof(GetDocumentByPredicate_Test));
 
         Document[] collection =
         [
@@ -21,7 +22,7 @@ public class IDocumentExtensionsTests(ITestOutputHelper helper)
         ];
 
         IDocument first = collection
-            .GetDocumentByPredicate(i => i.ClientId == clientId)
+            .GetDocumentByPredicate(i => i.ClientId == clientId, logger)
             .ToReferenceTypeValueOrThrow();
 
         Assert.Equal(clientId, first.ClientId);
@@ -43,14 +44,16 @@ public class IDocumentExtensionsTests(ITestOutputHelper helper)
     [Theory, MemberData(nameof(HasFragmentsTestTheoryData))]
     public void HasFragments_Test(bool expectedResult, IDocument? data)
     {
+        ILogger logger = _loggerProvider.CreateLogger(nameof(HasFragments_Test));
+
         if (data == null)
         {
-            Assert.Throws<ArgumentNullException>(() => data.HasFragments());
+            Assert.Throws<ArgumentNullException>(() => data.HasFragments(logger));
 
             return;
         }
 
-        bool actual = data.HasFragments();
+        bool actual = data.HasFragments(logger);
 
         Assert.Equal(expectedResult, actual);
     }

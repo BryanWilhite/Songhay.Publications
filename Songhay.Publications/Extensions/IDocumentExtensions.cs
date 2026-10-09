@@ -8,13 +8,6 @@ namespace Songhay.Publications.Extensions;
 // ReSharper disable once InconsistentNaming
 public static class IDocumentExtensions
 {
-    static IDocumentExtensions() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
-
     /// <summary>
     /// Clones the instance of <see cref="IDocument"/>.
     /// </summary>
@@ -27,13 +20,14 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="predicate">The predicate.</param>
-    public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate)
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate, ILogger logger)
     {
         ArgumentNullException.ThrowIfNull(data);
 
         IDocument? first = data.FirstOrDefault(predicate);
 
-        TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
+        logger.LogDebug("{Display}", first?.ToDisplayText(showIdOnly: true));
 
         return first;
     }
@@ -43,7 +37,8 @@ public static class IDocumentExtensions
     /// has any <see cref="Document.Fragments"/>.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static bool HasFragments(this IDocument? data)
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static bool HasFragments(this IDocument? data, ILogger logger)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
@@ -51,7 +46,7 @@ public static class IDocumentExtensions
 
         if (document.Fragments.Any()) return true;
 
-        TraceSource?.TraceError($"The expected child {nameof(Document.Fragments)} are not here.");
+        logger.LogError("The expected child {Name} are not here.", nameof(Document.Fragments));
 
         return false;
     }
