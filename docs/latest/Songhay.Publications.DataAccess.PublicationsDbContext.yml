@@ -118,25 +118,37 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: .ctor
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 33
+    startLine: 39
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
   summary: Initializes a new instance of <xref href="Songhay.Publications.DataAccess.PublicationsDbContext" data-throw-if-not-resolved="false"></xref>
   remarks: >-
+    <p>
+
     This constructor is optimized
 
     for <xref href="Microsoft.Extensions.DependencyInjection.IServiceCollection" data-throw-if-not-resolved="false"></xref> dependency injection
 
     in ASP.NET or the Generic .NET Host.
 
+    </p>
+
+
+    <p>
 
     For more detail, see “DbContext Lifetime, Configuration, and Initialization”
 
     [https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/]
 
+    </p>
+
+
+    <p>
 
     Example:
+
+    </p>
 
 
     <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
@@ -175,7 +187,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Segments
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 38
+    startLine: 44
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
@@ -206,7 +218,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Documents
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 43
+    startLine: 49
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
@@ -237,7 +249,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IndexKeywords
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 48
+    startLine: 54
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
@@ -268,7 +280,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ResponsiveImages
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 53
+    startLine: 59
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
@@ -299,7 +311,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ImageCandidates
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 58
+    startLine: 64
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess
@@ -330,7 +342,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: OnModelCreating
     path: ../Songhay.Publications.DataAccess/PublicationsDbContext.cs
-    startLine: 60
+    startLine: 66
   assemblies:
   - Songhay.Publications.DataAccess
   namespace: Songhay.Publications.DataAccess

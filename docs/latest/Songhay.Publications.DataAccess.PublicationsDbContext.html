@@ -308,7 +308,7 @@ Class PublicationsDbContext  <a class="header-action link-secondary" title="View
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_Songhay_Publications_DataAccess_PublicationsDbContext__" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Songhay.Publications.DataAccess.PublicationsDbContext})">
   PublicationsDbContext(DbContextOptions&lt;PublicationsDbContext&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Songhay.Publications.DataAccess.PublicationsDbContext.html">PublicationsDbContext</a></p>
@@ -334,12 +334,18 @@ Class PublicationsDbContext  <a class="header-action link-secondary" title="View
 
 
   <h4 class="section" id="Songhay_Publications_DataAccess_PublicationsDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_Songhay_Publications_DataAccess_PublicationsDbContext___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This constructor is optimized
+  <div class="markdown level1 remarks"><p>
+This constructor is optimized
 for <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> dependency injection
-in ASP.NET or the Generic .NET Host.</p>
-<p>For more detail, see “DbContext Lifetime, Configuration, and Initialization”
-[https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/]</p>
-<p>Example:</p>
+in ASP.NET or the Generic .NET Host.
+</p>
+<p>
+For more detail, see “DbContext Lifetime, Configuration, and Initialization”
+[https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/]
+</p>
+<p>
+Example:
+</p>
 <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 {
     services.AddDbContextFactory&lt;ApplicationDbContext&gt;(options =&gt;
@@ -358,7 +364,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_Documents" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.Documents">
   Documents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> of <a class="xref" href="Songhay.Publications.Models.Document.html">Document</a>.</p>
@@ -390,7 +396,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_ImageCandidates" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.ImageCandidates">
   ImageCandidates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> of <a class="xref" href="Songhay.Publications.Models.ImageCandidate.html">ImageCandidate</a>.</p>
@@ -422,7 +428,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_IndexKeywords" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.IndexKeywords">
   IndexKeywords
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> of <a class="xref" href="Songhay.Publications.Models.IndexKeyword.html">IndexKeyword</a>.</p>
@@ -454,7 +460,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_ResponsiveImages" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.ResponsiveImages">
   ResponsiveImages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> of <a class="xref" href="Songhay.Publications.Models.ResponsiveImage.html">ResponsiveImage</a>.</p>
@@ -486,7 +492,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_Segments" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.Segments">
   Segments
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> of <a class="xref" href="Songhay.Publications.Models.Segment.html">Segment</a>.</p>
@@ -522,7 +528,7 @@ in ASP.NET or the Generic .NET Host.</p>
 
   <h3 id="Songhay_Publications_DataAccess_PublicationsDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_" data-uid="Songhay.Publications.DataAccess.PublicationsDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
   OnModelCreating(ModelBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications.DataAccess/PublicationsDbContext.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Override this method to further configure the model that was discovered by convention from the entity types
