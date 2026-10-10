@@ -8,13 +8,6 @@ namespace Songhay.Publications.Extensions;
 // ReSharper disable once InconsistentNaming
 public static class IDocumentExtensions
 {
-    static IDocumentExtensions() => TraceSource = TraceSources
-        .Instance
-        .GetTraceSourceFromConfiguredName()
-        .WithSourceLevels();
-
-    static readonly TraceSource? TraceSource;
-
     /// <summary>
     /// Clones the instance of <see cref="IDocument"/>.
     /// </summary>
@@ -27,13 +20,14 @@ public static class IDocumentExtensions
     /// </summary>
     /// <param name="data">The data.</param>
     /// <param name="predicate">The predicate.</param>
-    public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate)
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate, ILogger logger)
     {
         ArgumentNullException.ThrowIfNull(data);
 
         IDocument? first = data.FirstOrDefault(predicate);
 
-        TraceSource?.TraceVerbose($"{first?.ToDisplayText(showIdOnly: true)}");
+        logger.LogDebug("{Display}", first?.ToDisplayText(showIdOnly: true));
 
         return first;
     }
@@ -43,7 +37,8 @@ public static class IDocumentExtensions
     /// has any <see cref="Document.Fragments"/>.
     /// </summary>
     /// <param name="data">The data.</param>
-    public static bool HasFragments(this IDocument? data)
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static bool HasFragments(this IDocument? data, ILogger logger)
     {
         if (data == null) throw new ArgumentNullException(nameof(data));
 
@@ -51,7 +46,7 @@ public static class IDocumentExtensions
 
         if (document.Fragments.Any()) return true;
 
-        TraceSource?.TraceError($"The expected child {nameof(Document.Fragments)} are not here.");
+        logger.LogError("The expected child {Name} are not here.", nameof(Document.Fragments));
 
         return false;
     }
@@ -78,6 +73,34 @@ public static class IDocumentExtensions
         data.IsActive = true;
         data.IsRoot = false;
         data.ModificationDate = DateTime.Now;
+    }
+
+    /// <summary>
+    /// Converts the instance of <see cref="IDocument"/>
+    /// to the conventional, front-matter <see cref="JsonObject"/>.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="logger">the <seealso cref="ILogger"/></param>
+    public static JsonObject ToConventionalFrontMatter(this IDocument? document, ILogger logger) =>
+        document.ToConventionalFrontMatter(contentLines: null, contentLinesExtractLength: null, logger);
+
+    /// <summary>
+    /// Converts the instance of <see cref="IDocument"/>
+    /// to the conventional, front-matter <see cref="JsonObject"/>.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="contentLines">the document content lines</param>
+    /// <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="PublicationLinesUtility.ConvertToExtract"/></param>
+    /// <param name="logger">the <seealso cref="ILogger"/></param>
+    public static JsonObject ToConventionalFrontMatter(this IDocument? document, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger)
+    {
+        if (document == null) return new JsonObject();
+
+        JsonObject frontMatter = document
+            .ToJsonObject()
+            .WithConventionalFrontMatter(contentLines, contentLinesExtractLength, logger);
+
+        return frontMatter;
     }
 
     /// <summary>
@@ -150,6 +173,30 @@ public static class IDocumentExtensions
 
         return builder.ToString();
     }
+    /// <summary>
+    /// Converts the instance of <see cref="IDocument"/>
+    /// to its <see cref="JsonObject"/> representation.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    public static JsonObject ToJsonObject(this IDocument? document) =>
+        new()
+        {
+            [nameof(IDocument.DocumentId).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.DocumentId,
+            [nameof(IDocument.Title).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.Title,
+            [nameof(IDocument.DocumentShortName).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.DocumentShortName,
+            [nameof(IDocument.FileName).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.FileName,
+            [nameof(IDocument.Path).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.Path,
+            [nameof(IDocument.TemplateId).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.TemplateId,
+            [nameof(IDocument.SegmentId).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.SegmentId,
+            [nameof(IDocument.IsRoot).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.IsRoot,
+            [nameof(IDocument.IsActive).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.IsActive,
+            [nameof(IDocument.SortOrdinal).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.SortOrdinal,
+            [nameof(IDocument.ClientId).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.ClientId,
+            [nameof(IDocument.Tag).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.Tag,
+            [nameof(IDocument.EndDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.EndDate?.ToLocalTime().ToIso8601String(includeTimeMilliseconds: false),
+            [nameof(IDocument.InceptDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.InceptDate?.ToLocalTime().ToIso8601String(includeTimeMilliseconds: false),
+            [nameof(IDocument.ModificationDate).ToCamelCase().ToReferenceTypeValueOrThrow()] = document?.ModificationDate?.ToLocalTime().ToIso8601String(includeTimeMilliseconds: false)
+        };
 
     /// <summary>
     /// Converts the specified <see cref="IDocument"/> to <see cref="MarkdownEntry"/>.
@@ -220,6 +267,34 @@ public static class IDocumentExtensions
         };
 
         return dataOut;
+    }
+
+    /// <summary>
+    /// Converts the specified <see cref="IDocument"/>
+    /// into a <see cref="ValidationResult"/>.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static ValidationResult? ToStaticFileValidationResult(this IDocument? document, ILogger logger)
+    {
+        if (document == null) return null;
+
+        IDocumentStaticFileValidator validator = new();
+
+        ValidationResult validationResult = validator.Validate(document);
+
+        if (validationResult.IsValid)
+        {
+            logger.LogDebug("Validation is valid. Continuing...");
+        }
+        else
+        {
+            logger.LogWarning("{Data} with ID `{Id}` has validation errors! Logging...", nameof(IDocument), document.DocumentId);
+
+            validationResult.LogValidationErrors(logger);
+        }
+
+        return validationResult;
     }
 
     /// <summary>
@@ -304,6 +379,177 @@ public static class IDocumentExtensions
     }
 
     /// <summary>
+    /// Updates the instance of <see cref="IDocument"/>
+    /// with the specified <see cref="JsonObject"/>.
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="logger">the <seealso cref="ILogger"/></param>
+    /// <seealso cref="DocumentUtility.UpdateDocument"/>
+    public static void Update(this IDocument? document, JsonObject? documentData, ILogger logger) => 
+        DocumentUtility.UpdateDocument(document, documentData, logger);
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, ILogger logger) =>
+        documentData
+            .WithoutConventionalDocumentProperties(logger)
+            .WithConventionalFrontMatterForDocument()
+            .WithConventionalFrontMatterForDocumentTag(logger)
+            .WithConventionalFrontMatterForDocumentPublicationProperties();
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="contentLines">the document content lines</param>
+    /// <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="PublicationLinesUtility.ConvertToExtract"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger) =>
+        documentData
+            .WithoutConventionalDocumentProperties(logger)
+            .WithConventionalFrontMatterForDocument()
+            .WithConventionalFrontMatterForDocumentTag(logger)
+            .WithConventionalFrontMatterForDocumentPublicationProperties(contentLines, contentLinesExtractLength, logger);
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter <see cref="IDocument"/> properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <remarks>
+    /// This member ensures conventional document order of <seealso cref="IDocument"/> properties
+    /// so that front matter appears consistently in your Markdown editor of choice.
+    /// </remarks>
+    public static JsonObject WithConventionalFrontMatterForDocument(this JsonObject? documentData)
+    {
+        if (documentData == null) return new JsonObject();
+
+        IReadOnlyCollection<string> docProps = DocumentUtility.GetConventionalFrontMatterProperties(includeTagProperty: false);
+
+        foreach ((string propertyName, int index) in docProps.Select((name, i) => (name, i)))
+        {
+            JsonValue? valueOrNull = documentData.GetPropertyJsonValueOrNull(propertyName);
+
+            documentData.Remove(propertyName);
+            documentData.Insert(index, propertyName, valueOrNull);
+        }
+
+        return documentData;
+    }
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter properties
+    /// based on <see cref="IDocument.Tag"/>
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    /// <seealso cref="DocumentUtility.UpdateFrontMatterWithDocumentTag"/>
+    public static JsonObject WithConventionalFrontMatterForDocumentTag(this JsonObject? documentData, ILogger logger)
+    {
+        if (documentData == null) return new JsonObject();
+
+        string tagKey = nameof(IDocument.Tag).ToLowerInvariant();
+        string? tag = documentData.GetPropertyJsonValueOrNull(tagKey)?.ToString() ?? null;
+
+        if (string.IsNullOrWhiteSpace(tag)) return documentData;
+
+        DocumentUtility.UpdateFrontMatterWithDocumentTag(documentData, tag, logger);
+
+        return documentData;
+    }
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter Publications properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData) =>
+        documentData.WithConventionalFrontMatterForDocumentPublicationProperties(contentLines: null, contentLinesExtractLength: null, logger: ILoggerUtility.AsInstanceOrNullLogger(null));
+
+    /// <summary>
+    /// Returns the specified <see cref="JsonObject"/>
+    /// with the conventional front-matter Publications properties
+    /// for Studio Publications.
+    /// </summary>
+    /// <param name="documentData">the <see cref="JsonObject"/></param>
+    /// <param name="contentLines">the document content lines</param>
+    /// <param name="contentLinesExtractLength">the length of the content extract; this maps to the <c>length</c> argument in <seealso cref="PublicationLinesUtility.ConvertToExtract"/></param>
+    /// <param name="logger">the <see cref="ILogger"/></param>
+    /// <seealso cref="PublicationLinesUtility.ConvertToExtract"/>
+    /// <seealso cref="DocumentUtility.UpdateFrontMatterWithDocumentTag"/>
+    /// <remarks>
+    /// “Publications properties” refers to any front-matter property prefixed with <c>rx</c>
+    /// (e.g. <c>rxNextLink</c>).
+    /// </remarks>
+    public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger)
+    {
+        if (documentData == null) return [];
+
+        const string tags = "tags";
+        const string rxExtract = "rxExtract";
+        const string rxOpenGraphProtocolImageUri = "rxOpenGraphProtocolImageUri";
+
+        string[] conventionalPropertyNames = [
+            rxExtract,
+            "rxIndexThumb",
+            "rxNextLink",
+            rxOpenGraphProtocolImageUri,
+            "rxPreviousLink",
+            "rxWrapperLink"
+        ];
+
+        int propertyIndex = documentData.IndexOf(tags);
+        bool tagPropertyNotFound = propertyIndex == -1;
+
+        if (tagPropertyNotFound) documentData.Add(tags, JsonNode.Parse("[]"));
+        propertyIndex = documentData.IndexOf(tags);
+
+        foreach (string propertyName in conventionalPropertyNames)
+        {
+            JsonValue? valueOrNull = documentData.GetPropertyJsonValueOrNull(propertyName);
+            JsonValue? propertyValue =
+                propertyName switch
+                {
+                    rxExtract => JsonValue.Create(PublicationLinesUtility.ConvertToExtract(contentLines, contentLinesExtractLength.GetValueOrDefault(), logger)),
+                    rxOpenGraphProtocolImageUri => valueOrNull ?? JsonValue.Create("urn:og:image:default"),
+                    _ => valueOrNull
+                };
+
+            int propCount = documentData.Count;
+            bool validPropertyIndex = propertyIndex < propCount - 1;
+
+            if(validPropertyIndex) ++propertyIndex;
+
+            bool isLastPropertyIndex = propertyIndex == propCount - 1;
+
+            documentData.Remove(propertyName);
+
+            if (isLastPropertyIndex)
+            {
+                documentData.Add(propertyName, propertyValue);
+            }
+            else
+            {
+                documentData.Insert(propertyIndex, propertyName, propertyValue);
+            }
+        }
+
+        return documentData;
+    }
+
+    /// <summary>
     /// Returns <see cref="IDocument"/> with default values.
     /// </summary>
     /// <param name="data">The data.</param>
@@ -325,6 +571,27 @@ public static class IDocumentExtensions
         editAction?.Invoke(data.ToReferenceTypeValueOrThrow());
 
         return data.ToReferenceTypeValueOrThrow();
+    }
+
+    /// <summary>
+    /// Returns <see cref="IDocument"/>
+    /// with all dates specified as <see cref="DateTimeKind.Utc"/>
+    /// </summary>
+    /// <param name="document">the <see cref="IDocument"/></param>
+    public static IDocument? WithUtcITemporalDates(this IDocument? document)
+    {
+        if (document == null) return null;
+
+        if(document.EndDate != null)
+            document.EndDate = DateTime.SpecifyKind(document.EndDate.Value, DateTimeKind.Utc);
+
+        if(document.InceptDate != null)
+            document.InceptDate = DateTime.SpecifyKind(document.InceptDate.Value, DateTimeKind.Utc);
+
+        if(document.ModificationDate != null)
+            document.ModificationDate = DateTime.SpecifyKind(document.ModificationDate.Value, DateTimeKind.Utc);
+
+        return document;
     }
 
     /// <summary>

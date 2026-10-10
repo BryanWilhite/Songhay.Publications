@@ -44,6 +44,12 @@ public static class PublicationLinesUtility
     }
 
     /// <summary>
+    /// Reduce a collection of content lines to a <see cref="string"/>.
+    /// </summary>
+    /// <param name="contentLines">a collection of strings, representing lines of content</param>
+    public static string? ConvertToContent(IReadOnlyCollection<string>? contentLines) => contentLines?.Aggregate((a, line) => $"{a}{Environment.NewLine}{line}");
+
+    /// <summary>
     /// Converts the specified <see cref="string"/>
     /// into Publication lines.
     /// </summary>

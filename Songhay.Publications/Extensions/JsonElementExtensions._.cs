@@ -39,6 +39,22 @@ public static partial class JsonElementExtensions
 
     /// <summary>
     /// Converts the specified <see cref="JsonElement"/>
+    /// to <see cref="JsonNode"/> based on <see cref="JsonElement.ValueKind"/>.
+    /// </summary>
+    /// <param name="element"></param>
+    public static JsonNode? ToJsonNode(this JsonElement element)
+    {
+        return element.ValueKind switch
+        {
+            JsonValueKind.Null   => null,
+            JsonValueKind.Object => JsonObject.Create(element),
+            JsonValueKind.Array  => JsonArray.Create(element),
+            _                    => JsonValue.Create(element)
+        };
+    }
+
+    /// <summary>
+    /// Converts the specified <see cref="JsonElement"/>
     /// to a YAML <see cref="string"/>.
     /// </summary>
     /// <param name="element">the <see cref="JsonElement"/></param>
