@@ -15,14 +15,20 @@ public class PublicationsDbContext : DbContext
     /// </summary>
     /// <param name="options">the <see cref="DbContextOptions"/></param>
     /// <remarks>
+    /// <para>
     /// This constructor is optimized
     /// for <see cref="IServiceCollection"/> dependency injection
     /// in ASP.NET or the Generic .NET Host.
-    /// 
+    /// </para>
+    ///
+    /// <para>
     /// For more detail, see “DbContext Lifetime, Configuration, and Initialization”
     /// [https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/]
-    /// 
+    /// </para>
+    ///
+    /// <para>
     /// Example:
+    /// </para>
     /// <code>
     /// public void ConfigureServices(IServiceCollection services)
     /// {
