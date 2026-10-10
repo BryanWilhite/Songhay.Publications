@@ -153,34 +153,27 @@ items:
 references:
 - uid: Songhay.Publications.Abstractions
   commentId: N:Songhay.Publications.Abstractions
-  href: Songhay.html
   name: Songhay.Publications.Abstractions
   nameWithType: Songhay.Publications.Abstractions
   fullName: Songhay.Publications.Abstractions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
 - uid: Songhay.Abstractions.ITemporal.EndDate
   commentId: P:Songhay.Abstractions.ITemporal.EndDate
   parent: Songhay.Abstractions.ITemporal

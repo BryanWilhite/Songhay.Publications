@@ -89,11 +89,11 @@
 
 
   <h1 id="Songhay_Publications_Activities_MarkdownEntryActivity" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity" class="text-break">
-Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Songhay.html">Songhay</a>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Activities.html">Activities</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><span class="xref">Songhay</span>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Activities.html">Activities</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Songhay.Publications.dll</dd></dl>
   </div>
 
@@ -161,23 +161,26 @@ Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View
 
   <a id="Songhay_Publications_Activities_MarkdownEntryActivity__ctor_" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.#ctor*"></a>
 
-  <h3 id="Songhay_Publications_Activities_MarkdownEntryActivity__ctor_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_Activities_MarkdownEntryActivity__" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})">
-  MarkdownEntryActivity(IConfiguration, ILogger&lt;MarkdownEntryActivity&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Songhay_Publications_Activities_MarkdownEntryActivity__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Net_Http_IHttpClientFactory_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_Activities_MarkdownEntryActivity__" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})">
+  MarkdownEntryActivity(IConfiguration, IHttpClientFactory, ILogger&lt;MarkdownEntryActivity&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Songhay.Publications.Activities.MarkdownEntryActivity.html">MarkdownEntryActivity</a> class.</p>
+  <div class="markdown level1 summary"><p><span class="xref">Songhay.Abstractions.IActivity</span> implementation for <a class="xref" href="Songhay.Publications.Models.MarkdownEntry.html">MarkdownEntry</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MarkdownEntryActivity(IConfiguration configuration, ILogger&lt;MarkdownEntryActivity&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public MarkdownEntryActivity(IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger&lt;MarkdownEntryActivity&gt; logger)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>configuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></dt>
     <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></p>
+</dd>
+    <dt><code>httpClientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a></p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Songhay.Publications.Activities.MarkdownEntryActivity.html">MarkdownEntryActivity</a>&gt;</dt>
     <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
@@ -193,6 +196,12 @@ Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View
 
 
 
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">IActivity</span></div>
+    </dd>
+  </dl>
 
 
   <h2 class="section" id="methods">Methods
@@ -201,9 +210,9 @@ Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View
 
   <a id="Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync_" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync*"></a>
 
-  <h3 id="Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync">
-  StartAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync_System_Threading_CancellationToken_" data-uid="Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync(System.Threading.CancellationToken)">
+  StartAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Starts the <span class="xref">Songhay.Abstractions.IActivity</span>.</p>
@@ -211,9 +220,14 @@ Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task StartAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task StartAsync(CancellationToken cancellationToken)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -239,7 +253,7 @@ Class MarkdownEntryActivity  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Activities/MarkdownEntryActivity.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

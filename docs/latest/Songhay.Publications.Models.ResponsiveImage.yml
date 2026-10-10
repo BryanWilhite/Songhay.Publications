@@ -227,34 +227,27 @@ items:
 references:
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -782,34 +775,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
-  href: Songhay.html
   name: Songhay.Publications.Extensions
   nameWithType: Songhay.Publications.Extensions
   fullName: Songhay.Publications.Extensions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
 - uid: Songhay.Publications.Models.ResponsiveImage.Description*
   commentId: Overload:Songhay.Publications.Models.ResponsiveImage.Description
   href: Songhay.Publications.Models.ResponsiveImage.html#Songhay_Publications_Models_ResponsiveImage_Description

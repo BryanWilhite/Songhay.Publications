@@ -258,26 +258,21 @@ references:
   fullName: Songhay.Publications.Models.MarkdownEntry
 - uid: Songhay.Publications
   commentId: N:Songhay.Publications
-  href: Songhay.html
   name: Songhay.Publications
   nameWithType: Songhay.Publications
   fullName: Songhay.Publications
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -510,34 +505,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
 - uid: System
   commentId: N:System
   isExternal: true

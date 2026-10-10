@@ -7,6 +7,8 @@ items:
   - Songhay.Publications.Models.CloneInitializers
   - Songhay.Publications.Models.DaisyConsortiumNcx
   - Songhay.Publications.Models.Document
+  - Songhay.Publications.Models.DocumentProperties
+  - Songhay.Publications.Models.DocumentTags
   - Songhay.Publications.Models.Fragment
   - Songhay.Publications.Models.IdpfPackage
   - Songhay.Publications.Models.ImageCandidate
@@ -58,6 +60,18 @@ references:
   name: Document
   nameWithType: Document
   fullName: Songhay.Publications.Models.Document
+- uid: Songhay.Publications.Models.DocumentProperties
+  commentId: T:Songhay.Publications.Models.DocumentProperties
+  href: Songhay.Publications.Models.DocumentProperties.html
+  name: DocumentProperties
+  nameWithType: DocumentProperties
+  fullName: Songhay.Publications.Models.DocumentProperties
+- uid: Songhay.Publications.Models.DocumentTags
+  commentId: T:Songhay.Publications.Models.DocumentTags
+  href: Songhay.Publications.Models.DocumentTags.html
+  name: DocumentTags
+  nameWithType: DocumentTags
+  fullName: Songhay.Publications.Models.DocumentTags
 - uid: Songhay.Publications.Models.Fragment
   commentId: T:Songhay.Publications.Models.Fragment
   parent: Songhay.Publications.Models
@@ -196,31 +210,24 @@ references:
   fullName: Songhay.Publications.Models.Segment
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html

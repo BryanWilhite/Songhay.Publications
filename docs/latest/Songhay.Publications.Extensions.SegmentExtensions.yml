@@ -11,6 +11,7 @@ items:
   - Songhay.Publications.Extensions.SegmentExtensions.SetDefaults(Songhay.Publications.Abstractions.ISegment)
   - Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment)
   - Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment,System.Boolean)
+  - Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
   - Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
   - Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment,Songhay.Abstractions.IGroupable)
   - Songhay.Publications.Extensions.SegmentExtensions.ToPublicationIndexEntries(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.ISegment})
@@ -289,6 +290,47 @@ items:
   nameWithType.vb: SegmentExtensions.ToDisplayText(ISegment, Boolean)
   fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText(Songhay.Publications.Abstractions.ISegment, Boolean)
   name.vb: ToDisplayText(ISegment, Boolean)
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  id: ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.SegmentExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToJsonObject(ISegment?)
+  nameWithType: SegmentExtensions.ToJsonObject(ISegment?)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/ISegmentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToJsonObject
+    path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
+    startLine: 110
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="Songhay.Publications.Abstractions.ISegment" data-throw-if-not-resolved="false"></xref>
+
+    to its <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref> shape
+  example: []
+  syntax:
+    content: public static JsonObject ToJsonObject(this ISegment? data)
+    parameters:
+    - id: data
+      type: Songhay.Publications.Abstractions.ISegment
+      description: the <xref href="Songhay.Publications.Abstractions.ISegment" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function ToJsonObject(data As ISegment) As JsonObject
+  overload: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject*
+  nameWithType.vb: SegmentExtensions.ToJsonObject(ISegment)
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  name.vb: ToJsonObject(ISegment)
 - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
   commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
   id: ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
@@ -308,7 +350,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 109
+    startLine: 128
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -346,7 +388,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 117
+    startLine: 136
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -387,7 +429,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToPublicationIndexEntries
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 138
+    startLine: 157
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -425,7 +467,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToPublicationIndexEntry
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 149
+    startLine: 168
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -463,7 +505,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToValidationResult
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 169
+    startLine: 188
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -501,7 +543,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithDefaults
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 185
+    startLine: 204
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -539,7 +581,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/ISegmentExtensions.cs
-    startLine: 198
+    startLine: 217
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -574,34 +616,27 @@ references:
   fullName: Songhay.Publications.Abstractions.ISegment
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
-  href: Songhay.html
   name: Songhay.Publications.Extensions
   nameWithType: Songhay.Publications.Extensions
   fullName: Songhay.Publications.Extensions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -834,34 +869,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Abstractions
   commentId: N:Songhay.Publications.Abstractions
-  href: Songhay.html
   name: Songhay.Publications.Abstractions
   nameWithType: Songhay.Publications.Abstractions
   fullName: Songhay.Publications.Abstractions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -884,34 +912,27 @@ references:
   fullName: Songhay.Publications.Models.Segment
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
 - uid: Songhay.Publications.Extensions.SegmentExtensions.GetSegmentByPredicate*
   commentId: Overload:Songhay.Publications.Extensions.SegmentExtensions.GetSegmentByPredicate
   href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_GetSegmentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_ISegment__System_Func_Songhay_Publications_Abstractions_ISegment_System_Boolean__
@@ -1141,6 +1162,67 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject*
+  commentId: Overload:Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject
+  href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToJsonObject_Songhay_Publications_Abstractions_ISegment_
+  name: ToJsonObject
+  nameWithType: SegmentExtensions.ToJsonObject
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
 - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel*
   commentId: Overload:Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel
   href: Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_

@@ -4,6 +4,7 @@ items:
   commentId: N:Songhay.Publications
   id: Songhay.Publications
   children:
+  - Songhay.Publications.DocumentUtility
   - Songhay.Publications.EpubUtility
   - Songhay.Publications.MarkdownEntryUtility
   - Songhay.Publications.MarkdownUtility
@@ -20,6 +21,12 @@ items:
   assemblies:
   - Songhay.Publications
 references:
+- uid: Songhay.Publications.DocumentUtility
+  commentId: T:Songhay.Publications.DocumentUtility
+  href: Songhay.Publications.DocumentUtility.html
+  name: DocumentUtility
+  nameWithType: DocumentUtility
+  fullName: Songhay.Publications.DocumentUtility
 - uid: Songhay.Publications.EpubUtility
   commentId: T:Songhay.Publications.EpubUtility
   href: Songhay.Publications.EpubUtility.html
@@ -59,23 +66,18 @@ references:
   fullName: Songhay.Publications.YamlUtility
 - uid: Songhay.Publications
   commentId: N:Songhay.Publications
-  href: Songhay.html
   name: Songhay.Publications
   nameWithType: Songhay.Publications
   fullName: Songhay.Publications
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html

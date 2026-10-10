@@ -568,15 +568,15 @@ references:
   commentId: T:Songhay.Publications.Activities.MarkdownEntryActivity
   fullName: Songhay.Publications.Activities.MarkdownEntryActivity
   nameWithType: MarkdownEntryActivity
-- uid: Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})
-  name: MarkdownEntryActivity(IConfiguration, ILogger<MarkdownEntryActivity>)
-  href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity__ctor_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_Activities_MarkdownEntryActivity__
-  commentId: M:Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})
-  name.vb: New(IConfiguration, ILogger(Of MarkdownEntryActivity))
-  fullName: Songhay.Publications.Activities.MarkdownEntryActivity.MarkdownEntryActivity(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.Activities.MarkdownEntryActivity>)
-  fullName.vb: Songhay.Publications.Activities.MarkdownEntryActivity.New(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.Activities.MarkdownEntryActivity))
-  nameWithType: MarkdownEntryActivity.MarkdownEntryActivity(IConfiguration, ILogger<MarkdownEntryActivity>)
-  nameWithType.vb: MarkdownEntryActivity.New(IConfiguration, ILogger(Of MarkdownEntryActivity))
+- uid: Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})
+  name: MarkdownEntryActivity(IConfiguration, IHttpClientFactory, ILogger<MarkdownEntryActivity>)
+  href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Net_Http_IHttpClientFactory_Microsoft_Extensions_Logging_ILogger_Songhay_Publications_Activities_MarkdownEntryActivity__
+  commentId: M:Songhay.Publications.Activities.MarkdownEntryActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.MarkdownEntryActivity})
+  name.vb: New(IConfiguration, IHttpClientFactory, ILogger(Of MarkdownEntryActivity))
+  fullName: Songhay.Publications.Activities.MarkdownEntryActivity.MarkdownEntryActivity(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, Microsoft.Extensions.Logging.ILogger<Songhay.Publications.Activities.MarkdownEntryActivity>)
+  fullName.vb: Songhay.Publications.Activities.MarkdownEntryActivity.New(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.Activities.MarkdownEntryActivity))
+  nameWithType: MarkdownEntryActivity.MarkdownEntryActivity(IConfiguration, IHttpClientFactory, ILogger<MarkdownEntryActivity>)
+  nameWithType.vb: MarkdownEntryActivity.New(IConfiguration, IHttpClientFactory, ILogger(Of MarkdownEntryActivity))
 - uid: Songhay.Publications.Activities.MarkdownEntryActivity.#ctor*
   name: MarkdownEntryActivity
   href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity__ctor_
@@ -587,12 +587,12 @@ references:
   fullName.vb: Songhay.Publications.Activities.MarkdownEntryActivity.New
   nameWithType: MarkdownEntryActivity.MarkdownEntryActivity
   nameWithType.vb: MarkdownEntryActivity.New
-- uid: Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync
-  name: StartAsync()
-  href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync
-  commentId: M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync
-  fullName: Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync()
-  nameWithType: MarkdownEntryActivity.StartAsync()
+- uid: Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync(System.Threading.CancellationToken)
+  name: StartAsync(CancellationToken)
+  href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync_System_Threading_CancellationToken_
+  commentId: M:Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync(System.Threading.CancellationToken)
+  fullName: Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync(System.Threading.CancellationToken)
+  nameWithType: MarkdownEntryActivity.StartAsync(CancellationToken)
 - uid: Songhay.Publications.Activities.MarkdownEntryActivity.StartAsync*
   name: StartAsync
   href: latest/Songhay.Publications.Activities.MarkdownEntryActivity.html#Songhay_Publications_Activities_MarkdownEntryActivity_StartAsync_
@@ -625,12 +625,12 @@ references:
   fullName.vb: Songhay.Publications.Activities.SearchIndexActivity.New
   nameWithType: SearchIndexActivity.SearchIndexActivity
   nameWithType.vb: SearchIndexActivity.New
-- uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-  name: StartAsync()
-  href: latest/Songhay.Publications.Activities.SearchIndexActivity.html#Songhay_Publications_Activities_SearchIndexActivity_StartAsync
-  commentId: M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-  fullName: Songhay.Publications.Activities.SearchIndexActivity.StartAsync()
-  nameWithType: SearchIndexActivity.StartAsync()
+- uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
+  name: StartAsync(CancellationToken)
+  href: latest/Songhay.Publications.Activities.SearchIndexActivity.html#Songhay_Publications_Activities_SearchIndexActivity_StartAsync_System_Threading_CancellationToken_
+  commentId: M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
+  fullName: Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
+  nameWithType: SearchIndexActivity.StartAsync(CancellationToken)
 - uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync*
   name: StartAsync
   href: latest/Songhay.Publications.Activities.SearchIndexActivity.html#Songhay_Publications_Activities_SearchIndexActivity_StartAsync_
@@ -885,6 +885,92 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.DataAccess.PublicationsDbContext.Segments
   nameWithType: PublicationsDbContext.Segments
+- uid: Songhay.Publications.DocumentUtility
+  name: DocumentUtility
+  href: latest/Songhay.Publications.DocumentUtility.html
+  commentId: T:Songhay.Publications.DocumentUtility
+  fullName: Songhay.Publications.DocumentUtility
+  nameWithType: DocumentUtility
+- uid: Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties(System.Boolean)
+  name: GetConventionalFrontMatterProperties(bool)
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_GetConventionalFrontMatterProperties_System_Boolean_
+  commentId: M:Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties(System.Boolean)
+  name.vb: GetConventionalFrontMatterProperties(Boolean)
+  fullName: Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties(bool)
+  fullName.vb: Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties(Boolean)
+  nameWithType: DocumentUtility.GetConventionalFrontMatterProperties(bool)
+  nameWithType.vb: DocumentUtility.GetConventionalFrontMatterProperties(Boolean)
+- uid: Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties*
+  name: GetConventionalFrontMatterProperties
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_GetConventionalFrontMatterProperties_
+  commentId: Overload:Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties
+  isSpec: "True"
+  fullName: Songhay.Publications.DocumentUtility.GetConventionalFrontMatterProperties
+  nameWithType: DocumentUtility.GetConventionalFrontMatterProperties
+- uid: Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name: GetConventionalTagsAndPropertiesElements(JsonObject?, string?, ILogger)
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_GetConventionalTagsAndPropertiesElements_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name.vb: GetConventionalTagsAndPropertiesElements(JsonObject, String, ILogger)
+  fullName: Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject?, string?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements(System.Text.Json.Nodes.JsonObject, String, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: DocumentUtility.GetConventionalTagsAndPropertiesElements(JsonObject?, string?, ILogger)
+  nameWithType.vb: DocumentUtility.GetConventionalTagsAndPropertiesElements(JsonObject, String, ILogger)
+- uid: Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements*
+  name: GetConventionalTagsAndPropertiesElements
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_GetConventionalTagsAndPropertiesElements_
+  commentId: Overload:Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements
+  isSpec: "True"
+  fullName: Songhay.Publications.DocumentUtility.GetConventionalTagsAndPropertiesElements
+  nameWithType: DocumentUtility.GetConventionalTagsAndPropertiesElements
+- uid: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: UpdateDocument(IDocument?, JsonObject?, ILogger)
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: UpdateDocument(IDocument, JsonObject, ILogger)
+  fullName: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument?, System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument, System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: DocumentUtility.UpdateDocument(IDocument?, JsonObject?, ILogger)
+  nameWithType.vb: DocumentUtility.UpdateDocument(IDocument, JsonObject, ILogger)
+- uid: Songhay.Publications.DocumentUtility.UpdateDocument*
+  name: UpdateDocument
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_
+  commentId: Overload:Songhay.Publications.DocumentUtility.UpdateDocument
+  isSpec: "True"
+  fullName: Songhay.Publications.DocumentUtility.UpdateDocument
+  nameWithType: DocumentUtility.UpdateDocument
+- uid: Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Models.Document)
+  name: UpdateFrontMatter(JsonObject?, Document?)
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatter_System_Text_Json_Nodes_JsonObject_Songhay_Publications_Models_Document_
+  commentId: M:Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Models.Document)
+  name.vb: UpdateFrontMatter(JsonObject, Document)
+  fullName: Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject?, Songhay.Publications.Models.Document?)
+  fullName.vb: Songhay.Publications.DocumentUtility.UpdateFrontMatter(System.Text.Json.Nodes.JsonObject, Songhay.Publications.Models.Document)
+  nameWithType: DocumentUtility.UpdateFrontMatter(JsonObject?, Document?)
+  nameWithType.vb: DocumentUtility.UpdateFrontMatter(JsonObject, Document)
+- uid: Songhay.Publications.DocumentUtility.UpdateFrontMatter*
+  name: UpdateFrontMatter
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatter_
+  commentId: Overload:Songhay.Publications.DocumentUtility.UpdateFrontMatter
+  isSpec: "True"
+  fullName: Songhay.Publications.DocumentUtility.UpdateFrontMatter
+  nameWithType: DocumentUtility.UpdateFrontMatter
+- uid: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name: UpdateFrontMatterWithDocumentTag(JsonObject?, string?, ILogger)
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name.vb: UpdateFrontMatterWithDocumentTag(JsonObject, String, ILogger)
+  fullName: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject?, string?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject, String, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: DocumentUtility.UpdateFrontMatterWithDocumentTag(JsonObject?, string?, ILogger)
+  nameWithType.vb: DocumentUtility.UpdateFrontMatterWithDocumentTag(JsonObject, String, ILogger)
+- uid: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag*
+  name: UpdateFrontMatterWithDocumentTag
+  href: latest/Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_
+  commentId: Overload:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag
+  isSpec: "True"
+  fullName: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag
+  nameWithType: DocumentUtility.UpdateFrontMatterWithDocumentTag
 - uid: Songhay.Publications.EpubUtility
   name: EpubUtility
   href: latest/Songhay.Publications.EpubUtility.html
@@ -1050,6 +1136,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContent
   nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContent
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  name: ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(FileInfo?, ILogger)
+  href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines_System_IO_FileInfo_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(System.IO.FileInfo,Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(FileInfo, ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(System.IO.FileInfo?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(System.IO.FileInfo, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(FileInfo?, ILogger)
+  nameWithType.vb: FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines(FileInfo, ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines*
+  name: ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines
+  href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines_
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines
+  nameWithType: FileInfoExtensions.ToJsonObjectAndAnyContentLinesFromYamlFrontMatterLines
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.ToJsonString(System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
   name: ToJsonString(IReadOnlyCollection<string>?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_ToJsonString_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
@@ -1098,6 +1200,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.FileInfoExtensions.ToYamlString
   nameWithType: FileInfoExtensions.ToYamlString
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines(System.IO.FileInfo,System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  name: WriteFrontMatterAndContentLines(FileInfo?, JsonObject?, IReadOnlyCollection<string>?, ILogger)
+  href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteFrontMatterAndContentLines_System_IO_FileInfo_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines(System.IO.FileInfo,System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  name.vb: WriteFrontMatterAndContentLines(FileInfo, JsonObject, IReadOnlyCollection(Of String), ILogger)
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines(System.IO.FileInfo?, System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines(System.IO.FileInfo, System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
+  nameWithType: FileInfoExtensions.WriteFrontMatterAndContentLines(FileInfo?, JsonObject?, IReadOnlyCollection<string>?, ILogger)
+  nameWithType.vb: FileInfoExtensions.WriteFrontMatterAndContentLines(FileInfo, JsonObject, IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines*
+  name: WriteFrontMatterAndContentLines
+  href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteFrontMatterAndContentLines_
+  commentId: Overload:Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.FileInfoExtensions.WriteFrontMatterAndContentLines
+  nameWithType: FileInfoExtensions.WriteFrontMatterAndContentLines
 - uid: Songhay.Publications.Extensions.FileInfoExtensions.WriteNewPublicationEntryWithJsonFrontMatter(System.IO.FileInfo,System.String,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name: WriteNewPublicationEntryWithJsonFrontMatter(FileInfo?, string?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.FileInfoExtensions.html#Songhay_Publications_Extensions_FileInfoExtensions_WriteNewPublicationEntryWithJsonFrontMatter_System_IO_FileInfo_System_String_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
@@ -1350,6 +1468,22 @@ references:
   commentId: T:Songhay.Publications.Extensions.IDictionaryExtensions
   fullName: Songhay.Publications.Extensions.IDictionaryExtensions
   nameWithType: IDictionaryExtensions
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: ToIDocumentJsonObject(IDictionary<string, object>?)
+  href: latest/Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToIDocumentJsonObject_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: ToIDocumentJsonObject(IDictionary(Of String, Object))
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary<string, object>?)
+  fullName.vb: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: IDictionaryExtensions.ToIDocumentJsonObject(IDictionary<string, object>?)
+  nameWithType.vb: IDictionaryExtensions.ToIDocumentJsonObject(IDictionary(Of String, Object))
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject*
+  name: ToIDocumentJsonObject
+  href: latest/Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToIDocumentJsonObject_
+  commentId: Overload:Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject
+  nameWithType: IDictionaryExtensions.ToIDocumentJsonObject
 - uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})
   name: ToJsonString(IDictionary<string, object>?)
   href: latest/Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToJsonString_System_Collections_Generic_IDictionary_System_String_System_Object__
@@ -1404,15 +1538,15 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.Clone
   nameWithType: IDocumentExtensions.Clone
-- uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
-  name: GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>)
-  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__
-  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
-  name.vb: GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean))
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable<Songhay.Publications.Abstractions.IDocument>, System.Func<Songhay.Publications.Abstractions.IDocument, bool>)
-  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable(Of Songhay.Publications.Abstractions.IDocument), System.Func(Of Songhay.Publications.Abstractions.IDocument, Boolean))
-  nameWithType: IDocumentExtensions.GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>)
-  nameWithType.vb: IDocumentExtensions.GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean))
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
+  name: GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
+  name.vb: GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean), ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable<Songhay.Publications.Abstractions.IDocument>, System.Func<Songhay.Publications.Abstractions.IDocument, bool>, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable(Of Songhay.Publications.Abstractions.IDocument), System.Func(Of Songhay.Publications.Abstractions.IDocument, Boolean), Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>, ILogger)
+  nameWithType.vb: IDocumentExtensions.GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean), ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate*
   name: GetDocumentByPredicate
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_
@@ -1420,15 +1554,15 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate
   nameWithType: IDocumentExtensions.GetDocumentByPredicate
-- uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  name: HasFragments(IDocument?)
-  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
-  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  name.vb: HasFragments(IDocument)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument?)
-  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  nameWithType: IDocumentExtensions.HasFragments(IDocument?)
-  nameWithType.vb: IDocumentExtensions.HasFragments(IDocument)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name: HasFragments(IDocument?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name.vb: HasFragments(IDocument, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.HasFragments(IDocument?, ILogger)
+  nameWithType.vb: IDocumentExtensions.HasFragments(IDocument, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments*
   name: HasFragments
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_
@@ -1468,6 +1602,31 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults
   nameWithType: IDocumentExtensions.SetDefaults
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name: ToConventionalFrontMatter(IDocument?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToConventionalFrontMatter(IDocument, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter(IDocument?, ILogger)
+  nameWithType.vb: IDocumentExtensions.ToConventionalFrontMatter(IDocument, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name: ToConventionalFrontMatter(IDocument?, IReadOnlyCollection<string>?, int?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToConventionalFrontMatter(IDocument, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter(IDocument?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType.vb: IDocumentExtensions.ToConventionalFrontMatter(IDocument, IReadOnlyCollection(Of String), Integer?, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*
+  name: ToConventionalFrontMatter
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
   name: ToConventionalPublicationItem(IDocument?, string?)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
@@ -1509,6 +1668,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText
   nameWithType: IDocumentExtensions.ToDisplayText
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  name: ToJsonObject(IDocument?)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToJsonObject_Songhay_Publications_Abstractions_IDocument_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  name.vb: ToJsonObject(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument?)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  nameWithType: IDocumentExtensions.ToJsonObject(IDocument?)
+  nameWithType.vb: IDocumentExtensions.ToJsonObject(IDocument)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject*
+  name: ToJsonObject
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToJsonObject_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject
+  nameWithType: IDocumentExtensions.ToJsonObject
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name: ToMarkdownEntry(IDocument?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
@@ -1550,6 +1725,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel
   nameWithType: IDocumentExtensions.ToMenuDisplayItemModel
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name: ToStaticFileValidationResult(IDocument?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToStaticFileValidationResult_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToStaticFileValidationResult(IDocument, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.ToStaticFileValidationResult(IDocument?, ILogger)
+  nameWithType.vb: IDocumentExtensions.ToStaticFileValidationResult(IDocument, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult*
+  name: ToStaticFileValidationResult
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToStaticFileValidationResult_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult
+  nameWithType: IDocumentExtensions.ToStaticFileValidationResult
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
   name: ToValidationResult(IDocument?)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
@@ -1591,6 +1782,104 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml
   nameWithType: IDocumentExtensions.ToYaml
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: Update(IDocument?, JsonObject?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Update_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: Update(IDocument, JsonObject, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument?, System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument, System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.Update(IDocument?, JsonObject?, ILogger)
+  nameWithType.vb: IDocumentExtensions.Update(IDocument, JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.Update*
+  name: Update
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Update_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.Update
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Update
+  nameWithType: IDocumentExtensions.Update
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: WithConventionalFrontMatter(JsonObject?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatter(JsonObject, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter(JsonObject?, ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatter(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name: WithConventionalFrontMatter(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatter(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatter(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*
+  name: WithConventionalFrontMatter
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  name: WithConventionalFrontMatterForDocument(JsonObject?)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_System_Text_Json_Nodes_JsonObject_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  name.vb: WithConventionalFrontMatterForDocument(JsonObject)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject?)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocument(JsonObject?)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocument(JsonObject)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument*
+  name: WithConventionalFrontMatterForDocument
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocument
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  name: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  name.vb: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject?)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*
+  name: WithConventionalFrontMatterForDocumentPublicationProperties
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: WithConventionalFrontMatterForDocumentTag(JsonObject?, ILogger)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentTag_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatterForDocumentTag(JsonObject, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(JsonObject?, ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag*
+  name: WithConventionalFrontMatterForDocumentTag
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentTag_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
   name: WithDefaults(IDocument?)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
@@ -1623,6 +1912,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit
   nameWithType: IDocumentExtensions.WithEdit
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  name: WithUtcITemporalDates(IDocument?)
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithUtcITemporalDates_Songhay_Publications_Abstractions_IDocument_
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  name.vb: WithUtcITemporalDates(IDocument)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument?)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  nameWithType: IDocumentExtensions.WithUtcITemporalDates(IDocument?)
+  nameWithType.vb: IDocumentExtensions.WithUtcITemporalDates(IDocument)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates*
+  name: WithUtcITemporalDates
+  href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithUtcITemporalDates_
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates
+  nameWithType: IDocumentExtensions.WithUtcITemporalDates
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   name: WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
   href: latest/Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
@@ -1805,6 +2110,19 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
   nameWithType: JsonElementExtensions.ToBoxedValue
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  name: ToJsonNode(JsonElement)
+  href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToJsonNode_System_Text_Json_JsonElement_
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  nameWithType: JsonElementExtensions.ToJsonNode(JsonElement)
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode*
+  name: ToJsonNode
+  href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToJsonNode_
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode
+  nameWithType: JsonElementExtensions.ToJsonNode
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   name: ToYaml(JsonElement)
   href: latest/Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_
@@ -1878,6 +2196,38 @@ references:
   commentId: T:Songhay.Publications.Extensions.JsonObjectExtensions
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions
   nameWithType: JsonObjectExtensions
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: GetSerializedTagsAndCustomProperties(JsonObject?, ILogger)
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_GetSerializedTagsAndCustomProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: GetSerializedTagsAndCustomProperties(JsonObject, ILogger)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: JsonObjectExtensions.GetSerializedTagsAndCustomProperties(JsonObject?, ILogger)
+  nameWithType.vb: JsonObjectExtensions.GetSerializedTagsAndCustomProperties(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties*
+  name: GetSerializedTagsAndCustomProperties
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_GetSerializedTagsAndCustomProperties_
+  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties
+  nameWithType: JsonObjectExtensions.GetSerializedTagsAndCustomProperties
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name: ToIDocument(JsonObject?, ILogger)
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_ToIDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToIDocument(JsonObject, ILogger)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: JsonObjectExtensions.ToIDocument(JsonObject?, ILogger)
+  nameWithType.vb: JsonObjectExtensions.ToIDocument(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument*
+  name: ToIDocument
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_ToIDocument_
+  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument
+  nameWithType: JsonObjectExtensions.ToIDocument
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   name: ToYaml(JsonObject?, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_ToYaml_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
@@ -1894,6 +2244,38 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml
   nameWithType: JsonObjectExtensions.ToYaml
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Abstractions.IDocument)
+  name: Update(JsonObject?, IDocument?)
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_Update_System_Text_Json_Nodes_JsonObject_Songhay_Publications_Abstractions_IDocument_
+  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Abstractions.IDocument)
+  name.vb: Update(JsonObject, IDocument)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject?, Songhay.Publications.Abstractions.IDocument?)
+  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject, Songhay.Publications.Abstractions.IDocument)
+  nameWithType: JsonObjectExtensions.Update(JsonObject?, IDocument?)
+  nameWithType.vb: JsonObjectExtensions.Update(JsonObject, IDocument)
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.Update*
+  name: Update
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_Update_
+  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.Update
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.Update
+  nameWithType: JsonObjectExtensions.Update
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject,System.String)
+  name: WithArrayProperty(JsonObject?, string?)
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithArrayProperty_System_Text_Json_Nodes_JsonObject_System_String_
+  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject,System.String)
+  name.vb: WithArrayProperty(JsonObject, String)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject?, string?)
+  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject, String)
+  nameWithType: JsonObjectExtensions.WithArrayProperty(JsonObject?, string?)
+  nameWithType.vb: JsonObjectExtensions.WithArrayProperty(JsonObject, String)
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty*
+  name: WithArrayProperty
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithArrayProperty_
+  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty
+  nameWithType: JsonObjectExtensions.WithArrayProperty
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
   name: WithExtract(JsonObject?, IReadOnlyCollection<string>?, int, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithExtract_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
@@ -1910,6 +2292,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract
   nameWithType: JsonObjectExtensions.WithExtract
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name: WithIndexDocumentProperties(JsonObject?, string?, ILogger)
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithIndexDocumentProperties_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithIndexDocumentProperties(JsonObject, String, ILogger)
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject?, string?, Microsoft.Extensions.Logging.ILogger)
+  fullName.vb: Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject, String, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: JsonObjectExtensions.WithIndexDocumentProperties(JsonObject?, string?, ILogger)
+  nameWithType.vb: JsonObjectExtensions.WithIndexDocumentProperties(JsonObject, String, ILogger)
+- uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties*
+  name: WithIndexDocumentProperties
+  href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithIndexDocumentProperties_
+  commentId: Overload:Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties
+  nameWithType: JsonObjectExtensions.WithIndexDocumentProperties
 - uid: Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   name: WithoutConventionalDocumentProperties(JsonObject?, ILogger)
   href: latest/Songhay.Publications.Extensions.JsonObjectExtensions.html#Songhay_Publications_Extensions_JsonObjectExtensions_WithoutConventionalDocumentProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
@@ -2339,6 +2737,22 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.SegmentExtensions.ToDisplayText
   nameWithType: SegmentExtensions.ToDisplayText
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  name: ToJsonObject(ISegment?)
+  href: latest/Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToJsonObject_Songhay_Publications_Abstractions_ISegment_
+  commentId: M:Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  name.vb: ToJsonObject(ISegment)
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment?)
+  fullName.vb: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject(Songhay.Publications.Abstractions.ISegment)
+  nameWithType: SegmentExtensions.ToJsonObject(ISegment?)
+  nameWithType.vb: SegmentExtensions.ToJsonObject(ISegment)
+- uid: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject*
+  name: ToJsonObject
+  href: latest/Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToJsonObject_
+  commentId: Overload:Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.SegmentExtensions.ToJsonObject
+  nameWithType: SegmentExtensions.ToJsonObject
 - uid: Songhay.Publications.Extensions.SegmentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.ISegment)
   name: ToMenuDisplayItemModel(ISegment?)
   href: latest/Songhay.Publications.Extensions.SegmentExtensions.html#Songhay_Publications_Extensions_SegmentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_ISegment_
@@ -2444,6 +2858,25 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Extensions.SegmentExtensions.WithEdit
   nameWithType: SegmentExtensions.WithEdit
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions
+  name: ValidationResultExtensions
+  href: latest/Songhay.Publications.Extensions.ValidationResultExtensions.html
+  commentId: T:Songhay.Publications.Extensions.ValidationResultExtensions
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions
+  nameWithType: ValidationResultExtensions
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  name: LogValidationErrors(ValidationResult, ILogger)
+  href: latest/Songhay.Publications.Extensions.ValidationResultExtensions.html#Songhay_Publications_Extensions_ValidationResultExtensions_LogValidationErrors_FluentValidation_Results_ValidationResult_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: ValidationResultExtensions.LogValidationErrors(ValidationResult, ILogger)
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors*
+  name: LogValidationErrors
+  href: latest/Songhay.Publications.Extensions.ValidationResultExtensions.html#Songhay_Publications_Extensions_ValidationResultExtensions_LogValidationErrors_
+  commentId: Overload:Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors
+  isSpec: "True"
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors
+  nameWithType: ValidationResultExtensions.LogValidationErrors
 - uid: Songhay.Publications.MarkdownEntryUtility
   name: MarkdownEntryUtility
   href: latest/Songhay.Publications.MarkdownEntryUtility.html
@@ -2916,6 +3349,70 @@ references:
   isSpec: "True"
   fullName: Songhay.Publications.Models.Document.ToString
   nameWithType: Document.ToString
+- uid: Songhay.Publications.Models.DocumentProperties
+  name: DocumentProperties
+  href: latest/Songhay.Publications.Models.DocumentProperties.html
+  commentId: T:Songhay.Publications.Models.DocumentProperties
+  fullName: Songhay.Publications.Models.DocumentProperties
+  nameWithType: DocumentProperties
+- uid: Songhay.Publications.Models.DocumentProperties.DocumentId
+  name: DocumentId
+  href: latest/Songhay.Publications.Models.DocumentProperties.html#Songhay_Publications_Models_DocumentProperties_DocumentId
+  commentId: P:Songhay.Publications.Models.DocumentProperties.DocumentId
+  fullName: Songhay.Publications.Models.DocumentProperties.DocumentId
+  nameWithType: DocumentProperties.DocumentId
+- uid: Songhay.Publications.Models.DocumentProperties.DocumentId*
+  name: DocumentId
+  href: latest/Songhay.Publications.Models.DocumentProperties.html#Songhay_Publications_Models_DocumentProperties_DocumentId_
+  commentId: Overload:Songhay.Publications.Models.DocumentProperties.DocumentId
+  isSpec: "True"
+  fullName: Songhay.Publications.Models.DocumentProperties.DocumentId
+  nameWithType: DocumentProperties.DocumentId
+- uid: Songhay.Publications.Models.DocumentProperties.Properties
+  name: Properties
+  href: latest/Songhay.Publications.Models.DocumentProperties.html#Songhay_Publications_Models_DocumentProperties_Properties
+  commentId: P:Songhay.Publications.Models.DocumentProperties.Properties
+  fullName: Songhay.Publications.Models.DocumentProperties.Properties
+  nameWithType: DocumentProperties.Properties
+- uid: Songhay.Publications.Models.DocumentProperties.Properties*
+  name: Properties
+  href: latest/Songhay.Publications.Models.DocumentProperties.html#Songhay_Publications_Models_DocumentProperties_Properties_
+  commentId: Overload:Songhay.Publications.Models.DocumentProperties.Properties
+  isSpec: "True"
+  fullName: Songhay.Publications.Models.DocumentProperties.Properties
+  nameWithType: DocumentProperties.Properties
+- uid: Songhay.Publications.Models.DocumentTags
+  name: DocumentTags
+  href: latest/Songhay.Publications.Models.DocumentTags.html
+  commentId: T:Songhay.Publications.Models.DocumentTags
+  fullName: Songhay.Publications.Models.DocumentTags
+  nameWithType: DocumentTags
+- uid: Songhay.Publications.Models.DocumentTags.DocumentId
+  name: DocumentId
+  href: latest/Songhay.Publications.Models.DocumentTags.html#Songhay_Publications_Models_DocumentTags_DocumentId
+  commentId: P:Songhay.Publications.Models.DocumentTags.DocumentId
+  fullName: Songhay.Publications.Models.DocumentTags.DocumentId
+  nameWithType: DocumentTags.DocumentId
+- uid: Songhay.Publications.Models.DocumentTags.DocumentId*
+  name: DocumentId
+  href: latest/Songhay.Publications.Models.DocumentTags.html#Songhay_Publications_Models_DocumentTags_DocumentId_
+  commentId: Overload:Songhay.Publications.Models.DocumentTags.DocumentId
+  isSpec: "True"
+  fullName: Songhay.Publications.Models.DocumentTags.DocumentId
+  nameWithType: DocumentTags.DocumentId
+- uid: Songhay.Publications.Models.DocumentTags.Tags
+  name: Tags
+  href: latest/Songhay.Publications.Models.DocumentTags.html#Songhay_Publications_Models_DocumentTags_Tags
+  commentId: P:Songhay.Publications.Models.DocumentTags.Tags
+  fullName: Songhay.Publications.Models.DocumentTags.Tags
+  nameWithType: DocumentTags.Tags
+- uid: Songhay.Publications.Models.DocumentTags.Tags*
+  name: Tags
+  href: latest/Songhay.Publications.Models.DocumentTags.html#Songhay_Publications_Models_DocumentTags_Tags_
+  commentId: Overload:Songhay.Publications.Models.DocumentTags.Tags
+  isSpec: "True"
+  fullName: Songhay.Publications.Models.DocumentTags.Tags
+  nameWithType: DocumentTags.Tags
 - uid: Songhay.Publications.Models.Fragment
   name: Fragment
   href: latest/Songhay.Publications.Models.Fragment.html
@@ -4584,6 +5081,22 @@ references:
   commentId: T:Songhay.Publications.PublicationLinesUtility
   fullName: Songhay.Publications.PublicationLinesUtility
   nameWithType: PublicationLinesUtility
+- uid: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
+  name: ConvertToContent(IReadOnlyCollection<string>?)
+  href: latest/Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToContent_System_Collections_Generic_IReadOnlyCollection_System_String__
+  commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
+  name.vb: ConvertToContent(IReadOnlyCollection(Of String))
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection<string>?)
+  fullName.vb: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection(Of String))
+  nameWithType: PublicationLinesUtility.ConvertToContent(IReadOnlyCollection<string>?)
+  nameWithType.vb: PublicationLinesUtility.ConvertToContent(IReadOnlyCollection(Of String))
+- uid: Songhay.Publications.PublicationLinesUtility.ConvertToContent*
+  name: ConvertToContent
+  href: latest/Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToContent_
+  commentId: Overload:Songhay.Publications.PublicationLinesUtility.ConvertToContent
+  isSpec: "True"
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToContent
+  nameWithType: PublicationLinesUtility.ConvertToContent
 - uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
   name: ConvertToExtract(IReadOnlyCollection<string>?, int, ILogger)
   href: latest/Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
@@ -4672,6 +5185,81 @@ references:
   fullName.vb: Songhay.Publications.Validators.FragmentValidator.New
   nameWithType: FragmentValidator.FragmentValidator
   nameWithType.vb: FragmentValidator.New
+- uid: Songhay.Publications.Validators.IDocumentCoreValidator
+  name: IDocumentCoreValidator
+  href: latest/Songhay.Publications.Validators.IDocumentCoreValidator.html
+  commentId: T:Songhay.Publications.Validators.IDocumentCoreValidator
+  fullName: Songhay.Publications.Validators.IDocumentCoreValidator
+  nameWithType: IDocumentCoreValidator
+- uid: Songhay.Publications.Validators.IDocumentCoreValidator.#ctor
+  name: IDocumentCoreValidator()
+  href: latest/Songhay.Publications.Validators.IDocumentCoreValidator.html#Songhay_Publications_Validators_IDocumentCoreValidator__ctor
+  commentId: M:Songhay.Publications.Validators.IDocumentCoreValidator.#ctor
+  name.vb: New()
+  fullName: Songhay.Publications.Validators.IDocumentCoreValidator.IDocumentCoreValidator()
+  fullName.vb: Songhay.Publications.Validators.IDocumentCoreValidator.New()
+  nameWithType: IDocumentCoreValidator.IDocumentCoreValidator()
+  nameWithType.vb: IDocumentCoreValidator.New()
+- uid: Songhay.Publications.Validators.IDocumentCoreValidator.#ctor*
+  name: IDocumentCoreValidator
+  href: latest/Songhay.Publications.Validators.IDocumentCoreValidator.html#Songhay_Publications_Validators_IDocumentCoreValidator__ctor_
+  commentId: Overload:Songhay.Publications.Validators.IDocumentCoreValidator.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Songhay.Publications.Validators.IDocumentCoreValidator.IDocumentCoreValidator
+  fullName.vb: Songhay.Publications.Validators.IDocumentCoreValidator.New
+  nameWithType: IDocumentCoreValidator.IDocumentCoreValidator
+  nameWithType.vb: IDocumentCoreValidator.New
+- uid: Songhay.Publications.Validators.IDocumentStaticFileValidator
+  name: IDocumentStaticFileValidator
+  href: latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.html
+  commentId: T:Songhay.Publications.Validators.IDocumentStaticFileValidator
+  fullName: Songhay.Publications.Validators.IDocumentStaticFileValidator
+  nameWithType: IDocumentStaticFileValidator
+- uid: Songhay.Publications.Validators.IDocumentStaticFileValidator.#ctor
+  name: IDocumentStaticFileValidator()
+  href: latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.html#Songhay_Publications_Validators_IDocumentStaticFileValidator__ctor
+  commentId: M:Songhay.Publications.Validators.IDocumentStaticFileValidator.#ctor
+  name.vb: New()
+  fullName: Songhay.Publications.Validators.IDocumentStaticFileValidator.IDocumentStaticFileValidator()
+  fullName.vb: Songhay.Publications.Validators.IDocumentStaticFileValidator.New()
+  nameWithType: IDocumentStaticFileValidator.IDocumentStaticFileValidator()
+  nameWithType.vb: IDocumentStaticFileValidator.New()
+- uid: Songhay.Publications.Validators.IDocumentStaticFileValidator.#ctor*
+  name: IDocumentStaticFileValidator
+  href: latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.html#Songhay_Publications_Validators_IDocumentStaticFileValidator__ctor_
+  commentId: Overload:Songhay.Publications.Validators.IDocumentStaticFileValidator.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Songhay.Publications.Validators.IDocumentStaticFileValidator.IDocumentStaticFileValidator
+  fullName.vb: Songhay.Publications.Validators.IDocumentStaticFileValidator.New
+  nameWithType: IDocumentStaticFileValidator.IDocumentStaticFileValidator
+  nameWithType.vb: IDocumentStaticFileValidator.New
+- uid: Songhay.Publications.Validators.ITemporalUtcValidator
+  name: ITemporalUtcValidator
+  href: latest/Songhay.Publications.Validators.ITemporalUtcValidator.html
+  commentId: T:Songhay.Publications.Validators.ITemporalUtcValidator
+  fullName: Songhay.Publications.Validators.ITemporalUtcValidator
+  nameWithType: ITemporalUtcValidator
+- uid: Songhay.Publications.Validators.ITemporalUtcValidator.#ctor
+  name: ITemporalUtcValidator()
+  href: latest/Songhay.Publications.Validators.ITemporalUtcValidator.html#Songhay_Publications_Validators_ITemporalUtcValidator__ctor
+  commentId: M:Songhay.Publications.Validators.ITemporalUtcValidator.#ctor
+  name.vb: New()
+  fullName: Songhay.Publications.Validators.ITemporalUtcValidator.ITemporalUtcValidator()
+  fullName.vb: Songhay.Publications.Validators.ITemporalUtcValidator.New()
+  nameWithType: ITemporalUtcValidator.ITemporalUtcValidator()
+  nameWithType.vb: ITemporalUtcValidator.New()
+- uid: Songhay.Publications.Validators.ITemporalUtcValidator.#ctor*
+  name: ITemporalUtcValidator
+  href: latest/Songhay.Publications.Validators.ITemporalUtcValidator.html#Songhay_Publications_Validators_ITemporalUtcValidator__ctor_
+  commentId: Overload:Songhay.Publications.Validators.ITemporalUtcValidator.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Songhay.Publications.Validators.ITemporalUtcValidator.ITemporalUtcValidator
+  fullName.vb: Songhay.Publications.Validators.ITemporalUtcValidator.New
+  nameWithType: ITemporalUtcValidator.ITemporalUtcValidator
+  nameWithType.vb: ITemporalUtcValidator.New
 - uid: Songhay.Publications.Validators.ITemporalValidator
   name: ITemporalValidator
   href: latest/Songhay.Publications.Validators.ITemporalValidator.html

@@ -5,6 +5,7 @@ items:
   id: IDictionaryExtensions
   parent: Songhay.Publications.Extensions
   children:
+  - Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
   - Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})
   - Songhay.Publications.Extensions.IDictionaryExtensions.ToTaggedDocument(System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger,System.String[])
   langs:
@@ -40,6 +41,54 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
+  id: ToIDocumentJsonObject(System.Collections.Generic.IDictionary{System.String,System.Object})
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToIDocumentJsonObject(IDictionary<string, object>?)
+  nameWithType: IDictionaryExtensions.ToIDocumentJsonObject(IDictionary<string, object>?)
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary<string, object>?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDictionaryExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToIDocumentJsonObject
+    path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
+    startLine: 18
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the conventional, <code>YamlDotNet</code> dictionary
+
+    to the conventional, Publications <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+  remarks: >-
+    The incoming <code>YamlDotNet</code> dictionary should have keys
+
+    that match the property names of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static JsonObject? ToIDocumentJsonObject(this IDictionary<string, object>? data)
+    parameters:
+    - id: data
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+      description: the conventional, <code>YamlDotNet</code> dictionary
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function ToIDocumentJsonObject(data As IDictionary(Of String, Object)) As JsonObject
+  overload: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject*
+  seealso:
+  - linkId: Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+    commentId: M:Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+  nameWithType.vb: IDictionaryExtensions.ToIDocumentJsonObject(IDictionary(Of String, Object))
+  fullName.vb: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject(System.Collections.Generic.IDictionary(Of String, Object))
+  name.vb: ToIDocumentJsonObject(IDictionary(Of String, Object))
 - uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})
   commentId: M:Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})
   id: ToJsonString(System.Collections.Generic.IDictionary{System.String,System.Object})
@@ -59,7 +108,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToJsonString
     path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
-    startLine: 12
+    startLine: 49
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -97,7 +146,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToTaggedDocument
     path: ../Songhay.Publications/Extensions/IDictionaryExtensions.cs
-    startLine: 35
+    startLine: 72
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -167,34 +216,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
-  href: Songhay.html
   name: Songhay.Publications.Extensions
   nameWithType: Songhay.Publications.Extensions
   fullName: Songhay.Publications.Extensions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -432,12 +474,57 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString*
-  commentId: Overload:Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString
-  href: Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToJsonString_System_Collections_Generic_IDictionary_System_String_System_Object__
-  name: ToJsonString
-  nameWithType: IDictionaryExtensions.ToJsonString
-  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+  commentId: M:Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+  isExternal: true
+  href: Songhay.Publications.YamlUtility.html#Songhay_Publications_YamlUtility_DeserializeYaml_System_String_
+  name: DeserializeYaml(string)
+  nameWithType: YamlUtility.DeserializeYaml(string)
+  fullName: Songhay.Publications.YamlUtility.DeserializeYaml(string)
+  nameWithType.vb: YamlUtility.DeserializeYaml(String)
+  fullName.vb: Songhay.Publications.YamlUtility.DeserializeYaml(String)
+  name.vb: DeserializeYaml(String)
+  spec.csharp:
+  - uid: Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+    name: DeserializeYaml
+    href: Songhay.Publications.YamlUtility.html#Songhay_Publications_YamlUtility_DeserializeYaml_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.YamlUtility.DeserializeYaml(System.String)
+    name: DeserializeYaml
+    href: Songhay.Publications.YamlUtility.html#Songhay_Publications_YamlUtility_DeserializeYaml_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Songhay.Publications.Abstractions.IDocument
+  commentId: T:Songhay.Publications.Abstractions.IDocument
+  parent: Songhay.Publications.Abstractions
+  href: Songhay.Publications.Abstractions.IDocument.html
+  name: IDocument
+  nameWithType: IDocument
+  fullName: Songhay.Publications.Abstractions.IDocument
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject*
+  commentId: Overload:Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject
+  href: Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToIDocumentJsonObject_System_Collections_Generic_IDictionary_System_String_System_Object__
+  name: ToIDocumentJsonObject
+  nameWithType: IDictionaryExtensions.ToIDocumentJsonObject
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToIDocumentJsonObject
 - uid: System.Collections.Generic.IDictionary{System.String,System.Object}
   commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
   parent: System.Collections.Generic
@@ -485,17 +572,76 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: Songhay.Publications.Abstractions
+  commentId: N:Songhay.Publications.Abstractions
+  name: Songhay.Publications.Abstractions
+  nameWithType: Songhay.Publications.Abstractions
+  fullName: Songhay.Publications.Abstractions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+  - name: .
+  - uid: Songhay.Publications.Abstractions
+    name: Abstractions
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
   isExternal: true
@@ -533,13 +679,23 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: Songhay.Publications.Abstractions.IDocument
-  commentId: T:Songhay.Publications.Abstractions.IDocument
-  parent: Songhay.Publications.Abstractions
-  href: Songhay.Publications.Abstractions.IDocument.html
-  name: IDocument
-  nameWithType: IDocument
-  fullName: Songhay.Publications.Abstractions.IDocument
+- uid: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString*
+  commentId: Overload:Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString
+  href: Songhay.Publications.Extensions.IDictionaryExtensions.html#Songhay_Publications_Extensions_IDictionaryExtensions_ToJsonString_System_Collections_Generic_IDictionary_System_String_System_Object__
+  name: ToJsonString
+  nameWithType: IDictionaryExtensions.ToJsonString
+  fullName: Songhay.Publications.Extensions.IDictionaryExtensions.ToJsonString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Microsoft.Extensions.Logging.ILogger
   commentId: T:Microsoft.Extensions.Logging.ILogger
   parent: Microsoft.Extensions.Logging
@@ -584,36 +740,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-- uid: Songhay.Publications.Abstractions
-  commentId: N:Songhay.Publications.Abstractions
-  href: Songhay.html
-  name: Songhay.Publications.Abstractions
-  nameWithType: Songhay.Publications.Abstractions
-  fullName: Songhay.Publications.Abstractions
-  spec.csharp:
-  - uid: Songhay
-    name: Songhay
-    href: Songhay.html
-  - name: .
-  - uid: Songhay.Publications
-    name: Publications
-    href: Songhay.Publications.html
-  - name: .
-  - uid: Songhay.Publications.Abstractions
-    name: Abstractions
-    href: Songhay.Publications.Abstractions.html
-  spec.vb:
-  - uid: Songhay
-    name: Songhay
-    href: Songhay.html
-  - name: .
-  - uid: Songhay.Publications
-    name: Publications
-    href: Songhay.Publications.html
-  - name: .
-  - uid: Songhay.Publications.Abstractions
-    name: Abstractions
-    href: Songhay.Publications.Abstractions.html
 - uid: Microsoft.Extensions.Logging
   commentId: N:Microsoft.Extensions.Logging
   isExternal: true

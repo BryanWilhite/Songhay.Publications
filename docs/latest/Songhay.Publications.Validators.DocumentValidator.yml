@@ -110,34 +110,27 @@ references:
   fullName: Songhay.Publications.Models.Document
 - uid: Songhay.Publications.Validators
   commentId: N:Songhay.Publications.Validators
-  href: Songhay.html
   name: Songhay.Publications.Validators
   nameWithType: Songhay.Publications.Validators
   fullName: Songhay.Publications.Validators
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Validators
     name: Validators
-    href: Songhay.Publications.Validators.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Validators
     name: Validators
-    href: Songhay.Publications.Validators.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1870,34 +1863,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
 - uid: System
   commentId: N:System
   isExternal: true

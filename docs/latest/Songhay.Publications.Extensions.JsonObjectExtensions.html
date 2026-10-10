@@ -93,7 +93,7 @@ Class JsonObjectExtensions  <a class="header-action link-secondary" title="View 
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Songhay.html">Songhay</a>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Extensions.html">Extensions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><span class="xref">Songhay</span>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Extensions.html">Extensions</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Songhay.Publications.dll</dd></dl>
   </div>
 
@@ -153,11 +153,114 @@ Class JsonObjectExtensions  <a class="header-action link-secondary" title="View 
 </h2>
 
 
+  <a id="Songhay_Publications_Extensions_JsonObjectExtensions_GetSerializedTagsAndCustomProperties_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_GetSerializedTagsAndCustomProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.GetSerializedTagsAndCustomProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+  GetSerializedTagsAndCustomProperties(JsonObject?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a serialized JSON string,
+according to the conventions
+for <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Tag">Tag</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? GetSerializedTagsAndCustomProperties(this JsonObject? documentData, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Songhay_Publications_Extensions_JsonObjectExtensions_GetSerializedTagsAndCustomProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This member expects to see a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with several properties with names prefixed with <code>rx</code>
+and a <code>tags</code> property.
+</p>
+<p>
+This implies that the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a> is generated
+from a Markdown file and this member is being used to save
+into a Publications database.
+</p>
+</div>
+
+
+
+
+  <a id="Songhay_Publications_Extensions_JsonObjectExtensions_ToIDocument_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_ToIDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.ToIDocument(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+  ToIDocument(JsonObject?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+into a newly allocated instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDocument ToIDocument(this JsonObject? documentData, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_">UpdateDocument</a>(<a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    </dd>
+  </dl>
+
+
   <a id="Songhay_Publications_Extensions_JsonObjectExtensions_ToYaml_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml*"></a>
 
   <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_ToYaml_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.ToYaml(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
   ToYaml(JsonObject?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>
@@ -195,11 +298,96 @@ to a YAML <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.st
 
 
 
+  <a id="Songhay_Publications_Extensions_JsonObjectExtensions_Update_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.Update*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_Update_System_Text_Json_Nodes_JsonObject_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.Update(System.Text.Json.Nodes.JsonObject,Songhay.Publications.Abstractions.IDocument)">
+  Update(JsonObject?, IDocument?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the specified instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Update(this JsonObject? documentData, IDocument? document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatter_System_Text_Json_Nodes_JsonObject_Songhay_Publications_Models_Document_">UpdateFrontMatter</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="Songhay.Publications.Models.Document.html">Document</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Songhay_Publications_Extensions_JsonObjectExtensions_WithArrayProperty_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_WithArrayProperty_System_Text_Json_Nodes_JsonObject_System_String_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithArrayProperty(System.Text.Json.Nodes.JsonObject,System.String)">
+  WithArrayProperty(JsonObject?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonarray">JsonArray</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject? WithArrayProperty(this JsonObject? jsonObject, string? arrayPropertyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsonObject</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>arrayPropertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the property name of the array</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Songhay_Publications_Extensions_JsonObjectExtensions_WithExtract_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract*"></a>
 
   <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_WithExtract_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithExtract(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)">
   WithExtract(JsonObject?, IReadOnlyCollection&lt;string&gt;?, int, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
@@ -243,11 +431,63 @@ with a Publications extract.</p>
 
 
 
+  <a id="Songhay_Publications_Extensions_JsonObjectExtensions_WithIndexDocumentProperties_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_WithIndexDocumentProperties_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithIndexDocumentProperties(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)">
+  WithIndexDocumentProperties(JsonObject?, string?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional Index-document properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithIndexDocumentProperties(this JsonObject? documentData, string? tag, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>tag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the value of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Tag">Tag</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_GetConventionalTagsAndPropertiesElements_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_">GetConventionalTagsAndPropertiesElements</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    </dd>
+  </dl>
+
+
   <a id="Songhay_Publications_Extensions_JsonObjectExtensions_WithoutConventionalDocumentProperties_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties*"></a>
 
   <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_WithoutConventionalDocumentProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithoutConventionalDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
   WithoutConventionalDocumentProperties(JsonObject?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
@@ -289,7 +529,7 @@ without the properties that should display in front matter.</p>
 
   <h3 id="Songhay_Publications_Extensions_JsonObjectExtensions_WithoutNonNullableDocumentProperties_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.JsonObjectExtensions.WithoutNonNullableDocumentProperties(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
   WithoutNonNullableDocumentProperties(JsonObject?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/JsonObjectExtensions.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>

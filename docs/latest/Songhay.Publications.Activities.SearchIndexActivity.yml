@@ -6,7 +6,7 @@ items:
   parent: Songhay.Publications.Activities
   children:
   - Songhay.Publications.Activities.SearchIndexActivity.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{Songhay.Publications.Activities.SearchIndexActivity})
-  - Songhay.Publications.Activities.SearchIndexActivity.StartAsync
+  - Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
@@ -85,16 +85,16 @@ items:
   nameWithType.vb: SearchIndexActivity.New(IConfiguration, ILogger(Of SearchIndexActivity))
   fullName.vb: Songhay.Publications.Activities.SearchIndexActivity.New(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger(Of Songhay.Publications.Activities.SearchIndexActivity))
   name.vb: New(IConfiguration, ILogger(Of SearchIndexActivity))
-- uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-  commentId: M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-  id: StartAsync
+- uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
+  commentId: M:Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
   parent: Songhay.Publications.Activities.SearchIndexActivity
   langs:
   - csharp
   - vb
-  name: StartAsync()
-  nameWithType: SearchIndexActivity.StartAsync()
-  fullName: Songhay.Publications.Activities.SearchIndexActivity.StartAsync()
+  name: StartAsync(CancellationToken)
+  nameWithType: SearchIndexActivity.StartAsync(CancellationToken)
+  fullName: Songhay.Publications.Activities.SearchIndexActivity.StartAsync(System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -110,13 +110,16 @@ items:
   summary: Starts the <xref href="Songhay.Abstractions.IActivity" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public Task StartAsync()
+    content: public Task StartAsync(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
     return:
       type: System.Threading.Tasks.Task
-    content.vb: Public Function StartAsync() As Task
+    content.vb: Public Function StartAsync(cancellationToken As CancellationToken) As Task
   overload: Songhay.Publications.Activities.SearchIndexActivity.StartAsync*
   implements:
-  - Songhay.Abstractions.IActivityTask.StartAsync
+  - Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
 references:
 - uid: Songhay.Abstractions.IActivity
   commentId: T:Songhay.Abstractions.IActivity
@@ -133,34 +136,27 @@ references:
   fullName: Songhay.Abstractions.IActivityTask
 - uid: Songhay.Publications.Activities
   commentId: N:Songhay.Publications.Activities
-  href: Songhay.html
   name: Songhay.Publications.Activities
   nameWithType: Songhay.Publications.Activities
   fullName: Songhay.Publications.Activities
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Activities
     name: Activities
-    href: Songhay.Publications.Activities.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Activities
     name: Activities
-    href: Songhay.Publications.Activities.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -588,29 +584,46 @@ references:
   - name: )
 - uid: Songhay.Publications.Activities.SearchIndexActivity.StartAsync*
   commentId: Overload:Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-  href: Songhay.Publications.Activities.SearchIndexActivity.html#Songhay_Publications_Activities_SearchIndexActivity_StartAsync
+  href: Songhay.Publications.Activities.SearchIndexActivity.html#Songhay_Publications_Activities_SearchIndexActivity_StartAsync_System_Threading_CancellationToken_
   name: StartAsync
   nameWithType: SearchIndexActivity.StartAsync
   fullName: Songhay.Publications.Activities.SearchIndexActivity.StartAsync
-- uid: Songhay.Abstractions.IActivityTask.StartAsync
-  commentId: M:Songhay.Abstractions.IActivityTask.StartAsync
+- uid: Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
+  commentId: M:Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
   parent: Songhay.Abstractions.IActivityTask
   isExternal: true
-  name: StartAsync()
-  nameWithType: IActivityTask.StartAsync()
-  fullName: Songhay.Abstractions.IActivityTask.StartAsync()
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: StartAsync(CancellationToken)
+  nameWithType: IActivityTask.StartAsync(CancellationToken)
+  fullName: Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
   spec.csharp:
-  - uid: Songhay.Abstractions.IActivityTask.StartAsync
+  - uid: Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
     name: StartAsync
     isExternal: true
   - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Songhay.Abstractions.IActivityTask.StartAsync
+  - uid: Songhay.Abstractions.IActivityTask.StartAsync(System.Threading.CancellationToken)
     name: StartAsync
     isExternal: true
   - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
@@ -619,6 +632,33 @@ references:
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

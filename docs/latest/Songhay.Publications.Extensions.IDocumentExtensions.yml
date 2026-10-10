@@ -6,21 +6,33 @@ items:
   parent: Songhay.Publications.Extensions
   children:
   - Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
-  - Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
-  - Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
+  - Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
+  - Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)
+  - Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)
+  - Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})
+  - Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
   - Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   langs:
@@ -75,7 +87,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: Clone
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 21
+    startLine: 14
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -94,17 +106,17 @@ items:
   nameWithType.vb: IDocumentExtensions.Clone(IDocument)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)
   name.vb: Clone(IDocument)
-- uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
-  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
-  id: GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
+  id: GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)
   isExtensionMethod: true
   parent: Songhay.Publications.Extensions.IDocumentExtensions
   langs:
   - csharp
   - vb
-  name: GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>)
-  nameWithType: IDocumentExtensions.GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable<Songhay.Publications.Abstractions.IDocument>, System.Func<Songhay.Publications.Abstractions.IDocument, bool>)
+  name: GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>, ILogger)
+  nameWithType: IDocumentExtensions.GetDocumentByPredicate(IEnumerable<IDocument>, Func<IDocument, bool>, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable<Songhay.Publications.Abstractions.IDocument>, System.Func<Songhay.Publications.Abstractions.IDocument, bool>, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -113,7 +125,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: GetDocumentByPredicate
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 29
+    startLine: 23
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -123,7 +135,7 @@ items:
     based on the specified predicate.
   example: []
   syntax:
-    content: public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate)
+    content: public static IDocument? GetDocumentByPredicate(this IEnumerable<IDocument> data, Func<IDocument, bool> predicate, ILogger logger)
     parameters:
     - id: data
       type: System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument}
@@ -131,24 +143,27 @@ items:
     - id: predicate
       type: System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean}
       description: The predicate.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
     return:
       type: Songhay.Publications.Abstractions.IDocument
-    content.vb: Public Shared Function GetDocumentByPredicate(data As IEnumerable(Of IDocument), predicate As Func(Of IDocument, Boolean)) As IDocument
+    content.vb: Public Shared Function GetDocumentByPredicate(data As IEnumerable(Of IDocument), predicate As Func(Of IDocument, Boolean), logger As ILogger) As IDocument
   overload: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate*
-  nameWithType.vb: IDocumentExtensions.GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean))
-  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable(Of Songhay.Publications.Abstractions.IDocument), System.Func(Of Songhay.Publications.Abstractions.IDocument, Boolean))
-  name.vb: GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean))
-- uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  id: HasFragments(Songhay.Publications.Abstractions.IDocument)
+  nameWithType.vb: IDocumentExtensions.GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean), ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable(Of Songhay.Publications.Abstractions.IDocument), System.Func(Of Songhay.Publications.Abstractions.IDocument, Boolean), Microsoft.Extensions.Logging.ILogger)
+  name.vb: GetDocumentByPredicate(IEnumerable(Of IDocument), Func(Of IDocument, Boolean), ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  id: HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
   isExtensionMethod: true
   parent: Songhay.Publications.Extensions.IDocumentExtensions
   langs:
   - csharp
   - vb
-  name: HasFragments(IDocument?)
-  nameWithType: IDocumentExtensions.HasFragments(IDocument?)
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument?)
+  name: HasFragments(IDocument?, ILogger)
+  nameWithType: IDocumentExtensions.HasFragments(IDocument?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
   type: Method
   source:
     remote:
@@ -157,7 +172,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: HasFragments
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 45
+    startLine: 40
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -167,18 +182,21 @@ items:
     has any <xref href="Songhay.Publications.Models.Document.Fragments" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: public static bool HasFragments(this IDocument? data)
+    content: public static bool HasFragments(this IDocument? data, ILogger logger)
     parameters:
     - id: data
       type: Songhay.Publications.Abstractions.IDocument
       description: The data.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
     return:
       type: System.Boolean
-    content.vb: Public Shared Function HasFragments(data As IDocument) As Boolean
+    content.vb: Public Shared Function HasFragments(data As IDocument, logger As ILogger) As Boolean
   overload: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments*
-  nameWithType.vb: IDocumentExtensions.HasFragments(IDocument)
-  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)
-  name.vb: HasFragments(IDocument)
+  nameWithType.vb: IDocumentExtensions.HasFragments(IDocument, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  name.vb: HasFragments(IDocument, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)
   id: IsTemplatable(Songhay.Publications.Abstractions.IDocument)
@@ -198,7 +216,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: IsTemplatable
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 65
+    startLine: 60
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -237,7 +255,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: SetDefaults
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 72
+    startLine: 67
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -254,6 +272,100 @@ items:
   nameWithType.vb: IDocumentExtensions.SetDefaults(IDocument)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)
   name.vb: SetDefaults(IDocument)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  id: ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToConventionalFrontMatter(IDocument?, ILogger)
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter(IDocument?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToConventionalFrontMatter
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 83
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the instance of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    to the conventional, front-matter <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static JsonObject ToConventionalFrontMatter(this IDocument? document, ILogger logger)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function ToConventionalFrontMatter(document As IDocument, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*
+  nameWithType.vb: IDocumentExtensions.ToConventionalFrontMatter(IDocument, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToConventionalFrontMatter(IDocument, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  id: ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToConventionalFrontMatter(IDocument?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter(IDocument?, IReadOnlyCollection<string>?, int?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToConventionalFrontMatter
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 94
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the instance of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    to the conventional, front-matter <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static JsonObject ToConventionalFrontMatter(this IDocument? document, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    - id: contentLines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: the document content lines
+    - id: contentLinesExtractLength
+      type: System.Nullable{System.Int32}
+      description: the length of the content extract; this maps to the <code>length</code> argument in <xref href="Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Int32%2cMicrosoft.Extensions.Logging.ILogger)" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function ToConventionalFrontMatter(document As IDocument, contentLines As IReadOnlyCollection(Of String), contentLinesExtractLength As Integer?, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*
+  nameWithType.vb: IDocumentExtensions.ToConventionalFrontMatter(IDocument, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToConventionalFrontMatter(IDocument, IReadOnlyCollection(Of String), Integer?, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
   id: ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)
@@ -273,7 +385,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToConventionalPublicationItem
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 87
+    startLine: 110
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -314,7 +426,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToDisplayText
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 105
+    startLine: 128
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -352,7 +464,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToDisplayText
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 112
+    startLine: 135
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -374,6 +486,47 @@ items:
   nameWithType.vb: IDocumentExtensions.ToDisplayText(IDocument, Boolean)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument, Boolean)
   name.vb: ToDisplayText(IDocument, Boolean)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  id: ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToJsonObject(IDocument?)
+  nameWithType: IDocumentExtensions.ToJsonObject(IDocument?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToJsonObject
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 180
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the instance of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    to its <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref> representation.
+  example: []
+  syntax:
+    content: public static JsonObject ToJsonObject(this IDocument? document)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function ToJsonObject(document As IDocument) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject*
+  nameWithType.vb: IDocumentExtensions.ToJsonObject(IDocument)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)
+  name.vb: ToJsonObject(IDocument)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   id: ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
@@ -393,7 +546,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMarkdownEntry
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 160
+    startLine: 207
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -440,7 +593,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 198
+    startLine: 245
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -478,7 +631,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToMenuDisplayItemModel
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 206
+    startLine: 253
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -500,6 +653,50 @@ items:
   nameWithType.vb: IDocumentExtensions.ToMenuDisplayItemModel(IDocument, IGroupable)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument, Songhay.Abstractions.IGroupable)
   name.vb: ToMenuDisplayItemModel(IDocument, IGroupable)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  id: ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToStaticFileValidationResult(IDocument?, ILogger)
+  nameWithType: IDocumentExtensions.ToStaticFileValidationResult(IDocument?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToStaticFileValidationResult
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 277
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    into a <xref href="FluentValidation.Results.ValidationResult" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ValidationResult? ToStaticFileValidationResult(this IDocument? document, ILogger logger)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: FluentValidation.Results.ValidationResult
+    content.vb: Public Shared Function ToStaticFileValidationResult(document As IDocument, logger As ILogger) As ValidationResult
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult*
+  nameWithType.vb: IDocumentExtensions.ToStaticFileValidationResult(IDocument, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ToStaticFileValidationResult(IDocument, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)
   id: ToValidationResult(Songhay.Publications.Abstractions.IDocument)
@@ -519,7 +716,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToValidationResult
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 228
+    startLine: 303
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -557,7 +754,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 246
+    startLine: 321
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -601,7 +798,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 255
+    startLine: 330
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -629,6 +826,354 @@ items:
   nameWithType.vb: IDocumentExtensions.ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument, System.Collections.Generic.IReadOnlyCollection(Of String), Microsoft.Extensions.Logging.ILogger)
   name.vb: ToYaml(IDocument, IReadOnlyCollection(Of String), ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  id: Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: Update(IDocument?, JsonObject?, ILogger)
+  nameWithType: IDocumentExtensions.Update(IDocument?, JsonObject?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument?, System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: Update
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 388
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Updates the instance of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    with the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void Update(this IDocument? document, JsonObject? documentData, ILogger logger)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Sub Update(document As IDocument, documentData As JsonObject, logger As ILogger)
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.Update*
+  seealso:
+  - linkId: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+    commentId: M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.Update(IDocument, JsonObject, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument, System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  name.vb: Update(IDocument, JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  id: WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatter(JsonObject?, ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter(JsonObject?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatter
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 398
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter properties
+
+    for Studio Publications.
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, ILogger logger)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatter(documentData As JsonObject, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatter(JsonObject, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatter(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  id: WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatter(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatter
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 414
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter properties
+
+    for Studio Publications.
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    - id: contentLines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: the document content lines
+    - id: contentLinesExtractLength
+      type: System.Nullable{System.Int32}
+      description: the length of the content extract; this maps to the <code>length</code> argument in <xref href="Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Int32%2cMicrosoft.Extensions.Logging.ILogger)" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatter(documentData As JsonObject, contentLines As IReadOnlyCollection(Of String), contentLinesExtractLength As Integer?, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatter(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatter(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  id: WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatterForDocument(JsonObject?)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocument(JsonObject?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatterForDocument
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 431
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref> properties
+
+    for Studio Publications.
+  remarks: >-
+    This member ensures conventional document order of <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref> properties
+
+    so that front matter appears consistently in your Markdown editor of choice.
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatterForDocument(this JsonObject? documentData)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatterForDocument(documentData As JsonObject) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument*
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocument(JsonObject)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)
+  name.vb: WithConventionalFrontMatterForDocument(JsonObject)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  id: WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatterForDocumentTag(JsonObject?, ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(JsonObject?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatterForDocumentTag
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 457
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter properties
+
+    based on <xref href="Songhay.Publications.Abstractions.IDocument.Tag" data-throw-if-not-resolved="false"></xref>
+
+    for Studio Publications.
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatterForDocumentTag(this JsonObject? documentData, ILogger logger)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatterForDocumentTag(documentData As JsonObject, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag*
+  seealso:
+  - linkId: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+    commentId: M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(JsonObject, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatterForDocumentTag(JsonObject, ILogger)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  id: WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatterForDocumentPublicationProperties
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 477
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter Publications properties
+
+    for Studio Publications.
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatterForDocumentPublicationProperties(documentData As JsonObject) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)
+  name.vb: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject)
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  id: WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?, IReadOnlyCollection<string>?, int?, ILogger)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject?, System.Collections.Generic.IReadOnlyCollection<string>?, int?, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithConventionalFrontMatterForDocumentPublicationProperties
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 495
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns the specified <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+
+    with the conventional front-matter Publications properties
+
+    for Studio Publications.
+  remarks: >-
+    “Publications properties” refers to any front-matter property prefixed with <code>rx</code>
+
+    (e.g. <code>rxNextLink</code>).
+  example: []
+  syntax:
+    content: public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData, IReadOnlyCollection<string>? contentLines, int? contentLinesExtractLength, ILogger logger)
+    parameters:
+    - id: documentData
+      type: System.Text.Json.Nodes.JsonObject
+      description: the <xref href="System.Text.Json.Nodes.JsonObject" data-throw-if-not-resolved="false"></xref>
+    - id: contentLines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: the document content lines
+    - id: contentLinesExtractLength
+      type: System.Nullable{System.Int32}
+      description: the length of the content extract; this maps to the <code>length</code> argument in <xref href="Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Int32%2cMicrosoft.Extensions.Logging.ILogger)" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Text.Json.Nodes.JsonObject
+    content.vb: Public Shared Function WithConventionalFrontMatterForDocumentPublicationProperties(documentData As JsonObject, contentLines As IReadOnlyCollection(Of String), contentLinesExtractLength As Integer?, logger As ILogger) As JsonObject
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*
+  seealso:
+  - linkId: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+    commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+  - linkId: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+    commentId: M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject, System.Collections.Generic.IReadOnlyCollection(Of String), Integer?, Microsoft.Extensions.Logging.ILogger)
+  name.vb: WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject, IReadOnlyCollection(Of String), Integer?, ILogger)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)
   id: WithDefaults(Songhay.Publications.Abstractions.IDocument)
@@ -648,7 +1193,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithDefaults
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 309
+    startLine: 555
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -686,7 +1231,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WithEdit
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 322
+    startLine: 568
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -711,6 +1256,47 @@ items:
   nameWithType.vb: IDocumentExtensions.WithEdit(IDocument, Action(Of IDocument))
   fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument, System.Action(Of Songhay.Publications.Abstractions.IDocument))
   name.vb: WithEdit(IDocument, Action(Of IDocument))
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  id: WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.IDocumentExtensions
+  langs:
+  - csharp
+  - vb
+  name: WithUtcITemporalDates(IDocument?)
+  nameWithType: IDocumentExtensions.WithUtcITemporalDates(IDocument?)
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/IDocumentExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: WithUtcITemporalDates
+    path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
+    startLine: 580
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Returns <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+
+    with all dates specified as <xref href="System.DateTimeKind.Utc" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static IDocument? WithUtcITemporalDates(this IDocument? document)
+    parameters:
+    - id: document
+      type: Songhay.Publications.Abstractions.IDocument
+      description: the <xref href="Songhay.Publications.Abstractions.IDocument" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: Songhay.Publications.Abstractions.IDocument
+    content.vb: Public Shared Function WithUtcITemporalDates(document As IDocument) As IDocument
+  overload: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates*
+  nameWithType.vb: IDocumentExtensions.WithUtcITemporalDates(IDocument)
+  fullName.vb: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)
+  name.vb: WithUtcITemporalDates(IDocument)
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   commentId: M:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
   id: WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)
@@ -730,7 +1316,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithJsonFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 336
+    startLine: 603
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -775,7 +1361,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: WritePublicationEntryWithYamlFrontMatter
     path: ../Songhay.Publications/Extensions/IDocumentExtensions.cs
-    startLine: 387
+    startLine: 654
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -811,34 +1397,27 @@ references:
   fullName: Songhay.Publications.Abstractions.IDocument
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
-  href: Songhay.html
   name: Songhay.Publications.Extensions
   nameWithType: Songhay.Publications.Extensions
   fullName: Songhay.Publications.Extensions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1071,34 +1650,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Abstractions
   commentId: N:Songhay.Publications.Abstractions
-  href: Songhay.html
   name: Songhay.Publications.Abstractions
   nameWithType: Songhay.Publications.Abstractions
   fullName: Songhay.Publications.Abstractions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Abstractions
     name: Abstractions
-    href: Songhay.Publications.Abstractions.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1121,37 +1693,38 @@ references:
   fullName: Songhay.Publications.Models.Document
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate
-  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__Microsoft_Extensions_Logging_ILogger_
   name: GetDocumentByPredicate
   nameWithType: IDocumentExtensions.GetDocumentByPredicate
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate
@@ -1233,6 +1806,43 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -1341,7 +1951,7 @@ references:
   fullName: Songhay.Publications.Models.Document.Fragments
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.HasFragments
-  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
   name: HasFragments
   nameWithType: IDocumentExtensions.HasFragments
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.HasFragments
@@ -1368,6 +1978,249 @@ references:
   name: SetDefaults
   nameWithType: IDocumentExtensions.SetDefaults
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults
+- uid: System.Text.Json.Nodes.JsonObject
+  commentId: T:System.Text.Json.Nodes.JsonObject
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  name: JsonObject
+  nameWithType: JsonObject
+  fullName: System.Text.Json.Nodes.JsonObject
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  name: ToConventionalFrontMatter
+  nameWithType: IDocumentExtensions.ToConventionalFrontMatter
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+- uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
+  name: ConvertToExtract(IReadOnlyCollection<string>, int, ILogger)
+  nameWithType: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection<string>, int, ILogger)
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection<string>, int, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
+  fullName.vb: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection(Of String), Integer, Microsoft.Extensions.Logging.ILogger)
+  name.vb: ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+    name: ConvertToExtract
+    href: Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
+    name: ConvertToExtract
+    href: Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<string>
+  nameWithType: IReadOnlyCollection<string>
+  fullName: System.Collections.Generic.IReadOnlyCollection<string>
+  nameWithType.vb: IReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of String)
+  name.vb: IReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_
@@ -1436,6 +2289,12 @@ references:
   name: ToDisplayText
   nameWithType: IDocumentExtensions.ToDisplayText
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToJsonObject_Songhay_Publications_Abstractions_IDocument_
+  name: ToJsonObject
+  nameWithType: IDocumentExtensions.ToJsonObject
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject
 - uid: Songhay.Publications.Models.MarkdownEntry
   commentId: T:Songhay.Publications.Models.MarkdownEntry
   parent: Songhay.Publications.Models
@@ -1443,57 +2302,12 @@ references:
   name: MarkdownEntry
   nameWithType: MarkdownEntry
   fullName: Songhay.Publications.Models.MarkdownEntry
-- uid: Microsoft.Extensions.Logging.ILogger
-  commentId: T:Microsoft.Extensions.Logging.ILogger
-  parent: Microsoft.Extensions.Logging
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
-  name: ILogger
-  nameWithType: ILogger
-  fullName: Microsoft.Extensions.Logging.ILogger
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_
   name: ToMarkdownEntry
   nameWithType: IDocumentExtensions.ToMarkdownEntry
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry
-- uid: Microsoft.Extensions.Logging
-  commentId: N:Microsoft.Extensions.Logging
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.Extensions.Logging
-  nameWithType: Microsoft.Extensions.Logging
-  fullName: Microsoft.Extensions.Logging
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Logging
-    name: Logging
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Logging
-    name: Logging
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_
@@ -1565,12 +2379,12 @@ references:
   name: ValidationResult
   nameWithType: ValidationResult
   fullName: FluentValidation.Results.ValidationResult
-- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult*
-  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
-  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
-  name: ToValidationResult
-  nameWithType: IDocumentExtensions.ToValidationResult
-  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToStaticFileValidationResult_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
+  name: ToStaticFileValidationResult
+  nameWithType: IDocumentExtensions.ToStaticFileValidationResult
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult
 - uid: FluentValidation.Results
   commentId: N:FluentValidation.Results
   isExternal: true
@@ -1593,75 +2407,158 @@ references:
   - uid: FluentValidation.Results
     name: Results
     isExternal: true
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_
+  name: ToValidationResult
+  nameWithType: IDocumentExtensions.ToValidationResult
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.ToYaml
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_
   name: ToYaml
   nameWithType: IDocumentExtensions.ToYaml
   fullName: Songhay.Publications.Extensions.IDocumentExtensions.ToYaml
-- uid: System.Collections.Generic.IReadOnlyCollection{System.String}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyCollection`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
-  name: IReadOnlyCollection<string>
-  nameWithType: IReadOnlyCollection<string>
-  fullName: System.Collections.Generic.IReadOnlyCollection<string>
-  nameWithType.vb: IReadOnlyCollection(Of String)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of String)
-  name.vb: IReadOnlyCollection(Of String)
+- uid: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  name: UpdateDocument(IDocument, JsonObject, ILogger)
+  nameWithType: DocumentUtility.UpdateDocument(IDocument, JsonObject, ILogger)
+  fullName: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument, System.Text.Json.Nodes.JsonObject, Microsoft.Extensions.Logging.ILogger)
   spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+  - uid: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+    name: UpdateDocument
+    href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
-  - name: <
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.DocumentUtility.UpdateDocument(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)
+    name: UpdateDocument
+    href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: Songhay.Publications.Abstractions.IDocument
+    name: IDocument
+    href: Songhay.Publications.Abstractions.IDocument.html
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.Update*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.Update
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_Update_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  name: Update
+  nameWithType: IDocumentExtensions.Update
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.Update
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  name: WithConventionalFrontMatter
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatter
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_System_Text_Json_Nodes_JsonObject_
+  name: WithConventionalFrontMatterForDocument
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocument
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument
+- uid: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+  isExternal: true
+  href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
+  name: UpdateFrontMatterWithDocumentTag(JsonObject, string, ILogger)
+  nameWithType: DocumentUtility.UpdateFrontMatterWithDocumentTag(JsonObject, string, ILogger)
+  fullName: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject, string, Microsoft.Extensions.Logging.ILogger)
+  nameWithType.vb: DocumentUtility.UpdateFrontMatterWithDocumentTag(JsonObject, String, ILogger)
+  fullName.vb: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject, String, Microsoft.Extensions.Logging.ILogger)
+  name.vb: UpdateFrontMatterWithDocumentTag(JsonObject, String, ILogger)
+  spec.csharp:
+  - uid: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: UpdateFrontMatterWithDocumentTag
+    href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
+  - name: (
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: ','
+  - name: " "
   - uid: System.String
     name: string
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  - name: )
+  spec.vb:
+  - uid: Songhay.Publications.DocumentUtility.UpdateFrontMatterWithDocumentTag(System.Text.Json.Nodes.JsonObject,System.String,Microsoft.Extensions.Logging.ILogger)
+    name: UpdateFrontMatterWithDocumentTag
+    href: Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_
   - name: (
-  - name: Of
+  - uid: System.Text.Json.Nodes.JsonObject
+    name: JsonObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject
+  - name: ','
   - name: " "
   - uid: System.String
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: System.Collections.Generic.IReadOnlyCollection`1
-  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
-  name: IReadOnlyCollection<T>
-  nameWithType: IReadOnlyCollection<T>
-  fullName: System.Collections.Generic.IReadOnlyCollection<T>
-  nameWithType.vb: IReadOnlyCollection(Of T)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
-  name.vb: IReadOnlyCollection(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyCollection`1
-    name: IReadOnlyCollection
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
-  - name: (
-  - name: Of
+  - name: ','
   - name: " "
-  - name: T
+  - uid: Microsoft.Extensions.Logging.ILogger
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
   - name: )
+- uid: Songhay.Publications.Abstractions.IDocument.Tag
+  commentId: P:Songhay.Publications.Abstractions.IDocument.Tag
+  parent: Songhay.Publications.Abstractions.IDocument
+  href: Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Tag
+  name: Tag
+  nameWithType: IDocument.Tag
+  fullName: Songhay.Publications.Abstractions.IDocument.Tag
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentTag_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_
+  name: WithConventionalFrontMatterForDocumentTag
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_
+  name: WithConventionalFrontMatterForDocumentPublicationProperties
+  nameWithType: IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_
@@ -1735,6 +2632,19 @@ references:
     name: IDocument
     href: Songhay.Publications.Abstractions.IDocument.html
   - name: )
+- uid: System.DateTimeKind.Utc
+  commentId: F:System.DateTimeKind.Utc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetimekind#system-datetimekind-utc
+  name: Utc
+  nameWithType: DateTimeKind.Utc
+  fullName: System.DateTimeKind.Utc
+- uid: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates*
+  commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates
+  href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WithUtcITemporalDates_Songhay_Publications_Abstractions_IDocument_
+  name: WithUtcITemporalDates
+  nameWithType: IDocumentExtensions.WithUtcITemporalDates
+  fullName: Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates
 - uid: Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter*
   commentId: Overload:Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter
   href: Songhay.Publications.Extensions.IDocumentExtensions.html#Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_

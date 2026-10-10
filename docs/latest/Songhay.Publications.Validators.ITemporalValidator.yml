@@ -110,34 +110,27 @@ references:
   fullName: Songhay.Abstractions.ITemporal
 - uid: Songhay.Publications.Validators
   commentId: N:Songhay.Publications.Validators
-  href: Songhay.html
   name: Songhay.Publications.Validators
   nameWithType: Songhay.Publications.Validators
   fullName: Songhay.Publications.Validators
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Validators
     name: Validators
-    href: Songhay.Publications.Validators.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Validators
     name: Validators
-    href: Songhay.Publications.Validators.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System

@@ -93,7 +93,7 @@ Class IDocumentExtensions  <a class="header-action link-secondary" title="View s
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Songhay.html">Songhay</a>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Extensions.html">Extensions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><span class="xref">Songhay</span>.<a class="xref" href="Songhay.Publications.html">Publications</a>.<a class="xref" href="Songhay.Publications.Extensions.html">Extensions</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Songhay.Publications.dll</dd></dl>
   </div>
 
@@ -157,7 +157,7 @@ Class IDocumentExtensions  <a class="header-action link-secondary" title="View s
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_Clone_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.Clone(Songhay.Publications.Abstractions.IDocument)">
   Clone(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clones the instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>.</p>
@@ -193,9 +193,9 @@ Class IDocumentExtensions  <a class="header-action link-secondary" title="View s
 
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate*"></a>
 
-  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean})">
-  GetDocumentByPredicate(IEnumerable&lt;IDocument&gt;, Func&lt;IDocument, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_GetDocumentByPredicate_System_Collections_Generic_IEnumerable_Songhay_Publications_Abstractions_IDocument__System_Func_Songhay_Publications_Abstractions_IDocument_System_Boolean__Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.GetDocumentByPredicate(System.Collections.Generic.IEnumerable{Songhay.Publications.Abstractions.IDocument},System.Func{Songhay.Publications.Abstractions.IDocument,System.Boolean},Microsoft.Extensions.Logging.ILogger)">
+  GetDocumentByPredicate(IEnumerable&lt;IDocument&gt;, Func&lt;IDocument, bool&gt;, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns and traces the first <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
@@ -204,7 +204,7 @@ based on the specified predicate.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IDocument? GetDocumentByPredicate(this IEnumerable&lt;IDocument&gt; data, Func&lt;IDocument, bool&gt; predicate)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IDocument? GetDocumentByPredicate(this IEnumerable&lt;IDocument&gt; data, Func&lt;IDocument, bool&gt; predicate, ILogger logger)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -214,6 +214,9 @@ based on the specified predicate.</p>
 </dd>
     <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd><p>The predicate.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
 </dd>
   </dl>
 
@@ -235,9 +238,9 @@ based on the specified predicate.</p>
 
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.HasFragments*"></a>
 
-  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument)">
-  HasFragments(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_HasFragments_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.HasFragments(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+  HasFragments(IDocument?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <code>true</code> when the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
@@ -246,13 +249,16 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool HasFragments(this IDocument? data)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool HasFragments(this IDocument? data, ILogger logger)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>data</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
     <dd><p>The data.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
 </dd>
   </dl>
 
@@ -276,7 +282,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_IsTemplatable_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.IsTemplatable(Songhay.Publications.Abstractions.IDocument)">
   IsTemplatable(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether the specified document is template-able.</p>
@@ -315,7 +321,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_SetDefaults_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.SetDefaults(Songhay.Publications.Abstractions.IDocument)">
   SetDefaults(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the defaults.</p>
@@ -344,11 +350,101 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
 
 
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+  ToConventionalFrontMatter(IDocument?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+to the conventional, front-matter <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject ToConventionalFrontMatter(this IDocument? document, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalFrontMatter_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalFrontMatter(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+  ToConventionalFrontMatter(IDocument?, IReadOnlyCollection&lt;string&gt;?, int?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+to the conventional, front-matter <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject ToConventionalFrontMatter(this IDocument? document, IReadOnlyCollection&lt;string&gt;? contentLines, int? contentLinesExtractLength, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+    <dt><code>contentLines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>the document content lines</p>
+</dd>
+    <dt><code>contentLinesExtractLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>the length of the content extract; this maps to the <code>length</code> argument in <a class="xref" href="Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_">ConvertToExtract(IReadOnlyCollection&lt;string&gt;?, int, ILogger)</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToConventionalPublicationItem_Songhay_Publications_Abstractions_IDocument_System_String_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToConventionalPublicationItem(Songhay.Publications.Abstractions.IDocument,System.String)">
   ToConventionalPublicationItem(IDocument?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts <a class="xref" href="Songhay.Publications.Models.Document.html">Document</a> to the conventional publication item.</p>
@@ -389,7 +485,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument)">
   ToDisplayText(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> into human-readable display text.</p>
@@ -427,7 +523,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToDisplayText_Songhay_Publications_Abstractions_IDocument_System_Boolean_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToDisplayText(Songhay.Publications.Abstractions.IDocument,System.Boolean)">
   ToDisplayText(IDocument?, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> into a display text.</p>
@@ -464,11 +560,50 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
 
 
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToJsonObject_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToJsonObject_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToJsonObject(Songhay.Publications.Abstractions.IDocument)">
+  ToJsonObject(IDocument?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+to its <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a> representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject ToJsonObject(this IDocument? document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToMarkdownEntry_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToMarkdownEntry(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
   ToMarkdownEntry(IDocument?, string?, string?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> to <a class="xref" href="Songhay.Publications.Models.MarkdownEntry.html">MarkdownEntry</a>.</p>
@@ -515,7 +650,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument)">
   ToMenuDisplayItemModel(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> into a menu display item model.</p>
@@ -553,7 +688,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToMenuDisplayItemModel_Songhay_Publications_Abstractions_IDocument_Songhay_Abstractions_IGroupable_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToMenuDisplayItemModel(Songhay.Publications.Abstractions.IDocument,Songhay.Abstractions.IGroupable)">
   ToMenuDisplayItemModel(IDocument?, IGroupable?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> into a menu display item model.</p>
@@ -590,11 +725,53 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
 
 
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToStaticFileValidationResult_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToStaticFileValidationResult_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToStaticFileValidationResult(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
+  ToStaticFileValidationResult(IDocument?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+into a <span class="xref">FluentValidation.Results.ValidationResult</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValidationResult? ToStaticFileValidationResult(this IDocument? document, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ValidationResult</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToValidationResult_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToValidationResult(Songhay.Publications.Abstractions.IDocument)">
   ToValidationResult(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> data to <span class="xref">FluentValidation.Results.ValidationResult</span>.</p>
@@ -632,7 +809,7 @@ has any <a class="xref" href="Songhay.Publications.Models.Document.html#Songhay_
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,Microsoft.Extensions.Logging.ILogger)">
   ToYaml(IDocument?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L322"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
@@ -674,7 +851,7 @@ to well-formed YAML.</p>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_ToYaml_Songhay_Publications_Abstractions_IDocument_System_Collections_Generic_IReadOnlyCollection_System_String__Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.ToYaml(Songhay.Publications.Abstractions.IDocument,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.Extensions.Logging.ILogger)">
   ToYaml(IDocument?, IReadOnlyCollection&lt;string&gt;?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts the specified <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
@@ -715,11 +892,343 @@ to well-formed YAML.</p>
 
 
 
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_Update_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.Update*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_Update_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.Update(Songhay.Publications.Abstractions.IDocument,System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+  Update(IDocument?, JsonObject?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the instance of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+with the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Update(this IDocument? document, JsonObject? documentData, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateDocument_Songhay_Publications_Abstractions_IDocument_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_">UpdateDocument</a>(<a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+  WithConventionalFrontMatter(JsonObject?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatter_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatter(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+  WithConventionalFrontMatter(JsonObject?, IReadOnlyCollection&lt;string&gt;?, int?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatter(this JsonObject? documentData, IReadOnlyCollection&lt;string&gt;? contentLines, int? contentLinesExtractLength, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>contentLines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>the document content lines</p>
+</dd>
+    <dt><code>contentLinesExtractLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>the length of the content extract; this maps to the <code>length</code> argument in <a class="xref" href="Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_">ConvertToExtract(IReadOnlyCollection&lt;string&gt;?, int, ILogger)</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_System_Text_Json_Nodes_JsonObject_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocument(System.Text.Json.Nodes.JsonObject)">
+  WithConventionalFrontMatterForDocument(JsonObject?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatterForDocument(this JsonObject? documentData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocument_System_Text_Json_Nodes_JsonObject__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This member ensures conventional document order of <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> properties
+so that front matter appears consistently in your Markdown editor of choice.</p>
+</div>
+
+
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject)">
+  WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter Publications properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentPublicationProperties(System.Text.Json.Nodes.JsonObject,System.Collections.Generic.IReadOnlyCollection{System.String},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger)">
+  WithConventionalFrontMatterForDocumentPublicationProperties(JsonObject?, IReadOnlyCollection&lt;string&gt;?, int?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter Publications properties
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatterForDocumentPublicationProperties(this JsonObject? documentData, IReadOnlyCollection&lt;string&gt;? contentLines, int? contentLinesExtractLength, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>contentLines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>the document content lines</p>
+</dd>
+    <dt><code>contentLinesExtractLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>the length of the content extract; this maps to the <code>length</code> argument in <a class="xref" href="Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_">ConvertToExtract(IReadOnlyCollection&lt;string&gt;?, int, ILogger)</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentPublicationProperties_System_Text_Json_Nodes_JsonObject_System_Collections_Generic_IReadOnlyCollection_System_String__System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>“Publications properties” refers to any front-matter property prefixed with <code>rx</code>
+(e.g. <code>rxNextLink</code>).</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToExtract_System_Collections_Generic_IReadOnlyCollection_System_String__System_Int32_Microsoft_Extensions_Logging_ILogger_">ConvertToExtract</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_">UpdateFrontMatterWithDocumentTag</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentTag_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithConventionalFrontMatterForDocumentTag_System_Text_Json_Nodes_JsonObject_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithConventionalFrontMatterForDocumentTag(System.Text.Json.Nodes.JsonObject,Microsoft.Extensions.Logging.ILogger)">
+  WithConventionalFrontMatterForDocumentTag(JsonObject?, ILogger)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>
+with the conventional front-matter properties
+based on <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html#Songhay_Publications_Abstractions_IDocument_Tag">Tag</a>
+for Studio Publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonObject WithConventionalFrontMatterForDocumentTag(this JsonObject? documentData, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>documentData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="Songhay.Publications.DocumentUtility.html#Songhay_Publications_DocumentUtility_UpdateFrontMatterWithDocumentTag_System_Text_Json_Nodes_JsonObject_System_String_Microsoft_Extensions_Logging_ILogger_">UpdateFrontMatterWithDocumentTag</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>)</div>
+    </dd>
+  </dl>
+
+
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithDefaults_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithDefaults(Songhay.Publications.Abstractions.IDocument)">
   WithDefaults(IDocument?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L556"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a> with default values.</p>
@@ -757,7 +1266,7 @@ to well-formed YAML.</p>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithEdit_Songhay_Publications_Abstractions_IDocument_System_Action_Songhay_Publications_Abstractions_IDocument__" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithEdit(Songhay.Publications.Abstractions.IDocument,System.Action{Songhay.Publications.Abstractions.IDocument})">
   WithEdit(IDocument?, Action&lt;IDocument&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L569"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
@@ -795,11 +1304,50 @@ after the specified edit <a class="xref" href="https://learn.microsoft.com/dotne
 
 
 
+  <a id="Songhay_Publications_Extensions_IDocumentExtensions_WithUtcITemporalDates_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates*"></a>
+
+  <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WithUtcITemporalDates_Songhay_Publications_Abstractions_IDocument_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WithUtcITemporalDates(Songhay.Publications.Abstractions.IDocument)">
+  WithUtcITemporalDates(IDocument?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L581"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a>
+with all dates specified as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimekind#system-datetimekind-utc">Utc</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDocument? WithUtcITemporalDates(this IDocument? document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd><p>the <a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Songhay.Publications.Abstractions.IDocument.html">IDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter*"></a>
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithJsonFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithJsonFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
   WritePublicationEntryWithJsonFrontMatter(IDocument?, string?, string?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L604"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes an entry with JSON front matter to the specified entry path.</p>
@@ -841,7 +1389,7 @@ after the specified edit <a class="xref" href="https://learn.microsoft.com/dotne
 
   <h3 id="Songhay_Publications_Extensions_IDocumentExtensions_WritePublicationEntryWithYamlFrontMatter_Songhay_Publications_Abstractions_IDocument_System_String_System_String_Microsoft_Extensions_Logging_ILogger_" data-uid="Songhay.Publications.Extensions.IDocumentExtensions.WritePublicationEntryWithYamlFrontMatter(Songhay.Publications.Abstractions.IDocument,System.String,System.String,Microsoft.Extensions.Logging.ILogger)">
   WritePublicationEntryWithYamlFrontMatter(IDocument?, string?, string?, ILogger)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BryanWilhite/Songhay.Publications/blob/main/Songhay.Publications/Extensions/IDocumentExtensions.cs/#L655"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes an entry with YAML front matter to the specified entry path.</p>

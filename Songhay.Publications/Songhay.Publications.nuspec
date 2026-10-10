@@ -21,9 +21,9 @@
       <group targetFramework=".NET10.0">
         <dependency id="CloneExtensions" version="1.4.2" />
         <dependency id="FluentValidation" version="12.1.1" />
-        <dependency id="Markdig" version="1.1.2" />
-        <dependency id="SonghayCore" version="10.0.0" />
-        <dependency id="YamlDotNet" version="17.0.1" />
+        <dependency id="Markdig" version="1.4.0" />
+        <dependency id="SonghayCore" version="10.4.3" />
+        <dependency id="YamlDotNet" version="18.1.0" />
       </group>
     </dependencies>
   </metadata>

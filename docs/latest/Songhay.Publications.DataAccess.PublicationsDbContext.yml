@@ -376,34 +376,27 @@ references:
   fullName: Microsoft.EntityFrameworkCore.DbContext
 - uid: Songhay.Publications.DataAccess
   commentId: N:Songhay.Publications.DataAccess
-  href: Songhay.html
   name: Songhay.Publications.DataAccess
   nameWithType: Songhay.Publications.DataAccess
   fullName: Songhay.Publications.DataAccess
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.DataAccess
     name: DataAccess
-    href: Songhay.Publications.DataAccess.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.DataAccess
     name: DataAccess
-    href: Songhay.Publications.DataAccess.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2958,34 +2951,27 @@ references:
   - name: )
 - uid: Songhay.Publications.Models
   commentId: N:Songhay.Publications.Models
-  href: Songhay.html
   name: Songhay.Publications.Models
   nameWithType: Songhay.Publications.Models
   fullName: Songhay.Publications.Models
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Models
     name: Models
-    href: Songhay.Publications.Models.html
 - uid: Songhay.Publications.Models.Document
   commentId: T:Songhay.Publications.Models.Document
   parent: Songhay.Publications.Models

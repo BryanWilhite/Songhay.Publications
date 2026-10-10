@@ -5,6 +5,7 @@ items:
   id: PublicationLinesUtility
   parent: Songhay.Publications
   children:
+  - Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
   - Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection{System.String},System.Int32,Microsoft.Extensions.Logging.ILogger)
   - Songhay.Publications.PublicationLinesUtility.ConvertToLines(System.String)
   langs:
@@ -86,6 +87,43 @@ items:
   nameWithType.vb: PublicationLinesUtility.ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
   fullName.vb: Songhay.Publications.PublicationLinesUtility.ConvertToExtract(System.Collections.Generic.IReadOnlyCollection(Of String), Integer, Microsoft.Extensions.Logging.ILogger)
   name.vb: ConvertToExtract(IReadOnlyCollection(Of String), Integer, ILogger)
+- uid: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
+  commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
+  id: ConvertToContent(System.Collections.Generic.IReadOnlyCollection{System.String})
+  parent: Songhay.Publications.PublicationLinesUtility
+  langs:
+  - csharp
+  - vb
+  name: ConvertToContent(IReadOnlyCollection<string>?)
+  nameWithType: PublicationLinesUtility.ConvertToContent(IReadOnlyCollection<string>?)
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection<string>?)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/PublicationLinesUtility.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ConvertToContent
+    path: ../Songhay.Publications/PublicationLinesUtility.cs
+    startLine: 49
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications
+  summary: Reduce a collection of content lines to a <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static string? ConvertToContent(IReadOnlyCollection<string>? contentLines)
+    parameters:
+    - id: contentLines
+      type: System.Collections.Generic.IReadOnlyCollection{System.String}
+      description: a collection of strings, representing lines of content
+    return:
+      type: System.String
+    content.vb: Public Shared Function ConvertToContent(contentLines As IReadOnlyCollection(Of String)) As String
+  overload: Songhay.Publications.PublicationLinesUtility.ConvertToContent*
+  nameWithType.vb: PublicationLinesUtility.ConvertToContent(IReadOnlyCollection(Of String))
+  fullName.vb: Songhay.Publications.PublicationLinesUtility.ConvertToContent(System.Collections.Generic.IReadOnlyCollection(Of String))
+  name.vb: ConvertToContent(IReadOnlyCollection(Of String))
 - uid: Songhay.Publications.PublicationLinesUtility.ConvertToLines(System.String)
   commentId: M:Songhay.Publications.PublicationLinesUtility.ConvertToLines(System.String)
   id: ConvertToLines(System.String)
@@ -104,7 +142,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ConvertToLines
     path: ../Songhay.Publications/PublicationLinesUtility.cs
-    startLine: 50
+    startLine: 56
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications
@@ -129,26 +167,21 @@ items:
 references:
 - uid: Songhay.Publications
   commentId: N:Songhay.Publications
-  href: Songhay.html
   name: Songhay.Publications
   nameWithType: Songhay.Publications
   fullName: Songhay.Publications
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -559,6 +592,12 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Songhay.Publications.PublicationLinesUtility.ConvertToContent*
+  commentId: Overload:Songhay.Publications.PublicationLinesUtility.ConvertToContent
+  href: Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToContent_System_Collections_Generic_IReadOnlyCollection_System_String__
+  name: ConvertToContent
+  nameWithType: PublicationLinesUtility.ConvertToContent
+  fullName: Songhay.Publications.PublicationLinesUtility.ConvertToContent
 - uid: Songhay.Publications.PublicationLinesUtility.ConvertToLines*
   commentId: Overload:Songhay.Publications.PublicationLinesUtility.ConvertToLines
   href: Songhay.Publications.PublicationLinesUtility.html#Songhay_Publications_PublicationLinesUtility_ConvertToLines_System_String_

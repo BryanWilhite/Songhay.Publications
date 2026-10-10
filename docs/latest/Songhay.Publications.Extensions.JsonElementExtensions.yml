@@ -13,6 +13,7 @@ items:
   - Songhay.Publications.Extensions.JsonElementExtensions.GetPublicationCommand(System.Text.Json.JsonElement)
   - Songhay.Publications.Extensions.JsonElementExtensions.GetPublishEntryArgs(System.Text.Json.JsonElement,System.IO.DirectoryInfo)
   - Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue(System.Text.Json.JsonElement)
+  - Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
   - Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   langs:
   - csharp
@@ -375,6 +376,44 @@ items:
       type: System.Object
     content.vb: Public Shared Function ToBoxedValue(element As JsonElement) As Object
   overload: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue*
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  id: ToJsonNode(System.Text.Json.JsonElement)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.JsonElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToJsonNode(JsonElement)
+  nameWithType: JsonElementExtensions.ToJsonNode(JsonElement)
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode(System.Text.Json.JsonElement)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/JsonElementExtensions._.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ToJsonNode
+    path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
+    startLine: 44
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Converts the specified <xref href="System.Text.Json.JsonElement" data-throw-if-not-resolved="false"></xref>
+
+    to <xref href="System.Text.Json.Nodes.JsonNode" data-throw-if-not-resolved="false"></xref> based on <xref href="System.Text.Json.JsonElement.ValueKind" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static JsonNode? ToJsonNode(this JsonElement element)
+    parameters:
+    - id: element
+      type: System.Text.Json.JsonElement
+      description: ''
+    return:
+      type: System.Text.Json.Nodes.JsonNode
+    content.vb: Public Shared Function ToJsonNode(element As JsonElement) As JsonNode
+  overload: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode*
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   commentId: M:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml(System.Text.Json.JsonElement)
   id: ToYaml(System.Text.Json.JsonElement)
@@ -394,7 +433,7 @@ items:
       repo: git@github.com:BryanWilhite/Songhay.Publications.git
     id: ToYaml
     path: ../Songhay.Publications/Extensions/JsonElementExtensions._.cs
-    startLine: 44
+    startLine: 60
   assemblies:
   - Songhay.Publications
   namespace: Songhay.Publications.Extensions
@@ -424,34 +463,27 @@ references:
   fullName: System.Text.Json.JsonElement
 - uid: Songhay.Publications.Extensions
   commentId: N:Songhay.Publications.Extensions
-  href: Songhay.html
   name: Songhay.Publications.Extensions
   nameWithType: Songhay.Publications.Extensions
   fullName: Songhay.Publications.Extensions
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.Extensions
     name: Extensions
-    href: Songhay.Publications.Extensions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1250,6 +1282,74 @@ references:
   name: ToBoxedValue
   nameWithType: JsonElementExtensions.ToBoxedValue
   fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToBoxedValue
+- uid: System.Text.Json.Nodes.JsonNode
+  commentId: T:System.Text.Json.Nodes.JsonNode
+  parent: System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode
+  name: JsonNode
+  nameWithType: JsonNode
+  fullName: System.Text.Json.Nodes.JsonNode
+- uid: System.Text.Json.JsonElement.ValueKind
+  commentId: P:System.Text.Json.JsonElement.ValueKind
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement.valuekind
+  name: ValueKind
+  nameWithType: JsonElement.ValueKind
+  fullName: System.Text.Json.JsonElement.ValueKind
+- uid: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode*
+  commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode
+  href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToJsonNode_System_Text_Json_JsonElement_
+  name: ToJsonNode
+  nameWithType: JsonElementExtensions.ToJsonNode
+  fullName: Songhay.Publications.Extensions.JsonElementExtensions.ToJsonNode
+- uid: System.Text.Json.Nodes
+  commentId: N:System.Text.Json.Nodes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Nodes
+  nameWithType: System.Text.Json.Nodes
+  fullName: System.Text.Json.Nodes
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Nodes
+    name: Nodes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.nodes
 - uid: Songhay.Publications.Extensions.JsonElementExtensions.ToYaml*
   commentId: Overload:Songhay.Publications.Extensions.JsonElementExtensions.ToYaml
   href: Songhay.Publications.Extensions.JsonElementExtensions.html#Songhay_Publications_Extensions_JsonElementExtensions_ToYaml_System_Text_Json_JsonElement_

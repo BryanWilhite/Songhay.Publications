@@ -1,4 +1,5 @@
 {
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
   "source_base_path": "/home/rasx/sourceRoot/Songhay.Publications/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -288,6 +289,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.DocumentUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.DocumentUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.DocumentUtility",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.DocumentUtility.yml\" sourcestartlinenumber=\"1\">Shared routines for <xref href=\"Songhay.Publications.Models.Document\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Songhay.Publications.Abstractions.IDocument\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "latest/Songhay.Publications.EpubUtility.yml",
       "output": {
         ".html": {
@@ -512,6 +527,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Extensions.ValidationResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Extensions.ValidationResultExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Extensions.ValidationResultExtensions",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Extensions.ValidationResultExtensions.yml\" sourcestartlinenumber=\"1\">Extensions of <xref href=\"FluentValidation.Results.ValidationResult\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "latest/Songhay.Publications.Extensions.yml",
       "output": {
         ".html": {
@@ -593,6 +622,34 @@
       "IsMRef": true,
       "Title": "Songhay.Publications.Models.Document",
       "Summary": "<p sourcefile=\"latest/Songhay.Publications.Models.Document.yml\" sourcestartlinenumber=\"1\">Publications Document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.DocumentProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.DocumentProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Models.DocumentProperties",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Models.DocumentProperties.yml\" sourcestartlinenumber=\"1\">Defines the properties of an <xref href=\"Songhay.Publications.Abstractions.IDocument\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Models.DocumentTags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Models.DocumentTags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Models.DocumentTags",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Models.DocumentTags.yml\" sourcestartlinenumber=\"1\">Defines the tags or keywords of an <xref href=\"Songhay.Publications.Abstractions.IDocument\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -971,6 +1028,48 @@
       "IsMRef": true,
       "Title": "Songhay.Publications.Validators.FragmentValidator",
       "Summary": "<p sourcefile=\"latest/Songhay.Publications.Validators.FragmentValidator.yml\" sourcestartlinenumber=\"1\">Validator for <xref href=\"Songhay.Publications.Models.Fragment\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.IDocumentCoreValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.IDocumentCoreValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Validators.IDocumentCoreValidator",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Validators.IDocumentCoreValidator.yml\" sourcestartlinenumber=\"1\">Validator for ‘core’ <xref href=\"Songhay.Publications.Abstractions.IDocument\" data-throw-if-not-resolved=\"false\"></xref> properties</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Validators.IDocumentStaticFileValidator",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Validators.IDocumentStaticFileValidator.yml\" sourcestartlinenumber=\"1\">Validator for ‘static’ <xref href=\"Songhay.Publications.Abstractions.IDocument\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "latest/Songhay.Publications.Validators.ITemporalUtcValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "latest/Songhay.Publications.Validators.ITemporalUtcValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Songhay.Publications.Validators.ITemporalUtcValidator",
+      "Summary": "<p sourcefile=\"latest/Songhay.Publications.Validators.ITemporalUtcValidator.yml\" sourcestartlinenumber=\"1\">Validator for <xref href=\"Songhay.Abstractions.ITemporal\" data-throw-if-not-resolved=\"false\"></xref> under UTC time</p>\n"
     },
     {
       "type": "ManagedReference",

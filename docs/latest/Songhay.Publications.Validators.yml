@@ -6,6 +6,9 @@ items:
   children:
   - Songhay.Publications.Validators.DocumentValidator
   - Songhay.Publications.Validators.FragmentValidator
+  - Songhay.Publications.Validators.IDocumentCoreValidator
+  - Songhay.Publications.Validators.IDocumentStaticFileValidator
+  - Songhay.Publications.Validators.ITemporalUtcValidator
   - Songhay.Publications.Validators.ITemporalValidator
   - Songhay.Publications.Validators.SegmentValidator
   langs:
@@ -30,6 +33,24 @@ references:
   name: FragmentValidator
   nameWithType: FragmentValidator
   fullName: Songhay.Publications.Validators.FragmentValidator
+- uid: Songhay.Publications.Validators.IDocumentCoreValidator
+  commentId: T:Songhay.Publications.Validators.IDocumentCoreValidator
+  href: Songhay.Publications.Validators.IDocumentCoreValidator.html
+  name: IDocumentCoreValidator
+  nameWithType: IDocumentCoreValidator
+  fullName: Songhay.Publications.Validators.IDocumentCoreValidator
+- uid: Songhay.Publications.Validators.IDocumentStaticFileValidator
+  commentId: T:Songhay.Publications.Validators.IDocumentStaticFileValidator
+  href: Songhay.Publications.Validators.IDocumentStaticFileValidator.html
+  name: IDocumentStaticFileValidator
+  nameWithType: IDocumentStaticFileValidator
+  fullName: Songhay.Publications.Validators.IDocumentStaticFileValidator
+- uid: Songhay.Publications.Validators.ITemporalUtcValidator
+  commentId: T:Songhay.Publications.Validators.ITemporalUtcValidator
+  href: Songhay.Publications.Validators.ITemporalUtcValidator.html
+  name: ITemporalUtcValidator
+  nameWithType: ITemporalUtcValidator
+  fullName: Songhay.Publications.Validators.ITemporalUtcValidator
 - uid: Songhay.Publications.Validators.ITemporalValidator
   commentId: T:Songhay.Publications.Validators.ITemporalValidator
   href: Songhay.Publications.Validators.ITemporalValidator.html

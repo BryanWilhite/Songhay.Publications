@@ -4,6 +4,9 @@ items:
   name: Songhay.Publications
   type: Namespace
   items:
+  - uid: Songhay.Publications.DocumentUtility
+    name: DocumentUtility
+    type: Class
   - uid: Songhay.Publications.EpubUtility
     name: EpubUtility
     type: Class
@@ -129,6 +132,9 @@ items:
   - uid: Songhay.Publications.Extensions.SegmentExtensions
     name: SegmentExtensions
     type: Class
+  - uid: Songhay.Publications.Extensions.ValidationResultExtensions
+    name: ValidationResultExtensions
+    type: Class
 - uid: Songhay.Publications.Models
   name: Songhay.Publications.Models
   type: Namespace
@@ -141,6 +147,12 @@ items:
     type: Class
   - uid: Songhay.Publications.Models.Document
     name: Document
+    type: Class
+  - uid: Songhay.Publications.Models.DocumentProperties
+    name: DocumentProperties
+    type: Class
+  - uid: Songhay.Publications.Models.DocumentTags
+    name: DocumentTags
     type: Class
   - uid: Songhay.Publications.Models.Fragment
     name: Fragment
@@ -217,6 +229,15 @@ items:
     type: Class
   - uid: Songhay.Publications.Validators.FragmentValidator
     name: FragmentValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.IDocumentCoreValidator
+    name: IDocumentCoreValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.IDocumentStaticFileValidator
+    name: IDocumentStaticFileValidator
+    type: Class
+  - uid: Songhay.Publications.Validators.ITemporalUtcValidator
+    name: ITemporalUtcValidator
     type: Class
   - uid: Songhay.Publications.Validators.ITemporalValidator
     name: ITemporalValidator

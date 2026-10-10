@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions
+  commentId: T:Songhay.Publications.Extensions.ValidationResultExtensions
+  id: ValidationResultExtensions
+  parent: Songhay.Publications.Extensions
+  children:
+  - Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  langs:
+  - csharp
+  - vb
+  name: ValidationResultExtensions
+  nameWithType: ValidationResultExtensions
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions
+  type: Class
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/ValidationResultExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: ValidationResultExtensions
+    path: ../Songhay.Publications/Extensions/ValidationResultExtensions.cs
+    startLine: 7
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: Extensions of <xref href="FluentValidation.Results.ValidationResult" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static class ValidationResultExtensions
+    content.vb: Public Module ValidationResultExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  id: LogValidationErrors(FluentValidation.Results.ValidationResult,Microsoft.Extensions.Logging.ILogger)
+  isExtensionMethod: true
+  parent: Songhay.Publications.Extensions.ValidationResultExtensions
+  langs:
+  - csharp
+  - vb
+  name: LogValidationErrors(ValidationResult, ILogger)
+  nameWithType: ValidationResultExtensions.LogValidationErrors(ValidationResult, ILogger)
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors(FluentValidation.Results.ValidationResult, Microsoft.Extensions.Logging.ILogger)
+  type: Method
+  source:
+    remote:
+      path: Songhay.Publications/Extensions/ValidationResultExtensions.cs
+      branch: main
+      repo: git@github.com:BryanWilhite/Songhay.Publications.git
+    id: LogValidationErrors
+    path: ../Songhay.Publications/Extensions/ValidationResultExtensions.cs
+    startLine: 15
+  assemblies:
+  - Songhay.Publications
+  namespace: Songhay.Publications.Extensions
+  summary: >-
+    Logs the <xref href="FluentValidation.Results.ValidationResult.Errors" data-throw-if-not-resolved="false"></xref>
+
+    with the specified <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static void LogValidationErrors(this ValidationResult validationResult, ILogger logger)
+    parameters:
+    - id: validationResult
+      type: FluentValidation.Results.ValidationResult
+      description: the <xref href="FluentValidation.Results.ValidationResult" data-throw-if-not-resolved="false"></xref>
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: the <xref href="Microsoft.Extensions.Logging.ILogger" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Sub LogValidationErrors(validationResult As ValidationResult, logger As ILogger)
+  overload: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors*
+references:
+- uid: FluentValidation.Results.ValidationResult
+  commentId: T:FluentValidation.Results.ValidationResult
+  parent: FluentValidation.Results
+  isExternal: true
+  name: ValidationResult
+  nameWithType: ValidationResult
+  fullName: FluentValidation.Results.ValidationResult
+- uid: Songhay.Publications.Extensions
+  commentId: N:Songhay.Publications.Extensions
+  name: Songhay.Publications.Extensions
+  nameWithType: Songhay.Publications.Extensions
+  fullName: Songhay.Publications.Extensions
+  spec.csharp:
+  - uid: Songhay
+    name: Songhay
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+  spec.vb:
+  - uid: Songhay
+    name: Songhay
+  - name: .
+  - uid: Songhay.Publications
+    name: Publications
+  - name: .
+  - uid: Songhay.Publications.Extensions
+    name: Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: FluentValidation.Results
+  commentId: N:FluentValidation.Results
+  isExternal: true
+  name: FluentValidation.Results
+  nameWithType: FluentValidation.Results
+  fullName: FluentValidation.Results
+  spec.csharp:
+  - uid: FluentValidation
+    name: FluentValidation
+    isExternal: true
+  - name: .
+  - uid: FluentValidation.Results
+    name: Results
+    isExternal: true
+  spec.vb:
+  - uid: FluentValidation
+    name: FluentValidation
+    isExternal: true
+  - name: .
+  - uid: FluentValidation.Results
+    name: Results
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FluentValidation.Results.ValidationResult.Errors
+  commentId: P:FluentValidation.Results.ValidationResult.Errors
+  isExternal: true
+  name: Errors
+  nameWithType: ValidationResult.Errors
+  fullName: FluentValidation.Results.ValidationResult.Errors
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors*
+  commentId: Overload:Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors
+  href: Songhay.Publications.Extensions.ValidationResultExtensions.html#Songhay_Publications_Extensions_ValidationResultExtensions_LogValidationErrors_FluentValidation_Results_ValidationResult_Microsoft_Extensions_Logging_ILogger_
+  name: LogValidationErrors
+  nameWithType: ValidationResultExtensions.LogValidationErrors
+  fullName: Songhay.Publications.Extensions.ValidationResultExtensions.LogValidationErrors
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging

@@ -79,42 +79,33 @@ items:
 references:
 - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations
   commentId: N:Songhay.Publications.DataAccess.EntityTypeConfigurations
-  href: Songhay.html
   name: Songhay.Publications.DataAccess.EntityTypeConfigurations
   nameWithType: Songhay.Publications.DataAccess.EntityTypeConfigurations
   fullName: Songhay.Publications.DataAccess.EntityTypeConfigurations
   spec.csharp:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.DataAccess
     name: DataAccess
-    href: Songhay.Publications.DataAccess.html
   - name: .
   - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations
     name: EntityTypeConfigurations
-    href: Songhay.Publications.DataAccess.EntityTypeConfigurations.html
   spec.vb:
   - uid: Songhay
     name: Songhay
-    href: Songhay.html
   - name: .
   - uid: Songhay.Publications
     name: Publications
-    href: Songhay.Publications.html
   - name: .
   - uid: Songhay.Publications.DataAccess
     name: DataAccess
-    href: Songhay.Publications.DataAccess.html
   - name: .
   - uid: Songhay.Publications.DataAccess.EntityTypeConfigurations
     name: EntityTypeConfigurations
-    href: Songhay.Publications.DataAccess.EntityTypeConfigurations.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
